@@ -16,10 +16,8 @@
 
 #include <atomicBitset.h>
 #include <stdio.h>
-//#include <heap.h>
+#include <heap.h>
 #include <slab.h>
-
-#define heapAlloc(x)
 
 struct SlabAllocator {
 
