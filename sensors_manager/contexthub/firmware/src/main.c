@@ -12,6 +12,37 @@
     printf( __VA_ARGS__); \
   } while (0)
 
+struct SensDescriptor {
+  char *name;
+  uint32_t rate;
+  uint64_t latency;
+  uint32_t type;
+  uint32_t evtType;
+  uint32_t handle;
+};
+
+struct SensClientDeciptor {
+  char *name;
+  uint32_t handle;
+  uint32_t tid;
+};
+
+struct SensOrder {
+  struct SensDescriptor sensor;
+  struct SensClientDeciptor client;
+};
+
+struct SensOrderNode {
+  void *data;
+  struct SensOrderNode *next;
+};
+
+struct SensOrderLinkList {
+  struct SensOrderNode *head;
+  struct SensOrderNode *current;
+  struct SensOrderNode *tail;
+};
+
 struct SensClientNode {
   char *realSensorName;
   uint32_t rate;
