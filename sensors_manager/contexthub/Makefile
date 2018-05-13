@@ -12,6 +12,7 @@ DEPS := $(OBJS:.o=.d)
 
 INC_FLAGS += -I./firmware/inc/
 INC_FLAGS += -I./firmware/inc/cpu/x86/
+INC_FLAGS += -I./firmware/src/sensor_manager/inc/
 
 CPPFLAGS ?= $(INC_FLAGS) -MMD -MP
 CFLAGS ?= $(INC_FLAGS) -lpthread -O3 -Werror -lm

@@ -5,6 +5,8 @@
 #include <errno.h>
 #include <ctype.h>
 
+#include <sensor_manager.h>
+#include <sensors.h>
 #include <heap.h>
 
 #define osLog(...) \
@@ -12,35 +14,29 @@
     printf( __VA_ARGS__); \
   } while (0)
 
-struct SensDescriptor {
-  char *name;
-  uint32_t rate;
-  uint64_t latency;
-  uint32_t type;
-  uint32_t evtType;
+struct smSensOrderInfoNode {
+  struct SensOrderInfo *order_info;
+  struct SensOrderInfoNode *next;
+};
+
+struct smSensOrderLinkedList {
+  struct SensOrderInfoNode *head;
+  struct SensOrderInfoNode *current;
+  struct SensOrderInfoNode *tail;
+};
+
+struct smSensOrderTypesNode {
+  struct SensorInfo *info;
   uint32_t handle;
+  uint32_t event_type;
+  struct smSensOrderLinkedList *solist;
+  struct smSensOrderTypesNode *next;
 };
 
-struct SensClientDeciptor {
-  char *name;
-  uint32_t handle;
-  uint32_t tid;
-};
-
-struct SensOrder {
-  struct SensDescriptor sensor;
-  struct SensClientDeciptor client;
-};
-
-struct SensOrderNode {
-  void *data;
-  struct SensOrderNode *next;
-};
-
-struct SensOrderLinkList {
-  struct SensOrderNode *head;
-  struct SensOrderNode *current;
-  struct SensOrderNode *tail;
+struct smSensOrderTypeLinkedList {
+  struct smSensOrderTypesNode *head;
+  struct smSensOrderTypesNode *current;
+  struct smSensOrderTypesNode *next;
 };
 
 struct SensClientNode {
@@ -96,6 +92,7 @@ void realSensorRequest(const char *realSensorName, uint32_t rate, uint32_t laten
 }
 
 int main(int argc, char *argv) {
+  printf("char* sizo = %zu\n", sizeof(char*));
   realSensorRequest("acc", 1, 11, "pedo");
   realSensorRequest("acc", 2, 22, "whun");
   realSensorRequest("gyro", 3, 33, "ori");
