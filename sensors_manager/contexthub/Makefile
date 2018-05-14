@@ -6,6 +6,9 @@ SRC_DIRS ?= ./firmware
 
 SRCS += ./firmware/src/main.c
 SRCS += ./firmware/src/heap.c
+SRCS += ./firmware/src/sensors.c
+SRCS += ./firmware/src/sensor_manager/src/sensor_manager.c
+
 
 OBJS := $(SRCS:%=$(BUILD_DIR)/%.o)
 DEPS := $(OBJS:.o=.d)

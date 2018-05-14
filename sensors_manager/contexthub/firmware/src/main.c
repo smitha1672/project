@@ -6,39 +6,51 @@
 #include <ctype.h>
 
 #include <sensor_manager.h>
-#include <sensors.h>
-#include <heap.h>
 
 #define osLog(...) \
   do { \
     printf( __VA_ARGS__); \
   } while (0)
 
-struct smSensOrderInfoNode {
-  struct SensOrderInfo *info;
-  struct SensOrderInfoNode *next;
-};
+int main(int argc, char *argv[])
+{
+  //char *delivery = "";
+  int thick = 0;
+  int count = 0;
+  char ch;
 
-struct smSensOrderLinkedList {
-  struct SensOrderInfoNode *head;
-  struct SensOrderInfoNode *current;
-  struct SensOrderInfoNode *tail;
-};
+  while ( (ch = getopt(argc, argv, "d:t")) != EOF)
+  {
+    switch(ch)
+    {
+      case 'd':
+        //delivery = optarg;
+        break;
+      case 't':
+        thick = 1;
+        break;
+      default:
+        fprintf(stderr, "Unknown option: '%s'\n", optarg);
+        return 1;
+    }
+  }
 
-struct smSensOrderTypesNode {
-  struct SensorInfo *info;
-  uint32_t handle;
-  uint32_t event_type;
-  struct smSensOrderLinkedList *list;
-  struct smSensOrderTypesNode *next;
-};
+  argc -= optind;
+  argv += optind;
 
-struct smSensOrderTypeLinkedList {
-  struct smSensOrderTypesNode *head;
-  struct smSensOrderTypesNode *current;
-  struct smSensOrderTypesNode *tail;
-};
+  if (thick)
+    smAllocServerSensor(1);
+  //if (delivery[0])
+  //  printf("To be delivered %s.\n", delivery);
 
+  //puts("Ingredients:");
+  for (count = 0 ; count < argc; count++)
+    puts(argv[count]);
+
+  return 0;
+}
+
+#if 0
 struct SensClientNode {
   char *realSensorName;
   uint32_t rate;
@@ -99,6 +111,7 @@ int main(int argc, char *argv) {
   showRealAccLinkedList(&realAccList);
   return 0;
 }
+#endif
 
 #if 0
 void thread(void)
