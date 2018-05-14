@@ -15,7 +15,7 @@
   } while (0)
 
 struct smSensOrderInfoNode {
-  struct SensOrderInfo *order_info;
+  struct SensOrderInfo *info;
   struct SensOrderInfoNode *next;
 };
 
@@ -29,14 +29,14 @@ struct smSensOrderTypesNode {
   struct SensorInfo *info;
   uint32_t handle;
   uint32_t event_type;
-  struct smSensOrderLinkedList *solist;
+  struct smSensOrderLinkedList *list;
   struct smSensOrderTypesNode *next;
 };
 
 struct smSensOrderTypeLinkedList {
   struct smSensOrderTypesNode *head;
   struct smSensOrderTypesNode *current;
-  struct smSensOrderTypesNode *next;
+  struct smSensOrderTypesNode *tail;
 };
 
 struct SensClientNode {
