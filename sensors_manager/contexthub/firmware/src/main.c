@@ -1,6 +1,8 @@
 #include <pthread.h>
 #include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
 #include <unistd.h>
 #include <errno.h>
 #include <ctype.h>
@@ -12,23 +14,59 @@
     printf( __VA_ARGS__); \
   } while (0)
 
+#define ARRAY_SZIE(array) (sizeof(array)/sizeof(array[0]))
+
+const struct SensorIndex {
+  char *name;
+  uint32_t sensorType;
+} sensor_idx[] = {
+  {"Accelerometer", 1},
+  {"Any Motion", 2},
+  {"No Motion", 3}
+};
+
+
+
+const struct SensorIndex* get_sensor_type(uint32_t idx) {
+  for (uint32_t i = 0; i < ARRAY_SZIE(sensor_idx); i++) {
+    if (sensor_idx[i].sensorType == idx)
+      return &sensor_idx[i];
+  }
+
+  return NULL;
+}
+
 int main(int argc, char *argv[])
 {
   //char *delivery = "";
-  int thick = 0;
   int count = 0;
   char ch;
+  const struct SensorIndex *idx = NULL;
 
-  while ( (ch = getopt(argc, argv, "d:t")) != EOF)
-  {
+  while ( (ch = getopt(argc, argv, "a:")) != EOF) {
     switch(ch)
     {
-      case 'd':
+      case 'a': { /*allocate server sensor*/
+        idx = get_sensor_type(atoi(optarg));
+        if (idx) {
+          printf("sensor name: %s, sensor type: %d\n", idx->name, idx->sensorType);
+          smAllocServerSensor(idx->sensorType);
+        }
+        break;
+      }
+      case 'f': { /*free server sensor*/
+        break;
+      }
+      case 'r': {/*request a sensor order*/
         //delivery = optarg;
         break;
-      case 't':
-        thick = 1;
+      }
+      case 'd': { /*detech a sensor order*/
         break;
+      }
+      case 's': { /*display list content*/
+        break;
+      }
       default:
         fprintf(stderr, "Unknown option: '%s'\n", optarg);
         return 1;
@@ -38,8 +76,6 @@ int main(int argc, char *argv[])
   argc -= optind;
   argv += optind;
 
-  if (thick)
-    smAllocServerSensor(1);
   //if (delivery[0])
   //  printf("To be delivered %s.\n", delivery);
 

@@ -104,10 +104,8 @@ static void heapMergeFreeChunks(void)
 #endif
 
 void* heapAlloc(uint32_t sz) {
-  void* ret = NULL;
-
-  ret = malloc((size_t)sz);
-  return ret;
+  printf("size =%d %zu\n", sz, (size_t)sz);
+  return malloc((size_t)sz);
 }
 
 void heapFree(void* ptr) {

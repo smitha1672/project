@@ -24,9 +24,6 @@ extern "C" {
 #include <stdint.h>
 #include <stdbool.h>
 
-
-
-
 //bool heapInit(void);
 void* heapAlloc(uint32_t sz);
 void heapFree(void* ptr);
