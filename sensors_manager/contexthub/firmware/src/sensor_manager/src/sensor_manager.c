@@ -4,6 +4,7 @@
 #include <string.h>
 
 #define heapAlloc malloc
+#define DEBUG_PRINT printf
 
 struct smSensorServerInfo {
   struct SensorInfo *info;
@@ -113,7 +114,7 @@ static struct SensorInfo *_smSensorTypeFillInfo(
 typedef int (*DS_SER_LL) (const struct SensorInfo*);
 
 int _smShowServerSensors(const struct SensorInfo *info) {
-  printf("[show] sensor name:%s, type:%d \n",
+  DEBUG_PRINT("[show] sensor name:%s, type:%d \n",
     info->sensorName,
     info->sensorType);
   return 0;
@@ -146,7 +147,7 @@ int smAllocServerSensor(uint32_t sensorType) {
 
   pSrcInfo = sensorFind(sensorType, 0, &handle);
   if (!pSrcInfo) {
-    printf("sensor type %d cannot be found\n", sensorType);
+    DEBUG_PRINT("sensor type %d cannot be found\n", sensorType);
     goto exit;
   }
 
@@ -174,7 +175,7 @@ int smAllocServerSensor(uint32_t sensorType) {
     node->handle = handle;
     _smSensServerTypeLinkedListAddTail(&mlist, node);
   } else {
-    printf("[reject] sensor:%s has been placed in list\n", pSrcInfo->sensorName);
+    DEBUG_PRINT("[reject] sensor:%s has been placed in list\n", pSrcInfo->sensorName);
   }
 exit:
   return iret;
