@@ -54,17 +54,18 @@ int smRequestSensorOrder(struct SensOrderInfo info) {
   return iret;
 }
 
-typedef int (*FTR_TYPE_DIFF) (const struct SensorInfo *a_info, const struct SensorInfo *b_info);
+typedef int (*TYPE_DIFF) (const struct SensorInfo *,
+    const struct SensorInfo *);
 
-static int smSensServerTypeDiff(const struct SensorInfo *a_info,
+static int _smSensServerTypeDiff(const struct SensorInfo *a_info,
     const struct SensorInfo *b_info)
 {
   return (a_info->sensorType == b_info->sensorType)? 1: 0;
 }
 
-static struct smSensServerTypesNode* smSensServerGetNote(
+static struct smSensServerTypesNode* _smSensServerTypeLinkedListGetNote(
     struct smSensServerTypeLinkedList *list,
-    FTR_TYPE_DIFF diff,
+    TYPE_DIFF diff,
     const struct SensorInfo *info) {
   struct smSensServerTypesNode *node = (struct smSensServerTypesNode*)list->head;
   while(node != NULL) {
@@ -76,7 +77,7 @@ static struct smSensServerTypesNode* smSensServerGetNote(
 }
 
 #define STR_LEN(str) (strlen(str) + 1)
-static void smSensServerTypeLinkedListAddTail(
+static void _smSensServerTypeLinkedListAddTail(
     struct smSensServerTypeLinkedList *list,
     struct smSensServerTypesNode *node) {
   if (list->head == NULL)
@@ -87,7 +88,7 @@ static void smSensServerTypeLinkedListAddTail(
   list->tail = (struct smSensServerTypesNode*)node;
 }
 
-static struct SensorInfo *smSensorTypeFillInfo(
+static struct SensorInfo *_smSensorTypeFillInfo(
     const struct SensorInfo *pSrcInfo) {
   struct SensorInfo *pInfo = \
     (struct SensorInfo *)heapAlloc(sizeof(struct SensorInfo));
@@ -109,6 +110,34 @@ static struct SensorInfo *smSensorTypeFillInfo(
   return pInfo;
 }
 
+typedef int (*DS_SER_LL) (const struct SensorInfo*);
+
+int _smShowServerSensors(const struct SensorInfo *info) {
+  printf("[show] sensor name:%s, type:%d \n",
+    info->sensorName,
+    info->sensorType);
+  return 0;
+}
+
+int _smShowServerSensll(struct smSensServerTypeLinkedList *list,
+    DS_SER_LL show)
+{
+  struct smSensServerTypesNode *cur = \
+    (struct smSensServerTypesNode *)list->head;
+
+  while (cur) {
+    show(cur->info);
+    cur = cur->next;
+  }
+
+  return 0;
+}
+
+int smListServerSensors(void) {
+  _smShowServerSensll(&mlist, &_smShowServerSensors);
+  return 0;
+}
+
 int smAllocServerSensor(uint32_t sensorType) {
   int iret = -1;
   uint32_t handle = 0;
@@ -121,9 +150,10 @@ int smAllocServerSensor(uint32_t sensorType) {
     goto exit;
   }
 
-  node = (struct smSensServerTypesNode*)smSensServerGetNote(&mlist,
-      &smSensServerTypeDiff,
-      pSrcInfo);
+  node = \
+    (struct smSensServerTypesNode*)_smSensServerTypeLinkedListGetNote(&mlist,
+        &_smSensServerTypeDiff,
+        pSrcInfo);
   if (node == NULL) {
     struct SensorInfo *pDestInfo = NULL;
     node = (struct smSensServerTypesNode*)heapAlloc(sizeof(struct smSensServerTypesNode));
@@ -132,19 +162,19 @@ int smAllocServerSensor(uint32_t sensorType) {
       goto exit;
     }
 
-    pDestInfo = smSensorTypeFillInfo(pSrcInfo);
+    pDestInfo = _smSensorTypeFillInfo(pSrcInfo);
     if (!pDestInfo) {
       iret = -2;
       goto exit;
     }
 
     node->next = NULL;
-    node->info = smSensorTypeFillInfo(pSrcInfo);
+    node->info = pDestInfo;
     node->evtType = sensorGetMyEventType(pSrcInfo->sensorType);
     node->handle = handle;
-    smSensServerTypeLinkedListAddTail(&mlist, node);
+    _smSensServerTypeLinkedListAddTail(&mlist, node);
   } else {
-    printf("%s sensor has already been existed in type list\n", pSrcInfo->sensorName);
+    printf("[reject] sensor:%s has been placed in list\n", pSrcInfo->sensorName);
   }
 exit:
   return iret;

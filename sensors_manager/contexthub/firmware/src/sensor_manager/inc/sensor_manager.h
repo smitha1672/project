@@ -7,7 +7,6 @@ extern "C" {
 
 #include <stdint.h>
 
-
 struct SensServeInfo {
   uint32_t supportedRate;
   uint64_t latency;
@@ -26,6 +25,7 @@ struct SensOrderInfo {
 
 int smRequestSensorOrder(struct SensOrderInfo info);
 
+int smListServerSensors(void);
 int smAllocServerSensor(uint32_t sensorType);
 
 #endif

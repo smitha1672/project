@@ -43,13 +43,13 @@ int main(int argc, char *argv[])
   char ch;
   const struct SensorIndex *idx = NULL;
 
-  while ( (ch = getopt(argc, argv, "a:")) != EOF) {
+  while ( (ch = getopt(argc, argv, "a:s")) != EOF) {
     switch(ch)
     {
       case 'a': { /*allocate server sensor*/
         idx = get_sensor_type(atoi(optarg));
         if (idx) {
-          printf("sensor name: %s, sensor type: %d\n", idx->name, idx->sensorType);
+          printf("[allocate] sensor name: %s, sensor type: %d\n", idx->name, idx->sensorType);
           smAllocServerSensor(idx->sensorType);
         }
         break;
@@ -65,6 +65,7 @@ int main(int argc, char *argv[])
         break;
       }
       case 's': { /*display list content*/
+        smListServerSensors();
         break;
       }
       default:
