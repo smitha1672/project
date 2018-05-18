@@ -7,19 +7,16 @@ extern "C" {
 
 #include <stdint.h>
 
-struct SensServeInfo {
+struct SensConfigInfo {
+  uint32_t sensorType;
   uint32_t supportedRate;
   uint64_t latency;
 };
 
-struct SensClientInfo {
-  uint32_t sensorType;
-};
-
 struct SensOrderInfo {
   uint32_t tid;
-  struct SensServeInfo serve;
-  struct SensClientInfo client;
+  struct SensConfigInfo server;
+  struct SensConfigInfo client;
 };
 
 
