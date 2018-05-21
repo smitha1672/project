@@ -1,7 +1,9 @@
 #include <sensor_manager.h>
 #include <sensors.h>
+
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 #define heapAlloc malloc
 #define heapFree free
@@ -51,6 +53,8 @@ static struct smSensServerTypeLinkedList mlist = {NULL, NULL, NULL};
 typedef int (*TYPE_DIFF) (const struct SensorInfo *,
     const struct SensorInfo *);
 
+typedef int (*DS_SER_LL) (const struct SensorInfo*);
+
 static struct smSensServerTypesNode* _smSensServerTypeLinkedListGetNote(
     struct smSensServerTypeLinkedList *list,
     TYPE_DIFF diff,
@@ -83,9 +87,6 @@ int smRequestSensorOrder(struct SensOrderInfo order_info) {
 exit:
   return iret;
 }
-
-typedef int (*TYPE_DIFF) (const struct SensorInfo *,
-    const struct SensorInfo *);
 
 static int _smSensServerTypeDiff(const struct SensorInfo *a_info,
     const struct SensorInfo *b_info)
@@ -122,12 +123,17 @@ static struct SensorInfo *_smSensorTypeFillInfo(
     const struct SensorInfo *pSrcInfo) {
   struct SensorInfo *pInfo = \
     (struct SensorInfo *)heapAlloc(sizeof(struct SensorInfo));
-  if (!pInfo)
-    goto err1;
+  if (!pInfo) {
+    pInfo = NULL;
+    goto exit;
+  }
 
   pInfo->sensorName = (char*)heapAlloc(STR_LEN(pSrcInfo->sensorName));
   if (!pInfo->sensorName) {
-    goto err2;
+    heapFree(pInfo);
+    pInfo = NULL;
+    goto exit;
+  }
   strcpy((char*)pInfo->sensorName, (char*)pSrcInfo->sensorName);
   pInfo->supportedRates = (uint32_t*)pSrcInfo->supportedRates;
   pInfo->sensorType = pSrcInfo->sensorType;
@@ -139,15 +145,9 @@ static struct SensorInfo *_smSensorTypeFillInfo(
   pInfo->rawType = pSrcInfo->rawType;
   pInfo->rawScale = pSrcInfo->rawScale;
 
-err1:
-  return NULL;
-err2:
-  heapFree(pInfo);
-
+exit:
   return pInfo;
 }
-
-typedef int (*DS_SER_LL) (const struct SensorInfo*);
 
 int _smShowServerSensors(const struct SensorInfo *info) {
   DEBUG_PRINT("[show] sensor name:%s, type:%d \n",
@@ -192,7 +192,7 @@ int smAllocServerSensor(uint32_t sensorType) {
     (struct smSensServerTypesNode*)_smSensServerTypeLinkedListGetNote(&mlist,
         &_smSensServerTypeDiff,
         pSrcInfo);
-  if (node == NULL) {
+  if (!node) {
     struct SensorInfo *pDestInfo = NULL;
     node = (struct smSensServerTypesNode*)heapAlloc(sizeof(struct smSensServerTypesNode));
     if (!node) {
@@ -202,6 +202,8 @@ int smAllocServerSensor(uint32_t sensorType) {
 
     pDestInfo = _smSensorTypeFillInfo(pSrcInfo);
     if (!pDestInfo) {
+      heapFree(node);
+      node = NULL;
       iret = -3;
       goto exit;
     }
