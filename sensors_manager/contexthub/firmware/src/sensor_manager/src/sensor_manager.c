@@ -50,6 +50,8 @@ struct smSensServerTypeLinkedList {
 
 static struct smSensServerTypeLinkedList mlist = {NULL, NULL, NULL};
 
+#define STR_LEN(str) (strlen(str) + 1)
+
 typedef int (*TYPE_DIFF) (const struct SensorInfo *,
     const struct SensorInfo *);
 
@@ -63,27 +65,88 @@ static struct smSensServerTypesNode* _smSensServerTypeLinkedListGetNote(
 static int _smSensServerTypeDiff(const struct SensorInfo *a_info,
     const struct SensorInfo *b_info);
 
+static struct SensorInfo *_smFillSensInfo(
+    const struct SensorInfo *pSrcInfo);
+
+#if 0
+typedef int (*ORDER_DIFF) (const struct smSensorOrderInfo *,
+    const struct smSensorOrderInfo *);
+
+static struct smSensOrderInfoNode* _smSensOrderLinkedListGetNote(
+    struct smSensOrderLinkedList *list,
+    ORDER_DIFF diff,
+    const struct smSensorOrderInfo *order_info);
+
+static struct smSensOrderInfoNode* _smSensOrderLinkedListGetNote(
+    struct smSensOrderLinkedList *list,
+    ORDER_DIFF diff,
+    const struct smSensorOrderInfo *order_info) {
+}
+#endif
+
 int smRequestSensorOrder(struct SensOrderInfo order_info) {
   int iret = 0;
   const struct SensorInfo *server_info = NULL;
-  struct smSensServerTypesNode *type_note = NULL;
-  struct smSensOrderInfoNode *order_note = NULL;
-  uint32_t handle = 0;
+  const struct SensorInfo *client_info = NULL;
+  struct smSensOrderInfoNode *sm_order_info_node = NULL;
+  char *sensorName = NULL;
+  uint32_t server_handle = 0, client_handle = 0;
 
-  server_info = sensorFind(order_info.server.sensorType, 0, &handle);
+  server_info = sensorFind(order_info.server.sensorType, 0, &server_handle);
   if (!server_info) {
     iret = -1;
     goto exit;
   }
 
-  type_note = _smSensServerTypeLinkedListGetNote(&mlist,
-    &_smSensServerTypeDiff,
-    server_info);
-  if (!type_note) {
+  client_info = sensorFind(order_info.client.sensorType, 0, &client_handle);
+  if (!client_info) {
     iret = -2;
     goto exit;
   }
 
+  sm_order_info_node = \
+    (struct smSensOrderInfoNode*)heapAlloc(sizeof(struct smSensOrderInfoNode));
+  if (!sm_order_info_node) {
+    iret = -3;
+    goto exit;
+  }
+
+  sm_order_info_node->next = NULL;
+  sm_order_info_node->info = \
+    (struct smSensorOrderInfo*)heapAlloc(sizeof(struct smSensorOrderInfo));
+  if (!sm_order_info_node->info) {
+    heapFree(sm_order_info_node);
+    iret = -4;
+    goto exit;
+  }
+  sm_order_info_node->info->tid = order_info.tid;
+
+  sm_order_info_node->info->server.info = _smFillSensInfo(server_info);
+  if (!sm_order_info_node->info->server.info) {
+    free(sm_order_info_node);
+    iret = -5;
+    goto exit;
+  }
+
+  sm_order_info_node->info->server.rate = order_info.server.supportedRate;
+  sm_order_info_node->info->server.latency = order_info.server.latency;
+  sm_order_info_node->info->server.handle = server_handle;
+  sm_order_info_node->info->server.evtType = \
+    sensorGetMyEventType(server_info->sensorType);
+  sm_order_info_node->info->client.info = _smFillSensInfo(client_info);
+  if (!sm_order_info_node->info->client.info) {
+    free(sm_order_info_node);
+    iret = -6;
+    goto exit;
+  }
+  sm_order_info_node->info->client.rate = order_info.client.supportedRate;
+  sm_order_info_node->info->client.latency = order_info.client.latency;
+  sm_order_info_node->info->client.handle = client_handle;
+  sm_order_info_node->info->client.evtType = \
+    sensorGetMyEventType(client_info->sensorType);
+  printf("FUNCTION: %s\n", __FUNCTION__);
+  printf("server.info.sensorName: %s\n", sm_order_info_node->info->server.info->sensorName);
+  printf("client.info.sensorName: %s\n", sm_order_info_node->info->client.info->sensorName);
 exit:
   return iret;
 }
@@ -107,7 +170,6 @@ static struct smSensServerTypesNode* _smSensServerTypeLinkedListGetNote(
   return NULL;
 }
 
-#define STR_LEN(str) (strlen(str) + 1)
 static void _smSensServerTypeLinkedListAddTail(
     struct smSensServerTypeLinkedList *list,
     struct smSensServerTypesNode *node) {
@@ -119,7 +181,7 @@ static void _smSensServerTypeLinkedListAddTail(
   list->tail = (struct smSensServerTypesNode*)node;
 }
 
-static struct SensorInfo *_smSensorTypeFillInfo(
+static struct SensorInfo *_smFillSensInfo(
     const struct SensorInfo *pSrcInfo) {
   struct SensorInfo *pInfo = \
     (struct SensorInfo *)heapAlloc(sizeof(struct SensorInfo));
@@ -200,7 +262,7 @@ int smAllocServerSensor(uint32_t sensorType) {
       goto exit;
     }
 
-    pDestInfo = _smSensorTypeFillInfo(pSrcInfo);
+    pDestInfo = _smFillSensInfo(pSrcInfo);
     if (!pDestInfo) {
       heapFree(node);
       node = NULL;
