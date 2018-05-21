@@ -14,7 +14,7 @@
     printf( __VA_ARGS__); \
   } while (0)
 
-#define ARRAY_SZIE(array) (sizeof(array)/sizeof(array[0]))
+#define ARRAY_SIZE(array) (sizeof(array)/sizeof(array[0]))
 
 const struct SensorIndex {
   char *name;
@@ -25,10 +25,23 @@ const struct SensorIndex {
   {"No Motion", 3}
 };
 
+const struct SensOrderInfo order[] = {
+  {
+    .tid = 1,
+    {.sensorType = 2, .supportedRate = 0, .latency = 0},
+    {.sensorType = 1, .supportedRate = 51200, .latency = 0}
+  },
+  {
+    .tid = 2,
+    {.sensorType = 2, .supportedRate = 0, .latency = 0},
+    {.sensorType = 1, .supportedRate = 25600, .latency = 0}
+  }
+};
+
 
 
 const struct SensorIndex* get_sensor_type(uint32_t idx) {
-  for (uint32_t i = 0; i < ARRAY_SZIE(sensor_idx); i++) {
+  for (uint32_t i = 0; i < ARRAY_SIZE(sensor_idx); i++) {
     if (sensor_idx[i].sensorType == idx)
       return &sensor_idx[i];
   }
@@ -43,7 +56,7 @@ int main(int argc, char *argv[])
   char ch;
   const struct SensorIndex *idx = NULL;
 
-  while ( (ch = getopt(argc, argv, "a:s")) != EOF) {
+  while ( (ch = getopt(argc, argv, "a:sr:")) != EOF) {
     switch(ch)
     {
       case 'a': { /*allocate server sensor*/
@@ -59,6 +72,10 @@ int main(int argc, char *argv[])
       }
       case 'r': {/*request a sensor order*/
         //delivery = optarg;
+        int i = atoi(optarg);
+        if ( i < ARRAY_SIZE(order)) {
+          smRequestSensorOrder(order[i]);
+        }
         break;
       }
       case 'd': { /*detech a sensor order*/
