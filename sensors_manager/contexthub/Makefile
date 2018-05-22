@@ -18,7 +18,7 @@ INC_FLAGS += -I./firmware/inc/cpu/x86/
 INC_FLAGS += -I./firmware/src/sensor_manager/inc/
 
 CPPFLAGS ?= $(INC_FLAGS) -MMD -MP
-CFLAGS ?= $(INC_FLAGS) -lpthread -O3 -Werror -lm
+CFLAGS ?= -g $(INC_FLAGS) -lpthread -O3 -Werror -lm
 CFLAGS += -DFORCE_HEAP_IN_DOT_DATA
 CFLAGS += -DHEAP_SIZE=2048
 LDFLAGS += $(CFLAGS) $(CPPFLAGS)
