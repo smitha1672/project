@@ -126,6 +126,94 @@ static struct smSensOrderInfoNode* _smSensOrderLinkedListGetNote(
   return NULL;
 }
 
+static void _smSensOrderLinkedListAddTail(
+    struct smSensOrderLinkedList *list,
+    struct smSensOrderInfoNode *node) {
+  if (list->head == NULL)
+    list->head = node;
+  else
+    list->tail->next = (struct smSensOrderInfoNode*)node;
+
+  list->tail = (struct smSensOrderInfoNode*)node;
+}
+
+static int _smSensFreeOrderInfoNode(struct smSensOrderInfoNode* node) {
+  int iret = 0;
+
+  if (!node) {
+    iret = -1;
+    goto exit;
+  }
+
+  heapFree((char*)node->info->server.info->sensorName);
+  node->info->server.info->sensorName = NULL;
+  heapFree(node->info->server.info);
+  node->info->server.info = NULL;
+
+  heapFree((char*)node->info->client.info->sensorName);
+  node->info->client.info->sensorName = NULL;
+  heapFree(node->info->client.info);
+  node->info->client.info = NULL;
+
+  heapFree(node->info);
+  node->info = NULL;
+  heapFree(node);
+  node = NULL;
+
+exit:
+  return iret;
+}
+
+static struct smSensOrderInfoNode *_smSensAllocOrderInfoNode(
+    struct SensOrderInfo order_info,
+    const struct SensorInfo *server_info, uint32_t server_handle,
+    const struct SensorInfo *client_info, uint32_t client_handle) {
+  struct smSensOrderInfoNode *node = \
+    (struct smSensOrderInfoNode*)heapAlloc(sizeof(struct smSensOrderInfoNode));
+
+  if (!node) {
+    node = NULL;
+    goto exit;
+  }
+
+  node->next = NULL;
+  node->info = \
+    (struct smSensorOrderInfo*)heapAlloc(sizeof(struct smSensorOrderInfo));
+  if (!node->info) {
+    heapFree(node);
+    node = NULL;
+    goto exit;
+  }
+
+  node->info->tid = order_info.tid;
+  node->info->server.info = _smFillSensInfo(server_info);
+  if (!node->info->server.info) {
+    free(node);
+    node = NULL;
+    goto exit;
+  }
+
+  node->info->server.rate = order_info.server.supportedRate;
+  node->info->server.latency = order_info.server.latency;
+  node->info->server.handle = server_handle;
+  node->info->server.evtType = \
+    sensorGetMyEventType(server_info->sensorType);
+  node->info->client.info = _smFillSensInfo(client_info);
+  if (!node->info->client.info) {
+    free(node);
+    node = NULL;
+    goto exit;
+  }
+  node->info->client.rate = order_info.client.supportedRate;
+  node->info->client.latency = order_info.client.latency;
+  node->info->client.handle = client_handle;
+  node->info->client.evtType = \
+    sensorGetMyEventType(client_info->sensorType);
+
+exit:
+  return node;
+}
+
 int smRequestSensorOrder(struct SensOrderInfo order_info) {
   int iret = 0;
   const struct SensorInfo *server_info = NULL;
@@ -141,70 +229,43 @@ int smRequestSensorOrder(struct SensOrderInfo order_info) {
     goto exit;
   }
 
-  type_node = \
-    (struct smSensServerTypesNode*)_smSensServerTypeLinkedListGetNote(&mlist,
-        &_smSensServerTypeDiff,
-        server_info);
-  if (!type_node) {
-    printf("type list does not supported %s sensor\n", server_info->sensorName);
-    iret = -1;
-    goto exit;
-  }
-
   client_info = sensorFind(order_info.client.sensorType, 0, &client_handle);
   if (!client_info) {
     iret = -1;
     goto exit;
   }
 
-  sm_order_info_node = \
-    (struct smSensOrderInfoNode*)heapAlloc(sizeof(struct smSensOrderInfoNode));
+  type_node = \
+    (struct smSensServerTypesNode*)_smSensServerTypeLinkedListGetNote(&mlist,
+        &_smSensServerTypeDiff,
+        server_info);
+  if (!type_node) {
+    DEBUG_PRINT("type list does not supported %s sensor\n", server_info->sensorName);
+    iret = -1;
+    goto exit;
+  }
+
+  sm_order_info_node = _smSensAllocOrderInfoNode(order_info,
+    server_info, server_handle,
+    client_info, client_handle);
   if (!sm_order_info_node) {
     iret = -1;
     goto exit;
   }
 
-  sm_order_info_node->next = NULL;
-  sm_order_info_node->info = \
-    (struct smSensorOrderInfo*)heapAlloc(sizeof(struct smSensorOrderInfo));
-  if (!sm_order_info_node->info) {
-    heapFree(sm_order_info_node);
-    iret = -1;
-    goto exit;
+  if (!type_node->order_list) {
+    type_node->order_list = \
+      (struct smSensOrderLinkedList*)heapAlloc(sizeof(struct smSensOrderLinkedList));
+    _smSensOrderLinkedListAddTail(type_node->order_list, sm_order_info_node);
+  } else {
+    if (!_smSensOrderLinkedListGetNote(type_node->order_list,
+          &smSensOrderDiff,
+          sm_order_info_node->info)) {
+      _smSensOrderLinkedListAddTail(type_node->order_list, sm_order_info_node);
+    } else {
+      _smSensFreeOrderInfoNode(sm_order_info_node);
+    }
   }
-  sm_order_info_node->info->tid = order_info.tid;
-
-  sm_order_info_node->info->server.info = _smFillSensInfo(server_info);
-  if (!sm_order_info_node->info->server.info) {
-    free(sm_order_info_node);
-    iret = -1;
-    goto exit;
-  }
-
-  sm_order_info_node->info->server.rate = order_info.server.supportedRate;
-  sm_order_info_node->info->server.latency = order_info.server.latency;
-  sm_order_info_node->info->server.handle = server_handle;
-  sm_order_info_node->info->server.evtType = \
-    sensorGetMyEventType(server_info->sensorType);
-  sm_order_info_node->info->client.info = _smFillSensInfo(client_info);
-  if (!sm_order_info_node->info->client.info) {
-    free(sm_order_info_node);
-    iret = -1;
-    goto exit;
-  }
-  sm_order_info_node->info->client.rate = order_info.client.supportedRate;
-  sm_order_info_node->info->client.latency = order_info.client.latency;
-  sm_order_info_node->info->client.handle = client_handle;
-  sm_order_info_node->info->client.evtType = \
-    sensorGetMyEventType(client_info->sensorType);
-  printf("FUNCTION: %s\n", __FUNCTION__);
-  printf("server.info.sensorName: %s\n", sm_order_info_node->info->server.info->sensorName);
-  printf("client.info.sensorName: %s\n", sm_order_info_node->info->client.info->sensorName);
-  /*get node from order linked list*/
-  if (!_smSensOrderLinkedListGetNote(type_node->order_list,
-        &smSensOrderDiff,
-        sm_order_info_node->info))
-    printf("No anything in linked list\n");
 exit:
   return iret;
 }
@@ -272,28 +333,58 @@ exit:
 }
 
 int _smShowServerSensors(const struct SensorInfo *info) {
-  DEBUG_PRINT("[show] sensor name:%s, type:%d \n",
+  DEBUG_PRINT("Type linked list - sensor name: %s, type:%d \n",
     info->sensorName,
     info->sensorType);
   return 0;
 }
 
-int _smShowServerSensll(struct smSensServerTypeLinkedList *list,
-    DS_SER_LL show)
-{
-  struct smSensServerTypesNode *cur = \
-    (struct smSensServerTypesNode *)list->head;
+int _smShowServerSensll(struct smSensServerTypeLinkedList *list) {
+  int iret = 0;
+  struct smSensServerTypesNode *curType = NULL;
+  struct smSensOrderInfoNode *curOrder = NULL;
 
-  while (cur) {
-    show(cur->info);
-    cur = cur->next;
+  if (!list) {
+    iret = -1;
+    goto exit;
   }
 
-  return 0;
+  curType = (struct smSensServerTypesNode *)list->head;
+  curOrder = (struct smSensOrderInfoNode *)list->head->order_list->head;
+  while (curType) {
+    DEBUG_PRINT("Type linked list - sensor name: %s, type: %d \n",
+        curType->info->sensorName,
+        curType->info->sensorType);
+
+    while(curOrder) {
+      DEBUG_PRINT("   Order linked list - { \n");
+      DEBUG_PRINT("     tid: %d\n", curOrder->info->tid);
+      DEBUG_PRINT("     {\n");
+      DEBUG_PRINT("       server sensor: %s\n", curOrder->info->server.info->sensorName);
+      DEBUG_PRINT("       server sensor rate: %u\n",  curOrder->info->server.rate);
+      DEBUG_PRINT("       server sensor latency: %ld\n",  curOrder->info->server.latency);
+      DEBUG_PRINT("       server sensor handle: %u\n",  curOrder->info->server.handle);
+      DEBUG_PRINT("       server sensor evtType: %u\n",  curOrder->info->server.evtType);
+      DEBUG_PRINT("     }\n");
+      DEBUG_PRINT("     {\n");
+      DEBUG_PRINT("       client sensor: %s\n", curOrder->info->client.info->sensorName);
+      DEBUG_PRINT("       client sensor rate: %u\n",  curOrder->info->client.rate);
+      DEBUG_PRINT("       client sensor latency: %ld\n",  curOrder->info->client.latency);
+      DEBUG_PRINT("       client sensor handle: %u\n",  curOrder->info->client.handle);
+      DEBUG_PRINT("       client sensor evtType: %u\n",  curOrder->info->client.evtType);
+      DEBUG_PRINT("     }\n");
+      DEBUG_PRINT("   }\n");
+      curOrder = curOrder->next;
+    }
+
+    curType = curType->next;
+  }
+exit:
+  return iret;
 }
 
 int smListServerSensors(void) {
-  _smShowServerSensll(&mlist, &_smShowServerSensors);
+  _smShowServerSensll(&mlist);
   return 0;
 }
 
@@ -330,7 +421,7 @@ int smAllocServerSensor(uint32_t sensorType) {
       goto exit;
     }
 
-    node->order_list= NULL;
+    node->order_list = NULL;
     node->next = NULL;
     node->info = pDestInfo;
     node->evtType = sensorGetMyEventType(pSrcInfo->sensorType);
