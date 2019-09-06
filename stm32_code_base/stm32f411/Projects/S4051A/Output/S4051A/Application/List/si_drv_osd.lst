@@ -1,0 +1,573 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:25:16 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\osd_drv\si_drv_o #
+#                    sd.c                                                     #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\osd_drv\si_drv_o #
+#                    sd.c -D S4051A -D DEBUG -D FREE_RTOS -D STM32F40_41xxx   #
+#                    -D USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D          #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_drv_osd.lst                                        #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_drv_osd.o                                           #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\driver\osd_drv\si_drv_osd.c
+      1          //***************************************************************************
+      2          //!file     si_drv_osd.c
+      3          //!brief    Silicon Image OSD Driver.
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2011-2012, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include "string.h"
+     14          #include "si_drv_osd_internal.h"
+     15          #include "si_drv_internal.h"
+     16          #include "si_regs_osd.h"
+     17          #if INC_SPI
+     18          #include "si_drv_spi.h"
+     19          #endif
+     20          #include "si_drv_switch.h"  // SWWAFP1609_1743
+     21          
+     22          //------------------------------------------------------------------------------
+     23          //  OSD Driver Instance Data
+     24          //------------------------------------------------------------------------------
+     25          
+     26          SiiOsdDrvInstanceData_t  drvOsdInstance[1];
+     27          SiiOsdDrvInstanceData_t *pDrvOsd = &drvOsdInstance[0];
+     28          
+     29          //-------------------------------------------------------------------------------------------------
+     30          //! @brief      Returns the result of the last call to an OSD component function.
+     31          //! @return     SiiDrvOsdResultCodes_t result code.
+     32          //! @retval     SII_OSDDRV_SUCCESS: Success
+     33          //! @retval     SII_OSDDRV_ERR_FAIL: General failure
+     34          //! @retval     others
+     35          //-------------------------------------------------------------------------------------------------
+     36          SiiDrvOsdResultCodes_t SiiDrvOsdGetLastResult( void )
+     37          {
+     38              return( pDrvOsd->lastResultCode );
+     39          }
+     40          
+     41          //-------------------------------------------------------------------------------------------------
+     42          //! @brief      Make OSD resolution change to font size, horiz, and vertical position as necessary
+     43          //-------------------------------------------------------------------------------------------------
+     44          bool_t SiiDrvOsdResolutionChange( videoFormatId_t newVidMode, int newVres, bool_t newInterlace )
+     45          {
+     46              int_t               winRef, vRes, newFontResourceId;
+     47              bool_t              isInterlaced, success, test;
+     48          
+     49             // DEBUG_PRINT( MSG_DBG, "========= OSD Resolution Change Handler ============\n");
+     50              //DEBUG_PRINT( MSG_DBG, "OLD - Vres: %4d  FontHeight: %d  OSD_EN: %d\n", pDrvOsd->outputVres, pDrvOsd->fontHeight, SiiRegRead( REG_OSD_WIN_CTRL ) & BIT_OSD_ENABLE );
+     51              if ( newVidMode == SI_VIDEO_MODE_NON_STD )
+     52              {
+     53                  vRes = newVres;
+     54                  isInterlaced = newInterlace;
+     55              }
+     56              else
+     57              {
+     58                  SiiDrvSwitchVideoFmtParse( newVidMode, NULL, &vRes, &isInterlaced );
+     59              }
+     60          
+     61              // Determine appropriate font resource
+     62              test = false;
+     63              switch (vRes)
+     64              {
+     65                  case VIDEO_VRES_720:
+     66                      newFontResourceId   = pDrvOsd->fontResourceId16x24;
+     67                      break;
+     68                  case VIDEO_VRES_1080:
+     69                      newFontResourceId   = pDrvOsd->fontResourceId24x32;
+     70                      break;
+     71                  case VIDEO_VRES_480:
+     72                  case VIDEO_VRES_576:
+     73                  default:
+     74                      newFontResourceId   = pDrvOsd->fontResourceId12x16;
+     75                      break;
+     76              }
+     77          
+     78              // If different than existing font, load it now.
+     79              success = true;
+     80              if (( pDrvOsd->fontResourceId != newFontResourceId ) || (isInterlaced != pDrvOsd->outputIsInterlace) || pDrvOsd->useDefaultFont )
+     81              {
+     82                  pDrvOsd->useDefaultFont = false;  // This was set only for startup case when font cannot be determined but has not been loaded
+     83          
+     84                  // Don't change resolution with OSD enabled - we want to use the
+     85                  // internal X clk for the SPI-OSD transfer.  OSD will be re-enabled as necessary externally to this function.
+     86                  if ( SiiRegRead( REG_OSD_WIN_CTRL ) & BIT_OSD_ENABLE )
+     87                  {
+     88                     // DEBUG_PRINT( MSG_DBG, "---------------------> RES_CHG EN <-(A)-------------- %d\n", false );
+     89                      DrvOsdDisableInternal();
+     90                  }
+     91                  //DEBUG_PRINT( MSG_DBG, "Window update...\n" );
+     92                  success = ( pDrvOsd->fontResourceId != newFontResourceId ) ? SiiDrvOsdLoadFontResource( newFontResourceId ) : true;
+     93                  if ( success )
+     94                  {
+     95                     // DEBUG_PRINT( MSG_DBG, "...Done\n" );
+     96                      pDrvOsd->outputIsInterlace  = isInterlaced;     // Update global
+     97                      pDrvOsd->outputVres         = vRes;             // Update global
+     98          
+     99                      // Update the display position of enabled windows
+    100                      for ( winRef = 0; winRef < SII_OSD_WIN_COUNT; winRef++ )
+    101                      {
+    102                          if ( pDrvOsd->winData[winRef].windowStatus & OSD_WSTAT_ENABLED)
+    103                          {
+    104                              // Update screen position
+    105                              SiiDrvOsdMoveWindow( winRef, pDrvOsd->winData[winRef].upperLeftX, pDrvOsd->winData[winRef].upperLeftY, OPT_SHOW );
+    106                          }
+    107                      }
+    108                  }
+    109                  else
+    110                  {
+    111                    //  DEBUG_PRINT( MSG_DBG, "...NOT Done\n" );
+    112                  }
+    113              }
+    114             // DEBUG_PRINT( MSG_DBG, "NEW - Vres: %4d  FontHeight: %d\n", pDrvOsd->outputVres, pDrvOsd->fontHeight );
+    115             // DEBUG_PRINT( MSG_DBG, "====================================================\n");
+    116          
+    117              return( success );
+    118          }
+    119          
+    120          //-------------------------------------------------------------------------------------------------
+    121          //! @brief      OSD driver initialization
+    122          //-------------------------------------------------------------------------------------------------
+    123          bool_t SiiDrvOsdInitialize( void )
+    124          {
+    125              SiiOsdResourceHeader_t      lHeader;
+    126              bool_t  isInterlaced, success = false;
+    127              int i, vRes, fontId12x16, fontId16x24, fontId24x32, resourceCount;
+    128              SiiDrvOsdWindowResource_t   const *pResourceData;
+    129          
+    130              // Get the hardware into a more-or-less known state.
+    131              SiiRegWrite( REG_INT_STATUS_OSD, 0xFF);
+    132              SiiRegBitsSet( REG_OSD_ACCESS_CTRL, REG_BIT_OSD_FORCE_TO_IDLE, true );
+    133          
+    134              // Caller is expected to set the font resource IDs prior to calling this function,
+    135              // so save their value before clearing instance data.
+    136              fontId12x16     = pDrvOsd->fontResourceId12x16;
+    137              fontId16x24     = pDrvOsd->fontResourceId16x24;
+    138              fontId24x32     = pDrvOsd->fontResourceId24x32;
+    139              pResourceData   = pDrvOsd->pLocalResourceData;
+    140              resourceCount   = pDrvOsd->localResourceCount;
+    141              memset( pDrvOsd, 0, sizeof( SiiOsdDrvInstanceData_t ));
+    142              pDrvOsd->fontResourceId12x16    = fontId12x16;
+    143              pDrvOsd->fontResourceId16x24    = fontId16x24;
+    144              pDrvOsd->fontResourceId24x32    = fontId24x32;
+    145              pDrvOsd->pLocalResourceData     = pResourceData;
+    146              pDrvOsd->localResourceCount     = resourceCount;
+    147          
+    148              for ( i = 0; i < SII_OSD_WIN_COUNT; i++ )
+    149              {
+    150                  pDrvOsd->winData[i].windowStatus = OSD_WSTAT_INVISIBLE | OSD_WSTAT_AVAILABLE;
+    151              }
+    152          
+    153              // Get current selected port info to determine initial font size.
+    154              if ( SiiDrvSwitchSelectedPortInfo( true, NULL, &vRes, &isInterlaced, NULL ))
+    155              {
+    156                  pDrvOsd->outputIsInterlace = isInterlaced;
+    157              }
+    158              else
+    159              {
+    160                  // Unable to determine resolution; use default font and flag the condition
+    161                  pDrvOsd->useDefaultFont = true;
+    162              }
+    163              SiiDrvSpiInitialize();  // Configure for SPI control.
+    164          
+    165              // First order of business is to get the resource map from the SPI flash
+    166              // Unconditionally read the resource header at the beginning of the flash memory
+    167              if ( SiiDrvOsdGetMapResource())
+    168              {
+    169                  // OK, got a map resource, get the default font info.
+    170                  if ( !SiiDrvOsdGetResourceHeader ( pDrvOsd->defaultFontId, &lHeader ))
+    171                  {
+    172                      success = false;
+    173                  }
+    174                  else
+    175                  {
+    176                      // Got a resource map, now get the default font stuff.
+    177                      pDrvOsd->defaultFontSize        = (SiiOsdFontSize_t)lHeader.winType;
+    178                      pDrvOsd->defaultFontHeight      = l_fontHeights[ pDrvOsd->defaultFontSize ];
+    179                      pDrvOsd->defaultFontWidth       = l_fontWidths[ pDrvOsd->defaultFontSize ];
+    180                      pDrvOsd->defaultDisplayHeight   = l_fontVres[ pDrvOsd->defaultFontSize ];
+    181                      pDrvOsd->defaultDisplayWidth    = l_fontHres[ pDrvOsd->defaultFontSize ];
+    182          
+    183                      if ( pDrvOsd->useDefaultFont )
+    184                      {
+    185                          vRes = l_fontVres[ pDrvOsd->defaultFontSize];
+    186                          pDrvOsd->outputIsInterlace = false;
+    187                      }
+    188          
+    189                     // Now load the FONT for the current resolution into OSD RAM
+    190                      pDrvOsd->bitmapSegmentStart = OSD_BITMAP_OFFSET;
+    191                      success = SiiDrvOsdResolutionChange( SI_VIDEO_MODE_NON_STD, vRes, pDrvOsd->outputIsInterlace );
+    192                  }
+    193              }
+    194              return( success );
+    195          }
+    196          
+    197          
+    198          //-------------------------------------------------------------------------------------------------
+    199          //! @brief      Test for pending interrupts and handle as necessary.
+    200          //!
+    201          //! @param[in]
+    202          //-------------------------------------------------------------------------------------------------
+    203          bool_t SiiDrvOsdHandleInterrupts( void )
+    204          {
+    205              bool_t  isInterlaced, interruptHandled;
+    206              uint8_t u8Data;
+    207              int     vRes;
+    208          
+    209              interruptHandled    = false;
+    210              if ( pDrvOsd->interruptPending )
+    211              {
+    212                  // Determine new main port resolution stability state.
+    213                  u8Data = SiiRegRead( REG_MP_GCP_STATUS ) & BIT_MP_RES_STABLE;
+    214          
+    215                  if ( u8Data == BIT_MP_RES_STABLE )
+    216                  {
+    217                      // If OSD was ENABLED or PRE_ENABLE, update the OSD resolution if necessary before
+    218                      // enabling the OSD display.
+    219                      if (( pDrvOsd->enableState == OSD_STATE_PRE_ENABLE ) || ( pDrvOsd->enableState == OSD_STATE_ENABLED ))
+    220                      {
+    221                          SiiDrvSwitchSelectedPortInfo( true, NULL, &vRes, &isInterlaced, NULL ); // Get current port info
+    222                          SiiDrvOsdResolutionChange( SI_VIDEO_MODE_NON_STD, vRes, isInterlaced );
+    223                          SiiDrvOsdEnable( true );
+    224                      }
+    225                  }
+    226                  else
+    227                  {
+    228                      DrvOsdDisableInternal();
+    229                  }
+    230          
+    231                  interruptHandled            = true;
+    232                  pDrvOsd->interruptPending   = false;
+    233              }
+    234              return( interruptHandled );
+    235          }
+    236          
+    237          //-------------------------------------------------------------------------------------------------
+    238          //! @brief  Initialize the font resources used for each font size.
+    239          //-------------------------------------------------------------------------------------------------
+    240          void SiiDrvOsdSetFontResourceId ( SiiOsdFontSize_t fontSize, int resourceId )
+    241          {
+    242              switch ( fontSize )
+    243              {
+    244                  case VAL_OSD_FONT_12x16:
+    245                      pDrvOsd->fontResourceId12x16 = resourceId;
+    246                      break;
+    247                  case VAL_OSD_FONT_16x24:
+    248                      pDrvOsd->fontResourceId16x24 = resourceId;
+    249                      break;
+    250                  case VAL_OSD_FONT_24x32:
+    251                      pDrvOsd->fontResourceId24x32 = resourceId;
+    252                      break;
+    253              }
+    254              pDrvOsd->interruptPending = true;
+    255          }
+    256          
+    257          //-------------------------------------------------------------------------------------------------
+    258          //! @brief  Set default font resource ID for specified font size
+    259          //-------------------------------------------------------------------------------------------------
+    260          void SiiDrvOsdProcessInterrupts ( void )
+    261          {
+    262              pDrvOsd->interruptPending = true;
+    263          }
+    264          
+    265          
+    266          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        0  SiiDrvOsdGetLastResult
+       24  SiiDrvOsdHandleInterrupts
+             24 -> DrvOsdDisableInternal
+             24 -> SiiDrvOsdEnable
+             24 -> SiiDrvOsdResolutionChange
+             24 -> SiiDrvSwitchSelectedPortInfo
+             24 -> SiiRegRead
+       56  SiiDrvOsdInitialize
+             56 -> SiiDrvOsdGetMapResource
+             56 -> SiiDrvOsdGetResourceHeader
+             56 -> SiiDrvOsdResolutionChange
+             56 -> SiiDrvSpiInitialize
+             56 -> SiiDrvSwitchSelectedPortInfo
+             56 -> SiiRegBitsSet
+             56 -> SiiRegWrite
+             56 -> __aeabi_memclr4
+        0  SiiDrvOsdProcessInterrupts
+       32  SiiDrvOsdResolutionChange
+             32 -> DrvOsdDisableInternal
+             32 -> SiiDrvOsdLoadFontResource
+             32 -> SiiDrvOsdMoveWindow
+             32 -> SiiDrvSwitchVideoFmtParse
+             32 -> SiiRegRead
+        8  SiiDrvOsdSetFontResourceId
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable5
+       4  ??DataTable5_1
+       4  ??DataTable5_2
+       4  ??DataTable5_3
+       4  ??DataTable5_4
+      12  ?Subroutine0
+      10  SiiDrvOsdGetLastResult
+      82  SiiDrvOsdHandleInterrupts
+     266  SiiDrvOsdInitialize
+      10  SiiDrvOsdProcessInterrupts
+     188  SiiDrvOsdResolutionChange
+      36  SiiDrvOsdSetFontResourceId
+    4548  drvOsdInstance
+       4  pDrvOsd
+
+ 
+ 4 548 bytes in section .bss
+     4 bytes in section .data
+   624 bytes in section .text
+ 
+   624 bytes of CODE memory
+ 4 552 bytes of DATA memory
+
+Errors: none
+Warnings: 7

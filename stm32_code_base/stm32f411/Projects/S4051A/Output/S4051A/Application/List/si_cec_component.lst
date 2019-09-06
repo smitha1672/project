@@ -1,0 +1,1661 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:23:57 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\cec_manager\s #
+#                    i_cec_component.c                                        #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\cec_manager\s #
+#                    i_cec_component.c -D S4051A -D DEBUG -D FREE_RTOS -D     #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_cec_component.lst                                  #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_cec_component.o                                     #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\component\cec_manager\si_cec_component.c
+      1          //***************************************************************************
+      2          //!file     si_cec_component.c
+      3          //!brief    Silicon Image CEC Component.
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2002-2012, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include "string.h"
+     14          #include "si_cec_component.h"
+     15          #include "si_cec_internal.h"
+     16          #include "si_drv_switch_config.h"
+     17          
+     18          
+     19          //------------------------------------------------------------------------------
+     20          //  CEC Component Instance Data
+     21          //------------------------------------------------------------------------------
+     22          
+     23          CecInstanceData_t cecInstance[SII_NUM_CEC];
+     24          CecInstanceData_t *pCec = &cecInstance[0];
+     25          
+     26          //------------------------------------------------------------------------------
+     27          // Function:    SiiCecInitialize
+     28          // Description: Initialize the current instance of the CEC component.
+     29          // Parameters:  none
+     30          // Returns:     It returns true if the initialization is successful, or false
+     31          //				if some failure occurred.
+     32          //------------------------------------------------------------------------------
+     33          
+     34          bool_t SiiCecInitialize ( uint16_t physicalAddress, SiiCecDeviceTypes_t deviceType )
+     35          {
+     36              int_t   i;
+     37              bool_t  error = false;
+     38          
+     39              // Initialize the internal data structures used by CEC
+     40              memset( pCec, 0, sizeof( CecInstanceData_t ));
+     41          
+     42              pCec->enable            = false;
+     43              pCec->logicalAddr       = CEC_LOGADDR_UNREGORBC;
+     44              pCec->sourcePowerStatus = CEC_POWERSTATUS_STANDBY;
+     45              pCec->activeSrcLogical  = CEC_LOGADDR_UNREGORBC;
+     46              pCec->deviceType        = deviceType;
+     47          
+     48              pCec->lastUserControlPressedSourceLa = CEC_LOGADDR_UNREGORBC;
+     49              pCec->lastUserControlPressedTargetLa = CEC_LOGADDR_UNREGORBC;
+     50          
+     51              SiiCecSetDevicePA( physicalAddress );
+     52          
+     53              // Mark all devices as not found
+     54              for ( i = 0; i <= CEC_LOGADDR_UNREGORBC; i++ )
+     55              {
+     56                  pCec->logicalDeviceInfo[ i].cecPA = 0xFFFF;
+     57                  pCec->logicalDeviceInfo[ i].deviceType = CEC_DT_COUNT;
+     58              }
+     59          
+     60              for (i = 0 ; i< CHIP_MAX_VIRTUAL_CEC_DEVS; i++)
+     61              {
+     62              	pCec->virtualDevLA[i] = CEC_LOGADDR_TV;
+     63              }
+     64          
+     65          #if ( configSII_DEV_953x_PORTING == 1 )
+     66              pCec->portSelect = 2;
+     67          #endif
+     68          
+     69              // Register internal message handlers defined for certain device types
+     70              switch ( pCec->deviceType )
+     71              {
+     72                  case CEC_DT_TV:
+     73                      error = !SiiCecCallbackRegisterParser( CecRxMsgHandler, false );
+     74                      break;
+     75                  case CEC_DT_VIDEO_PROCESSOR:
+     76                      error = !SiiCecCallbackRegisterParser( CecTxMsgHandler, false );
+     77                      SiiCecSetDeviceLA( CEC_LOGADDR_VIDEO_PROCESSOR );
+     78                      break;
+     79                  case CEC_DT_AUDIO_SYSTEM:
+     80                      error = !SiiCecCallbackRegisterParser( CecRxMsgHandler, false );
+     81                      error = !SiiCecCallbackRegisterParser( CecTxMsgHandler, false );
+     82              		pCec->devLogicalAddr = CEC_LOGADDR_AUDSYS; //store the actaul device logical address
+     83          
+     84                      SiiCecSetDeviceLA( CEC_LOGADDR_AUDSYS );
+     85                      break;
+     86                  case CEC_DT_PLAYBACK:
+     87          //            error = !SiiCecCallbackRegisterParser( CecRxMsgHandler, false );
+     88                      error = !SiiCecCallbackRegisterParser( CecTxMsgHandler, false );
+     89                      SiiCecSetDeviceLA( CEC_LOGADDR_PLAYBACK1 );
+     90                      break;
+     91                  default:
+     92                      break;
+     93              }
+     94          
+     95          	return( !error );
+     96          }
+     97          
+     98          //------------------------------------------------------------------------------
+     99          // Function:    SiiCecConfigure
+    100          // Description:
+    101          // Parameters:  none
+    102          // Returns:     true if the configuration was successful, or false if some
+    103          //              failure occurred
+    104          //------------------------------------------------------------------------------
+    105          
+    106          bool_t SiiCecConfigure ( bool_t enable )
+    107          {
+    108          
+    109              pCec->enable   = enable;
+    110              pCec->enable ? SiiDrvCpiEnable() : SiiDrvCpiDisable();
+    111          
+    112              return( true );
+    113          }
+    114          
+    115          //------------------------------------------------------------------------------
+    116          // Function:    SiiCecStatus
+    117          // Description: Returns a status flag word containing CEC-specific
+    118          //				information about the state of the device.
+    119          //              NOTE: Some flags are cleared as soon as they are read.
+    120          // Parameters:  none
+    121          // Returns:     Sixteen-bit status flags word for the CEC Component
+    122          //------------------------------------------------------------------------------
+    123          
+    124          uint16_t SiiCecStatus ( void )
+    125          {
+    126              uint16_t statusFlags = pCec->statusFlags;
+    127          
+    128              pCec->statusFlags &= ~(SiiCEC_POWERSTATE_CHANGE | SiiCEC_PORT_CHANGE);
+    129              return( statusFlags );
+    130          }
+    131          
+    132          //------------------------------------------------------------------------------
+    133          // Function:    SiiCecStandby
+    134          //! @brief      Prepare for device standby mode.
+    135          //              Make any configuration changes required for standby mode and
+    136          //              save any settings that must be restored after a power resume.
+    137          // Returns:     true if the CEC component entered standby mode successfully,
+    138          //				or false if some failure occurred.
+    139          //------------------------------------------------------------------------------
+    140          
+    141          bool_t SiiCecStandby ( void )
+    142          {
+    143              return( SiiDrvCpiStandby());
+    144          }
+    145          
+    146          //------------------------------------------------------------------------------
+    147          // Function:    SiiCecResume
+    148          //! @brief      Recover from power down standby mode
+    149          //				Restore settings saved by SiiCecStandby and configure the
+    150          //              component as required.
+    151          // Parameters:  none
+    152          // Returns:     true if the CEC component successfully exited standby mode,
+    153          //				or false if some failure occurred.
+    154          //------------------------------------------------------------------------------
+    155          
+    156          bool_t SiiCecResume ( void )
+    157          {
+    158              return( SiiDrvCpiResume());
+    159          }
+    160          
+    161          //------------------------------------------------------------------------------
+    162          // Function:    SiiCecInstanceGet
+    163          // Description: returns the index of the current CEC instance
+    164          // Parameters:  none
+    165          // Returns:     Index of the current CEC instance
+    166          //------------------------------------------------------------------------------
+    167          int SiiCecInstanceGet ( void )
+    168          {
+    169          
+    170              return( pCec->instanceIndex );
+    171          }
+    172          
+    173          //------------------------------------------------------------------------------
+    174          // Function:    SiiCecInstanceSet
+    175          // Description: Set the component global data pointer to the requested instance.
+    176          // Parameters:  instanceIndex
+    177          // Returns:     true if legal index, false if index value is illegal.
+    178          //------------------------------------------------------------------------------
+    179          bool_t SiiCecInstanceSet ( int instanceIndex )
+    180          {
+    181              if ( instanceIndex < SII_NUM_CPI )
+    182              {
+    183                  pCec = &cecInstance[ instanceIndex];
+    184                  return( true );
+    185              }
+    186          
+    187              return( false );
+    188          }
+    189          
+    190          //------------------------------------------------------------------------------
+    191          // Function:    SiiCecGetLastResult
+    192          // Description: Returns the result of the last SiiCecxxx function called
+    193          // Parameters:  none
+    194          // Returns:     Result of last CEC component function.
+    195          //------------------------------------------------------------------------------
+    196          
+    197          bool_t SiiCecGetLastResult ( void )
+    198          {
+    199          
+    200          	return( true );
+    201          }
+    202          
+    203          //------------------------------------------------------------------------------
+    204          // Function:    SiiCecCallbackRegisterParser
+    205          // Description: Register a message handler with the specified CEC instance
+    206          // Parameters:  Callback function pointer
+    207          // Returns:     true if successful
+    208          //------------------------------------------------------------------------------
+    209          
+    210          bool_t SiiCecCallbackRegisterParser ( bool_t (*pCallBack)(), bool_t callAlways )
+    211          {
+    212              bool_t  success = false;
+    213              int_t   callBackIndex;
+    214          
+    215              for ( callBackIndex = 0; callBackIndex < MAX_CEC_PARSERS; callBackIndex++ )
+    216              {
+    217                  if ( pCec->messageHandlers[ callBackIndex ].pMsgHandler == 0)
+    218                  {
+    219                      pCec->messageHandlers[ callBackIndex ].pMsgHandler  = pCallBack;
+    220                      pCec->messageHandlers[ callBackIndex ].callAlways   = callAlways;
+    221                      success = true;
+    222                      break;
+    223                  }
+    224              }
+    225          
+    226              return( success );
+    227          }
+    228          
+    229          bool_t SiiCecCallbackRegisterSet ( bool_t (*pCallBack)(), bool_t callAlways )
+    230          {
+    231              bool_t  success = false;
+    232              int_t   callBackIndex;
+    233          
+    234              for ( callBackIndex = 0; callBackIndex < MAX_CEC_PARSERS; callBackIndex++ )
+    235              {
+    236                  if ( pCec->messageHandlers[ callBackIndex ].pMsgHandler != 0)
+    237                  {
+    238                      if ( pCec->messageHandlers[ callBackIndex ].pMsgHandler  == pCallBack )
+    239                      {
+    240          	            pCec->messageHandlers[ callBackIndex ].callAlways   = callAlways;
+    241                  	    success = true;
+    242                      	    break;
+    243                      }
+    244                  }
+    245              }
+    246          
+    247              return( success );
+    248          }
+    249          
+    250          //------------------------------------------------------------------------------
+    251          // Function:    SiiCecPortSelectGet
+    252          // Description: Returns the last port selected via an ACTIVE_SOURCE or other
+    253          //              CEC command that may change the selected port.  Note that it
+    254          //              is only valid immediately after the SiiCEC_PORT_CHANGE flag is
+    255          //              set.
+    256          // Parameters:  none
+    257          // Returns:     Input Processor port selected via CEC command.
+    258          //------------------------------------------------------------------------------
+    259          
+    260          int_t SiiCecPortSelectGet ( void )
+    261          {
+    262          
+    263              return( pCec->portSelect );
+    264          }
+    265          
+    266          //------------------------------------------------------------------------------
+    267          // Function:    SiiCecPortSelectSet
+    268          // Description: Set internal port selection. Used for communication with
+    269          //              other CEC components.
+    270          // Parameters:  none
+    271          // Returns:
+    272          //------------------------------------------------------------------------------
+    273          
+    274          void SiiCecPortSelectSet ( uint8_t inputPort)
+    275          {
+    276              pCec->portSelect = inputPort;
+    277          }
+    278          
+    279          //------------------------------------------------------------------------------
+    280          // Function:    SiiCecCallbackRegisterTask
+    281          // Description: Register a CEC task with the current CEC instance
+    282          // Parameters:  Callback function pointer
+    283          // Returns:     Index of registered task, or -1 if no room
+    284          //------------------------------------------------------------------------------
+    285          
+    286          int_t SiiCecCallbackRegisterTask ( bool_t (*pCallBack)() )
+    287          {
+    288              int_t callBackIndex;
+    289          
+    290              for ( callBackIndex = 0; callBackIndex < MAX_CEC_TASKS; callBackIndex++ )
+    291              {
+    292                  if ( pCec->pTasks[ callBackIndex ] == 0)
+    293                  {
+    294                      pCec->pTasks[ callBackIndex ] = pCallBack;
+    295                      break;
+    296                  }
+    297              }
+    298          
+    299              return( ( callBackIndex == MAX_CEC_TASKS) ? -1 : (callBackIndex + SiiCECTASK_COUNT) );
+    300          }
+    301          
+    302          //------------------------------------------------------------------------------
+    303          //! @brief      Send a single byte (no parameter) message on the CEC bus.  Does
+    304          //!             not wait for a reply.
+    305          //! @param[in]  opCode  - CEC opcode to send
+    306          //! @param[in]  src     - source CEC logical address
+    307          //! @param[in]  dest    - destination CEC logical address
+    308          //! @return     uint16_t    16 bit message ID or 0 if CEC not enabled
+    309          //------------------------------------------------------------------------------
+    310          uint16_t SiiCecSendMessageEx ( uint8_t opCode, uint8_t src, uint8_t dest )
+    311          {
+    312              SiiCpiData_t cecFrame;
+    313          
+    314              if ( !pCec->enable )
+    315              {
+    316                  pCec->lastResultCode = RESULT_CEC_FAIL;
+    317                  return( 0 );
+    318              }
+    319              cecFrame.opcode        = opCode;
+    320              cecFrame.srcDestAddr   = MAKE_SRCDEST( src, dest );
+    321              cecFrame.argCount      = 0;
+    322          
+    323              pCec->lastResultCode = RESULT_CEC_SUCCESS;
+    324              return( SiiDrvCpiWrite( &cecFrame ));
+    325          }
+    326          
+    327          //------------------------------------------------------------------------------
+    328          //! @brief      Send a single byte (no parameter) message on the CEC bus.  Does
+    329          //!             not wait for a reply. The local device CEC logical address is
+    330          //!             used as the source device in the CEC message.
+    331          //! @param[in]  opCode  - CEC opcode to send
+    332          //! @param[in]  dest    - destination CEC logical address
+    333          //! @return     uint16_t    16 bit message ID
+    334          //!
+    335          //! @note       This function is deprecated; please use SiiCecSendMessageEx
+    336          //------------------------------------------------------------------------------
+    337          uint16_t SiiCecSendMessage ( uint8_t opCode, uint8_t dest )
+    338          {
+    339          
+    340              return( SiiCecSendMessageEx( opCode, pCec->logicalAddr, dest ));
+    341          }
+    342          
+    343          //------------------------------------------------------------------------------
+    344          //! @brief  Send a remote control key pressed command to the specified logical
+    345          //!         device.
+    346          //! @param[in]  keyCode - UI Command from CEC enum lists
+    347          //------------------------------------------------------------------------------
+    348          void SiiCecSendUserControlPressed ( SiiCecUiCommand_t keyCode, SiiCecLogicalAddresses_t srcLa, SiiCecLogicalAddresses_t destLa )
+    349          {
+    350              SiiCpiData_t cecFrame;
+    351          
+    352              if ( !pCec->enable )
+    353              {
+    354                  return;
+    355              }
+    356          
+    357              pCec->lastUserControlPressedSourceLa = srcLa;
+    358              pCec->lastUserControlPressedTargetLa = destLa;
+    359          
+    360              cecFrame.opcode        = CECOP_USER_CONTROL_PRESSED;
+    361              cecFrame.srcDestAddr   = MAKE_SRCDEST( srcLa, destLa );
+    362              cecFrame.args[0]       = keyCode;
+    363              cecFrame.argCount      = 1;
+    364              SiiDrvCpiWrite( &cecFrame );
+    365          }
+    366          
+    367          //------------------------------------------------------------------------------
+    368          //! @brief  Send a remote control key released command to the logical device
+    369          //!         specified in the last SiiCecSendUserControlPressed() call.
+    370          //------------------------------------------------------------------------------
+    371          void SiiCecSendUserControlReleased ( void )
+    372          {
+    373              if ( !pCec->enable )
+    374              {
+    375                  return;
+    376              }
+    377          
+    378              if ( pCec->lastUserControlPressedTargetLa != CEC_LOGADDR_UNREGORBC )
+    379              {
+    380                  SiiCecSendMessageEx(
+    381                      CECOP_USER_CONTROL_RELEASED,
+    382                      pCec->lastUserControlPressedSourceLa,
+    383                      pCec->lastUserControlPressedTargetLa );
+    384                  pCec->lastUserControlPressedSourceLa = CEC_LOGADDR_UNREGORBC;
+    385                  pCec->lastUserControlPressedTargetLa = CEC_LOGADDR_UNREGORBC;
+    386              }
+    387          }
+    388          
+    389          //------------------------------------------------------------------------------
+    390          // Function:    SiiCecGetPowerState
+    391          // Description: Returns the CEC local power state.
+    392          //              Should be called after every call to SiiCecHandler since
+    393          //              a CEC device may have issued a standby or view message.
+    394          //
+    395          // Valid values:    CEC_POWERSTATUS_ON
+    396          //                  CEC_POWERSTATUS_STANDBY
+    397          //                  CEC_POWERSTATUS_STANDBY_TO_ON
+    398          //                  CEC_POWERSTATUS_ON_TO_STANDBY
+    399          //------------------------------------------------------------------------------
+    400          
+    401          uint8_t SiiCecGetPowerState ( void )
+    402          {
+    403          
+    404              return( pCec->powerState );
+    405          }
+    406          
+    407          //------------------------------------------------------------------------------
+    408          // Function:    SiiCecSetPowerState
+    409          // Description: Set the CEC local power state.
+    410          //
+    411          // Valid values:    CEC_POWERSTATUS_ON
+    412          //                  CEC_POWERSTATUS_STANDBY
+    413          //                  CEC_POWERSTATUS_STANDBY_TO_ON
+    414          //                  CEC_POWERSTATUS_ON_TO_STANDBY
+    415          //------------------------------------------------------------------------------
+    416          
+    417          void SiiCecSetPowerState ( SiiCecPowerstatus_t newPowerState )
+    418          {
+    419              if ( !pCec->enable )
+    420              {
+    421                  return;
+    422              }
+    423          
+    424              if ( pCec->powerState != newPowerState )
+    425              {
+    426                  switch ( newPowerState )
+    427                  {
+    428                      case CEC_POWERSTATUS_STANDBY_TO_ON:
+    429                      case CEC_POWERSTATUS_ON:
+    430                          newPowerState = CEC_POWERSTATUS_ON;
+    431                          break;
+    432          
+    433                      case CEC_POWERSTATUS_ON_TO_STANDBY:
+    434                      case CEC_POWERSTATUS_STANDBY:
+    435                          newPowerState = CEC_POWERSTATUS_STANDBY;
+    436                          break;
+    437          
+    438                      default:
+    439                          break;
+    440                  }
+    441          
+    442              pCec->powerState = newPowerState;
+    443              }
+    444          }
+    445          
+    446          //------------------------------------------------------------------------------
+    447          // Function:    SiiCecPortToPA
+    448          // Description: Return the CEC physical address of the last selected logical
+    449          //              device on the CEC path for this port.  If no logical devices
+    450          //              on this path, return 0xFFFF
+    451          // Parameters:  portIndex:  HDMI RX, 0-3
+    452          //                          HDMI TX, 0
+    453          // Returns:     CEC physical address for the port or 0xFFFF if not found
+    454          //------------------------------------------------------------------------------
+    455          
+    456          uint16_t SiiCecPortToPA ( uint8_t portIndex )
+    457          {
+    458              int_t i;
+    459              uint16_t    physicalAddress = 0xFFFF;   // failure return
+    460          
+    461              pCec->lastResultCode = RESULT_CEC_SUCCESS;
+    462          
+    463              for ( i = 0; i <= CEC_LOGADDR_UNREGORBC; i++ )
+    464              {
+    465                  // Does requested port has the same index as the current logical address?
+    466                  if ( pCec->logicalDeviceInfo[i].port == portIndex )
+    467                  {
+    468                      // Save the physical address.
+    469                      physicalAddress = pCec->logicalDeviceInfo[ i].cecPA;
+    470          
+    471                      // There may be more than one device in the physical address chain
+    472                      // for a particular port, check to see if this is the last device
+    473                      // that was selected (ACTIVE SOURCE) on this particular port.
+    474                      // If NO logical device was the last active source on this port,
+    475                      // we'll take the first logical device on this port.
+    476                      if ( pCec->logicalDeviceInfo[i].selected )
+    477                      {
+    478                          break;
+    479                      }
+    480                  }
+    481              }
+    482          
+    483              if ( physicalAddress == 0xFFFF )
+    484              {
+    485                  pCec->lastResultCode = RESULT_CEC_NO_PA_FOUND;
+    486              }
+    487              return( physicalAddress );
+    488          }
+    489          
+    490          //------------------------------------------------------------------------------
+    491          //! @brief  Return the CEC logical address of the passed port
+    492          //! @param[in]  portIndex
+    493          //! @return     CEC logical address for the port or CEC_LOGADDR_UNREGORBC
+    494          //!             if port has not been assigned a logical address
+    495          //------------------------------------------------------------------------------
+    496          uint8_t SiiCecPortToLA ( uint8_t portIndex )
+    497          {
+    498              uint8_t logicalAddress;
+    499          
+    500              pCec->lastResultCode = RESULT_CEC_SUCCESS;
+    501              for ( logicalAddress = 0; logicalAddress <= CEC_LOGADDR_UNREGORBC; logicalAddress++ )
+    502              {
+    503                  // Does requested port has the same index as the current logical address?
+    504                  if ( pCec->logicalDeviceInfo[ logicalAddress].port == portIndex )
+    505                  {
+    506                      break;
+    507                  }
+    508              }
+    509          
+    510              if ( logicalAddress == CEC_LOGADDR_UNREGORBC )
+    511              {
+    512                  pCec->lastResultCode = RESULT_CEC_NO_LA_FOUND;
+    513              }
+    514              return( logicalAddress );
+    515          }
+    516          
+    517          //------------------------------------------------------------------------------
+    518          // Function:    SiiCecLaToPort
+    519          // Description: Translate the passed logical address into a physical HDMI port
+    520          // Parameters:  logicalAddress  - The CEC logical address to translate
+    521          // Returns:     HDMI physical port index or oxFF if not found.
+    522          //------------------------------------------------------------------------------
+    523          
+    524          int_t SiiCecLaToPort ( uint8_t logicalAddr )
+    525          {
+    526              pCec->lastResultCode = RESULT_CEC_SUCCESS;
+    527          
+    528              if ( logicalAddr > CEC_LOGADDR_UNREGORBC )
+    529              {
+    530                  pCec->lastResultCode = RESULT_CEC_INVALID_LOGICAL_ADDRESS;
+    531                  return( 0xFF );
+    532              }
+    533              return( pCec->logicalDeviceInfo[ logicalAddr].port );
+    534          }
+    535          
+    536          //------------------------------------------------------------------------------
+    537          // Function:    SiiCecGetDeviceLA
+    538          // Description: Return the CEC logical address for this Host device
+    539          //------------------------------------------------------------------------------
+    540          
+    541          uint8_t SiiCecGetDeviceLA ( void )
+    542          {
+    543              pCec->lastResultCode = RESULT_CEC_SUCCESS;
+    544              return( pCec->logicalAddr );
+    545          }
+    546          
+    547          bool_t SiiCecIsVirtualDevicePresent(void)
+    548          {
+    549          	return pCec->numVirtualDevices? true:false;
+    550          }
+    551          
+    552          //------------------------------------------------------------------------------
+    553          // Function:    SiiIsVirtualDeviceLA
+    554          // Description: returns if the given cec LA is of virtual device
+    555          //------------------------------------------------------------------------------
+    556          bool_t SiiCecIsVirtualDeviceLA(SiiCecLogicalAddresses_t cecLA)
+    557          {
+    558          	uint8_t i;
+    559          	for(i = 0; i < CHIP_MAX_VIRTUAL_CEC_DEVS; i++)
+    560          	{
+    561          		if(pCec->virtualDevLA[i] == cecLA)
+    562          			return true;
+    563          	}
+    564          	return false;
+    565          }
+    566          
+    567          //------------------------------------------------------------------------------
+    568          // Function:    SiiSetCecVirtualDevLA
+    569          // Description: Set the CEC logical address for virtual device
+    570          //------------------------------------------------------------------------------
+    571          void SiiCecSetVirtualDevLA(uint8_t index, SiiCecLogicalAddresses_t virtualLA)
+    572          {
+    573          	pCec->virtualDevLA[index] = virtualLA;
+    574          	pCec->numVirtualDevices++;
+    575          }
+    576          
+    577          //------------------------------------------------------------------------------
+    578          // Function:    SiiRemoveVirtualDevice
+    579          // Description: remove virtual device
+    580          //------------------------------------------------------------------------------
+    581          bool_t SiiCecRemoveVirtualDevice( SiiCecLogicalAddresses_t logicalAddr )
+    582          {
+    583          	uint8_t i;
+    584          	bool_t success = false;
+    585          	for(i = 0; i < CHIP_MAX_VIRTUAL_CEC_DEVS; i++)
+    586          	{
+    587          		if(pCec->virtualDevLA[i] == logicalAddr)
+    588          		{
+    589          			pCec->virtualDevLA[i] = CEC_LOGADDR_TV;
+    590          			pCec->numVirtualDevices--;
+    591          			success = true;
+    592          			break;
+    593          		}
+    594          	}
+    595          	if(pCec->numVirtualDevices == 0)
+    596          	{
+    597          		SiiDrvCpiClearVirtualDevBit();
+    598          	}
+    599          	return success;
+    600          }
+    601          
+    602          //------------------------------------------------------------------------------
+    603          // Function:    SiiCecSetDeviceLA
+    604          // Description: Set the CEC logical address for this Host device
+    605          //------------------------------------------------------------------------------
+    606          
+    607          void SiiCecSetDeviceLA ( SiiCecLogicalAddresses_t logicalAddr )
+    608          {
+    609              pCec->lastResultCode = RESULT_CEC_SUCCESS;
+    610              pCec->logicalAddr = logicalAddr;
+    611              if(!SiiCecIsVirtualDevicePresent())
+    612              	SiiDrvCpiSetLogicalAddr( logicalAddr );
+    613              else
+    614              	SiiDrvCpiAddLogicalAddr(true,logicalAddr);
+    615          }
+    616          
+    617          //------------------------------------------------------------------------------
+    618          // Function:    SiiCecGetDevicePA
+    619          // Description: Return the physical address for this Host device
+    620          //------------------------------------------------------------------------------
+    621          
+    622          uint16_t SiiCecGetDevicePA ( void )
+    623          {
+    624              pCec->lastResultCode = RESULT_CEC_SUCCESS;
+    625          
+    626              return( pCec->physicalAddr );
+    627          }
+    628          
+    629          
+    630          //------------------------------------------------------------------------------
+    631          // Function:    SiiCecSetDevicePA
+    632          // Description: Set the host device physical address (initiator physical address)
+    633          //------------------------------------------------------------------------------
+    634          
+    635          void SiiCecSetDevicePA ( uint16_t devPa )
+    636          {
+    637              uint8_t     index;
+    638              uint16_t    mask;
+    639          
+    640              pCec->physicalAddr = devPa;
+    641          
+    642              /* We were given the Host, or parent, PA, so we determine   */
+    643              /* the direct child Physical Address field (A.B.C.D).       */
+    644          
+    645              mask = 0x00F0;
+    646              for ( index = 1; index < 4; index++ )
+    647              {
+    648                  if (( devPa & mask ) != 0)
+    649                  {
+    650                      break;
+    651                  }
+    652                  mask <<= 4;
+    653              }
+    654          
+    655              pCec->paShift = (index - 1) * 4;
+    656              pCec->paChildMask = 0x000F << pCec->paShift;
+    657          
+    658              //DEBUG_PRINT( MSG_STAT, "Device PA:[%04X] Mask:[%04X] Shift:[%d]\n", (int)devPa, (int)pCec->paChildMask, (int)pCec->paShift );
+    659          
+    660          #if (INC_CEC_SWITCH == ENABLE)
+    661              // PA change makes the switch to respond by sending new routing information after a short
+    662              // pause, which is required to let the other HDMI devices to settle down after
+    663              // HDP and following reconfiguration
+    664              SiiCecSwitchSendRouteInfo();
+    665              // TODO: Indicate for CEC dispatcher that new task is pending and has to be processed ASAP
+    666              //SiiCecForceFastHandling();
+    667          #endif
+    668          
+    669          }
+    670          
+    671          //------------------------------------------------------------------------------
+    672          // Function:    SiiCecGetDeviceType
+    673          // Description: Return the CEC device type
+    674          //------------------------------------------------------------------------------
+    675          
+    676          SiiCecDeviceTypes_t SiiCecGetDeviceType ( void )
+    677          {
+    678              pCec->lastResultCode = RESULT_CEC_SUCCESS;
+    679              return( pCec->deviceType );
+    680          }
+    681          //------------------------------------------------------------------------------
+    682          // Function:    SiiCecSetSourceActive
+    683          // Description: Set the current source as Active in TPG case
+    684          //------------------------------------------------------------------------------
+    685          
+    686          void SiiCecSetSourceActive( bool_t isActiveSource )
+    687          {
+    688              pCec->isActiveSource = isActiveSource;
+    689              if(pCec->isActiveSource)
+    690              {
+    691              	SiiCecSendActiveSource(pCec->logicalAddr, pCec->physicalAddr);
+    692              }
+    693          }
+    694          
+    695          //------------------------------------------------------------------------------
+    696          // Function:    SiiCecSetActiveSource
+    697          // Description: Set the CEC logical and physical address for active source device
+    698          //------------------------------------------------------------------------------
+    699          
+    700          void SiiCecSetActiveSource( SiiCecLogicalAddresses_t activeSrcLA, uint16_t activeSrcPA )
+    701          {
+    702              pCec->lastResultCode = RESULT_CEC_SUCCESS;
+    703          
+    704              pCec->activeSrcLogical = activeSrcLA;
+    705              pCec->activeSrcPhysical = activeSrcPA;
+    706          }
+    707          
+    708          //------------------------------------------------------------------------------
+    709          // Function:    SiiCecSetActiveSourceLA
+    710          // Description: Set the CEC logical address for active source device
+    711          //------------------------------------------------------------------------------
+    712          
+    713          void SiiCecSetActiveSourceLA( SiiCecLogicalAddresses_t activeSrcLA)
+    714          {
+    715              pCec->lastResultCode = RESULT_CEC_SUCCESS;
+    716              pCec->activeSrcLogical = activeSrcLA;
+    717          }
+    718          
+    719          //------------------------------------------------------------------------------
+    720          //! @brief  Set the CEC physical address for active source device
+    721          //------------------------------------------------------------------------------
+    722          void SiiCecSetActiveSourcePA ( uint16_t activeSrcPa )
+    723          {
+    724              pCec->lastResultCode = RESULT_CEC_SUCCESS;
+    725              pCec->activeSrcPhysical = activeSrcPa;
+    726          }
+    727          
+    728          
+    729          //------------------------------------------------------------------------------
+    730          // Function:    SiiCecGetActiveSource
+    731          // Description: Get the CEC logical address for active source device
+    732          //------------------------------------------------------------------------------
+    733          
+    734          SiiCecLogicalAddresses_t SiiCecGetActiveSourceLA( void )
+    735          {
+    736              pCec->lastResultCode = RESULT_CEC_SUCCESS;
+    737              return (pCec->activeSrcLogical);
+    738          }
+    739          
+    740          //------------------------------------------------------------------------------
+    741          //! @brief  Return the CEC physical address for active source device
+    742          //------------------------------------------------------------------------------
+    743          uint16_t SiiCecGetActiveSourcePA ( void )
+    744          {
+    745              pCec->lastResultCode = RESULT_CEC_SUCCESS;
+    746              return( pCec->activeSrcPhysical );
+    747          }
+    748          
+    749          //------------------------------------------------------------------------------
+    750          // Function:    SiiCecAdjacentPA
+    751          // Description: Returns true if passed physical devices are adjacent
+    752          //
+    753          //  Examples:
+    754          //
+    755          //  Upstream                        Downstream
+    756          //  --------                        ----------
+    757          //  0.0.0.0     is adjacent     to  2.0.0.0
+    758          //  0.0.0.0     is NOT adjacent to  2.1.0.0
+    759          //  2.1.0.0     is adjacent     to  2.0.0.0
+    760          //  2.1.0.0     is NOT adjacent to  2.2.0.0
+    761          //  2.1.0.0     is adjacent     to  2.1.1.0
+    762          //------------------------------------------------------------------------------
+    763          
+    764          bool_t SiiCecAdjacentPA ( uint16_t paOne, uint16_t paTwo )
+    765          {
+    766              uint8_t     i;
+    767              uint16_t    one, two, paMask;
+    768              bool_t      isChild = false;
+    769          
+    770              /* Compare nodes from A to D.  If they don't match and one of them  */
+    771              /* is 0, they are adjacent.                                         */
+    772          
+    773              isChild = false;
+    774              paMask = 0xF000;
+    775              for ( i = 0; i < 4; i++ )
+    776              {
+    777                  one = paOne & paMask;
+    778                  two = paTwo & paMask;
+    779          
+    780                  /* If a previous node mismatched, but this node is not  */
+    781                  /* both 0, these two are not adjacent.                  */
+    782          
+    783                  if ( isChild && ( one != two ))
+    784                  {
+    785                      isChild = false;
+    786                      break;
+    787                  }
+    788          
+    789                  /* If the two nodes are NOT the same, and one of them is 0, */
+    790                  /* they MIGHT be adjacent, but we have to check for the     */
+    791                  /* remainder of the nodes to be the same on both.           */
+    792          
+    793                  if ( one != two )
+    794                  {
+    795                      /* If one node is zero we have adjacent nodes.  */
+    796          
+    797                      if (( one == 0 ) || ( two == 0 ))
+    798                      {
+    799                          isChild = true;
+    800                          break;
+    801                      }
+    802                  }
+    803                  paMask >>= 4;
+    804              }
+    805             // DEBUG_PRINT( CEC_MSG_DBG, "one: %04X  two: %04X  paMask: %04X\n", one, two, paMask );
+    806              return( isChild );
+    807          }
+    808          
+    809          //------------------------------------------------------------------------------
+    810          // Function:    SiiCecIsAdjacentLA
+    811          // Description: Returns true if passed logical device is in the adjacent rank
+    812          //              of devices.
+    813          //------------------------------------------------------------------------------
+    814          
+    815          bool_t SiiCecIsAdjacentLA ( uint8_t logicalAddr )
+    816          {
+    817          
+    818              if ( logicalAddr > CEC_LOGADDR_UNREGORBC)
+    819              {
+    820                  pCec->lastResultCode = RESULT_CEC_INVALID_LOGICAL_ADDRESS;
+    821                  return( false );
+    822              }
+    823          
+    824              if ( !SiiCecAdjacentPA( pCec->physicalAddr, pCec->logicalDeviceInfo[ logicalAddr].cecPA ))
+    825                  {
+    826                      DEBUG_PRINT(
+    827                          CEC_MSG_DBG,
+    828                          "LA=%02X (%04X) is NOT adjacent to %02X (%04X)\n",
+    829                          logicalAddr, pCec->logicalDeviceInfo[ logicalAddr].cecPA, pCec->logicalAddr, pCec->physicalAddr
+    830                          );
+    831                      pCec->lastResultCode = RESULT_CEC_NOT_ADJACENT;
+    832                      return( false );
+    833                  }
+    834              pCec->lastResultCode = RESULT_CEC_SUCCESS;
+    835              return( true );
+    836              }
+    837          
+    838          //------------------------------------------------------------------------------
+    839          // Function:    SiiCecPortToAdjacentLA
+    840          // Description: Return the CEC logical address for a device that is adjacent
+    841          //              to the specified device port
+    842          // Parameters:  portIndex:  HDMI RX port number, 0-based
+    843          // Returns:     CEC Logical address for the port, or 0xFF if no LA found.
+    844          //------------------------------------------------------------------------------
+    845          
+    846          uint8_t SiiCecPortToAdjacentLA ( int_t portIndex )
+    847          {
+    848              int_t       thisLa;
+    849          
+    850              pCec->lastResultCode = RESULT_CEC_SUCCESS;
+    851          
+    852              for ( thisLa = 0; thisLa <= CEC_LOGADDR_UNREGORBC; thisLa++ )
+    853              {
+    854                  // Does requested port has the same index as the current logical address?
+    855                  if ( pCec->logicalDeviceInfo[ thisLa].port == portIndex )
+    856                  {
+    857                      // Is the physical address adjacent to the requested port on our device?
+    858                      if ( SiiCecAdjacentPA( pCec->logicalDeviceInfo[ thisLa].cecPA, pCec->physicalAddr ))
+    859                      {
+    860                          break;
+    861                      }
+    862                  }
+    863              }
+    864          
+    865              if ( thisLa >= CEC_LOGADDR_UNREGORBC )
+    866              {
+    867                  thisLa = 0xFF;
+    868              }
+    869          
+    870              return( thisLa );
+    871          }
+    872          
+    873          //-------------------------------------------------------------------------------------------------
+    874          //! @brief      Figures out whether two devices have relationship
+    875          //!             of a Sink and a Source.
+    876          //!
+    877          //!             If so, returns index of the Sink's
+    878          //!             input port that is connected to the Source output port
+    879          //!
+    880          //! @param[in]  sinkPhysAddr      - PA of the possible Sink device,
+    881          //! @param[in]  sourcePhysAddr    - PA of the possible Source device,
+    882          //! @param[out] pInputPortIndex   - (return value) pointer to an index of an input  port of the Sink
+    883          //!                                 0xFF - in the case when Sink-Source relationship hasn't been verified
+    884          //!
+    885          //! @retval     true, if devices are linked directly over some of the Sink's inputs
+    886          //! @retval     false - otherwise
+    887          //-------------------------------------------------------------------------------------------------
+    888          
+    889          static bool_t CecIsLinkedDirectlyInPortGet(const uint16_t sinkPhysAddr, const uint16_t sourcePhysAddr, uint8_t *pInputPortIndex)
+    890          {
+    891              // criteria: 1. Sink must be one level above the Source
+    892              //           2. The input port number (= inputPortIdx+1) must be equal to
+    893              //              the Source's physical address last nonzero digit (p. 8.7.2. of HDMI 1.4 spec)
+    894              uint8_t     i;
+    895              uint8_t     n = 0;
+    896              uint16_t    mask = 0x000F;
+    897              uint16_t    sourceMasked;
+    898              uint16_t    sinkMasked;
+    899              bool_t      isLinked = false;
+    900          
+    901              // crit.1 meets if and only if sink and source have one of the following patterns:
+    902              // {0000, n000}, {x000, xn00}, {xy00, xyn0}, {xyz0, xyzn}
+    903              for (i = 0; i < 4; i++)
+    904              {
+    905                  sourceMasked = sourcePhysAddr & mask;
+    906                  sinkMasked   = sinkPhysAddr & mask;
+    907          
+    908                  if (n == 0) // n point not found yet
+    909                  {
+    910                       // skip zero-zero pairs
+    911                       if ((sinkMasked == 0) && (sourceMasked !=0)) // first zero-nonzero pair found
+    912                       {
+    913                           n = sourceMasked >> (4 * i); // input port number (nonzero)
+    914                           *pInputPortIndex = n - 1;      // input port index to return
+    915                           isLinked = true;             // potential detection
+    916                       }
+    917                       else if ((sinkMasked != 0) && (sourceMasked !=0))
+    918                       {
+    919                          break;
+    920                       }
+    921                       else if ((sinkMasked != 0) && (sourceMasked ==0))
+    922                       {
+    923                          break;
+    924                       }
+    925                  }
+    926                  else // all other digit pairs must be non-zero & equal
+    927                  {
+    928                      if ((sinkMasked == 0) || (sinkMasked != sourceMasked))
+    929                      {
+    930                          isLinked = false; // reset linked flag if wrong MSB pattern found
+    931                          *pInputPortIndex = 0xFF;
+    932                          break;
+    933                      }
+    934                  }
+    935          
+    936                  mask <<= 4; // scan all 4 digits
+    937              }
+    938          
+    939          
+    940              return isLinked;
+    941          }
+    942          
+    943          //-------------------------------------------------------------------------------------------------
+    944          //! @brief      Selects an input port or ARC output port adjacent to the active audio source
+    945          //!
+    946          //! @retval     true  - success,
+    947          //! @retval     false - active source device isn't adjacent or can't be selected
+    948          //-------------------------------------------------------------------------------------------------
+    949          
+    950          bool_t SiiCecPortToActSrcSelect(void)
+    951          {
+    952              uint8_t inputPortIndex;
+    953              bool_t  isLinkedToSink = false;
+    954              bool_t  isLinkedToSource = false;
+    955              bool_t  isSuccess = true;
+    956          
+    957              // Check if active source is adjacent to this device
+    958              isLinkedToSource = CecIsLinkedDirectlyInPortGet(pCec->physicalAddr, pCec->activeSrcPhysical, &inputPortIndex);//check if active source is child
+    959              if (!isLinkedToSource)
+    960              {
+    961                  isLinkedToSink = CecIsLinkedDirectlyInPortGet(pCec->activeSrcPhysical, pCec->physicalAddr, &inputPortIndex);//check if active source is parent
+    962                  if (!isLinkedToSink)
+    963                  {
+    964                      DEBUG_PRINT( CEC_MSG_DBG, "SiiCecPortToActSrcSelect(): Active source isn't adjacent to this device.\n");
+    965                      isSuccess = false;
+    966                  }
+    967                  else
+    968                  {   // Use ARC to receive audio
+    969                      DEBUG_PRINT( CEC_MSG_DBG, "Audio comes over Audio Return Channel.\n");
+    970                      //isSuccess = false; // If ARC isn't available
+    971                      isSuccess = true;
+    972                  }
+    973              }
+    974              else
+    975              {   // Switch to Active Source
+    976                  SiiCecCbInputPortSet(inputPortIndex);
+    977              }
+    978          
+    979              if (isSuccess)
+    980              {
+    981                  DEBUG_PRINT(CEC_MSG_DBG, "\nActive Source: LA[%02X], PA[%04X], Port[%02X]\n", (int)pCec->activeSrcLogical, pCec->activeSrcPhysical, (int)pCec->portSelect);
+    982              }
+    983          
+    984              return isSuccess;
+    985          }
+    986          
+    987          
+    988          //-------------------------------------------------------------------------------------------------
+    989          //! @brief      Calculates physical address of a device, potential or real, that
+    990          //!             is adjacent to the reference device.
+    991          //!
+    992          //! @param[in]  basePhysAddr   - PA of the reference device,
+    993          //! @param[in]  isAtOutput     - if true, returns a device's PA adjacent to output port,
+    994          //!                              if false, returns a device's PA adjacent PA to
+    995          //!                              specified input port
+    996          //! @param[in]  inputPortIndex - zero-based index of the input port of the adjacent device
+    997          //!                             (ignored, if isAtOutput == true)
+    998          //!
+    999          //! @return     Physical Address of the Adjacent device,
+   1000          //! @retval     0xFFFF - if the Adjacent device PA doesn't exist
+   1001          //!                       (sink of a root or source of 5th level)
+   1002          //-------------------------------------------------------------------------------------------------
+   1003          
+   1004          uint16_t SiiCecAdjacentPhysAddrGet(const uint16_t basePhysAddr, const bool_t isAtOutput, const uint8_t inputPortIndex)
+   1005          {
+   1006              uint16_t mask = 0xFFF0;
+   1007              uint16_t adjPhysAddr = 0xFFFF;
+   1008              uint8_t  n = 0;
+   1009          
+   1010              if (inputPortIndex > (SII_INPUT_PORT_COUNT -1 )) // illegal port index
+   1011              {
+   1012                  return 0xFFFF;
+   1013              }
+   1014          
+   1015              // find the last non-zero digit in basePhysAddr
+   1016              while ((n < 4) && ((basePhysAddr & mask) == basePhysAddr))
+   1017              {
+   1018                  n++;
+   1019                  mask <<= 4;
+   1020              }
+   1021          
+   1022              if (isAtOutput)
+   1023              {
+   1024                  if (basePhysAddr != 0x0000)
+   1025                  {
+   1026                      adjPhysAddr = basePhysAddr & mask;
+   1027                  }
+   1028              }
+   1029              else // adjacent to input
+   1030              {
+   1031                  if (n != 0) // if last digit is 0
+   1032                  {
+   1033                     adjPhysAddr = basePhysAddr | ((inputPortIndex + 1) << (4 * (n - 1)));
+   1034                  }
+   1035              }
+   1036          
+   1037              return adjPhysAddr;
+   1038          }
+   1039          
+   1040          
+   1041          //-------------------------------------------------------------------------------------------------
+   1042          //! @brief      Returns longest possible time delay before the next invocation
+   1043          //!             of the SiiCecXXXTaskProcess() function.
+   1044          //!
+   1045          //!             This function can be used to set a countdown timer and call
+   1046          //!             the SiiCecXXXTaskProcess() on the timer's expiration event unless
+   1047          //!             new CEC message is pending
+   1048          //!
+   1049          //! @param[in]  sysTimerCountMs  - current value of the system time counter (in milliseconds)
+   1050          //! @param[in]  recallTimerCount - pointer to the recall time counter
+   1051          //!
+   1052          //! @return     time in milliseconds
+   1053          //-------------------------------------------------------------------------------------------------
+   1054          
+   1055          uint16_t SiiCecNextInvocationTimeGet(uint16_t sysTimerCountMs, CecTimeCounter_t recallTimerCount)
+   1056          {
+   1057              uint32_t totalDelayMs;
+   1058              uint16_t invDelayMs;
+   1059          
+   1060              if (CecIsTimeCounterExpired(&recallTimerCount))
+   1061              {
+   1062                  totalDelayMs = 0;
+   1063              }
+   1064              else
+   1065              {
+   1066                  totalDelayMs =  (uint32_t) recallTimerCount.tRov * 0x10000 /* 2^16 */ +
+   1067                                  (uint32_t) recallTimerCount.tRes * CEC_TIME_TCK_MS - (uint32_t) sysTimerCountMs;
+   1068              }
+   1069          
+   1070              // Apply limits to recall delay
+   1071              if (totalDelayMs < CEC_MIN_RECALL_TIME_MS)
+   1072              {
+   1073                  invDelayMs = CEC_MIN_RECALL_TIME_MS;
+   1074              }
+   1075              else if (totalDelayMs > CEC_MAX_RECALL_TIME_MS)
+   1076              {
+   1077                  invDelayMs = CEC_MAX_RECALL_TIME_MS;
+   1078              }
+   1079              else
+   1080              {
+   1081                  invDelayMs = (uint16_t) totalDelayMs;
+   1082              }
+   1083          
+   1084              //DEBUG_PRINT(MSG_DBG_CEC, ("SiiCecNextInvocationTimeGet(): -- recall in -- %d ms\n", invDelayMs));
+   1085          
+   1086              return invDelayMs;
+   1087          }
+   1088          
+   1089          
+   1090          //-------------------------------------------------------------------------------------------------
+   1091          //! @brief      Sends a CEC message over the CEC bus using CPI
+   1092          //!
+   1093          //! @param[in]  opCode      - CEC operation code
+   1094          //! @param[in]  argCount    - number of byte-size arguments in the CEC message
+   1095          //! @param[in]  srcLa       - logical address of source device
+   1096          //! @param[in]  destLa      - logical address of destination device
+   1097          //! @param[in]  pCecMsg     - pointer to the CEC message frame (structure)
+   1098          //-------------------------------------------------------------------------------------------------
+   1099          void SiiCecCpiWriteEx(
+   1100              uint8_t opCode, uint8_t argCount,
+   1101              SiiCecLogicalAddresses_t srcLa, SiiCecLogicalAddresses_t destLa,
+   1102              SiiCpiData_t *pCecMsg)
+   1103          {
+   1104              pCecMsg->opcode          = opCode;
+   1105              pCecMsg->srcDestAddr     = MAKE_SRCDEST( srcLa, destLa );
+   1106              pCecMsg->argCount        = argCount;
+   1107          
+   1108              SiiDrvCpiWrite( pCecMsg );
+   1109          }
+   1110          
+   1111          //-------------------------------------------------------------------------------------------------
+   1112          //! @brief      Sends a CEC message over the CEC bus using CPI
+   1113          //!
+   1114          //! @param[in]  opCode      - CEC operation code
+   1115          //! @param[in]  argCount    - number of byte-size arguments in the CEC message
+   1116          //! @param[in]  destLogAddr - logical address of destination device
+   1117          //! @param[in]  pCecMsg     - pointer to the CEC message frame (structure)
+   1118          //-------------------------------------------------------------------------------------------------
+   1119          void SiiCecCpiWrite(uint8_t opCode, uint8_t argCount, uint8_t destLogAddr, SiiCpiData_t *pCecMsg)
+   1120          {
+   1121              pCecMsg->opcode          = opCode;
+   1122              pCecMsg->srcDestAddr     = MAKE_SRCDEST(SiiCecGetDeviceLA(), destLogAddr);
+   1123              pCecMsg->argCount        = argCount;
+   1124          
+   1125              SiiDrvCpiWrite(pCecMsg);
+   1126          }
+   1127          
+   1128          //-------------------------------------------------------------------------------------------------
+   1129          //! @brief      Send a feature abort as a response to an inappropriate message
+   1130          //!
+   1131          //! @param[in]  opCode  - CEC operation code
+   1132          //! @param[in]  reason  - abort reason code @see CEC_ABORT_REASON_t
+   1133          //! @param[in]  srcLa   - logical address of the source device
+   1134          //! @param[in]  destLa  - logical address of the destination device
+   1135          //-------------------------------------------------------------------------------------------------
+   1136          void SiiCecFeatureAbortSendEx (uint8_t opCode, uint8_t reason, SiiCecLogicalAddresses_t srcLa, SiiCecLogicalAddresses_t destLa )
+   1137          {
+   1138              SiiCpiData_t cecFrame;
+   1139          
+   1140              cecFrame.args[0]        = opCode;
+   1141              cecFrame.args[1]        = reason;
+   1142              cecFrame.opcode         = CECOP_FEATURE_ABORT;
+   1143              cecFrame.srcDestAddr    = MAKE_SRCDEST( srcLa, destLa );
+   1144              cecFrame.argCount       = 2;
+   1145          
+   1146              SiiDrvCpiWrite( &cecFrame );
+   1147          }
+   1148          
+   1149          //-------------------------------------------------------------------------------------------------
+   1150          //! @brief      Send a feature abort as a response to an inappropriate message
+   1151          //!
+   1152          //! @param[in]  opCode      - CEC operation code
+   1153          //! @param[in]  reason      - abort reason code @see CEC_ABORT_REASON_t
+   1154          //! @param[in]  destLogAddr - logical address of the destination device
+   1155          //-------------------------------------------------------------------------------------------------
+   1156          
+   1157          void SiiCecFeatureAbortSend(uint8_t opCode, uint8_t reason, uint8_t destLogAddr)
+   1158          {
+   1159              SiiCpiData_t cecFrame;
+   1160          
+   1161              cecFrame.args[0]       = opCode;
+   1162              cecFrame.args[1]       = reason;
+   1163          
+   1164              SiiCecCpiWrite(CECOP_FEATURE_ABORT, 2, destLogAddr, &cecFrame);
+   1165          }
+   1166          
+   1167          
+   1168          #if ( configSII_DEV_953x_PORTING == 1 )
+   1169          bool_t AmTCecPortToActSrcSelect(void)
+   1170          {
+   1171              uint8_t inputPortIndex;
+   1172              bool_t  isLinkedToSource = false;
+   1173              bool_t  isSuccess = true;
+   1174              xHMISystemParams SysParms;
+   1175          
+   1176              // Check if active source is adjacent to this device
+   1177              isLinkedToSource = CecIsLinkedDirectlyInPortGet(pCec->physicalAddr, pCec->activeSrcPhysical, &inputPortIndex);
+   1178              if (!isLinkedToSource)
+   1179              {
+   1180                  SysParms = AmTCecGetSyspramsFromHMI();
+   1181                  if (!SysParms.cec_arc)	//Check ARC settings
+   1182                  {
+   1183                      DEBUG_PRINT( CEC_MSG_DBG, "CEC ARC is Off and active source isn't adjacent to this device.\n");
+   1184                      isSuccess = false;
+   1185                  }
+   1186                  else
+   1187                  {  
+   1188                      DEBUG_PRINT( CEC_MSG_DBG, "Audio comes over Audio Return Channel.\n");
+   1189                      isSuccess = true;
+   1190                  }
+   1191              }
+   1192              else
+   1193              {
+   1194              	SiiCecCbInputPortSet(inputPortIndex);
+   1195                  isSuccess = true;
+   1196              }
+   1197          
+   1198              return isSuccess;
+   1199          }
+   1200          
+   1201          
+   1202          //-------------------------------------------------------------------------------------------------
+   1203          //! @brief      
+   1204          //-------------------------------------------------------------------------------------------------
+   1205          void AmTCecEventPassToHMI(uint8_t event)
+   1206          {
+   1207          	xHMISrvEventParams srv_parms = { xHMI_EVENT_CEC, USER_EVENT_UNDEFINED, 0 };
+   1208          	
+   1209             	srv_parms.event = event;
+   1210              	pHS_ObjCtrl->SendEvent(&srv_parms);
+   1211          }
+   1212          
+   1213          void AmTCecEventVolumeCtrl_HMI(  xHMISrvEventParams event ) 
+   1214          {
+   1215          	xHMISrvEventParams srv_parms = { xHMI_EVENT_CEC, USER_EVENT_UNDEFINED, 0 };
+   1216          	
+   1217             	srv_parms.event = event.event;
+   1218              	srv_parms.params = event.params;
+   1219              	pHS_ObjCtrl->SendEvent(&srv_parms);
+   1220          }
+   1221          
+   1222          
+   1223          
+   1224          //-------------------------------------------------------------------------------------------------
+   1225          //! @brief      
+   1226          //-------------------------------------------------------------------------------------------------
+   1227          xHMISystemParams AmTCecGetSyspramsFromHMI(void)
+   1228          {
+   1229          	return (pHS_ObjCtrl->GetSystemParams());
+   1230          }
+   1231          
+   1232          
+   1233          //-------------------------------------------------------------------------------------------------
+   1234          //! @brief      
+   1235          //-------------------------------------------------------------------------------------------------
+   1236          POWER_STATE AmTCecGetSystemPowerStatus(void)
+   1237          {
+   1238          	return (pPowerHandle_ObjCtrl->get_power_state());
+   1239          }
+   1240          #endif
+   1241          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        8  AmTCecEventPassToHMI
+              8 -- Indirect call
+       16  AmTCecEventVolumeCtrl_HMI
+             16 -- Indirect call
+        0  AmTCecGetSyspramsFromHMI
+              0 -- Indirect call
+        0  AmTCecGetSystemPowerStatus
+              0 -- Indirect call
+       40  AmTCecPortToActSrcSelect
+             40 -> AmTCecGetSyspramsFromHMI
+             40 -> CecIsLinkedDirectlyInPortGet
+             40 -> SiiCecCbInputPortSet
+       20  CecIsLinkedDirectlyInPortGet
+       16  SiiCecAdjacentPA
+       16  SiiCecAdjacentPhysAddrGet
+       16  SiiCecCallbackRegisterParser
+       16  SiiCecCallbackRegisterSet
+        0  SiiCecCallbackRegisterTask
+        8  SiiCecConfigure
+              8 -> SiiDrvCpiDisable
+              8 -> SiiDrvCpiEnable
+       16  SiiCecCpiWrite
+             16 -> SiiCecGetDeviceLA
+              0 -> SiiDrvCpiWrite
+        8  SiiCecCpiWriteEx
+              0 -> SiiDrvCpiWrite
+       32  SiiCecFeatureAbortSend
+             32 -> SiiCecCpiWrite
+       32  SiiCecFeatureAbortSendEx
+             32 -> SiiDrvCpiWrite
+        0  SiiCecGetActiveSourceLA
+        0  SiiCecGetActiveSourcePA
+        0  SiiCecGetDeviceLA
+        0  SiiCecGetDevicePA
+        0  SiiCecGetDeviceType
+        0  SiiCecGetLastResult
+        0  SiiCecGetPowerState
+       24  SiiCecInitialize
+             24 -> SiiCecCallbackRegisterParser
+             24 -> SiiCecSetDeviceLA
+             24 -> SiiCecSetDevicePA
+             24 -> __aeabi_memclr4
+        0  SiiCecInstanceGet
+        0  SiiCecInstanceSet
+        8  SiiCecIsAdjacentLA
+              8 -> SiiCecAdjacentPA
+        0  SiiCecIsVirtualDeviceLA
+        0  SiiCecIsVirtualDevicePresent
+        0  SiiCecLaToPort
+       16  SiiCecNextInvocationTimeGet
+             16 -> CecIsTimeCounterExpired
+        0  SiiCecPortSelectGet
+        0  SiiCecPortSelectSet
+       16  SiiCecPortToActSrcSelect
+             16 -> CecIsLinkedDirectlyInPortGet
+             16 -> SiiCecCbInputPortSet
+       16  SiiCecPortToAdjacentLA
+             16 -> SiiCecAdjacentPA
+        0  SiiCecPortToLA
+       16  SiiCecPortToPA
+       16  SiiCecRemoveVirtualDevice
+             16 -> SiiDrvCpiClearVirtualDevBit
+        0  SiiCecResume
+              0 -> SiiDrvCpiResume
+        0  SiiCecSendMessage
+              0 -> SiiCecSendMessageEx
+       32  SiiCecSendMessageEx
+             32 -> SiiDrvCpiWrite
+       40  SiiCecSendUserControlPressed
+             40 -> SiiDrvCpiWrite
+        8  SiiCecSendUserControlReleased
+              8 -> SiiCecSendMessageEx
+        0  SiiCecSetActiveSource
+        0  SiiCecSetActiveSourceLA
+        0  SiiCecSetActiveSourcePA
+        8  SiiCecSetDeviceLA
+              8 -> SiiCecIsVirtualDevicePresent
+              0 -> SiiDrvCpiAddLogicalAddr
+              0 -> SiiDrvCpiSetLogicalAddr
+       16  SiiCecSetDevicePA
+              0 -> SiiCecSwitchSendRouteInfo
+        0  SiiCecSetPowerState
+        0  SiiCecSetSourceActive
+              0 -> SiiCecSendActiveSource
+        0  SiiCecSetVirtualDevLA
+        0  SiiCecStandby
+              0 -> SiiDrvCpiStandby
+        0  SiiCecStatus
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ?<Constant {8, 100, 0}>
+       4  ?<Constant {8, 100, 0}>_1
+       4  ??DataTable43
+       4  ??DataTable43_1
+       4  ??DataTable43_2
+       4  ??DataTable43_3
+       4  ??DataTable43_4
+       6  ?Subroutine0
+      26  AmTCecEventPassToHMI
+      40  AmTCecEventVolumeCtrl_HMI
+       8  AmTCecGetSyspramsFromHMI
+       8  AmTCecGetSystemPowerStatus
+      52  AmTCecPortToActSrcSelect
+      80  CecIsLinkedDirectlyInPortGet
+      44  SiiCecAdjacentPA
+      68  SiiCecAdjacentPhysAddrGet
+      44  SiiCecCallbackRegisterParser
+      48  SiiCecCallbackRegisterSet
+      44  SiiCecCallbackRegisterTask
+      30  SiiCecConfigure
+      36  SiiCecCpiWrite
+      28  SiiCecCpiWriteEx
+      26  SiiCecFeatureAbortSend
+      46  SiiCecFeatureAbortSendEx
+      14  SiiCecGetActiveSourceLA
+      12  SiiCecGetActiveSourcePA
+      14  SiiCecGetDeviceLA
+      12  SiiCecGetDevicePA
+      12  SiiCecGetDeviceType
+       4  SiiCecGetLastResult
+      10  SiiCecGetPowerState
+     202  SiiCecInitialize
+      10  SiiCecInstanceGet
+      28  SiiCecInstanceSet
+      46  SiiCecIsAdjacentLA
+      32  SiiCecIsVirtualDeviceLA
+      14  SiiCecIsVirtualDevicePresent
+      30  SiiCecLaToPort
+      58  SiiCecNextInvocationTimeGet
+      10  SiiCecPortSelectGet
+      10  SiiCecPortSelectSet
+      50  SiiCecPortToActSrcSelect
+      52  SiiCecPortToAdjacentLA
+      40  SiiCecPortToLA
+      56  SiiCecPortToPA
+      54  SiiCecRemoveVirtualDevice
+       4  SiiCecResume
+      12  SiiCecSendMessage
+      56  SiiCecSendMessageEx
+      62  SiiCecSendUserControlPressed
+      50  SiiCecSendUserControlReleased
+      16  SiiCecSetActiveSource
+      14  SiiCecSetActiveSourceLA
+      12  SiiCecSetActiveSourcePA
+      44  SiiCecSetDeviceLA
+      52  SiiCecSetDevicePA
+      44  SiiCecSetPowerState
+      26  SiiCecSetSourceActive
+      18  SiiCecSetVirtualDevLA
+       4  SiiCecStandby
+      20  SiiCecStatus
+     584  pCec
+          cecInstance
+
+ 
+   584 bytes in section .data
+ 1 866 bytes in section .text
+ 
+ 1 866 bytes of CODE memory
+   584 bytes of DATA memory
+
+Errors: none
+Warnings: 5

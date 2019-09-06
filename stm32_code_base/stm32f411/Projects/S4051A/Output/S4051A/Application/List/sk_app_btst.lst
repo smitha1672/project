@@ -1,0 +1,719 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:25:13 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\application\sk_app_btst #
+#                    .c                                                       #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\application\sk_app_btst #
+#                    .c -D S4051A -D DEBUG -D FREE_RTOS -D STM32F40_41xxx -D  #
+#                    USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D             #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\sk_app_btst.lst                                       #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\sk_app_btst.o                                          #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\application\sk_app_btst.c
+      1          //***************************************************************************
+      2          //!file     sk_app_btst.c
+      3          //!brief    SK 9535 Starter Kit firmware -  Automated Bench Test
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2010-2011, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include "si_drv_internal.h"
+     14          #include "si_regs_audio953x.h"
+     15          
+     16          #include "sk_application.h"
+     17          #include "si_platform.h"
+     18          #include "si_gpio.h"
+     19          
+     20          #include "si_drv_audio.h"
+     21          #include "si_drv_device.h"
+     22          #if INC_CEC
+     23          #include "si_cec_component.h"
+     24          #endif
+     25          #if INC_IPV
+     26          #include "si_ipv_component.h"
+     27          #endif
+     28          #if INC_OSD
+     29          #include "si_osd_component.h"
+     30          #endif
+     31          #include "si_drv_tpi_system.h"
+     32          
+     33          
+     34          //------------------------------------------------------------------------------
+     35          // Module data
+     36          //------------------------------------------------------------------------------
+     37          #if (BENCH_TEST_STATIC_300MHZ == DISABLE)
+     38          typedef enum testId
+     39          {
+     40              BTEST_MSW_M0_S1,
+     41              BTEST_MSW_M1_S0,
+     42              BTEST_MSW_M2_S3,
+     43          #if ( configSII_DEV_9535 == 1 )
+     44              BTEST_MSW_M3_S2,
+     45          #endif
+     46              BTEST_IPV,
+     47              BTEST_IPV_PIP,
+     48              BTEST_AUDIO_INSERTION,
+     49              BTEST_IV_COLORBAR,
+     50              BTEST_IV_CHESS,
+     51              BTEST_IV_RAMP,
+     52          #if ( configSII_DEV_9535 == 1 )
+     53              BTEST_OSD,
+     54          #endif
+     55              BTEST_SK_MODE_TV,
+     56          
+     57              NUM_OF_BENCH_TESTS
+     58          } testId_t;
+     59          
+     60          static clock_time_t bTestDuration[NUM_OF_BENCH_TESTS] =
+     61                              {
+     62                                  20000,     //BTEST_MSW_M0_S1
+     63                                  20000,     //BTEST_MSW_M1_S0
+     64                                  20000,     //BTEST_MSW_M2_S3
+     65          #if ( configSII_DEV_9535 == 1 )
+     66                                  20000,     //BTEST_MSW_M3_S2
+     67          #endif
+     68                                  20000,     //BTEST_IPV
+     69                                  20000,     //BTEST_IPV_PIP
+     70                                  20000,     //BTEST_AUDIO_INSERTION
+     71                                  20000,     //BTEST_IV_COLORBAR
+     72                                  20000,     //BTEST_IV_CHESS
+     73                                  20000,     //BTEST_IV_RAMP
+     74          #if ( configSII_DEV_9535 == 1 )
+     75                                  20000,     //BTEST_OSD
+     76          #endif
+     77                                  20000 ,     //BTEST_SK_MODE_TV
+     78                              };
+     79          
+     80          static bool_t isSkipTestFor9533[NUM_OF_BENCH_TESTS] =
+     81                              {
+     82                                  true,      //BTEST_MSW_M0_S1
+     83                                  true,      //BTEST_MSW_M1_S0
+     84                                  true,      //BTEST_MSW_M2_S3
+     85          #if ( configSII_DEV_9535 == 1 )
+     86                                  true,      //BTEST_MSW_M3_S2
+     87          #endif
+     88                                  false,     //BTEST_IPV
+     89                                  false,     //BTEST_IPV_PIP
+     90                                  false,     //BTEST_AUDIO_INSERTION
+     91                                  false,     //BTEST_IV_COLORBAR
+     92                                  false,     //BTEST_IV_CHESS
+     93                                  false,     //BTEST_IV_RAMP
+     94          #if ( configSII_DEV_9535 == 1 )
+     95                                  false,     //BTEST_OSD
+     96          #endif
+     97                                  false,     //BTEST_SK_MODE_TV
+     98                              };
+     99          
+    100          
+    101          static char *pBenchTestNames [] =
+    102          {
+    103              "Port Switch Test. Port:0",
+    104              "Port Switch Test. Port:1",
+    105              "Port Switch Test. Port:2",
+    106          #if ( configSII_DEV_9535 == 1 )
+    107              "Port Switch Test. Port:3",
+    108          #endif
+    109              "IPV Test...",
+    110              "IPV PIP TEST",
+    111              "Audio Insertion External SPDIF Test",
+    112              "Internal Video Test: Color Bars.",
+    113              "Internal Video Test: Chess Field.",
+    114              "Internal Video Test: Gray Levels Ramp.",
+    115          #if ( configSII_DEV_9535 == 1 )
+    116              "OSD Test...",
+    117          #endif
+    118              "TV Mode Test",
+    119          };
+    120          
+    121          
+    122          
+    123          #else // if BENCH_TEST_STATIC_300MHZ == ENABLE
+    124          typedef enum testId
+    125          {
+    126              BTEST_MSW_MX_SY,
+    127              BTEST_MSW_MY_SX,
+    128          
+    129              NUM_OF_BENCH_TESTS
+    130          } testId_t;
+    131          
+    132          static clock_time_t bTestDuration[NUM_OF_BENCH_TESTS] =
+    133                              {
+    134                                  30000,     //BTEST_MSW_M0_S1
+    135                                  30000,     //BTEST_MSW_M1_S0
+    136                              };
+    137          
+    138          static bool_t isSkipTestFor9533[NUM_OF_BENCH_TESTS] =
+    139                              {
+    140                                  true,      //BTEST_MSW_M0_S1
+    141                                  true,      //BTEST_MSW_M1_S0
+    142                              };
+    143          #endif
+    144          
+    145          
+    146          
+    147          //-------------------------------------------------------------------------------------------------
+    148          //! @brief      DEBUG_PRINT helpers
+    149          //-------------------------------------------------------------------------------------------------
+    150          #if (BENCH_TEST_STATIC_300MHZ == DISABLE)
+    151          static void PrintBenchTestName ( int testNo )
+    152          {
+    153              DEBUG_PRINT( MSG_ALWAYS, "%s\n", pBenchTestNames[ testNo] );
+    154          }
+    155          #endif
+    156          
+    157          static void PrintHashLine( void )
+    158          {
+    159              PrintAlways( "###########################################################################\n" );
+    160          }
+    161          
+    162          //------------------------------------------------------------------------------
+    163          // Function:    SkAppBenchTestIrRemote
+    164          // Description: Parse remote control keys for the Bench Test App.
+    165          // Parameters:  fullAccess - true if allowed to respond to all normal keys
+    166          //                           false if only allowed to respond to power keys
+    167          // Returns:     none
+    168          //------------------------------------------------------------------------------
+    169          void SkAppBenchTestIrRemote ( RC5Commands_t key, bool_t fullAccess )
+    170          {
+    171          }
+    172          
+    173          //------------------------------------------------------------------------------
+    174          // Function:    SkAppBenchTest
+    175          // Description: CP 953x Bench Test Automation
+    176          //------------------------------------------------------------------------------
+    177          
+    178          void SkAppBenchTest ( void )
+    179          {
+    180          //    int_t rxPort[2];
+    181              static testId_t test = 0; // the very first test in testId_t
+    182              static bool_t testDone = false;
+    183              static bool_t isFirstEntry = true;
+    184              static bool_t isPowerOn = true;
+    185              static SiiIpvTheme_t ipvTheme = 0;
+    186              // SiI9573 version of the chip doesn't have sub-pipe, so some of the tests must be skipped
+    187              bool_t is9533 = (SiiDrvDeviceInfo( SiiDEV_ID ) != 0x9535);
+    188          
+    189          
+    190              /****************************************************************************************/
+    191              /* Display Port Processor State                                                         */
+    192              /****************************************************************************************/
+    193          
+    194              SkAppInstaPortLedUpdate( SiiDrvDeviceInfo(SiiDEV_SELECTED_PORT_BITFIELD));
+    195          
+    196              if ( !SiiOsTimerExpired( app.appTimer ))
+    197              {
+    198                  return;
+    199              }
+    200          
+    201              if(isPowerOn == true)
+    202              {
+    203              	SkAppRepeaterConfigure(true);
+    204              	isPowerOn = false;
+    205              }
+    206          
+    207          /*    if (is9533 && isSkipTestFor9533[test])
+    208              {
+    209                  test++;
+    210                  PrintAlways( "Test Skipped for SiI9573.\n" );
+    211                  return;
+    212              }
+    213              else*/ if (test < NUM_OF_BENCH_TESTS)
+    214              {
+    215                  SiiOsTimerSet( &app.appTimer, bTestDuration[test]);
+    216              }
+    217          
+    218          #if (BENCH_TEST_STATIC_300MHZ == ENABLE)
+    219              // Set TX TMDS settings for 300 MHz range statically for this type of test
+    220              SkAppTxAdjustAnalogSettings(0, 30000);
+    221              SkAppTxAdjustAnalogSettings(1, 30000);
+    222          
+    223              // If Switch 5 is ON, static InstaPort mode will be selected
+    224              if (SiiPlatformSwitchGet(SW_5))
+    225              {
+    226                  uint8_t rxPort;
+    227          
+    228                  SkAppIpvEnable( false );
+    229                  rxPort = SiiPlatformReadRotary(true);
+    230                  SkAppMswDemoSetSources(rxPort, rxPort);
+    231                  DEBUG_PRINT( MSG_ALWAYS, "InstaPort 300 MHZ Test...\nMain port: %d\n", rxPort );
+    232          
+    233                  SiiOsTimerSet( &app.appTimer, 10000);
+    234                  return; // skip all other tests
+    235              }
+    236          #endif
+    237          
+    238          
+    239              if(false == testDone)
+    240              	PrintHashLine();
+    241          
+    242              switch(test)
+    243              {
+    244          #if (BENCH_TEST_STATIC_300MHZ == ENABLE)
+    245                  case   BTEST_MSW_MX_SY:
+    246                      SkAppIpvEnable( false );
+    247                      rxPort[0] = SkAppSwitchGetNextPort( 5, true );
+    248                      rxPort[1] = SkAppSwitchGetNextPort( rxPort[0], true );
+    249                      SkAppMswDemoSetSources(rxPort[0], rxPort[1]);
+    250                      DEBUG_PRINT( MSG_ALWAYS, "MSW Test. Main:%d, Sub:%d\n", app.newSource[0], app.newSource[1]);
+    251                      test++; // move to next test
+    252                      break;
+    253          
+    254                  case   BTEST_MSW_MY_SX:
+    255                      // swap sources
+    256                      SkAppMswDemoSetSources(app.currentSource[1], app.currentSource[0]);
+    257                      DEBUG_PRINT( MSG_ALWAYS, "MSW Test. Main:%d, Sub:%d\n", app.newSource[0], app.newSource[1]);
+    258                      test++; // move to next test
+    259                      break;
+    260          #else
+    261          
+    262                  case   BTEST_MSW_M0_S1:
+    263                      // Clean up previous test
+    264                      //SiiIpvEnable( false );
+    265                      PrintBenchTestName( BTEST_MSW_M0_S1 );
+    266          //            SkAppMswDemoSetSources( 0, 0 );
+    267                      app.newSource[0] = 0;
+    268                      app.newSource[1] = 0;
+    269                      app.newAudioSource[0] = SiiSwitchAudioSourceDefault;
+    270                      app.newAudioSource[1] = SiiSwitchAudioSourceDefault;
+    271          
+    272                      test++; // move to next test
+    273                      break;
+    274          
+    275                  case   BTEST_MSW_M1_S0:
+    276                      PrintBenchTestName( BTEST_MSW_M1_S0 );
+    277          //            SkAppMswDemoSetSources( 1, 1 );
+    278                      app.newSource[0] = 1;
+    279                      app.newSource[1] = 0;
+    280                      app.newAudioSource[0] = SiiSwitchAudioSourceDefault;
+    281                      app.newAudioSource[1] = SiiSwitchAudioSourceDefault;
+    282                      test++; // move to next test
+    283                      //test+=4;
+    284                      break;
+    285          
+    286                  case   BTEST_MSW_M2_S3:
+    287                      PrintBenchTestName( BTEST_MSW_M2_S3 );
+    288                      //SkAppMswDemoSetSources( 2, 2 );
+    289                      app.newSource[0] = 2;
+    290                      app.newSource[1] = 0;
+    291                      app.newAudioSource[0] = SiiSwitchAudioSourceDefault;
+    292                      app.newAudioSource[1] = SiiSwitchAudioSourceDefault;
+    293                      test++; // move to next test
+    294                      break;
+    295          #if ( configSII_DEV_9535 == 1 )
+    296                  case   BTEST_MSW_M3_S2:
+    297                      PrintBenchTestName( BTEST_MSW_M3_S2 );
+    298                      //SkAppMswDemoSetSources( 3, 3 );
+    299                      app.newSource[0] = 3;
+    300                      app.newSource[1] = 0;
+    301                      app.newAudioSource[0] = SiiSwitchAudioSourceDefault;
+    302                      app.newAudioSource[1] = SiiSwitchAudioSourceDefault;
+    303                      test++; // move to next test
+    304                     // test = BTEST_MSW_M0_S1;
+    305                      break;
+    306          #endif
+    307                  case   BTEST_IPV:
+    308                  	PrintBenchTestName( BTEST_IPV );
+    309                      SiiIpvThemeSet( ipvTheme );
+    310                      SiiIpvEnable( true );
+    311                      test++; // move to next test
+    312                      break;
+    313                  case   BTEST_IPV_PIP:
+    314                  	PrintBenchTestName( BTEST_IPV_PIP );
+    315                  	SkAppIpvPipModeEnable(SiiSwitchSource1);
+    316          //        	while(1);
+    317                  	test++; // move to next test
+    318                      break;
+    319          
+    320                  case   BTEST_AUDIO_INSERTION:
+    321          
+    322                      PrintBenchTestName( BTEST_AUDIO_INSERTION );
+    323                      // Clean up previous test
+    324                      SiiIpvEnable( false );
+    325                      app.newSource[0] = app.newSource[1] = SiiSwitchSource0;
+    326                      //app.isTxHdcpRequired[0]     = false;
+    327                      //SiiDrvExtTpgPatternSet(app.tpgVideoPattern = SI_ETPG_PATTERN_COLORBAR);
+    328          
+    329                      app.newAudioSource[0]       = SiiSwitchAudioSourceExternal;
+    330                      app.newAudioSource[1]       = SiiSwitchAudioSourceExternal;
+    331          
+    332                      SiiTxOutputInterfaceSet(SI_TX_OUTPUT_MODE_HDMI);
+    333          
+    334                      // Set interface type and enable audio transmission
+    335                  	SiiDrvTpiAudioInterfaceSet(SI_TX_AUDIO_SRC_SPDIF);
+    336                      test++;
+    337                  	break;
+    338          
+    339                  case   BTEST_IV_COLORBAR:
+    340                      PrintBenchTestName( BTEST_IV_COLORBAR );
+    341                      app.newSource[0] = app.newSource[1] = SiiSwitchSourceInternalVideo;
+    342                      app.isTxHdcpRequired[0]     = true;
+    343                      SiiDrvExtTpgPatternSet(app.tpgVideoPattern = SI_ETPG_PATTERN_COLORBAR);
+    344                      app.newAudioSource[0]       = SiiSwitchAudioSourceDefault;
+    345                      app.newAudioSource[1]       = SiiSwitchAudioSourceDefault;
+    346          
+    347                      test++; // move to next test
+    348                      break;
+    349          
+    350                  case   BTEST_IV_CHESS:
+    351                      PrintBenchTestName( BTEST_IV_CHESS );
+    352                      app.newSource[0] = app.newSource[1] = SiiSwitchSourceInternalVideo;
+    353                      //app.isTxHdcpRequired[0]     = false;
+    354                      SiiDrvExtTpgPatternSet(app.tpgVideoPattern = SI_ETPG_PATTERN_CHESS);
+    355                      app.newAudioSource[0]       = SiiSwitchAudioSourceDefault;
+    356                      app.newAudioSource[1]       = SiiSwitchAudioSourceDefault;
+    357                      test++; // move to next test
+    358                      break;
+    359          
+    360                  case   BTEST_IV_RAMP:
+    361                      PrintBenchTestName( BTEST_IV_RAMP );
+    362                      app.newSource[0] = app.newSource[1] = SiiSwitchSourceInternalVideo;
+    363                      //app.isTxHdcpRequired[0]     = false;
+    364                      SiiDrvExtTpgPatternSet(app.tpgVideoPattern = SI_ETPG_PATTERN_RAMP);
+    365                      app.newAudioSource[0]       = SiiSwitchAudioSourceDefault;
+    366                      app.newAudioSource[1]       = SiiSwitchAudioSourceDefault;
+    367                      test++; // move to next test
+    368                      break;
+    369          
+    370          #if INC_OSD
+    371                  case   BTEST_OSD:
+    372                      // Cleanup previous test
+    373                      //SkAppMswDemoSetSources(0, 0);
+    374                      app.newSource[0] = 0;
+    375                      app.newSource[1] = 0;
+    376          
+    377                      PrintBenchTestName( BTEST_OSD );
+    378                      if (isFirstEntry)
+    379                      {
+    380                          SkAppOsdMainMenu();
+    381                          isFirstEntry = false;
+    382                      }
+    383                      else
+    384                      {
+    385                          SiiDrvOsdEnable( true );
+    386                      }
+    387                      test++; // move to next test
+    388                      break;
+    389          #endif
+    390          
+    391                  case  BTEST_SK_MODE_TV:
+    392          
+    393                      PrintBenchTestName( BTEST_SK_MODE_TV );
+    394          #if INC_OSD
+    395                      SiiDrvOsdEnable( false );
+    396          #endif
+    397          //            SkAppMswDemoSetSources( 0, 0 );
+    398                      app.newSource[0] = 0;
+    399                      app.newSource[1] = 0;
+    400          
+    401                      app.newAudioSource[0]       = SiiSwitchAudioSourceDefault;
+    402                      app.newAudioSource[1]       = SiiSwitchAudioSourceDefault;
+    403                  	SkAppTv();
+    404                      test++;
+    405                      break;
+    406          
+    407          #endif
+    408                  default:
+    409                  	if(testDone == false)
+    410                  	{
+    411                  		PrintAlways( "BENCH TEST IS OVER.\n" );
+    412                  		testDone = true;
+    413                  	}
+    414                 // 	test = BTEST_IPV;
+    415                      //test = 0;
+    416                      break;
+    417          
+    418              }
+    419              if(false == testDone)
+    420                  PrintHashLine();
+    421          }
+    422          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       24  SkAppBenchTest
+              0 -> PrintAlways
+             24 -> PrintAlways
+             24 -> SiiDrvDeviceInfo
+             24 -> SiiDrvExtTpgPatternSet
+             24 -> SiiDrvTpiAudioInterfaceSet
+             24 -> SiiIpvEnable
+             24 -> SiiIpvThemeSet
+             24 -> SiiOsTimerExpired
+             24 -> SiiOsTimerSet
+             24 -> SiiTxOutputInterfaceSet
+             24 -> SkAppInstaPortLedUpdate
+             24 -> SkAppIpvPipModeEnable
+             24 -> SkAppRepeaterConfigure
+             24 -> SkAppTv
+        0  SkAppBenchTestIrRemote
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      80  ?<Constant "#####################...">
+      24  ?<Constant "BENCH TEST IS OVER.\n">
+       4  ??DataTable2
+       4  ??DataTable2_1
+      10  ?Subroutine0
+     338  SkAppBenchTest
+       2  SkAppBenchTestIrRemote
+       1  ipvTheme
+      44  test
+          testDone
+          isPowerOn
+          bTestDuration
+
+ 
+   1 byte  in section .bss
+  44 bytes in section .data
+ 462 bytes in section .text
+ 
+ 462 bytes of CODE memory
+  45 bytes of DATA memory
+
+Errors: none
+Warnings: 14

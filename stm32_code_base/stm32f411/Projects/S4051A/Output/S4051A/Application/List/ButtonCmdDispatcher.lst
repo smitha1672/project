@@ -1,0 +1,932 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:25:27 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\APP_SRC\Dispatchers\ButtonCmdDispatch #
+#                    er.c                                                     #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\APP_SRC\Dispatchers\ButtonCmdDispatch #
+#                    er.c -D S4051A -D DEBUG -D FREE_RTOS -D STM32F40_41xxx   #
+#                    -D USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D          #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ButtonCmdDispatcher.lst                               #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\ButtonCmdDispatcher.o                                  #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Projects\S4051A\APP_SRC\Dispatchers\ButtonCmdDispatcher.c
+      1          #include "ButtonCmdDispatcher.h"
+      2          #include "ButtonsDriver.h"
+      3          #include "VirtualTimer.h"
+      4          #include "freertos_conf.h"
+      5          #include "freertos_task.h"
+      6          #include "device_config.h"
+      7          
+      8          #include "command.h"
+      9          #include "Debug.h"
+     10          
+     11          #include "HMI_Service.h" 
+     12          
+     13          /** Number of buttons on the board */
+     14          #define NUMBER_OF_BUTTONS       12
+     15          
+     16          /** Up to 3 assignments per button for continue,short and long press */
+     17          #define NUMBER_OF_ASSIGNMENTS   5
+     18          
+     19          /** Defines the table index for short press assignments */
+     20          #define SHORT_INDEX    0
+     21          
+     22          /** Defines the table index for long press assignments */
+     23          #define LONG_INDEX     1
+     24          
+     25          #define LONG_INDEX_4s     2
+     26          
+     27          #define LONG_INDEX_3s     3
+     28          
+     29          /** Defines the table index for continue press assignments */
+     30          #define CONTINUE_INDEX     4
+     31          
+     32          /* Any button press shorter than 10 sec will be taken */
+     33          #define BUTTON_PRESS_LONG       VIRTUAL_TIMER_MSEC2TICKS(10000)
+     34          
+     35          #define BUTTON_PRESS_LONG_4s       VIRTUAL_TIMER_MSEC2TICKS(4000)
+     36          
+     37          #define BUTTON_PRESS_LONG_3s       VIRTUAL_TIMER_MSEC2TICKS(2500)
+     38          
+     39          /* Any button press shorter than 500 msec will be taken */
+     40          #define BUTTON_PRESS_SHORT      VIRTUAL_TIMER_MSEC2TICKS(600)
+     41          
+     42          /* Any button press more than 1 sec will be taken */
+     43          #define BUTTON_PRESS_CONTINUE        VIRTUAL_TIMER_MSEC2TICKS(1000)
+     44          
+     45          /* Any button press more than 100 sec will be taken */
+     46          #define BUTTON_PRESS_REPEAT      VIRTUAL_TIMER_MSEC2TICKS(100)
+     47          
+     48          /** Minimal interval time to wait between button presses */
+     49          #define MIN_TIME_BETWEEN_PRESSES VIRTUAL_TIMER_MSEC2TICKS(100)
+     50          
+     51          
+     52          #define BTN_DURATION_TOLERANCE(X) ((X/100)*5)
+     53          #define BTN_DURATION_MIN(X) (X - BTN_DURATION_TOLERANCE(X))
+     54          #define BTN_DURATION_MAX(X) (X + BTN_DURATION_TOLERANCE(X))
+     55          
+     56          
+     57          /**
+     58           * List of commands per button. The dimensions of this container are the
+     59           * # of buttons X # of assigment per button.
+     60           * For example, we have 3 buttons and each button can have to assignments, one
+     61           * for SHORT press and one for LONG press.
+     62           */
+     63          static struct
+     64          {
+     65              /* The command to execute */
+     66              xHMIUserEvents event;
+     67          
+     68          } m_commandAssignment[NUMBER_OF_BUTTONS][NUMBER_OF_ASSIGNMENTS];
+     69          
+     70          static bool m_continue_set[NUMBER_OF_BUTTONS];
+     71          
+     72          static xHMISrvEventParams srv_parms = { xHMI_EVENT_BUTTON, USER_EVENT_UNDEFINED };
+     73          
+     74          //_____________________________________________________________________________
+     75          extern HMI_SERVICE_OBJECT *pHS_ObjCtrl;
+     76          
+     77          //_____________________________________________________________________________
+     78          
+     79          static void ButtonCmdDispatcher_registerCommand(
+     80              byte button,
+     81              uint32 time,
+     82              xHMIUserEvents event
+     83          );
+     84          
+     85          static void ButtonCmdDispatcher_registerUserCommand( void );
+     86          
+     87          static void ButtonCmdDispatcher_registerDemo_1n3_Command( void );
+     88          static void ButtonCmdDispatcher_registerDemo_2_Command( void );
+     89          
+     90          static bool isPowerAndVolButtonPressed( byte PressedKey, xHMISrvEventParams *psrv_parms);
+     91          
+     92          const BTN_CONF_OBJECT BTN_ConfObj =
+     93          {
+     94              ButtonCmdDispatcher_registerUserCommand,
+     95              ButtonCmdDispatcher_registerDemo_1n3_Command,
+     96              ButtonCmdDispatcher_registerDemo_2_Command
+     97          };
+     98          const BTN_CONF_OBJECT *pBTN_ObjCtrl = &BTN_ConfObj;
+     99          
+    100          
+    101          void ButtonCmdDispatcher_switchControl( bool val )
+    102          {
+    103          	if ( val == TRUE ) /*enable*/
+    104          	{
+    105          		srv_parms.event_id = xHMI_EVENT_BUTTON;
+    106          	}
+    107          	else
+    108          	{
+    109          		srv_parms.event_id = xHMI_EVENT_NULL;
+    110          	}
+    111          }
+    112          
+    113          uint8 ButtonCmdDispatcher_getSwitchStatus( void )
+    114          {
+    115          	if ( srv_parms.event_id == xHMI_EVENT_BUTTON )
+    116          		return 1;
+    117          	
+    118          	return 0;
+    119          }
+    120          
+    121          /*----------------------------- Implementations ----------------------------- */
+    122          void ButtonCmdDispatcher_poll( void *data )
+    123          {
+    124              byte i;
+    125              uint32 time;
+    126          
+    127          	for( ;; )
+    128          	{
+    129          	    /* Iterate on all buttons */
+    130          	    for ( i = 0 ; i < NUMBER_OF_BUTTONS; i++ ) /*keypad scan*/
+    131          	    {
+    132          			time = ButtonLowLevel_hasButtonBeenPressedContinue(i);/*Get btn is pressed delta time*/
+    133          			if ( time != BUTTON_NONE_VALID_TIME )
+    134          			{			
+    135          				if ( ( time > BUTTON_PRESS_LONG ) && ( m_continue_set[i] == FALSE ) )
+    136          				{
+    137          					if (m_commandAssignment[i][LONG_INDEX].event != USER_EVENT_UNDEFINED)
+    138          					{
+    139          						srv_parms.event = m_commandAssignment[i][LONG_INDEX].event;
+    140          						pHS_ObjCtrl->SendEvent( &srv_parms );
+    141          						m_continue_set[i] = TRUE;
+    142          					}
+    143          				}
+    144          				else if ( ( time > BUTTON_PRESS_LONG_4s ) && ( m_continue_set[i] == FALSE ) )
+    145          				{
+    146          					if ( isPowerAndVolButtonPressed(i, &srv_parms) )
+    147          					{
+    148          						pHS_ObjCtrl->SendEvent( &srv_parms );
+    149          						m_continue_set[i] = TRUE;
+    150          					}
+    151          					else if ( (m_commandAssignment[i][LONG_INDEX].event == USER_EVENT_UNDEFINED) &&
+    152          						(m_commandAssignment[i][LONG_INDEX_4s].event != USER_EVENT_UNDEFINED) )
+    153          					{
+    154          						srv_parms.event = m_commandAssignment[i][LONG_INDEX_4s].event;
+    155          						pHS_ObjCtrl->SendEvent( &srv_parms );
+    156          						m_continue_set[i] = TRUE;
+    157          					}
+    158          				}
+    159          				else if ( ( time > BUTTON_PRESS_LONG_3s ) && ( m_continue_set[i] == FALSE ) )
+    160          				{
+    161          					if ( (m_commandAssignment[i][LONG_INDEX].event == USER_EVENT_UNDEFINED) &&
+    162          						(m_commandAssignment[i][LONG_INDEX_4s].event == USER_EVENT_UNDEFINED) &&
+    163          						   (m_commandAssignment[i][LONG_INDEX_3s].event != USER_EVENT_UNDEFINED) )
+    164          					{
+    165          						srv_parms.event = m_commandAssignment[i][LONG_INDEX_3s].event;
+    166          						pHS_ObjCtrl->SendEvent( &srv_parms );
+    167          						m_continue_set[i] = TRUE;
+    168          					}
+    169          				}
+    170          				
+    171          				if ( time > BUTTON_PRESS_CONTINUE )
+    172          				{
+    173          					if (m_commandAssignment[i][CONTINUE_INDEX].event != USER_EVENT_UNDEFINED)
+    174          					{
+    175          						if ( ButtonLowLevel_hasButtonBeenPressedContinue(0) == BUTTON_NONE_VALID_TIME )
+    176          						{
+    177          						    srv_parms.event = m_commandAssignment[i][CONTINUE_INDEX].event;
+    178          						    pHS_ObjCtrl->SendEvent( &srv_parms );
+    179          						    m_continue_set[i] = TRUE;
+    180          						}
+    181          					}
+    182          				}
+    183          				
+    184          			}
+    185          			else
+    186          			{
+    187          				m_continue_set[i] = FALSE;			
+    188          			}
+    189          
+    190          	        time = ButtonsDriver_hasButtonBeenPressed(i); /*Get btn is released delta time*/
+    191          	        
+    192          	        if ( time != BUTTON_NONE_VALID_TIME )
+    193          	        {
+    194          	            if ( time <= BUTTON_PRESS_SHORT )
+    195          	            {
+    196          	                /* In case of SHORT button press */
+    197          	                /* Check whether there is assigned command for this case */
+    198                      
+    199                                  srv_parms.event = m_commandAssignment[i][SHORT_INDEX].event;;
+    200                                  pHS_ObjCtrl->SendEvent( &srv_parms );
+    201          	            }
+    202          		    /*else if ( ( time >= BUTTON_PRESS_LONG ) && ( m_continue_set[i] == FALSE ) )
+    203          		    {
+    204          			if (m_commandAssignment[i][LONG_INDEX].event != USER_EVENT_UNDEFINED)
+    205          			{
+    206          				srv_parms.event = m_commandAssignment[i][LONG_INDEX].event;
+    207          				pHS_ObjCtrl->SendEvent( &srv_parms );
+    208          				m_continue_set[i] = TRUE;
+    209          			}
+    210          		    }
+    211          		    else if ( ( time >= BUTTON_PRESS_LONG_4s ) && ( m_continue_set[i] == FALSE ) )
+    212          		    {
+    213          			if ( isPowerAndVolButtonPressed(i, &srv_parms) )
+    214          			{
+    215          				pHS_ObjCtrl->SendEvent( &srv_parms );
+    216          				m_continue_set[i] = TRUE;
+    217          			}
+    218          			else if ( (m_commandAssignment[i][LONG_INDEX].event == USER_EVENT_UNDEFINED) &&
+    219          				(m_commandAssignment[i][LONG_INDEX_4s].event != USER_EVENT_UNDEFINED) )
+    220          			{
+    221          				srv_parms.event = m_commandAssignment[i][LONG_INDEX_4s].event;
+    222          				pHS_ObjCtrl->SendEvent( &srv_parms );
+    223          				m_continue_set[i] = TRUE;
+    224          			}
+    225          		    }
+    226          		    else if ( ( time >= BUTTON_PRESS_LONG_3s ) && ( m_continue_set[i] == FALSE ) )
+    227          		    {
+    228          			if ( (m_commandAssignment[i][LONG_INDEX].event == USER_EVENT_UNDEFINED) &&
+    229          				(m_commandAssignment[i][LONG_INDEX_4s].event == USER_EVENT_UNDEFINED) &&
+    230          				   (m_commandAssignment[i][LONG_INDEX_3s].event != USER_EVENT_UNDEFINED) )
+    231          			{
+    232          				srv_parms.event = m_commandAssignment[i][LONG_INDEX_3s].event;
+    233          				pHS_ObjCtrl->SendEvent( &srv_parms );
+    234          				m_continue_set[i] = TRUE;
+    235          			}
+    236          		    }*/
+    237          	        }
+    238          
+    239          	    }
+    240          		vTaskDelay( TASK_MSEC2TICKS(100) );
+    241          	}
+    242          }
+    243          
+    244          void ButtonCmdDispatcher_initialize( void )
+    245          {
+    246          #if ( configAPP_BTN_CTRL == 1 )
+    247          
+    248              uint8 i;
+    249              uint8 j;
+    250          
+    251              /* Reset all command assignment */
+    252              for (j = 0 ; j < NUMBER_OF_BUTTONS ; j++)
+    253              {
+    254                  for (i = 0 ; i < NUMBER_OF_ASSIGNMENTS ; i++)
+    255                  {
+    256                      m_commandAssignment[j][i].event = USER_EVENT_UNDEFINED;
+    257                  }
+    258          
+    259                  m_continue_set[j] = FALSE;
+    260              }
+    261          
+    262              ButtonsDriver_initialize( );
+    263              ButtonCmdDispatcher_registerUserCommand( );
+    264              
+    265          	if ( xTaskCreate( ButtonCmdDispatcher_poll, ( portCHAR * ) "ButtonCmdDispatcher_poll", configMINIMAL_STACK_SIZE, NULL, tskHMI_EVENT_PRIORITY, NULL ) != pdPASS)
+    266          	{
+    267          		TRACE_ERROR((0, " ButtonCmdDispatcher_poll task create error !! "));
+    268          	}
+    269          #endif 
+    270          
+    271          }
+    272          
+    273          static void ButtonCmdDispatcher_registerCommand(
+    274              byte button,
+    275              uint32 time,
+    276              xHMIUserEvents event
+    277          )
+    278          {
+    279              /* Assign button command */
+    280              if (time == BUTTON_PRESS_LONG)
+    281              {
+    282                  m_commandAssignment[button][LONG_INDEX].event = event;
+    283              }
+    284              else if (time == BUTTON_PRESS_LONG_4s)
+    285              {
+    286                  m_commandAssignment[button][LONG_INDEX_4s].event = event;
+    287              }
+    288              else if (time == BUTTON_PRESS_LONG_3s)
+    289              {
+    290                  m_commandAssignment[button][LONG_INDEX_3s].event = event;
+    291              }
+    292              else if (time == BUTTON_PRESS_SHORT)
+    293              {
+    294                  m_commandAssignment[button][SHORT_INDEX].event = event;
+    295              }
+    296              else if (time == BUTTON_PRESS_CONTINUE)
+    297              {
+    298                  m_commandAssignment[button][CONTINUE_INDEX].event = event;
+    299              }
+    300          }
+    301          
+    302          static void ButtonCmdDispatcher_registerUserCommand( void )
+    303          {
+    304          	ButtonCmdDispatcher_registerCommand(
+    305              0,
+    306              BUTTON_PRESS_SHORT, 
+    307              USER_EVENT_POWER
+    308              );
+    309          
+    310              ButtonCmdDispatcher_registerCommand(
+    311              0,
+    312              BUTTON_PRESS_LONG_4s, 
+    313              USER_EVENT_RF_PAIR
+    314              );
+    315          
+    316              ButtonCmdDispatcher_registerCommand(
+    317              1,
+    318              BUTTON_PRESS_SHORT, 
+    319              USER_EVENT_SEL_SRC
+    320              );
+    321          
+    322              ButtonCmdDispatcher_registerCommand(
+    323              1,
+    324              BUTTON_PRESS_LONG_4s, 
+    325              USER_EVENT_START_AUTO_SEL_SRC
+    326              );
+    327          
+    328              ButtonCmdDispatcher_registerCommand(
+    329              2,
+    330              BUTTON_PRESS_LONG_3s, 
+    331              USER_EVENT_BT_PAIR
+    332              );
+    333          	
+    334              ButtonCmdDispatcher_registerCommand(
+    335              2,
+    336              BUTTON_PRESS_SHORT, 
+    337              USER_EVENT_SEL_BT
+    338              );
+    339          	
+    340              ButtonCmdDispatcher_registerCommand(
+    341              3,
+    342              BUTTON_PRESS_SHORT, 
+    343              USER_EVENT_VOL_UP
+    344              );
+    345          
+    346              ButtonCmdDispatcher_registerCommand(
+    347              4,
+    348              BUTTON_PRESS_SHORT, 
+    349              USER_EVENT_VOL_DN
+    350              );
+    351          
+    352              ButtonCmdDispatcher_registerCommand(
+    353              3,
+    354              BUTTON_PRESS_CONTINUE, 
+    355              USER_EVENT_VOL_UP
+    356              );
+    357          
+    358              ButtonCmdDispatcher_registerCommand(
+    359              4,
+    360              BUTTON_PRESS_CONTINUE, 
+    361              USER_EVENT_VOL_DN
+    362              );
+    363          
+    364              ButtonCmdDispatcher_registerCommand(
+    365              5,
+    366              BUTTON_PRESS_LONG_4s, 
+    367              USER_EVENT_DEVICE_RESET
+    368              );
+    369          
+    370              ButtonCmdDispatcher_registerCommand(
+    371              6,
+    372              BUTTON_PRESS_LONG, 
+    373              USER_EVENT_MODE_DEMO1
+    374              );
+    375          
+    376              ButtonCmdDispatcher_registerCommand(
+    377              7,
+    378              BUTTON_PRESS_LONG, 
+    379              USER_EVENT_MODE_DEMO2
+    380              );
+    381          
+    382              ButtonCmdDispatcher_registerCommand(
+    383              8,
+    384              BUTTON_PRESS_LONG, 
+    385              USER_EVENT_MODE_DEMO3
+    386              );
+    387          
+    388              ButtonCmdDispatcher_registerCommand( 
+    389              9,
+    390              BUTTON_PRESS_LONG, 
+    391              USER_EVENT_VERSION	
+    392              );
+    393          }
+    394          
+    395          static void ButtonCmdDispatcher_registerDemo_1n3_Command( void )
+    396          {
+    397          	ButtonCmdDispatcher_registerCommand(
+    398              0,
+    399              BUTTON_PRESS_SHORT, 
+    400              USER_EVENT_NULL
+    401              );
+    402          
+    403              ButtonCmdDispatcher_registerCommand(
+    404              0,
+    405              BUTTON_PRESS_LONG_4s, 
+    406              USER_EVENT_NULL
+    407              );
+    408          
+    409              ButtonCmdDispatcher_registerCommand(
+    410              1,
+    411              BUTTON_PRESS_SHORT, 
+    412              USER_EVENT_NULL
+    413              );
+    414          
+    415              ButtonCmdDispatcher_registerCommand(   //For debug BT
+    416              2,
+    417              BUTTON_PRESS_SHORT, 
+    418              USER_EVENT_NULL
+    419              );
+    420          
+    421              ButtonCmdDispatcher_registerCommand(
+    422              2,
+    423              BUTTON_PRESS_LONG_3s, 
+    424              USER_EVENT_NULL
+    425              );
+    426          	
+    427          	ButtonCmdDispatcher_registerCommand(
+    428          	3,
+    429          	BUTTON_PRESS_SHORT, 
+    430          	USER_EVENT_VOL_UP
+    431          	);
+    432          
+    433          	ButtonCmdDispatcher_registerCommand(
+    434          	4,
+    435          	BUTTON_PRESS_SHORT, 
+    436          	USER_EVENT_VOL_DN
+    437          	);
+    438          
+    439              ButtonCmdDispatcher_registerCommand(
+    440              3,
+    441              BUTTON_PRESS_CONTINUE, 
+    442              USER_EVENT_VOL_UP
+    443              );
+    444          
+    445              ButtonCmdDispatcher_registerCommand(
+    446              4,
+    447              BUTTON_PRESS_CONTINUE, 
+    448              USER_EVENT_VOL_DN
+    449              );
+    450          
+    451              ButtonCmdDispatcher_registerCommand(
+    452              5,
+    453              BUTTON_PRESS_LONG_4s, 
+    454              USER_EVENT_DEVICE_RESET
+    455              );
+    456          
+    457              ButtonCmdDispatcher_registerCommand(
+    458              6,
+    459              BUTTON_PRESS_LONG, 
+    460              USER_EVENT_MODE_DEMO1
+    461              );
+    462          
+    463              ButtonCmdDispatcher_registerCommand(
+    464              7,
+    465              BUTTON_PRESS_LONG, 
+    466              USER_EVENT_MODE_DEMO2
+    467              );
+    468          
+    469              ButtonCmdDispatcher_registerCommand(
+    470              8,
+    471              BUTTON_PRESS_LONG, 
+    472              USER_EVENT_MODE_DEMO3
+    473              );
+    474          
+    475              ButtonCmdDispatcher_registerCommand( 
+    476              9,
+    477              BUTTON_PRESS_LONG, 
+    478              USER_EVENT_VERSION	// Brendan - sys version key registation
+    479              );
+    480          
+    481          }
+    482          
+    483          
+    484          
+    485          static void ButtonCmdDispatcher_registerDemo_2_Command( void )
+    486          {
+    487              ButtonCmdDispatcher_registerCommand(
+    488              0,
+    489              BUTTON_PRESS_SHORT, 
+    490              USER_EVENT_START_MODE
+    491              );
+    492          
+    493              ButtonCmdDispatcher_registerCommand(
+    494              0,
+    495              BUTTON_PRESS_LONG_4s, 
+    496              USER_EVENT_NULL
+    497              );
+    498          
+    499              ButtonCmdDispatcher_registerCommand(
+    500              1,
+    501              BUTTON_PRESS_SHORT, 
+    502              USER_EVENT_STOP_MODE
+    503              );
+    504          
+    505              ButtonCmdDispatcher_registerCommand(
+    506              2,
+    507              BUTTON_PRESS_LONG_3s, 
+    508              USER_EVENT_NULL
+    509              );
+    510          	
+    511              ButtonCmdDispatcher_registerCommand(
+    512              2,
+    513              BUTTON_PRESS_SHORT, 
+    514              USER_EVENT_NEXT
+    515              );
+    516          	
+    517              ButtonCmdDispatcher_registerCommand(
+    518              3,
+    519              BUTTON_PRESS_SHORT, 
+    520              USER_EVENT_VOL_UP
+    521              );
+    522          
+    523              ButtonCmdDispatcher_registerCommand(
+    524              4,
+    525              BUTTON_PRESS_SHORT, 
+    526              USER_EVENT_VOL_DN
+    527              );
+    528          
+    529              ButtonCmdDispatcher_registerCommand(
+    530              3,
+    531              BUTTON_PRESS_CONTINUE, 
+    532              USER_EVENT_VOL_UP
+    533              );
+    534          
+    535              ButtonCmdDispatcher_registerCommand(
+    536              4,
+    537              BUTTON_PRESS_CONTINUE, 
+    538              USER_EVENT_VOL_DN
+    539              );
+    540          
+    541              ButtonCmdDispatcher_registerCommand(
+    542              5,
+    543              BUTTON_PRESS_LONG_4s, 
+    544              USER_EVENT_DEVICE_RESET
+    545              );
+    546          
+    547              ButtonCmdDispatcher_registerCommand(
+    548              6,
+    549              BUTTON_PRESS_LONG, 
+    550              USER_EVENT_MODE_DEMO1
+    551              );
+    552          
+    553              ButtonCmdDispatcher_registerCommand(
+    554              7,
+    555              BUTTON_PRESS_LONG, 
+    556              USER_EVENT_MODE_DEMO2
+    557              );
+    558          
+    559              ButtonCmdDispatcher_registerCommand(
+    560              8,
+    561              BUTTON_PRESS_LONG, 
+    562              USER_EVENT_MODE_DEMO3
+    563              );
+    564          
+    565              ButtonCmdDispatcher_registerCommand( 
+    566              9,
+    567              BUTTON_PRESS_LONG, 
+    568              USER_EVENT_VERSION	// Brendan - sys version key registation
+    569              );
+    570          	
+    571          }
+    572          
+    573          static bool isPowerAndVolButtonPressed( byte PressedKey, xHMISrvEventParams *psrv_parms)
+    574          {
+    575          	if ( PressedKey == 0 )	// Power pressed
+    576          	{
+    577          		if ( ButtonLowLevel_hasButtonBeenPressedContinue(3) != BUTTON_NONE_VALID_TIME ) //if vol+ pressed too
+    578          		{
+    579          		    psrv_parms->event = USER_EVENT_VIZ_RMT_TOOGLE;
+    580          		    m_continue_set[3] = TRUE;
+    581          	            return TRUE;
+    582          		}
+    583          		else if ( ButtonLowLevel_hasButtonBeenPressedContinue(4) != BUTTON_NONE_VALID_TIME ) //if vol- pressed too
+    584          		{
+    585          		    psrv_parms->event = USER_EVENT_APD_TOOGLE;
+    586          		    m_continue_set[4] = TRUE;
+    587          	            return TRUE;
+    588          		}
+    589          	}
+    590          	else if ( PressedKey == 3 )	// Vol+ pressed
+    591          	{
+    592          		if ( ButtonLowLevel_hasButtonBeenPressedContinue(0) != BUTTON_NONE_VALID_TIME ) //if power pressed too
+    593          		{
+    594          		    psrv_parms->event = USER_EVENT_VIZ_RMT_TOOGLE;
+    595          		    m_continue_set[0] = TRUE;
+    596          	            return TRUE;
+    597          		}
+    598          	}
+    599          	else if ( PressedKey == 4 )	// Vol- pressed
+    600          	{
+    601          		if ( ButtonLowLevel_hasButtonBeenPressedContinue(0) != BUTTON_NONE_VALID_TIME ) //if power pressed too
+    602          		{
+    603          		    psrv_parms->event = USER_EVENT_APD_TOOGLE;
+    604          		    m_continue_set[0] = TRUE;
+    605          	            return TRUE;
+    606          		}
+    607          	}
+    608          	
+    609          	return FALSE;
+    610          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        0  ButtonCmdDispatcher_getSwitchStatus
+       32  ButtonCmdDispatcher_initialize
+             32 -> ButtonCmdDispatcher_registerUserCommand
+             32 -> ButtonsDriver_initialize
+              0 -> Debug_printError
+             32 -> __aeabi_memset
+             32 -> xTaskGenericCreate
+       32  ButtonCmdDispatcher_poll
+             32 -- Indirect call
+             32 -> ButtonLowLevel_hasButtonBeenPressedContinue
+             32 -> ButtonsDriver_hasButtonBeenPressed
+             32 -> vTaskDelay
+       12  ButtonCmdDispatcher_registerCommand
+       16  ButtonCmdDispatcher_registerDemo_1n3_Command
+              0 -> ButtonCmdDispatcher_registerCommand
+             16 -> ButtonCmdDispatcher_registerCommand
+       16  ButtonCmdDispatcher_registerDemo_2_Command
+              0 -> ButtonCmdDispatcher_registerCommand
+             16 -> ButtonCmdDispatcher_registerCommand
+       16  ButtonCmdDispatcher_registerUserCommand
+              0 -> ButtonCmdDispatcher_registerCommand
+             16 -> ButtonCmdDispatcher_registerCommand
+        0  ButtonCmdDispatcher_switchControl
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      48  ?<Constant " ButtonCmdDispatcher_...">
+      28  ?<Constant "ButtonCmdDispatcher_poll">
+       4  ??DataTable10
+       4  ??DataTable10_1
+       4  ??DataTable10_2
+       4  ??DataTable10_3
+       4  ??DataTable10_4
+       4  ??DataTable10_5
+       4  ??DataTable10_6
+       4  ??DataTable10_7
+     106  ?Subroutine0
+       6  ?Subroutine1
+      12  ?Subroutine2
+       6  ?Subroutine3
+       8  ?Subroutine4
+      12  BTN_ConfObj
+      12  ButtonCmdDispatcher_getSwitchStatus
+      88  ButtonCmdDispatcher_initialize
+     282  ButtonCmdDispatcher_poll
+      66  ButtonCmdDispatcher_registerCommand
+      48  ButtonCmdDispatcher_registerDemo_1n3_Command
+      36  ButtonCmdDispatcher_registerDemo_2_Command
+      46  ButtonCmdDispatcher_registerUserCommand
+      12  ButtonCmdDispatcher_switchControl
+      60  m_commandAssignment
+      16  m_continue_set
+          srv_parms
+       4  pBTN_ObjCtrl
+
+ 
+  60 bytes in section .bss
+  20 bytes in section .data
+  12 bytes in section .rodata
+ 836 bytes in section .text
+ 
+ 836 bytes of CODE  memory
+  12 bytes of CONST memory
+  80 bytes of DATA  memory
+
+Errors: none
+Warnings: 1

@@ -1,0 +1,1590 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:23:51 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\tx\si_tx_hdcp #
+#                    .c                                                       #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\tx\si_tx_hdcp #
+#                    .c -D S4051A -D DEBUG -D FREE_RTOS -D STM32F40_41xxx -D  #
+#                    USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D             #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_tx_hdcp.lst                                        #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_tx_hdcp.o                                           #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\component\tx\si_tx_hdcp.c
+      1          //************************************************************************************************
+      2          //! @file   si_tx_hdcp.h
+      3          //! @brief  HDCP related methods
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1060 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2002-2010, Silicon Image, Inc.  All rights reserved.
+     11          //************************************************************************************************/
+     12          
+     13          //#include <string.h>
+     14          #include "si_tx_component_internal.h"
+     15          #include "si_tx_hdcp.h"
+     16          #include "si_tx_info_frm.h"
+     17          #include "si_drv_tpi_system.h"
+     18          #include "si_drv_tpi_access.h"
+     19          #include "si_drv_tpi_ddc_access.h"
+     20          #include "si_hdcp_ddc.h"
+     21          #include "si_edid_tx_internal.h"
+     22          #include "si_edid_black_list.h"
+     23          #include "si_drv_repeater.h"
+     24          #include "si_connection_monitor.h"
+     25          
+     26          txHdcpInstanceRecord_t HdcpInstRec[SII_NUM_TX];
+     27          txHdcpInstanceRecord_t *pHdcp = &HdcpInstRec[0];
+     28          
+     29          extern txInstanceData_t *pTx; // pointer to TX component record
+     30          
+     31          
+     32          //-------------------------------------------------------------------------------------------------
+     33          //  Local service functions
+     34          //-------------------------------------------------------------------------------------------------
+     35          
+     36          //-------------------------------------------------------------------------------------------------
+     37          //! @brief      Show HDCP authentication phase and error messages, if any.
+     38          //-------------------------------------------------------------------------------------------------
+     39          
+     40          static void PrintHdcpStatus(void)
+     41          {
+     42              if (pHdcp->prevAuthState != pHdcp->authState)
+     43              {
+     44          #if 1
+     45                  DEBUG_PRINT(TX_MSG_DBG, "DS HDCP: ");
+     46                  switch (pHdcp->authState)
+     47                  {
+     48                      case SI_TX_HDCP__OFF:
+     49                          DEBUG_PRINT(TX_MSG_DBG_PLAIN, "OFF\n");
+     50                          break;
+     51                      case SI_TX_HDCP__WAIT_FOR_START:
+     52                          DEBUG_PRINT(TX_MSG_DBG_PLAIN, "WAIT FOR START\n");
+     53                          break;
+     54                      case SI_TX_HDCP__WAIT_FOR_RETRY:
+     55                          DEBUG_PRINT(TX_MSG_DBG_PLAIN, "WAIT FOR RETRY\n");
+     56                          break;
+     57                      case SI_TX_HDCP__WAIT_FOR_DONE:
+     58                          DEBUG_PRINT(TX_MSG_DBG_PLAIN, "WAIT FOR DONE\n");
+     59                          break;
+     60                      case SI_TX_HDCP__WAIT_FIFO_READY:
+     61                          DEBUG_PRINT(TX_MSG_DBG_PLAIN, "WAIT FOR FIFO READY\n");
+     62                          break;
+     63                      case SI_TX_HDCP__KSV_FIFO_READ:
+     64                          DEBUG_PRINT(TX_MSG_DBG_PLAIN, "KSV FIFO READ\n");
+     65                          break;
+     66                      case SI_TX_HDCP__V_CHECK:
+     67                          DEBUG_PRINT(TX_MSG_DBG_PLAIN, "V=V' CHECK\n");
+     68                          break;
+     69                      case SI_TX_HDCP__AUTHENTICATED:
+     70                          DEBUG_PRINT(TX_MSG_DBG_PLAIN, "AUTHENTICATED\n");
+     71                          break;
+     72                      case SI_TX_HDCP__SECURE:
+     73                          DEBUG_PRINT(TX_MSG_DBG_PLAIN, "SECURE\n");
+     74                          break;
+     75                      case SI_TX_HDCP__FAILED:
+     76                          DEBUG_PRINT(TX_MSG_DBG_PLAIN, "FAILED\n");
+     77                          break;
+     78                      case SI_TX_HDCP__INITIAL:
+     79                          break;
+     80          
+     81                  }
+     82          #endif
+     83                  pHdcp->prevAuthState = pHdcp->authState;
+     84              }
+     85          
+     86              if (pHdcp->prevError != pHdcp->error)
+     87              {
+     88          #if 1
+     89                  if (pHdcp->error)
+     90                  {
+     91                      DEBUG_PRINT(TX_MSG_DBG, "HDCP Errors:\n");
+     92                      if (pHdcp->error & ERR_HDCP__NACK)
+     93                          DEBUG_PRINT(TX_MSG_DBG_PLAIN, "\tNo ACK at downstream DDC\n");
+     94                      if (pHdcp->error & ERR_HDCP__INTERNAL)
+     95                          DEBUG_PRINT(TX_MSG_DBG_PLAIN, "\tInternal\n");
+     96                      if (pHdcp->error & ERR_HDCP__DEV_LIMIT)
+     97                          DEBUG_PRINT(TX_MSG_DBG_PLAIN, "\tDevice limit exceeded\n");
+     98                      if (pHdcp->error & ERR_HDCP__V)
+     99                          DEBUG_PRINT(TX_MSG_DBG_PLAIN, "\tDownstream V' != V\n");
+    100                      if (pHdcp->error & ERR_HDCP__P2_TO)
+    101                          DEBUG_PRINT(TX_MSG_DBG_PLAIN, "\tFIFO READY was not set within 5 s\n");
+    102                      if (pHdcp->error & ERR_HDCP__DS_EXCEED)
+    103                          DEBUG_PRINT(TX_MSG_DBG_PLAIN, "\tDownstream device indicated DEV_EXC or CAS_EXC\n");
+    104                  }
+    105                  else
+    106                  {
+    107                      DEBUG_PRINT(TX_MSG_DBG, "No HDCP Errors\n");
+    108                  }
+    109          #endif
+    110                  pHdcp->prevError = pHdcp->error;
+    111              }
+    112          }
+    113          
+    114          
+    115          //-------------------------------------------------------------------------------------------------
+    116          //! @brief      Show HDCP query status
+    117          //-------------------------------------------------------------------------------------------------
+    118          
+    119          static void PrintHdcpQueryStatus(uint8_t query)
+    120          {
+    121          #if 1
+    122              DEBUG_PRINT(TX_MSG_DBG, "HDCP Query Status:\n");
+    123              DEBUG_PRINT(TX_MSG_DBG_PLAIN, "\tLink Encryption: \t");
+    124          
+    125              switch (query &  MSK_TPI__HDCP_QUERY__STATUS)
+    126              {
+    127                  case VAL_TPI__HDCP_QUERY__STATUS_NORMAL:
+    128                      DEBUG_PRINT(TX_MSG_DBG_PLAIN, "Normal\n");
+    129                      break;
+    130                  case VAL_TPI__HDCP_QUERY__STATUS_LOST:
+    131                      DEBUG_PRINT(TX_MSG_DBG_PLAIN, "Lost\n");
+    132                      break;
+    133                  case VAL_TPI__HDCP_QUERY__STATUS_FAILED:
+    134                      DEBUG_PRINT(TX_MSG_DBG_PLAIN, "Failed\n");
+    135                      break;
+    136                  case VAL_TPI__HDCP_QUERY__STATUS_SUSPENDED:
+    137                      DEBUG_PRINT(TX_MSG_DBG_PLAIN, "Suspended\n");
+    138                      break;
+    139              }
+    140          
+    141              DEBUG_PRINT(TX_MSG_DBG_PLAIN, "\tConnector Type: \t");
+    142              switch (query & MSK_TPI__HDCP_QUERY__CONNECTR)
+    143              {
+    144                  case VAL_TPI__HDCP_QUERY__CONNECTR_DVI:
+    145                      DEBUG_PRINT(TX_MSG_DBG_PLAIN, "DVI\n");
+    146                      break;
+    147                  case VAL_TPI__HDCP_QUERY__CONNECTR_HDMI:
+    148                      DEBUG_PRINT(TX_MSG_DBG_PLAIN, "HDMI\n");
+    149                      break;
+    150              }
+    151          
+    152              DEBUG_PRINT(TX_MSG_DBG_PLAIN, "\tProtection Type: \t");
+    153              if (query & BIT_TPI__HDCP_QUERY__SINK_CAPABLE)
+    154              {
+    155                  DEBUG_PRINT(TX_MSG_DBG_PLAIN, "HDCP\n");
+    156              }
+    157              else
+    158              {
+    159                  DEBUG_PRINT(TX_MSG_DBG_PLAIN, "None\n");
+    160              }
+    161          
+    162              DEBUG_PRINT(TX_MSG_DBG_PLAIN, "\tRepeater: \t\t");
+    163              if (query & BIT_TPI__HDCP_QUERY__DS_REPEATER)
+    164              {
+    165                  DEBUG_PRINT(TX_MSG_DBG_PLAIN, "Yes\n");
+    166              }
+    167              else
+    168              {
+    169                  DEBUG_PRINT(TX_MSG_DBG_PLAIN, "No\n");
+    170              }
+    171          
+    172              DEBUG_PRINT(TX_MSG_DBG_PLAIN, "\tLocal Protection: \t");
+    173              if (query & BIT_TPI__HDCP_QUERY__LOCAL_PROTECT)
+    174              {
+    175                  DEBUG_PRINT(TX_MSG_DBG_PLAIN, "Yes\n");
+    176              }
+    177              else
+    178              {
+    179                  DEBUG_PRINT(TX_MSG_DBG_PLAIN, "No\n");
+    180              }
+    181          
+    182              DEBUG_PRINT(TX_MSG_DBG_PLAIN, "\tExtended Protection: \t");
+    183              if (query & BIT_TPI__HDCP_QUERY__EXTENDED_PROTECT)
+    184              {
+    185                  DEBUG_PRINT(TX_MSG_DBG_PLAIN, "Yes\n");
+    186              }
+    187              else
+    188              {
+    189                  DEBUG_PRINT(TX_MSG_DBG_PLAIN, "No\n");
+    190              }
+    191          #endif
+    192          }
+    193          
+    194          //-------------------------------------------------------------------------------------------------
+    195          //! @brief      Begin calculation of a new KSV hash value.
+    196          //-------------------------------------------------------------------------------------------------
+    197          
+    198          static void NewKsvHash(void)
+    199          {
+    200              // Keep previous hash value
+    201              pHdcp->dsKsvHashPrev = pHdcp->dsKsvHash;
+    202              // Reset new hash value
+    203              pHdcp->dsKsvHash = 0;
+    204              // Reset number of bytes in tail storage
+    205              pHdcp->hashWordLen = 0;
+    206          }
+    207          
+    208          
+    209          //-------------------------------------------------------------------------------------------------
+    210          //! @brief      Mixing hash function.
+    211          //!
+    212          //-------------------------------------------------------------------------------------------------
+    213          
+    214          static uint32_t Mixer(uint32_t word)
+    215          {
+    216              uint8_t i;
+    217          
+    218              // Mixing hash function. Apply many times
+    219              for (i = 0; i < 32; i++)
+    220              {
+    221                  word = 0x9069 * (word & 0xFFFF) + (word >> 16);
+    222              }
+    223          
+    224              return word;
+    225          }
+    226          
+    227          //-------------------------------------------------------------------------------------------------
+    228          //! @brief      Add new input to KSV hash algorithm.
+    229          //!
+    230          //! @param[in]  pData   - pointer to KSV data
+    231          //! @param[in]  len     - number of bytes in pData[] buffer
+    232          //! @param[in]  isLast  - flag of the last portion of KSV list
+    233          //-------------------------------------------------------------------------------------------------
+    234          
+    235          static void AddBytesToKsvHash(uint8_t *pData, uint8_t len, bool_t isLast)
+    236          {
+    237              uint8_t i;
+    238              uint32_t word;
+    239              uint8_t bytesLeft = len +  pHdcp->hashWordLen;
+    240          
+    241              while (bytesLeft >= 4)
+    242              {
+    243                  // consume 32 bits
+    244                  word = 0;
+    245                  for (i = 0; i < 4; i++)
+    246                  {
+    247                      if (pHdcp->hashWordLen != 0)
+    248                      {
+    249                          word |= (pHdcp->hashWord & 0xFF) << (i*8);
+    250                          pHdcp->hashWord >>= 8;
+    251                          pHdcp->hashWordLen--;
+    252                      }
+    253                      else
+    254                      {
+    255                          word |= (*pData++) << (i*8);
+    256                      }
+    257                      bytesLeft--;
+    258                  }
+    259          
+    260                  word = Mixer(word);
+    261          
+    262                  if (pHdcp->dsKsvHash == 0)
+    263                  { // very first word goes to hash stack
+    264                      pHdcp->dsKsvHash = word;
+    265                      continue;
+    266                  }
+    267                  else
+    268                  { // secondary words LSB will combine with LSB of the hash stack
+    269                      pHdcp->dsKsvHash = Mixer(((pHdcp->dsKsvHash & 0xFFFF) << 16) | (word & 0xFFFF));
+    270                  }
+    271              }
+    272          
+    273          
+    274              if (bytesLeft > 0)
+    275              {
+    276                  // Put unprocessed tail to hashWord storage
+    277                  pHdcp->hashWord = 0;
+    278                  pHdcp->hashWordLen = bytesLeft;
+    279                  for (i = 0; i < bytesLeft; i++)
+    280                  {
+    281                      pHdcp->hashWord |= (*pData++) << (i*8);
+    282                  }
+    283          
+    284                  // In case of last transaction, use zero padded hashWord immediately
+    285                  if (isLast)
+    286                  {
+    287                      pHdcp->dsKsvHash = Mixer(((pHdcp->dsKsvHash & 0xFFFF) << 16) | (pHdcp->hashWord & 0xFFFF));
+    288                  }
+    289              }
+    290          
+    291              // When KSV list Hash calculation is complete,
+    292              // set "Same Downstream Device Connected" status flag
+    293              if (isLast)
+    294              {
+    295                  pTx->status.isSameDsConnected = (pHdcp->dsKsvHash == pHdcp->dsKsvHashPrev);
+    296                  DEBUG_PRINT(TX_MSG_DBG, "KSV HASH: %s downstream detected.\n", pTx->status.isSameDsConnected ? "Same" : "New");
+    297              }
+    298          
+    299          }
+    300          
+    301          
+    302          //-------------------------------------------------------------------------------------------------
+    303          //! @brief      Unit Test for KsvHash.
+    304          //-------------------------------------------------------------------------------------------------
+    305          
+    306          #if (SI_TX_COMP_UNIT_TESTS == ENABLE)
+    307          static void TestKsvHash(void)
+    308          {
+    309              uint8_t i,j;
+    310              uint8_t data[45] =
+    311                  {
+    312                          0x00,0x01,0x02,0x03,0x04,0x05,0x06,0x07,0x08,0x0a,
+    313                          0x10,0x11,0x12,0x13,0x14,0x15,0x16,0x17,0x18,0x1a,
+    314                          0x20,0x21,0x22,0x23,0x24,0x25,0x26,0x27,0x28,0x2a,
+    315                          0x30,0x31,0x32,0x33,0x34,0x35,0x36,0x37,0x38,0x3a,
+    316                          0x40,0x41,0x42,0x43,0x44
+    317                  };
+    318          
+    319              for (j = 0; j < 10; j++)
+    320              {
+    321                  // little change in one byte should change the hash dramatically
+    322                  data[0] = j;
+    323          
+    324                  NewKsvHash();
+    325          
+    326                  for (i = 0; i < 4; i++)
+    327                  {
+    328                      AddBytesToKsvHash(&data[i * 10], 10, false);
+    329                  }
+    330          
+    331                  AddBytesToKsvHash(&data[40], 5, true);
+    332          
+    333                  DEBUG_PRINT(TX_MSG_ALWAYS, "KSV HASH TEST:  val = 0x%04x%04x\n", (int) ((pHdcp->dsKsvHash & 0xffff0000) >> 16),
+    334                          (int) (pHdcp->dsKsvHash & 0x0000ffff));
+    335              }
+    336          }
+    337          #endif
+    338          
+    339          
+    340          //-------------------------------------------------------------------------------------------------
+    341          //! @brief      Mute AV during HDCP transient states.
+    342          //!
+    343          //!             Muting is achieved either by enabling AV Mute bit in GCP, or by CTRL3 gating
+    344          //!             (HDCP encryption disabling).
+    345          //!
+    346          //! @param[in]  isMuted - mute request flag.
+    347          //-------------------------------------------------------------------------------------------------
+    348          
+    349          static void AvMuteEnable(bool_t isMuted)
+    350          {
+    351              // Never unmute internally, if in repeater mode
+    352              if (pHdcp->isRepeaterMode)
+    353              {
+    354                  SiiDrvTpiHdcpEncriptionEnable(!isMuted);
+    355              }
+    356              else
+    357              {
+    358              	RepeaterConAvMuteSet(0x01, isMuted);
+    359                 // TxInfoAvMute(isMuted);
+    360              }
+    361          }
+    362          
+    363          //-------------------------------------------------------------------------------------------------
+    364          //! @brief      Clear any pending events or activity in HDCP hardware (Reset HDCP FSM).
+    365          //-------------------------------------------------------------------------------------------------
+    366          
+    367          static void CancelHdcpAuthentication(void)
+    368          {
+    369              switch (pHdcp->authState)
+    370              {
+    371                  case SI_TX_HDCP__WAIT_FOR_DONE:
+    372                  case SI_TX_HDCP__WAIT_FIFO_READY:
+    373                  case SI_TX_HDCP__KSV_FIFO_READ:
+    374          	 	case SI_TX_HDCP__V_CHECK:						
+    375                      AvMuteEnable(true);
+    376                      SiiDrvTpiHdcpProtectionEnable(false);
+    377          
+    378                      // Reset HDCP engine by temporal switching output TMDS OFF.
+    379          #if (SI_TX_TMDS_TOGGLE_FOR_HDCP_RESET == ENABLE)
+    380                      // SWWA:18705
+    381                      TxTmdsBlankPause();
+    382          #endif
+    383                      break;
+    384                  default:
+    385                      break;
+    386              }
+    387          }
+    388          
+    389          
+    390          static void ProcessBstatus(uint8_t dsBstatus[2])
+    391          {
+    392              uint8_t dsCount = dsBstatus[0] & MSK_HDCP_DDC__BSTATUS1__DEV_COUNT;
+    393              pHdcp->fifoByteCounter = dsCount * LEN_HDCP_DDC__BKSV; // DS Bksv list length
+    394          
+    395              if (pHdcp->isRepeaterMode)
+    396              {
+    397                  if(SiiTxCbHdcpProcessDsBstatus(dsBstatus))
+    398                  {
+    399                      pHdcp->error |= ERR_HDCP__DEV_LIMIT;
+    400                  }
+    401              }
+    402          }
+    403          
+    404          
+    405          //-------------------------------------------------------------------------------------------------
+    406          //! @brief      Send BKSV to US device FIFO.
+    407          //-------------------------------------------------------------------------------------------------
+    408          
+    409          static void SendBksvToUsFifo(void)
+    410          {
+    411              if(pHdcp->isRepeaterMode)
+    412              {
+    413                  // Read BKSV only for repeater mode
+    414                  uint8_t aDsBksv[LEN_HDCP_DDC__BKSV];
+    415          
+    416                  // Copy Bksv to the FIFO
+    417                  SiiDrvTpiBksvGet(aDsBksv);
+    418          
+    419                  SiiTxCbHdcpFinishUsPart2(aDsBksv);
+    420              }
+    421          }
+    422          
+    423          //-------------------------------------------------------------------------------------------------
+    424          //! @brief      Finalize HDCP Authentication Part 2 by sending BKSV to US.
+    425          //!
+    426          //!             Note: in authentication failure case,
+    427          //!             transition to SI_TX_HDCP__FAILED state is done in TxHdcpTimerHandler()
+    428          //-------------------------------------------------------------------------------------------------
+    429          
+    430          static void FinishAuthPart2(void)
+    431          {
+    432              if(SiiDrvTpiHdcpIsAuthenticationGood())
+    433              {
+    434                  SendBksvToUsFifo();
+    435                  pHdcp->authState = SI_TX_HDCP__AUTHENTICATED;
+    436              }
+    437          }
+    438          
+    439          
+    440          //-------------------------------------------------------------------------------------------------
+    441          //! @brief      Copy a portion of KSV list from DS to an upper layer.
+    442          //!
+    443          //! @return     Flag of the KSV list last portion.
+    444          //! @retval     true - on the last portion of KSVs.
+    445          //-------------------------------------------------------------------------------------------------
+    446          
+    447          static bool_t CopyKsvListPortion(void)
+    448          {
+    449              uint8_t aKsvBuffer[VAL_TPI__HDCP_FIFO_BUFFER_LENGTH];
+    450              uint8_t bytesToRead;
+    451              bool_t  isDone;
+    452          
+    453              isDone = SiiDrvTpiKsvListPortionSizeGet(&bytesToRead);
+    454          
+    455              if((pHdcp->fifoByteCounter != 0) && (bytesToRead != 0))
+    456              {
+    457                  if(bytesToRead > pHdcp->fifoByteCounter) // extra check
+    458                  {
+    459                      DEBUG_PRINT(TX_MSG_ERR, "HDCP Error: Incorrect number of KSVs!\n");
+    460                      pHdcp->error |= ERR_HDCP__INTERNAL;
+    461                      bytesToRead = pHdcp->fifoByteCounter;
+    462                      isDone = true;
+    463                  }
+    464          
+    465                  // get DS BKSV list
+    466                  SiiDrvTpiKsvListGet(aKsvBuffer, bytesToRead);
+    467          
+    468                  if (pHdcp->isRepeaterMode)
+    469                  {
+    470                      // Forward portion of KSV list to upper layer for processing
+    471                      SiiTxCbHdcpProcessKsvListPortion(aKsvBuffer, bytesToRead);
+    472          
+    473                      // Add new portion to the hash
+    474                      AddBytesToKsvHash(aKsvBuffer, bytesToRead, isDone);
+    475                  }
+    476          
+    477                  pHdcp->fifoByteCounter -= bytesToRead;
+    478              }
+    479          
+    480              return isDone;
+    481          }
+    482          
+    483          
+    484          //-------------------------------------------------------------------------------------------------
+    485          //! @brief      HDCP Timer event handler.
+    486          //!
+    487          //!             This function is to be called periodically. The time past from the last call
+    488          //!             should be indicated as a parameter.
+    489          //!
+    490          //! @param[in]  timeDelta - time in ms elapsed since the last call.
+    491          //-------------------------------------------------------------------------------------------------
+    492          
+    493          static void OnTimer(time_ms_t timeDelta)
+    494          {
+    495              uint8_t ksvListSize;
+    496              bool_t  isKsvListReadingDone;
+    497              uint8_t txPlugStatus = SiiDrvTpiPlugStatusGet();
+    498          #if (FPGA_BUILD == ENABLE)
+    499              // FPGA model doesn't support RSEN
+    500              bool_t rsen = true;
+    501          #else
+    502              bool_t rsen = ((txPlugStatus & SI_TX_STATUS_MASK_RX_SENSE) != 0);
+    503          #endif
+    504          
+    505          
+    506              bool_t hp = ((txPlugStatus & SI_TX_STATUS_MASK_HPD) != 0);
+    507          
+    508              if (pHdcp->tmdsOnCountDownStart)
+    509              {
+    510                  pHdcp->tmdsOnCountDownStart = false;
+    511                  if ((SiiEdidTxDsDeviceRemedyMaskGet() & SI_TX_EDID_REMEDY_SP_TEST) == 0)
+    512                  {
+    513                      if (SiiEdidTxDsDeviceRemedyMaskGet() & SI_TX_EDID_REMEDY_DELAY_DS_AUTH)
+    514                      {
+    515                          pHdcp->tmdsCountdown = TIM_MS_HDCP__TMDS_ON_DELAY_MAX;
+    516                      }
+    517                      else
+    518                      {
+    519                          pHdcp->tmdsCountdown = TIM_MS_HDCP__TMDS_ON_DELAY_MIN;
+    520                      }
+    521                  }
+    522              }
+    523          
+    524              switch (pHdcp->authState)
+    525              {
+    526          
+    527                  case SI_TX_HDCP__KSV_FIFO_READ:
+    528                      if(!SiiTxCbHdcpPrepareForKsvListProcessing())
+    529                      {
+    530                         // Keep waiting if repeater isn't ready to continue
+    531                         break;
+    532                      }
+    533                      isKsvListReadingDone = SiiDrvTpiKsvListPortionSizeGet(&ksvListSize);
+    534          
+    535          //           NOTE: the following debug message is commented to avoid adverse delays caused by printing
+    536          //           DEBUG_PRINT(TX_MSG_DBG, "fifo level before = 0x%02X, done: %s\n", (int) ksvListSize,
+    537          //                                    isKsvListReadingDone ? "Y" : "N");
+    538          
+    539          		if (CopyKsvListPortion())
+    540          		{
+    541          //          NOTE: the following read and debug message is commented to avoid adverse delays caused by printing
+    542          //          isKsvListReadingDone = SiiDrvTpiKsvListPortionSizeGet(&ksvListSize);
+    543          //			DEBUG_PRINT(TX_MSG_DBG, "fifo level after = 0x%02X, done: %s\n", (int) ksvListSize,
+    544          //					                 isKsvListReadingDone ? "Y" : "N");
+    545          			pHdcp->authState = SI_TX_HDCP__V_CHECK;
+    546          		}
+    547          		// don't break here to expedite switching to the "V check" phase
+    548          			
+    549                  case SI_TX_HDCP__V_CHECK:
+    550          			// Downstream HDCP Part 2 is successfully finished,
+    551          			// after downstream V' matches own V.
+    552          			if (SiiDrvTpiHdcpIsPart2Done())
+    553          			{
+    554          				FinishAuthPart2();
+    555          			}
+    556                      break;
+    557          
+    558                  case SI_TX_HDCP__OFF:
+    559                      if (pHdcp->isAuthRequested)
+    560                      {
+    561                          pHdcp->authState = SI_TX_HDCP__WAIT_FOR_START;
+    562          
+    563                          AvMuteEnable(true);
+    564          
+    565                          SiiDrvTpiHdcpProtectionEnable(false);
+    566          
+    567                          pHdcp->timeoutForPart1AndPart2 = TMO_MS_HDCP__MAX_AUTH_ATTEMPT;
+    568                          pHdcp->timeoutForDdcNack = TMO_MS_HDCP__MAX_DDC_NACK;
+    569          
+    570                          if (pHdcp->isRepeaterMode)
+    571                          {
+    572                              SiiTxCbHdcpSetUsRepeaterBcaps(false);
+    573                          }
+    574                      }
+    575                      else if (pHdcp->dsDdcAckCheck)
+    576                      {
+    577                          if (SiiDrvTpiIsDownstreamHdcpAvailable())
+    578                          {
+    579                              if (pHdcp->isRepeaterMode)
+    580                              {
+    581                                  SiiTxCbHdcpDsDdcAck(true);
+    582                              }
+    583                              pHdcp->dsDdcAckCheck = false;
+    584                          }
+    585                      }
+    586                      break;
+    587          
+    588                  case SI_TX_HDCP__WAIT_FOR_START:
+    589                      // control comes here when HDCP authentication was requested from US device
+    590          
+    591                      if (TxIsRunning() && hp && rsen && TxIsTmdsEnabled() && (pHdcp->tmdsCountdown == 0))
+    592                      {
+    593                          // TX chip input is provided and stable
+    594                          // (If scaler or/and OSD are installed in the schematic,
+    595                          // their output signals are provided and stable as well as their input ones)
+    596                          if (SiiDrvTpiIsDownstreamHdcpAvailable()) // DDC ACK check
+    597                          {
+    598                              // DS device must be ready to start HDCP authentication
+    599          
+    600                              SiiDrvTpiHdcpProtectionEnable(false); // just in case
+    601                              SiiDrvTpiHdcpProtectionEnable(true); // start authentication
+    602                              pHdcp->authState = SI_TX_HDCP__WAIT_FOR_DONE;
+    603          
+    604                              // DS DDC access was with ACK
+    605                              pHdcp->dsDdcAckCheck = false;
+    606                              pHdcp->error = 0;
+    607                          }
+    608                          else
+    609                          {
+    610                              // DS DDC access was with NACK (i.e. NO ACK)
+    611                              if (pHdcp->timeoutForDdcNack == 0)
+    612                              {
+    613                                  // If the time is out and there is still no ACK,
+    614                                  // consider DS device as not having HDCP function.
+    615                                  pHdcp->error |= ERR_HDCP__NACK;
+    616                                  pHdcp->authState = SI_TX_HDCP__FAILED;
+    617                                  pHdcp->fbMsg = SI_TX_FB_MSG_ERR_HDCP_AUTH_FAILED;
+    618          
+    619                                  SiiDrvTpiHdcpProtectionEnable(false);
+    620          
+    621                                  if (pHdcp->isRepeaterMode)
+    622                                  {
+    623                                      //SiiDrvTpiDdcMasterReset();
+    624                                      //pHdcp->error |= ERR_HDCP__V;
+    625                                  	//not fatal here to avoid repeater toggle HPD on Rx
+    626                                  	//repeater will use the DdcAck below to decide HPD toggle
+    627                                      SiiTxCbHdcpInformUsDeviceAboutFailure(false);
+    628                                  }
+    629                                  //report the DDC NACK after Inform the fatal failure
+    630                                  if (pHdcp->upstreamDdcCtrl)
+    631                                  {
+    632                                      // No ACK on DS DDC bus
+    633                                      // Probably DS device has No HDCP function.
+    634                                      SiiTxCbHdcpDsDdcAck(false);
+    635                                  }
+    636          
+    637          
+    638                              }
+    639                          }
+    640          
+    641                      }
+    642                      break;
+    643          
+    644                  case SI_TX_HDCP__WAIT_FOR_RETRY:
+    645                      if (IS_UPDATED_TIMER_EXPIRED(pHdcp->timeToRetry, timeDelta))
+    646                      {
+    647                          pHdcp->authState = SI_TX_HDCP__OFF; //SI_TX_HDCP__WAIT_FOR_START;
+    648                          //AvMuteEnable(true); // 100218 for SI_TxHdcpForceDsAuthentication()
+    649                          //SiiDrvTpiHdcpProtectionEnable(false);
+    650                      }
+    651                      break;
+    652          
+    653                  case SI_TX_HDCP__WAIT_FOR_DONE:
+    654                      break;
+    655          
+    656                  case SI_TX_HDCP__WAIT_FIFO_READY:
+    657                      if (SiiDrvTpiIsZeroKsvListReady())
+    658                      {
+    659                          uint8_t timeOutMs = TMO_MS_HDCP__ZERO_KSV_READY_MAX;
+    660          
+    661                          if(!SiiTxCbHdcpPrepareFor0KsvListProcessing())
+    662                          {
+    663                              // Keep waiting if repeater isn't ready to continue
+    664                          	break;
+    665                          }
+    666                          // Wait until Part 2 is done after the above preparations stabilize
+    667                          while (!SiiDrvTpiHdcpIsPart2Done() && timeOutMs)
+    668                          {
+    669                              SiiOsTimerWait(1);
+    670                              timeOutMs--;
+    671                          }
+    672          
+    673                          if (timeOutMs != 0) // Part 2 is done before the timeout
+    674                          {
+    675                              uint8_t dsBstatus[2] = { 0, 0 };
+    676                              ProcessBstatus(dsBstatus);
+    677                              FinishAuthPart2();
+    678                              NewKsvHash(); // reset DS KSV list hash because it doesn't exist
+    679                              pHdcp->authState = SI_TX_HDCP__AUTHENTICATED;
+    680                          }
+    681                          else
+    682                          {
+    683                              // Try to re-authenticate if failed to receive KSV Ready (part 2 done)
+    684                              TxHdcpRequestReauthentication();
+    685                          }
+    686                      }
+    687                      else if(SiiDrvTpiHdcpIsPart2Done())
+    688                      {
+    689                          uint8_t dsBstatus[2] = { 0, 0 };
+    690                          ProcessBstatus(dsBstatus);
+    691                          FinishAuthPart2();
+    692                          NewKsvHash(); // reset DS KSV list hash because it doesn't exist
+    693                          pHdcp->authState = SI_TX_HDCP__AUTHENTICATED;
+    694                      }
+    695                      break;
+    696          
+    697                  case SI_TX_HDCP__AUTHENTICATED:
+    698                      if (pHdcp->minimumUnmuteCountdown == 0)
+    699                      {
+    700                          AvMuteEnable(false);
+    701                          pHdcp->authState = SI_TX_HDCP__SECURE;
+    702                          pHdcp->fbMsg = SI_TX_FB_MSG_HDCP_AUTH_DONE;
+    703                      }
+    704                      break;
+    705          
+    706                  case SI_TX_HDCP__SECURE:
+    707                      break;
+    708          
+    709                  case SI_TX_HDCP__FAILED:
+    710                      if (pHdcp->isAuthRequested)
+    711                      {
+    712                          if (SiiDrvTpiIsDownstreamHdcpAvailable())
+    713                          {
+    714                              // check for DDC ACK;
+    715                              pHdcp->dsDdcAckCheck = false;
+    716          
+    717                              SiiTxCbHdcpDsDdcAck(true);
+    718          
+    719                              if (!SiiEdidTxDoesDsSupport(SI_EDID_TX_SUPPORT_HDMI))
+    720                              {
+    721                                  // shadow BCAPS is only available when DDC ACKs
+    722                                  if ((SiiDrvTpiBcapsGet() & BIT_HDCP_DDC__BCAPS__FAST_RE_AUTH) == 0)
+    723                                  {
+    724                                      // For devices not capable of fast re-authentication.
+    725                                      // (see page 19 (2.4) of HDCP 1.2)
+    726                                      // Temporary turn TMDS output OFF for minimum 100ms.
+    727                                      TxTmdsBlankPause();
+    728                                  }
+    729                              }
+    730          
+    731                              if (0 != pHdcp->timeoutForPart1AndPart2)
+    732                              {
+    733                                  // If time for part one is not out,
+    734                                  // try another attempt of DS authentication.
+    735                                  pHdcp->authState = SI_TX_HDCP__WAIT_FOR_RETRY;
+    736                                  pHdcp->timeToRetry = TIM_MS_HDCP__RP_PART1_RETRY;
+    737                              }
+    738                          }
+    739                          else
+    740                          {
+    741                              pHdcp->dsDdcAckCheck = true;
+    742                          }
+    743          
+    744                          if (pHdcp->timeoutForPart1AndPart2 == 0)
+    745                          {
+    746                              if (pHdcp->isRepeaterMode)
+    747                              {
+    748                                  // Repeater mode
+    749                                  SiiTxCbHdcpInformUsDeviceAboutFailure(true);
+    750                                  pHdcp->isReauthRequested = false;
+    751                                  pHdcp->isAuthRequested = false;
+    752                              }
+    753                              else
+    754                              {
+    755                                  // TX Only mode
+    756                                  pHdcp->isReauthRequested = true;
+    757                              }
+    758                              pHdcp->authState = SI_TX_HDCP__OFF;
+    759                          }
+    760                      }
+    761                      else
+    762                      {
+    763                          // Authentication is not required.
+    764                          // Do nothing.
+    765                      }
+    766                      break;
+    767          
+    768                  default:
+    769                      break;
+    770              }
+    771          
+    772              // Update HDCP timers
+    773              UPDATE_TIMER(pHdcp->timeoutForPart1AndPart2, timeDelta);
+    774              UPDATE_TIMER(pHdcp->timeoutForDdcNack, timeDelta);
+    775              UPDATE_TIMER(pHdcp->minimumUnmuteCountdown, timeDelta);
+    776              UPDATE_TIMER(pHdcp->tmdsCountdown, timeDelta);
+    777          
+    778              PrintHdcpStatus();
+    779          }
+    780          
+    781          
+    782          
+    783          //-------------------------------------------------------------------------------------------------
+    784          //  TX HDCP API functions
+    785          //-------------------------------------------------------------------------------------------------
+    786          
+    787          //-------------------------------------------------------------------------------------------------
+    788          //! @brief      Select Tx device instance in multi-transmitter system.
+    789          //!
+    790          //! @param[in]  device_idx - zero based index of an instance.
+    791          //-------------------------------------------------------------------------------------------------
+    792          
+    793          #if SII_NUM_TX > 1
+    794          void TxHdcpInstanceSet(uint8_t deviceIndex)
+    795          {
+    796              if(deviceIndex < SII_NUM_TX)
+    797              {
+    798                  pHdcp = &HdcpInstRec[deviceIndex];
+    799              }
+    800          }
+    801          #endif // SII_NUM_TX > 1
+    802          
+    803          
+    804          //-------------------------------------------------------------------------------------------------
+    805          //! @brief      Initialization of TX HDCP module.
+    806          //-------------------------------------------------------------------------------------------------
+    807          
+    808          void TxHdcpInit(void)
+    809          {
+    810              memset(pHdcp, 0, sizeof(txHdcpInstanceRecord_t));
+    811          
+    812              pHdcp->prevAuthState = SI_TX_HDCP__INITIAL; // will be changed in print_status()
+    813              TxHdcpReset();
+    814          
+    815              // option for unconditional re-authentication
+    816              SiiDrvTpiHdcpDynamicAuthenticationEnable(true);
+    817          
+    818          #if (SI_TX_COMP_UNIT_TESTS == ENABLE)
+    819              TestKsvHash();
+    820          #endif
+    821          }
+    822          
+    823          
+    824          //-------------------------------------------------------------------------------------------------
+    825          //! @brief      TX HDCP module initialization
+    826          //!
+    827          //!             The function has to be called once during system initialization.
+    828          //!             The function provides TX HDCP module with configuration settings.
+    829          //!
+    830          //! @param[in]  isRepeaterMode     - true for repeater, false for pure source,
+    831          //! @param[in]  tmdsOnToUnmuteTime - Minimum time from turning TMDS ON to AV unmute (in 100ms units),
+    832          //! @param[in]  usDdcCtrl
+    833          //!             - true: upstream HDCP DDC enabling/disabling depends on downstream DDC
+    834          //!             - false: upstream HDCP DDC does not depend on downstream
+    835          //-------------------------------------------------------------------------------------------------
+    836          
+    837          void TxHdcpConfig(bool_t isRepeaterMode, time_ms_t tmdsOnToUnmuteTime, bool_t usDdcCtrl)
+    838          {
+    839              pHdcp->isRepeaterMode = isRepeaterMode;
+    840              pHdcp->tmdsOnToUnmuteTime = tmdsOnToUnmuteTime;
+    841              pHdcp->upstreamDdcCtrl = usDdcCtrl;
+    842          }
+    843          
+    844          
+    845          //-------------------------------------------------------------------------------------------------
+    846          //! @brief      Reset TX HDCP module without scheduling new authentication.
+    847          //!
+    848          //!             Resets HDCP function to initial state. It is needed on input change,
+    849          //!             going into of out of standby, etc.
+    850          //-------------------------------------------------------------------------------------------------
+    851          
+    852          void TxHdcpStop(void)
+    853          {
+    854          	TxHdcpReset();
+    855          	pHdcp->isAuthRequested = false;
+    856          }
+    857          
+    858          
+    859          //-------------------------------------------------------------------------------------------------
+    860          //! @brief      Request to start downstream authentication.
+    861          //!
+    862          //!             The function starts downstream authentication if the device was not
+    863          //!             authenticated before. If it is already authenticated,
+    864          //!             the function does nothing.
+    865          //-------------------------------------------------------------------------------------------------
+    866          
+    867          void TxHdcpStart(void)
+    868          {
+    869              pHdcp->isAuthRequested = true;
+    870          
+    871          	switch (pHdcp->authState)
+    872          	{
+    873          		case SI_TX_HDCP__AUTHENTICATED:
+    874          		case SI_TX_HDCP__SECURE:
+    875          			// The upstream KSV FIFO has already been preloaded,
+    876          			// no need doing downstream authentication.
+    877          			if (pHdcp->isRepeaterMode)
+    878          			{
+    879          				SiiTxCbHdcpUsOnlyAuthentication();
+    880          			}
+    881          			break;
+    882          		case SI_TX_HDCP__FAILED:
+    883          			pHdcp->authState = SI_TX_HDCP__OFF;
+    884          			break;
+    885          		case SI_TX_HDCP__WAIT_FIFO_READY:
+    886          		case SI_TX_HDCP__WAIT_FOR_RETRY:
+    887          			// Terminate previous HDCP work, if in progress
+    888          			TxHdcpReset();
+    889          			break;
+    890          		default:
+    891          			break;
+    892          	}
+    893          
+    894              PrintHdcpStatus();
+    895          }
+    896          
+    897          
+    898          //-------------------------------------------------------------------------------------------------
+    899          //! @brief      TMDS Output Enable event handler.
+    900          //!
+    901          //!             This function schedules start of HDCP authentication after a short safety delay.
+    902          //!             Should be called whenever TMDS output has been enabled after disable state.
+    903          //!             Example: resuming from Standby state.
+    904          //-------------------------------------------------------------------------------------------------
+    905          
+    906          void TxHdcpOnOutputEnable(void)
+    907          {
+    908              pHdcp->tmdsOnCountDownStart = true;
+    909              if(SiiEdidTxDsDeviceRemedyMaskGet() & SI_TX_EDID_REMEDY_SP_TEST)
+    910              {
+    911                  pHdcp->minimumUnmuteCountdown = 0;
+    912              }
+    913              else
+    914              {
+    915                  // Wait after turning on before starting authentication
+    916                  pHdcp->minimumUnmuteCountdown = pHdcp->tmdsOnToUnmuteTime;
+    917          
+    918                  // Increase the delay for noncompliant devices
+    919                  if(SiiEdidTxDsDeviceRemedyMaskGet() & SI_TX_EDID_REMEDY_DELAY_DS_AUTH)
+    920                  {
+    921                      if(pHdcp->minimumUnmuteCountdown < TIM_MS_HDCP__MIN_MUTE_TIME)
+    922                          pHdcp->minimumUnmuteCountdown = TIM_MS_HDCP__MIN_MUTE_TIME;
+    923                  }
+    924              }
+    925              DEBUG_PRINT(TX_MSG_DBG, "TX HDCP min mute time %d ms\n", (int) pHdcp->minimumUnmuteCountdown);
+    926          }
+    927          
+    928          
+    929          //-------------------------------------------------------------------------------------------------
+    930          //! @brief      Reset the HDCP TX engine.
+    931          //!
+    932          //-------------------------------------------------------------------------------------------------
+    933          
+    934          void TxHdcpReset(void)
+    935          {
+    936          	CancelHdcpAuthentication();
+    937          
+    938          	pHdcp->authState = SI_TX_HDCP__OFF;
+    939          	pHdcp->error = 0;
+    940          	pHdcp->timeoutForPart1AndPart2 = 0;
+    941          	pHdcp->timeoutForDdcNack = 0;
+    942          	pHdcp->timeToRetry = 0;
+    943          	pHdcp->isReauthRequested = false;
+    944          
+    945          	// Disable HDCP on TX as well, otherwise under some circumstances
+    946          	// the DS device could get encrypted data before authentication
+    947          	// (and the data is broken).
+    948          	SiiDrvTpiHdcpProtectionEnable(false);
+    949          
+    950          	pHdcp->dsDdcAckCheck = false;
+    951          
+    952          	if (SiiDrvTpiIsDownstreamHdcpAvailable())
+    953          	{
+    954          		if (pHdcp->isRepeaterMode)
+    955          		{
+    956          			SiiTxCbHdcpDsDdcAck(true);
+    957          		}
+    958          	}
+    959          	PrintHdcpStatus();
+    960          }
+    961          
+    962          
+    963          
+    964          //-------------------------------------------------------------------------------------------------
+    965          //! @brief      HDCP Interrupt handler routine.
+    966          //!
+    967          //!             More detailed description.
+    968          //!
+    969          //! @param[in]  interrupts - a 16-bit word; every bit represents an interrupt flag.
+    970          //-------------------------------------------------------------------------------------------------
+    971          
+    972          void TxHdcpInterruptHandler(uint16_t interrupts)
+    973          {
+    974          
+    975              if (interrupts & SI_TX_IRQ__HPD)
+    976              {
+    977                  AvMuteEnable(true);
+    978                  SiiDrvTpiHdcpProtectionEnable(false);
+    979          
+    980                  pHdcp->isAuthRequested = false;
+    981                  pHdcp->authState = SI_TX_HDCP__OFF;
+    982              }
+    983          
+    984              if (interrupts & SI_TX_IRQ__RX_SENSE)
+    985              {
+    986                  AvMuteEnable(true);
+    987                  SiiDrvTpiHdcpProtectionEnable(false);
+    988          
+    989                  pHdcp->authState = SI_TX_HDCP__OFF;
+    990              }
+    991          
+    992              if (interrupts & (SI_TX_IRQ__HDCP_CHNG))
+    993              {
+    994                  uint8_t hdcpStatus = SiiDrvTpiHdcpStatusGet();
+    995          
+    996                  PrintHdcpQueryStatus(hdcpStatus);
+    997          
+    998                  switch (hdcpStatus & MSK_TPI__HDCP_QUERY__STATUS)
+    999                  {
+   1000                      case VAL_TPI__HDCP_QUERY__STATUS_NORMAL:
+   1001                      case VAL_TPI__HDCP_QUERY__STATUS_SUSPENDED:
+   1002                          if (pHdcp->authState == SI_TX_HDCP__WAIT_FOR_DONE)
+   1003                          {
+   1004                              // Part 1 is done
+   1005                              if (hdcpStatus & BIT_TPI__HDCP_QUERY__DS_REPEATER)
+   1006                              {
+   1007                                  pHdcp->authState = SI_TX_HDCP__WAIT_FIFO_READY;
+   1008                              }
+   1009                              else
+   1010                              {
+   1011                                  // Part 1 is done and no downstream Part 2 needs to be done
+   1012                                  uint8_t aDsBStatus[2] = { 0, 0 };
+   1013                                  ProcessBstatus(aDsBStatus);
+   1014                                  if (pHdcp->isRepeaterMode)
+   1015                                  {
+   1016                                      SiiTxCbHdcpPrepareForKsvListProcessing();
+   1017                                  }
+   1018                                  SendBksvToUsFifo();
+   1019          
+   1020                                  pHdcp->authState = SI_TX_HDCP__AUTHENTICATED;
+   1021                              }
+   1022                          }
+   1023                          break;
+   1024          
+   1025                      case VAL_TPI__HDCP_QUERY__STATUS_FAILED:
+   1026                          // failure during authentication case
+   1027                          AvMuteEnable(true);
+   1028                          SiiTxCbHdcpInformUsDeviceAboutFailure(false);
+   1029                          if (pHdcp->isRepeaterMode && ((hdcpStatus & BIT_TPI__HDCP_QUERY__DS_REPEATER)))
+   1030                          {
+   1031                              uint8_t aDsBStatus[2] = { 0, 0 };
+   1032                              SiiDrvTpiBStatusGet(aDsBStatus);
+   1033                              // Note, in case of R0 failure (for example) the BSTATUS shadow registers
+   1034                              // are not read, but since the registers value is automatically cleared
+   1035                              // on clearing 0x2A.0, the EXCEED bits are not set. By checking the EXCEED bits,
+   1036                              // it is possible to distinguish the DEV_EXCCED and CASCADE_EXCEED
+   1037                              // failures from any other failure.
+   1038                              if ((aDsBStatus[0] & BIT_HDCP_DDC__BSTATUS1__DEV_EXC) || (aDsBStatus[1] & BIT_HDCP_DDC__BSTATUS2__CAS_EXC))
+   1039                              {
+   1040                                  ProcessBstatus(aDsBStatus);
+   1041                                  if (pHdcp->isRepeaterMode)
+   1042                                  {
+   1043                                      SiiTxCbHdcpSetUsRepeaterBcaps(true);
+   1044                                  }
+   1045                                  pHdcp->error |= ERR_HDCP__DS_EXCEED;
+   1046                              }
+   1047                          }
+   1048                          SiiDrvTpiHdcpProtectionEnable(false);
+   1049                          if( (pHdcp->authState == SI_TX_HDCP__KSV_FIFO_READ)
+   1050          					||(pHdcp->authState == SI_TX_HDCP__V_CHECK))					
+   1051                          {
+   1052                              // error happened during the KSV list reading,
+   1053                              // need to restart the DDC access state machine.
+   1054                              SiiDrvTpiDdcMasterReset();
+   1055                              // Most probably the error is caused by V mismatch.
+   1056                              pHdcp->error |= ERR_HDCP__V;
+   1057                          }
+   1058                          else if (pHdcp->authState == SI_TX_HDCP__WAIT_FIFO_READY)
+   1059                          {
+   1060                              // error happened while waiting for KSV FIFO READY bit
+   1061                              pHdcp->error |= ERR_HDCP__P2_TO;
+   1062                          }
+   1063                          pHdcp->authState = SI_TX_HDCP__FAILED;
+   1064                          break;
+   1065          
+   1066                      case VAL_TPI__HDCP_QUERY__STATUS_LOST:
+   1067                          // failure on Part 3 case
+   1068                          pHdcp->authState = SI_TX_HDCP__FAILED;
+   1069                          AvMuteEnable(true);
+   1070                          SiiTxCbHdcpInformUsDeviceAboutFailure(true);
+   1071                          SiiDrvTpiHdcpProtectionEnable(false);
+   1072                          break;
+   1073                  }
+   1074          
+   1075              }
+   1076          
+   1077              if (interrupts & SI_TX_IRQ__KSV_READY)
+   1078              {
+   1079                  if (pHdcp->authState == SI_TX_HDCP__WAIT_FIFO_READY)
+   1080                  {
+   1081                      uint8_t aDsBStatus[2];
+   1082                      SiiDrvTpiBStatusGet(aDsBStatus);
+   1083                      ProcessBstatus(aDsBStatus);
+   1084          
+   1085                      // Start new KSV hash calculation
+   1086                      NewKsvHash();
+   1087          
+   1088                      pHdcp->authState = SI_TX_HDCP__KSV_FIFO_READ;
+   1089          
+   1090                  }
+   1091              }
+   1092          
+   1093              PrintHdcpStatus();
+   1094          }
+   1095          
+   1096          
+   1097          //-------------------------------------------------------------------------------------------------
+   1098          //! @brief      HDCP Timer event handler.
+   1099          //!
+   1100          //!             This function is to be called periodically.
+   1101          //!
+   1102          //! @param[in]  timeDelta - time in ms elapsed since the last call.
+   1103          //!
+   1104          //! @return     Maximum time interval (in ms) to wait before the next call.
+   1105          //-------------------------------------------------------------------------------------------------
+   1106          
+   1107          time_ms_t TxHdcpTimerHandler(time_ms_t timeDelta)
+   1108          {
+   1109              time_ms_t maxTimeBeforeNextCallMs = TIM_MS_HDCP__HANDLER_DEFAULT_INVOCATION;
+   1110          
+   1111              if (pHdcp->isReauthRequested)
+   1112              {
+   1113                  // The reason to use dedicated flag (pHdcp->isReauthRequested)
+   1114                  // is to align pHdcp->timeToRetry counter with HDCP task time.
+   1115                  pHdcp->isReauthRequested = false;
+   1116          
+   1117                  CancelHdcpAuthentication();
+   1118          
+   1119                  pHdcp->authState = SI_TX_HDCP__WAIT_FOR_RETRY;
+   1120                  pHdcp->timeToRetry = TIM_MS_HDCP__DS_PART1_RETRY;
+   1121              }
+   1122              else
+   1123              {
+   1124                  OnTimer(timeDelta);
+   1125          
+   1126                  switch (pHdcp->authState)
+   1127                  {
+   1128                      case SI_TX_HDCP__WAIT_FOR_START:
+   1129                          // Time critical case for repeaters to pass 100ms AKSV propagation test.
+   1130                      case SI_TX_HDCP__KSV_FIFO_READ:
+   1131          			case SI_TX_HDCP__V_CHECK:				
+   1132                          // Time critical case for repeaters to process 127KSVs in 500ms.
+   1133                          maxTimeBeforeNextCallMs = TIM_MS_HDCP__HANDLER_URGENT_INVOCATION;
+   1134                          break;
+   1135          
+   1136                      default:
+   1137                          if (pHdcp->tmdsCountdown)
+   1138                          {
+   1139                              maxTimeBeforeNextCallMs = pHdcp->tmdsCountdown;
+   1140                          }
+   1141                  }
+   1142              }
+   1143          
+   1144              return maxTimeBeforeNextCallMs;
+   1145          }
+   1146           
+   1147          
+   1148          //-------------------------------------------------------------------------------------------------
+   1149          //! @brief      Schedules HDCP re-authentication if HDCP is in operational state.
+   1150          //-------------------------------------------------------------------------------------------------
+   1151          
+   1152          void TxHdcpRequestReauthentication(void)
+   1153          {
+   1154              switch (pHdcp->authState)
+   1155              {
+   1156                  case SI_TX_HDCP__WAIT_FOR_DONE:
+   1157                  case SI_TX_HDCP__WAIT_FIFO_READY:
+   1158                  case SI_TX_HDCP__KSV_FIFO_READ:
+   1159                  case SI_TX_HDCP__V_CHECK:
+   1160                  case SI_TX_HDCP__AUTHENTICATED:
+   1161                  case SI_TX_HDCP__SECURE:
+   1162                      pHdcp->isReauthRequested = true;
+   1163                      AvMuteEnable(true);
+   1164                      SiiDrvTpiHdcpProtectionEnable(false);
+   1165                      DEBUG_PRINT(TX_MSG_ALWAYS, "HDCP: Re-authentication request\n");
+   1166                      break;
+   1167                  default:
+   1168                      break;
+   1169              }
+   1170          }
+   1171          
+   1172          
+   1173          //-------------------------------------------------------------------------------------------------
+   1174          //! @brief      Return HDCP error code. @see HDCP_ERRORS
+   1175          //-------------------------------------------------------------------------------------------------
+   1176          
+   1177          uint16_t TxHdcpLastErrorGet(void)
+   1178          {
+   1179              return pHdcp->error;
+   1180          }
+   1181          
+   1182          //-------------------------------------------------------------------------------------------------
+   1183          //! @brief      Return HDCP message reflecting HDCP engine current state.
+   1184          //-------------------------------------------------------------------------------------------------
+   1185          
+   1186          txFeedbackMsg_t TxHdcpLastMessageGet(void)
+   1187          {
+   1188              txFeedbackMsg_t fbMessage = pHdcp->fbMsg;
+   1189              pHdcp->fbMsg = SI_TX_FB_MSG_NONE; // clear after reporting
+   1190          
+   1191              return fbMessage;
+   1192          }
+   1193          
+   1194          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       24  AddBytesToKsvHash
+             24 -> Mixer
+        0  AvMuteEnable
+              0 -> RepeaterConAvMuteSet
+              0 -> SiiDrvTpiHdcpEncriptionEnable
+        8  CancelHdcpAuthentication
+              8 -> AvMuteEnable
+              0 -> SiiDrvTpiHdcpProtectionEnable
+       32  CopyKsvListPortion
+             32 -> AddBytesToKsvHash
+             32 -> SiiDrvTpiKsvListGet
+             32 -> SiiDrvTpiKsvListPortionSizeGet
+             32 -> SiiTxCbHdcpProcessKsvListPortion
+        8  FinishAuthPart2
+              8 -> SendBksvToUsFifo
+              8 -> SiiDrvTpiHdcpIsAuthenticationGood
+        0  Mixer
+        0  NewKsvHash
+       24  OnTimer
+             24 -> AvMuteEnable
+             24 -> CopyKsvListPortion
+             24 -> FinishAuthPart2
+             24 -> NewKsvHash
+             24 -> PrintHdcpStatus
+             24 -> ProcessBstatus
+             24 -> SiiDrvTpiBcapsGet
+             24 -> SiiDrvTpiHdcpIsPart2Done
+             24 -> SiiDrvTpiHdcpProtectionEnable
+             24 -> SiiDrvTpiIsDownstreamHdcpAvailable
+             24 -> SiiDrvTpiIsZeroKsvListReady
+             24 -> SiiDrvTpiKsvListPortionSizeGet
+             24 -> SiiDrvTpiPlugStatusGet
+             24 -> SiiEdidTxDoesDsSupport
+             24 -> SiiEdidTxDsDeviceRemedyMaskGet
+             24 -> SiiOsTimerWait
+             24 -> SiiTxCbHdcpDsDdcAck
+             24 -> SiiTxCbHdcpInformUsDeviceAboutFailure
+             24 -> SiiTxCbHdcpPrepareFor0KsvListProcessing
+             24 -> SiiTxCbHdcpPrepareForKsvListProcessing
+             24 -> SiiTxCbHdcpSetUsRepeaterBcaps
+             24 -> TxHdcpRequestReauthentication
+             24 -> TxIsRunning
+             24 -> TxIsTmdsEnabled
+             24 -> TxTmdsBlankPause
+        0  PrintHdcpStatus
+        8  ProcessBstatus
+              8 -> SiiTxCbHdcpProcessDsBstatus
+       16  SendBksvToUsFifo
+             16 -> SiiDrvTpiBksvGet
+             16 -> SiiTxCbHdcpFinishUsPart2
+       12  TxHdcpConfig
+        8  TxHdcpInit
+              0 -> SiiDrvTpiHdcpDynamicAuthenticationEnable
+              8 -> TxHdcpReset
+              8 -> __aeabi_memclr4
+       24  TxHdcpInterruptHandler
+             24 -> AvMuteEnable
+             24 -> NewKsvHash
+             24 -> PrintHdcpStatus
+             24 -> ProcessBstatus
+             24 -> SendBksvToUsFifo
+             24 -> SiiDrvTpiBStatusGet
+             24 -> SiiDrvTpiDdcMasterReset
+             24 -> SiiDrvTpiHdcpProtectionEnable
+             24 -> SiiDrvTpiHdcpStatusGet
+             24 -> SiiTxCbHdcpInformUsDeviceAboutFailure
+             24 -> SiiTxCbHdcpPrepareForKsvListProcessing
+             24 -> SiiTxCbHdcpSetUsRepeaterBcaps
+        0  TxHdcpLastErrorGet
+        0  TxHdcpLastMessageGet
+        8  TxHdcpOnOutputEnable
+              8 -> SiiEdidTxDsDeviceRemedyMaskGet
+        8  TxHdcpRequestReauthentication
+              8 -> AvMuteEnable
+              0 -> SiiDrvTpiHdcpProtectionEnable
+        8  TxHdcpReset
+              8 -> CancelHdcpAuthentication
+              0 -> PrintHdcpStatus
+              8 -> SiiDrvTpiHdcpProtectionEnable
+              8 -> SiiDrvTpiIsDownstreamHdcpAvailable
+              8 -> SiiTxCbHdcpDsDdcAck
+        8  TxHdcpStart
+              0 -> PrintHdcpStatus
+              8 -> SiiTxCbHdcpUsOnlyAuthentication
+              8 -> TxHdcpReset
+        8  TxHdcpStop
+              8 -> TxHdcpReset
+       16  TxHdcpTimerHandler
+             16 -> CancelHdcpAuthentication
+             16 -> OnTimer
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       2  ?<Constant {0, 0}>
+       2  ?<Constant {0, 0}>_1
+       2  ?<Constant {0, 0}>_2
+       2  ?<Constant {0, 0}>_3
+       4  ??DataTable24
+       4  ??DataTable24_1
+      14  ?Subroutine0
+       6  ?Subroutine1
+       8  ?Subroutine2
+      10  ?Subroutine3
+       6  ?Subroutine4
+     196  AddBytesToKsvHash
+      30  AvMuteEnable
+      20  CancelHdcpAuthentication
+     108  CopyKsvListPortion
+      24  FinishAuthPart2
+      40  HdcpInstRec
+      20  Mixer
+      18  NewKsvHash
+     636  OnTimer
+      28  PrintHdcpStatus
+      44  ProcessBstatus
+      32  SendBksvToUsFifo
+      28  TxHdcpConfig
+      32  TxHdcpInit
+     310  TxHdcpInterruptHandler
+       8  TxHdcpLastErrorGet
+      16  TxHdcpLastMessageGet
+      58  TxHdcpOnOutputEnable
+      26  TxHdcpRequestReauthentication
+      66  TxHdcpReset
+      66  TxHdcpStart
+      20  TxHdcpStop
+      72  TxHdcpTimerHandler
+       4  pHdcp
+
+ 
+    40 bytes in section .bss
+     4 bytes in section .data
+     8 bytes in section .rodata
+ 1 910 bytes in section .text
+ 
+ 1 910 bytes of CODE  memory
+     8 bytes of CONST memory
+    44 bytes of DATA  memory
+
+Errors: none
+Warnings: 2

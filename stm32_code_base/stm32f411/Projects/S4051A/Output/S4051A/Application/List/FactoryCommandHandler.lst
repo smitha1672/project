@@ -1,0 +1,1551 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:25:32 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\APP_SRC\Managers\FactoryCommandHandle #
+#                    r.c                                                      #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\APP_SRC\Managers\FactoryCommandHandle #
+#                    r.c -D S4051A -D DEBUG -D FREE_RTOS -D STM32F40_41xxx    #
+#                    -D USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D          #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\FactoryCommandHandler.lst                             #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\FactoryCommandHandler.o                                #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Projects\S4051A\APP_SRC\Managers\FactoryCommandHandler.c
+      1          #include "Defs.h"
+      2          #include "Debug.h"
+      3          #include "freertos_conf.h"
+      4          #include "freertos_task.h"
+      5          #include "freertos_typedef.h"
+      6          #include "api_typedef.h"
+      7          
+      8          #include "usbd_cdc_core.h"
+      9          #include "AudioSystemHandler.h"
+     10          #include "FactoryCommandHandler.h"
+     11          #include "StorageDeviceManager.h"
+     12          #include "AudioDeviceManager.h"
+     13          #include "BTHandler.h"
+     14          #include "RFHandler.h" 
+     15          #include "UIDeviceManager.h"
+     16          #include "ChannelCheckManager.h"
+     17          //_______________________________________________________________
+     18          #define configReturnChecksum 1
+     19          #define SERVICE_HANLDER_TIME_TICK  TASK_MSEC2TICKS(10)    
+     20          #define FC_QUEUE_LENGTH 4
+     21          #define FACTORY_PACKAGE_MAX 28 /*header+ command type + data[24] + checksum*/
+     22          
+     23          #define FAC_CMD_TYPE_SET 0x63
+     24          #define FAC_CMD_TYPE_GET 0x73    
+     25          
+     26          #define FAC_ACK_STATUS_POS 5
+     27          #define FAC_ACK_SUCCESS    0xE0
+     28          #define FAC_ACK_CHECKSUM_NG    0xE1
+     29          #define FAC_ACK_TIMEOUT    0xE2
+     30          #define FAC_ACK_INVALID_CMD_TYPE    0xE3
+     31          #define FAC_ACK_INVALID_FUNCTION_CODE    0xE4
+     32          #define FAC_ACK_OPCODE_OR_OUT_OF_RANG 0xE5
+     33          
+     34          #define FAC_RECV_CMD_TYPE_POS 1
+     35          #define FAC_RECV_CMD_LEN_POS 2
+     36          #define FAC_RECV_OPCODE_POS 3 
+     37          #define FAC_RECV_DATA_POS 5
+     38          
+     39          //_______________________________________________________________
+     40          typedef enum
+     41          {
+     42              FAC_OPCODE_POWER_STATUS = 0x01,
+     43              FAC_OPCODE_FACTORY_MODE = 0x02,
+     44              FAC_OPCODE_RESET_SETTING = 0x03,
+     45              FAC_OPCODE_SN = 0x04,
+     46              FAC_OPCODE_KP_ADC_VALUE = 0x05,
+     47              FAC_OPCODE_KP_SWITCH = 0x06,
+     48              FAC_OPCODE_SOURCE = 0x07,
+     49              FAC_OPCODE_MUTE = 0x08,
+     50              FAC_OPCODE_VOLUME = 0x09,
+     51              FAC_OPCODE_RF_PAIRING = 0x0A,
+     52              FAC_OPCODE_TREBLE = 0x0B,
+     53              FAC_OPCODE_BASS = 0x0C,
+     54              FAC_OPCODE_BTM_PAIRING = 0x0D,
+     55              FAC_OPCODE_CHANNEL_TEST = 0x0E,
+     56              FAC_OPCODE_AQ_CONTROL = 0x0F,
+     57              FAC_OPCODE_VERSION = 0x11,
+     58              FAC_OPCODE_LED_CONTROL = 0x12,
+     59              FAC_OPCODE_AUDIO_FORMAT = 0x13,
+     60              FAC_OPCODE_BTM_CLEAN_DEVICE_LIST = 0x14,
+     61              FAC_OPCODE_UNSUPPORT
+     62          }FAC_OPCODE;
+     63          //_______________________________________________________________
+     64          #define FAC_BT_PAIRING_VAL 1
+     65          //_______________________________________________________________
+     66          typedef struct FACTORY_CMD_HANDLE_PARAMETERS
+     67          {
+     68              xTaskHandle handle;
+     69              TaskHandleState taskState;
+     70              xSemaphoreParameters SParams;
+     71              xQueueParameters Qget;
+     72              xQueueParameters Qset;
+     73          } xFacServiceHandleParams;
+     74          //________________________________________________________________
+     75          static xFacServiceHandleParams xFacServiceHandler;
+     76          static xBTHandleCommand mFacBTHandleCommand;
+     77          static xHMISystemParams mFacSystemParms;
+     78          
+     79          static xHMISystemParams mFactoryParams = { 
+     80              SYS_EVENT_NULL,
+     81              MODE_FACTORY,    
+     82              DEFAULT_APD,
+     83              FACTORY_INPUT_SRC,
+     84              DEFAULT_MUTE_STATE, /*mute*/
+     85              FACTORY_MASTER_GAIN, /*master gain*/
+     86              DEFAULT_BASS_GAIN,
+     87              DEFAULT_TREBLE_GAIN,
+     88              DEFAULT_SUB_GAIN,
+     89              DEFAULT_CENTER_GAIN,
+     90              DEFAULT_REAR_GAIN,
+     91              DEFAULT_BALANCE,
+     92              DEFAULT_SRS_TRUVOL,
+     93              DEFAULT_SRS_TSHD,
+     94              DEFAULT_NIGHT_MODE,
+     95              DEFAULT_AV_DELAY,
+     96              DEFAULT_VIZIO_RMT,
+     97              FACTORY_AID,
+     98          #if ( configSII_DEV_953x_PORTING == 1 )
+     99              DEFAULT_CEC_SAC,
+    100              DEFAULT_CEC_ARC,
+    101              DEFAULT_CEC_ARC_Tx
+    102          #endif
+    103          };
+    104          const xHMISystemParams *pFacParams = &mFactoryParams;
+    105          
+    106          
+    107          static uint8 FactoryPackage[FACTORY_PACKAGE_MAX]={0xff};
+    108          static uint8 *pPackage = FactoryPackage;
+    109          static uint8 mChannelTest = 0;
+    110          static bool mAQSwitch = TRUE;
+    111          //________________________________________________________________
+    112          //extern void AudioDeviceManager_lowlevel_AudioRouter( uint8 idx );
+    113          extern void AudioDeviceManager_lowlevel_AudioRouter( AudioRouteCtrl idx );
+    114          
+    115          extern void ButtonCmdDispatcher_switchControl( bool val );
+    116          
+    117          extern uint8 ButtonCmdDispatcher_getSwitchStatus( void );
+    118          
+    119          extern uint8 ButtonLowLevel_get_btn_ADC_Value( void );
+    120          
+    121          //________________________________________________________________
+    122          static bool FactoryCmdHandler_transfer2Task( void *params ); 
+    123          
+    124          static void FactoryCmdHandler_ackSuccess( uint8 *pdata );
+    125          
+    126          //________________________________________________________________
+    127          extern CDC_IF_Prop_TypeDef  APP_FOPS;
+    128          extern HMI_FACTORY_OBJECT *pHFS_ObjCtrl;
+    129          extern STORAGE_DEVICE_MANAGER_OBJECT *pSDM_ObjCtrl;
+    130          extern AUDIO_DEVICE_MANAGER_OBJECT *pADM_ObjCtrl;
+    131          extern AUDIO_LOWLEVEL_DRIVER_OBJECT *pAudLowLevel_ObjCtrl;
+    132          extern BT_HANDLE_OBJECT *pBTHandle_ObjCtrl;
+    133          extern RF_HANDLE_OBJECT *pRFHandle_ObjCtrl; 
+    134          extern UI_DEV_MANAGER_OBJECT *pUDM_ObjCtrl;
+    135          extern CCK_MANAGE_OBJECT *pCCKManage_ObjCtrl;
+    136          extern AUDIO_SYSTEM_HANDLER_OBJECT *pASH_ObjCtrl;
+    137          
+    138          const FACTORY_CMD_HANDLE_OBJECT FactoryHandler =
+    139          {
+    140              FactoryCmdHandler_transfer2Task,
+    141              FactoryCmdHandler_ackSuccess
+    142          };
+    143          const FACTORY_CMD_HANDLE_OBJECT *pFMD_ObjCtrl = &FactoryHandler;
+    144          //________________________________________________________________
+    145          
+    146          static bool FactoryCmdHandler_transfer2Task( void *params ) 
+    147          {
+    148              byte *pSender = (byte*)params;
+    149              
+    150              if ( xQueueSend( xFacServiceHandler.Qget.xQueue, pSender, xFacServiceHandler.Qget.xBlockTime ) != pdPASS )
+    151              {
+    152                  TRACE_ERROR((0, "FactoryCmdHandler_AckCommand sends queue failure "));
+    153                  return FALSE;
+    154              }
+    155              
+    156              return TRUE;
+    157          }
+    158          
+    159          static bool FactoryCmdHandler_getPacket( uint8 *pdata ) 
+    160          {
+    161              if ( pdata == NULL )
+    162              {
+    163                  TRACE_ERROR((0, " FactoryCmdHandler_GetCommand instruction recevier error !! "));
+    164              }
+    165              
+    166              if ( xFacServiceHandler.Qget.xQueue == NULL )
+    167              {
+    168                  return FALSE;
+    169              }
+    170          
+    171              if ( xQueueReceive( xFacServiceHandler.Qget.xQueue, pdata, xFacServiceHandler.Qget.xBlockTime ) != pdPASS )
+    172              {
+    173                  TRACE_ERROR((0, " FactoryCmdHandler_GetCommand receiver queue is failure "));
+    174                  return FALSE;
+    175              }
+    176          
+    177              return TRUE;
+    178          }
+    179          
+    180          static uint8 FactoryCmdHandler_CalculateChecksum( uint8 *pdata )
+    181          {
+    182              uint8 length = *( pdata + FAC_RECV_CMD_LEN_POS  ); /*length*/
+    183              uint8 i = 0;
+    184              uint8 checksum = 0x00;
+    185          
+    186              for ( i = 0; i < (length - 1) ; i++ )
+    187              {
+    188                  checksum ^= *( pdata + i );
+    189              }
+    190              
+    191              return checksum;
+    192          }
+    193          
+    194          static void FactoryCmdHandler_sendPackage( const void *params )
+    195          {
+    196              uint8 *pData = ( uint8 *)params;
+    197          
+    198              if ( pData == NULL )
+    199                  return;        
+    200          
+    201               /*send UART data to upstream*/
+    202              APP_FOPS.pIf_DataTx( pData, *( pData + FAC_RECV_CMD_LEN_POS ));
+    203          }
+    204          
+    205          static bool FactoryCmdHander_ackChecksumError( uint8 *pdata )
+    206          {
+    207              uint8 payload_len = 0;
+    208              uint8 checksum = 0x00;
+    209          
+    210              if ( pdata == NULL )
+    211                  return FALSE;
+    212          
+    213              payload_len = *( pdata + FAC_RECV_CMD_LEN_POS  );
+    214              checksum = FactoryCmdHandler_CalculateChecksum( pdata );
+    215              if( checksum != ( *( pdata + ( payload_len - 1 ) ) )) 
+    216              {
+    217                  *( pdata + FAC_RECV_CMD_TYPE_POS  ) = FAC_CMD_TYPE_SET;
+    218                  *( pdata + FAC_RECV_CMD_LEN_POS   ) = 0x07;
+    219                  *( pdata + FAC_RECV_OPCODE_POS  ) = 0xFE; 
+    220                  
+    221          #if ( configReturnChecksum == 1 )
+    222                  *( pdata + FAC_ACK_STATUS_POS ) = checksum;
+    223          #else
+    224                  *( pdata + FAC_ACK_STATUS_POS ) = FAC_ACK_CHECKSUM_NG; 
+    225          #endif 
+    226                  *( pdata + ( payload_len - 1 ) ) = FactoryCmdHandler_CalculateChecksum( pdata );
+    227                  FactoryCmdHandler_sendPackage( pdata );
+    228                  return FALSE;
+    229              }
+    230          
+    231              return TRUE;
+    232          }
+    233          
+    234          static bool FactoryCmdHandler_ackInvalidCmdType( uint8 *pdata )
+    235          {
+    236              uint8 payload_len = 0;
+    237          
+    238              if ( pdata == NULL )
+    239                  return FALSE;
+    240          
+    241              payload_len = *( pdata + 2 );
+    242          
+    243              if ( (*( pdata + 1 ) != FAC_CMD_TYPE_SET) && (*( pdata + 1 ) != FAC_CMD_TYPE_GET) )
+    244              {
+    245                  *( pdata + FAC_RECV_CMD_TYPE_POS  ) = FAC_CMD_TYPE_SET;
+    246                  *( pdata + FAC_RECV_CMD_LEN_POS   ) = 0x07;
+    247                  *( pdata + FAC_RECV_OPCODE_POS  ) = 0xFE; 
+    248                  *( pdata + FAC_ACK_STATUS_POS ) = FAC_ACK_INVALID_CMD_TYPE; 
+    249                  *( pdata + ( payload_len - 1 ) ) = FactoryCmdHandler_CalculateChecksum( pdata );
+    250                  FactoryCmdHandler_sendPackage( pdata );
+    251                  return FALSE;
+    252              }
+    253          
+    254              return TRUE;
+    255          }
+    256          
+    257          static bool FactoryCmdHandler_ackInvalidFunctionCode( uint8 *pdata )
+    258          {
+    259              uint8 payload_len = 0;
+    260          
+    261              if ( pdata == NULL )
+    262                  return FALSE;
+    263          
+    264              payload_len = *( pdata + 2 );
+    265          
+    266              if ( *( pdata + 3 ) >= FAC_OPCODE_UNSUPPORT ) 
+    267              {
+    268                  *( pdata + FAC_RECV_CMD_TYPE_POS  ) = FAC_CMD_TYPE_SET;
+    269                  *( pdata + FAC_RECV_CMD_LEN_POS   ) = 0x07;
+    270                  *( pdata + FAC_RECV_OPCODE_POS  ) = 0xFE; 
+    271                  *( pdata + FAC_ACK_STATUS_POS ) = FAC_ACK_OPCODE_OR_OUT_OF_RANG ; /*  invalid function code command */
+    272                  *( pdata + ( payload_len - 1 ) ) = FactoryCmdHandler_CalculateChecksum( pdata );
+    273                  FactoryCmdHandler_sendPackage( pdata );
+    274                  return FALSE;
+    275              }
+    276          
+    277              return TRUE;
+    278          }
+    279          
+    280          static void FactoryCmdHandler_ackOutOfRange( uint8 *pdata )
+    281          {
+    282              uint8 payload_len = 0;
+    283          
+    284              if ( pdata == NULL )
+    285                  return;
+    286          
+    287              payload_len = *( pdata + 2 );
+    288          
+    289              *( pdata + FAC_RECV_CMD_TYPE_POS  ) = FAC_CMD_TYPE_SET;
+    290              *( pdata + FAC_RECV_CMD_LEN_POS   ) = 0x07;
+    291              *( pdata + FAC_RECV_OPCODE_POS  ) = 0xFE; 
+    292              *( pdata + FAC_ACK_STATUS_POS ) = FAC_ACK_OPCODE_OR_OUT_OF_RANG ; /*  invalid function code command */
+    293              *( pdata + ( payload_len - 1 ) ) = FactoryCmdHandler_CalculateChecksum( pdata );
+    294              FactoryCmdHandler_sendPackage( pdata );
+    295          }
+    296          
+    297          
+    298          static void FactoryCmdHandler_ackSuccess( uint8 *pdata )
+    299          {
+    300              uint8 payload_len = 0;
+    301              uint8 *ptr = pdata; 
+    302          
+    303              if ( ptr == NULL )
+    304              {
+    305                  ptr = FactoryPackage;
+    306              }
+    307          
+    308              payload_len = *( ptr + FAC_RECV_CMD_LEN_POS  );
+    309              *( ptr + FAC_ACK_STATUS_POS ) = FAC_ACK_SUCCESS; /*  return success command */
+    310              *( ptr + ( payload_len - 1 ) ) = FactoryCmdHandler_CalculateChecksum( ptr );
+    311              FactoryCmdHandler_sendPackage( ptr );
+    312          }
+    313          
+    314          static void FactoryCmdHandler_returnData( uint8 *pdata )
+    315          {
+    316              uint8 payload_len = 0;
+    317              uint8 *ptr = pdata; 
+    318          
+    319              if ( ptr == NULL )
+    320              {
+    321                  ptr = FactoryPackage;
+    322              }
+    323          
+    324              payload_len = *( ptr + FAC_RECV_CMD_LEN_POS  );
+    325              *( ptr + ( payload_len - 1 ) ) = FactoryCmdHandler_CalculateChecksum( ptr );
+    326              FactoryCmdHandler_sendPackage( ptr );
+    327          }
+    328          
+    329          
+    330          static bool FactoryCmdHandler_IsPackageLegal( uint8 *pdata )
+    331          {
+    332              if ( pdata == NULL )
+    333                  return FALSE;        
+    334          
+    335              if (FactoryCmdHander_ackChecksumError( pdata ) == FALSE )
+    336              {
+    337                  return FALSE;
+    338                 }
+    339          
+    340              if ( FactoryCmdHandler_ackInvalidCmdType( pdata ) == FALSE )
+    341              {
+    342                  return FALSE;
+    343              }
+    344          
+    345              if ( FactoryCmdHandler_ackInvalidFunctionCode( pdata ) == FALSE )
+    346              {
+    347                  return FALSE;
+    348              }
+    349                
+    350              return TRUE;
+    351          }
+    352          
+    353          static void FactoryCmdHandler_setCommandHandle( uint8 *pdata )
+    354          {
+    355              if ( pdata == NULL )
+    356                  return;
+    357          
+    358              if ( *( pdata + FAC_RECV_CMD_TYPE_POS ) != FAC_CMD_TYPE_SET )
+    359                  return;
+    360          
+    361              switch( *( pdata + FAC_RECV_OPCODE_POS) )    
+    362              {
+    363                  case FAC_OPCODE_FACTORY_MODE:
+    364                  {
+    365                      if ( *( pdata + FAC_RECV_DATA_POS ) > 0x01 )
+    366                      {
+    367                          FactoryCmdHandler_ackOutOfRange( pdata );
+    368                      }
+    369                      else
+    370                      {
+    371                          if ( *( pdata + FAC_RECV_DATA_POS ) == 0x01 )
+    372                          {
+    373                              mFactoryParams.sys_event = SYS_EVENT_FAC_SET_MODE_ON;
+    374                              mFactoryParams.op_mode = MODE_FACTORY;
+    375                              pHFS_ObjCtrl->cmd_handle( &mFactoryParams );
+    376                          }
+    377                          else if ( ( *( pdata + FAC_RECV_DATA_POS ) == 0x00 ))
+    378                          {
+    379                              mFactoryParams.sys_event = SYS_EVENT_FAC_SET_MODE_OFF;
+    380                              pHFS_ObjCtrl->cmd_handle( &mFactoryParams );
+    381                              mFactoryParams.op_mode = MODE_USER;
+    382                          }
+    383                      }
+    384                  }
+    385                      break;
+    386          
+    387                  case FAC_OPCODE_RESET_SETTING:
+    388                  {
+    389                      if ( *( pdata + FAC_RECV_DATA_POS ) > 0x01 )
+    390                      {
+    391                          FactoryCmdHandler_ackOutOfRange( pdata );
+    392                      }
+    393                      else
+    394                      {
+    395                          if ( ( *( pdata + FAC_RECV_DATA_POS ) == 0x00 ))
+    396                          {
+    397                              mFactoryParams.sys_event = SYS_EVENT_SYSTEM_RESET;
+    398                              pHFS_ObjCtrl->cmd_handle( &mFactoryParams );
+    399                              mFactoryParams.op_mode = MODE_USER;
+    400                          }
+    401                      }
+    402                  }
+    403                      break;
+    404          
+    405                  case FAC_OPCODE_SN:
+    406                  {
+    407                      uint8 length = 0;
+    408                      uint8 sn_buf[15];
+    409          
+    410                      if ( pFacParams->op_mode == MODE_FACTORY )
+    411                      {
+    412                          if( *( pdata + FAC_RECV_CMD_LEN_POS ) > 21 )
+    413                          {
+    414                              FactoryCmdHandler_ackOutOfRange( pdata );
+    415                          }
+    416                          else
+    417                          {
+    418                              length = *( pdata + FAC_RECV_CMD_LEN_POS );
+    419                              if ( length > 7 )
+    420                              {
+    421                                  length = length - 6;
+    422                                  memcpy(sn_buf, (pdata + FAC_RECV_DATA_POS), length );
+    423                                  if ( pSDM_ObjCtrl->write( STORAGE_DEVICE_CELL_PRODUCT_SERIAL_NUMBER , sn_buf) == FALSE )
+    424                                  {
+    425                                      FactoryCmdHandler_ackOutOfRange( pdata );
+    426                                  }
+    427                                  else
+    428                                  {
+    429                                      *( pdata + FAC_RECV_CMD_LEN_POS ) = 7;
+    430                                      FactoryCmdHandler_ackSuccess( pdata );
+    431                                  }
+    432                              }
+    433                          }
+    434                      }
+    435                  }
+    436                      break;
+    437          
+    438                  case FAC_OPCODE_KP_SWITCH:
+    439                  {
+    440                      if ( pFacParams->op_mode == MODE_FACTORY )
+    441                      {
+    442                          if ( *( pdata + FAC_RECV_DATA_POS ) > 1 )
+    443                          {
+    444                              FactoryCmdHandler_ackOutOfRange( pdata );
+    445                          }
+    446                          else
+    447                          {
+    448                              if ( *( pdata + FAC_RECV_DATA_POS ) == 1 )
+    449                              {
+    450                                  ButtonCmdDispatcher_switchControl( TRUE );
+    451                                  FactoryCmdHandler_ackSuccess( pdata );
+    452                              }
+    453                              else if ( *( pdata + FAC_RECV_DATA_POS ) == 0 )
+    454                              {
+    455                                  ButtonCmdDispatcher_switchControl( FALSE );
+    456                                  FactoryCmdHandler_ackSuccess( pdata );
+    457                              }
+    458                          }
+    459                      }
+    460                  }
+    461                      break;
+    462          
+    463                  case FAC_OPCODE_SOURCE:
+    464                  {
+    465                      if ( pFacParams->op_mode == MODE_FACTORY )
+    466                      {
+    467                          if ( *( pdata + FAC_RECV_DATA_POS ) >=AUDIO_SOURCE_MAX )  
+    468                          {
+    469                              FactoryCmdHandler_ackOutOfRange( pdata );
+    470                          }
+    471                          else
+    472                          {
+    473          
+    474          #if ( configSII_DEV_953x_PORTING == 1 )
+    475                              if ((AUDIO_SOURCE)*( pdata + FAC_RECV_DATA_POS )==4)
+    476                              {
+    477                                  mFactoryParams.input_src = AUDIO_SOURCE_USB_PLAYBACK;
+    478                              }
+    479                              else if ((AUDIO_SOURCE)*( pdata + FAC_RECV_DATA_POS )==5)
+    480                              {
+    481                                  mFactoryParams.input_src = AUDIO_SOURCE_BLUETOOTH;
+    482                              }
+    483                              else if ((AUDIO_SOURCE)*( pdata + FAC_RECV_DATA_POS )==6)
+    484                              {
+    485                                  mFactoryParams.input_src = AUDIO_SOURCE_HDMI_IN;
+    486                              }               
+    487                              else if ((AUDIO_SOURCE)*( pdata + FAC_RECV_DATA_POS )==7)
+    488                              {
+    489                                  mFactoryParams.input_src = AUDIO_SOURCE_HDMI_ARC;
+    490                              } 
+    491                              else
+    492                              {
+    493                                  mFactoryParams.input_src = (AUDIO_SOURCE)*( pdata + FAC_RECV_DATA_POS );
+    494                              }
+    495          #else
+    496                              mFactoryParams.input_src = (AUDIO_SOURCE)*( pdata + FAC_RECV_DATA_POS );
+    497          #endif
+    498                              
+    499                              mFactoryParams.sys_event = SYS_EVENT_SEL_SRC;
+    500                              pHFS_ObjCtrl->cmd_handle( &mFactoryParams );
+    501                          }
+    502                      }
+    503                  }
+    504                      break;
+    505          
+    506                  case FAC_OPCODE_MUTE:
+    507                  {
+    508                      if ( pFacParams->op_mode == MODE_FACTORY )
+    509                      {
+    510                          if ( *( pdata + FAC_RECV_DATA_POS ) > SOUND_MUTE )
+    511                          {
+    512                              FactoryCmdHandler_ackOutOfRange( pdata );
+    513                          }
+    514                          else
+    515                          {
+    516                              mFactoryParams.sys_event = SYS_EVENT_VOLUME_MUTE_SET;
+    517                              mFactoryParams.mute = (bool) *( pdata + FAC_RECV_DATA_POS );
+    518                              pHFS_ObjCtrl->cmd_handle( &mFactoryParams );
+    519                          }
+    520                      }
+    521                  }
+    522                      break;
+    523          
+    524                  case FAC_OPCODE_VOLUME:
+    525                  {
+    526                      if ( pFacParams->op_mode == MODE_FACTORY )
+    527                      {
+    528                          if ( *( pdata + FAC_RECV_DATA_POS ) > MASTER_GAIN_MAX )
+    529                          {
+    530                              FactoryCmdHandler_ackOutOfRange( pdata );
+    531                          }
+    532                          else
+    533                          {
+    534                              mFactoryParams.sys_event = SYS_EVENT_VOLUME_SET;
+    535                              mFactoryParams.master_gain= (uint8) *( pdata + FAC_RECV_DATA_POS );
+    536                              pHFS_ObjCtrl->cmd_handle( &mFactoryParams );
+    537                          }
+    538                      }
+    539                  }
+    540                      break;
+    541          
+    542                  case FAC_OPCODE_RF_PAIRING:
+    543                  {
+    544                      if ( pFacParams->op_mode == MODE_FACTORY )
+    545                      {
+    546                          if ( *( pdata + FAC_RECV_DATA_POS ) > 1 )
+    547                          {
+    548                              TRACE_DEBUG((0,"FactoryCmdHandler_ackOutOfRange"));
+    549                              FactoryCmdHandler_ackOutOfRange( pdata );
+    550                          }
+    551                          else
+    552                          {
+    553                              TRACE_DEBUG((0,"1RF_HANDLE_PAIRING_PHASE1"));
+    554                              xRFHandleCommand mRFHandleCommand;
+    555          
+    556                              mRFHandleCommand = RF_HANDLE_PAIRING_PHASE1;
+    557                              pRFHandle_ObjCtrl->rf_instr_sender(&mRFHandleCommand);
+    558                              pUDM_ObjCtrl->ExceptionSendEvent(UI_EVENT_RF_PAIRING);
+    559                              FactoryCmdHandler_ackSuccess( pdata );
+    560                              TRACE_DEBUG((0,"2RF_HANDLE_PAIRING_PHASE1"));
+    561                          }
+    562                      }
+    563                  }
+    564                      break;
+    565          
+    566                  case FAC_OPCODE_TREBLE:
+    567                  {
+    568                      if ( pFacParams->op_mode == MODE_FACTORY )
+    569                      {
+    570                          if ( *( pdata + FAC_RECV_DATA_POS ) > TREBLE_MAX )
+    571                          {
+    572                              FactoryCmdHandler_ackOutOfRange( pdata );
+    573                          }
+    574                          else
+    575                          {
+    576                              mFactoryParams.sys_event = SYS_EVENT_TREBLE_SET;
+    577                              mFactoryParams.treble_gain= (uint8) *( pdata + FAC_RECV_DATA_POS );
+    578                              pHFS_ObjCtrl->cmd_handle( &mFactoryParams );
+    579                          }
+    580                      }
+    581                  }
+    582                      break;
+    583          
+    584                  case FAC_OPCODE_BASS:
+    585                  {
+    586                      if ( pFacParams->op_mode == MODE_FACTORY )
+    587                      {
+    588                          if ( *( pdata + FAC_RECV_DATA_POS ) > BASS_MAX )
+    589                          {
+    590                              FactoryCmdHandler_ackOutOfRange( pdata );
+    591                          }
+    592                          else
+    593                          {
+    594                              mFactoryParams.sys_event = SYS_EVENT_BASS_SET;
+    595                              mFactoryParams.bass_gain= (uint8) *( pdata + FAC_RECV_DATA_POS );
+    596                              pHFS_ObjCtrl->cmd_handle( &mFactoryParams );
+    597                          }
+    598                      }
+    599                  }
+    600                      break;
+    601          
+    602                  case FAC_OPCODE_BTM_PAIRING:
+    603                  {
+    604                      if ( pFacParams->op_mode == MODE_FACTORY )
+    605                      {
+    606                          if ( *( pdata + FAC_RECV_DATA_POS ) != FAC_BT_PAIRING_VAL )
+    607                          {
+    608                              FactoryCmdHandler_ackOutOfRange( pdata );
+    609                          }
+    610                          else
+    611                          {
+    612                              mFactoryParams.sys_event = SYS_EVENT_BT_PAIRING;
+    613                              pHFS_ObjCtrl->cmd_handle( &mFactoryParams );
+    614                          }
+    615                      }
+    616                  }
+    617                      break;
+    618          
+    619                     case FAC_OPCODE_CHANNEL_TEST:
+    620                  {
+    621                      if ( pFacParams->op_mode == MODE_FACTORY )
+    622                      {
+    623                          if ( *( pdata + FAC_RECV_DATA_POS ) > 4 )
+    624                          {
+    625                              FactoryCmdHandler_ackOutOfRange( pdata );
+    626                          }
+    627                          else
+    628                          {
+    629                              switch( *( pdata + FAC_RECV_DATA_POS ) )
+    630                              {
+    631                                  case 0: /*normal mode*/
+    632                                  {
+    633                                      mFactoryParams.sys_event = SYS_EVENT_FAC_ROUTE_CTRL_DISABLE;
+    634                                      pHFS_ObjCtrl->cmd_handle( &mFactoryParams );
+    635                                      mChannelTest = *( pdata + FAC_RECV_DATA_POS );
+    636                                  }    
+    637                                      break;
+    638          
+    639                                  case 1: /*L/R channel test */
+    640                                  {
+    641                                      mFactoryParams.sys_event = SYS_EVENT_FAC_ROUTE_CTRL_FL_FR;
+    642                                      pHFS_ObjCtrl->cmd_handle( &mFactoryParams );
+    643                                      mChannelTest = *( pdata + FAC_RECV_DATA_POS );
+    644                                  }
+    645                                      break;
+    646          
+    647                                  case 2: /*LS/RS channel test*/
+    648                                  {
+    649                                      mFactoryParams.sys_event = SYS_EVENT_FAC_ROUTE_CTRL_RR_RL;
+    650                                      pHFS_ObjCtrl->cmd_handle( &mFactoryParams );
+    651                                      mChannelTest = *( pdata + FAC_RECV_DATA_POS );
+    652                                  }
+    653                                      break;
+    654          
+    655                                  case 3:/*center channel test*/
+    656                                  {
+    657                                      mFactoryParams.sys_event = SYS_EVENT_FAC_ROUTE_CTRL_CENTER;
+    658                                      pHFS_ObjCtrl->cmd_handle( &mFactoryParams );
+    659                                      mChannelTest = *( pdata + FAC_RECV_DATA_POS );
+    660                                  }
+    661                                      break;  
+    662                                      
+    663                                  case 4: /*woofer channel test*/
+    664                                  {
+    665                                      mFactoryParams.sys_event = SYS_EVENT_FAC_ROUTE_CTRL_LFE0;
+    666                                      pHFS_ObjCtrl->cmd_handle( &mFactoryParams );
+    667                                      mChannelTest = *( pdata + FAC_RECV_DATA_POS );
+    668                                  }    
+    669                                      break;
+    670          
+    671                                  default:
+    672                                      break;     
+    673                              }
+    674                          }
+    675                      }
+    676                  }
+    677                      break;
+    678          
+    679                  case FAC_OPCODE_AQ_CONTROL:
+    680                  {
+    681                      if ( pFacParams->op_mode == MODE_FACTORY )
+    682                      {
+    683                          if ( *( pdata + FAC_RECV_DATA_POS ) > 1 )
+    684                          {
+    685                              FactoryCmdHandler_ackOutOfRange( pdata );
+    686                          }
+    687                          else
+    688                          {
+    689                              if ( *( pdata + FAC_RECV_DATA_POS ) == 1 )
+    690                              {
+    691                                  mFactoryParams.sys_event = SYS_EVENT_FAC_AQ_CTRL_ON;
+    692                                  pHFS_ObjCtrl->cmd_handle( &mFactoryParams );
+    693                                  mAQSwitch = TRUE;
+    694                              }
+    695                              else if ( *( pdata + FAC_RECV_DATA_POS ) == 0 )
+    696                              {
+    697                                  mFactoryParams.sys_event = SYS_EVENT_FAC_AQ_CTRL_OFF;
+    698                                  pHFS_ObjCtrl->cmd_handle( &mFactoryParams );
+    699                                  mAQSwitch = FALSE;
+    700                              }
+    701                          }
+    702                      }
+    703                  }
+    704                      break;
+    705              
+    706                   case FAC_OPCODE_LED_CONTROL:
+    707                  {
+    708                      if ( pFacParams->op_mode == MODE_FACTORY )
+    709                      {
+    710                         switch (*( pdata + FAC_RECV_DATA_POS ))
+    711                          {
+    712                              case 0xff: 
+    713                              {
+    714                                  mFactoryParams.sys_event = SYS_EVENT_FAC_ALL_LED;
+    715                                  pHFS_ObjCtrl->cmd_handle( &mFactoryParams );
+    716                              }
+    717                                  break;
+    718                                  
+    719                              case 0x00:
+    720                              {
+    721                                  mFactoryParams.sys_event = SYS_EVENT_FAC_NO_LED;
+    722                                  pHFS_ObjCtrl->cmd_handle( &mFactoryParams );
+    723                              }
+    724                                  break;
+    725                                  
+    726                              case 0x01:
+    727                              {
+    728                                  mFactoryParams.sys_event = SYS_EVENT_FAC_LED1;
+    729                                  pHFS_ObjCtrl->cmd_handle( &mFactoryParams );
+    730                              }
+    731                                  break;
+    732                                  
+    733                              case 0x02:
+    734                              {
+    735                                  mFactoryParams.sys_event = SYS_EVENT_FAC_LED2;
+    736                                  pHFS_ObjCtrl->cmd_handle( &mFactoryParams );
+    737                              }
+    738                                  break;
+    739          
+    740                              case 0x03:
+    741                              {
+    742                                  mFactoryParams.sys_event = SYS_EVENT_FAC_LED3;
+    743                                  pHFS_ObjCtrl->cmd_handle( &mFactoryParams );
+    744                              }
+    745                                  break;
+    746                                  
+    747                              case 0x04:
+    748                              {
+    749                                  mFactoryParams.sys_event = SYS_EVENT_FAC_LED4;
+    750                                  pHFS_ObjCtrl->cmd_handle( &mFactoryParams );
+    751                              }
+    752                                  break;
+    753          
+    754                              case 0x05:
+    755                              {
+    756                                  mFactoryParams.sys_event = SYS_EVENT_FAC_LED5;
+    757                                  pHFS_ObjCtrl->cmd_handle( &mFactoryParams );
+    758                              }
+    759                                  break;
+    760                                  
+    761                              case 0x06:
+    762                              {
+    763                                  mFactoryParams.sys_event = SYS_EVENT_FAC_LED6;
+    764                                  pHFS_ObjCtrl->cmd_handle( &mFactoryParams );
+    765                              }
+    766                                  break;
+    767                                  
+    768                              case 0x07:
+    769                              {
+    770                                  mFactoryParams.sys_event = SYS_EVENT_FAC_LED7;
+    771                                  pHFS_ObjCtrl->cmd_handle( &mFactoryParams );
+    772                              }
+    773                                  break;
+    774                                  
+    775                              case 0x08:
+    776                              {
+    777                                  mFactoryParams.sys_event = SYS_EVENT_FAC_LED8;
+    778                                  pHFS_ObjCtrl->cmd_handle( &mFactoryParams );
+    779                              }
+    780                                  break;
+    781          
+    782                              case 0x09:
+    783                              {
+    784                                  mFactoryParams.sys_event = SYS_EVENT_FAC_LED9;
+    785                                  pHFS_ObjCtrl->cmd_handle( &mFactoryParams );
+    786                              }
+    787                                  break;
+    788                                  
+    789                              case 0x0A:
+    790                              {
+    791                                  mFactoryParams.sys_event = SYS_EVENT_FAC_LED10;
+    792                                  pHFS_ObjCtrl->cmd_handle( &mFactoryParams );
+    793                              }
+    794                                  break;
+    795                                  
+    796                              case 0x0B:
+    797                              {
+    798                                  mFactoryParams.sys_event = SYS_EVENT_FAC_LED11;
+    799                                  pHFS_ObjCtrl->cmd_handle( &mFactoryParams );
+    800                              }
+    801                                  break;
+    802                                  
+    803                              case 0x0C:
+    804                              {
+    805                                  mFactoryParams.sys_event = SYS_EVENT_FAC_LED12;
+    806                                  pHFS_ObjCtrl->cmd_handle( &mFactoryParams );
+    807                              }
+    808                                  break;
+    809                                  
+    810                              case 0x0D:
+    811                              {
+    812                                  mFactoryParams.sys_event = SYS_EVENT_FAC_LED13;
+    813                                  pHFS_ObjCtrl->cmd_handle( &mFactoryParams );
+    814                              }
+    815                                  break;
+    816          
+    817                              case 0x0E:
+    818                              {
+    819                                  mFactoryParams.sys_event = SYS_EVENT_FAC_LED14;
+    820                                  pHFS_ObjCtrl->cmd_handle( &mFactoryParams );
+    821                              }
+    822                                  break;
+    823          
+    824                              default:
+    825                              {
+    826                                  FactoryCmdHandler_ackOutOfRange( pdata );
+    827                              }
+    828                                  break;           
+    829                          }
+    830                      }
+    831                  }
+    832                      break;
+    833          
+    834                  case FAC_OPCODE_BTM_CLEAN_DEVICE_LIST:
+    835                  {
+    836                      if ( pFacParams->op_mode == MODE_FACTORY )
+    837                      {
+    838          #if 1
+    839                          xHMISystemParams mFacSystemParams;
+    840                          mFacSystemParams.sys_event = SYS_EVENT_SYSTEM_RESET;
+    841                          pBTHandle_ObjCtrl->SendEvent( &mFacSystemParams );                
+    842          #endif
+    843          #if 0 //using new BT mechanism
+    844                          mFacBTHandleCommand = BT_HANDLE_CLEAN_DEVICE;
+    845                          pBTHandle_ObjCtrl->bt_instr_sender(&mFacBTHandleCommand);
+    846                          vTaskDelay( 4500 );
+    847                          //pUDM_ObjCtrl->ExceptionSendEvent(UI_EVENT_BT_CLEAN_DEVICE);                
+    848                          //vTaskDelay( 1800 );
+    849          #endif
+    850                          pUDM_ObjCtrl->ExceptionSendEvent(UI_EVENT_BT_CLEAN_DEVICE);                
+    851                          vTaskDelay( 1800 );
+    852          
+    853                          FactoryCmdHandler_ackSuccess( pdata );
+    854                      }
+    855                  }
+    856                      break;
+    857          
+    858                  default:
+    859                      break;
+    860              }
+    861          }
+    862          
+    863          static void FactoryCmdHandler_getCommandHandle( uint8 *pdata )
+    864          {
+    865              if ( pdata == NULL )
+    866                  return;
+    867          
+    868              if ( *( pdata + FAC_RECV_CMD_TYPE_POS ) != FAC_CMD_TYPE_GET )
+    869                  return;
+    870          
+    871              switch( *( pdata + FAC_RECV_OPCODE_POS ) )    
+    872              {
+    873                  case FAC_OPCODE_FACTORY_MODE:
+    874                  {
+    875                      if ( pFacParams->op_mode == MODE_USER )
+    876                      {
+    877                          *( pdata + FAC_RECV_DATA_POS ) = 0;
+    878                          FactoryCmdHandler_ackSuccess( pdata );
+    879                      }
+    880                      else if ( pFacParams->op_mode == MODE_FACTORY )
+    881                      {
+    882                          *( pdata + FAC_RECV_DATA_POS ) = 1;
+    883                          FactoryCmdHandler_returnData( pdata );
+    884                      }
+    885                      else
+    886                      {
+    887                          FactoryCmdHandler_ackOutOfRange( pdata );
+    888                      }
+    889                  }
+    890                      break;
+    891          
+    892                  case FAC_OPCODE_SN:
+    893                  {
+    894                      uint8 sn_buf[15];
+    895          
+    896                      if ( pFacParams->op_mode == MODE_FACTORY )
+    897                      {
+    898                          if ( pSDM_ObjCtrl->read( STORAGE_DEVICE_CELL_PRODUCT_SERIAL_NUMBER , sn_buf) == TRUE )
+    899                          {
+    900                              memcpy((pdata + FAC_RECV_DATA_POS), sn_buf, 15 );
+    901          
+    902                              *( pdata + FAC_RECV_CMD_LEN_POS) = (15+6) ;
+    903                              FactoryCmdHandler_returnData( pdata );
+    904                          }
+    905                          else
+    906                          {
+    907                              FactoryCmdHandler_ackOutOfRange( pdata );
+    908                          }
+    909                      }
+    910                  }
+    911                      break;
+    912          
+    913                  case FAC_OPCODE_KP_ADC_VALUE:
+    914                  {
+    915                      if ( pFacParams->op_mode == MODE_FACTORY )
+    916                      {
+    917                          *( pdata + FAC_RECV_DATA_POS ) = ButtonLowLevel_get_btn_ADC_Value();
+    918                          FactoryCmdHandler_returnData( pdata );
+    919                      }
+    920                  }
+    921                      break;
+    922          
+    923                  case FAC_OPCODE_KP_SWITCH:
+    924                  {
+    925                      if ( pFacParams->op_mode == MODE_FACTORY )
+    926                      {
+    927                          *( pdata + FAC_RECV_DATA_POS ) = ButtonCmdDispatcher_getSwitchStatus();
+    928                          FactoryCmdHandler_returnData( pdata );
+    929                      }
+    930                  }
+    931                      break;
+    932          
+    933                  case FAC_OPCODE_SOURCE:
+    934                  {
+    935                      if ( pFacParams->op_mode == MODE_FACTORY )
+    936                      {
+    937                          *( pdata + FAC_RECV_DATA_POS ) = (uint8)pFacParams->input_src;
+    938                          FactoryCmdHandler_returnData( pdata );
+    939                      }
+    940                  }
+    941                      break;
+    942          
+    943                  case FAC_OPCODE_MUTE:
+    944                  {
+    945                      if ( pFacParams->op_mode == MODE_FACTORY )
+    946                      {
+    947                          *( pdata + FAC_RECV_DATA_POS ) = (uint8)pFacParams->mute;
+    948                          FactoryCmdHandler_returnData( pdata );
+    949                      }
+    950                  }
+    951                      break;
+    952          
+    953                  case FAC_OPCODE_VOLUME:
+    954                  {
+    955                      if ( pFacParams->op_mode == MODE_FACTORY )
+    956                      {
+    957                          *( pdata + FAC_RECV_DATA_POS ) = (uint8)pFacParams->master_gain;
+    958                          FactoryCmdHandler_returnData( pdata );
+    959                      }
+    960                  }
+    961                      break;
+    962          
+    963                  case FAC_OPCODE_RF_PAIRING:
+    964                  {
+    965                      if ( pFacParams->op_mode == MODE_FACTORY )
+    966                      {
+    967                          *( pdata + FAC_RECV_DATA_POS ) = RFHandler_Paired_Status();
+    968                          FactoryCmdHandler_returnData( pdata );
+    969                      }
+    970                  }
+    971                      break;
+    972          
+    973                  case FAC_OPCODE_TREBLE:
+    974                  {
+    975                      if ( pFacParams->op_mode == MODE_FACTORY )
+    976                      {
+    977                          *( pdata + FAC_RECV_DATA_POS ) = (uint8)pFacParams->treble_gain;
+    978                          FactoryCmdHandler_returnData( pdata );
+    979                      }
+    980                  }
+    981                      break;
+    982          
+    983                  case FAC_OPCODE_BASS:
+    984                  {
+    985                      if ( pFacParams->op_mode == MODE_FACTORY )
+    986                      {
+    987                          *( pdata + FAC_RECV_DATA_POS ) = (uint8)pFacParams->bass_gain;
+    988                          FactoryCmdHandler_returnData( pdata );
+    989                      }
+    990                  }
+    991                      break;
+    992          
+    993                  case FAC_OPCODE_BTM_PAIRING:
+    994                  {
+    995                      if ( pFacParams->op_mode == MODE_FACTORY )
+    996                      {
+    997                          if (pBTHandle_ObjCtrl->get_status() == BT_LINKED)
+    998                          {
+    999                              *( pdata + FAC_RECV_DATA_POS ) = 1;
+   1000                          }
+   1001                          else
+   1002                          {
+   1003                              *( pdata + FAC_RECV_DATA_POS ) = 0;
+   1004                          }
+   1005                          
+   1006                          FactoryCmdHandler_returnData( pdata );
+   1007                      }
+   1008                  }
+   1009                      break;
+   1010          
+   1011                  case FAC_OPCODE_CHANNEL_TEST:
+   1012                  {
+   1013                      if ( pFacParams->op_mode == MODE_FACTORY )
+   1014                      {
+   1015                          *( pdata + FAC_RECV_DATA_POS ) = mChannelTest;
+   1016                          FactoryCmdHandler_returnData( pdata );
+   1017                      }
+   1018                  }
+   1019                      break;
+   1020          
+   1021                  case FAC_OPCODE_AQ_CONTROL:
+   1022                  {
+   1023                      if ( pFacParams->op_mode == MODE_FACTORY )
+   1024                      {
+   1025                          *( pdata + FAC_RECV_DATA_POS ) = mAQSwitch;
+   1026                          FactoryCmdHandler_returnData( pdata );
+   1027                      }
+   1028                  }
+   1029                      break;
+   1030          
+   1031                  case FAC_OPCODE_AUDIO_FORMAT:
+   1032                  {
+   1033                      if ( pFacParams->op_mode == MODE_FACTORY )
+   1034                      {
+   1035                          if ( pAudLowLevel_ObjCtrl->getAudioStreamType() == 1 )
+   1036                          {
+   1037                              *( pdata + FAC_RECV_DATA_POS ) = 0x03;
+   1038                          }
+   1039                          else if ( pAudLowLevel_ObjCtrl->getAudioStreamType() == 2 )
+   1040                          {
+   1041                              *( pdata + FAC_RECV_DATA_POS ) = 0x01;
+   1042                          }
+   1043                          else if ( pAudLowLevel_ObjCtrl->getAudioStreamType() == 3 )
+   1044                          {
+   1045                              *( pdata + FAC_RECV_DATA_POS ) = 0x0B;
+   1046                          }
+   1047                          else 
+   1048                          {
+   1049                              *( pdata + FAC_RECV_DATA_POS ) = 0x03;
+   1050                          }
+   1051          
+   1052                          FactoryCmdHandler_returnData( pdata );
+   1053                      }
+   1054                  }
+   1055                      break;
+   1056          
+   1057                  case FAC_OPCODE_VERSION:
+   1058                  {
+   1059                      if ( pFacParams->op_mode == MODE_FACTORY )
+   1060                      {
+   1061                          unsigned char FlashVersionNumber[BYTE_OF_VERSION];
+   1062                          
+   1063                          *( pdata + FAC_RECV_DATA_POS ) = (uint8)( ( VERSION&0xFF00 ) >> 8 );
+   1064                          *( pdata + FAC_RECV_DATA_POS + 1 ) = (uint8)( VERSION&0x00FF ); 
+   1065                          *( pdata + FAC_RECV_CMD_LEN_POS)=2+6+BYTE_OF_VERSION; 
+   1066                          
+   1067                          pCCKManage_ObjCtrl->GetNoiseVersionNum(FlashVersionNumber);
+   1068                          *(pdata + FAC_RECV_DATA_POS + 2) = *(FlashVersionNumber);
+   1069                          *(pdata + FAC_RECV_DATA_POS + 3) = *(FlashVersionNumber+1);
+   1070                          *(pdata + FAC_RECV_DATA_POS + 4) = *(FlashVersionNumber+2);
+   1071                          *(pdata + FAC_RECV_DATA_POS + 5) = *(FlashVersionNumber+3);
+   1072                          *(pdata + FAC_RECV_DATA_POS + 6) = *(FlashVersionNumber+4);
+   1073                          *(pdata + FAC_RECV_DATA_POS + 7) = *(FlashVersionNumber+5);
+   1074                          
+   1075                          FactoryCmdHandler_returnData( pdata );
+   1076                      }
+   1077                  }
+   1078                      break;
+   1079          
+   1080                  default:
+   1081                      break;
+   1082          
+   1083              }
+   1084          }
+   1085          
+   1086          void FactoryCmdHandler_ServiceHandle( void *pvParameters )
+   1087          {
+   1088              for( ;; )
+   1089              {
+   1090                  switch( xFacServiceHandler.taskState )
+   1091                  {
+   1092                      case TASK_SUSPENDED:
+   1093                      {
+   1094                          if ( uxQueueMessagesWaiting(xFacServiceHandler.Qget.xQueue) > 0 )
+   1095                          {
+   1096                              xFacServiceHandler.taskState = TASK_READY;
+   1097                          }
+   1098                          else if ( uxQueueMessagesWaiting(xFacServiceHandler.Qset.xQueue) > 0 )
+   1099                          {
+   1100                              xFacServiceHandler.taskState = TASK_RUNING;
+   1101                          }
+   1102          
+   1103                      }
+   1104                          break;
+   1105                  
+   1106                      case TASK_READY:
+   1107                      {
+   1108                          FactoryCmdHandler_getPacket( pPackage );
+   1109                          if ( FactoryCmdHandler_IsPackageLegal( pPackage ) == TRUE )
+   1110                          {
+   1111                              xFacServiceHandler.taskState = TASK_RUNING;
+   1112                          }
+   1113                          else
+   1114                          {
+   1115                                 xFacServiceHandler.taskState = TASK_SUSPENDED;
+   1116                          }
+   1117                      }
+   1118                          break;
+   1119          
+   1120                      case TASK_RUNING:
+   1121                      {
+   1122                          if (*( pPackage + 1 ) == FAC_CMD_TYPE_SET )
+   1123                          {
+   1124                              FactoryCmdHandler_setCommandHandle( pPackage );
+   1125                          }
+   1126                          else if (*( pPackage + 1 ) == FAC_CMD_TYPE_GET )
+   1127                          {
+   1128                              FactoryCmdHandler_getCommandHandle( pPackage );
+   1129                          }
+   1130                          
+   1131                          xFacServiceHandler.taskState = TASK_SUSPENDED;
+   1132                      }
+   1133                          break;
+   1134          
+   1135                      default:
+   1136                      {
+   1137                          xFacServiceHandler.taskState = TASK_SUSPENDED;
+   1138                      }
+   1139                          break;
+   1140                  }
+   1141          
+   1142                  vTaskDelay( SERVICE_HANLDER_TIME_TICK );
+   1143              }
+   1144          
+   1145          
+   1146          }
+   1147          
+   1148          //________________________________________________________________
+   1149          void FactoryCmdHandler_CreateTask( void )
+   1150          {
+   1151              if ( xTaskCreate( 
+   1152                  FactoryCmdHandler_ServiceHandle, 
+   1153                  ( portCHAR * ) "FAC_HANDLER", 
+   1154                  STACK_SIZE, 
+   1155                  NULL, 
+   1156                  tskFCI_SERVICE_PRIORITY, 
+   1157                  &xFacServiceHandler.handle ) != pdPASS )
+   1158              {
+   1159                  vTaskDelete( xFacServiceHandler.handle );
+   1160                  //TRACE_ERROR((0, "FAC_HANDLER task create failure " ));
+   1161              }
+   1162              else
+   1163              {
+   1164                  //vTaskSuspend( xFacServiceHandler.handle );
+   1165                  TRACE_DEBUG((0, "SUSPEND: FactoryCmdHandler_ServiceHandle "));
+   1166              }
+   1167          
+   1168              xFacServiceHandler.Qget.xQueue = xQueueCreate( FC_QUEUE_LENGTH, (sizeof(uint8)*FACTORY_PACKAGE_MAX) );
+   1169              xFacServiceHandler.Qget.xBlockTime = BLOCK_TIME(0);
+   1170              if( xFacServiceHandler.Qget.xQueue == NULL )
+   1171              {
+   1172                 TRACE_ERROR((0, "FAC_HANDLER queue creates failure " ));
+   1173              }
+   1174          
+   1175              xFacServiceHandler.Qset.xQueue = xQueueCreate( FC_QUEUE_LENGTH, (sizeof(uint8)*FACTORY_PACKAGE_MAX) );
+   1176              xFacServiceHandler.Qset.xBlockTime = BLOCK_TIME(0);
+   1177              if( xFacServiceHandler.Qset.xQueue == NULL )
+   1178              {
+   1179                 TRACE_ERROR((0, "FAC_HANDLER queue creates failure " ));
+   1180              }
+   1181          }
+   1182          
+   1183          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       12  FactoryCmdHandler_CalculateChecksum
+       32  FactoryCmdHandler_CreateTask
+             32 -> Debug_printDebug
+              0 -> Debug_printError
+             32 -> Debug_printError
+             32 -> vTaskDelete
+             32 -> xQueueGenericCreate
+             32 -> xTaskGenericCreate
+       16  FactoryCmdHandler_IsPackageLegal
+             16 -> FactoryCmdHandler_CalculateChecksum
+             16 -> FactoryCmdHandler_sendPackage
+       16  FactoryCmdHandler_ServiceHandle
+             16 -> Debug_printError
+             16 -> FactoryCmdHandler_IsPackageLegal
+             16 -> FactoryCmdHandler_getCommandHandle
+             16 -> FactoryCmdHandler_setCommandHandle
+             16 -> uxQueueMessagesWaiting
+             16 -> vTaskDelay
+             16 -> xQueueGenericReceive
+       16  FactoryCmdHandler_ackOutOfRange
+             16 -> FactoryCmdHandler_CalculateChecksum
+              0 -> FactoryCmdHandler_sendPackage
+       16  FactoryCmdHandler_ackSuccess
+             16 -> FactoryCmdHandler_CalculateChecksum
+              0 -> FactoryCmdHandler_sendPackage
+       40  FactoryCmdHandler_getCommandHandle
+             40 -- Indirect call
+             40 -> ButtonCmdDispatcher_getSwitchStatus
+             40 -> ButtonLowLevel_get_btn_ADC_Value
+             40 -> FactoryCmdHandler_ackOutOfRange
+             40 -> FactoryCmdHandler_ackSuccess
+             40 -> FactoryCmdHandler_returnData
+             40 -> RFHandler_Paired_Status
+             40 -> __aeabi_memcpy
+       16  FactoryCmdHandler_returnData
+             16 -> FactoryCmdHandler_CalculateChecksum
+              0 -> FactoryCmdHandler_sendPackage
+        0  FactoryCmdHandler_sendPackage
+              0 -- Indirect call
+       64  FactoryCmdHandler_setCommandHandle
+             64 -- Indirect call
+             64 -> ButtonCmdDispatcher_switchControl
+             64 -> Debug_printDebug
+             64 -> FactoryCmdHandler_ackOutOfRange
+             64 -> FactoryCmdHandler_ackSuccess
+             64 -> __aeabi_memcpy
+             64 -> vTaskDelay
+        8  FactoryCmdHandler_transfer2Task
+              8 -> Debug_printError
+              8 -> xQueueGenericSend
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      64  ?<Constant " FactoryCmdHandler_Ge...">
+      60  ?<Constant " FactoryCmdHandler_Ge...">_1
+      28  ?<Constant "1RF_HANDLE_PAIRING_PH...">
+      28  ?<Constant "2RF_HANDLE_PAIRING_PH...">
+      36  ?<Constant "FAC_HANDLER queue cre...">
+      12  ?<Constant "FAC_HANDLER">
+      52  ?<Constant "FactoryCmdHandler_Ack...">
+      32  ?<Constant "FactoryCmdHandler_ack...">
+      44  ?<Constant "SUSPEND: FactoryCmdHa...">
+       4  ??DataTable17
+       4  ??DataTable17_1
+       4  ??DataTable17_10
+       4  ??DataTable17_11
+       4  ??DataTable17_2
+       4  ??DataTable17_3
+       4  ??DataTable17_4
+       4  ??DataTable17_5
+       4  ??DataTable17_6
+       4  ??DataTable17_7
+       4  ??DataTable17_8
+       4  ??DataTable17_9
+      22  ?Subroutine0
+      16  ?Subroutine1
+       6  ?Subroutine2
+      12  ?Subroutine3
+      10  ?Subroutine4
+      10  ?Subroutine5
+      28  FactoryCmdHandler_CalculateChecksum
+     102  FactoryCmdHandler_CreateTask
+     102  FactoryCmdHandler_IsPackageLegal
+     124  FactoryCmdHandler_ServiceHandle
+      16  FactoryCmdHandler_ackOutOfRange
+      14  FactoryCmdHandler_ackSuccess
+     368  FactoryCmdHandler_getCommandHandle
+      14  FactoryCmdHandler_returnData
+      14  FactoryCmdHandler_sendPackage
+     736  FactoryCmdHandler_setCommandHandle
+      36  FactoryCmdHandler_transfer2Task
+       8  FactoryHandler
+      28  FactoryPackage
+      32  mFactoryParams
+          mChannelTest
+          mAQSwitch
+          pFacParams
+       4  pFMD_ObjCtrl
+       4  pPackage
+      44  xFacServiceHandler
+
+ 
+    44 bytes in section .bss
+    68 bytes in section .data
+    72 bytes in section .rodata
+ 1 970 bytes in section .text
+ 
+ 1 970 bytes of CODE  memory
+    72 bytes of CONST memory
+   112 bytes of DATA  memory
+
+Errors: none
+Warnings: 5

@@ -1,0 +1,781 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:25:17 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\application\app_arc\sk_ #
+#                    app_arc.c                                                #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\application\app_arc\sk_ #
+#                    app_arc.c -D S4051A -D DEBUG -D FREE_RTOS -D             #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\sk_app_arc.lst                                        #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\sk_app_arc.o                                           #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\application\app_arc\sk_app_arc.c
+      1          //***************************************************************************
+      2          //!file     sk_app_arc.c
+      3          //!brief    Wraps board and device functions for the ARC component
+      4          //!         and the application
+      5          //
+      6          // No part of this work may be reproduced, modified, distributed,
+      7          // transmitted, transcribed, or translated into any language or computer
+      8          // format, in any form or by any means without written permission of
+      9          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+     10          //
+     11          // Copyright 2009-2012, Silicon Image, Inc.  All rights reserved.
+     12          //***************************************************************************/
+     13          
+     14          #include "sk_application.h"
+     15          #include "si_drv_arc.h"
+     16          #include "si_drv_switch.h"
+     17          #include "si_gpio.h"
+     18          
+     19          #if ( configSII_DEV_953x_PORTING == 1 )
+     20          #include "Debug.h"
+     21          #endif
+     22          
+     23          
+     24          #if ( configSII_DEV_953x_PORTING == 1 )
+     25          extern uint8_t SYS_CEC_TASK;
+     26          extern HMI_SERVICE_OBJECT *pHS_ObjCtrl; /*HMI service*/
+     27          
+     28          static uint8_t CEC_ARC_TxLA = 0x00;	//CEC_LOGADDR_TV
+     29          static uint8_t ArcTaskCounter = 0xFF;
+     30          
+     31          extern void AmTArcAppTaskAssign( AmTArcTaskEvent event);
+     32          #endif
+     33          //------------------------------------------------------------------------------
+     34          //------------------------------------------------------------------------------
+     35          
+     36          #if INC_CEC
+     37          static char unableToRegisterArcMsgHandler [] = "Unable to register ARC CEC msg handler\n";
+     38          
+     39          //------------------------------------------------------------------------------
+     40          // Function:    ArcSendResponse
+     41          // Description: Send the passed ARC message if the target is adjacent. If the
+     42          //              target was NOT adjacent, an ABORT-INVALID message is sent instead.
+     43          //
+     44          // Returns:     TRUE if message was sent, FALSE if not adjacent
+     45          //------------------------------------------------------------------------------
+     46          static bool_t ArcSendResponse ( uint8_t opCode, int portIndex, int destLA, bool_t isArcTx )
+     47          {
+     48              bool_t  success;
+     49          
+     50              for ( ;; )
+     51              {
+     52                  success = false;
+     53                  if (!SiiCecIsAdjacentLA( destLA ))
+     54                  {
+     55                      SiiCecFeatureAbortSend( opCode, CECAR_INVALID_OPERAND, destLA );
+     56                      DEBUG_PRINT( MSG_STAT, "ARC Request from non-adjacent device\n" );
+     57                      break;
+     58                  }
+     59          
+     60          #if 0//( configSII_DEV_953x_PORTING == 1 )
+     61          	if ( opCode == CECOP_REQUEST_ARC_INITIATION )
+     62          	{
+     63          		AmTUpdateARCTxLA(destLA);
+     64          		AmTArcAppTaskAssign(ARC_TASK_INIT_REQUESTED);
+     65          	}
+     66          	else
+     67          	{
+     68          		AmTUpdateARCTxLA(destLA);
+     69          		AmTArcAppTaskAssign(ARC_TASK_TERM_REQUESTED);
+     70          	}
+     71          #else
+     72          		//All is well, send the response
+     73          	        SiiCecSendMessageTask( opCode, destLA );
+     74          #endif
+     75                  success = true;
+     76                  break;
+     77              }
+     78              return( success );
+     79          }
+     80          
+     81          #if (1)//( configSII_DEV_953x_PORTING == 0 )
+     82          //------------------------------------------------------------------------------
+     83          //!  @brief     ARC message Handler for a HDMI RX device (ARC TX)
+     84          //!  @return    True if message was processed by this handler
+     85          //------------------------------------------------------------------------------
+     86          static bool_t SkAppArcTxCecMsgHandler ( SiiCpiData_t *pMsg )
+     87          {
+     88              int     sourcePortIndex;
+     89              bool_t  processedMsg, isDirectAddressed;
+     90              uint8_t sourceLA;
+     91          
+     92              isDirectAddressed   = (bool_t)!((pMsg->srcDestAddr & 0x0F ) == CEC_LOGADDR_UNREGORBC );
+     93              sourceLA            = (pMsg->srcDestAddr >> 4) & 0xF;
+     94              sourcePortIndex     = SiiCecLaToPort( sourceLA);
+     95          
+     96              processedMsg = true;
+     97              switch ( pMsg->opcode )
+     98              {
+     99                  case CECOP_INITIATE_ARC:                                        // HDMI RX (ARC TX) Only
+    100                      if ( !isDirectAddressed )   break;                          // Ignore as broadcast message
+    101          
+    102                      // An ARC RX device (HDMI TX) asked us to activate our ARC TX device (HDMI RX).
+    103                      DEBUG_PRINT( MSG_STAT, "ARC Initiate from HDMI RX\n" );
+    104                      if ( ArcSendResponse( CECOP_REPORT_ARC_INITIATED, sourcePortIndex, sourceLA, true ) )
+    105                      {
+    106                          // Assumptions for the SiI9535 Starter Kit:
+    107                          // RX port 1 ARC pin is connected to 9535 ARCRX0_TX0 and S/PDIF 0 is the 9535 input pin.
+    108                          SiiDrvArcConfigureArcPin( sourcePortIndex - 1, sourcePortIndex - 1, ARC_TX_MODE );
+    109                          SiiPlatformGpioLedArc( true );
+    110                          DEBUG_PRINT( MSG_STAT, "ARC Initiate report sent\n" );
+    111                      }
+    112                      break;
+    113          
+    114                  case CECOP_TERMINATE_ARC:                                       // HDMI RX (ARC TX) Only
+    115                      if ( !isDirectAddressed )   break;                          // Ignore as broadcast message
+    116          
+    117                      // An ARC RX device (HDMI TX) asked us to deactivate our ARC TX device (HDMI RX).
+    118                      DEBUG_PRINT( MSG_STAT, "ARC Terminate from RX\n" );
+    119                      if ( ArcSendResponse( CECOP_REPORT_ARC_TERMINATED, sourcePortIndex, sourceLA, true ))
+    120                      {
+    121                          // Assumptions for the SiI9535 Starter Kit:
+    122                          // RX port 1 ARC pin is connected to 9535 ARCRX0_TX0 and S/PDIF 0 is the 9535 input pin.
+    123                          SiiDrvArcConfigureArcPin( sourcePortIndex - 1, sourcePortIndex - 1, ARC_DISABLE_MODE );
+    124                          SiiPlatformGpioLedArc( false );
+    125                          DEBUG_PRINT( MSG_STAT, "ARC Terminate report sent\n" );
+    126                      }
+    127                      break;
+    128          
+    129          
+    130                  default:
+    131                      processedMsg = false;
+    132                      break;
+    133              }
+    134          
+    135              return( processedMsg );
+    136          }
+    137          #endif
+    138          
+    139          //------------------------------------------------------------------------------
+    140          //!  @brief     ARC message Handler for a HDMI TX device (ARC RX)
+    141          //!  @return    True if message was processed by this handler
+    142          //------------------------------------------------------------------------------
+    143          static bool_t SkAppArcRxCecMsgHandler ( SiiCpiData_t *pMsg )
+    144          {
+    145              int     sourcePortIndex;
+    146              bool_t  processedMsg, isDirectAddressed;
+    147              uint8_t sourceLA;
+    148          #if ( configSII_DEV_953x_PORTING == 1 )
+    149              xHMISystemParams SystemInfo;
+    150          #endif
+    151          
+    152              isDirectAddressed   = (bool_t)!((pMsg->srcDestAddr & 0x0F ) == CEC_LOGADDR_UNREGORBC );
+    153              sourceLA            = (pMsg->srcDestAddr >> 4) & 0xF;
+    154              sourcePortIndex     = SiiCecLaToPort( sourceLA);
+    155          
+    156              processedMsg = true;
+    157              switch ( pMsg->opcode )
+    158              {
+    159              	case CECOP_REPORT_ARC_INITIATED:                                        // HDMI TX (ARC RX) Only
+    160              		if ( !isDirectAddressed )  break;
+    161          
+    162                      // An ARC TX device (HDMI RX) has indicated that its ARC TX functionality
+    163                      // has been activated, so enable our ARC receiver.  The port index we are referring to
+    164                      // here is the local ARC port, in this case one of the TX ports.
+    165                      // Assumptions for the SiI9535 Starter Kit:
+    166              		// TX0 ARC pin is connected to 9535 ARCRX0_TX0 and S/PDIF 0 is the 9535 output pin.
+    167          #if (0)//( configSII_DEV_953x_PORTING == 1 )
+    168          	    AmTArcAppTaskAssign(ARC_TASK_REPORT_INIT);
+    169          #else
+    170              	    //SiiDrvArcConfigureArcPin( SiiCecInstanceGet(), SiiCecInstanceGet(), ARC_RX_MODE );
+    171                      SiiPlatformGpioLedArc( true );
+    172          #endif
+    173                      DEBUG_PRINT( MSG_STAT, ( "ARC initiated by sink device\n" ));
+    174                      break;
+    175          
+    176              	case CECOP_REPORT_ARC_TERMINATED:                                       // HDMI TX (ARC RX) Only
+    177              		if ( !isDirectAddressed )  break;
+    178          
+    179                      // An ARC TX device (HDMI RX) has indicated that its ARC TX functionality
+    180                      // has been deactivated, so disable our receiver.  The port index we are referring to
+    181                      // here is the local ARC port, in this case one of the TX ports.
+    182                      // Assumptions for the SiI9535 Starter Kit:
+    183                      // TX0 ARC pin is connected to 9535 ARCRX0_TX0 and S/PDIF 0 is the 9535 output pin.
+    184          #if (0)//( configSII_DEV_953x_PORTING == 1 )
+    185          	    AmTArcAppTaskAssign(ARC_TASK_REPORT_TERM);
+    186          #else
+    187                      //SiiDrvArcConfigureArcPin( SiiCecInstanceGet(), SiiCecInstanceGet(), ARC_DISABLE_MODE );
+    188                      SiiPlatformGpioLedArc( false );
+    189          #endif
+    190                      DEBUG_PRINT( MSG_STAT, ( "ARC terminated by sink device\n" ));
+    191                      break;
+    192          
+    193              	case CECOP_REQUEST_ARC_INITIATION:                                      // HDMI TX (ARC RX) Only
+    194                      if ( !isDirectAddressed )  break;
+    195          
+    196                      // An ARC TX device (HDMI RX) has requested that we send
+    197                      // an INITIATE_ARC message back to it.  The port index we are referring to
+    198                      // here is the local ARC port, in this case one of the TX ARC ports.
+    199                      //if ( ArcSendResponse( CECOP_REQUEST_ARC_INITIATION, SiiCecInstanceGet(), sourceLA, false ))
+    200          #if ( configSII_DEV_953x_PORTING == 1 )
+    201                      SystemInfo = pHS_ObjCtrl->GetSystemParams();
+    202                      //TRACE_DEBUG((0,"Init ARC input source ------%d",SystemInfo.input_src));
+    203                      if (SystemInfo.input_src == AUDIO_SOURCE_HDMI_IN)
+    204                      {
+    205                          //ArcSendResponse( CECOP_FEATURE_ABORT, SiiCecInstanceGet(), sourceLA, false );
+    206                          //ArcSendResponse( CECOP_TERMINATE_ARC, SiiCecInstanceGet(), sourceLA, false );
+    207                          SiiCecFeatureAbortSend(CECOP_REQUEST_ARC_INITIATION, CECAR_REFUSED, sourceLA);
+    208                      }
+    209                      else 
+    210                      {
+    211          #endif
+    212                      if ( ArcSendResponse( CECOP_INITIATE_ARC, SiiCecInstanceGet(), sourceLA, false ))
+    213                      {
+    214                          // smith add
+    215                          SiiDrvArcConfigureArcPin( SiiCecInstanceGet(), SiiCecInstanceGet(), ARC_RX_MODE );
+    216                          DEBUG_PRINT( MSG_STAT, ( "Sent Initiate ARC request to source device\n" ));
+    217                      }
+    218          #if ( configSII_DEV_953x_PORTING == 1 )            
+    219                      }            
+    220          #endif            
+    221              	    break;
+    222              	case CECOP_REQUEST_ARC_TERMINATION:                                     // HDMI TX (ARC RX) Only
+    223                      if ( !isDirectAddressed )  break;
+    224          
+    225                      // An ARC TX device (HDMI RX) has requested that we send a TERMINATE_ARC
+    226                      // message back to it.  The port index we are referring to here is
+    227                      // the local ARC port, in this case one of the TX ARC ports.
+    228                      //if ( ArcSendResponse( CECOP_REQUEST_ARC_TERMINATION, SiiCecInstanceGet(), sourceLA, false ))
+    229          #if ( configSII_DEV_953x_PORTING == 1 )
+    230                      SystemInfo = pHS_ObjCtrl->GetSystemParams();
+    231                      TRACE_DEBUG((0,"termination ARC input source ------%d",SystemInfo.input_src));
+    232                      if (SystemInfo.input_src == AUDIO_SOURCE_HDMI_IN)
+    233                      {
+    234                          //ArcSendResponse( CECOP_FEATURE_ABORT, SiiCecInstanceGet(), sourceLA, false );
+    235                          SiiCecFeatureAbortSend(CECOP_REQUEST_ARC_TERMINATION, CECAR_REFUSED, sourceLA);
+    236                      }
+    237                      else 
+    238                      {
+    239          #endif
+    240                      if ( ArcSendResponse( CECOP_TERMINATE_ARC, SiiCecInstanceGet(), sourceLA, false ))
+    241                      {
+    242                          // smith add
+    243                          SiiDrvArcConfigureArcPin( SiiCecInstanceGet(), SiiCecInstanceGet(), ARC_DISABLE_MODE );
+    244                          DEBUG_PRINT( MSG_STAT, ( "Sent Terminate ARC request to source device\n" ));
+    245                      }
+    246          #if ( configSII_DEV_953x_PORTING == 1 )            
+    247                      }            
+    248          #endif            
+    249                      break;
+    250          
+    251          	case CECOP_FEATURE_ABORT:
+    252          	    {
+    253                          if ( !isDirectAddressed )  break;
+    254          				
+    255          		if ( (pMsg->args[0] == CECOP_INITIATE_ARC) && ((pMsg->srcDestAddr & 0x0F ) == pCec->logicalAddr) ) 
+    256          		{
+    257          		        AmTUpdateARCTxLA(pMsg->srcDestAddr >> 4);
+    258          		        AmTArcAppTaskAssign(ARC_TASK_TERM_REQUESTED);
+    259          		}
+    260          		else
+    261                      		processedMsg = false;
+    262          	    }
+    263          	    break;
+    264                 default:
+    265                      processedMsg = false;
+    266                      break;
+    267              }
+    268          
+    269              return( processedMsg );
+    270          }
+    271          #endif
+    272          
+    273          //------------------------------------------------------------------------------
+    274          // Function:    SkAppDeviceInitArc
+    275          // Description: Perform any board-level initialization required at the same
+    276          //              time as ARC component initialization
+    277          // Parameters:  none
+    278          // Returns:     none
+    279          //------------------------------------------------------------------------------
+    280          
+    281          bool_t SkAppDeviceInitArc ( void )
+    282          {
+    283              bool_t  success = true;
+    284          	
+    285              do {
+    286                  if ( !SiiDrvArcInitialize())
+    287                  {
+    288                      success = false;
+    289                      break;
+    290                  }
+    291          	
+    292          #if INC_CEC
+    293                  // If CEC is enabled (and it should be to use ARC), register our RX parser
+    294                  // with the CEC message handler for the CEC RX instance.  Note that
+    295                  // the HDMI RX instance is an ARC Tx.
+    296                  if ( app.cecEnable )
+    297                  {
+    298                      SkAppCecInstanceSet( CEC_INSTANCE_AVR );
+    299          #if (1)//( configSII_DEV_953x_PORTING == 0 )
+    300                      if ( !SiiCecCallbackRegisterParser( SkAppArcTxCecMsgHandler, false ) ||
+    301                           !SiiCecCallbackRegisterParser( SkAppArcRxCecMsgHandler, false ) )
+    302          #else
+    303                      if ( !SiiCecCallbackRegisterParser( SkAppArcRxCecMsgHandler, false ) )	// Only support ARC Rx for our 2015 main stream project
+    304          #endif
+    305                      {
+    306                          DEBUG_PRINT( MSG_ERR, unableToRegisterArcMsgHandler );
+    307                          success = false;
+    308                          break;
+    309                      }
+    310          			
+    311          #if (SII_NUM_ARC > 1)
+    312                      /******************* NEED TO Register CEC TX       *************************/
+    313                      /******************* if ARC_RX is configured in arcCfg *************************/
+    314                      SkAppCecInstanceSet( CEC_INSTANCE_AUXTX );
+    315                      if ( !SiiCecCallbackRegisterParser( SkAppArcRxCecMsgHandler, false ))
+    316                      {
+    317                          DEBUG_PRINT( MSG_ERR, unableToRegisterArcMsgHandler );
+    318                          success = false;
+    319                          break;
+    320                      }
+    321          #endif
+    322                  }
+    323          #endif
+    324              } while (0);  // Do the above only once.
+    325          
+    326              return( success );
+    327          }
+    328          
+    329          #if ( configSII_DEV_953x_PORTING == 1 )
+    330          //-------------------------------------------------------------------------------------------------
+    331          //! @brief      
+    332          //-------------------------------------------------------------------------------------------------
+    333          void AmTCecArcTask( void )
+    334          {
+    335              if ( SYS_CEC_TASK & SYS_CEC_TASK_ARC_INITIONAL )
+    336              {	
+    337          	//CecInitialARCSend();
+    338          	AmTARCMessageSend(TRUE);
+    339          	ArcTaskCounter = 1;
+    340          	
+    341          	SYS_CEC_TASK &= !(SYS_CEC_TASK_ARC_INITIONAL);
+    342              }
+    343              else if ( SYS_CEC_TASK & SYS_CEC_TASK_ARC_TERMINATE )
+    344              {
+    345          	//CecTerminalARCSend();
+    346          	AmTARCMessageSend(FALSE);
+    347          	ArcTaskCounter = 1;
+    348          		
+    349          	SYS_CEC_TASK &= !(SYS_CEC_TASK_ARC_TERMINATE);
+    350              }
+    351              else if ( SYS_CEC_TASK & SYS_CEC_TASK_ARC_REPORT_INITIONAL )
+    352              {
+    353          	SiiDrvArcConfigureArcPin( SiiCecInstanceGet(), SiiCecInstanceGet(), ARC_RX_MODE );
+    354          	ArcTaskCounter = 0;
+    355          	
+    356          	SYS_CEC_TASK &= !(SYS_CEC_TASK_ARC_REPORT_INITIONAL);
+    357              }
+    358              else if ( SYS_CEC_TASK & SYS_CEC_TASK_ARC_REPORT_TERMINATE )
+    359              {
+    360          	SiiDrvArcConfigureArcPin( SiiCecInstanceGet(), SiiCecInstanceGet(), ARC_DISABLE_MODE );
+    361          	ArcTaskCounter = -1;
+    362          	
+    363          	SYS_CEC_TASK &= !(SYS_CEC_TASK_ARC_REPORT_TERMINATE);
+    364              }
+    365              else if ( ArcTaskCounter >= 13 )	//timeout for receive report message 
+    366              {
+    367                      xHMISystemParams SysPrams;
+    368          
+    369                      SysPrams = AmTCecGetSyspramsFromHMI();
+    370          	
+    371                      if ( SysPrams.cec_arc )
+    372                      {
+    373          	            AmTCecEventPassToHMI(USER_EVENT_CEC_SET_ARC_OFF);
+    374                      }
+    375          	    ArcTaskCounter = -1;
+    376              }
+    377              else if ( ArcTaskCounter == -1)
+    378              {
+    379                      xHMISystemParams SysPrams;
+    380          
+    381                      SysPrams = AmTCecGetSyspramsFromHMI();
+    382          			
+    383              	if ( SysPrams.input_src == USER_EVENT_SEL_HDMI_ARC)
+    384              	{
+    385          	    SYS_CEC_TASK |= SYS_CEC_TASK_ARC_INITIONAL;
+    386              	}
+    387          	else
+    388          	{
+    389          	    ArcTaskCounter = 0;
+    390          	}
+    391              }
+    392          
+    393              if ( ArcTaskCounter > 0 )
+    394          	ArcTaskCounter++;
+    395          
+    396          }
+    397          
+    398          //-------------------------------------------------------------------------------------------------
+    399          //! @brief      
+    400          //-------------------------------------------------------------------------------------------------
+    401          void AmTArcTaskAssign( uint8_t SysArcAppTask)
+    402          {
+    403          	SYS_CEC_TASK |= SysArcAppTask;		
+    404          //    TRACE_DEBUG((0, "SYS_CEC_TASK %d", SYS_CEC_TASK ));
+    405          		}
+    406          //-------------------------------------------------------------------------------------------------
+    407          //! @brief      
+    408          //-------------------------------------------------------------------------------------------------
+    409          bool_t AmTIPowerOnSystem( void )
+    410          {
+    411          	POWER_STATE SysPower;
+    412          	bool_t NeedSetArcTask = FALSE;
+    413          
+    414          	SysPower = AmTCecGetSystemPowerStatus();
+    415          	if ( SysPower != POWER_ON && SysPower != POWER_UP )
+    416          	{
+    417          		AmTCecEventPassToHMI(USER_EVENT_POWER);		//use this event for power on hdmi when powering system up
+    418          		NeedSetArcTask = TRUE;	//return false if need power on system
+    419          	}
+    420          
+    421          	return NeedSetArcTask;
+    422          }
+    423          
+    424          static void AmTARCMessageSend( bool_t MsgType )
+    425          {
+    426              SiiCpiData_t cecFrame;
+    427          	
+    428              if ( MsgType )
+    429              {
+    430                  SiiCecCpiWrite(CECOP_INITIATE_ARC, 0, CEC_ARC_TxLA, &cecFrame);
+    431              }
+    432              else
+    433              {
+    434                  SiiCecCpiWrite(CECOP_TERMINATE_ARC, 0, CEC_ARC_TxLA, &cecFrame);
+    435              }
+    436          }
+    437          
+    438          static void AmTUpdateARCTxLA ( uint16 ARCTxLA)
+    439          {
+    440          	xHMISystemParams SysPrams;
+    441          
+    442                  //Update ARC Tx LA to HMI
+    443          	SysPrams = AmTCecGetSyspramsFromHMI();
+    444                  SysPrams.cec_arc_tx = ARCTxLA;
+    445          	pHS_ObjCtrl->SetSystemParams(&SysPrams);
+    446          
+    447                  //Update ARC Tx LA to global patams
+    448                  CEC_ARC_TxLA = ARCTxLA;
+    449          }
+    450          
+    451          
+    452          #endif
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       32  AmTARCMessageSend
+             32 -> SiiCecCpiWrite
+        0  AmTArcTaskAssign
+       48  AmTCecArcTask
+             48 -> AmTARCMessageSend
+             48 -> AmTCecEventPassToHMI
+             48 -> AmTCecGetSyspramsFromHMI
+             48 -> SiiCecInstanceGet
+             48 -> SiiDrvArcConfigureArcPin
+        8  AmTIPowerOnSystem
+              8 -> AmTCecEventPassToHMI
+              8 -> AmTCecGetSystemPowerStatus
+       32  AmTUpdateARCTxLA
+             32 -- Indirect call
+             32 -> AmTCecGetSyspramsFromHMI
+       16  ArcSendResponse
+             16 -> SiiCecFeatureAbortSend
+             16 -> SiiCecIsAdjacentLA
+             16 -> SiiCecSendMessageTask
+       48  SkAppArcRxCecMsgHandler
+             48 -- Indirect call
+             48 -> AmTArcAppTaskAssign
+             48 -> AmTUpdateARCTxLA
+             48 -> ArcSendResponse
+             48 -> Debug_printDebug
+             48 -> SiiCecFeatureAbortSend
+             48 -> SiiCecInstanceGet
+             48 -> SiiCecLaToPort
+             48 -> SiiDrvArcConfigureArcPin
+             48 -> SiiPlatformGpioLedArc
+       24  SkAppArcTxCecMsgHandler
+             24 -> ArcSendResponse
+             24 -> SiiCecLaToPort
+             24 -> SiiDrvArcConfigureArcPin
+             24 -> SiiPlatformGpioLedArc
+        8  SkAppDeviceInitArc
+              8 -> SiiCecCallbackRegisterParser
+              8 -> SiiDrvArcInitialize
+              8 -> SkAppCecInstanceSet
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      40  ?<Constant "termination ARC input...">
+       4  ??DataTable6
+       4  ??DataTable6_1
+       4  ??DataTable6_2
+       4  ??DataTable6_3
+       4  ??DataTable6_4
+       4  ??DataTable6_5
+       4  ??DataTable6_6
+       4  ??DataTable6_7
+      30  AmTARCMessageSend
+      10  AmTArcTaskAssign
+     136  AmTCecArcTask
+      28  AmTIPowerOnSystem
+      34  AmTUpdateARCTxLA
+      42  ArcSendResponse
+       1  ArcTaskCounter
+       1  CEC_ARC_TxLA
+     266  SkAppArcRxCecMsgHandler
+     120  SkAppArcTxCecMsgHandler
+      50  SkAppDeviceInitArc
+
+ 
+   1 byte  in section .bss
+   1 byte  in section .data
+ 788 bytes in section .text
+ 
+ 788 bytes of CODE memory
+   2 bytes of DATA memory
+
+Errors: none
+Warnings: 5

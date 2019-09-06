@@ -1,0 +1,2279 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:26:01 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\cec_system_au #
+#                    dio_control\si_sac_main.c                                #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\cec_system_au #
+#                    dio_control\si_sac_main.c -D S4051A -D DEBUG -D          #
+#                    FREE_RTOS -D STM32F40_41xxx -D USE_STM324xG_EVAL -D      #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_sac_main.lst                                       #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_sac_main.o                                          #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\component\cec_system_audio_control\si_sac_main.c
+      1          //****************************************************************************
+      2          //! @file   si_sac_main.c
+      3          //! @brief  Top level CEC / System Audio Control API
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2002-2012, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include "si_common.h"
+     14          #include "si_cec_internal.h"
+     15          #include "si_sac_msg.h"
+     16          #include "si_sac_main.h"
+     17          #include "si_cec_sac_config.h"
+     18          
+     19          #ifndef CEC_PC_SIMULATION
+     20          #include <string.h>    
+     21          #else
+     22          #include "stdio.h"
+     23          #include "memory.h"
+     24          #include "debug_print.h"
+     25          #endif
+     26          
+     27          #include "si_cec_component.h"
+     28          
+     29          //-------------------------------------------------------------------------------------------------
+     30          // Global Data
+     31          //-------------------------------------------------------------------------------------------------
+     32          CecSacInstanceRecord_t gSacInstRec[SII_NUM_CEC_SAC];       //!< global CEC/SAC instance record
+     33          CecSacInstanceRecord_t *pSac = &gSacInstRec[0];    //!< global pointer to CEC/SAC Instance Record
+     34          
+     35          extern void AmTSacAppTaskAssign(AmTSacTaskEvent sac_event);
+     36          //-------------------------------------------------------------------------------------------------
+     37          // Local Functions
+     38          //-------------------------------------------------------------------------------------------------
+     39          static uint8_t SacTaskCounter = 0xFF;
+     40          
+     41          
+     42          //-------------------------------------------------------------------------------------------------
+     43          //! @brief      Sends "CEC Request Active Source" broadcast message to
+     44          //!             identify physical address of the source device
+     45          //-------------------------------------------------------------------------------------------------
+     46          
+     47          static void CecActiveSourceRequestSend(void)
+     48          {
+     49              SiiCpiData_t cecFrame;
+     50              SiiCecCpiWrite(CECOP_REQUEST_ACTIVE_SOURCE, 0, CEC_LOGADDR_UNREGORBC, &cecFrame);
+     51          }
+     52          
+     53          
+     54          //-------------------------------------------------------------------------------------------------
+     55          // Top Level API Functions
+     56          //-------------------------------------------------------------------------------------------------
+     57          
+     58          //-------------------------------------------------------------------------------------------------
+     59          //! @brief      Brings device instance record into current context. This function
+     60          //!             is useful when multiple HDMI outputs are present
+     61          //! @param[in]  deviceIndex - index of the device in case of multiple instantiation
+     62          //-------------------------------------------------------------------------------------------------*/
+     63          
+     64          void SI_CecSacInstanceSet(uint16_t deviceIndex)
+     65          {
+     66              if( deviceIndex < SII_NUM_CEC_SAC)
+     67              {
+     68                  pSac = &gSacInstRec[deviceIndex];
+     69              }
+     70          }
+     71          
+     72          
+     73          //-------------------------------------------------------------------------------------------------
+     74          //! @brief      Returns pointer to current device CEC/SAC instance record
+     75          //-------------------------------------------------------------------------------------------------
+     76          
+     77          CecSacInstanceRecord_t *SiiCecSacDeviceInstanceGet(void)
+     78          {
+     79              return pSac;
+     80          }
+     81          
+     82          
+     83          //-------------------------------------------------------------------------------------------------
+     84          //! @brief      Initializes current CEC/SAC Instance Record
+     85          //-------------------------------------------------------------------------------------------------
+     86          
+     87          static void CecSacInstanceRecordReset(void)
+     88          {    
+     89              memset(pSac, 0, sizeof(CecSacInstanceRecord_t)); // erase all data   
+     90          }
+     91          
+     92          #if ( configSII_DEV_953x_PORTING == 1 )
+     93          //-------------------------------------------------------------------------------------------------
+     94          //! @brief      Initializes the CEC/SAC Instance Record and fills its fields related to
+     95          //!             device capabilities and non-volatile configuration.
+     96          //! @param[in]  volume - initial master volume setting,
+     97          //! @param[in]  aFmt  - pointer to array of nFmt audio format descriptors
+     98          //! @param[in]  nFmt  - number of audio format descriptors in aFmt[]
+     99          //-------------------------------------------------------------------------------------------------
+    100          void SiiCecSacConfig(uint8_t volume)
+    101          {
+    102              uint8_t i;
+    103              CecSacShortAudioDescriptor_t aFormats[NUMBER_OF_AUDIO_FORMATS] = SII_CEC_SAC_DEFAULT_AUDIO_FORMAT_LIST;
+    104          
+    105              CecSacInstanceRecordReset();    // Initialize all Instance Record fields
+    106              pSac->volume = volume;  // Set initial volume
+    107              
+    108              pSac->numberOfAudioFormats = NUMBER_OF_AUDIO_FORMATS;
+    109              for (i = 0; i < NUMBER_OF_AUDIO_FORMATS; i++)
+    110              {
+    111                  pSac->aFmt[i] = aFormats[i];
+    112              }
+    113                  
+    114              SiiCecSacTaskInit();
+    115          
+    116              // Immediately initiate allocation of Logical Address for Audio System
+    117              pSac->taskFlags |= CEC_SAC_TASK_ALLOC_LOG_ADDR;
+    118          }
+    119          
+    120          #else
+    121          //-------------------------------------------------------------------------------------------------
+    122          //! @brief      Initializes the CEC/SAC Instance Record and fills its fields related to
+    123          //!             device capabilities and non-volatile configuration.
+    124          //! @param[in]  volume - initial master volume setting,
+    125          //! @param[in]  aFmt  - pointer to array of nFmt audio format descriptors
+    126          //! @param[in]  nFmt  - number of audio format descriptors in aFmt[]
+    127          //-------------------------------------------------------------------------------------------------
+    128          void SiiCecSacConfig(uint8_t volume, CecSacShortAudioDescriptor_t aFmt[], uint8_t nFmt)
+    129          {
+    130              uint8_t i;
+    131              
+    132              if (!aFmt)
+    133              {
+    134                  // Device audio format support configuration list
+    135                  CecSacShortAudioDescriptor_t aFormats[NUMBER_OF_AUDIO_FORMATS] = SII_CEC_SAC_DEFAULT_AUDIO_FORMAT_LIST;
+    136          
+    137                  aFmt = aFormats;
+    138                  nFmt = NUMBER_OF_AUDIO_FORMATS;
+    139              }
+    140          
+    141              CecSacInstanceRecordReset();    // Initialize all Instance Record fields
+    142              pSac->volume = volume;  // Set initial volume
+    143              
+    144              if (nFmt <= MAX_NUMBER_OF_AUDIO_FORMATS)
+    145              {
+    146                  pSac->numberOfAudioFormats = nFmt;
+    147                  for (i = 0; i < nFmt; i++)
+    148                  {
+    149                      pSac->aFmt[i] = aFmt[i];
+    150                  }
+    151                  
+    152              }
+    153          
+    154              SiiCecSacTaskInit();
+    155          
+    156              // Immediately initiate allocation of Logical Address for Audio System
+    157              pSac->taskFlags |= CEC_SAC_TASK_ALLOC_LOG_ADDR;
+    158          }
+    159          #endif
+    160          
+    161          //-------------------------------------------------------------------------------------------------
+    162          //! @brief      Get the audio format details for the specified format if it is supported.
+    163          //! @param[in]  volume - initial master volume setting,
+    164          //! @param[in]  aFmt  - pointer to array of nFmt audio format descriptors
+    165          //! @param[in]  nFmt  - number of audio format descriptors in aFmt[]
+    166          //! @retval     true    - Requested Audio format supported
+    167          //! @retval     false   - Requested Audio format not supported
+    168          //-------------------------------------------------------------------------------------------------
+    169          bool_t SiiCecSacAudioFormatDetailsGet ( uint8_t audioFormatCode, uint8_t *pSad0, uint8_t *pSad1, uint8_t *pSad2 )
+    170          {
+    171              uint8_t i;
+    172          
+    173              for ( i = 0; i < pSac->numberOfAudioFormats; i++ )
+    174              {
+    175                  if ( pSac->aFmt[i].audioFmtCode == audioFormatCode )
+    176                  {
+    177                      *pSad0 = pSac->aFmt[i].maxChanNumber | (audioFormatCode << 3);
+    178                      *pSad1 = pSac->aFmt[i].sampleRate;
+    179                      *pSad2 = pSac->aFmt[i].quality;
+    180                      return( true );
+    181                  }
+    182              }
+    183          
+    184              return( false );
+    185          }
+    186          
+    187          //-------------------------------------------------------------------------------------------------
+    188          //! @brief      Returns the System Audio Mode status
+    189          //
+    190          //! @retval     true    - SA mode enabled
+    191          //! @retval     false   - SA mode disabled
+    192          //-------------------------------------------------------------------------------------------------
+    193          
+    194          bool_t SiiCecSacIsSysAudioModeEnabled(void)
+    195          {
+    196              return pSac->status.isSystemAudioModeEnabled;
+    197          }
+    198          
+    199          
+    200          //-------------------------------------------------------------------------------------------------
+    201          //! @brief      Returns mute status
+    202          //              
+    203          //! @retval     true    - muted
+    204          //! @retval     false   - unmuted
+    205          //-------------------------------------------------------------------------------------------------
+    206          
+    207          bool_t SiiCecSacIsMuted(void)
+    208          {
+    209              return pSac->status.isMuted;
+    210          }
+    211          
+    212          
+    213          //-------------------------------------------------------------------------------------------------
+    214          //! @brief      Sets new volume level
+    215          //! @param[in]  volume - volume level [0..100]
+    216          //-------------------------------------------------------------------------------------------------
+    217          
+    218          void SiiCecSacVolumeSet(uint8_t volume)
+    219          {
+    220              
+    221              pSac->volume = (volume > MAX_VOLUME_LEVEL) ? MAX_VOLUME_LEVEL : volume;
+    222          }
+    223          
+    224          //-------------------------------------------------------------------------------------------------
+    225          //! @brief      Returns volume
+    226          //
+    227          //! @return     volume level [0..100]
+    228          //-------------------------------------------------------------------------------------------------
+    229          
+    230          uint8_t SiiCecSacVolumeGet(void)
+    231          {
+    232              return pSac->volume;
+    233          }
+    234          
+    235          
+    236          //-------------------------------------------------------------------------------------------------
+    237          //! @brief      Increments or decrements volume level with saturation
+    238          //! @param[in]  isUp - if true, the volume is incremented (decremented otherwise)
+    239          //-------------------------------------------------------------------------------------------------
+    240          
+    241          void SiiCecSacVolumeStep(bool_t isUp)
+    242          {
+    243              xHMISrvEventParams event = { xHMI_EVENT_CEC, USER_EVENT_UNDEFINED, 0 };
+    244              //AmTCecSacSyncVolumeStatus();
+    245          
+    246              if (isUp)
+    247              {
+    248          	//AmTCecEventPassToHMI(USER_EVENT_VOL_UP);
+    249          	
+    250                  if (pSac->volume >= MAX_VOLUME_LEVEL)
+    251                  {
+    252                      pSac->volume = MAX_VOLUME_LEVEL;
+    253                  }
+    254                  else
+    255                  {
+    256                      pSac->volume += VOLUME_STEP_SIZE;
+    257                  }        
+    258          
+    259                  //AmTCecEventPassToHMI(USER_EVENT_VOL_UP);
+    260                  event.event = USER_EVENT_CEC_SET_VOLUME_UP;
+    261                  event.event_id = xHMI_EVENT_CEC;
+    262                  event.params = pSac->volume;
+    263                  AmTCecEventVolumeCtrl_HMI( event );
+    264              }
+    265              else // Down
+    266              {
+    267                  if (pSac->volume <= 0)
+    268                  {
+    269                      pSac->volume = 0;
+    270                  }
+    271                  else
+    272                  {
+    273                      pSac->volume -= VOLUME_STEP_SIZE;
+    274                  }
+    275          
+    276                  //TRACE_DEBUG((0, "DN pSac->volume= %d", pSac->volume));    
+    277                  //AmTCecEventPassToHMI(USER_EVENT_VOL_DN);
+    278                  event.event = USER_EVENT_CEC_SET_VOLUME_DOWN;
+    279                  event.event_id = xHMI_EVENT_CEC;
+    280                  event.params = pSac->volume;
+    281                  AmTCecEventVolumeCtrl_HMI( event );
+    282              }
+    283          }
+    284          
+    285          
+    286          //-------------------------------------------------------------------------------------------------
+    287          //! @brief      Mutes, unmutes or toggles mute status
+    288          //! @param[in]  muteOp - mute on, mute off or mute toggle operation
+    289          //-------------------------------------------------------------------------------------------------
+    290          
+    291          void SiiCecSacMute(CecSacMuteCmd_t muteOp)
+    292          {
+    293              
+    294              xHMISrvEventParams event = { xHMI_EVENT_CEC, USER_EVENT_UNDEFINED, 0 };
+    295          
+    296              switch (muteOp)
+    297              {   
+    298                  default:
+    299                  case CEC_SAC_MUTE_TOGGLE:
+    300                      pSac->status.isMuted = pSac->status.isMuted ? false : true;
+    301          	    if ( pSac->status.isMuted )
+    302          	    {
+    303          		    //AmTCecEventPassToHMI(USER_EVENT_CEC_SET_MUTE);
+    304                              event.event = USER_EVENT_CEC_SET_VOLUME_MUTE;
+    305                              event.event_id = xHMI_EVENT_CEC;
+    306                              event.params = 1;
+    307                              AmTCecEventVolumeCtrl_HMI( event );
+    308          	    }
+    309          	    else
+    310          	    {
+    311          		    //AmTCecEventPassToHMI(USER_EVENT_CEC_SET_DEMUTE);
+    312                              event.event = USER_EVENT_CEC_SET_VOLUME_MUTE;
+    313                              event.event_id = xHMI_EVENT_CEC;
+    314                              event.params = 0;
+    315                              AmTCecEventVolumeCtrl_HMI( event );
+    316          	    }
+    317                      break;
+    318                  case CEC_SAC_MUTE_ON:
+    319                      pSac->status.isMuted = true;
+    320          
+    321                      event.event = USER_EVENT_CEC_SET_VOLUME_MUTE;
+    322                      event.event_id = xHMI_EVENT_CEC;
+    323                      event.params = 1;
+    324                      AmTCecEventVolumeCtrl_HMI( event );
+    325                      
+    326          	    //AmTCecEventPassToHMI(USER_EVENT_CEC_SET_MUTE);
+    327                      break;
+    328                  case CEC_SAC_MUTE_OFF:
+    329                      pSac->status.isMuted = false;
+    330          
+    331                      event.event = USER_EVENT_CEC_SET_VOLUME_MUTE;
+    332                      event.event_id = xHMI_EVENT_CEC;
+    333                      event.params = 0;
+    334                      AmTCecEventVolumeCtrl_HMI( event );
+    335          	    //AmTCecEventPassToHMI(USER_EVENT_CEC_SET_DEMUTE);
+    336                      break;            
+    337              }
+    338              
+    339          }
+    340          
+    341          
+    342          //-------------------------------------------------------------------------------------------------
+    343          //! @brief      Resets all tasks
+    344          //-------------------------------------------------------------------------------------------------
+    345          
+    346          void SiiCecSacTaskInit(void)
+    347          {        
+    348              pSac->taskFlags = 0;
+    349              pSac->taskMask  = CEC_SAC_TASK_MASK_ALL_UNMASKED; // all tasks are unmasked by default
+    350          
+    351              // Reset time counters
+    352              CecTimeCounterReset(&pSac->taskTimeCount);
+    353              CecTimeCounterReset(&pSac->reportDelayCnt);    
+    354          
+    355              // Reset task states
+    356              pSac->taskState = CEC_SAC_TASK_EMPTY_STATE_NONE;     
+    357          
+    358              pSac->sysTimerCountCurMs = 0;
+    359              pSac->sysTimerCountPrvMs = 0;
+    360          }
+    361          
+    362          
+    363          //-------------------------------------------------------------------------------------------------
+    364          //! @brief      Stops given task
+    365          //!             For internal use in the last stage of a task
+    366          //-------------------------------------------------------------------------------------------------
+    367          
+    368          static void StopTask(uint16_t task)
+    369          {
+    370              pSac->taskFlags &= ~task; // clear the task activity flag
+    371              pSac->taskState = CEC_SAC_TASK_EMPTY_STATE_NONE;  // reset stage                    
+    372              pSac->taskMask = CEC_SAC_TASK_MASK_ALL_UNMASKED;  // reset task mask as this task is done
+    373          }
+    374          
+    375          
+    376          //-------------------------------------------------------------------------------------------------
+    377          //! @brief      Standard check for the Task Timer event
+    378          //!             Including the Recall Timer update
+    379          //-------------------------------------------------------------------------------------------------
+    380          
+    381          static bool_t IsUpdatedTaskTimerExpired(void)
+    382          {
+    383              bool_t isExpired;
+    384              // Set recall timer to maximum in order to allow the task counters to set it to a new value
+    385              CecTimeCounterSet(CEC_TIME_MS2TCK(CEC_MAX_RECALL_TIME_MS), &pSac->recallTimeCount);                
+    386              isExpired = CecTimeCounterUpdate(&pSac->taskTimeCount, &pSac->recallTimeCount);
+    387          
+    388              return isExpired;
+    389          }
+    390          
+    391          
+    392          //-------------------------------------------------------------------------------------------------
+    393          //! @brief      Internal error reporting service for CecSacTaskBase()
+    394          //-------------------------------------------------------------------------------------------------
+    395          
+    396          static void CecSacBadCmdReport(char *str)
+    397          {
+    398              DEBUG_PRINT(CEC_MSG_DBG, "[CEC_SAC]: ERROR in <%s> message: wrong length!\n", str);
+    399          }
+    400          
+    401          
+    402          //-------------------------------------------------------------------------------------------------
+    403          //! @brief      Allocates Logical Address for Audio System
+    404          //
+    405          //! @return     Feedback message to the caller (Task status or error reports)
+    406          //-------------------------------------------------------------------------------------------------
+    407          
+    408          static uint8_t CecSacTaskLogAddrAllocate(void)
+    409          {
+    410              uint8_t sacFeedbackMsg = CEC_SAC_FB_MSG_NONE;
+    411              SiiCpiStatus_t cecStatus;
+    412          
+    413          
+    414              switch(pSac->taskState)
+    415              {
+    416                  case CEC_SAC_TASK_EMPTY_STATE_NONE: // all tasks shall start from empty state
+    417                          pSac->taskMask = CEC_SAC_TASK_ALLOC_LOG_ADDR; // mask out other tasks until this one is done
+    418                          pSac->taskState = CEC_SAC_TASK_ALLOC_LA_STATE_PING;
+    419                          // don't break here to save time and go ahead to the fist step
+    420          
+    421                  case CEC_SAC_TASK_ALLOC_LA_STATE_PING: // Send user RC code to Amp
+    422                         SiiDrvCpiSendPing(CEC_LOGADDR_AUDSYS);
+    423                          DEBUG_PRINT(CEC_MSG_DBG, ("[CEC_SAC_TASK_ALLOC_LA]: Ping for Audio System address sent\n"));
+    424                          CecTimeCounterSet(CEC_TIME_MS2TCK(CEC_PING_ACK_WAITING_TIME_MS), &pSac->taskTimeCount);
+    425                          pSac->taskState = CEC_SAC_TASK_ALLOC_LA_STATE_WAIT_FOR_ACK; // next stage
+    426                          break;
+    427          
+    428                  case CEC_SAC_TASK_ALLOC_LA_STATE_WAIT_FOR_ACK: // Wait for ping acknowledge
+    429                          if (IsUpdatedTaskTimerExpired())
+    430                          {   // if timer expired, LA can be assigned
+    431                              SiiDrvCpiHwStatusGet(&cecStatus); // read current CPI status
+    432                              // and ping was not acknowledged
+    433                              if (cecStatus.txState != SiiTX_SENDACKED)
+    434                              {
+    435                                  // Keep the address
+    436                                  SiiCecSetDeviceLA(CEC_LOGADDR_AUDSYS);
+    437                                  sacFeedbackMsg = CEC_SAC_FB_MSG_LA_ASSIGNED;
+    438                                  DEBUG_PRINT(CEC_MSG_DBG, ("[CEC_SAC_TASK_ALLOC_LA]: Logical Address assigned for Audio System\n"));
+    439                              }
+    440                              else
+    441                              {
+    442                                  // report assignment error, if ping was acknowledged
+    443                                  sacFeedbackMsg = CEC_SAC_FB_MSG_ERR_LA_NOT_ASSIGNED;
+    444                              }
+    445                              pSac->taskState = CEC_SAC_TASK_ALLOC_LA_STATE_REPORT_RESULTS;
+    446                          }
+    447                          break;
+    448          
+    449                  case CEC_SAC_TASK_ALLOC_LA_STATE_REPORT_RESULTS: // Last stage
+    450                          // event message to the caller
+    451                          sacFeedbackMsg = CEC_SAC_FB_MSG_SAC_ALLOC_LA_DONE;
+    452                          StopTask(CEC_SAC_TASK_ALLOC_LOG_ADDR);
+    453                          break;
+    454          
+    455                  default:break;
+    456              }
+    457          
+    458              return  sacFeedbackMsg;
+    459          }
+    460          
+    461          
+    462          
+    463          #if ( configSII_DEV_953x_PORTING == 1 )
+    464          
+    465          //-------------------------------------------------------------------------------------------------
+    466          //! @brief      Initiates System Audio Control feature. Steps sequence depends
+    467          //!             on type of the device that initiates the SAC.
+    468          //
+    469          //! @return     Feedback message to the caller (Task status or error reports)
+    470          //-------------------------------------------------------------------------------------------------
+    471          
+    472          static uint8_t CecSacTaskInitiate(void)
+    473          {
+    474              uint8_t sacFeedbackMsg = CEC_SAC_FB_MSG_NONE;
+    475              
+    476              switch(pSac->taskState)
+    477              {
+    478                  case CEC_SAC_TASK_EMPTY_STATE_NONE: // all tasks shall start from empty state
+    479                          pSac->taskMask= CEC_SAC_TASK_INITIATE; // mask out other tasks until this one is done
+    480                          pSac->taskState = CEC_SAC_TASK_INITIATE_STATE_REQUEST_SOURCE;
+    481          	        AmTCecSacSyncVolumeStatus();
+    482          
+    483                          break;
+    484          
+    485                  case CEC_SAC_TASK_INITIATE_STATE_REQUEST_SOURCE:
+    486                          // if Active Source is unknown,
+    487                          if (SiiCecGetActiveSourceLA() == CEC_LOGADDR_UNREGORBC)
+    488                          {
+    489                              // try to find active source
+    490                              CecActiveSourceRequestSend();
+    491                              // set timer for the following waiting stage
+    492                              CecTimeCounterSet(CEC_TIME_MS2TCK(CEC_MAX_RESPONSE_TIME_MS), &pSac->taskTimeCount);
+    493                              pSac->taskState = CEC_SAC_TASK_INITIATE_STATE_WAIT_SRC_REPLY;
+    494                          }
+    495                          else
+    496                          {
+    497                              // if Active Source is already known,
+    498                              // don't wait for response and proceed with instruction to initiate SAC on TV
+    499                              pSac->taskState = CEC_SAC_TASK_INITIATE_STATE_SET_SYS_AUD_MODE;
+    500                          }
+    501                          break;
+    502          
+    503                  case CEC_SAC_TASK_INITIATE_STATE_WAIT_SRC_REPLY:
+    504                          // wait for reply from Active Source.
+    505                          // If not replied, quit the task
+    506                          if (SiiCecGetActiveSourceLA() != CEC_LOGADDR_UNREGORBC)
+    507                          {
+    508          		    CecTimeCounterReset(&pSac->taskTimeCount);
+    509          			
+    510                              //if ( pSac->status.isSystemAudioModeEnabled == 0 )	//
+    511                              	pSac->taskState = CEC_SAC_TASK_INITIATE_STATE_SET_SYS_AUD_MODE;
+    512          		    //else
+    513                              //    pSac->taskState = CEC_SAC_TASK_INITIATE_STATE_REPORT_RESULTS; // quit the task
+    514                          }
+    515                          else if (IsUpdatedTaskTimerExpired())
+    516                          {   // if timer expired
+    517                              if (SiiCecGetActiveSourceLA() == CEC_LOGADDR_UNREGORBC) // Active Source is still unknown
+    518                              {
+    519                                  pSac->taskState = CEC_SAC_TASK_INITIATE_STATE_REPORT_RESULTS; // quit the task
+    520                              }
+    521                          }
+    522                          break;
+    523                          
+    524                  case CEC_SAC_TASK_INITIATE_STATE_SET_SYS_AUD_MODE:
+    525                          // Directly send "Set System Audio Mode" message to TV
+    526                          // to verify if the TV supports SAC feature.
+    527                          // If not, the TV will reply with "FeatureAbort" message
+    528                          SiiCecSacSetSystemAudioModeSend(true, CEC_LOGADDR_TV);
+    529                          // set timer for MRT delay
+    530                          CecTimeCounterSet(CEC_TIME_MS2TCK(CEC_MAX_RESPONSE_TIME_MS), &pSac->taskTimeCount);
+    531                          pSac->taskState = CEC_SAC_TASK_INITIATE_STATE_WAIT_NO_FEATURE_ABORT;
+    532                          break;
+    533          
+    534                  case CEC_SAC_TASK_INITIATE_STATE_WAIT_NO_FEATURE_ABORT:
+    535                          // If no Feature Abort within MRT, turn the SAC on, broadcast <Send System Audio mode> and quit.
+    536                          // In case of FeatureAbort arrival (serviced by CecSacTaskBase()) within MRT, this task will be stopped
+    537                          // by Base task action
+    538                          if (IsUpdatedTaskTimerExpired())
+    539                          {
+    540                              bool_t isEnabled;
+    541          
+    542                              isEnabled = SiiCecPortToActSrcSelect();         // Switch to the port towards activeSrcPhysAddr
+    543                              if (isEnabled && (pSac->status.isSystemAudioModeEnabled == false))
+    544                              {
+    545                                  pSac->status.isSystemAudioModeEnabled = true;           // Turn SA mode On
+    546          		        AmTCecEventPassToHMI(USER_EVENT_CEC_SET_SAC_ON);
+    547          			
+    548                                  pSac->status.isMuted = false;                           // Unmute audio output
+    549          		        AmTCecEventPassToHMI(USER_EVENT_CEC_SET_DEMUTE);
+    550          			
+    551                                  SiiCecSacSetSystemAudioModeSend(true, CEC_LOGADDR_UNREGORBC);   // Broadcast "Set System Audio Mode" message
+    552                                  DEBUG_PRINT(CEC_MSG_DBG, ("[CEC_SAC_TASK_TASK_INITIATE]: System Audio initiated by AMP"));
+    553                                  sacFeedbackMsg = CEC_SAC_FB_MSG_SAC_STATUS_CHANGED;             // Indicate SA state change for application
+    554                              }
+    555                              pSac->taskState = CEC_SAC_TASK_INITIATE_STATE_REPORT_RESULTS; // quit the task
+    556                          }
+    557                          break;
+    558          
+    559                  case CEC_SAC_TASK_INITIATE_STATE_REPORT_RESULTS: // Last stage
+    560              
+    561                          // event message to the caller
+    562                          sacFeedbackMsg = CEC_SAC_FB_MSG_SAC_INITIATE_DONE;
+    563          		SiiCecCallbackRegisterSet(SiiCecSacTaskProcess, false);
+    564                          StopTask(CEC_SAC_TASK_INITIATE);
+    565                          break;
+    566          
+    567                  default:break;
+    568              }
+    569          
+    570              return  sacFeedbackMsg;
+    571          }
+    572          
+    573          static uint8_t CecSacTaskInitiateDirectly(void)
+    574          {
+    575              uint8_t sacFeedbackMsg = CEC_SAC_FB_MSG_NONE;
+    576              
+    577          
+    578              switch(pSac->taskState)
+    579              {
+    580                  case CEC_SAC_TASK_EMPTY_STATE_NONE: // all tasks shall start from empty state
+    581                  {
+    582                     pSac->taskMask= CEC_SAC_TASK_INITIATE_DIRECTLY; // mask out other tasks until this one is done
+    583                     pSac->taskState = CEC_SAC_TASK_INITIATE_STATE_SET_SYS_AUD_MODE;
+    584                     AmTCecSacSyncVolumeStatus();
+    585              	}
+    586                         break;
+    587          			   
+    588                  case CEC_SAC_TASK_INITIATE_STATE_SET_SYS_AUD_MODE:
+    589          	{
+    590                      // Directly send "Set System Audio Mode" message to TV
+    591                     // to verify if the TV supports SAC feature.
+    592                     // If not, the TV will reply with "FeatureAbort" message
+    593                     SiiCecSacSetSystemAudioModeSend(true, CEC_LOGADDR_TV);
+    594                     // set timer for MRT delay
+    595                     CecTimeCounterSet(CEC_TIME_MS2TCK(CEC_MAX_RESPONSE_TIME_MS), &pSac->taskTimeCount);
+    596                     pSac->taskState = CEC_SAC_TASK_INITIATE_STATE_WAIT_NO_FEATURE_ABORT;
+    597              	}
+    598                         break;
+    599          
+    600                  case CEC_SAC_TASK_INITIATE_STATE_WAIT_NO_FEATURE_ABORT:
+    601                  {
+    602                     // If no Feature Abort within MRT, turn the SAC on, broadcast <Send System Audio mode> and quit.
+    603                     // In case of FeatureAbort arrival (serviced by CecSacTaskBase()) within MRT, this task will be stopped
+    604                     // by Base task action
+    605                     if (IsUpdatedTaskTimerExpired())
+    606                     {
+    607                        bool_t isEnabled;
+    608          
+    609                        isEnabled = SiiCecPortToActSrcSelect();         // Switch to the port towards activeSrcPhysAddr
+    610                        if (isEnabled && (pSac->status.isSystemAudioModeEnabled == false))
+    611                        {
+    612                            pSac->status.isSystemAudioModeEnabled = true;           // Turn SA mode On
+    613                            AmTCecEventPassToHMI(USER_EVENT_CEC_SET_SAC_ON);
+    614          			
+    615                            pSac->status.isMuted = false;                           // Unmute audio output
+    616                            AmTCecEventPassToHMI(USER_EVENT_CEC_SET_DEMUTE);
+    617          			
+    618                            SiiCecSacSetSystemAudioModeSend(true, CEC_LOGADDR_UNREGORBC);   // Broadcast "Set System Audio Mode" message
+    619                            DEBUG_PRINT(CEC_MSG_DBG, ("[CEC_SAC_TASK_TASK_INITIATE]: InitiateDirectly: System Audio initiated by AMP"));
+    620                            sacFeedbackMsg = CEC_SAC_FB_MSG_SAC_STATUS_CHANGED;             // Indicate SA state change for application
+    621                        }
+    622                        pSac->taskState = CEC_SAC_TASK_INITIATE_STATE_REPORT_RESULTS; // quit the task
+    623                     }
+    624                  }
+    625                        break;
+    626          
+    627                  case CEC_SAC_TASK_INITIATE_STATE_REPORT_RESULTS: // Last stage
+    628              	{
+    629                      // event message to the caller
+    630                      sacFeedbackMsg = CEC_SAC_FB_MSG_SAC_INITIATE_DONE;
+    631                      SiiCecCallbackRegisterSet(SiiCecSacTaskProcess, false);
+    632                      StopTask(CEC_SAC_TASK_INITIATE_DIRECTLY);
+    633                  }
+    634                      break;
+    635              }
+    636          }
+    637          
+    638          //-------------------------------------------------------------------------------------------------
+    639          //! @brief      Terminates System Audio Control feature
+    640          //!             Steps sequence depends on type of the device that terminates the SAC
+    641          //
+    642          //! @return     Feedback message to the caller (Task status or error reports)
+    643          //-------------------------------------------------------------------------------------------------
+    644          
+    645          static uint8_t CecSacTaskTerminate(void)
+    646          {
+    647              uint8_t sacFeedbackMsg = CEC_SAC_FB_MSG_NONE;
+    648              
+    649              SiiCecSacSetSystemAudioModeSend(FALSE, CEC_LOGADDR_UNREGORBC);   // Broadcast with Set System Audio Mode message
+    650          
+    651              SiiCecCallbackRegisterSet(SiiCecSacTaskProcess, false);
+    652          	
+    653              StopTask(CEC_SAC_TASK_TERMINATE);
+    654              sacFeedbackMsg = CEC_SAC_FB_MSG_SAC_TERMINATE_DONE;
+    655              return  sacFeedbackMsg;
+    656          }
+    657          
+    658          
+    659          static uint8_t CecSacTaskWaitTvResponse(void)
+    660          {
+    661              uint8_t  sacFeedbackMsg = CEC_SAC_FB_MSG_NONE;
+    662          
+    663              switch(pSac->taskState)
+    664              {
+    665                  case CEC_SAC_TASK_EMPTY_STATE_NONE: // all tasks shall start from empty state
+    666                  {
+    667                      CecTimeCounterSet(CEC_TIME_MS2TCK(CEC_MAX_RESPONSE_TIME_MS), &pSac->taskTimeCount);
+    668          	    pSac->taskState = CEC_SAC_TASK_INITIATE_WAIT_TV_RESPONSE;
+    669                  }
+    670          	    break;
+    671          
+    672          	case CEC_SAC_TASK_INITIATE_WAIT_TV_RESPONSE:
+    673          	{
+    674                      if (IsUpdatedTaskTimerExpired())
+    675                      {
+    676                              pSac->status.isSystemAudioModeEnabled = true;           // Turn SA mode On
+    677                              AmTCecEventPassToHMI(USER_EVENT_CEC_SET_SAC_ON);
+    678          	
+    679                             pSac->status.isMuted = false;                           // Unmute audio output
+    680                             AmTCecEventPassToHMI(USER_EVENT_CEC_SET_DEMUTE);
+    681          	
+    682                             SiiCecSacSetSystemAudioModeSend(true, CEC_LOGADDR_UNREGORBC);   // Broadcast "Set System Audio Mode" message
+    683                             DEBUG_PRINT(CEC_MSG_DBG, ("[SAC_TASK_INITIATE_WAIT_TV_RESPONSE]"));
+    684          	           pSac->taskState = CEC_SAC_TASK_INITIATE_STATE_REPORT_RESULTS;
+    685                             sacFeedbackMsg = CEC_SAC_FB_MSG_SAC_STATUS_CHANGED;             // Indicate SA state change for application
+    686                      }
+    687          	}
+    688          	    break;
+    689          			
+    690          	case CEC_SAC_TASK_INITIATE_STATE_REPORT_RESULTS:
+    691          	{
+    692          		SiiCecCallbackRegisterSet(SiiCecSacTaskProcess, false);
+    693                          StopTask(CEC_SAC_TASK_WAIT_TV_RESPONSE);
+    694                          sacFeedbackMsg = CEC_SAC_FB_MSG_SAC_INITIATE_DONE;
+    695          	}
+    696          	    break;
+    697              }
+    698          
+    699          
+    700              return sacFeedbackMsg;
+    701          }
+    702          
+    703          static uint8_t CecSacTaskPowerOnTv(void)
+    704          {
+    705              uint8_t  sacFeedbackMsg = CEC_SAC_FB_MSG_NONE;
+    706          
+    707              CecSendUserControlPressed(CEC_LOGADDR_TV, CEC_RC_POWER);
+    708              CecSendUserControlReleased(CEC_LOGADDR_TV, CEC_RC_POWER);
+    709          
+    710              StopTask(CEC_SAC_TASK_POWER_ON_TV);
+    711          				
+    712              SiiCecCallbackRegisterSet(SiiCecSacTaskProcess, false);
+    713          	
+    714              pSac->taskFlags |= CEC_SAC_TASK_INITIATE;
+    715          
+    716              sacFeedbackMsg = CEC_SAC_FB_MSG_NONE;
+    717          
+    718              return sacFeedbackMsg;
+    719          }
+    720          
+    721          #else
+    722          
+    723          //-------------------------------------------------------------------------------------------------
+    724          //! @brief      Initiates System Audio Control feature. Steps sequence depends
+    725          //!             on type of the device that initiates the SAC.
+    726          //
+    727          //! @return     Feedback message to the caller (Task status or error reports)
+    728          //-------------------------------------------------------------------------------------------------
+    729          
+    730          static uint8_t CecSacTaskInitiate(void)
+    731          {
+    732              uint8_t sacFeedbackMsg = CEC_SAC_FB_MSG_NONE;
+    733              
+    734              
+    735              switch(pSac->taskState)
+    736              {
+    737                  case CEC_SAC_TASK_EMPTY_STATE_NONE: // all tasks shall start from empty state
+    738                          pSac->taskMask= CEC_SAC_TASK_INITIATE; // mask out other tasks until this one is done
+    739          
+    740                          switch(SiiCecGetDeviceLA())
+    741                          {
+    742                              default:
+    743                              case CEC_LOGADDR_TV:    
+    744                                      pSac->taskState = CEC_SAC_TASK_INITIATE_STATE_REQUEST_SYS_AUD_MODE;
+    745                                      break;
+    746                              case CEC_LOGADDR_AUDSYS:
+    747                                      pSac->taskState = CEC_SAC_TASK_INITIATE_STATE_REQUEST_SOURCE;
+    748                                      break;   
+    749                          }
+    750                          break;
+    751          
+    752                  case CEC_SAC_TASK_INITIATE_STATE_REQUEST_SOURCE:
+    753                          // if Active Source is unknown,
+    754                          if (SiiCecGetActiveSourceLA() == CEC_LOGADDR_UNREGORBC)
+    755                          {
+    756                              // try to find active source
+    757                              CecActiveSourceRequestSend();
+    758                              // set timer for the following waiting stage
+    759                              CecTimeCounterSet(CEC_TIME_MS2TCK(CEC_MAX_RESPONSE_TIME_MS), &pSac->taskTimeCount);
+    760                              pSac->taskState = CEC_SAC_TASK_INITIATE_STATE_WAIT_SRC_REPLY;
+    761                          }
+    762                          else
+    763                          {
+    764                              // if Active Source is already known,
+    765                              // don't wait for response and proceed with instruction to initiate SAC on TV
+    766                              pSac->taskState = CEC_SAC_TASK_INITIATE_STATE_SET_SYS_AUD_MODE;
+    767                          }
+    768                          break;
+    769          
+    770                  case CEC_SAC_TASK_INITIATE_STATE_WAIT_SRC_REPLY:
+    771                          // wait for reply from Active Source.
+    772                          // If not replied, quit the task
+    773                          if (SiiCecGetActiveSourceLA() != CEC_LOGADDR_UNREGORBC)
+    774                          {
+    775          		    CecTimeCounterReset(&pSac->taskTimeCount);
+    776          			
+    777                              if ( AmTCecPortToActSrcSelect() )	//Check if need shpport SAC
+    778                              	pSac->taskState = CEC_SAC_TASK_INITIATE_STATE_SET_SYS_AUD_MODE;
+    779          		    else
+    780                                  pSac->taskState = CEC_SAC_TASK_INITIATE_STATE_REPORT_RESULTS; // quit the task
+    781                          }
+    782                          else if (IsUpdatedTaskTimerExpired())
+    783                          {   // if timer expired
+    784                              if (SiiCecGetActiveSourceLA() == CEC_LOGADDR_UNREGORBC) // Active Source is still unknown
+    785                              {
+    786                                  pSac->taskState = CEC_SAC_TASK_INITIATE_STATE_REPORT_RESULTS; // quit the task
+    787                              }
+    788                          }
+    789                          break;
+    790                          
+    791                  case CEC_SAC_TASK_INITIATE_STATE_SET_SYS_AUD_MODE:
+    792                          // Directly send "Set System Audio Mode" message to TV
+    793                          // to verify if the TV supports SAC feature.
+    794                          // If not, the TV will reply with "FeatureAbort" message
+    795                          SiiCecSacSetSystemAudioModeSend(true, CEC_LOGADDR_TV);
+    796                          // set timer for MRT delay
+    797                          CecTimeCounterSet(CEC_TIME_MS2TCK(CEC_MAX_RESPONSE_TIME_MS), &pSac->taskTimeCount);
+    798                          pSac->taskState = CEC_SAC_TASK_INITIATE_STATE_WAIT_NO_FEATURE_ABORT;
+    799                          break;
+    800          
+    801                  case CEC_SAC_TASK_INITIATE_STATE_WAIT_NO_FEATURE_ABORT:
+    802                          // If no Feature Abort within MRT, turn the SAC on, broadcast <Send System Audio mode> and quit.
+    803                          // In case of FeatureAbort arrival (serviced by CecSacTaskBase()) within MRT, this task will be stopped
+    804                          // by Base task action
+    805                          if (IsUpdatedTaskTimerExpired())
+    806                          {
+    807                              bool_t isEnabled;
+    808          
+    809                              isEnabled = SiiCecPortToActSrcSelect();         // Switch to the port towards activeSrcPhysAddr
+    810                              if (isEnabled && (pSac->status.isSystemAudioModeEnabled == false))
+    811                              {
+    812                                  pSac->status.isSystemAudioModeEnabled = true;           // Turn SA mode On
+    813          		        AmTCecEventPassToHMI(USER_EVENT_CEC_SET_SAC_ON);
+    814          			
+    815                                  pSac->status.isMuted = false;                           // Unmute audio output
+    816          		        AmTCecEventPassToHMI(USER_EVENT_CEC_SET_DEMUTE);
+    817          			
+    818                                  SiiCecSacSetSystemAudioModeSend(true, CEC_LOGADDR_UNREGORBC);   // Broadcast "Set System Audio Mode" message
+    819                                  DEBUG_PRINT(CEC_MSG_DBG, ("[CEC_SAC_TASK_TASK_INITIATE]: System Audio initiated by AMP"));
+    820                                  sacFeedbackMsg = CEC_SAC_FB_MSG_SAC_STATUS_CHANGED;             // Indicate SA state change for application
+    821                              }
+    822                              pSac->taskState = CEC_SAC_TASK_INITIATE_STATE_REPORT_RESULTS; // quit the task
+    823                          }
+    824                          break;
+    825          
+    826          
+    827                  case CEC_SAC_TASK_INITIATE_STATE_REQUEST_SYS_AUD_MODE: // System Audio Mode request sending
+    828                          SiiCecSacSystemAudioModeRequestSend(SiiCecGetActiveSourceLA(), CEC_LOGADDR_AUDSYS);
+    829                          DEBUG_PRINT(CEC_MSG_DBG, ("[CEC_SAC_TASK_INITIATE]: Requested audio mode\n"));
+    830                          CecTimeCounterSet(CEC_TIME_MS2TCK(CEC_MAX_RESPONSE_TIME_MS), &pSac->taskTimeCount);                
+    831                          pSac->taskState = CEC_SAC_TASK_INITIATE_STATE_WAIT_SYS_AUD_MODE_CONFIRM; // next stage
+    832                          break;
+    833          
+    834                  
+    835                  case CEC_SAC_TASK_INITIATE_STATE_WAIT_SYS_AUD_MODE_CONFIRM: // Wait for confirmation of SA mode enabling
+    836                          // wait until the Amp respond or timeout    
+    837                          if (IsUpdatedTaskTimerExpired())
+    838                          {   // if timer expired
+    839                              pSac->taskState = CEC_SAC_TASK_INITIATE_STATE_REPORT_RESULTS;  // next stage
+    840                              DEBUG_PRINT(CEC_MSG_DBG, ("[CEC_SAC_TASK_INITIATE]: Stopped waiting for response\n"));
+    841                              sacFeedbackMsg = CEC_SAC_FB_MSG_ERR_TIMEOUT; 
+    842                          }
+    843                          break;
+    844          
+    845                  case CEC_SAC_TASK_INITIATE_STATE_REPORT_RESULTS: // Last stage
+    846              
+    847                          // event message to the caller
+    848                          sacFeedbackMsg = CEC_SAC_FB_MSG_SAC_INITIATE_DONE;
+    849          		SiiCecCallbackRegisterSet(SiiCecSacTaskProcess, false);
+    850                          StopTask(CEC_SAC_TASK_INITIATE);
+    851                          break;
+    852          
+    853                  default:break;
+    854              }
+    855          
+    856              return  sacFeedbackMsg;
+    857          }
+    858          
+    859          
+    860          //-------------------------------------------------------------------------------------------------
+    861          //! @brief      Terminates System Audio Control feature
+    862          //!             Steps sequence depends on type of the device that terminates the SAC
+    863          //
+    864          //! @return     Feedback message to the caller (Task status or error reports)
+    865          //-------------------------------------------------------------------------------------------------
+    866          
+    867          static uint8_t CecSacTaskTerminate(void)
+    868          {
+    869              uint8_t sacFeedbackMsg = CEC_SAC_FB_MSG_NONE;
+    870              
+    871              
+    872              switch(pSac->taskState)
+    873              {
+    874                  case CEC_SAC_TASK_EMPTY_STATE_NONE: // all tasks shall start from empty state
+    875                          pSac->taskMask= CEC_SAC_TASK_TERMINATE; // mask out other tasks until this one is done
+    876          
+    877                          switch(SiiCecGetDeviceLA())
+    878                          {
+    879                              default:
+    880                              case CEC_LOGADDR_TV:
+    881                                      pSac->taskState = CEC_SAC_TASK_TERMINATE_STATE_REQUEST_SYS_AUD_MODE;
+    882                                      break;
+    883                              case CEC_LOGADDR_AUDSYS:
+    884                                      pSac->status.isSystemAudioModeEnabled = false;  // Turn SA mode Off
+    885                                      pSac->status.isMuted = true;                    // Mute audio output			
+    886                                      SiiCecSacSetSystemAudioModeSend(false, 0xF);    // Broadcast with Set System Audio Mode message
+    887                                      pSac->taskState = CEC_SAC_TASK_TERMINATE_STATE_REPORT_RESULTS;
+    888                                      break;   
+    889                          }
+    890                          break;
+    891                          
+    892                  case CEC_SAC_TASK_TERMINATE_STATE_REQUEST_SYS_AUD_MODE: // System Audio Mode request sending
+    893                          SiiCecSacSystemAudioModeRequestSend(0xFFFF, CEC_LOGADDR_AUDSYS); // request to terminate
+    894                          DEBUG_PRINT(CEC_MSG_DBG, ("[CEC_SAC_TASK_TERMINATE]: Requested audio mode termination\n"));
+    895                          CecTimeCounterSet(CEC_TIME_MS2TCK(CEC_MAX_RESPONSE_TIME_MS), &pSac->taskTimeCount);                
+    896                          pSac->taskState = CEC_SAC_TASK_TERMINATE_STATE_WAIT_SYS_AUD_MODE_CONF; // next stage
+    897                          break;
+    898          
+    899                  case CEC_SAC_TASK_TERMINATE_STATE_WAIT_SYS_AUD_MODE_CONF: // Wait for confirmation of SA mode enabling
+    900                          // wait until the Amp respond or timeout    
+    901                          if (IsUpdatedTaskTimerExpired())
+    902                          {   // if timer expired
+    903                              pSac->taskState = CEC_SAC_TASK_TERMINATE_STATE_REPORT_RESULTS;  // next stage
+    904                              DEBUG_PRINT(CEC_MSG_DBG, ("[CEC_SAC_TASK_TERMINATE]: Stopped waiting for response\n"));
+    905                              sacFeedbackMsg = CEC_SAC_FB_MSG_ERR_TIMEOUT; 
+    906                          }
+    907                          break;
+    908              
+    909                  case CEC_SAC_TASK_TERMINATE_STATE_REPORT_RESULTS: // Last stage
+    910              
+    911                          // event message to the caller
+    912                          sacFeedbackMsg = CEC_SAC_FB_MSG_SAC_TERMINATE_DONE;
+    913                          StopTask(CEC_SAC_TASK_TERMINATE);
+    914                          break;
+    915          
+    916                  default:break;
+    917              }
+    918          
+    919              return  sacFeedbackMsg;
+    920          }
+    921          #endif
+    922          
+    923          //-------------------------------------------------------------------------------------------------
+    924          //! @brief      Implements CEC operation of Volume Control feature
+    925          //
+    926          //! @return     Feedback message to the caller (Task status or error reports)
+    927          //-------------------------------------------------------------------------------------------------
+    928          
+    929          static uint8_t CecSacTaskVolume(void)
+    930          {
+    931              uint8_t sacFeedbackMsg = CEC_SAC_FB_MSG_NONE;
+    932              
+    933              
+    934              switch(pSac->taskState)
+    935              {
+    936                  case CEC_SAC_TASK_EMPTY_STATE_NONE: // all tasks shall start from empty state
+    937                          pSac->taskMask = CEC_SAC_TASK_VOLUME; // mask out other tasks until this one is done
+    938                          pSac->taskState = CEC_SAC_TASK_VOLUME_STATE_CTRL_PRESSED_SEND;
+    939                          // don't break here to save time and go ahead to the fist step
+    940                          
+    941                  case CEC_SAC_TASK_VOLUME_STATE_CTRL_PRESSED_SEND: // Send user RC code to Amp
+    942                          SiiCecSacUserControlPressedSend(pSac->lastRcCode, CEC_LOGADDR_AUDSYS);
+    943                          DEBUG_PRINT(CEC_MSG_DBG, "[CEC_SAC_TASK_VOLUME]: User control pressed code [%02X] sent\n", pSac->lastRcCode);
+    944                          CecTimeCounterSet(CEC_TIME_MS2TCK(CEC_UC_REPETITION_TIME_MS), &pSac->taskTimeCount);                
+    945                          pSac->taskState = CEC_SAC_TASK_VOLUME_STATE_WAIT_FOR_STATUS; // next stage
+    946                          break;
+    947          
+    948                  case CEC_SAC_TASK_VOLUME_STATE_WAIT_FOR_STATUS: // Wait 200-500 ms before repetition of the UC command
+    949                          if (IsUpdatedTaskTimerExpired())
+    950                          {   // if timer expired
+    951                              pSac->taskState = CEC_SAC_TASK_VOLUME_STATE_CTRL_PRESSED_SEND;  // loop
+    952                              // The loop shall be broken by external switching to the following release step
+    953                          }
+    954                          break;
+    955          
+    956                  case CEC_SAC_TASK_VOLUME_STATE_CTRL_RELEASED_SEND:
+    957                          SiiCecSacUserControlReleasedSend(CEC_LOGADDR_AUDSYS);
+    958                          DEBUG_PRINT(CEC_MSG_DBG, ("[CEC_SAC_TASK_VOLUME]: User control released sent\n"));
+    959                          // don't break here to save time and go ahead to the last step
+    960               
+    961                  case CEC_SAC_TASK_VOLUME_STATE_REPORT_RESULTS: // Last stage
+    962                          // event message to the caller
+    963                          sacFeedbackMsg = CEC_SAC_FB_MSG_SAC_VOLUME_DONE;
+    964                          StopTask(CEC_SAC_TASK_VOLUME);
+    965                          break;
+    966                  default:break;
+    967              }
+    968          
+    969              return  sacFeedbackMsg;
+    970          }
+    971          
+    972          
+    973          //-------------------------------------------------------------------------------------------------
+    974          //! @brief      Implements Audio Format capability discovery feature
+    975          //
+    976          //! @return     Feedback message to the caller (Task status or error reports)
+    977          //-------------------------------------------------------------------------------------------------
+    978          
+    979          static uint8_t CecSacTaskDiscoverFmt(void)
+    980          {
+    981              uint8_t sacFeedbackMsg = CEC_SAC_FB_MSG_NONE;
+    982          
+    983              
+    984              switch(pSac->taskState)
+    985              {
+    986                  case CEC_SAC_TASK_EMPTY_STATE_NONE: // all tasks shall start from empty state
+    987                          pSac->taskMask = CEC_SAC_TASK_DISCOVER_FMT; // mask out other tasks until this one is done
+    988                          pSac->taskState = CEC_SAC_TASK_DISCOVER_STATE_REQUEST_SAD;
+    989                          // don't break here to save time and go ahead to the fist step
+    990                          
+    991                  case CEC_SAC_TASK_DISCOVER_STATE_REQUEST_SAD: // Request Amp to provide audio format support information
+    992                          SiiCecSacRequestAudioCapabilitySend(CEC_LOGADDR_AUDSYS, pSac->numberOfRequestedFormats, pSac->aFmtInquired);
+    993                         // DEBUG_PRINT(CEC_MSG_DBG, "[CEC_SAC_TASK_DISCOVER_FMT]: Request for [%d] audio formats support sent\n", (uint16_t) pSac->numberOfRequestedFormats);
+    994                          CecTimeCounterSet(CEC_TIME_MS2TCK(CEC_MAX_RESPONSE_TIME_MS), &pSac->taskTimeCount);                
+    995                          pSac->taskState = CEC_SAC_TASK_DISCOVER_STATE_WAIT_FOR_REPLY; // next stage
+    996                          break;
+    997          
+    998                  case CEC_SAC_TASK_DISCOVER_STATE_WAIT_FOR_REPLY: 
+    999                          if (IsUpdatedTaskTimerExpired())
+   1000                          {   // if timer expired
+   1001                             // DEBUG_PRINT(CEC_MSG_DBG, ("[CEC_SAC_TASK_DISCOVER_FMT]: Audio System not responded with Short Audio Descriptor.\n"));
+   1002                              sacFeedbackMsg = CEC_SAC_FB_MSG_ERR_TIMEOUT; 
+   1003                              pSac->taskState = CEC_SAC_TASK_DISCOVER_STATE_REPORT_RESULTS;
+   1004                          }
+   1005                          break;
+   1006               
+   1007                  case CEC_SAC_TASK_DISCOVER_STATE_REPORT_RESULTS: // Last stage
+   1008                          // event message to the caller
+   1009                          sacFeedbackMsg = CEC_SAC_FB_MSG_SAC_FMT_DISC_DONE;
+   1010                          StopTask(CEC_SAC_TASK_DISCOVER_FMT);
+   1011                          break;
+   1012                  default:break;
+   1013              }
+   1014          
+   1015              return  sacFeedbackMsg;
+   1016          }
+   1017          
+   1018          //-------------------------------------------------------------------------------------------------
+   1019          //! @brief      Add the passed Short Audio Descriptor info to our format list.
+   1020          //!
+   1021          //! @param[in]
+   1022          //! @retval     true    - Format added
+   1023          //! @retval     false   - Unable to add format
+   1024          //-------------------------------------------------------------------------------------------------
+   1025          bool_t SiiCecSacAddFormat ( int index, uint8_t audFmtCode, uint8_t maxChanNumber, uint8_t sampleRate, uint8_t quality )
+   1026          {
+   1027              int     curFmtIndex, fmtIndex;
+   1028              bool_t  isEmptyFound;
+   1029          
+   1030              fmtIndex        = -1;
+   1031              curFmtIndex     = -1;
+   1032              isEmptyFound    = false;
+   1033              if ( index == -1 )
+   1034              {
+   1035                  // Find empty, update existing or add new record to the format list
+   1036                  fmtIndex        = -1;       // Assume unable to find space
+   1037                  curFmtIndex     = 0;
+   1038                  while ( curFmtIndex < pSac->numberOfAudioFormats)
+   1039                  {
+   1040                      if ( pSac->aFmt[ curFmtIndex].audioFmtCode == CEC_AUD_FMT_RES0 ||
+   1041                              pSac->aFmt[ curFmtIndex].audioFmtCode == audFmtCode)
+   1042                      {
+   1043                          // empty or existing record found
+   1044                          isEmptyFound = true;
+   1045                          break;
+   1046                      }
+   1047                      curFmtIndex++;
+   1048                  }
+   1049              }
+   1050              else
+   1051              {
+   1052                  if ( index < pSac->numberOfAudioFormats)
+   1053                  {
+   1054                      curFmtIndex = index;
+   1055                      isEmptyFound = true;    // Not really empty, but this is where we'll put it.
+   1056                  }
+   1057              }
+   1058              if ( isEmptyFound )
+   1059              {
+   1060                  fmtIndex = curFmtIndex;     // use empty cell
+   1061              }
+   1062              else
+   1063              {   // occupy new cell if possible
+   1064                  if ( pSac->numberOfAudioFormats < MAX_NUMBER_OF_AUDIO_FORMATS)
+   1065                  {
+   1066                      fmtIndex = pSac->numberOfAudioFormats;
+   1067                      pSac->numberOfAudioFormats++;
+   1068                  }
+   1069                  else
+   1070                  {
+   1071                      DEBUG_PRINT(CEC_MSG_DBG, ("[CEC_SAC]: ERROR: Not enough room for audio format records!\n"));
+   1072                  }
+   1073              }
+   1074          
+   1075              if ( fmtIndex != -1 )
+   1076              {
+   1077                  // Add received format record
+   1078                  pSac->aFmt[fmtIndex].maxChanNumber  = maxChanNumber & 0x7;
+   1079                  pSac->aFmt[fmtIndex].audioFmtCode   = audFmtCode;
+   1080                  pSac->aFmt[fmtIndex].sampleRate     = sampleRate;
+   1081                  pSac->aFmt[fmtIndex].quality        = quality;
+   1082              }
+   1083          
+   1084              return( fmtIndex != -1 );
+   1085          }
+   1086          
+   1087          //-------------------------------------------------------------------------------------------------
+   1088          //! @brief      Performs CEC/SAC message parsing and support basic SAC functionality
+   1089          //!             This task can't be masked and will run in background of the
+   1090          //!             other active tasks, if an incoming CEC message is pending.
+   1091          //
+   1092          //! @param[in]  pCecMessage - pointer to a pending CEC message or 0, if there is no message awaiting
+   1093          //
+   1094          //! @return     Feedback message to the caller (Task status or error reports)
+   1095          //-------------------------------------------------------------------------------------------------
+   1096          
+   1097          static uint8_t CecSacTaskBase(SiiCpiData_t *pCecMessage)
+   1098          {
+   1099              uint8_t     feedbackMsg = CEC_SAC_FB_MSG_NONE;
+   1100              uint8_t     senderLogAddr;
+   1101              uint8_t     destLogAddr;
+   1102              bool_t  isDirectAddressed;
+   1103          		    
+   1104              isDirectAddressed   = (bool_t)!((pCecMessage->srcDestAddr & 0x0F ) == CEC_LOGADDR_UNREGORBC );
+   1105          	
+   1106              // Update timers    
+   1107              CecTimeCounterUpdate(&pSac->reportDelayCnt, 0); // don't affect recall timer because operation is tied to UC events
+   1108          
+   1109              if (pCecMessage != 0) //decode a message, update status
+   1110              {
+   1111                  senderLogAddr = (pCecMessage->srcDestAddr & 0xF0) >> 4; // sender's logical address
+   1112                  destLogAddr   =  pCecMessage->srcDestAddr & 0x0F; // destination logical address
+   1113          
+   1114                  if ((destLogAddr == SiiCecGetDeviceLA()) || (destLogAddr == 0xF)) // ignore messages addressed to other devices
+   1115                  {
+   1116                      switch (pCecMessage->opcode) // CEC operation code
+   1117                      {
+   1118                          case CECOP_SYSTEM_AUDIO_MODE_REQUEST:
+   1119                              
+   1120                              if ((pCecMessage->argCount != 2) && (pCecMessage->argCount != 0))
+   1121                              {
+   1122                              	feedbackMsg = CEC_SAC_FB_MSG_ERROR;                    
+   1123                                  CecSacBadCmdReport("System Audio Mode Request");
+   1124                                  break;
+   1125                              }
+   1126                              
+   1127                              if (SiiCecGetDeviceLA() == CEC_LOGADDR_AUDSYS) // Device must be an Amp to accept this command
+   1128                              {
+   1129                                  if (pCecMessage->argCount == 2)	// Initial SAC
+   1130                                  {
+   1131                                      bool_t isEnabled;
+   1132          #if ( configSII_DEV_953x_PORTING == 1 )
+   1133          			    uint16_t activeSrcPa;
+   1134          
+   1135          			    activeSrcPa = (pCecMessage->args[0] << 8) | pCecMessage->args[1];
+   1136                                      SiiCecSetActiveSourcePA(activeSrcPa);
+   1137          #else
+   1138                                      SiiCecSetActiveSourcePA((pCecMessage->args[0] << 8) | pCecMessage->args[1]);
+   1139          #endif
+   1140                                      DEBUG_PRINT(CEC_MSG_DBG, "[CEC_SAC]: received <System Audio Mode Request> message with source PA = %04x\n", SiiCecGetActiveSourcePA());
+   1141          			    
+   1142                                      isEnabled = SiiCecPortToActSrcSelect();         // Switch to the port towards activeSrcPhysAddr
+   1143          #if ( configSII_DEV_953x_PORTING == 1 )
+   1144                                      //AAAAA: LA = tuner, 接input. 但isEnabled卻為fail 導致11.2.15-1
+   1145                                      if (isEnabled )
+   1146                                      {
+   1147          				//if (!SiiCecIsAdjacentLA(senderLogAddr))	// if requested by non-child device
+   1148          				/*if ( activeSrcPa == 0x0000 )	// if active source is TV
+   1149          				{
+   1150                                                  SiiCecSacSetSystemAudioModeSend(true, CEC_LOGADDR_TV);   //
+   1151          					AmTSacAppTaskAssign(SAC_TASK_INITIATE_WAIT_TV_RESPONSE);
+   1152                                                  //feedbackMsg = wait for feature abort;     //
+   1153                                                  break;
+   1154          				}*/
+   1155          				
+   1156          		                AmTCecEventPassToHMI(USER_EVENT_CEC_SET_SAC_ON);
+   1157          		                //AmTCecEventPassToHMI(USER_EVENT_CEC_SET_DEMUTE);
+   1158                                          feedbackMsg = CEC_SAC_FB_MSG_WAKEUP_UNMUTE;     // Amp goes out of standby
+   1159                                          //SiiCecPortToActSrcSelect();
+   1160                                          pSac->status.isSystemAudioModeEnabled = true;   // Turn SA mode On					
+   1161                                          //pSac->status.isMuted = false;                   // Unmute audio output
+   1162                                          
+   1163                                          SiiCecSacSetSystemAudioModeSend(true, CEC_LOGADDR_UNREGORBC);   // Broadcast "Set System Audio Mode" message
+   1164          
+   1165          			        AmTCecEventPassToHMI(USER_EVENT_SAC_POWER_ON);	//Send event to HMI to power on system if need
+   1166                                      }
+   1167          			    else if ( !isEnabled )	// Active Source is not TV nor child device
+   1168          			    {
+   1169                                          SiiCecSacSetSystemAudioModeSend(true, CEC_LOGADDR_TV);   //
+   1170          				AmTSacAppTaskAssign(SAC_TASK_INITIATE_WAIT_TV_RESPONSE);
+   1171                                          //feedbackMsg = wait for feature abort;     //
+   1172                                          break;
+   1173                                          //SiiCecFeatureAbortSend(pCecMessage->opcode, CECAR_REFUSED, senderLogAddr);				
+   1174          			    }
+   1175          #else
+   1176                                      if (isEnabled && (pSac->status.isSystemAudioModeEnabled == false))
+   1177                                      {
+   1178                                          feedbackMsg = CEC_SAC_FB_MSG_WAKEUP_UNMUTE;     // Amp goes out of standby
+   1179                                          //SiiCecPortToActSrcSelect();
+   1180                                          pSac->status.isSystemAudioModeEnabled = true;   // Turn SA mode On					
+   1181                                          pSac->status.isMuted = false;                   // Unmute audio output
+   1182                                          
+   1183                                          SiiCecSacSetSystemAudioModeSend(true, CEC_LOGADDR_UNREGORBC);   // Broadcast "Set System Audio Mode" message
+   1184          			    }
+   1185          #endif
+   1186                                  }
+   1187                                  else // message without a parameter => Terminate SAC
+   1188                                  {
+   1189                                      DEBUG_PRINT(CEC_MSG_DBG, "[CEC_SAC]: received <System Audio Mode Request> message without a parameter\n");
+   1190          #if ( configSII_DEV_953x_PORTING == 1 )
+   1191                                      pSac->status.isSystemAudioModeEnabled = false;  // Turn SA mode Off
+   1192          		            AmTCecEventPassToHMI(USER_EVENT_CEC_SET_SAC_OFF);
+   1193          					
+   1194                                      SiiCecSacSetSystemAudioModeSend(false, CEC_LOGADDR_UNREGORBC);  // Reply with Set System Audio Mode message
+   1195          #else
+   1196                                      pSac->status.isSystemAudioModeEnabled = false;  // Turn SA mode Off
+   1197                                      pSac->status.isMuted = true;                    // Mute audio output
+   1198                                      SiiCecSacSetSystemAudioModeSend(false, senderLogAddr);  // Reply with Set System Audio Mode message
+   1199          #endif
+   1200          			    //SiiCecFeatureAbortSend(pCecMessage->opcode, CECAR_INVALID_OPERAND, destLogAddr);
+   1201                                      feedbackMsg = CEC_SAC_FB_MSG_SAC_STATUS_CHANGED;                            
+   1202                                  }
+   1203                              }
+   1204                              else
+   1205                              {
+   1206                                  DEBUG_PRINT(MSG_ALWAYS, "[CEC_SAC]: Device must be Audio System. Replied with FeatureAbort.\n");
+   1207                                  SiiCecFeatureAbortSend(pCecMessage->opcode, CECAR_REFUSED, senderLogAddr);
+   1208                              }                    
+   1209                              break;
+   1210          
+   1211                          case CECOP_GIVE_AUDIO_STATUS:
+   1212                              if (pCecMessage->argCount != 0)
+   1213                              {
+   1214                              	feedbackMsg = CEC_SAC_FB_MSG_ERROR;                    
+   1215                                  CecSacBadCmdReport("Give Audio Status");
+   1216                              }
+   1217                              else if ( isDirectAddressed )
+   1218                              {
+   1219                                  // Respond with "Report Audio Status" to sender
+   1220          			//AmTCecSacSyncVolumeStatus();
+   1221                                  SiiCecSacReportAudioStatusSend(pSac->volume, pSac->status.isMuted, senderLogAddr);
+   1222                              }
+   1223                              break;
+   1224                              
+   1225                          case CECOP_SET_SYSTEM_AUDIO_MODE:
+   1226                              if (pCecMessage->argCount != 1)
+   1227                              {
+   1228                              	feedbackMsg = CEC_SAC_FB_MSG_ERROR;                    
+   1229                                  CecSacBadCmdReport("Set System Audio Mode");
+   1230                                  break;
+   1231                              }
+   1232                              
+   1233                              if (pSac->taskState == CEC_SAC_TASK_INITIATE_STATE_WAIT_SYS_AUD_MODE_CONFIRM ||
+   1234                                  pSac->taskState == CEC_SAC_TASK_TERMINATE_STATE_WAIT_SYS_AUD_MODE_CONF)
+   1235                              {   // if TV is waiting for SA mode reply from the AMP
+   1236                                  bool_t isSAModeEnabledPrv = pSac->status.isSystemAudioModeEnabled;
+   1237                                  
+   1238                                  DEBUG_PRINT(MSG_ALWAYS, ("[CEC_SAC]: System Audio Mode "));
+   1239                                  if (pCecMessage->args[0] != 0) // SA mode enabled
+   1240                                  {
+   1241                                      pSac->status.isSystemAudioModeEnabled = true;
+   1242          		            AmTCecEventPassToHMI(USER_EVENT_CEC_SET_SAC_ON);
+   1243          				
+   1244          			    //SiiCecCallbackRegisterSet(SiiCecSacTaskProcess, true);
+   1245          
+   1246                                      pSac->status.isMuted = true;
+   1247          		            AmTCecEventPassToHMI(USER_EVENT_CEC_SET_MUTE);
+   1248          
+   1249                                      DEBUG_PRINT(MSG_ALWAYS, ("enabled.\n"));
+   1250                                  }
+   1251                                  else  // SA mode disabled
+   1252                                  {
+   1253                                      pSac->status.isSystemAudioModeEnabled = false;
+   1254          		            AmTCecEventPassToHMI(USER_EVENT_CEC_SET_SAC_OFF);
+   1255          				
+   1256          			    //SiiCecCallbackRegisterSet(SiiCecSacTaskProcess, false);
+   1257          				
+   1258                                      pSac->status.isMuted = false;
+   1259          		            AmTCecEventPassToHMI(USER_EVENT_CEC_SET_DEMUTE);
+   1260          				
+   1261                                      DEBUG_PRINT(MSG_ALWAYS, ("disabled.\n"));                            
+   1262                                  }
+   1263          
+   1264                                  if (isSAModeEnabledPrv != pSac->status.isSystemAudioModeEnabled)
+   1265                                  {
+   1266                                      feedbackMsg = CEC_SAC_FB_MSG_SAC_STATUS_CHANGED;
+   1267                                  }
+   1268                                  CecTimeCounterReset(&pSac->taskTimeCount); // stop waiting to finish the Initiate task immediately
+   1269                              }
+   1270                              break;
+   1271                              
+   1272                          case CECOP_REPORT_AUDIO_STATUS:
+   1273                              if (pCecMessage->argCount != 1)
+   1274                              {
+   1275                              	feedbackMsg = CEC_SAC_FB_MSG_ERROR;                    
+   1276                                  CecSacBadCmdReport("Report Audio Status");
+   1277                                  break;
+   1278                              }
+   1279                               
+   1280                              if (pSac->status.isSystemAudioModeEnabled)
+   1281                              {
+   1282                                  // Set local volume equal to the volume of the Amp
+   1283                                  pSac->volume = pCecMessage->args[0] & 0x7F;
+   1284                                  feedbackMsg = CEC_SAC_FB_MSG_SAC_VOLUME_CHANGED;                        
+   1285                              }
+   1286                              break;
+   1287                              
+   1288                          case CECOP_GIVE_SYSTEM_AUDIO_MODE_STATUS:
+   1289                              if (pCecMessage->argCount != 0)
+   1290                               {
+   1291                              	feedbackMsg = CEC_SAC_FB_MSG_ERROR;                    
+   1292                                  CecSacBadCmdReport("Give System Audio Mode Status");
+   1293                               }
+   1294                               else if ( isDirectAddressed )
+   1295                               {
+   1296                                   // Respond with "System Audio Mode Status" to sender
+   1297                                   SiiCecSacSystemAudioModeStatusSend(senderLogAddr);
+   1298                               }
+   1299                              break;
+   1300                              
+   1301                          case CECOP_SYSTEM_AUDIO_MODE_STATUS:
+   1302                              break;
+   1303                              
+   1304                          case CECOP_REPORT_SHORT_AUDIO: 
+   1305                              if (pCecMessage->argCount % 3 != 0)
+   1306                              {
+   1307                              	feedbackMsg = CEC_SAC_FB_MSG_ERROR;                    
+   1308                                  CecSacBadCmdReport("Report Short Audio Descriptor");
+   1309                                  break;                        
+   1310                              }
+   1311                              
+   1312                              if ((senderLogAddr == CEC_LOGADDR_AUDSYS) && /* Shall come from Amp*/
+   1313                                  (pSac->taskState == CEC_SAC_TASK_DISCOVER_STATE_WAIT_FOR_REPLY)) // Format Discovery task is running
+   1314                              { 
+   1315                                  uint8_t i, nFmt;
+   1316          
+   1317                                  nFmt = pCecMessage->argCount / 3;
+   1318          
+   1319                                  // Update local information about supported audio formats
+   1320                                  for (i = 0; i < nFmt; i++)
+   1321                                  {
+   1322                                      // Add received format record
+   1323                                      SiiCecSacAddFormat(
+   1324                                          -1, // Add to empty slot if available
+   1325                                          (pCecMessage->args[3 * i] >> 3) & 0xF,
+   1326                                          pCecMessage->args[3 * i] & 0x7,
+   1327                                          pCecMessage->args[3 * i + 1],
+   1328                                          pCecMessage->args[3 * i + 2]
+   1329                                          );
+   1330                                  }
+   1331                                  pSac->taskState = CEC_SAC_TASK_DISCOVER_STATE_REPORT_RESULTS; // skip timeout check
+   1332                              }
+   1333                              break;
+   1334          
+   1335                          case CECOP_REQUEST_SHORT_AUDIO:
+   1336                              if (SiiCecGetDeviceLA() == CEC_LOGADDR_AUDSYS) // Device must be an Amp to accept this command
+   1337                              {
+   1338                                  uint8_t i;
+   1339                                  
+   1340                                  if ((pCecMessage->argCount > 0) && (pCecMessage->argCount <= 4))
+   1341                                  {
+   1342                                      pSac->numberOfRequestedFormats = pCecMessage->argCount;
+   1343                                      for (i = 0; i < pSac->numberOfRequestedFormats; i++)
+   1344                                      {
+   1345                                          if (((pCecMessage->args[i] >> 6) & 0x3) == 0)
+   1346                                          {
+   1347                                              pSac->aFmtInquired[i] = pCecMessage->args[i] & 0x1F;
+   1348                                          }
+   1349                                          else
+   1350                                          {
+   1351                                              DEBUG_PRINT(CEC_MSG_DBG, ("[CEC_SAC]: Unknown Audio Format ID!\n"));
+   1352                                              pSac->aFmtInquired[i] = CEC_AUD_FMT_RES0;
+   1353                                          }
+   1354                                      }
+   1355                                      SiiCecSacReportAudioCapabilitySend(senderLogAddr, pSac->numberOfRequestedFormats, pSac->aFmtInquired);
+   1356                                  }
+   1357          			else
+   1358                              		feedbackMsg = CEC_SAC_FB_MSG_ERROR;                    
+   1359                              }
+   1360          		    else
+   1361                              	feedbackMsg = CEC_SAC_FB_MSG_ERR_NONSAC_CMD;                    
+   1362                              break;
+   1363                              
+   1364                          case CECOP_USER_CONTROL_PRESSED:
+   1365                              if (pCecMessage->argCount != 1)
+   1366                              {
+   1367                                  CecSacBadCmdReport("User Control Pressed");
+   1368                              	feedbackMsg = CEC_SAC_FB_MSG_ERROR;                    
+   1369                                  break;
+   1370                              }
+   1371          
+   1372                              // Only process the User Control pressed commands if SAC mode is enabled
+   1373                              feedbackMsg = CEC_SAC_FB_MSG_ERR_NONSAC_CMD;
+   1374                              if ( pSac->status.isSystemAudioModeEnabled )
+   1375                              {
+   1376                                  feedbackMsg = CEC_SAC_FB_MSG_NONE;
+   1377                                  switch (pCecMessage->args[0])
+   1378                                  {
+   1379                                      case CEC_RC_VOLUME_UP:
+   1380                                          SiiCecSacVolumeStep(true);
+   1381                                          SiiCecSacMute(CEC_SAC_MUTE_OFF);
+   1382                                          feedbackMsg = CEC_SAC_FB_MSG_SAC_VOLUME_CHANGED;
+   1383                                          break;
+   1384                                      case CEC_RC_VOLUME_DOWN:
+   1385                                          SiiCecSacVolumeStep(false);
+   1386                                          feedbackMsg = CEC_SAC_FB_MSG_SAC_VOLUME_CHANGED;
+   1387                                          break;
+   1388                                      case CEC_RC_MUTE:
+   1389                                          SiiCecSacMute(CEC_SAC_MUTE_TOGGLE);
+   1390                                          feedbackMsg = CEC_SAC_FB_MSG_SAC_STATUS_CHANGED;								
+   1391                                          break;
+   1392                                      case CEC_RC_MUTE_FUNCTION:
+   1393                                          SiiCecSacMute(CEC_SAC_MUTE_ON);
+   1394                                          feedbackMsg = CEC_SAC_FB_MSG_MUTE;
+   1395                                          break;
+   1396                                      case CEC_RC_RESTORE_VOLUME_FUNCTION:
+   1397                                          SiiCecSacMute(CEC_SAC_MUTE_OFF);
+   1398                                          feedbackMsg = CEC_SAC_FB_MSG_UNMUTE;
+   1399                                          break;
+   1400                                      default:
+   1401                                          // Let other keys pass through
+   1402                                          feedbackMsg = CEC_SAC_FB_MSG_ERR_NONSAC_CMD;
+   1403                                          DEBUG_PRINT(CEC_MSG_DBG, ("[CEC_SAC]: User Control Pressed message not used by SAC\n"));
+   1404                                          break;
+   1405                                  }
+   1406                              }
+   1407          
+   1408                              // If key was used, continue processing...
+   1409                              if ( feedbackMsg != CEC_SAC_FB_MSG_ERR_NONSAC_CMD)
+   1410                              {
+   1411                                  pSac->cecUserKeyPressed = true;
+   1412          
+   1413                                  // Report Audio Status to control device
+   1414                                  // Shall be sent no more frequently than once in 500ms
+   1415                                  if (CecIsTimeCounterExpired(&pSac->reportDelayCnt))
+   1416                                  {
+   1417          			    // Report status
+   1418                                      SiiCecSacReportAudioStatusSend(pSac->volume, pSac->status.isMuted, senderLogAddr);
+   1419                                      DEBUG_PRINT(CEC_MSG_DBG, ("[CEC_SAC]: Report Audio Status sent\n"));
+   1420                                      // set new delay timer
+   1421                                      CecTimeCounterSet(CEC_TIME_MS2TCK(CEC_SAC_STATUS_DELAY_MS), &pSac->reportDelayCnt);
+   1422                                  }
+   1423                              }
+   1424          		    else
+   1425                              	feedbackMsg = CEC_SAC_FB_MSG_ERR_NONSAC_CMD;      
+   1426          			
+   1427                              break;
+   1428                              
+   1429                          case CECOP_USER_CONTROL_RELEASED:
+   1430                              if ( pSac->cecUserKeyPressed )
+   1431                                  pSac->cecUserKeyPressed = false;
+   1432          		    else
+   1433                              	feedbackMsg = CEC_SAC_FB_MSG_ERR_NONSAC_CMD;                    
+   1434                              break;
+   1435                              
+   1436                          case CECOP_FEATURE_ABORT:
+   1437                              // "Feature Abort" message shall break Initiate Task if it waits for "No Feature Abort" condition
+   1438          #if ( configSII_DEV_953x_PORTING == 1 )
+   1439                              if ( (pCecMessage->args[0] == CECOP_SET_SYSTEM_AUDIO_MODE) 
+   1440          						&& ((pSac->taskState == CEC_SAC_TASK_INITIATE_STATE_WAIT_NO_FEATURE_ABORT)
+   1441          						||(pSac->taskState == CEC_SAC_TASK_INITIATE_WAIT_TV_RESPONSE )))
+   1442          #else
+   1443                              if (pSac->taskState == CEC_SAC_TASK_INITIATE_STATE_WAIT_NO_FEATURE_ABORT)
+   1444          #endif
+   1445                              {
+   1446                                  // Terminate Initiate Task
+   1447          		    	CecTimeCounterReset(&pSac->taskTimeCount);
+   1448                                  pSac->taskState = CEC_SAC_TASK_INITIATE_STATE_REPORT_RESULTS;
+   1449                              }
+   1450          		    else
+   1451                              	feedbackMsg = CEC_SAC_FB_MSG_ERR_NONSAC_CMD;                    
+   1452          
+   1453                              break;
+   1454          
+   1455                          default:  // the message doesn't belong to CEC/SAC group
+   1456                              //DEBUG_PRINT(CEC_MSG_DBG, ("[CEC_SAC]: Non System Audio Control CEC message\n"));
+   1457                              feedbackMsg = CEC_SAC_FB_MSG_ERR_NONSAC_CMD;                    
+   1458                      }
+   1459                  }
+   1460                  
+   1461              }
+   1462          
+   1463              return feedbackMsg;
+   1464          }
+   1465          
+   1466          //-------------------------------------------------------------------------------------------------
+   1467          //! @brief      Task dispatching function.
+   1468          //
+   1469          //!             Shall be called periodically.
+   1470          //!             Using of SiiCecSacNextInvocationTimeGet() helps to figure out
+   1471          //!             exact recall time that can vary depending on current task status.
+   1472          //!             Alternatively, simple periodic polling would work as well;
+   1473          //!             in the case of polling, CEC_MIN_RECALL_TIME_MS is a suggested
+   1474          //!             recall time.
+   1475          //!
+   1476          //! @param[in]  pCecMessage   - pointer to a pending CEC message or 0, if there is no message awaiting
+   1477          //!
+   1478          //! @return     true if CEC message has been consumed
+   1479          //-------------------------------------------------------------------------------------------------
+   1480          
+   1481          bool_t SiiCecSacTaskProcess(SiiCpiData_t *pCecMessage)
+   1482          {
+   1483              uint8_t  feedbackMsg = CEC_SAC_FB_MSG_NONE;
+   1484              uint16_t taskFlagsMasked;   
+   1485              uint16_t sysTimerCountMs = SiiOsTimerTotalElapsed();
+   1486          
+   1487              // Keep all tasks frozen if the Base task is off
+   1488              if (pSac->taskFlags & CEC_SAC_TASK_BASE_SERVICE)
+   1489              {
+   1490                  // Update time reading variables
+   1491                  CecSysTimeMsSet(sysTimerCountMs, &pSac->sysTimerCountCurMs, &pSac->sysTimerCountPrvMs);
+   1492                  
+   1493                  if (((pSac->taskFlags & CEC_SAC_TASK_MASK_ALL_BUT_BASE) == 0) && (pCecMessage == 0))
+   1494                  {
+   1495                      // Initialize the recall time counter by maximum possible value
+   1496                      // in order to ensure rare recalls of the task handler when tasks are inactive
+   1497                      CecTimeCounterSet(CEC_TIME_MS2TCK(CEC_MAX_RECALL_TIME_MS), &pSac->recallTimeCount);
+   1498                  }
+   1499                  else
+   1500                  {   // Ensure fast recall if there are active tasks or pending messages as they could 
+   1501                      // require immediate subsequent action (e.g., launching of active tasks) 
+   1502                      // Actual recall time will be corrected by task internal timer updates, if any
+   1503                      CecTimeCounterSet(CEC_TIME_MS2TCK(CEC_MIN_RECALL_TIME_MS), &pSac->recallTimeCount);        
+   1504                  }
+   1505                  
+   1506                  // Do one task at a time. Tasks shall never be running concurrently except the Base Service that
+   1507                  // can run in background of another task, not corrupting its context.
+   1508                  // Base Service has highest priority if a CEC message is pending and lowest priority otherwise
+   1509                  
+   1510                  taskFlagsMasked = (pSac->taskFlags & pSac->taskMask);
+   1511          
+   1512                  if (pCecMessage != 0) // CEC message is pending
+   1513                  {   
+   1514                      feedbackMsg = CecSacTaskBase(pCecMessage);      
+   1515                  }
+   1516                  else
+   1517                  {
+   1518                      if (taskFlagsMasked & CEC_SAC_TASK_INITIATE)
+   1519                      {
+   1520                          feedbackMsg = CecSacTaskInitiate();
+   1521                      }
+   1522                      else if (taskFlagsMasked & CEC_SAC_TASK_TERMINATE)
+   1523                      {
+   1524                          feedbackMsg = CecSacTaskTerminate();
+   1525                      }
+   1526                      else if (taskFlagsMasked & CEC_SAC_TASK_VOLUME)
+   1527                      {
+   1528                          feedbackMsg = CecSacTaskVolume();
+   1529                      }
+   1530                      else if (taskFlagsMasked & CEC_SAC_TASK_DISCOVER_FMT)
+   1531                      {
+   1532                          feedbackMsg = CecSacTaskDiscoverFmt();
+   1533                      }
+   1534                      else if (taskFlagsMasked & CEC_SAC_TASK_ALLOC_LOG_ADDR)
+   1535                      {
+   1536                          feedbackMsg = CecSacTaskLogAddrAllocate();
+   1537                      }
+   1538          #if ( configSII_DEV_953x_PORTING == 1 )
+   1539          
+   1540                      else if (taskFlagsMasked & CEC_SAC_TASK_WAIT_TV_RESPONSE)
+   1541                      {
+   1542                          feedbackMsg = CecSacTaskWaitTvResponse();
+   1543                      }
+   1544                      else if (taskFlagsMasked & CEC_SAC_TASK_POWER_ON_TV)
+   1545                      {
+   1546                          feedbackMsg = CecSacTaskPowerOnTv();
+   1547                      }
+   1548          	    else if ( taskFlagsMasked & CEC_SAC_TASK_INITIATE_DIRECTLY)
+   1549          	    {
+   1550                          feedbackMsg = CecSacTaskInitiateDirectly();
+   1551          	    }
+   1552          #endif
+   1553                      // Base Task can't be masked and can run in background of the other active task if incoming CEC message is pending
+   1554                      else
+   1555                      {
+   1556                          feedbackMsg = CecSacTaskBase(0);
+   1557                      }
+   1558                  }
+   1559                  
+   1560              }
+   1561              
+   1562              return SiiCbCecSacMessageHandler(feedbackMsg);
+   1563          }
+   1564          
+   1565          
+   1566          //-------------------------------------------------------------------------------------------------
+   1567          //! @brief      Returns longest possible time delay before the next invocation
+   1568          //!             of the SiiCecSacTaskProcess() function.
+   1569          //
+   1570          //!             This function can be used to set a countdown timer and call
+   1571          //!             the SiiCecSacTaskProcess() on the timer's expiration event unless
+   1572          //!             new CEC message is pending
+   1573          //  
+   1574          //! @param[in]  sysTimerCountMs - current value of the system time counter (in milliseconds)
+   1575          //
+   1576          //! @return     time in milliseconds
+   1577          //-------------------------------------------------------------------------------------------------
+   1578          
+   1579          uint16_t SiiCecSacNextInvocationTimeGet(uint16_t sysTimerCountMs)
+   1580          {
+   1581              return SiiCecNextInvocationTimeGet(sysTimerCountMs, pSac->recallTimeCount);
+   1582          }
+   1583          
+   1584          
+   1585          //-------------------------------------------------------------------------------------------------
+   1586          //! @brief      Launches CEC/SAC Active and Base Services.
+   1587          //
+   1588          //! @return     true, if the task can't be scheduled, false - otherwise
+   1589          //-------------------------------------------------------------------------------------------------
+   1590          
+   1591          bool_t SiiCecSacSrvStart(void)
+   1592          {
+   1593              bool_t errStatus = false;
+   1594              xHMISystemParams SysParms;
+   1595          			    
+   1596              pSac->taskFlags |= CEC_SAC_TASK_BASE_SERVICE;
+   1597          
+   1598              /*SysParms = AmTCecGetSyspramsFromHMI();
+   1599              if ( (SysParms.cec_sac == TRUE) && (SysParms.input_src == AUDIO_SOURCE_HDMI_IN) )
+   1600              {
+   1601                  pSac->taskMask |= CEC_SAC_TASK_POWER_ON_TV;
+   1602          	
+   1603          	SiiCecCallbackRegisterSet(SiiCecSacTaskProcess, true);
+   1604              }*/
+   1605          	
+   1606              AmTCecSacSyncVolumeStatus();
+   1607          	
+   1608              return errStatus;
+   1609          }
+   1610          
+   1611          
+   1612          //-------------------------------------------------------------------------------------------------
+   1613          //! @brief      Stops Active and Base Services
+   1614          //-------------------------------------------------------------------------------------------------
+   1615          
+   1616          void SiiCecSacSrvStop(void)
+   1617          {
+   1618              pSac->taskFlags &= ~CEC_SAC_TASK_BASE_SERVICE;
+   1619          }
+   1620          
+   1621          
+   1622          //-------------------------------------------------------------------------------------------------
+   1623          //! @brief      Initiate System Audio Control Feature
+   1624          //              
+   1625          //! @retval     true     - if the task is scheduled successfully,
+   1626          //! @retval     false    - error
+   1627          //-------------------------------------------------------------------------------------------------
+   1628          
+   1629          bool_t SiiCecSacInitiate(void)
+   1630          {
+   1631              // schedule immediate start of the task
+   1632              pSac->taskFlags |= CEC_SAC_TASK_INITIATE;
+   1633          
+   1634              return true;
+   1635          }
+   1636          
+   1637          
+   1638          //-------------------------------------------------------------------------------------------------
+   1639          //! @brief      Terminate System Audio Control Feature
+   1640          //              
+   1641          //! @retval     true     - if the task is scheduled successfully,
+   1642          //! @retval     false    - error
+   1643          //-------------------------------------------------------------------------------------------------
+   1644          
+   1645          bool_t SiiCecSacTerminate(void)
+   1646          {
+   1647              // schedule immediate start of the task
+   1648              pSac->taskFlags |= CEC_SAC_TASK_TERMINATE;
+   1649          
+   1650              return true;
+   1651          }
+   1652          
+   1653          
+   1654          //-------------------------------------------------------------------------------------------------
+   1655          //! @brief Process Audio User Control pressed.
+   1656          //              
+   1657          //! @retval     true     - if the task is scheduled successfully,
+   1658          //! @retval     false    - error
+   1659          //-------------------------------------------------------------------------------------------------
+   1660          
+   1661          bool_t SiiCecSacUserControlPressed( SiiCecUiCommand_t rcCode)
+   1662          {
+   1663              bool_t isSuccess = true;
+   1664              
+   1665              // Audio Mode must be enabled to adjust controls remotely
+   1666              if (pSac->status.isSystemAudioModeEnabled && (SiiCecGetDeviceLA() != CEC_LOGADDR_AUDSYS))
+   1667              {        
+   1668                  switch (rcCode)
+   1669                  {
+   1670                      case CEC_RC_VOLUME_UP:
+   1671                      case CEC_RC_VOLUME_DOWN:
+   1672                          pSac->lastRcCode = rcCode;
+   1673                          pSac->taskFlags |= CEC_SAC_TASK_VOLUME; // schedule immediate start of the task                             
+   1674                          break;
+   1675          
+   1676                      case CEC_RC_MUTE:                
+   1677                          SiiCecSacUserControlPressedSend(rcCode, CEC_LOGADDR_AUDSYS);
+   1678                          break;
+   1679                          
+   1680                      default:
+   1681                          DEBUG_PRINT(MSG_STAT, "SI_CecSacUserControlPressed(): RC code [%02X] not supported\n", rcCode);
+   1682                          isSuccess = false; // error
+   1683                          break;
+   1684                  }
+   1685              }
+   1686              else
+   1687              {
+   1688                  isSuccess = false; // error
+   1689              }
+   1690              
+   1691              return isSuccess;
+   1692          }
+   1693          
+   1694          
+   1695          //-------------------------------------------------------------------------------------------------
+   1696          //! @brief      Process Audio User Control released.
+   1697          //              
+   1698          //! @retval     true     - if the task is scheduled successfully,
+   1699          //! @retval     false    - error
+   1700          //-------------------------------------------------------------------------------------------------
+   1701          
+   1702          bool_t SiiCecSacUserControlReleased(void)
+   1703          {
+   1704              bool_t isSuccess = true;
+   1705              
+   1706              // Audio Mode must be enabled to adjust controls remotely
+   1707              if (pSac->status.isSystemAudioModeEnabled && (SiiCecGetDeviceLA() != CEC_LOGADDR_AUDSYS))
+   1708              {        
+   1709                  if (pSac->taskFlags & CEC_SAC_TASK_VOLUME)
+   1710                  {
+   1711                      // break the press & hold loop in the Volume Task
+   1712                      // and send UC release message
+   1713                      pSac->taskState = CEC_SAC_TASK_VOLUME_STATE_CTRL_RELEASED_SEND;
+   1714                  }
+   1715              }
+   1716              else
+   1717              {
+   1718                  isSuccess = false; // error
+   1719              }
+   1720              
+   1721              return isSuccess;
+   1722          }
+   1723          
+   1724          
+   1725          //-------------------------------------------------------------------------------------------------
+   1726          //! @brief      Determines if audio system supports given audio formats.
+   1727          //
+   1728          //!             The result will be reflected in updated aFmt[] list in the CEC/SAC
+   1729          //!             instance record upon the Discover task completion
+   1730          //! @param[in]  nFmt        - number of requested formats
+   1731          //! @param[in]  aReqFmt     - pointer to array of audio format codes
+   1732          //              
+   1733          //! @retval     true    - if the task is scheduled successfully,
+   1734          //! @retval     false   - error
+   1735          //-------------------------------------------------------------------------------------------------
+   1736          
+   1737          bool_t SiiCecSacDiscoverAudioFormats(uint8_t nFmt, CecSacAudioFmtCode_t aReqFmt[])
+   1738          {
+   1739              uint8_t i;
+   1740              uint8_t k;
+   1741              bool_t isSuccess = true;
+   1742              bool_t  isMatchFound;
+   1743          
+   1744              // Format Discovery can't be initiated by Amp
+   1745              if (pSac->status.isSystemAudioModeEnabled && SiiCecGetDeviceLA() != CEC_LOGADDR_AUDSYS)
+   1746              {
+   1747              
+   1748                  // Invalidate the status of requested formats in order to update it
+   1749                  // upon receiving response from the Amp
+   1750                  for (i = 0; i < pSac->numberOfAudioFormats; i++)
+   1751                  {
+   1752                      isMatchFound = false;
+   1753                      for (k = 0; k < nFmt; k++)
+   1754                      {
+   1755                          if (pSac->aFmt[i].audioFmtCode == aReqFmt[k])
+   1756                          {
+   1757                              isMatchFound = true;
+   1758                              break;
+   1759                          }
+   1760                      }
+   1761                      
+   1762                      if (isMatchFound)
+   1763                      {   
+   1764                          // Invalidate by resetting the format code
+   1765                          pSac->aFmt[i].audioFmtCode = CEC_AUD_FMT_RES0;
+   1766                      }
+   1767                  }
+   1768          
+   1769                  pSac->numberOfRequestedFormats = nFmt;
+   1770          
+   1771                  for (i = 0; i < nFmt; i++)
+   1772                  {
+   1773                      pSac->aFmtInquired[i] = aReqFmt[i];
+   1774                  }
+   1775                  
+   1776                  // schedule immediate start of the task
+   1777                  pSac->taskFlags |= CEC_SAC_TASK_DISCOVER_FMT;
+   1778              }
+   1779              else
+   1780              {
+   1781                  isSuccess = false;
+   1782              }
+   1783          
+   1784              return isSuccess;
+   1785          }
+   1786          
+   1787          #if ( configSII_DEV_953x_PORTING == 1 )
+   1788          
+   1789          //-------------------------------------------------------------------------------------------------
+   1790          //! @brief    
+   1791          //-------------------------------------------------------------------------------------------------
+   1792          
+   1793          void AmTCecSacSyncVolumeStatus(void)
+   1794          {
+   1795          	xHMISystemParams SysParms;
+   1796          	
+   1797          	SysParms = AmTCecGetSyspramsFromHMI();
+   1798                  pSac->volume = SysParms.master_gain;
+   1799                  pSac->status.isMuted = SysParms.mute;
+   1800                  pSac->status.isSystemAudioModeEnabled = SysParms.cec_sac;
+   1801          }
+   1802          
+   1803          //-------------------------------------------------------------------------------------------------
+   1804          //! @brief    
+   1805          //-------------------------------------------------------------------------------------------------
+   1806          void AmTCecSacTask( void )
+   1807          	{
+   1808              if ( pSac->taskFlags & CEC_SAC_TASK_MASK_ALL_BUT_BASE )
+   1809          		{
+   1810          	                        SiiCecCallbackRegisterSet(SiiCecSacTaskProcess, true);
+   1811          			}
+   1812              else
+   1813          		{
+   1814          	SiiCecCallbackRegisterSet(SiiCecSacTaskProcess, false);
+   1815          	//SacTaskCounter
+   1816          			}
+   1817          	        }
+   1818          
+   1819          //-------------------------------------------------------------------------------------------------
+   1820          //! @brief    
+   1821          //-------------------------------------------------------------------------------------------------
+   1822          void AmTSacTaskAssign(uint16_t SysCECSacAppTASK)
+   1823          		{
+   1824              pSac->taskFlags |= SysCECSacAppTASK;
+   1825          }
+   1826          /*
+   1827          bool_t AmTCecTvSAMRHandle( void )
+   1828          {
+   1829                  if ( pSac->status.isSystemAudioModeEnabled == false )
+   1830                  {
+   1831          	        xHMISystemParams SysPrams;
+   1832          
+   1833          	        SysPrams = AmTCecGetSyspramsFromHMI();
+   1834          
+   1835                  	if ( SysPrams.cec_arc )
+   1836                                  SiiCecSacSetSystemAudioModeSend(true, CEC_LOGADDR_UNREGORBC);   // Broadcast "Set System Audio Mode" message
+   1837                          else
+   1838          	                return FALSE;
+   1839                  }
+   1840          
+   1841          	return TRUE;	
+   1842          }
+   1843          
+   1844          bool_t AmTCecNonTvSAMRHandle( void )
+   1845          {
+   1846                  bool_t isEnabled;
+   1847          
+   1848                  isEnabled = SiiCecPortToActSrcSelect();         // Switch to the port towards activeSrcPhysAddr
+   1849                  //isEnabled = AmTCecPortToActSrcSelect();	//Check if need shpport SAC
+   1850                  if (isEnabled && (pSac->status.isSystemAudioModeEnabled == false))
+   1851          		{
+   1852                          SiiCecPortToActSrcSelect();
+   1853                          pSac->status.isSystemAudioModeEnabled = true;   // Turn SA mode On
+   1854                          AmTCecEventPassToHMI(USER_EVENT_CEC_SET_SAC_ON);
+   1855          
+   1856                          //SiiCecCallbackRegisterSet(SiiCecSacTaskProcess, true);
+   1857          
+   1858                          pSac->status.isMuted = false;                   // Unmute audio output
+   1859                          AmTCecEventPassToHMI(USER_EVENT_CEC_SET_DEMUTE);
+   1860          
+   1861                          SiiCecSacSetSystemAudioModeSend(true, CEC_LOGADDR_UNREGORBC);   // Broadcast "Set System Audio Mode" message
+   1862                  }
+   1863          }
+   1864          */
+   1865          
+   1866          
+   1867          #endif
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       32  AmTCecSacSyncVolumeStatus
+             32 -> AmTCecGetSyspramsFromHMI
+        0  AmTCecSacTask
+              0 -> SiiCecCallbackRegisterSet
+        0  AmTSacTaskAssign
+       32  CecActiveSourceRequestSend
+             32 -> SiiCecCpiWrite
+       32  CecSacTaskBase
+             32 -> AmTCecEventPassToHMI
+             32 -> AmTSacAppTaskAssign
+             32 -> CecIsTimeCounterExpired
+             32 -> CecTimeCounterReset
+             32 -> CecTimeCounterSet
+             32 -> CecTimeCounterUpdate
+             32 -> SiiCecFeatureAbortSend
+             32 -> SiiCecGetDeviceLA
+             32 -> SiiCecPortToActSrcSelect
+             32 -> SiiCecSacAddFormat
+             32 -> SiiCecSacMute
+             32 -> SiiCecSacReportAudioCapabilitySend
+             32 -> SiiCecSacReportAudioStatusSend
+             32 -> SiiCecSacSetSystemAudioModeSend
+             32 -> SiiCecSacSystemAudioModeStatusSend
+             32 -> SiiCecSacVolumeStep
+             32 -> SiiCecSetActiveSourcePA
+       16  CecSacTaskInitiate
+             16 -> AmTCecEventPassToHMI
+             16 -> AmTCecSacSyncVolumeStatus
+             16 -> CecActiveSourceRequestSend
+             16 -> CecTimeCounterReset
+             16 -> CecTimeCounterSet
+             16 -> IsUpdatedTaskTimerExpired
+             16 -> SiiCecCallbackRegisterSet
+             16 -> SiiCecGetActiveSourceLA
+             16 -> SiiCecPortToActSrcSelect
+             16 -> SiiCecSacSetSystemAudioModeSend
+             16 -> StopTask
+        8  IsUpdatedTaskTimerExpired
+              8 -> CecTimeCounterSet
+              0 -> CecTimeCounterUpdate
+        0  SI_CecSacInstanceSet
+       20  SiiCecSacAddFormat
+       20  SiiCecSacAudioFormatDetailsGet
+       24  SiiCecSacConfig
+             24 -> SiiCecSacTaskInit
+             24 -> __aeabi_memclr
+             24 -> __aeabi_memcpy
+        0  SiiCecSacDeviceInstanceGet
+       24  SiiCecSacDiscoverAudioFormats
+             24 -> SiiCecGetDeviceLA
+        0  SiiCecSacInitiate
+        0  SiiCecSacIsMuted
+        0  SiiCecSacIsSysAudioModeEnabled
+        8  SiiCecSacMute
+              0 -> AmTCecEventVolumeCtrl_HMI
+        8  SiiCecSacNextInvocationTimeGet
+              8 -> SiiCecNextInvocationTimeGet
+        8  SiiCecSacSrvStart
+              8 -> AmTCecSacSyncVolumeStatus
+        0  SiiCecSacSrvStop
+        8  SiiCecSacTaskInit
+              8 -> CecTimeCounterReset
+       32  SiiCecSacTaskProcess
+             32 -> AmTCecEventPassToHMI
+             32 -> AmTCecSacSyncVolumeStatus
+             32 -> CecSacTaskBase
+             32 -> CecSacTaskInitiate
+             32 -> CecSendUserControlPressed
+             32 -> CecSendUserControlReleased
+             32 -> CecSysTimeMsSet
+             32 -> CecTimeCounterSet
+             32 -> IsUpdatedTaskTimerExpired
+             32 -> SiiCbCecSacMessageHandler
+             32 -> SiiCecCallbackRegisterSet
+             32 -> SiiCecPortToActSrcSelect
+             32 -> SiiCecSacRequestAudioCapabilitySend
+             32 -> SiiCecSacSetSystemAudioModeSend
+             32 -> SiiCecSacUserControlPressedSend
+             32 -> SiiCecSacUserControlReleasedSend
+             32 -> SiiCecSetDeviceLA
+             32 -> SiiDrvCpiHwStatusGet
+             32 -> SiiDrvCpiSendPing
+             32 -> SiiOsTimerTotalElapsed
+             32 -> StopTask
+        0  SiiCecSacTerminate
+       16  SiiCecSacUserControlPressed
+             16 -> SiiCecGetDeviceLA
+             16 -> SiiCecSacUserControlPressedSend
+       16  SiiCecSacUserControlReleased
+             16 -> SiiCecGetDeviceLA
+        0  SiiCecSacVolumeGet
+        0  SiiCecSacVolumeSet
+        8  SiiCecSacVolumeStep
+              0 -> AmTCecEventVolumeCtrl_HMI
+        0  StopTask
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ?<Constant {8, 100, 0}>
+       4  ?<Constant {8, 100, 0}>_1
+      12  ?<Constant {{7, 1, 6, 2}, {5, 2, 2, 0}, {5, 7,
+       4  ??DataTable28
+       4  ??DataTable28_1
+       6  ?Subroutine0
+      12  ?Subroutine1
+      10  ?Subroutine10
+       8  ?Subroutine11
+       8  ?Subroutine2
+      12  ?Subroutine3
+       6  ?Subroutine4
+      12  ?Subroutine5
+      12  ?Subroutine6
+      16  ?Subroutine7
+       8  ?Subroutine8
+      12  ?Subroutine9
+      52  AmTCecSacSyncVolumeStatus
+      24  AmTCecSacTask
+      12  AmTSacTaskAssign
+      20  CecActiveSourceRequestSend
+     726  CecSacTaskBase
+     186  CecSacTaskInitiate
+      36  IsUpdatedTaskTimerExpired
+      12  SI_CecSacInstanceSet
+     108  SiiCecSacAddFormat
+      70  SiiCecSacAudioFormatDetailsGet
+      80  SiiCecSacConfig
+       8  SiiCecSacDeviceInstanceGet
+     110  SiiCecSacDiscoverAudioFormats
+      12  SiiCecSacInitiate
+      14  SiiCecSacIsMuted
+      14  SiiCecSacIsSysAudioModeEnabled
+      94  SiiCecSacMute
+      16  SiiCecSacNextInvocationTimeGet
+      22  SiiCecSacSrvStart
+      16  SiiCecSacSrvStop
+      42  SiiCecSacTaskInit
+     650  SiiCecSacTaskProcess
+      10  SiiCecSacTerminate
+      68  SiiCecSacUserControlPressed
+      42  SiiCecSacUserControlReleased
+      10  SiiCecSacVolumeGet
+      16  SiiCecSacVolumeSet
+      58  SiiCecSacVolumeStep
+      26  StopTask
+      44  pSac
+          gSacInstRec
+
+ 
+    44 bytes in section .data
+ 2 704 bytes in section .text
+ 
+ 2 704 bytes of CODE memory
+    44 bytes of DATA memory
+
+Errors: none
+Warnings: 6

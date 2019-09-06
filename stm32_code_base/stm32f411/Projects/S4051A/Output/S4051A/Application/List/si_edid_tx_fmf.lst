@@ -1,0 +1,572 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:13 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\edid_tx\si_ed #
+#                    id_tx_fmf.c                                              #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\edid_tx\si_ed #
+#                    id_tx_fmf.c -D S4051A -D DEBUG -D FREE_RTOS -D           #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_edid_tx_fmf.lst                                    #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_edid_tx_fmf.o                                       #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\component\edid_tx\si_edid_tx_fmf.c
+      1          //************************************************************************************************
+      2          //! @file   si_edid_tx_fmf.c
+      3          //! @brief  EDID Feature Meet Filter
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1060 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2002-2010, Silicon Image, Inc.  All rights reserved.
+     11          //***********************************************************************************************/
+     12          
+     13          
+     14          #include "si_edid_tx_component.h"
+     15          #include "si_edid_tx_internal.h"
+     16          #include "si_edid_tx_fmf.h"
+     17          
+     18          #define MIN(a,b)  (((a) > (b)) ? (b) : (a))
+     19          #define MAX(a,b)  (((a) > (b)) ? (a) : (b))
+     20          
+     21          static int Median(int x, int y)
+     22          {
+     23              return (x + (y - x)/2);
+     24          }
+     25          
+     26          static int Abs(int x)
+     27          {
+     28              return (x > 0 ? x : -x);
+     29          }
+     30          
+     31          //-------------------------------------------------------------------------------------------------
+     32          //! @brief      EDID Feature Meet Filter merges current and input edidInfo structures
+     33          //!             obtained from TX EDIDs
+     34          //!             into one edidInfo structure that includes capability declarations
+     35          //!             supported by both TX devices.
+     36          //!
+     37          //! @param[in]  pEdidInfo - pointer to an edidInfo structure.
+     38          //-------------------------------------------------------------------------------------------------
+     39          
+     40          void EdidTxFeatureMeetFilter(decodedEdid_t *pEdidInfo)
+     41          {
+     42              uint8_t i;
+     43              uint8_t j;
+     44              uint8_t jm;
+     45              int_t   matchDisparity;
+     46              bool_t  isMatchFound;
+     47          
+     48              // Merge errors
+     49              pEdidTx->edidInfo.ErrorCode |= pEdidInfo->ErrorCode;
+     50          
+     51              // Strongest constrains win
+     52              pEdidTx->edidInfo.RangeLimits.MinV_Hz = MAX(pEdidTx->edidInfo.RangeLimits.MinV_Hz, pEdidInfo->RangeLimits.MinV_Hz);
+     53              pEdidTx->edidInfo.RangeLimits.MaxV_Hz = MIN(pEdidTx->edidInfo.RangeLimits.MaxV_Hz, pEdidInfo->RangeLimits.MaxV_Hz);
+     54              pEdidTx->edidInfo.RangeLimits.MinH_kHz = MAX(pEdidTx->edidInfo.RangeLimits.MinH_kHz, pEdidInfo->RangeLimits.MinH_kHz);
+     55              pEdidTx->edidInfo.RangeLimits.MaxH_kHz = MIN(pEdidTx->edidInfo.RangeLimits.MaxH_kHz, pEdidInfo->RangeLimits.MaxH_kHz);
+     56              pEdidTx->edidInfo.RangeLimits.MaxPixClk_10MHz = MIN(pEdidTx->edidInfo.RangeLimits.MaxPixClk_10MHz,
+     57                                                                  pEdidInfo->RangeLimits.MaxPixClk_10MHz);
+     58          
+     59              pEdidTx->edidInfo.DescriptorValid.RangeLimits &= pEdidInfo->DescriptorValid.RangeLimits;
+     60          
+     61              // Take minimal supported dimensions (except invalid 0 size)
+     62              if (pEdidTx->edidInfo.VSize4x3 != 0)
+     63              {
+     64                  if (pEdidInfo->VSize4x3 != 0)
+     65                  {
+     66                      pEdidTx->edidInfo.VSize4x3 = MIN(pEdidTx->edidInfo.VSize4x3, pEdidInfo->VSize4x3);
+     67                  }
+     68              }
+     69              else
+     70              {
+     71                  if (pEdidInfo->VSize4x3 != 0)
+     72                  {
+     73                      pEdidTx->edidInfo.VSize4x3 = pEdidInfo->VSize4x3;
+     74                  }
+     75              }
+     76          
+     77              if (pEdidTx->edidInfo.VSize16x9 != 0)
+     78              {
+     79                  if (pEdidInfo->VSize16x9 != 0)
+     80                  {
+     81                      pEdidTx->edidInfo.VSize16x9 = MIN(pEdidTx->edidInfo.VSize16x9, pEdidInfo->VSize16x9);
+     82                  }
+     83              }
+     84              else
+     85              {
+     86                  if (pEdidInfo->VSize16x9 != 0)
+     87                  {
+     88                      pEdidTx->edidInfo.VSize16x9 = pEdidInfo->VSize16x9;
+     89                  }
+     90              }
+     91          
+     92              // Max. Horizontal Image Size
+     93              pEdidTx->edidInfo.BasicDispayParameters[1] = MIN( pEdidTx->edidInfo.BasicDispayParameters[1], pEdidInfo->BasicDispayParameters[1]);
+     94          
+     95              // Max. Vertical Image Size
+     96              pEdidTx->edidInfo.BasicDispayParameters[2] = MIN( pEdidTx->edidInfo.BasicDispayParameters[2], pEdidInfo->BasicDispayParameters[2]);
+     97          
+     98              // Gamma (averaged)
+     99              pEdidTx->edidInfo.BasicDispayParameters[3] = Median(pEdidTx->edidInfo.BasicDispayParameters[3], pEdidInfo->BasicDispayParameters[3]);
+    100          
+    101              // Leave common features
+    102              pEdidTx->edidInfo.BasicDispayParameters[4] &= pEdidInfo->BasicDispayParameters[4];
+    103          
+    104          /*  These doesn't make sense to merge. Use from first device.
+    105              Chromaticity[10];
+    106          */
+    107              // Find identical standard timings and leave only them
+    108              for (i = 0; i < 16; i += 2)
+    109              {
+    110                  // If standard timing is used
+    111                  if (!((pEdidTx->edidInfo.StandardTiming[i] == 0x1) && (pEdidTx->edidInfo.StandardTiming[i+1] == 0x1)))
+    112                  {
+    113                      isMatchFound = false;
+    114                     // Check if it will survive
+    115                      for (j = 0; j < 16; j += 2)
+    116                      {
+    117                          if ( ((pEdidTx->edidInfo.StandardTiming[i] == pEdidInfo->StandardTiming[j]) &&
+    118                                (pEdidTx->edidInfo.StandardTiming[i+1] == pEdidInfo->StandardTiming[j+1])))
+    119                          {
+    120                              isMatchFound = true;
+    121                              break;
+    122                          }
+    123                      }
+    124                      // and clean it, if not
+    125                      if (!isMatchFound)
+    126                      {
+    127                          pEdidTx->edidInfo.StandardTiming[i] = 0x1;
+    128                          pEdidTx->edidInfo.StandardTiming[i+1] = 0x1;
+    129                      }
+    130                  }
+    131              }
+    132          
+    133              // Invalidate DTDs that don't have counterparts
+    134              for (i = 0; i < MAX_NMB_OF_UNKNOWN_DTDS; i++)
+    135              {
+    136                  if (pEdidTx->edidInfo.DTD[i].Valid)
+    137                  {
+    138                      // Find a match first
+    139                      isMatchFound = false;
+    140                      for (j = 0; (j < MAX_NMB_OF_UNKNOWN_DTDS) && !isMatchFound; j++)
+    141                      {
+    142                          // Save preferred timing flag temporarily
+    143                          uint8_t prefTmp = pEdidInfo->DTD[j].PreferredTiming;
+    144                          // make it equal to not base the comparison criteria on the difference in this flag
+    145                          pEdidInfo->DTD[j].PreferredTiming = pEdidTx->edidInfo.DTD[i].PreferredTiming;
+    146                          // Comparison is based on all fields of the dtd_t structure
+    147                          // except the preferred timing flag
+    148                          if(memcmp(&(pEdidTx->edidInfo.DTD[i]), &(pEdidInfo->DTD[j]), sizeof(dtd_t)) == 0)
+    149                          {
+    150                              isMatchFound = true;
+    151                          }
+    152                          pEdidInfo->DTD[j].PreferredTiming = prefTmp; // recover the flag
+    153                      }
+    154          
+    155                      if(!isMatchFound)
+    156                      {
+    157                          pEdidTx->edidInfo.DTD[i].Valid = false;
+    158                      }
+    159                      else
+    160                      {   // If match is found, synchronize preferred timing flag
+    161                          pEdidTx->edidInfo.DTD[i].PreferredTiming &= pEdidInfo->DTD[j-1].PreferredTiming;
+    162                      }
+    163                  }
+    164              }
+    165          
+    166              // Invalidate SDTDs that don't have counterparts
+    167              for (i = 0; i < MAX_NMB_OF_KNOWN_DTDS; i++)
+    168              {
+    169                  if (pEdidTx->edidInfo.SDTD[i].Valid)
+    170                  {
+    171                      // Find a match first
+    172                      isMatchFound = false;
+    173                      for (j = 0; (j < MAX_NMB_OF_KNOWN_DTDS) && !isMatchFound; j++)
+    174                      {
+    175                          if ((pEdidTx->edidInfo.SDTD[i].Vic == pEdidInfo->SDTD[j].Vic) &&
+    176                              (pEdidTx->edidInfo.SDTD[i].VideoIdx == pEdidInfo->SDTD[j].VideoIdx) &&
+    177                              (pEdidTx->edidInfo.SDTD[i].Ar16x9 == pEdidInfo->SDTD[j].Ar16x9))
+    178                          {
+    179                              isMatchFound = true;
+    180                          }
+    181                      }
+    182          
+    183                      if(!isMatchFound)
+    184                      {
+    185                          pEdidTx->edidInfo.SDTD[i].Valid = false;
+    186                      }
+    187                      else
+    188                      {   // If match is found, synchronize flags
+    189                          pEdidTx->edidInfo.SDTD[i].Native &= pEdidInfo->SDTD[j-1].Native;
+    190                          pEdidTx->edidInfo.SDTD[i].PreferredTiming &= pEdidInfo->SDTD[j-1].PreferredTiming;
+    191                      }
+    192          
+    193                  }
+    194              }
+    195          
+    196              // Invalidate SADs that don't have counterparts
+    197              for (i = 0; i < pEdidTx->edidInfo.SadCount; i++)
+    198              {
+    199                  // Find a match first
+    200                  isMatchFound = false;
+    201                  matchDisparity = 0xFFFF; // Match disparity. The lower the disparity, the better the match
+    202                  // if matchDisparity = 0, it is the best possible match, so we stop the scan
+    203                  for (j = 0, jm = 0; (j < pEdidInfo->SadCount) && (matchDisparity != 0); j++)
+    204                  {
+    205                      // Scan all SADs to find not only first but the best match (Ex.: [LPCM 2ch, LPCM 8ch] vs [LPCM 8ch, LPCM 2ch])
+    206                      if (pEdidTx->edidInfo.SAD[i].Common.Coding == pEdidInfo->SAD[j].Common.Coding)
+    207                      {
+    208                          int_t newDisparity;
+    209                          // Calculate disparity to the match equal to difference in number of channels
+    210                          newDisparity = Abs(pEdidTx->edidInfo.SAD[i].Common.MaxChannel - pEdidInfo->SAD[j].Common.MaxChannel);
+    211                          if (newDisparity < matchDisparity)
+    212                          {
+    213                              isMatchFound = true;
+    214                              jm = j;
+    215                              matchDisparity = newDisparity;
+    216                          }
+    217                      }
+    218                  }
+    219          
+    220                  if(!isMatchFound)
+    221                  {
+    222                      // Invalidate SAD by setting all bytes to 0
+    223                      memset(&(pEdidTx->edidInfo.SAD[i]), 0, sizeof(sad_t));
+    224                  }
+    225                  else
+    226                  {
+    227                      // Set minimal supported number of channels
+    228                      pEdidTx->edidInfo.SAD[i].Common.MaxChannel = MIN(pEdidTx->edidInfo.SAD[i].Common.MaxChannel,
+    229                                                                       pEdidInfo->SAD[jm].Common.MaxChannel);
+    230                      // Remove mutually unsupported sample rates
+    231                      pEdidTx->edidInfo.SAD[i].ByteData.Byte2 &= pEdidInfo->SAD[jm].ByteData.Byte2;
+    232          
+    233                      if (pEdidTx->edidInfo.SAD[i].Common.Coding <= 1) // PCM
+    234                      {
+    235                          // Remove mutually unsupported bit widths
+    236                          pEdidTx->edidInfo.SAD[i].ByteData.Byte3 &= pEdidInfo->SAD[jm].ByteData.Byte3;
+    237          
+    238                      }
+    239                      else if (pEdidTx->edidInfo.SAD[i].Common.Coding <= 8) // AC-3 -- ATRAC
+    240                      {
+    241                          // Take minimal supported MaxBitRate
+    242                          pEdidTx->edidInfo.SAD[i].ByteData.Byte3 = MIN(pEdidTx->edidInfo.SAD[i].ByteData.Byte3,
+    243                                                                        pEdidInfo->SAD[jm].ByteData.Byte3);
+    244                      }
+    245                      else  // One Bit Audio -- WMA Pro
+    246                      {
+    247                          // Set to default
+    248                          pEdidTx->edidInfo.SAD[i].ByteData.Byte3 = 0;
+    249                      }
+    250                  }
+    251          
+    252              }
+    253          
+    254              // Remove speakers not supported by all peers
+    255              pEdidTx->edidInfo.SPK.Data &= pEdidInfo->SPK.Data;
+    256          
+    257              // Formats supported by all DS devices are the only survivors
+    258              pEdidTx->edidInfo.EstablishedTiming1 &= pEdidInfo->EstablishedTiming1;
+    259              pEdidTx->edidInfo.EstablishedTiming2 &= pEdidInfo->EstablishedTiming2;
+    260              pEdidTx->edidInfo.ManufacturerReservedTiming &= pEdidInfo->ManufacturerReservedTiming;
+    261          
+    262              // Clear HDMI signature if not all devices have it
+    263              pEdidTx->edidInfo.HDMI_VSDB.HdmiMode &= pEdidInfo->HDMI_VSDB.HdmiMode;
+    264          
+    265              // Feature flags (Support_AI, DCxx, DVI_dual) set in both devices survive
+    266              pEdidTx->edidInfo.HDMI_VSDB.Extras[0] &= pEdidInfo->HDMI_VSDB.Extras[0];
+    267              // Max TMDS clock
+    268              pEdidTx->edidInfo.HDMI_VSDB.Extras[1] = MIN(pEdidInfo->HDMI_VSDB.Extras[1], pEdidTx->edidInfo.HDMI_VSDB.Extras[1]);
+    269          #if (SI_HDMI_1_4_EDID_PROCESSING == ENABLE)
+    270              // Disable support of 3D video if one of the peers doesn't support it
+    271              pEdidTx->edidInfo.HDMI_VSDB.hdmi_3d_present &= pEdidInfo->HDMI_VSDB.hdmi_3d_present;
+    272              // Leave only mutually supported 3d Formats
+    273              pEdidTx->edidInfo.HDMI_VSDB.hdmi_3d_structure_all &= pEdidInfo->HDMI_VSDB.hdmi_3d_structure_all;
+    274              // Disable 3D support if two devices have nothing in common
+    275              if (!pEdidTx->edidInfo.HDMI_VSDB.hdmi_3d_present || !pEdidTx->edidInfo.HDMI_VSDB.hdmi_3d_structure_all)
+    276              {
+    277                  // clean all 3D structures
+    278                  pEdidTx->edidInfo.HDMI_VSDB.hdmi_3d_present = 0;
+    279                  pEdidTx->edidInfo.HDMI_VSDB.hdmi_3d_structure_all = 0;
+    280                  pEdidTx->edidInfo.HDMI_VSDB.image_size = 0;
+    281              }
+    282          
+    283          #endif
+    284              // Merge remedy masks
+    285              pEdidTx->edidInfo.RemedyMask |= pEdidInfo->RemedyMask;
+    286          
+    287              // Declare support of a feature only if all DS devices support it
+    288              pEdidTx->edidInfo.SupportYCbCr &= pEdidInfo->SupportYCbCr;
+    289              pEdidTx->edidInfo.SupportAudio &= pEdidInfo->SupportAudio;
+    290              pEdidTx->edidInfo.SupportUnderscan &= pEdidInfo->SupportUnderscan;
+    291              pEdidTx->edidInfo.SupportPal &= pEdidInfo->SupportPal;
+    292              pEdidTx->edidInfo.SupportNtsc &= pEdidInfo->SupportNtsc;
+    293              pEdidTx->edidInfo.SupportAspect4_3 &= pEdidInfo->SupportAspect4_3;
+    294              pEdidTx->edidInfo.SupportAspect16_9 &= pEdidInfo->SupportAspect16_9;
+    295              pEdidTx->edidInfo.xv601 &= pEdidInfo->xv601;
+    296              pEdidTx->edidInfo.xv709 &= pEdidInfo->xv709;
+    297          
+    298              // Switch to DVI mode if at least one channel must switch
+    299              pEdidTx->edidInfo.isHdmiMode &= pEdidInfo->isHdmiMode;
+    300          
+    301          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       40  EdidTxFeatureMeetFilter
+             40 -> __aeabi_memclr
+             40 -> memcmp
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+    1316  EdidTxFeatureMeetFilter
+
+ 
+ 1 316 bytes in section .text
+ 
+ 1 316 bytes of CODE memory
+
+Errors: none
+Warnings: 1

@@ -1,0 +1,673 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:41 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Utilities\mainstream_v1\stm32f411\GPIOLowLevel.c      #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Utilities\mainstream_v1\stm32f411\GPIOLowLevel.c -D   #
+#                    S4051A -D DEBUG -D FREE_RTOS -D STM32F40_41xxx -D        #
+#                    USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D             #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\GPIOLowLevel.lst                                      #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\GPIOLowLevel.o                                         #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Utilities\mainstream_v1\stm32f411\GPIOLowLevel.c
+      1          //!	< Only for STM series	@{
+      2          #if !defined (__ARM_CORTEX_MX__)	
+      3          #error	The file is only used to STM32
+      4          #else
+      5          
+      6          #include "device_config.h"
+      7          #include "freertos_conf.h"
+      8          #include "freertos_task.h"
+      9          #include "freertos_typedef.h"
+     10          
+     11          #include "GPIOLowLevel.h"
+     12          #include "GPIOMiddleLevel.h"
+     13          
+     14          #define RCC_PERIPH_GPIOA RCC_AHB1Periph_GPIOA
+     15          #define RCC_PERIPH_GPIOB RCC_AHB1Periph_GPIOB
+     16          #define RCC_PERIPH_GPIOC RCC_AHB1Periph_GPIOC
+     17          #define RCC_PERIPH_GPIOD RCC_AHB1Periph_GPIOD
+     18          #define RCC_PERIPH_GPIOE RCC_AHB1Periph_GPIOE
+     19          #define GPIO_SPEED GPIO_Speed_100MHz
+     20          #define GPIO_MODE_IN GPIO_Mode_IN
+     21          #define GPIO_MODE_OUT GPIO_Mode_OUT
+     22          
+     23          #if !defined ( STM32_IAP )
+     24          #include "CS8422_ISR_Handler.h"
+     25          
+     26          #if ( configSII_DEV_953x_PORTING == 1 )
+     27          #include "si_platform.h"
+     28          #endif
+     29          
+     30          #endif
+     31          
+     32          
+     33          //_______________________________________________________________________________
+     34          #if ( configCS8422_ISR == 1 )    
+     35          #define GPIOLowLevel_CS8422_ISR EXTI9_5_IRQHandler
+     36          #endif
+     37          
+     38          #if ( configSII_DEV953x_PORTING_PLATFORM_STM32 == 1 ) && ( configSIL953x_ISR == 1)
+     39          #define SIL953x_INT_LINE EXTI_Line3
+     40          #define SIL953x_IRQ EXTI3_IRQn
+     41          #define GPIOLowLevel_SIL9533_ISR EXTI3_IRQHandler
+     42          #endif 
+     43          
+     44          const GPIO_PhysicalPin PhysicalPins[__IO_MAX] = 
+     45          {
+     46              {GPIOE, GPIO_Pin_2, eOUT_PIN},      /* PE2  __O_DSP_RES, */
+     47              {GPIOC, GPIO_Pin_0, eOUT_PIN},      /* PC0  __O_MCU_EEPROM_WP, */ 
+     48              {GPIOC, GPIO_Pin_3, eOUT_PIN},      /* PC3  __O_RX_PD,  (RF module RX power down) */
+     49              {GPIOA, GPIO_Pin_3, eOUT_PIN},      /* PA3  __O_RF_PAIRING,*/
+     50              {GPIOA, GPIO_Pin_5, eIN_PIN },      /* PA5  __O_PAIRING_LED */
+     51              {GPIOA, GPIO_Pin_6, eOUT_PIN},      /* PA6  __O_MUTE_REAR, */
+     52              {GPIOA, GPIO_Pin_7, eOUT_PIN},      /* PA7  __O_USB_VIN */      
+     53              {GPIOC, GPIO_Pin_4, eIN_PIN },      /* PC4  __I_HDMI_WAKE */
+     54              {GPIOC, GPIO_Pin_5, eIN_PIN },      /* PC5  __I_MHL_CD0 */
+     55              {GPIOE, GPIO_Pin_7, eOUT_PIN},      /* PE7  __O_HT68_RES, */
+     56              {GPIOE, GPIO_Pin_8, eIN_PIN},       /* PE8  __I_BT_DET2, */ 
+     57              {GPIOE, GPIO_Pin_10, eOUT_PIN},     /* PE10 __O_BT_PAIRING, */ 
+     58              {GPIOE, GPIO_Pin_11, eOUT_PIN},     /* PE11 __O_EXT_FLASH_CS, */  
+     59              {GPIOE, GPIO_Pin_12, eOUT_PIN},     /* PE12 __O_RST_AMP*/
+     60              {GPIOE, GPIO_Pin_13, eIN_PIN},      /* PE13 __I_BT_DET1, */
+     61          
+     62              {GPIOE, GPIO_Pin_14, eOUT_PIN},     /* PE14 __O_CLK_SEL, */       
+     63          
+     64              {GPIOE, GPIO_Pin_15, eOUT_PIN},     /* PE15 __O_BT_ON */ 
+     65              {GPIOB, GPIO_Pin_10, eIN_PIN},      /* PB10 __I_BT_DET3, */ 
+     66              {GPIOB, GPIO_Pin_14, eOUT_PIN},     /* PB14 __O_RST_RF,*/
+     67              {GPIOD, GPIO_Pin_8, eOUT_PIN},      /* PD8  __O_MUTE_AMP,*/
+     68              {GPIOD, GPIO_Pin_9, eIN_PIN },      /* PD9  __I_BT_INF */ 
+     69              {GPIOD, GPIO_Pin_10, eOUT_PIN},     /* PD10 __O_BT_REW */
+     70              {GPIOD, GPIO_Pin_11, eOUT_PIN},     /* PD11 __O_BT_VOLUP */
+     71              {GPIOD, GPIO_Pin_12, eOUT_PIN},     /* PD12 __O_BT_FWD */
+     72              {GPIOD, GPIO_Pin_13, eOUT_PIN},     /* PD13 __O_BT_MFB */
+     73              {GPIOD, GPIO_Pin_14, eOUT_PIN},     /* PD14 __O_BT_VOLDOWN */
+     74              {GPIOD, GPIO_Pin_15, eOUT_PIN},     /* PD15 __O_BT_REST */
+     75          
+     76              {GPIOC, GPIO_Pin_6, eOUT_PIN},      /* PC6  __O_EN_1V, */
+     77              {GPIOC, GPIO_Pin_8, eIN_PIN},       /* PC8  __I_CEC_LINE, */
+     78              {GPIOC, GPIO_Pin_11, eOUT_PIN},     /* PC11 __O_CS5346_RST */
+     79          
+     80              {GPIOD, GPIO_Pin_0, eOUT_PIN},      /* PD0  __O_DE_5V, */
+     81              {GPIOD, GPIO_Pin_1, eOUT_PIN},      /* PD1  __O_EN_24V, */
+     82          
+     83              {GPIOD, GPIO_Pin_2, eIN_PIN},       /* PD2  __I_AD_OVFL,*/ 
+     84              {GPIOD, GPIO_Pin_3, eIN_PIN},       /* PD3  __I_AD_INT, */   
+     85          
+     86              {GPIOD, GPIO_Pin_4, eIN_PIN},       /* PD4  __I_CS8422_GPO_3 */
+     87              {GPIOD, GPIO_Pin_5, eIN_PIN},       /* PD5  __I_CS8422_GPO_2 */
+     88              {GPIOD, GPIO_Pin_6, eIN_PIN},       /* PD6  __I_CS8422_GPO_1 */
+     89              {GPIOD, GPIO_Pin_7, eIN_PIN},       /* PD7  __I_CS8422_GPO_0 */
+     90          
+     91              {GPIOB, GPIO_Pin_5, eOUT_PIN},      /* PB5  __O_CS8422_RST, */
+     92              {GPIOB, GPIO_Pin_9, eOUT_PIN},      /* PB9  __O_RST_HDMI_SIL953x */     
+     93              {GPIOE, GPIO_Pin_10, eIN_PIN },     /* PE10 __I_HDMI_MUTE_OUT */
+     94          
+     95              {GPIOC, GPIO_Pin_1, eIN_PIN},       /* PC1  __I_SCP1_BUSY, */
+     96              {GPIOC, GPIO_Pin_2, eIN_PIN},       /* PC2  __I_SCP1_IRQ,*/        
+     97          
+     98              {GPIOE, GPIO_Pin_4, eOUT_PIN},      /* PE4  __O_SPI1_NSS,*/   
+     99              
+    100          
+    101              //{GPIOC, GPIO_Pin_2, eOUT_PIN},      /* PC2  __O_SAMPLE_RATE,*/
+    102              
+    103              //{GPIOA, GPIO_Pin_9, eOUT_PIN},      /* PA9  __O_USB_VBUS */
+    104              //{GPIOD, GPIO_Pin_3, eIN_PIN },      /* PD3  __I_EN_MHL_VBUS */
+    105              //{GPIOB, GPIO_Pin_6, eIN_PIN },      /* PB6  __I_HDMI_IN_HPD */
+    106          };
+    107          
+    108          const GPIO_PhysicalPin SPIPins[__SPI_IO_MAX] = 
+    109          {
+    110              {GPIOE, GPIO_Pin_2, eIN_PIN},       /* PE2  __O_SPI_SCK,   */
+    111              {GPIOE, GPIO_Pin_3, eIN_PIN},       /* PE3  __O_DSP_RES,   */    
+    112              {GPIOE, GPIO_Pin_4, eIN_PIN},       /* PE4  __O_SPI1_NSS,  */
+    113              {GPIOE, GPIO_Pin_5, eIN_PIN},       /* PE5  __O_SPI1_MISO, */
+    114              {GPIOE, GPIO_Pin_6, eIN_PIN},       /* PE6  __O_SPI1_MOSI, */
+    115          };
+    116          
+    117          /*_______________________________________________________________________________________________________________*/
+    118          static void GPIOLowLevel_CS8422_ISR_Configure( void );
+    119          
+    120          static void GPIOLowLevel_CS8422_ISR_Control( bool bIsrEnable );
+    121          
+    122          #if !defined ( STM32_IAP )
+    123          extern SRC_ISR_OBJECT *pSRCIsr_ObjCtrl;
+    124          #endif
+    125          
+    126          const GPIO_ISR_OBJECT GPIOLOWLevelIsr_ObjCtrl = 
+    127          {
+    128              GPIOLowLevel_CS8422_ISR_Configure,
+    129              GPIOLowLevel_CS8422_ISR_Control
+    130          };
+    131          
+    132          const GPIO_ISR_OBJECT *pGPIOIsr_ObjCtrl = &GPIOLOWLevelIsr_ObjCtrl;
+    133          
+    134          /*_______________________________________________________________________________________________________________*/
+    135          void SPI_GPIOLowLevel_DeConfiguration( void )
+    136          {
+    137          	GPIO_InitTypeDef GPIO_InitStructure;
+    138          
+    139          	for(uint8_t i=0; i < __SPI_IO_MAX; i++ )
+    140          	{
+    141          		GPIO_InitStructure.GPIO_Pin |= SPIPins[i].PINx;
+    142          		GPIO_InitStructure.GPIO_Mode = GPIO_MODE_IN;
+    143          		GPIO_InitStructure.GPIO_Speed = GPIO_SPEED;
+    144          		GPIO_Init(SPIPins[i].PORTx, &GPIO_InitStructure);
+    145          	}
+    146          	
+    147          	RCC_AHB1PeriphClockCmd( (RCC_PERIPH_GPIOA| RCC_PERIPH_GPIOB| RCC_PERIPH_GPIOC| RCC_PERIPH_GPIOE), ENABLE);
+    148          
+    149          }
+    150          
+    151          void GPIOLowLevel_Configuration( void )
+    152          {
+    153          	GPIO_InitTypeDef GPIO_InitStructure;
+    154          
+    155          	RCC_AHB1PeriphClockCmd( (RCC_PERIPH_GPIOA| RCC_PERIPH_GPIOB| RCC_PERIPH_GPIOC| RCC_PERIPH_GPIOD| RCC_PERIPH_GPIOE), ENABLE);
+    156          
+    157          
+    158          	for(uint8_t i=0; i < __IO_MAX; i++ )
+    159          	{
+    160          		switch( PhysicalPins[i].IO )
+    161          		{
+    162          			case eOUT_PIN:
+    163          			{
+    164          				GPIO_InitStructure.GPIO_Pin = PhysicalPins[i].PINx;
+    165          				GPIO_InitStructure.GPIO_Mode = GPIO_MODE_OUT; 
+    166          				GPIO_InitStructure.GPIO_Speed = GPIO_SPEED;
+    167          				GPIO_Init(PhysicalPins[i].PORTx, &GPIO_InitStructure);
+    168          			}
+    169          				break;
+    170          
+    171          			case eIN_PIN:
+    172          			{
+    173          				GPIO_InitStructure.GPIO_Pin = PhysicalPins[i].PINx;
+    174          				GPIO_InitStructure.GPIO_Mode = GPIO_MODE_IN; 
+    175          				GPIO_InitStructure.GPIO_Speed = GPIO_SPEED;
+    176          				GPIO_Init(PhysicalPins[i].PORTx, &GPIO_InitStructure);
+    177          			}
+    178          				break;
+    179          		}
+    180          
+    181          	}
+    182          
+    183          }
+    184          
+    185          void GPIOLowLevel_DeConfiguration( void )
+    186          {
+    187          	GPIO_InitTypeDef GPIO_InitStructure;
+    188          
+    189          	for(uint8_t i=0; i < __IO_MAX; i++ )
+    190          	{
+    191          		GPIO_InitStructure.GPIO_Pin |= PhysicalPins[i].PINx;
+    192          		GPIO_InitStructure.GPIO_Mode = GPIO_MODE_IN;
+    193          		GPIO_InitStructure.GPIO_Speed = GPIO_SPEED;
+    194          		GPIO_Init(PhysicalPins[i].PORTx, &GPIO_InitStructure);
+    195          	}
+    196          	
+    197          	RCC_AHB1PeriphClockCmd( (RCC_PERIPH_GPIOA| RCC_PERIPH_GPIOB| RCC_PERIPH_GPIOC| RCC_PERIPH_GPIOE), ENABLE);
+    198          
+    199          }
+    200          
+    201          
+    202          void GPIOLowLevel_Set( VirtualPin pin )
+    203          {
+    204          	PhysicalPins[pin].PORTx->BSRRL = PhysicalPins[pin].PINx;
+    205          };
+    206          
+    207          void GPIOLowLevel_Clr( VirtualPin pin )
+    208          {
+    209          	PhysicalPins[pin].PORTx->BSRRH = PhysicalPins[pin].PINx;
+    210          }
+    211          
+    212          uint8_t	GPIOLowLevel_RinputPinBit( VirtualPin pin )
+    213          {
+    214          	uint8_t bitstatus = 0x00;
+    215          
+    216          	if( (PhysicalPins[pin].PORTx->IDR & PhysicalPins[pin].PINx) != (uint32_t)Bit_RESET )
+    217          	{
+    218          		bitstatus = (uint8_t)Bit_SET;
+    219          	}
+    220          	else
+    221          	{
+    222          		bitstatus = (uint8_t)Bit_RESET;
+    223          	}
+    224          
+    225          	return bitstatus;
+    226          }
+    227          
+    228          uint8_t GPIOLowLevel_RoutputPinBit( VirtualPin pin )
+    229          {
+    230          	uint8_t bitstatus = 0x00;
+    231          	
+    232          	if ((PhysicalPins[pin].PORTx->ODR & PhysicalPins[pin].PINx) != (uint32_t)Bit_RESET)
+    233          	{
+    234          		bitstatus = (uint8_t)Bit_SET;
+    235          	}
+    236          	else
+    237          	{
+    238          		bitstatus = (uint8_t)Bit_RESET;
+    239          	}
+    240          	
+    241          	return bitstatus;
+    242          }
+    243          
+    244          //_________________________________________________________________________________________
+    245          static void GPIOLowLevel_CS8422_ISR_Configure( void )
+    246          {
+    247          #if ( configSII_DEV953x_PORTING_PLATFORM_STM32F105 == 1 ) && ( configSIL953x_ISR == 1 ) && !defined ( STM32_IAP )
+    248              EXTI_InitTypeDef   EXTI_InitStructure;
+    249              GPIO_InitTypeDef   GPIO_InitStructure;
+    250              NVIC_InitTypeDef   NVIC_InitStructure;
+    251          
+    252              /* Configure PB.09 pin as input floating */
+    253              GPIO_InitStructure.GPIO_Pin = GPIO_Pin_5;
+    254              GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
+    255              GPIO_Init(GPIOD, &GPIO_InitStructure);
+    256          
+    257              /* Enable AFIO clock */
+    258              RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO, ENABLE);
+    259          
+    260              /* Connect EXTI5 Line to PD.05 pin */
+    261              GPIO_EXTILineConfig(GPIO_PortSourceGPIOD, GPIO_PinSource5);
+    262          
+    263              /* Configure EXTI5 line */
+    264              EXTI_InitStructure.EXTI_Line = EXTI_Line5;
+    265              EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
+    266              EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Falling;
+    267              EXTI_InitStructure.EXTI_LineCmd = DISABLE;
+    268              EXTI_Init(&EXTI_InitStructure);
+    269          
+    270              /* Enable and set EXTI9_5 Interrupt to the lowest priority */
+    271              NVIC_InitStructure.NVIC_IRQChannel = EXTI9_5_IRQn;
+    272              NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = configLIB_CS8422_INTERRUPT_PRIORITY;
+    273              NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
+    274              NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+    275              NVIC_Init(&NVIC_InitStructure);
+    276          #endif    
+    277          
+    278          }
+    279          
+    280          static void GPIOLowLevel_CS8422_ISR_Control( bool bIsrEnable )
+    281          {
+    282          #if ( configSII_DEV953x_PORTING_PLATFORM_STM32F105 == 1 ) && ( configSIL953x_ISR == 1 ) && !defined ( STM32_IAP )
+    283              EXTI_InitTypeDef   EXTI_InitStructure;
+    284          
+    285              if ( bIsrEnable == TRUE )
+    286              {
+    287                  EXTI_InitStructure.EXTI_LineCmd = ENABLE;
+    288              }
+    289              else if ( bIsrEnable == FALSE )
+    290              {
+    291                  EXTI_InitStructure.EXTI_LineCmd = DISABLE;
+    292              }
+    293              else
+    294              {
+    295                  return;
+    296              }
+    297          
+    298              /* Configure EXTI5 line */
+    299              EXTI_InitStructure.EXTI_Line = EXTI_Line5;
+    300              EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
+    301              EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Falling;
+    302              EXTI_Init(&EXTI_InitStructure);
+    303          #endif     
+    304          }
+    305          
+    306          void GPIOLowLevel_CS8422_ISR( void )
+    307          {
+    308          #if ( configSII_DEV953x_PORTING_PLATFORM_STM32F105 == 1 ) && ( configSIL953x_ISR == 1 ) && !defined ( STM32_IAP )
+    309              uint8 IntType = 0x00;
+    310           
+    311              if ( EXTI_GetITStatus( EXTI_Line5 ) != RESET )
+    312              {
+    313                  IntType = 0x01;
+    314          
+    315                  pSRCIsr_ObjCtrl->queue_send_from_isr( &IntType );
+    316          
+    317                  EXTI_ClearITPendingBit(EXTI_Line5);
+    318              }
+    319          #endif
+    320          }
+    321          
+    322          void GPIOLowLevel_SIL9533_ISR ( void )
+    323          {
+    324          #if ( configSII_DEV953x_PORTING_PLATFORM_STM32F105 == 1 ) && ( configSIL953x_ISR == 1 ) && !defined ( STM32_IAP )
+    325              if ( EXTI_GetITStatus( SIL953x_INT_LINE ) != RESET )
+    326              {
+    327                  SiiPlatformInterruptHandler();
+    328                  EXTI_ClearITPendingBit(SIL953x_INT_LINE);
+    329              }
+    330          #endif 
+    331          }
+    332          
+    333          void GPIOLowLevel_SIL9533_ISR_Configure( void )
+    334          {
+    335          #if ( configSII_DEV953x_PORTING_PLATFORM_STM32F105 == 1 ) && ( configSIL953x_ISR == 1) && !defined ( STM32_IAP ) 
+    336          	GPIO_InitTypeDef   GPIO_InitStructure;
+    337          	EXTI_InitTypeDef   EXTI_InitStructure;
+    338          	NVIC_InitTypeDef   NVIC_InitStructure;
+    339          	
+    340          	/* Configure PE.03 pin as input floating */
+    341          	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3;
+    342          	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
+    343          	GPIO_Init(GPIOE, &GPIO_InitStructure);
+    344          
+    345          	/* Enable AFIO clock */
+    346          	RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO, ENABLE);
+    347          
+    348          	GPIO_EXTILineConfig(GPIO_PortSourceGPIOE, GPIO_PinSource3);
+    349          
+    350          	EXTI_InitStructure.EXTI_Line = SIL953x_INT_LINE;
+    351          	EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
+    352          	EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Falling;
+    353          	EXTI_InitStructure.EXTI_LineCmd = ENABLE;
+    354          	EXTI_Init(&EXTI_InitStructure);
+    355          
+    356          	NVIC_InitStructure.NVIC_IRQChannel = SIL953x_IRQ;
+    357          	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = configLIB_SIL9535_INTERRUPT_PRIORITY;
+    358          	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
+    359          	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+    360          
+    361          	NVIC_Init(&NVIC_InitStructure);
+    362          #endif 	
+    363          }
+    364          
+    365          
+    366          #endif //! (__ARM_CORTEX_MX__) @}
+    367          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        0  EXTI9_5_IRQHandler
+        0  GPIOLowLevel_CS8422_ISR_Configure
+        0  GPIOLowLevel_CS8422_ISR_Control
+        0  GPIOLowLevel_Clr
+       24  GPIOLowLevel_Configuration
+             24 -> GPIO_Init
+             24 -> RCC_AHB1PeriphClockCmd
+       24  GPIOLowLevel_DeConfiguration
+             24 -> GPIO_Init
+             24 -> RCC_AHB1PeriphClockCmd
+        0  GPIOLowLevel_RinputPinBit
+        0  GPIOLowLevel_RoutputPinBit
+        0  GPIOLowLevel_SIL9533_ISR
+        0  GPIOLowLevel_SIL9533_ISR_Configure
+        0  GPIOLowLevel_Set
+       24  SPI_GPIOLowLevel_DeConfiguration
+             24 -> GPIO_Init
+             24 -> RCC_AHB1PeriphClockCmd
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      20  ??Subroutine2_0
+      10  ?Subroutine0
+      14  ?Subroutine1
+       2  EXTI9_5_IRQHandler
+       8  GPIOLOWLevelIsr_ObjCtrl
+       2  GPIOLowLevel_CS8422_ISR_Configure
+       2  GPIOLowLevel_CS8422_ISR_Control
+      18  GPIOLowLevel_Clr
+      58  GPIOLowLevel_Configuration
+      20  GPIOLowLevel_DeConfiguration
+      28  GPIOLowLevel_RinputPinBit
+      28  GPIOLowLevel_RoutputPinBit
+       2  GPIOLowLevel_SIL9533_ISR
+       2  GPIOLowLevel_SIL9533_ISR_Configure
+      18  GPIOLowLevel_Set
+     352  PhysicalPins
+      40  SPIPins
+      22  SPI_GPIOLowLevel_DeConfiguration
+       4  pGPIOIsr_ObjCtrl
+
+ 
+   4 bytes in section .data
+   8 bytes in section .rodata
+ 638 bytes in section .text
+ 
+ 638 bytes of CODE  memory
+   8 bytes of CONST memory
+   4 bytes of DATA  memory
+
+Errors: none
+Warnings: 4

@@ -1,0 +1,535 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     10/Nov/2014  15:19:24 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Utilities\Third_Party\efsl\src\dir.c                  #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Utilities\Third_Party\efsl\src\dir.c -D               #
+#                    __ARM_CORTEX_MX__ -D DEBUG -D FREE_RTOS -D               #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D HOST_MODE_ENABLED -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -D STM32_IAP -D S4051A    #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Bootloade #
+#                    r\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Boo #
+#                    tloader\Obj\ --debug --endian=little --cpu=Cortex-M4 -e  #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Projects\STM32_IAP\inc #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\I #
+#                    nclude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\C #
+#                    MSIS\Device\ST\STM32F4xx\Include\ -I                     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_HO #
+#                    ST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\HT68F30\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Utilities\Third_Party\efsl\inc\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    fat_fs\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Project #
+#                    s\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utiliti #
+#                    es\mainstream_v1\stm32f411\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\it\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\APP_SRC\I #
+#                    nclude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\APP_SRC\ -Ohz -I  #
+#                    "C:\Program Files (x86)\IAR Systems\Embedded Workbench   #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Bootloader\Lis #
+#                    t\dir.lst                                                #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Bootloader\Obj #
+#                    \dir.o                                                   #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Utilities\Third_Party\efsl\src\dir.c
+      1          
+      2          /*****************************************************************************/
+      3          /*              efs - General purpose Embedded Filesystem library              *
+      4          *          --------------------- -----------------------------------          *
+      5          *                                                                             *
+      6          * Filename : dir.c                                                            *
+      7          * Description : The functions of dir.c are part of fs.c, they deal with all   *
+      8          *               the directory specific stuff.                                 *
+      9          *                                                                             *
+     10          * This program is free software; you can redistribute it and/or               *
+     11          * modify it under the terms of the GNU General Public License                 *
+     12          * as published by the Free Software Foundation; version 2                     *
+     13          * of the License.                                                             *
+     14                                                                                        *
+     15          * This program is distributed in the hope that it will be useful,             *
+     16          * but WITHOUT ANY WARRANTY; without even the implied warranty of              *
+     17          * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the               *
+     18          * GNU General Public License for more details.                                *
+     19          *                                                                             *
+     20          * As a special exception, if other files instantiate templates or             *
+     21          * use macros or inline functions from this file, or you compile this          *
+     22          * file and link it with other works to produce a work based on this file,     *
+     23          * this file does not by itself cause the resulting work to be covered         *
+     24          * by the GNU General Public License. However the source code for this         *
+     25          * file must still be made available in accordance with section (3) of         *
+     26          * the GNU General Public License.                                             *
+     27          *                                                                             *
+     28          * This exception does not invalidate any other reasons why a work based       *
+     29          * on this file might be covered by the GNU General Public License.            *
+     30          *                                                                             *
+     31          *                                                    (c)2006 Lennart Yseboodt *
+     32          *                                                    (c)2006 Michael De Nil   */
+     33          /*****************************************************************************/
+     34          
+     35          /*****************************************************************************/
+     36          
+     37          #include "dir.h"
+     38          
+     39          /*****************************************************************************/
+     40          
+     41          /* ****************************************************************************  
+     42           * void dir_getFileStructure(FileSystem *fs,FileRecord *filerec,FileLocation *loc)
+     43           * Description: This function stores the filerecord located at loc in filerec.
+     44           * It fetches the required sector for this.
+     45           * Return value: void
+     46          */
+     47          void dir_getFileStructure(FileSystem *fs,FileRecord *filerec,FileLocation *loc)
+     48          {
+     49          	euint8 *buf;
+     50          
+     51          	buf=part_getSect(fs->part,loc->Sector,IOM_MODE_READONLY);
+     52          	*filerec=*(((FileRecord*)buf)+loc->Offset);
+     53          	part_relSect(fs->part,buf);
+     54          }	
+     55          
+     56          /*****************************************************************************/
+     57          
+     58          /* ****************************************************************************  
+     59           * void dir_createDirectoryEntry(FileSystem *fs,FileRecord *filerec,FileLocation *loc)
+     60           * Description: This function writes the filerecord stored in filerec to disc at
+     61           * location loc. 
+     62           * Return value: void
+     63          */
+     64          void dir_createDirectoryEntry(FileSystem *fs,FileRecord *filerec,FileLocation *loc)
+     65          {
+     66          	euint8 *buf;
+     67          	
+     68          	buf = part_getSect(fs->part,loc->Sector,IOM_MODE_READWRITE);
+     69          	memCpy(filerec,buf+(loc->Offset*sizeof(*filerec)),sizeof(*filerec));
+     70          	part_relSect(fs->part,buf);
+     71          }
+     72          /*****************************************************************************/
+     73          
+     74          /* ****************************************************************************  
+     75           * void dir_createDefaultEntry(FileSystem *fs,FileRecord *filerec,eint8* fatfilename)
+     76           * Description: This function fills in a filerecord with safe default values, and
+     77           * a given fatfilename. If your system has a means of knowing time, here is an 
+     78           * excellent place to apply it to the filerecord.  
+     79           * Return value: void
+     80          */
+     81          void dir_createDefaultEntry(FileSystem *fs,FileRecord *filerec,eint8* fatfilename)
+     82          {
+     83          	memCpy(fatfilename,filerec->FileName,11);
+     84          	filerec->Attribute=0x00;
+     85          	filerec->NTReserved=0x00;
+     86          	filerec->MilliSecTimeStamp=0x00;
+     87          	filerec->CreatedTime=time_getTime();
+     88          	filerec->CreatedDate=time_getDate(); 
+     89          	filerec->AccessDate=filerec->CreatedDate;
+     90          	filerec->FirstClusterHigh=0x0000;
+     91          	filerec->WriteTime=filerec->CreatedTime;
+     92          	filerec->WriteDate=filerec->CreatedDate;
+     93          	filerec->FirstClusterLow=0x0000;
+     94          	filerec->FileSize=0x00000000;
+     95          }
+     96          /*****************************************************************************/
+     97          
+     98          /* ****************************************************************************  
+     99           * void dir_setFirstCluster(File *file,euint32 cluster_addr)
+    100           * Description: This function requires modification to release it from
+    101           * depending on the file object.
+    102           * Return value:
+    103          */
+    104          void dir_setFirstCluster(FileSystem *fs,FileLocation *loc,euint32 cluster_addr)
+    105          {
+    106          	euint8 *buf;
+    107           	
+    108           	buf = part_getSect(fs->part,loc->Sector,IOM_MODE_READWRITE);
+    109          	(((FileRecord*)buf)+loc->Offset)->FirstClusterHigh=cluster_addr>>16;
+    110          	(((FileRecord*)buf)+loc->Offset)->FirstClusterLow=cluster_addr&0xFFFF;	
+    111          	part_relSect(fs->part,buf);
+    112          }
+    113          /*****************************************************************************/
+    114          
+    115          /* ****************************************************************************  
+    116           * void dir_setFileSize(FileSystem *fs, FileLocation *loc,euint32 numbytes)
+    117           * Description: This function changes the filesize recorded at loc->Sector
+    118           * to 'numbytes'.
+    119           * Return value: void
+    120          */
+    121          void dir_setFileSize(FileSystem *fs, FileLocation *loc,euint32 numbytes)
+    122          {
+    123          	euint8 *buf;
+    124          	
+    125          	buf = part_getSect(fs->part,loc->Sector,IOM_MODE_READWRITE);
+    126          	(((FileRecord*)buf)+loc->Offset)->FileSize=numbytes;
+    127          	part_relSect(fs->part,buf);
+    128          }
+    129          /*****************************************************************************/
+    130          
+    131          /* ****************************************************************************  
+    132           * esint8 dir_updateDirectoryEntry(FileSystem *fs,FileRecord *entry,FileLocation *loc))
+    133           * This function changes the entire entity stores at loc to the data recorded
+    134           * in entry. This is for custom updates to the directoryentry.
+    135           * Return value: 0 on success, -1 on failure
+    136          */
+    137          esint8 dir_updateDirectoryEntry(FileSystem *fs,FileRecord *entry,FileLocation *loc)
+    138          {
+    139          	euint8 *buf;
+    140          	
+    141          	buf = part_getSect(fs->part,loc->Sector,IOM_MODE_READWRITE);
+    142          	memCpy(entry,buf+(loc->Offset*sizeof(*entry)),sizeof(*entry));
+    143          	part_relSect(fs->part,buf);
+    144          	return(0);
+    145          }
+    146          
+    147          /* ****************************************************************************  
+    148           * euint32 dir_findFileinBuf(euint8 *buf, eint8 *fatname, FileLocation *loc)
+    149           * This function searches for a given fatfilename in the buffer provided.
+    150           * It will iterate through the 16 direntry's in the buffer and searches
+    151           * for the fatfilename. If found, it will store the offset and attribute
+    152           * entry of the directoryrecord in the loc structure.
+    153           * If loc is 0, then it's members are not touched.
+    154           * Return value: This function returns 0 when it cannot find the file,
+    155           * if it can find the file it will return the first cluster number.
+    156          */
+    157          euint32 dir_findFileinBuf(euint8 *buf, eint8 *fatname, FileLocation *loc)
+    158          {
+    159          	FileRecord fileEntry;
+    160          	euint8 c;
+    161          	
+    162          	for(c=0; c<16; c++)
+    163          	{
+    164          		fileEntry = *(((FileRecord*)buf) + c);
+    165          		/* Check if the entry is for short filenames */
+    166          		if( !( (fileEntry.Attribute & 0x0F) == 0x0F ) )
+    167          		{
+    168          			if( strMatch((eint8*)fileEntry.FileName,fatname,11) == 0 )
+    169          			{
+    170          				/* The entry has been found, return the location in the dir */
+    171          				if(loc)loc->Offset = c;
+    172          				if(loc)loc->attrib = fileEntry.Attribute;
+    173          				if((((euint32 )fileEntry.FirstClusterHigh)<<16)+ fileEntry.FirstClusterLow==0){
+    174          					return(1); /* Lie about cluster, 0 means not found! */
+    175          				}else{
+    176          					return
+    177          							(
+    178          							(((euint32 )fileEntry.FirstClusterHigh)<<16)
+    179          							+ fileEntry.FirstClusterLow
+    180          							);
+    181          				}
+    182          			}
+    183          		}
+    184          	}
+    185          	return(0);
+    186          }
+    187          
+    188          /* ****************************************************************************  
+    189           * euint32 dir_findFreeEntryinBuf(euint8* buf, FileLocation *loc)
+    190           * This function searches for a free entry in a given sector 'buf'.
+    191           * It will put the offset into the loc->Offset field, given that loc is not 0.
+    192           * Return value: 1 when it found a free spot, 0 if it hasn't.
+    193          */
+    194          euint32 dir_findFreeEntryinBuf(euint8* buf, FileLocation *loc)
+    195          {
+    196          	FileRecord fileEntry;
+    197          	euint8 c;
+    198          	
+    199          	for(c=0;c<16;c++){
+    200          		fileEntry = *(((FileRecord*)buf) + c);
+    201          		if( !( (fileEntry.Attribute & 0x0F) == 0x0F ) ){
+    202          			if(fileEntry.FileName[0] == 0x00 ||
+    203          			   fileEntry.FileName[0] == 0xE5 ){
+    204          				if(loc)loc->Offset=c;
+    205          				return(1);
+    206          			}
+    207          		}
+    208          	}
+    209          	return(0);
+    210          }
+    211          
+    212          /* ****************************************************************************  
+    213           * euint32  dir_findinBuf(euint8 *buf, eint8 *fatname, FileLocation *loc)
+    214           * Description: This function searches for a given fatfilename in a buffer.
+    215           * Return value: Returns 0 on not found, and the firstcluster when the name is found.
+    216          */
+    217          euint32  dir_findinBuf(euint8 *buf, eint8 *fatname, FileLocation *loc, euint8 mode)
+    218          {
+    219          	switch(mode){
+    220          		case DIRFIND_FILE:
+    221          			return(dir_findFileinBuf(buf,fatname,loc));
+    222          			//break;
+    223          		case DIRFIND_FREE:
+    224          			return(dir_findFreeEntryinBuf(buf,loc));
+    225          			//break;
+    226          		default:
+    227          			return(0);
+    228          			//break;
+    229          	}
+    230          	//return(0);
+    231          }
+    232          /*****************************************************************************/
+    233          
+    234          /* ****************************************************************************  
+    235           * euint32 dir_findinCluster(FileSystem *fs,euint32 cluster,eint8 *fatname, FileLocation *loc, euint8 mode)
+    236           * This function will search for an existing (fatname) or free directory entry
+    237           * in a full cluster.
+    238           * Return value: 0 on failure, firstcluster on finding file, and 1 on finding free spot.
+    239          */
+    240          euint32 dir_findinCluster(FileSystem *fs,euint32 cluster,eint8 *fatname, FileLocation *loc, euint8 mode)
+    241          {
+    242          	euint8 c,*buf=0;
+    243          	euint32 fclus;
+    244          	
+    245          	for(c=0;c<fs->volumeId.SectorsPerCluster;c++){
+    246          		buf = part_getSect(fs->part,fs_clusterToSector(fs,cluster)+c,IOM_MODE_READONLY);
+    247          		if((fclus=dir_findinBuf(buf,fatname,loc,mode))){
+    248          			if(loc)loc->Sector=fs_clusterToSector(fs,cluster)+c;
+    249          			part_relSect(fs->part,buf);
+    250          			return(fclus);
+    251          		}
+    252          		part_relSect(fs->part,buf); /* Thanks Mike ;) */
+    253          	}
+    254          	return(0);
+    255          }
+    256          
+    257          /* ****************************************************************************  
+    258           * euint32 dir_findinDir(FileSystem *fs, eint8* fatname,euint32 firstcluster, FileLocation *loc, euint8 mode)
+    259           * This function will search for an existing (fatname) or free directory entry
+    260           * in a directory, following the clusterchains.
+    261           * Return value: 0 on failure, firstcluster on finding file, and 1 on finding free spot.
+    262          */
+    263          euint32 dir_findinDir(FileSystem *fs, eint8* fatname,euint32 firstcluster, FileLocation *loc, euint8 mode)
+    264          {
+    265          	euint32 c=0,cluster;
+    266          	ClusterChain Cache;
+    267          	
+    268          	Cache.DiscCluster = Cache.FirstCluster = firstcluster;
+    269          	Cache.LogicCluster = Cache.LastCluster = Cache.Linear = 0;
+    270          	
+    271          	if(firstcluster <= 1){
+    272          		return(dir_findinRootArea(fs,fatname,loc,mode));	
+    273          	}
+    274          	
+    275          	while(!fat_LogicToDiscCluster(fs,&Cache,c++)){
+    276          		if((cluster=dir_findinCluster(fs,Cache.DiscCluster,fatname,loc,mode))){
+    277          			return(cluster);
+    278          		}
+    279          	}
+    280          	return(0);
+    281          }
+    282          
+    283          /* ****************************************************************************  
+    284           * euint32 dir_findinDir(FileSystem *fs, eint8* fatname,euint32 firstcluster, FileLocation *loc, euint8 mode)
+    285           * This function will search for an existing (fatname) or free directory entry
+    286           * in the rootdirectory-area of a FAT12/FAT16 filesystem.
+    287           * Return value: 0 on failure, firstcluster on finding file, and 1 on finding free spot.
+    288          */
+    289          euint32 dir_findinRootArea(FileSystem *fs,eint8* fatname, FileLocation *loc, euint8 mode)
+    290          {
+    291          	euint32 c,fclus;
+    292          	euint8 *buf=0;
+    293          	
+    294          	if((fs->type != FAT12) && (fs->type != FAT16))return(0);
+    295          	
+    296          	for(c=fs->FirstSectorRootDir;c<(fs->FirstSectorRootDir+fs->volumeId.RootEntryCount/32);c++){
+    297          		buf = part_getSect(fs->part,c,IOM_MODE_READONLY);
+    298          		if((fclus=dir_findinBuf(buf,fatname,loc,mode))){
+    299          			if(loc)loc->Sector=c;
+    300          			part_relSect(fs->part,buf);
+    301          			return(fclus);
+    302          		}	
+    303          		part_relSect(fs->part,buf);	
+    304          	}
+    305          	part_relSect(fs->part,buf);
+    306          	return(0);
+    307          }
+    308          
+    309          /* ****************************************************************************  
+    310           * esint8 dir_getFatFileName(eint8* filename, eint8* fatfilename)
+    311           * This function will take a full directory path, and strip off all leading
+    312           * dirs and characters, leaving you with the MS-DOS notation of the actual filename.
+    313           * Return value: 1 on success, 0 on not being able to produca a filename
+    314          */
+    315          esint8 dir_getFatFileName(eint8* filename, eint8* fatfilename)
+    316          {
+    317          	eint8 ffnamec[11],*next,nn=0;
+    318          	
+    319          	memClr(ffnamec,11); memClr(fatfilename,11);
+    320          	next = filename;
+    321          	
+    322          	if(*filename=='/')next++;
+    323          	
+    324          	while((next=file_normalToFatName(next,ffnamec))){
+    325          		memCpy(ffnamec,fatfilename,11);	
+    326          		nn++;
+    327          	}
+    328          	if(nn)return(1);
+    329          	return(0);
+    330          }
+    331          
+    332          /* ****************************************************************************  
+    333           * esint8 dir_addCluster(FileSystem *fs,euint32 firstCluster)
+    334           * This function extends a directory by 1 cluster + optional the number of
+    335           * clusters you want pre-allocated. It will also delete the contents of that
+    336           * cluster. (or clusters)
+    337           * Return value: 0 on success, -1 on fail
+    338          */
+    339          esint8 dir_addCluster(FileSystem *fs,euint32 firstCluster)
+    340          {
+    341          	euint32 lastc,logicalc;
+    342          	ClusterChain cache;
+    343          		
+    344          	fs_initClusterChain(fs,&cache,firstCluster);
+    345          	if(fat_allocClusterChain(fs,&cache,1)){
+    346          		return(-1);
+    347          	}
+    348          	lastc = fs_getLastCluster(fs,&cache);
+    349          	if(CLUSTER_PREALLOC_DIRECTORY){
+    350          		if(fat_allocClusterChain(fs,&cache,CLUSTER_PREALLOC_DIRECTORY)){
+    351          			return(-1);
+    352          		}
+    353          		logicalc = fat_DiscToLogicCluster(fs,firstCluster,lastc);
+    354          		while(!fat_LogicToDiscCluster(fs,&cache,++logicalc)){
+    355          			fs_clearCluster(fs,cache.DiscCluster);
+    356          		}
+    357          	}else{
+    358          			fs_clearCluster(fs,lastc);
+    359          	}
+    360          	return(0);
+    361          }
+    362          
+    363          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       40  dir_addCluster
+             40 -> fat_DiscToLogicCluster
+             40 -> fat_LogicToDiscCluster
+             40 -> fat_allocClusterChain
+             40 -> fs_clearCluster
+             40 -> fs_getLastCluster
+             40 -> fs_initClusterChain
+        8  dir_createDefaultEntry
+              8 -> memCpy
+       24  dir_createDirectoryEntry
+             24 -> memCpy
+             24 -> part_getSect
+              0 -> part_relSect
+       56  dir_findFileinBuf
+             56 -> __aeabi_memcpy4
+             56 -> strMatch
+       48  dir_findFreeEntryinBuf
+             48 -> __aeabi_memcpy4
+        0  dir_findinBuf
+              0 -> dir_findFileinBuf
+              0 -> dir_findFreeEntryinBuf
+       40  dir_findinCluster
+             40 -> dir_findinBuf
+             40 -> fs_clusterToSector
+             40 -> part_getSect
+             40 -> part_relSect
+       56  dir_findinDir
+             56 -> dir_findinCluster
+             56 -> dir_findinRootArea
+             56 -> fat_LogicToDiscCluster
+       32  dir_findinRootArea
+             32 -> dir_findinBuf
+             32 -> part_getSect
+             32 -> part_relSect
+       32  dir_getFatFileName
+             32 -> file_normalToFatName
+             32 -> memClr
+             32 -> memCpy
+       24  dir_getFileStructure
+             24 -> __aeabi_memcpy4
+             24 -> part_getSect
+              0 -> part_relSect
+       16  dir_setFileSize
+             16 -> part_getSect
+              0 -> part_relSect
+       16  dir_setFirstCluster
+             16 -> part_getSect
+              0 -> part_relSect
+       24  dir_updateDirectoryEntry
+             24 -> memCpy
+             24 -> part_getSect
+             24 -> part_relSect
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      12  ?Subroutine0
+      12  ?Subroutine1
+      16  ?Subroutine2
+      16  ?Subroutine3
+      16  ?Subroutine4
+      10  ?Subroutine5
+       8  ?Subroutine6
+      88  dir_addCluster
+      44  dir_createDefaultEntry
+      10  dir_createDirectoryEntry
+      92  dir_findFileinBuf
+      68  dir_findFreeEntryinBuf
+      18  dir_findinBuf
+     106  dir_findinCluster
+      88  dir_findinDir
+     106  dir_findinRootArea
+      72  dir_getFatFileName
+      36  dir_getFileStructure
+      14  dir_setFileSize
+      26  dir_setFirstCluster
+      20  dir_updateDirectoryEntry
+
+ 
+ 878 bytes in section .text
+ 
+ 878 bytes of CODE memory
+
+Errors: none
+Warnings: none

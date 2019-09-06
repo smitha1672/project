@@ -1,0 +1,941 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:25:07 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\application\app_cbus\sk #
+#                    _app_cbus_cec.c                                          #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\application\app_cbus\sk #
+#                    _app_cbus_cec.c -D S4051A -D DEBUG -D FREE_RTOS -D       #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\sk_app_cbus_cec.lst                                   #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\sk_app_cbus_cec.o                                      #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\application\app_cbus\sk_app_cbus_cec.c
+      1          //***************************************************************************
+      2          //!file     sk_app_cbus_cec.c
+      3          //!brief    CBUS-CEC interface
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2012, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include "sk_app_cbus.h"
+     14          #include <string.h>
+     15          
+     16          #if INC_CEC && INC_CBUS
+     17          
+     18          #include "si_cec_component.h"
+     19          
+     20          //------------------------------------------------------------------------------
+     21          //! @brief  If the last CEC message received was a USER_CONTROL_PRESSED and
+     22          //!         the key received matches the CBUS RCP key ID (msgData), we must
+     23          //!         send a feature abort back to the CEC device that sent the key.
+     24          //! @param[in]  msgData - RCP keyID value
+     25          //------------------------------------------------------------------------------
+     26          void SkAppCbusCecFeatureAbort ( uint8_t msgData )
+     27          {
+     28              // Compare the last CEC message sent to the message being denied.
+     29              if (( pAppCbus->lastRcpCecMessageOpcode == CECOP_USER_CONTROL_PRESSED) &&
+     30                  ( pAppCbus->lastRcpCecMessageData == msgData ))
+     31              {
+     32                  pAppCbus->lastRcpCecMessageOpcode = 0;  // Kill the last message sent
+     33          
+     34                  // The last CEC message received was not accepted by the target,
+     35                  // so we must feature abort it.
+     36                  SkAppCecInstanceSet( CEC_INSTANCE_AVR );
+     37                  SiiCecFeatureAbortSendEx(
+     38                      pAppCbus->lastRcpCecMessageOpcode, CECAR_INVALID_OPERAND,
+     39                      pAppCbus->cecLa, pAppCbus->lastRcpCecSourceLa );
+     40              }
+     41          }
+     42          
+     43          //------------------------------------------------------------------------------
+     44          //! @brief      Called from the CBUS RAP message parser to forward as an
+     45          //!             appropriate CEC command.
+     46          //! @param[in]  rapData - RAP action value
+     47          //------------------------------------------------------------------------------
+     48          void SkAppCbusRapToCec ( uint8_t rapData )
+     49          {
+     50              // We have received a CBUS RAP message from the currently selected
+     51              // CBUS instance, so pass it on to the CEC world
+     52          
+     53              SkAppCecInstanceSet( CEC_INSTANCE_AVR );    // All CBUS devices are on this CEC instance
+     54              switch ( rapData )
+     55              {
+     56                  case MHL_RAP_CONTENT_ON:
+     57                      // Tell the CEC world that we are going active
+     58                      SiiCecSendActiveSource( pAppCbus->cecLa, pAppCbus->cecPa );
+     59                      pAppCbus->cecIsActiveSource = true;
+     60                      break;
+     61          
+     62                  case MHL_RAP_CONTENT_OFF:
+     63                      // Tell the CEC world that we are going inactive
+     64                      SiiCecSendInactiveSource( pAppCbus->cecLa, pAppCbus->cecPa );
+     65                      pAppCbus->cecIsActiveSource = false;
+     66                      break;
+     67                  default:
+     68                      break;
+     69              }
+     70          }
+     71          
+     72          //------------------------------------------------------------------------------
+     73          //! @brief      Called from the CBUS RAPK message parser to handle the result
+     74          //!             of sending a RAP message to the device.
+     75          //! @param[in]  rapData - RAPK status
+     76          //------------------------------------------------------------------------------
+     77          void SkAppCbusRapkToCec ( uint8_t rapData )
+     78          {
+     79              uint8_t srcAddr, opCode;
+     80          
+     81              // We have received the result of a CBUS RAP message from the currently selected
+     82              // CBUS instance, so pass it on to the CEC world
+     83          
+     84              SkAppCecInstanceSet( CEC_INSTANCE_AVR );    // All CBUS devices are on this CEC instance
+     85              srcAddr = pAppCbus->lastRcpCecSourceLa;
+     86              opCode  = pAppCbus->lastRcpCecMessageOpcode;
+     87          
+     88              switch ( rapData )
+     89              {
+     90                  case MHL_MSC_MSG_RAP_NO_ERROR:
+     91                      // RAP command successful, send appropriate CEC response.
+     92                      if ( pAppCbus->lastRcpCecMessageOpcode == CECOP_SET_STREAM_PATH )
+     93                      {
+     94                          // OK, this must be a RAPK for a CONTENT_ON request message.
+     95                          // We can send an ACTIVE_SOURCE to the CEC bus.
+     96                          SiiCecSendActiveSource( pAppCbus->cecLa, pAppCbus->cecPa );
+     97                          pAppCbus->cecIsActiveSource = true;
+     98                      }
+     99                      break;
+    100          
+    101                  case MHL_MSC_MSG_RAP_UNRECOGNIZED_ACT_CODE:
+    102                      SiiCecFeatureAbortSendEx( opCode, CECAR_UNRECOG_OPCODE, pAppCbus->cecLa, srcAddr );
+    103                      break;
+    104                  case MHL_MSC_MSG_RAP_UNSUPPORTED_ACT_CODE:
+    105                      SiiCecFeatureAbortSendEx( opCode, CECAR_CANT_PROVIDE_SOURCE, pAppCbus->cecLa, srcAddr );
+    106                      break;
+    107                  case MHL_MSC_MSG_RAP_RESPONDER_BUSY:
+    108                      SiiCecFeatureAbortSendEx( opCode, CECAR_NOT_CORRECT_MODE, pAppCbus->cecLa, srcAddr );
+    109                      break;
+    110                  case MHL_MSC_MSG_RAP_OTHER_ERROR:           // NOT RAP code: Hardware or Queue problem caused error
+    111                  default:
+    112                      SiiCecFeatureAbortSendEx( opCode, CECAR_UNABLE_TO_DETERMINE, pAppCbus->cecLa, srcAddr );
+    113                      break;
+    114              }
+    115          }
+    116          
+    117          //------------------------------------------------------------------------------
+    118          //! @brief      Called from the CBUS RCP message parser to transfer a CBUS RCP
+    119          //!             keyID to CEC as a USER_CONTROL_PRESSED or USER_CONTROL_RELEASED
+    120          //!             key message.
+    121          //! @param[in]  rcpData - RCP keyID value
+    122          //------------------------------------------------------------------------------
+    123          void SkAppCbusRcpToCec ( uint8_t rcpData )
+    124          {
+    125              // The rcpData has already been validated by the CBUS component before
+    126              // passing to us, so just send it to the CEC bus.
+    127          
+    128              SkAppCecInstanceSet( CEC_INSTANCE_AVR );    // All CBUS devices are on this CEC instance
+    129              pAppCbus->lastRcpCecSourceLa = SiiCecPortToLA( pAppCbus->port );
+    130              if ( rcpData & BIT7 )
+    131              {
+    132                  SiiCecSendUserControlReleased();
+    133              }
+    134              else
+    135              {
+    136                  SiiCecSendUserControlPressed( rcpData & ~BIT7, pAppCbus->cecLa, SiiCecPortToLA( pAppCbus->port ));
+    137              }
+    138          }
+    139          
+    140          //------------------------------------------------------------------------------
+    141          //! @brief      If specified logical address is a connected MHL port, return
+    142          //!             true.  As a side effect, the port instance is selected.
+    143          //! @param[in]  logicalAddr - CEC logical address
+    144          //! @return     bool_t      - true if LA represents a connected MHL channel
+    145          //------------------------------------------------------------------------------
+    146          bool_t SkAppCbusSetLogicalAddressInstance ( int logicalAddr )
+    147          {
+    148              int instanceIndex;
+    149          
+    150              for ( instanceIndex = 0; instanceIndex < MHL_MAX_CHANNELS; instanceIndex++ )
+    151              {
+    152                  if ( appCbus[ instanceIndex].cecLa == logicalAddr )
+    153                  {
+    154                      SkAppCbusInstanceSet( instanceIndex );
+    155                      if ( SiiMhlRxCbusConnected())
+    156                      {
+    157                          return( true );
+    158                      }
+    159                  }
+    160              }
+    161          
+    162              return( false );
+    163          }
+    164          
+    165          //------------------------------------------------------------------------------
+    166          //! @brief  Called from the CEC message parser to transfer a CBUS CONTENT_ON
+    167          //!         or MHL_RAP_CONTENT_OFF RAP action message to CBUS.
+    168          //! @param[in]  pMsg    CEC message data
+    169          //------------------------------------------------------------------------------
+    170          static bool_t CbusCecToCbusRap( SiiCpiData_t *pMsg )
+    171          {
+    172              SiiMhlMscMsgRapErrorCodes_t sendResult  = MHL_MSC_MSG_RAP_OTHER_ERROR;
+    173          
+    174              // Both messages accepted by this function are broadcast, so we can't
+    175              // determine if the message was for us that way.
+    176              // If the opcode is ACTIVE_SOURCE, then if the connected source is
+    177              // MHL, we need to shut it off.
+    178              if ( pMsg->opcode == CECOP_ACTIVE_SOURCE )
+    179              {
+    180                  if ( SkAppSourceIsConnectedCbusPort( app.currentSource[app.currentZone] ))
+    181                  {
+    182                      sendResult = SiiMhlRxSendRAPCmd( MHL_RAP_CONTENT_OFF );
+    183                  }
+    184              }
+    185              // If the opcode is SET_STREAM_PATH, then we send the message to
+    186              // any connected CBUS device that has the matching physical address
+    187              else if ( pMsg->opcode == CECOP_SET_STREAM_PATH )
+    188              {
+    189                  int         instanceIndex;
+    190                  uint16_t    physicalAddr;
+    191          
+    192                  physicalAddr = pMsg->args[0];
+    193                  physicalAddr = (physicalAddr << 8) | pMsg->args[1];
+    194          
+    195                  // Check both possible MHL channels.
+    196                  for ( instanceIndex = 0; instanceIndex < MHL_MAX_CHANNELS; instanceIndex++ )
+    197                  {
+    198                      if ( appCbus[ instanceIndex].cecPa == physicalAddr )
+    199                      {
+    200                          // This CBUS device has an assigned CEC physical address that
+    201                          // matches the stream path, so if it is connected, send it
+    202                          // a CONTENT ON command.  If an RAPK is received, the RAPK
+    203                          // handler will issue a CEC ACTIVE_SOURCE message.
+    204                          SkAppCbusInstanceSet( instanceIndex );
+    205                          if ( SiiMhlRxCbusConnected())
+    206                          {
+    207                              sendResult = SiiMhlRxSendRAPCmd( MHL_RAP_CONTENT_ON );
+    208          
+    209                              // Save some info for the RAPK handler.
+    210                              pAppCbus->lastRcpCecSourceLa        = CEC_LOGADDR_UNREGORBC;
+    211                              pAppCbus->lastRcpCecMessageOpcode   = pMsg->opcode;
+    212                              pAppCbus->lastRcpCecMessageData     = pMsg->args[0];
+    213                          }
+    214                      }
+    215                  }
+    216              }
+    217          
+    218              // Cannot Feature Abort error responses for broadcast CEC messages
+    219          
+    220              return( sendResult == MHL_MSC_MSG_RAP_NO_ERROR );
+    221          }
+    222          
+    223          //------------------------------------------------------------------------------
+    224          //! @brief  Called from the CEC message parser to transfer a
+    225          //!         USER_CONTROL_PRESSED or USER_CONTROL_RELEASED key message to
+    226          //!         CBUS as an RCP keyID.
+    227          //! @param[in]  pMsg    CEC message data
+    228          //------------------------------------------------------------------------------
+    229          static void CbusCecToCbusRcp( SiiCpiData_t *pMsg )
+    230          {
+    231              bool_t  sendSuccess = true;
+    232              uint8_t srcAddr     = GET_CEC_SRC( pMsg->srcDestAddr );
+    233              uint8_t destAddr    = GET_CEC_DEST( pMsg->srcDestAddr );
+    234          
+    235              // If CEC dest is a valid, connected CBUS device, process the message
+    236              if ( SkAppCbusSetLogicalAddressInstance( destAddr ))
+    237              {
+    238              	switch(pMsg->opcode)
+    239              	{
+    240              	case CECOP_USER_CONTROL_RELEASED:
+    241              		break;
+    242              	case CECOP_USER_CONTROL_PRESSED:
+    243              		pAppCbus->lastRcpCecMessageData = pMsg->args[0];
+    244              		sendSuccess = false;
+    245              		break;
+    246              	case CECOP_PLAY:
+    247                     	switch(pMsg->args[0])
+    248                      	{
+    249                      	case CEC_PLAY_FORWARD:
+    250                      		pAppCbus->lastRcpCecMessageData     = MHL_RCP_CMD_PLAY;
+    251                      		break;
+    252                      	case CEC_PLAY_STILL:
+    253                      		pAppCbus->lastRcpCecMessageData     = MHL_RCP_CMD_PAUSE;
+    254                      		break;
+    255                      	}
+    256              		break;
+    257              	case CECOP_DECK_CONTROL:
+    258              		pAppCbus->lastRcpCecMessageData     = MHL_RCP_CMD_STOP;
+    259              		break;
+    260              	case CECOP_VENDOR_REMOTE_BUTTON_DOWN:
+    261              		pAppCbus->lastRcpCecMessageData     = MHL_RCP_CMD_EXIT;
+    262              		break;
+    263          /*
+    264                  case CECOP_GIVE_DEVICE_VENDOR_ID:
+    265                  	DEBUG_PRINT(MSG_ALWAYS,"\n TRYING TO GET VENDOR ID\n");
+    266                  	pAppCbus->lastRcpCecMessageData     = MHL_GET_VENDOR_ID;
+    267                  	break;
+    268          */
+    269              	default:
+    270              		sendSuccess = false;
+    271              		break;
+    272              	}
+    273          
+    274                  /*if ( pMsg->opcode == CECOP_USER_CONTROL_RELEASED )
+    275                  {
+    276                      // CEC does not include the key ID in the CECOP_USER_CONTROL_RELEASED message,
+    277                      // so we use the key ID from the last CEC message sent, which should have been
+    278                      // the CECOP_USER_CONTROL_PRESSED message.  If not, don't bother to send it
+    279                      if ( pAppCbus->lastRcpCecMessageOpcode == CECOP_USER_CONTROL_PRESSED )
+    280                      {
+    281                          pMsg->args[0] = pAppCbus->lastRcpCecMessageData | BIT7; // Add the key release bit
+    282                      }
+    283                      else
+    284                      {
+    285                          sendSuccess = false;
+    286                      }
+    287                  }
+    288                  pAppCbus->lastRcpCecSourceLa        = srcAddr;
+    289                  pAppCbus->lastRcpCecMessageOpcode   = pMsg->opcode;
+    290                  pAppCbus->lastRcpCecMessageData     = pMsg->args[0];
+    291          
+    292                  	*/
+    293                  // Send the RCP key
+    294                  if ( sendSuccess )
+    295                  {
+    296                      sendSuccess = SiiMhlRxSendRCPCmd( pAppCbus->lastRcpCecMessageData );
+    297                  }
+    298              }
+    299              else
+    300              {
+    301                  sendSuccess = false;
+    302              }
+    303          
+    304              // Tell CEC device if the CBUS device didn't like the message, was not connected,
+    305              // or was not a CBUS device at all.
+    306              if ( !sendSuccess )
+    307              {
+    308                  // Tell the CEC requester it didn't work
+    309                  SiiCecFeatureAbortSendEx( pMsg->opcode, CECAR_REFUSED, destAddr, srcAddr );
+    310              }
+    311          }
+    312          
+    313          //------------------------------------------------------------------------------
+    314          //! @brief  Send a Remote Control key to the selected port if it is MHL.
+    315          //!         Does not validate key, since we don't know what we're attached to.
+    316          //!         The MHL device will perform its own validation.
+    317          //! @param[in]  key     Remote Control (RC5 protocol) key
+    318          //------------------------------------------------------------------------------
+    319          void SkAppCbusSendRcKey( RC5Commands_t key )
+    320          {
+    321              uint8_t ceaKey;
+    322          
+    323              ceaKey = SkAppIrConvertToCea931( key );
+    324              if ( ceaKey != 0xFF )
+    325              {
+    326                  // If the specified port is MHL, the correct instance will also be selected
+    327                  if ( SkAppSourceIsConnectedCbusPort( app.currentSource[app.currentZone] ))
+    328                  {
+    329                      SiiMhlRxSendRCPCmd( ceaKey );
+    330                  }
+    331              }
+    332          }
+    333          
+    334          void SkAppCbusCecSendVendorId(uint8_t instanceIndex, uint8_t *vendorId )
+    335          {
+    336          	SiiCecSendVendorId(pAppCbus[instanceIndex].cecLa,CEC_LOGADDR_UNREGORBC,vendorId);
+    337          }
+    338          
+    339          extern bool_t CBusSendMscCommand(uint8_t cmd);
+    340          
+    341          //------------------------------------------------------------------------------
+    342          //! @brief      Filter CEC messages and pass on to the MHL device if appropriate.
+    343          //! @param[in]  pMsg    - CEC message data structure
+    344          //! @return     true if message was processed by this handler
+    345          //------------------------------------------------------------------------------
+    346          bool_t SkAppCbusCecRxMsgFilter ( SiiCpiData_t *pMsg,  SiiCecLogicalAddresses_t virtualDevLA)
+    347          {
+    348              bool_t  processedMsg, isDirectAddressed;
+    349          
+    350              isDirectAddressed = (bool_t)!(GET_CEC_DEST(pMsg->srcDestAddr) == CEC_LOGADDR_UNREGORBC );
+    351          
+    352              processedMsg = true;
+    353              DEBUG_PRINT(MSG_ALWAYS,"CBUS CEC MSG HANDLER opcode = 0x%x, with LA = %d\n", pMsg->opcode,virtualDevLA);
+    354              SkAppCbusInstanceSet( 0 );
+    355              if(pAppCbus->cecLa != virtualDevLA)
+    356              {
+    357                  SkAppCbusInstanceSet( 1 );
+    358                  if(pAppCbus->cecLa != virtualDevLA)
+    359                  {
+    360                  	DEBUG_PRINT(MSG_ALWAYS,"DID NOT FIND VIRTUAL DEVICE CBUS INSTANCE TO ADDRESS OPCODE\n");
+    361                  	return false;
+    362                  }
+    363              }
+    364              pAppCbus->cecPa = SiiCecAdjacentPhysAddrGet( SiiCecGetDevicePA(), false, pAppCbus->port );
+    365              SiiCecUpdateLogicalDeviceInfo( pAppCbus->cecLa | BIT7, pAppCbus->cecPa, false );
+    366          
+    367              switch ( pMsg->opcode )
+    368              {
+    369                  case CECOP_ACTIVE_SOURCE:
+    370                      if ( !isDirectAddressed )                   // Ignore as direct message
+    371                      {
+    372                          // Someone else wants to be the active source, send CONTENT_OFF to the
+    373                          // CBUS device if it is currently the active source.
+    374                          if ( pAppCbus->cecIsActiveSource )
+    375                          {
+    376                              CbusCecToCbusRap( pMsg );
+    377                              pAppCbus->cecIsActiveSource = false;
+    378                          }
+    379                      }
+    380                      break;
+    381          
+    382                  case CECOP_SET_STREAM_PATH:
+    383                      if ( !isDirectAddressed )                   // Ignore as direct message
+    384                      {
+    385                          pAppCec->setStreamPathReceived = true;
+    386                          pAppCec->setStreamPathArg0 = pMsg->args[0];
+    387                          pAppCec->setStreamPathArg1 = pMsg->args[1];
+    388          
+    389                          // The DTV wants to set the active source.  If it is one of
+    390                          // the CBUS devices, this function will turn it on.
+    391                          if ( CbusCecToCbusRap( pMsg ))
+    392                          {
+    393                              pAppCbus->cecIsActiveSource = true;
+    394                              pAppCec->setStreamPathReceived = false;
+    395                          }
+    396                      }
+    397                      break;
+    398          
+    399                  case CECOP_REQUEST_ACTIVE_SOURCE:
+    400                      if ( !isDirectAddressed )                   // Ignore as direct message
+    401                      {
+    402                          // If we are the active source, tell the world (our CEC world, anyway).
+    403                          // No need to notify the CBUS device of anything
+    404                          if ( pAppCbus->cecIsActiveSource )
+    405                          {
+    406                              SiiCecSendActiveSource( pAppCbus->cecLa, pAppCbus->cecPa );
+    407                          }
+    408                      }
+    409                      break;
+    410          
+    411                  case CECOP_USER_CONTROL_PRESSED:
+    412                  case CECOP_USER_CONTROL_RELEASED:
+    413                  case CECOP_PLAY:
+    414                  case CECOP_DECK_CONTROL:
+    415                      if ( !isDirectAddressed )       break;  // Ignore as broadcast message
+    416          
+    417                      CbusCecToCbusRcp( pMsg );
+    418                      processedMsg = true;                   // Let others parse this message also
+    419                      break;
+    420          
+    421                  case CECOP_FEATURE_ABORT:
+    422                      break;
+    423          
+    424                  // The following messages are normally handled by the CEC FirstMessageHandler,
+    425                  // but only for the local device, so we have to handle them for our virtual devices here.
+    426                  case CECOP_GIVE_PHYSICAL_ADDRESS:
+    427                      if ( isDirectAddressed )                // Ignore as broadcast message
+    428                      {
+    429                          SiiCecSendReportPhysicalAddress( pAppCbus->cecLa, pAppCbus->cecPa );
+    430                      }
+    431                      else    processedMsg = false;           // Let others parse this message also
+    432                      break;
+    433          
+    434                  case CECOP_STANDBY:                         // Direct and Broadcast
+    435                      // Don't need to do anything here, when the DTV goes into standby, the
+    436                      // CBUS connection will dropped causing the desired result
+    437                      break;
+    438                  case CECOP_GIVE_DEVICE_POWER_STATUS:
+    439                      if ( isDirectAddressed )                // Ignore as broadcast message
+    440                      {
+    441                          //If we're even receiving this message, the MHL device power is on
+    442                          SiiCecSendReportPowerStatus( pAppCbus->cecLa, GET_CEC_SRC(pMsg->srcDestAddr), CEC_POWERSTATUS_ON );
+    443                      }
+    444                      else    processedMsg = false;           // Let others parse this message also
+    445                      break;
+    446                  case CECOP_REPORT_POWER_STATUS:     // Someone sent us their power state.
+    447                      break;
+    448                  case CECOP_GIVE_DECK_STATUS:
+    449                  	if(isDirectAddressed)
+    450                  	{
+    451                  		SiiCecSendDeckStatus(pAppCbus->cecLa, GET_CEC_SRC(pMsg->srcDestAddr), pAppCbus->deckStatus );
+    452                  	}
+    453                  	break;
+    454                  case CECOP_MENU_REQUEST:
+    455                  	if(isDirectAddressed)
+    456                  	{
+    457                  		SiiCecSendMenuStatus(pAppCbus->cecLa, GET_CEC_SRC(pMsg->srcDestAddr), CEC_MENUSTATE_ACTIVATED );
+    458                  	}
+    459                  	break;
+    460                  case CECOP_GIVE_OSD_NAME:
+    461                  	SiiCecSetOsdName(pAppCbus->osdName);
+    462                  	processedMsg = false;
+    463                  	break;
+    464          
+    465                  case CECOP_GIVE_DEVICE_VENDOR_ID:
+    466                  	if ( !isDirectAddressed )       break;  // Ignore as broadcast message
+    467          
+    468                  	CBusSendMscCommand(MHL_GET_VENDOR_ID);
+    469          
+    470          
+    471                  	processedMsg = true;
+    472                  	break;
+    473          
+    474          
+    475                  default:
+    476          			processedMsg = false;           // Let others parse this message also
+    477                      break;
+    478              }
+    479          
+    480              return( processedMsg );
+    481          }
+    482          
+    483          //------------------------------------------------------------------------------
+    484          //! @brief      Check for an available CEC LA from the CEC component and if
+    485          //!             found, assign it and a CEC physical address to the requesting
+    486          //!             CBUS device.
+    487          //! @param[in]  isComplete  - true - check for available LA, false, do nothing.
+    488          //------------------------------------------------------------------------------
+    489          void SkAppCbusAssignCecDeviceAddress( bool_t isComplete )
+    490          {
+    491              int     cbusInstance;
+    492              uint8_t cbusCecLa;
+    493          
+    494              // Don't care about not complete notification, and
+    495              // the CBUS devices are attached only to CEC instance 0
+    496              if (( !isComplete ) || ( pAppCec->instanceIndex != 0 ))
+    497              {
+    498                  return;
+    499              }
+    500          
+    501              // We may or may not be in the same CBUS instance as the
+    502              // CEC enumeration request, so just check all CBUS instances,
+    503              // since only one request can be run at a time.
+    504              for ( cbusInstance = 0; cbusInstance < MHL_MAX_CHANNELS; cbusInstance++ )
+    505              {
+    506                  SkAppCbusInstanceSet( cbusInstance );
+    507                  if ( pAppCbus->cecWaitingForEnum )
+    508                  {
+    509                      cbusCecLa = SiiCecGetAvailableLa( appCecSourceLaList+1 );
+    510                      if ( cbusCecLa < CEC_LOGADDR_UNREGORBC )
+    511                      {
+    512                      	DEBUG_PRINT(MSG_ALWAYS,"\n\n\n\nEnumerating CBUS os virtual CEC device with logical address :%d for cbusinstance %d\n\n",cbusCecLa,cbusInstance);
+    513                          // Set the logical and physical device addresses for this port
+    514                          pAppCbus->cecLa = cbusCecLa;
+    515                          pAppCbus->cecPa = SiiCecAdjacentPhysAddrGet( SiiCecGetDevicePA(), false, pAppCbus->port );
+    516                          pAppCbus->cecWaitingForEnum = false;
+    517          
+    518                          SiiCecSetVirtualDevLA( cbusInstance, cbusCecLa );
+    519                          // Tell the CEC hardware to respond to this logical address
+    520                          SiiDrvCpiAddLogicalAddr( true, cbusCecLa );
+    521          
+    522                          // Tell the CEC component about the device (adding BIT7 to the logical
+    523                          // address tells SiiCecUpdateLogicalDeviceInfo() this is a virtual device).
+    524                          SiiCecUpdateLogicalDeviceInfo( pAppCbus->cecLa | BIT7, pAppCbus->cecPa, false );
+    525          
+    526                          memcpy(pAppCbus->osdName, cbusInstance?MHL_DEV2_OSD_NAME:MHL_DEV1_OSD_NAME, strlen(cbusInstance?MHL_DEV2_OSD_NAME:MHL_DEV1_OSD_NAME));
+    527          
+    528                          // If SET_STREAM_PATH was received but not handled, it probably came from
+    529                          // the command that woke us up.  If the physical address attached to that
+    530                          // command matches our physical address, follow through with the
+    531                          // SET_STREAM_PATH CBUS action.
+    532                          if ( pAppCec->setStreamPathReceived )
+    533                          {
+    534                              SiiCpiData_t cecFrame;
+    535          
+    536                              // Set up fake CEC message with parameters needed for SET_STREAM_PATH
+    537                              cecFrame.opcode = CECOP_SET_STREAM_PATH;
+    538                              cecFrame.args[0] = pAppCec->setStreamPathArg0;
+    539                              cecFrame.args[1] = pAppCec->setStreamPathArg1;
+    540                              if ( CbusCecToCbusRap( &cecFrame ))
+    541                              {
+    542                                  pAppCbus->cecIsActiveSource = true;
+    543                                  pAppCec->setStreamPathReceived = false;
+    544                              }
+    545                          }
+    546                      }
+    547                  }
+    548              }
+    549          
+    550          }
+    551          
+    552          //------------------------------------------------------------------------------
+    553          //! @brief      Handle the CEC aspects of a CBUS connect change notification.
+    554          //!             If connected, enumerate available CEC playback devices for
+    555          //!             later assignment to this device.  If not connected, remove the
+    556          //!             previously assigned CEC device from the CEC watch list
+    557          //! @param[in]  connected  - true/false
+    558          //------------------------------------------------------------------------------
+    559          void SkAppCbusConnectChangeCecUpdate( bool_t connected )
+    560          {
+    561              // If connected, we need to assign a CEC logical address, so ping for
+    562              // available addresses
+    563              if ( connected )
+    564              {
+    565                  // Start an enumeration task to ensure that all playback devices are enumerated
+    566                  // so that we know what's already there. When the enumeration is complete,
+    567                  // another callback will assign the CEC logical device address
+    568                  SkAppCecInstanceSet( CEC_INSTANCE_AVR );
+    569                  SiiCecEnumerateDevices( appCecSourceLaList );
+    570                  pAppCbus->cecWaitingForEnum = true;
+    571              }
+    572              // If disconnected, de-assign the CEC logical address.
+    573              else
+    574              {
+    575                  // Stop the CEC component from recognizing the CEC LA associated with this device.
+    576                  SkAppCecInstanceSet( CEC_INSTANCE_AVR );
+    577                  if(SiiCecRemoveVirtualDevice(pAppCbus->cecLa))
+    578                  {
+    579                      SiiDrvCpiAddLogicalAddr( false, pAppCbus->cecLa );
+    580                  }
+    581          
+    582                  // Passing a bad physical address will take this logical address out of the
+    583                  // internal assigned LA table.
+    584                  SiiCecUpdateLogicalDeviceInfo( pAppCbus->cecLa, 0xFFFF, false );
+    585                  pAppCbus->cecLa = CEC_LOGADDR_UNREGORBC;
+    586              }
+    587          }
+    588          
+    589          #endif  // #if INC_CEC && INC_CBUS
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       32  CbusCecToCbusRap
+             32 -> SiiMhlRxCbusConnected
+             32 -> SiiMhlRxSendRAPCmd
+             32 -> SkAppCbusInstanceSet
+             32 -> SkAppSourceIsConnectedCbusPort
+       56  SkAppCbusAssignCecDeviceAddress
+             56 -> CbusCecToCbusRap
+             56 -> SiiCecAdjacentPhysAddrGet
+             56 -> SiiCecGetAvailableLa
+             56 -> SiiCecGetDevicePA
+             56 -> SiiCecSetVirtualDevLA
+             56 -> SiiCecUpdateLogicalDeviceInfo
+             56 -> SiiDrvCpiAddLogicalAddr
+             56 -> SkAppCbusInstanceSet
+             56 -> __aeabi_memcpy
+             56 -> strlen
+        8  SkAppCbusCecFeatureAbort
+              0 -> SiiCecFeatureAbortSendEx
+              8 -> SkAppCecInstanceSet
+       24  SkAppCbusCecRxMsgFilter
+             24 -> CBusSendMscCommand
+             24 -> CbusCecToCbusRap
+             24 -> SiiCecAdjacentPhysAddrGet
+             24 -> SiiCecFeatureAbortSendEx
+             24 -> SiiCecGetDevicePA
+             24 -> SiiCecSendActiveSource
+             24 -> SiiCecSendDeckStatus
+             24 -> SiiCecSendMenuStatus
+             24 -> SiiCecSendReportPhysicalAddress
+             24 -> SiiCecSendReportPowerStatus
+             24 -> SiiCecSetOsdName
+             24 -> SiiCecUpdateLogicalDeviceInfo
+             24 -> SiiMhlRxSendRCPCmd
+             24 -> SkAppCbusInstanceSet
+             24 -> SkAppCbusSetLogicalAddressInstance
+        8  SkAppCbusCecSendVendorId
+              0 -> SiiCecSendVendorId
+        8  SkAppCbusConnectChangeCecUpdate
+              8 -> SiiCecEnumerateDevices
+              8 -> SiiCecRemoveVirtualDevice
+              8 -> SiiCecUpdateLogicalDeviceInfo
+              8 -> SiiDrvCpiAddLogicalAddr
+              8 -> SkAppCecInstanceSet
+       16  SkAppCbusRapToCec
+             16 -> SiiCecSendActiveSource
+             16 -> SiiCecSendInactiveSource
+             16 -> SkAppCecInstanceSet
+       16  SkAppCbusRapkToCec
+              0 -> SiiCecFeatureAbortSendEx
+             16 -> SiiCecSendActiveSource
+             16 -> SkAppCecInstanceSet
+       16  SkAppCbusRcpToCec
+             16 -> SiiCecPortToLA
+              0 -> SiiCecSendUserControlPressed
+             16 -> SiiCecSendUserControlReleased
+             16 -> SkAppCecInstanceSet
+        8  SkAppCbusSendRcKey
+              0 -> SiiMhlRxSendRCPCmd
+              8 -> SkAppIrConvertToCea931
+              8 -> SkAppSourceIsConnectedCbusPort
+       16  SkAppCbusSetLogicalAddressInstance
+             16 -> SiiMhlRxCbusConnected
+             16 -> SkAppCbusInstanceSet
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      12  ?<Constant "SII_MHLDEV1">
+      12  ?<Constant "SII_MHLDEV2">
+       4  ??DataTable12
+       4  ??DataTable12_1
+       4  ??DataTable12_2
+       4  ??DataTable12_3
+       4  ??DataTable12_4
+      14  ?Subroutine0
+       8  ?Subroutine1
+      10  ?Subroutine2
+      10  ?Subroutine3
+     124  CbusCecToCbusRap
+     196  SkAppCbusAssignCecDeviceAddress
+      48  SkAppCbusCecFeatureAbort
+     444  SkAppCbusCecRxMsgFilter
+      26  SkAppCbusCecSendVendorId
+      72  SkAppCbusConnectChangeCecUpdate
+      52  SkAppCbusRapToCec
+      84  SkAppCbusRapkToCec
+      60  SkAppCbusRcpToCec
+      30  SkAppCbusSendRcKey
+      56  SkAppCbusSetLogicalAddressInstance
+
+ 
+ 1 278 bytes in section .text
+ 
+ 1 278 bytes of CODE memory
+
+Errors: none
+Warnings: 29

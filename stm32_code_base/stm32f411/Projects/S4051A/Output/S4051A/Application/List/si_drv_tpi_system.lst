@@ -1,0 +1,2377 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:52 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\tpi_drv\si_drv_t #
+#                    pi_system.c                                              #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\tpi_drv\si_drv_t #
+#                    pi_system.c -D S4051A -D DEBUG -D FREE_RTOS -D           #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_drv_tpi_system.lst                                 #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_drv_tpi_system.o                                    #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\driver\tpi_drv\si_drv_tpi_system.c
+      1          //************************************************************************************************
+      2          //! @file   si_drv_tpi_system.c
+      3          //! @brief  Low level TPI operations such as interrupt and power controls (SiI9535 version)
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2002-2012, Silicon Image, Inc.  All rights reserved.
+     11          //************************************************************************************************/
+     12          
+     13          #include "si_common.h"
+     14          #include "si_tx_component_internal.h"
+     15          #include "si_drv_tpi_access.h"
+     16          #include "si_drv_tpi_ddc_access.h"
+     17          #include "si_hdcp_ddc.h"
+     18          #include "si_drv_tpi_system.h"
+     19          
+     20          //! Mask selecting events that trigger an interrupt signal
+     21          //! Byte 0
+     22          #define TX_INTERRUPT_MASK0 \
+     23              ( BIT_TPI__INT__HPD | BIT_TPI__INT__RX_SENSE | BIT_TPI__INT__HDCP_CHNG )
+     24          
+     25          //! Byte 1
+     26          #define TX_INTERRUPT_MASK1 \
+     27              ( BIT_TPI__INT__P_STABLE | BIT_TPI__INT__KSV_READY )
+     28          
+     29          
+     30          //! HDCP control flags
+     31          #define HDCP_CTRL_MODE ( 0 \
+     32              | BIT_TPI__HDCP_CTRL__PROTECTION \
+     33              | BIT_TPI__HDCP_CTRL__SHORT_RI \
+     34              | BIT_TPI__HDCP_CTRL__DOUBLE_RI_CHECK \
+     35              | BIT_TPI__HDCP_CTRL__INTERMEDIATE_RI_CHECK \
+     36              | BIT_TPI__HDCP_CTRL__KSV_FORWARDING \
+     37              )
+     38          
+     39          
+     40          #define PART2_DONE (BIT_TPI__HDCP_QUERY__EXTENDED_PROTECT | BIT_TPI__HDCP_QUERY__LOCAL_PROTECT)
+     41          
+     42          // Control over Override bits in REG_TPI__AUDIO_PKT_SRC_CFG by TX (ENABLE) or Application (DISABLE)
+     43          // Application should be the owner of these bits as it has complete knowledge of the passthrough
+     44          // pipe status and mute/unmute requests possibly coming from RX (in the repeater application).
+     45          #define SI_TX_OVRD_TPI_CONTROL   DISABLE
+     46          
+     47          
+     48          //-------------------------------------------------------------------------------------------------
+     49          //  Module Instance Data
+     50          //-------------------------------------------------------------------------------------------------
+     51          
+     52          txTpiInstanceRecord_t txTpiInstRec[SII_NUM_TX];
+     53          txTpiInstanceRecord_t *pTpi = &txTpiInstRec[0];
+     54          
+     55          // SWWA_FP1554
+     56          #if INC_OSD
+     57          #include "si_drv_osd_internal.h"
+     58          #endif
+     59          // SWWA_FP1554
+     60          
+     61          //-------------------------------------------------------------------------------------------------
+     62          //  Local service functions
+     63          //-------------------------------------------------------------------------------------------------
+     64          
+     65          
+     66          //-------------------------------------------------------------------------------------------------
+     67          //! @brief      Switches either Embedded Sync control register set or DE generation
+     68          //!             control set into current context.
+     69          //!
+     70          //! @param[in]  isEnabled - true enables Embedded Sync control set,
+     71          //!                         false enables DE generation set.
+     72          //-------------------------------------------------------------------------------------------------
+     73          
+     74          static void EmbeddedSyncControlPageEnable(bool_t isEnabled)
+     75          {
+     76          
+     77              SiiRegModify(REG_TPI__SYNC_GEN_CTRL, BIT_TPI__SYNC_GEN_CTRL__SYNC_EXTRACT_LAYOUT,
+     78                                      isEnabled ? SET_BITS : CLEAR_BITS);
+     79          }
+     80          
+     81          //------------------------------------------------------------------------------------------------
+     82          //! @brief      audio input enable
+     83          //
+     84          //---------------------------------------------------------------------------------------------------
+     85          void SiiDrvTpiAudioInEnable(void)
+     86          {
+     87          	SiiDrvTpiIndirectWrite(REG_TX__AUDIO_IN_CTRL, 0x03);
+     88          }
+     89          
+     90          //------------------------------------------------------------------------------------------------
+     91          //! @brief      Source Termination Enable
+     92          //
+     93          //---------------------------------------------------------------------------------------------------
+     94          void SiiDrvTpiSourceTerminationEnable(bool_t isEnabled)
+     95          {
+     96              uint8_t regVal;
+     97          
+     98              regVal = SiiDrvTpiIndirectRead(REG_TX__TMDS_CTRL2);
+     99              regVal = isEnabled ? (regVal | BIT_TX__TMDS_CTRL2__SRC_TERM_EN) : (regVal & ~BIT_TX__TMDS_CTRL2__SRC_TERM_EN);
+    100              SiiDrvTpiIndirectWrite(REG_TX__TMDS_CTRL2, regVal);
+    101          }
+    102          
+    103          //-------------------------------------------------------------------------------------------------
+    104          //! @brief      Convert Info Frame ID into TPI selector code for the info frame type.
+    105          //!
+    106          //! @param[in]  ifType - info frame type ID.
+    107          //-------------------------------------------------------------------------------------------------
+    108          static uint8_t InfoFrameSelectCodeGet(infoFrameType_t ifType)
+    109          {
+    110              uint8_t selector;
+    111          
+    112              switch(ifType)
+    113              {
+    114                  default:
+    115                  case SI_INFO_FRAME_AVI:
+    116                      selector = VAL_TPI__IF_SELECT__AVI;
+    117                      break;
+    118                  case SI_INFO_FRAME_AUDIO:
+    119                      selector = VAL_TPI__IF_SELECT__AUDIO;
+    120                      break;
+    121                  case SI_INFO_FRAME_SPD:
+    122                      selector = VAL_TPI__IF_SELECT__SPD;
+    123                      break;
+    124                  case SI_INFO_FRAME_MPEG: // or HDMI Vendor Specific data
+    125                      selector = VAL_TPI__IF_SELECT__MPEG;
+    126                      break;
+    127                  case SI_INFO_FRAME_ISRC1:
+    128                      selector = VAL_TPI__IF_SELECT__GEN1;
+    129                      break;
+    130                  case SI_INFO_FRAME_ISRC2:
+    131                      selector = VAL_TPI__IF_SELECT__GEN2;
+    132                      break;
+    133                  case SI_INFO_FRAME_ACP:
+    134                      selector = VAL_TPI__IF_SELECT__MPEG; // ACP uses MPEG buffer
+    135                      break;
+    136                  case SI_INFO_FRAME_GBD:
+    137                      selector = VAL_TPI__IF_SELECT__GBD;
+    138                      break;
+    139                  case SI_INFO_FRAME_VSIF:
+    140                      selector = VAL_TPI__IF_SELECT__VSIF;
+    141                      break;
+    142              }
+    143          
+    144              return selector;
+    145          }
+    146          
+    147          
+    148          //-------------------------------------------------------------------------------------------------
+    149          //! @brief      Enable/Disable InfoFrame transmission.
+    150          //!
+    151          //! @param[in]  isEnabled - true, if InfoFrame transmission is to be enabled,
+    152          //! @param[in]  selector  - TPI InfoFrame index (0-7). @see InfoFrameSelectCodeGet().
+    153          //-------------------------------------------------------------------------------------------------
+    154          
+    155          static void InfoFrameEnable(bool_t isEnabled, uint8_t selector)
+    156          {
+    157              if (isEnabled)
+    158              {
+    159                  // select the buffer and prepare for new packet update
+    160                  SiiRegWrite(REG_TPI__IF_SELECT, selector | BIT_TPI__IF_SELECT__ENABLE |
+    161                                                           BIT_TPI__IF_SELECT__REPEAT |
+    162                                                           BIT_TPI__IF_SELECT__OVRD_PACKET);
+    163          
+    164                  // Initiate transmission by writing to the last register of the IF group
+    165                  if (selector == InfoFrameSelectCodeGet(SI_INFO_FRAME_AUDIO)) // Audio IF
+    166                  {
+    167                      SiiRegWrite(REG_TPI__IF_DBYTE10, SiiRegRead(REG_TPI__IF_DBYTE10));
+    168                  }
+    169                  else if (selector == InfoFrameSelectCodeGet(SI_INFO_FRAME_AVI)) // AVI IF
+    170                  {
+    171                      SiiRegWrite(REG_TPI__IF_DBYTE15, SiiRegRead(REG_TPI__IF_DBYTE15));
+    172                  }
+    173                  else // All other IFs
+    174                  {
+    175                      SiiRegWrite(REG_TPI__IF_DBYTE27, SiiRegRead(REG_TPI__IF_DBYTE27));
+    176                  }
+    177              }
+    178              else
+    179              {
+    180                  SiiRegWrite(REG_TPI__IF_SELECT, selector);
+    181              }
+    182          }
+    183          
+    184          
+    185          //-------------------------------------------------------------------------------------------------
+    186          //! @brief      Select a source of control packets (CTS,GCP,Audio) when external
+    187          //!             SPDIF source is used along with the HDMI Rx source. One can select either
+    188          //!             TPI or Rx source. The Rx source selection only makes sense when the SPDIF
+    189          //!             audio is extracted from HDMI Rx data without change.
+    190          //!
+    191          //!             @note Controls SiI9535 specific TPI register!
+    192          //!
+    193          //! @param[in]  isAudioSampleTpi - Audio Sample packet info is taken from TPI,
+    194          //! @param[in]  isCtsTpi         - CTS packet info is taken from TPI,
+    195          //! @param[in]  isGcpTpi         - GCP info is taken from TPI.
+    196          //-------------------------------------------------------------------------------------------------
+    197          #if 0
+    198          static void ControlPacketsSourceSet(bool_t isAudioSampleTpi, bool_t isCtsTpi, bool_t isGcpTpi)
+    199          {
+    200              SiiRegWrite(REG_TPI__AUDIO_PKT_SRC_CFG,
+    201                                      (isAudioSampleTpi ? BIT_TPI__AUDIO_SMP_PKT_SRC_TPI : 0) |
+    202                                      (isCtsTpi ? BIT_TPI__AUDIO_CTS_PKT_SRC_TPI : 0) |
+    203                                      (isGcpTpi ? BIT_TPI__AUDIO_GCP_PKT_SRC_TPI : 0));
+    204          }
+    205          #endif
+    206          
+    207          
+    208          //-------------------------------------------------------------------------------------------------
+    209          //! @brief      The function is used for TMDS swing & termination adjustments.
+    210          //!
+    211          //! @param[in]  pixelClk   - Pixel Clock frequency (* 10000 Hz),
+    212          //-------------------------------------------------------------------------------------------------
+    213          
+    214          static void TmdsSwingTermSet(uint16_t pixelClk )
+    215          {
+    216              uint8_t zoneVal = 0x8;
+    217          
+    218              if (pixelClk < 16500)
+    219              {
+    220                  // up to 165Mhz
+    221                  if (pixelClk < 3000)
+    222                  {
+    223                      //SWWA:22208
+    224                      zoneVal = 0x9;
+    225                  }
+    226              }
+    227          
+    228              // TMDS termination resistor to support Vclk up to 300MHz
+    229           //  SiiDrvTpiIndirectWrite(REG_TX__TMDS_TERM_SELECT, term | 0x20);
+    230              // TMDS Swing adjustment per chip characterization
+    231             // SiiDrvTpiIndirectWrite(REG_TX__TMDS_SWING_CTRL, swing);
+    232              // TMDS zone adjustment for low frequency inputs
+    233             // SiiDrvTpiIndirectWrite(REG_TX__TMDS_ZONE_CTRL2, zoneVal);
+    234          }
+    235          
+    236          
+    237          
+    238          //-------------------------------------------------------------------------------------------------
+    239          //  TPI System level API functions
+    240          //-------------------------------------------------------------------------------------------------
+    241          
+    242          //-------------------------------------------------------------------------------------------------
+    243          //! @brief      Select Tx device instance in multi-transmitter system.
+    244          //!
+    245          //! @param[in]  device_idx - zero based index of an instance.
+    246          //-------------------------------------------------------------------------------------------------
+    247          
+    248          #if SII_NUM_TX > 1
+    249          void SiiDrvTpiInstanceSet(uint8_t deviceIndex)
+    250          {
+    251              if(deviceIndex < SII_NUM_TX)
+    252              {
+    253                  pTpi = &txTpiInstRec[deviceIndex];
+    254          
+    255                  SiiDrvTpiAccessInstanceSet(deviceIndex);
+    256          
+    257                  // Set instance for CRA pages used.
+    258                  SiiRegInstanceSet( TX_PAGE_TPI, deviceIndex );
+    259                  SiiRegInstanceSet( TX_PAGE_L0,  deviceIndex );
+    260                  SiiRegInstanceSet( TX_PAGE_L1,  deviceIndex );
+    261              }
+    262          }
+    263          
+    264          int SiiDrvTpiInstanceGet( void )
+    265          {
+    266          
+    267              return( pTpi - &txTpiInstRec[0] );
+    268          }
+    269          #endif // SII_NUM_TX > 1
+    270          
+    271          void SiiDrvTpiHdcpR0CalcConfigSet( int isVsyncBase )
+    272          {
+    273          	if(isVsyncBase)
+    274          	{
+    275          		SiiRegWrite(REG_TPI__HW_OPT, VAL_TPI__R0_CALC_VSYNC);
+    276          	}
+    277          	else
+    278          	{
+    279          		SiiRegWrite(REG_TPI__HW_OPT, VAL_TPI__R0_CALC_OSC);
+    280          	}
+    281          }
+    282          //-------------------------------------------------------------------------------------------------
+    283          //! @brief      Initialize TPI module
+    284          //-------------------------------------------------------------------------------------------------
+    285          
+    286          void SiiDrvTpiInit(void)
+    287          {
+    288              // Clear interrupt flags
+    289              pTpi->txInterruptWord = 0;
+    290          
+    291              SiiDrvTpiDdcInit();
+    292          
+    293          
+    294              // ---------------- Inits & SWWAs -------------------
+    295          
+    296              // TMDS termination resistor to support Vclk up to 165MHz
+    297              // The differential termination
+    298              //SiiDrvTpiIndirectWrite(REG_TX__TMDS_TERM_SELECT, VAL_TX__TMDS_TERM__NONE);
+    299              // TMDS Swing adjustment per chip characterization
+    300              //SiiDrvTpiIndirectWrite(REG_TX__TMDS_SWING_CTRL, 0xDB);
+    301              //SiiDrvTpiIndirectWrite(REG_TX__TMDS_PLL_BW, 0x04);
+    302          
+    303              // No HDCP protection on the link
+    304              // Enable HDCP cancellation whenever HDCP engine stopped
+    305              SiiRegWrite(REG_TPI__HDCP_CTRL, BIT_TPI__HDCP_CTRL__PROT_REQUEST_CANCEL);
+    306          
+    307              // TMDS output power down, output mode - DVI
+    308              SiiRegWrite(REG_TPI__SYSTEM_CONTROL, BIT_TPI__SYSTEM_CONTROL__PD);
+    309          
+    310              // ------------------------------------------------
+    311          
+    312              // Check if DS device is connected, then simulate HPD interrupt catch
+    313              if ((SiiRegRead(REG_TPI__INT_STATUS1) & BIT_TPI__INT__HPD_STATE) != 0)
+    314              {
+    315                  pTpi->isWakeUpRequired = true;
+    316                  pTpi->txInterruptWord = BIT_TPI__INT__HPD;
+    317              }
+    318          	// Initial value for R0 calculation time.
+    319          	// Will be updated based on the incoming infoframe
+    320          	SiiDrvTpiHdcpR0CalcConfigSet(false);
+    321          }
+    322          
+    323          
+    324          //-------------------------------------------------------------------------------------------------
+    325          //! @brief      TPI software reset
+    326          //!
+    327          //!             Reset all sections, including the audio FIFO, except registers that are user
+    328          //!             configurable.
+    329          //!             Caution (applicable for Evita only): CEC operation is not guaranteed after a
+    330          //!             Software Reset because the software reset clears only write pointer while keeping
+    331          //!             the read pointer.
+    332          //!             Therefore, there will be mismatches in write/read pointers, the amount of
+    333          //!             mismatch will depend on when software reset is issued.
+    334          //-------------------------------------------------------------------------------------------------
+    335          
+    336          void SiiDrvTpiSwReset(void)
+    337          {
+    338              uint8_t regVal;
+    339          
+    340              regVal = SiiRegRead(REG_TPI__RAR);
+    341              regVal |= BIT_TPI__RAR__SW_RST;
+    342              SiiRegWrite(REG_TPI__RAR, regVal);
+    343              regVal &= ~BIT_TPI__RAR__SW_RST;
+    344              SiiRegWrite(REG_TPI__RAR, regVal);
+    345          
+    346              SiiOsTimerWait(20);       // Wait 20 ms to settle down after software reset
+    347          
+    348             // DEBUG_PRINT( TX_MSG_DBG, "TPI_SW_RESET\n");
+    349          }
+    350          
+    351          
+    352          
+    353          //-------------------------------------------------------------------------------------------------
+    354          //! @brief      Enable or Disable TPI interrupts.
+    355          //!
+    356          //!             Controls only TPI interrupts selected by TX_INTERRUPT_MASK macro.
+    357          //!
+    358          //! @param[in]  isInterruptsEnabled - true for enable
+    359          //-------------------------------------------------------------------------------------------------
+    360          
+    361          void SiiDrvTpiInterruptsEnable(const bool_t isInterruptsEnabled)
+    362          {
+    363          
+    364              SiiRegBitsSet(REG_TPI__INT_ENABLE1, TX_INTERRUPT_MASK0, isInterruptsEnabled );
+    365              SiiRegBitsSet(REG_TPI__INT_ENABLE2, TX_INTERRUPT_MASK1, isInterruptsEnabled );
+    366          
+    367          }
+    368          
+    369          
+    370          //-------------------------------------------------------------------------------------------------
+    371          //! @brief      Turn power on.
+    372          //-------------------------------------------------------------------------------------------------
+    373          
+    374          void SiiDrvTpiPowerUp(void)
+    375          {
+    376              SiiRegWrite(REG_TPI__DEVICE_POWER_STATE_CTRL, VAL_TPI__POWER_STATE_D0);
+    377          }
+    378          
+    379          
+    380          //-------------------------------------------------------------------------------------------------
+    381          //! @brief      Standby mode.
+    382          //-------------------------------------------------------------------------------------------------
+    383          
+    384          void SiiDrvTpiStandby(void)
+    385          {
+    386          #if INC_OSD // SWWA: FP1554 - Make sure OSD_EN is 0 before setting Tx0 power state to other than D0
+    387          #if SII_NUM_TX > 1
+    388              if ( SiiDrvTpiInstanceGet() == 0 )
+    389          #endif
+    390              {
+    391                  DrvOsdDisableInternal();
+    392              }
+    393          #endif
+    394          
+    395              // Disable interrupts for the TPI driver
+    396              SiiDrvTpiInterruptsEnable( false );
+    397          
+    398              // Clear outstanding interrupts
+    399              SiiRegWrite( REG_TPI__INT_ENABLE1, TX_INTERRUPT_MASK0 );
+    400              SiiRegWrite( REG_TPI__INT_ENABLE2, TX_INTERRUPT_MASK1 );
+    401          
+    402              // Go into low power state (D2)
+    403              SiiRegWrite(REG_TPI__DEVICE_POWER_STATE_CTRL, VAL_TPI__POWER_STATE_D2);
+    404          }
+    405          
+    406          #if ( configSII_DEV_953x_PORTING == 1 )
+    407          void SiiDrcTpiDisableInterruptStandby( void )
+    408          {
+    409              uint8_t intstatus = 0;
+    410          
+    411              intstatus = SiiRegRead(REG_TPI__INT_STATUS1 );
+    412          
+    413              /*Write 1 to the interrupt bits to clear the pending status*/
+    414              SiiRegWrite( REG_TPI__INT_STATUS1, intstatus );
+    415          
+    416              /*Disable interrupt event for standy */
+    417              SiiRegModify(REG_TPI__INT_ENABLE1,( BIT_TPI__INT__HPD | BIT_TPI__INT__RX_SENSE | BIT_TPI__INT__HDCP_CHNG ), CLEAR_BITS );
+    418          }
+    419          #endif
+    420          
+    421          //-------------------------------------------------------------------------------------------------
+    422          //! @brief      Deep sleep mode. Waking up requires hardware reset.
+    423          //-------------------------------------------------------------------------------------------------
+    424          
+    425          void SiiDrvTpiPowerDown(void)
+    426          {
+    427          #if INC_OSD // SWWA: FP1554 - Make sure OSD_EN is 0 before setting power state to other than D0
+    428          #if SII_NUM_TX > 1
+    429              if ( SiiDrvTpiInstanceGet() == 0 )
+    430          #endif
+    431              {
+    432                  DrvOsdDisableInternal();
+    433              }
+    434          #endif
+    435              SiiRegWrite(REG_TPI__DEVICE_POWER_STATE_CTRL, VAL_TPI__POWER_STATE_D3);
+    436          }
+    437          
+    438          //-------------------------------------------------------------------------------------------------
+    439          //! @brief      Return true, if TX is in full power mode (not standby or power down)
+    440          //-------------------------------------------------------------------------------------------------
+    441          
+    442          bool_t SiiDrvTpiIsPoweredUp(void)
+    443          {
+    444              uint8_t powerMode = SiiRegRead(REG_TPI__DEVICE_POWER_STATE_CTRL);
+    445              return ((powerMode & MSK_TPI__POWER_STATE_MASK) == VAL_TPI__POWER_STATE_D0);
+    446          }
+    447          //-------------------------------------------------------------------------------------------------
+    448          //! @brief      Return true, if TMDS is in active state
+    449          //-------------------------------------------------------------------------------------------------
+    450          
+    451          bool_t SiiDrvTmdsIsPoweredUp(void)
+    452          {
+    453              uint8_t tmdsControl = SiiRegRead(REG_TPI__SYSTEM_CONTROL);
+    454              return ((tmdsControl & BIT_TPI__SYSTEM_CONTROL__PD) == BIT_TPI__SYSTEM_CONTROL__PD);
+    455          }
+    456          //-------------------------------------------------------------------------------------------------
+    457          //! @brief      Enable or Disable TMDS output signals.
+    458          //!
+    459          //! @param[in]  isTmdsEnabled - true enables TMDS, false disables TMDS
+    460          //-------------------------------------------------------------------------------------------------
+    461          
+    462          void SiiDrvTpiTmdsOutputEnable(bool_t isEnabled)
+    463          {
+    464          
+    465          	if(isEnabled)
+    466          	{
+    467          		// Fix to RTL BUG (26110): clear "bgr_ext_res_en" bit-1 of 0x83 regester in Legacy Tx page 0
+    468          		SiiDrvTpiIndirectWrite(REG_TX__AUDIO_CLK_DIV, 0x88);
+    469          	}
+    470          
+    471              SiiRegModify(REG_TPI__SYSTEM_CONTROL, BIT_TPI__SYSTEM_CONTROL__PD,
+    472                                      isEnabled ? CLEAR_BITS : SET_BITS);
+    473          }
+    474          
+    475          
+    476          //-------------------------------------------------------------------------------------------------
+    477          //! @brief      Set an output mode (DVI or HDMI).
+    478          //!
+    479          //! @param[in]  isHdmi - true for HDMI, false for DVI
+    480          //-------------------------------------------------------------------------------------------------
+    481          
+    482          void SiiDrvTpiHdmiOutputModeSet(bool_t isHdmi)
+    483          {
+    484              SiiRegModify(REG_TPI__SYSTEM_CONTROL, BIT_TPI__SYSTEM_CONTROL__HDMI,
+    485                                      isHdmi ? SET_BITS : CLEAR_BITS);
+    486          }
+    487          
+    488          
+    489          //-------------------------------------------------------------------------------------------------
+    490          //! @brief      Return transmitter device ID.
+    491          //!
+    492          //! @return     MSByte - device ID code, LSByte - device revision code.
+    493          //-------------------------------------------------------------------------------------------------
+    494          
+    495          uint16_t SiiDrvTpiDeviceIdGet(void)
+    496          {
+    497              uint8_t deviceId;
+    498              uint8_t deviceRevision;
+    499          
+    500              deviceId = SiiRegRead(REG_TPI__DEVICE_ID);
+    501              deviceRevision = SiiRegRead(REG_TPI__DEVICE_REV_ID);
+    502          
+    503              return ((deviceId << 8) | deviceRevision);
+    504          }
+    505          
+    506          
+    507          //-------------------------------------------------------------------------------------------------
+    508          //! @brief      Return TPI revision ID.
+    509          //!
+    510          //! @return     TPI revision code.
+    511          //-------------------------------------------------------------------------------------------------
+    512          
+    513          uint8_t SiiDrvTpiRevisionGet(void)
+    514          {
+    515              return (SiiRegRead(REG_TPI__TPI_REV_ID) & 0x7F) ;
+    516          }
+    517          
+    518          
+    519          //-------------------------------------------------------------------------------------------------
+    520          //! @brief      Check for TX related interrupts. If found, clear pending hardware interrupt
+    521          //!             bits and change the status to indicate pending interrupt.
+    522          //!
+    523          //!             This function is to be called from the Device Interrupt manager upon receiving
+    524          //!             a hardware interrupt from TX.
+    525          //-------------------------------------------------------------------------------------------------
+    526          
+    527          void SiiDrvTpiProcessInterrupts(void)
+    528          {
+    529              uint8_t txInterrupts[2];
+    530          
+    531              txInterrupts[0] = SiiRegRead(REG_TPI__INT_STATUS1);
+    532              txInterrupts[1] = SiiRegRead(REG_TPI__INT_STATUS2);
+    533          
+    534              // Update TX connection status (HPD & RSEN)
+    535              pTpi->plugStatus = 0;
+    536              if ((txInterrupts[0] & BIT_TPI__INT__HPD_STATE) != 0)
+    537              {
+    538                  pTpi->plugStatus |= BIT1;
+    539          #if (FPGA_BUILD == ENABLE)
+    540                  pTpi->plugStatus |= BIT0; // FPGA model doesn't support RSEN. Make RSEN = HPD status.
+    541          #endif
+    542              }
+    543          
+    544          #if (FPGA_BUILD == DISABLE)
+    545              if ((txInterrupts[0] & BIT_TPI__INT__RX_SENSE_STATE) != 0)
+    546              {
+    547                  pTpi->plugStatus |= BIT0;
+    548              }
+    549          #endif
+    550          
+    551              // Mask in interrupt related bits only (ignore status bits)
+    552              txInterrupts[0] &= TX_INTERRUPT_MASK0;
+    553              txInterrupts[1] &= TX_INTERRUPT_MASK1;
+    554          
+    555              if (SiiDrvTpiIsPoweredUp())
+    556              {
+    557          
+    558                  pTpi->txInterruptWord = txInterrupts[0] | (((uint16_t) txInterrupts[1]) << 8);
+    559          
+    560                  // Check for pending hardware interrupts
+    561                  if (pTpi->txInterruptWord)
+    562                  {
+    563                      DEBUG_PRINT(TX_MSG_DBG, "TPI INTERRUPT CAUGHT: %04X\n", pTpi->txInterruptWord);
+    564                      if (( txInterrupts[1] != 0 ) && (( txInterrupts[1] & ~BIT_TPI__INT__P_STABLE) != 0))  // Skip PSTABLE interrupts
+    565                      {
+    566                          DEBUG_PRINT( TX_MSG_DBG, "Interrupt - INT0: %02X  INT1: %02X\n", txInterrupts[0], txInterrupts[1] );
+    567                      }
+    568                      
+    569          		    // Clear all pending hardware TX interrupts
+    570          		    if (txInterrupts[0])
+    571          		    {
+    572          		        SiiRegWrite(REG_TPI__INT_STATUS1, txInterrupts[0]);
+    573          		    }
+    574          		    if (txInterrupts[1])
+    575          		    {
+    576          		        SiiRegWrite(REG_TPI__INT_STATUS2, txInterrupts[1]);
+    577          		    }            
+    578                  }
+    579              }
+    580              else
+    581              {
+    582                  // Low power mode requires wake-up to process the interrupts
+    583                  if (!pTpi->isWakeUpRequired)
+    584                  {
+    585                      // Only print the message for a new event
+    586                      DEBUG_PRINT( TX_MSG_DBG, "Interrupt - WAKEUP NEEDED\n");
+    587                  }
+    588                  pTpi->isWakeUpRequired = true;
+    589              }
+    590          
+    591          }
+    592          
+    593          //-------------------------------------------------------------------------------------------------
+    594          //! @brief      Determine current state of TX HPD pin.
+    595          //! @return     boolean as follows
+    596          //! @retval     true    - HPD is HIGH on current TX
+    597          //! @retval     false   - HPD is LOW on current TX
+    598          //-------------------------------------------------------------------------------------------------
+    599          bool_t SiiDrvTpiGetHpdState(void)
+    600          {
+    601          
+    602              return(( SiiRegRead( REG_TPI__INT_STATUS1 ) & BIT_TPI__INT__HPD_STATE) != 0);
+    603          }
+    604          
+    605          
+    606          //-------------------------------------------------------------------------------------------------
+    607          //! @brief      Return pending interrupt flags.
+    608          //-------------------------------------------------------------------------------------------------
+    609          
+    610          uint16_t SiiDrvTpiPendingInterruptsGet(void)
+    611          {
+    612              return pTpi->txInterruptWord;
+    613          }
+    614          
+    615          
+    616          //-------------------------------------------------------------------------------------------------
+    617          //! @brief      Clean pending interrupt flags.
+    618          //-------------------------------------------------------------------------------------------------
+    619          
+    620          void SiiDrvTpiPendingInterruptsClear(void)
+    621          {
+    622              pTpi->txInterruptWord = 0;
+    623          }
+    624          
+    625          
+    626          //-------------------------------------------------------------------------------------------------
+    627          //! @brief      Return Wake up require flag.
+    628          //-------------------------------------------------------------------------------------------------
+    629          
+    630          bool_t SiiDrvTpiIsWakeUpRequired(void)
+    631          {
+    632              return pTpi->isWakeUpRequired;
+    633          }
+    634          
+    635          
+    636          //-------------------------------------------------------------------------------------------------
+    637          //! @brief      Clear Wake up request.
+    638          //-------------------------------------------------------------------------------------------------
+    639          
+    640          void SiiDrvTpiWakeUpRequestClear(void)
+    641          {
+    642              pTpi->isWakeUpRequired = false;
+    643          }
+    644          
+    645          //-------------------------------------------------------------------------------------------------
+    646          //! @brief      Check if HDMI Link is stable and PLL is locked.
+    647          //-------------------------------------------------------------------------------------------------
+    648          
+    649          bool_t SiiDrvTpiIsHdmiLinkStable(void)
+    650          {
+    651              uint8_t clkStatus = SiiRegRead(REG_TPI__RAR);
+    652              return ((clkStatus & BIT_TPI__RAR__P_STABLE) != 0);
+    653          }
+    654          
+    655          
+    656          //-------------------------------------------------------------------------------------------------
+    657          //! @brief      Select a source of audio sample packets.
+    658          //!
+    659          //! @param[in]  isTpi - Audio Sample packet info is taken from TPI.
+    660          //-------------------------------------------------------------------------------------------------
+    661          
+    662          void SiiDrvTpiAudioSamplePacketSourceSet(bool_t isTpi)
+    663          {
+    664              SiiRegModify(REG_TPI__AUDIO_PKT_SRC_CFG, BIT_TPI__AUDIO_SMP_PKT_SRC_TPI,
+    665                                             (isTpi ? BIT_TPI__AUDIO_SMP_PKT_SRC_TPI : 0));
+    666          }
+    667          
+    668          
+    669          //-------------------------------------------------------------------------------------------------
+    670          //! @brief      Select a source of CTS packets.
+    671          //!
+    672          //! @param[in]  isTpi - CTS packet info is taken from TPI.
+    673          //-------------------------------------------------------------------------------------------------
+    674          
+    675          void SiiDrvTpiCtsPacketSourceSet(bool_t isTpi)
+    676          {
+    677              SiiRegModify(REG_TPI__AUDIO_PKT_SRC_CFG, BIT_TPI__AUDIO_CTS_PKT_SRC_TPI,
+    678                                             (isTpi ? BIT_TPI__AUDIO_CTS_PKT_SRC_TPI : 0));
+    679          }
+    680          
+    681          
+    682          //-------------------------------------------------------------------------------------------------
+    683          //! @brief      Select a source of AV Mute/Unmute bits of the GCP packets.
+    684          //!
+    685          //! @param[in]  isTpi - AVMute/Unmute bits are taken from TPI.
+    686          //-------------------------------------------------------------------------------------------------
+    687          
+    688          void SiiDrvTpiAvMuteSourceSet(bool_t isTpi)
+    689          {
+    690              SiiRegModify(REG_TPI__AUDIO_PKT_SRC_CFG, BIT_TPI__AUDIO_GCP_PKT_SRC_TPI,
+    691                                             (isTpi ? BIT_TPI__AUDIO_GCP_PKT_SRC_TPI : 0));
+    692          }
+    693          
+    694          
+    695          //-------------------------------------------------------------------------------------------------
+    696          //! @brief      Return current HPD and RxSense status. The status gets updated by h/w interrupt.
+    697          //!
+    698          //! @return     Bitfield with the following bits:
+    699          //! @retval     BIT0  - Rx Sense detected,
+    700          //! @retval     BIT1  - hot plug detected.
+    701          //-------------------------------------------------------------------------------------------------
+    702          
+    703          uint8_t SiiDrvTpiPlugStatusGet(void)
+    704          {
+    705              return pTpi->plugStatus;
+    706          }
+    707          
+    708          
+    709          //-------------------------------------------------------------------------------------------------
+    710          //! @brief      Select video source type.
+    711          //!
+    712          //!             This function implementation highly depends on particular TX chip.
+    713          //!             Current implementation is for SiI953x (SiI953x)
+    714          //!
+    715          //! @param[in]  source - video source type.
+    716          //!
+    717          //! @return     Success flag.
+    718          //! @retval     true  - video source type is supported and set successfully,
+    719          //! @retval     false - video source type is not supported.
+    720          //-------------------------------------------------------------------------------------------------
+    721          
+    722          bool_t SiiDrvTpiVideoSourceSelect(txVideoSource_t source)
+    723          {
+    724              bool_t  isSuccess = true;
+    725          
+    726              switch (source)
+    727              {
+    728                  case SI_TX_VIDEO_SOURCE_HDMI:   // RX_main - TX pipe
+    729                      SiiDrvTpiInfoFrameEnable(false, true, 0); // Disable all InfoFrames from TPI
+    730                      // Bug 33551 - Snow/green video appears on TV while port switching 
+    731                      //SiiDrvTpiAvMuteSourceSet(false);          // AV Mute from RX
+    732                      SiiDrvTpiDeepColorGcpEnable(true);        // Deep Color data from RX
+    733                      SiiRegBitsSet(REG_TPI__VID_IN_MODE, BIT_TPI__VID_IN_MODE, VAL_TPI__VID_IN_MODE_RX_MAIN );
+    734                      break;
+    735          
+    736                  case SI_TX_VIDEO_SOURCE_PGEN:   // Internal Pattern Generator
+    737                      SiiDrvTpiAvMuteSourceSet(true);
+    738                      break;
+    739          
+    740                  // Other source types are not supported
+    741                  default:
+    742                      isSuccess = false;
+    743                      break;
+    744              }
+    745          
+    746          
+    747              return isSuccess;
+    748          }
+    749          //-------------------------------------------------------------------------------------------------
+    750          //! @brief      Set blanking levels for all 3 color channels: [R,G,B] or [Y,Cb,Cr].
+    751          //!
+    752          //!             Legacy access is used as TPI doesn't support this feature.
+    753          //!
+    754          //! @param[in]  levels - array of 3 numbers having values in the range 0-255.
+    755          //-------------------------------------------------------------------------------------------------
+    756          
+    757          void SiiDrvTpiBlankingLevelsSet(uint8_t aLevels[3])
+    758          {
+    759              SiiDrvTpiIndirectBlockWrite(REG_TX__VID_BLANK1, aLevels, 3);
+    760              // SWWA:16600
+    761          }
+    762          
+    763          
+    764          //-------------------------------------------------------------------------------------------------
+    765          //! @brief      Set TPI video mode data.
+    766          //!
+    767          //!             In SiI9535 this interface is deprecated. Used to adjust TMDS swing and termination.
+    768          //!
+    769          //! @param[in]  pixelClk   - Pixel Clock frequency (* 10000 Hz),
+    770          //! @param[in]  vertFreqHz - Vertical frequency (Hz),
+    771          //! @param[in]  totalPixelsPerLine - Total number of pixels per line,
+    772          //! @param[in]  totalLines - Total number of lines.
+    773          //-------------------------------------------------------------------------------------------------
+    774          
+    775          void SiiDrvTpiVideoModeDataSet(uint16_t pixelClk, uint16_t vertFreqHz, uint16_t totalPixelsPerLine,
+    776                                         uint16_t totalLines)
+    777          {
+    778              TmdsSwingTermSet(pixelClk);
+    779          }
+    780          
+    781          
+    782          //-------------------------------------------------------------------------------------------------
+    783          //! @brief      Set Audio audio clock divider.
+    784          //!
+    785          //!
+    786          //! @param[in]  tmdsClock   - TMDS Clock frequency (* 10000 Hz),
+    787          //! @param[in]  isSrcSpdif - if the audio source is spdif
+    788          //-------------------------------------------------------------------------------------------------
+    789          
+    790          void SiiDrvTpiAudioClkDividerSet(uint16_t tmdsClock, bool_t isSrcSpdif)
+    791          {
+    792              static uint16_t tmdsClk = 0;
+    793              uint8_t clkVal = VAL_TX__AUDIO_CLK_RATIO_1;
+    794          
+    795              if(tmdsClock == 0)
+    796              {
+    797                  tmdsClock = tmdsClk;
+    798              }
+    799              else
+    800              {
+    801                  tmdsClk = tmdsClock;
+    802              }
+    803          
+    804              if ((tmdsClock < 6000)||(!isSrcSpdif))
+    805              {
+    806                  clkVal = VAL_TX__AUDIO_CLK_RATIO_1;
+    807              }
+    808              else if (tmdsClock < 10000)
+    809              {
+    810                  clkVal = VAL_TX__AUDIO_CLK_RATIO_2;
+    811              }
+    812              else if (tmdsClock < 12000)
+    813              {
+    814                  clkVal = VAL_TX__AUDIO_CLK_RATIO_3;
+    815              }
+    816              else if (tmdsClock < 16000)
+    817              {
+    818                  clkVal = VAL_TX__AUDIO_CLK_RATIO_4;
+    819              }
+    820              else if (tmdsClock < 20000)
+    821              {
+    822                  clkVal = VAL_TX__AUDIO_CLK_RATIO_5;
+    823              }
+    824              else
+    825              {
+    826                  clkVal = VAL_TX__AUDIO_CLK_RATIO_6;
+    827              }
+    828          
+    829              SiiDrvTpiIndirectWrite(REG_TX__AUDIO_CLK_DIV, clkVal);
+    830          
+    831          }
+    832          
+    833          //-------------------------------------------------------------------------------------------------
+    834          //! @brief      toggle Audio audio clock divider.
+    835          //!
+    836          //-------------------------------------------------------------------------------------------------
+    837          void SiiDrvTpiAudioClkToggle(void)
+    838          {
+    839              SiiRegModify(REG_TPI__ACLK_DIV, BIT_TPI__ACLK_DIV_FACTOR, SET_BITS);
+    840              SiiOsTimerWait(100);
+    841              SiiRegModify(REG_TPI__ACLK_DIV, BIT_TPI__ACLK_DIV_FACTOR, CLEAR_BITS);
+    842          
+    843          }
+    844          //-------------------------------------------------------------------------------------------------
+    845          //! @brief      Set input video pixel capturing parameters in the chip.
+    846          //!
+    847          //! @param[in]  clockMode             - input clock usage fashion,
+    848          //! @param[in]  isLatchOnRisingEdge   - defines latching/first edge of a clock pulse,
+    849          //! @param[in]  repeatedPixelsNumber  - a number of replicated pixels (total pixels in a bunch - 1),
+    850          //! @param[in]  isInputReplicated     - true, if input video has replicated pixels.
+    851          //-------------------------------------------------------------------------------------------------
+    852          
+    853          void SiiDrvTpiPixelCapturingConfig(txVbusClockMode_t clockMode, bool_t isLatchOnRisingEdge,
+    854                                             uint8_t repeatedPixelsNumber, bool_t isInputReplicated)
+    855          {
+    856              uint8_t regPrdVal = 0;
+    857          
+    858              if (clockMode != SI_TX_VBUS_CLOCK_LATCH_BOTH_EDGES)
+    859              {
+    860                  // latching by a single edge (rising or falling)
+    861                  regPrdVal |= BIT_TPI__PRD__BSEL;
+    862              }
+    863          
+    864              if (isLatchOnRisingEdge)
+    865              {
+    866                  regPrdVal |= BIT_TPI__PRD__EDGE;
+    867              }
+    868          
+    869              if (isInputReplicated)
+    870              {
+    871                  // every input pixel has already been repeated
+    872                  // as many times as needed at the output
+    873          
+    874                  switch (repeatedPixelsNumber)
+    875                  {
+    876                      default: // no repetition
+    877                          //case 0:
+    878                          regPrdVal |= VAL_TPI__PRD__ICLK_1; // every incoming pixel is unique
+    879                          break;
+    880                      case 1: // every pixel sent twice
+    881                          regPrdVal |= VAL_TPI__PRD__ICLK_2; // every input pixel is repeated once
+    882                          break;
+    883                      case 3: // 4 times repetition
+    884                          regPrdVal |= VAL_TPI__PRD__ICLK_4; // every input pixel is repeated 4 times
+    885                          break;
+    886                  }
+    887              }
+    888          
+    889              SiiRegWrite(REG_TPI__PRD, regPrdVal);
+    890          }
+    891          
+    892          
+    893          //-------------------------------------------------------------------------------------------------
+    894          //! @brief      Set input video color parameters.
+    895          //!
+    896          //! @param[in]  colorSpace                    - input video color space,
+    897          //! @param[in]  bitsPerColor                  - color depth per channel (R,G or B),
+    898          //! @param[in]  isDataRangeExpansionRequired  - true, if input data range is limited and require
+    899          //!                                             expansion at the output.
+    900          //-------------------------------------------------------------------------------------------------
+    901          
+    902          void SiiDrvTpiInputVideoColorSet(txVbusColSpace_t colorSpace, txVbusColDepth_t bitsPerColor,
+    903                                           bool_t isDataRangeExpansionRequired)
+    904          {
+    905              uint8_t regInpFmt = 0;
+    906          
+    907              switch (colorSpace)
+    908              {
+    909                  default: // RGB
+    910                      regInpFmt |= VAL_TPI__INP_FMT__COLOR_SPACE__RGB;
+    911                      break;
+    912                  case SI_TX_VBUS_COLOR_SPACE_YCBCR444:
+    913                      regInpFmt |= VAL_TPI__INP_FMT__COLOR_SPACE__YCBCR_444;
+    914                      break;
+    915                  case SI_TX_VBUS_COLOR_SPACE_YCBCR422:
+    916                      regInpFmt |= VAL_TPI__INP_FMT__COLOR_SPACE__YCBCR_422;
+    917                      break;
+    918              }
+    919          
+    920              // Video data range expansion (auto format option is not used)
+    921              if (isDataRangeExpansionRequired)
+    922              {
+    923                  regInpFmt |= VAL_TPI__INP_FMT__RANGE__EXPAND;
+    924              }
+    925              else
+    926              {
+    927                  regInpFmt |= VAL_TPI__INP_FMT__RANGE__NO_EXPAND;
+    928              }
+    929          
+    930              switch (bitsPerColor)
+    931              {
+    932                  default:
+    933                      regInpFmt |= VAL_TPI__INP_FMT__DEPTH__8;
+    934                      break;
+    935                  case SI_TX_VBUS_BITS_PER_COLOR_10:
+    936                      regInpFmt |= VAL_TPI__INP_FMT__DEPTH__10;
+    937                      break;
+    938                  case SI_TX_VBUS_BITS_PER_COLOR_12:
+    939                      regInpFmt |= VAL_TPI__INP_FMT__DEPTH__12;
+    940                      break;
+    941                  case SI_TX_VBUS_BITS_PER_COLOR_16:
+    942                      switch (colorSpace)
+    943                      {
+    944                          case SI_TX_VBUS_COLOR_SPACE_RGB:
+    945                          case SI_TX_VBUS_COLOR_SPACE_YCBCR444:
+    946                              // input pixel comes partly on rising, partly on falling edge
+    947                              regInpFmt |= VAL_TPI__INP_FMT__DEPTH__16;
+    948                              break;
+    949                          default:
+    950                              // Latching by a single edge (rising or falling).
+    951                              // There are only 36 input pins, so it is not possible
+    952                              // to have 16*3=48 bits at 36 pins;
+    953                              // correcting input bus with with a proper value 3*12=36 bits.
+    954                              regInpFmt |= VAL_TPI__INP_FMT__DEPTH__12;
+    955                      }
+    956                      break;
+    957              }
+    958          
+    959              regInpFmt |= VAL_TPI__INP_FMT__TCLK_X1; // default TCLK multiplier 1.0
+    960          
+    961              SiiRegWrite(REG_TPI__INP_FMT, regInpFmt);
+    962          }
+    963          
+    964          
+    965          //-------------------------------------------------------------------------------------------------
+    966          //! @brief      Set output video color parameters.
+    967          //!
+    968          //! @param[in]  colorSpace                      - output video color space,
+    969          //! @param[in]  bitsPerColor                    - color depth per channel (R,G or B),
+    970          //! @param[in]  colorimetry                     - colorimetry standard,
+    971          //! @param[in]  isDataRangeCompressionRequired  - true, if input data range is full and require
+    972          //!                                               contraction.
+    973          //! @param[in]  isDitheringEnabled              - true, if color dithering function shall be used
+    974          //!                                               to smooth color gradation steps.
+    975          //-------------------------------------------------------------------------------------------------
+    976          
+    977          void SiiDrvTpiOutputVideoColorSet(txVbusColSpace_t colorSpace,  txVbusColDepth_t bitsPerColor,
+    978                                            txVbusColorimetry_t colorimetry, bool_t isDataRangeCompressionRequired,
+    979                                            bool_t isDitheringEnabled)
+    980          {
+    981              uint8_t regOutFmt = 0;
+    982          
+    983              // Video data range compression (auto format option is not used)
+    984              if (isDataRangeCompressionRequired)
+    985              {
+    986                  regOutFmt |= VAL_TPI__OUTP_FMT__RANGE__COMPRESS;
+    987              }
+    988              else
+    989              {
+    990                  regOutFmt |= VAL_TPI__OUTP_FMT__RANGE__NO_COMPRESS;
+    991              }
+    992          
+    993              switch (bitsPerColor)
+    994              {
+    995                  default:
+    996                      regOutFmt |= VAL_TPI__OUTP_FMT__DEPTH__8;
+    997                      break;
+    998                  case SI_TX_VBUS_BITS_PER_COLOR_10:
+    999                      regOutFmt |= VAL_TPI__OUTP_FMT__DEPTH__10;
+   1000                      break;
+   1001                  case SI_TX_VBUS_BITS_PER_COLOR_12:
+   1002                      regOutFmt |= VAL_TPI__OUTP_FMT__DEPTH__12;
+   1003                      break;
+   1004                  case SI_TX_VBUS_BITS_PER_COLOR_16:
+   1005                      regOutFmt |= VAL_TPI__OUTP_FMT__DEPTH__16;
+   1006                      break;
+   1007              }
+   1008          
+   1009              switch (colorSpace)
+   1010              {
+   1011                  case SI_TX_VBUS_COLOR_SPACE_YCBCR422:
+   1012                      regOutFmt |= VAL_TPI__OUTP_FMT__COLOR_SPACE__YCBCR_422;
+   1013                      break;
+   1014                  case SI_TX_VBUS_COLOR_SPACE_YCBCR444:
+   1015                      regOutFmt |= VAL_TPI__OUTP_FMT__COLOR_SPACE__YCBCR_444;
+   1016                      break;
+   1017                  default: // RGB
+   1018                      regOutFmt |= VAL_TPI__OUTP_FMT__COLOR_SPACE__RGB;
+   1019                      break;
+   1020              }
+   1021          
+   1022              switch (colorimetry)
+   1023              {
+   1024                  case SI_TX_VIDEO_COLORIMETRY_ITU709:
+   1025                  case SI_TX_VIDEO_COLORIMETRY_XV709:
+   1026                      regOutFmt |= VAL_TPI__OUTP_FMT__709;
+   1027                      break;
+   1028                  default:
+   1029                      regOutFmt |= VAL_TPI__OUTP_FMT__601;
+   1030              }
+   1031          
+   1032              if (isDitheringEnabled)
+   1033              {
+   1034                  regOutFmt |= VAL_TPI__OUTP_FMT__DITHER__ON;
+   1035              }
+   1036          
+   1037              SiiRegWrite(REG_TPI__OUTP_FMT, regOutFmt);
+   1038          }
+   1039          
+   1040          
+   1041          //-------------------------------------------------------------------------------------------------
+   1042          //! @brief      Enable or Disable Deep Color GCP Packet transmission.
+   1043          //!
+   1044          //!             GCP (General Control Packet)
+   1045          //!
+   1046          //! @param[in]  isEnabled - true for enabling, false for disabling.
+   1047          //-------------------------------------------------------------------------------------------------
+   1048          
+   1049          void SiiDrvTpiDeepColorGcpEnable(bool_t isEnabled)
+   1050          {
+   1051              SiiRegModify(REG_TPI__RAR, BIT_TPI__RAR__DC_PKT_EN, isEnabled ? SET_BITS : CLEAR_BITS );
+   1052          }
+   1053          
+   1054          
+   1055          //-------------------------------------------------------------------------------------------------
+   1056          //! @brief      Set various configuration parameters of the Sync signals generation
+   1057          //!             and extraction system.
+   1058          //!
+   1059          //!             This function preserves current page of the Sync/DE register set.
+   1060          //!             It also keeps YC Mux Mode bit intact.
+   1061          //!
+   1062          //! @param[in]  pSynRg - pointer to a structure containing the parameters.
+   1063          //-------------------------------------------------------------------------------------------------
+   1064          
+   1065          void SiiDrvTpiSyncRegenConfigurationSet(syncRegen_t *pSynRg)
+   1066          {
+   1067              // Get REG_TPI__SYNC_GEN_CTRL register;
+   1068              // keep SYNC_EXTRACT_LAYOUT and EN_DE_MUX bits,
+   1069              // clear the rest as they are going to be replaced
+   1070              // according to configuration.
+   1071              uint8_t syncRegConfig = SiiRegRead(REG_TPI__SYNC_GEN_CTRL) &
+   1072                  (BIT_TPI__SYNC_GEN_CTRL__SYNC_EXTRACT_LAYOUT | BIT_TPI__SYNC_GEN_CTRL__EN_DE_MUX);
+   1073          
+   1074              uint8_t options = 0;
+   1075          
+   1076              // Pack user defined options
+   1077              switch (pSynRg->adjustVbitToVsync)
+   1078              {
+   1079                  default:
+   1080                  case 0: // no adjustment
+   1081                      options = 0 | 0;
+   1082                      break;
+   1083                  case 1: // increment by 1
+   1084                      options = BIT_TPI__SYNC_GEN_CTRL__FIELD_2_VBLANK_ADJ | BIT_TPI__SYNC_GEN_CTRL__FIELD_2_VBLANK_OFFSET;
+   1085                      break;
+   1086                  case (-1): // decrement by 1
+   1087                      options = BIT_TPI__SYNC_GEN_CTRL__FIELD_2_VBLANK_ADJ | 0;
+   1088                      break;
+   1089              }
+   1090          
+   1091              options |= pSynRg->isVsyncAdjusted ? 0 : BIT_TPI__SYNC_GEN_CTRL__DE_NO_VSYNC_ADJ;
+   1092              options |= pSynRg->isFieldPolarityInverted ? BIT_TPI__SYNC_GEN_CTRL__INV_FIELD_POL : 0;
+   1093          
+   1094              syncRegConfig |= options; // insert options into register keeping 2 stored bits intact
+   1095              SiiRegWrite(REG_TPI__SYNC_GEN_CTRL, syncRegConfig);
+   1096          
+   1097          }
+   1098          
+   1099          
+   1100          //-------------------------------------------------------------------------------------------------
+   1101          //! @brief      Enable or Disable DE signal generation. In case of enabling, an additional
+   1102          //!             argument provides parameters to set in the GE generator register page.
+   1103          //!
+   1104          //! @param[in]  isEnabled - true for enabling, false for disabling,
+   1105          //! @param[in]  pSynRg    - pointer to a structure containing video parameters.
+   1106          //-------------------------------------------------------------------------------------------------
+   1107          
+   1108          void SiiDrvTpiDeGenerationEnable(bool_t isEnabled, syncRegen_t *pSynRg)
+   1109          {
+   1110              uint8_t buf[4];  // for data packing
+   1111          
+   1112              // Switch to DE control page
+   1113              EmbeddedSyncControlPageEnable(false);
+   1114          
+   1115              if (isEnabled)
+   1116              {
+   1117                  // Set parameters of DE generator
+   1118                  buf[0] = (uint8_t) pSynRg->deDelayPix;
+   1119                  buf[1] = (uint8_t) (((pSynRg->deDelayPix >> 8) & MSK_TPI__DE_CTRL__DE_DLY_H)
+   1120                                     | (pSynRg->isHsyncPolarityNeg ? BIT_TPI__DE_CTRL__HSYNC_POL : 0)
+   1121                                     | (pSynRg->isVsyncPolarityNeg ? BIT_TPI__DE_CTRL__VSYNC_POL : 0)
+   1122                                     |  BIT_TPI__DE_CTRL__EN_VID_DE_GEN ); // Enable DE generator
+   1123                  buf[2] = pSynRg->deTopLn;
+   1124          
+   1125                  SiiRegWriteBlock(REG_TPI__DE_DLY, buf, 3);
+   1126          
+   1127                  buf[0] = (uint8_t)  pSynRg->deWidthPix;
+   1128                  buf[1] = (uint8_t) (pSynRg->deWidthPix >> 8);
+   1129                  buf[2] = (uint8_t)  pSynRg->deHeightLn;
+   1130                  buf[3] = (uint8_t) (pSynRg->deHeightLn >> 8);
+   1131          
+   1132                  SiiRegWriteBlock(REG_TPI__DE_CNT_LSB, buf, 4);
+   1133          
+   1134              }
+   1135              else
+   1136              {
+   1137                  // Disable the GE generation if requested
+   1138                  SiiRegModify(REG_TPI__DE_CTRL, BIT_TPI__DE_CTRL__EN_VID_DE_GEN, CLEAR_BITS);
+   1139              }
+   1140          
+   1141          
+   1142          }
+   1143          
+   1144          
+   1145          //-------------------------------------------------------------------------------------------------
+   1146          //! @brief      Enable or Disable HV Sync signal extraction from data embedded into video stream.
+   1147          //!             In case of enabling, an additional argument provides parameters to set
+   1148          //!             in the Embedded Sync Extraction register page.
+   1149          //!
+   1150          //! @param[in]  isEnabled - true for enabling, false for disabling,
+   1151          //! @param[in]  pSynRg    - pointer to a structure containing video parameters.
+   1152          //-------------------------------------------------------------------------------------------------
+   1153          
+   1154          void SiiDrvTpiEmbSyncExtractionEnable(bool_t isEnabled, syncRegen_t *pSynRg)
+   1155          {
+   1156              uint8_t buf[8];  // for data packing
+   1157          
+   1158              // Switch to Sync Extraction control page
+   1159              EmbeddedSyncControlPageEnable(true);
+   1160          
+   1161              if (isEnabled)
+   1162              {
+   1163                  // Set parameters of HV Sync Extraction system
+   1164                  buf[0] = (uint8_t)  pSynRg->hbitToHsyncDelayPix;
+   1165                  buf[1] = (uint8_t) (((pSynRg->hbitToHsyncDelayPix >> 8) & MSK_TPI__HBIT_TO_HSYNC_MSB)
+   1166                                     | (pSynRg->isHsyncPolarityNeg ? BIT_TPI__HBIT_TO_HSYNC_MSB__HSYNC_POL : 0)
+   1167                                     | (pSynRg->isVsyncPolarityNeg ? BIT_TPI__HBIT_TO_HSYNC_MSB__VSYNC_POL : 0)
+   1168                                     |  BIT_TPI__HBIT_TO_HSYNC_MSB__EN_EMBED_SYNC ); // Enable Sync Extraction
+   1169                  buf[2] = (uint8_t)  pSynRg->oddFieldVsyncOffsetPix;
+   1170                  buf[3] = (uint8_t) (pSynRg->oddFieldVsyncOffsetPix >> 8);
+   1171                  buf[4] = (uint8_t)  pSynRg->hsyncWidthPix;
+   1172                  buf[5] = (uint8_t) (pSynRg->hsyncWidthPix >> 8);
+   1173                  buf[6] = (uint8_t)  pSynRg->vbitToVsyncDelayLn;
+   1174                  buf[7] = (uint8_t)  pSynRg->vsyncWidthLn;
+   1175          
+   1176                  SiiRegWriteBlock(REG_TPI__HBIT_TO_HSYNC_LSB, buf, 8);
+   1177              }
+   1178              else
+   1179              {
+   1180                  // Disable HV Sync extraction
+   1181                  SiiRegModify(REG_TPI__HBIT_TO_HSYNC_MSB, BIT_TPI__HBIT_TO_HSYNC_MSB__EN_EMBED_SYNC, CLEAR_BITS);
+   1182              }
+   1183          
+   1184          }
+   1185          
+   1186          
+   1187          //-------------------------------------------------------------------------------------------------
+   1188          //! @brief      Enable YC demuxing for YCbCr422 video where Y and C data buses are muxed
+   1189          //!             and being transmitted at double rate.
+   1190          //!
+   1191          //! @param[in]  isEnabled - true, if demuxing is to be enabled.
+   1192          //-------------------------------------------------------------------------------------------------
+   1193          
+   1194          void SiiDrvTpiYcDemuxEnable(bool_t isEnabled)
+   1195          {
+   1196              SiiRegModify(REG_TPI__SYNC_GEN_CTRL, BIT_TPI__SYNC_GEN_CTRL__EN_DE_MUX, isEnabled ? SET_BITS : CLEAR_BITS);
+   1197          }
+   1198          
+   1199          
+   1200          //-------------------------------------------------------------------------------------------------
+   1201          //! @brief      Set the parameters of I2S interface.
+   1202          //!
+   1203          //! @param[in]  pI2sSettings - pointer to parameters of I2S receiver.
+   1204          //-------------------------------------------------------------------------------------------------
+   1205          
+   1206          void SiiDrvTpiAudioI2sConfigSet(txAudioSrcConfig_t *pI2sSettings, bool_t isHbr, bool_t isAudioEncoded)
+   1207          {
+   1208              uint8_t regVal = 0;
+   1209          
+   1210              //-----------------------------------------------------------------------
+   1211              // SWWA: 18393, 18394
+   1212              //-----------------------------------------------------------------------
+   1213              if(isHbr)
+   1214              {
+   1215                  regVal |= BIT_TX__I2S_IN_CTRL__HBRA_ON | BIT_TX__I2S_IN_CTRL__VBIT | 0x20;
+   1216              }
+   1217              else if(isAudioEncoded)
+   1218              {
+   1219                  regVal |= BIT_TX__I2S_IN_CTRL__VBIT;
+   1220              }
+   1221          
+   1222              SiiDrvTpiIndirectWrite(REG_TX__I2S_IN_CTRL, regVal);
+   1223              //-----------------------------------------------------------------------
+   1224          
+   1225          
+   1226              regVal = ((pI2sSettings->sampleEdge == SI_TX_AUDIO_I2S_SCK_EDGE_RISING) ? BIT_TPI__I2S_IN_CFG__SCK_EDGE : 0)
+   1227                    | ((pI2sSettings->mclkMult << SFT_TPI__FREQ_SVAL) & MSK_TPI__FREQ_SVAL)
+   1228                    | ((pI2sSettings->wsPolarity == SI_TX_AUDIO_I2S_WS_HIGH) ? BIT_TPI__I2S_IN_CFG__WS : 0)
+   1229                    | ((pI2sSettings->sdJustify == SI_TX_AUDIO_I2S_SD_JUSTIF_RIGHT) ? BIT_TPI__I2S_IN_CFG__JUSTIFY : 0)
+   1230                    | ((pI2sSettings->sdDirection == SI_TX_AUDIO_I2S_SD_DIR_LSB) ? BIT_TPI__I2S_IN_CFG__DATA_DIR : 0)
+   1231                    | ((pI2sSettings->sdFirstBitShifted == SI_TX_AUDIO_I2S_SD_BIT0_NOT_SHIFTED) ? BIT_TPI__I2S_IN_CFG__1ST_BIT : 0);
+   1232          
+   1233              SiiRegWrite(REG_TPI__I2S_IN_CFG, regVal);
+   1234          }
+   1235          
+   1236          
+   1237          //-------------------------------------------------------------------------------------------------
+   1238          //! @brief      Set the parameters of audio samples.
+   1239          //!
+   1240          //! @param[in]  smpSize - sample size of input audio,
+   1241          //! @param[in]  smpRate - sample rate of input audio,
+   1242          //! @param[in]  isHbr   - true, if input audio is HBR.
+   1243          //-------------------------------------------------------------------------------------------------
+   1244          
+   1245          void SiiDrvTpiAudioSampleConfigSet(audioSampleSize_t smpSize, audioSampleRate_t smpRate, bool_t isHbr)
+   1246          {
+   1247              uint8_t regVal;
+   1248          
+   1249              // Ignore incoming audio status channel information
+   1250              // and always retransmit all 24 bits that covers all cases anyway
+   1251              smpSize = SI_TX_AUDIO_SMP_SIZE_24_BIT;
+   1252          
+   1253          
+   1254              regVal = (isHbr ? BIT_TPI__AUDIO_SAMPLE__HBRA : 0)
+   1255                    | ((smpRate << SFT_TPI__AUDIO_SAMPLE__FR) & MSK_TPI__AUDIO_SAMPLE__FREQUENCY)
+   1256                    | ((smpSize << SFT_TPI__AUDIO_SAMPLE__WIDTH) & MSK_TPI__AUDIO_SAMPLE__WIDTH);
+   1257          
+   1258              SiiRegWrite(REG_TPI__AUDIO_SAMPLE, regVal);
+   1259          }
+   1260          
+   1261          
+   1262          //-------------------------------------------------------------------------------------------------
+   1263          //! @brief      Set the audio interface type.
+   1264          //!
+   1265          //! @param[in]  source - audio source mode.
+   1266          //-------------------------------------------------------------------------------------------------
+   1267          
+   1268          void SiiDrvTpiAudioInterfaceSet(txAudioSrc_t source)
+   1269          {
+   1270              // Do not modify "Audio Mute" bit
+   1271              uint8_t regVal = (SiiRegRead(REG_TPI__AUDIO_CFG) & BIT_TPI__AUDIO_CFG__MUTE);
+   1272          
+   1273              switch (source)
+   1274              {
+   1275                  default:
+   1276                  case SI_TX_AUDIO_SRC_NONE:
+   1277                      // Disabled audio shall be muted as well
+   1278                      regVal |= BIT_TPI__AUDIO_CFG__MUTE;
+   1279                      // Set Rx (not TPI) source for the audio information in packets
+   1280                      SiiDrvTpiAudioSamplePacketSourceSet(false);
+   1281                      SiiDrvTpiCtsPacketSourceSet(false);
+   1282                      break;
+   1283          
+   1284                  case SI_TX_AUDIO_SRC_SPDIF:
+   1285                      // SPDIF input (I2S is disabled)
+   1286                      regVal |= VAL_TPI__AUDIO_CFG__SPDIF;
+   1287                      // Set TPI (not Rx) source for the audio information in packets
+   1288                      SiiDrvTpiAudioSamplePacketSourceSet(true);
+   1289                      SiiDrvTpiCtsPacketSourceSet(true);
+   1290          
+   1291                      break;
+   1292          
+   1293                  case SI_TX_AUDIO_SRC_DSD_L1:
+   1294                      regVal |= BIT_TPI__AUDIO_CFG__LAYOUT1;
+   1295                      // proceed without break
+   1296                  case SI_TX_AUDIO_SRC_DSD_L0:
+   1297                      regVal |= VAL_TPI__AUDIO_CFG__DSD;
+   1298                      break;
+   1299          
+   1300                  case SI_TX_AUDIO_SRC_I2S_L1:
+   1301                      regVal |= BIT_TPI__AUDIO_CFG__LAYOUT1;
+   1302                      // proceed without break
+   1303                  case SI_TX_AUDIO_SRC_I2S_L0:
+   1304                  case SI_TX_AUDIO_SRC_HBRA:        
+   1305                      SiiDrvTpiAudioSamplePacketSourceSet(true);
+   1306                      SiiDrvTpiCtsPacketSourceSet(true);
+   1307                      // I2S input, including HBRA
+   1308                      regVal |= VAL_TPI__AUDIO_CFG__I2S;
+   1309                      break;
+   1310              }
+   1311          
+   1312              SiiRegWrite(REG_TPI__AUDIO_CFG, regVal); // note: audio could be off at this moment
+   1313          }
+   1314          
+   1315          
+   1316          //-------------------------------------------------------------------------------------------------
+   1317          //! @brief      Disables audio input.
+   1318          //-------------------------------------------------------------------------------------------------
+   1319          
+   1320          void SiiDrvTpiAudioDisable(void)
+   1321          {
+   1322              SiiDrvTpiAudioInterfaceSet(SI_TX_AUDIO_SRC_NONE);
+   1323          }
+   1324          
+   1325          //-------------------------------------------------------------------------------------------------
+   1326          //! @brief      Mute/Unmute audio.
+   1327          //!
+   1328          //! @param[in]  isMuted - true, if audio is to be muted.
+   1329          //-------------------------------------------------------------------------------------------------
+   1330          
+   1331          void SiiDrvTpiAudioMuteSet(bool_t isMuted)
+   1332          {
+   1333              // Do not modify everything but "Audio Mute" bit
+   1334              uint8_t regVal = (SiiRegRead(REG_TPI__AUDIO_CFG) & ~BIT_TPI__AUDIO_CFG__MUTE);
+   1335          
+   1336              if (isMuted)
+   1337              {
+   1338                  regVal |= BIT_TPI__AUDIO_CFG__MUTE;
+   1339              }
+   1340          
+   1341              // Allow Audio control from TPI, if muting in direct mode
+   1342          #if (SI_TX_OVRD_TPI_CONTROL == ENABLE)
+   1343              if (pTpi->isPassThroughMode)
+   1344              {
+   1345                  ControlPacketsSourceSet(isMuted, false, false);
+   1346              }
+   1347          #endif
+   1348          
+   1349              SiiRegWrite(REG_TPI__AUDIO_CFG, regVal);
+   1350          }
+   1351          
+   1352          
+   1353          //-------------------------------------------------------------------------------------------------
+   1354          //! @brief      Set Audio Status Channel data.
+   1355          //!
+   1356          //! @param[in]  statusChannel - status channel frame.
+   1357          //-------------------------------------------------------------------------------------------------
+   1358          
+   1359          void SiiDrvTpiAudioStatusChannelSet(uint8_t aStatusChannel[5])
+   1360          {
+   1361              SiiRegWriteBlock(REG_TPI__I2S_CHST_1, aStatusChannel, 5);
+   1362          }
+   1363          
+   1364          
+   1365          //-------------------------------------------------------------------------------------------------
+   1366          //! @brief      Assign I2S pins to internal FIFO pipes based on provided channel
+   1367          //!             allocation status.
+   1368          //!
+   1369          //! @param[in]  chanAlloc     - channel allocation code (as defined in CEA-861-D).
+   1370          //! @param[in]  isAutoDownsmp - enable automatic downsampling to basic audio for stereo audio input
+   1371          //-------------------------------------------------------------------------------------------------
+   1372          
+   1373          void SiiDrvTpiAudioI2sPinsToFifoAssign(audioSpkAlloc_t chanAlloc, bool_t isAutoDownsmp)
+   1374          {
+   1375              int i;
+   1376              uint8_t regVal;
+   1377              uint8_t channelPipeMask = 0x1; // bits [3,2,1,0] enable corresponding channel pipes
+   1378          
+   1379              // Set pipe enabling mask based on the channel allocation
+   1380              if (chanAlloc == SI_TX_AUDIO_SPK_FL_FR)
+   1381              {
+   1382                  channelPipeMask = 0x1; // enable pipe 0
+   1383              }
+   1384              else if (chanAlloc <= SI_TX_AUDIO_SPK_FL_FR_LFE_FC)
+   1385              {
+   1386                  channelPipeMask = 0x3; // enable pipes 0,1
+   1387              }
+   1388              else if (chanAlloc <= SI_TX_AUDIO_SPK_FL_FR_LFE_FC_RL_RR)
+   1389              {
+   1390                  channelPipeMask = 0x7; // enable pipes 0,1,2
+   1391              }
+   1392              else if ((chanAlloc >= SI_TX_AUDIO_SPK_FL_FR_FLC_FRC) && (chanAlloc <= SI_TX_AUDIO_SPK_FL_FR_LFE_FC_FLC_FRC))
+   1393              {
+   1394                  channelPipeMask = 0xB; // enable pipes 0,1,3
+   1395              }
+   1396              else
+   1397              {
+   1398                  channelPipeMask = 0xF; // enable pipes 0,1,2,3
+   1399              }
+   1400          
+   1401              // Connect and enable up to 4 pipes depending on the pipe enabling mask
+   1402              for (i = 3; i >= 0; i--)
+   1403              {
+   1404                  regVal = i | (i << 4); // will connect DCx pin to FIFO#x (no permutations)
+   1405                  if (channelPipeMask & (BIT0 << i)) // pick one bit of channelPipeMask starting from bit0
+   1406                  {
+   1407                      regVal |= BIT_TPI__I2S_MAP__SD_ENABLE;
+   1408                  }
+   1409                  SiiRegWrite(REG_TPI__I2S_MAP, regVal);
+   1410              }
+   1411          
+   1412              // Auto downsampling
+   1413              if ((chanAlloc == SI_TX_AUDIO_SPK_FL_FR) && isAutoDownsmp)
+   1414              {
+   1415          		//DEBUG_PRINT(MSG_ALWAYS,"AUTO SAMPLING CONFIGURED \n");
+   1416                  SiiRegModify(REG_TPI__I2S_MAP, BIT_TPI__I2S_MAP__AUTO_DOWN_SAMPLE, BIT_TPI__I2S_MAP__AUTO_DOWN_SAMPLE);
+   1417              }
+   1418          //    else
+   1419          //		DEBUG_PRINT(MSG_ALWAYS,"AUTO SAMPLING NOT CONFIGURED \n");
+   1420          }
+   1421          
+   1422          
+   1423          //-------------------------------------------------------------------------------------------------
+   1424          //! @brief      Configure inserting audio stream extracted internally in the Rx path (SiI9535 specific).
+   1425          //!
+   1426          //! @param[in]  isEnabled  - audio insertion source is internal (true), or external (false & default)
+   1427          //! @param[in]  isMainPipe - Main or Sub pipes is selected as a source of audio
+   1428          //-------------------------------------------------------------------------------------------------
+   1429          
+   1430          void SiiDrvTpiAudioRxSource(bool_t isEnabled, bool_t isMainPipe)
+   1431          {
+   1432              uint8_t regVal;
+   1433          
+   1434              SiiRegModify(REG_TPI__AUDIO_SRC_CTRL, BIT_TPI__AUDIO_RX_RP_SELECT | BIT_TPI__AUDIO_ENABLE,
+   1435                          (isEnabled ? BIT_TPI__AUDIO_ENABLE : 0) | (isMainPipe ? 0 : BIT_TPI__AUDIO_RX_RP_SELECT));
+   1436          
+   1437              // Generate CTS with mclk
+   1438              regVal = SiiDrvTpiIndirectRead(REG_TX__OTP_CLK);
+   1439              if (isEnabled)
+   1440              {
+   1441                  regVal &= ~BIT_TX__OTP_CLK_CTS_GEN_NO_MCLK; // clear bit
+   1442              }
+   1443              else
+   1444              {
+   1445                  regVal |= BIT_TX__OTP_CLK_CTS_GEN_NO_MCLK; // set bit
+   1446              }
+   1447              SiiDrvTpiIndirectWrite(REG_TX__OTP_CLK, regVal);
+   1448          }
+   1449          
+   1450          
+   1451          //-------------------------------------------------------------------------------------------------
+   1452          //! @brief      Initiate sending AVI frame to the sink.
+   1453          //!
+   1454          //! @param[in]  pAviFrame - pointer to the frame data,
+   1455          //! @param[in]  length    - data size in bytes,
+   1456          //! @param[in]  checksum  - checksum byte.
+   1457          //-------------------------------------------------------------------------------------------------
+   1458          
+   1459          void SiiDrvTpiAviFrameStart(uint8_t *pAviFrame, uint8_t length, uint8_t checksum)
+   1460          {
+   1461              SiiRegWrite(REG_TPI__AVI_BYTE_0, checksum);
+   1462              SiiRegWriteBlock(REG_TPI__AVI_BYTE_1, pAviFrame, length);
+   1463          }
+   1464          
+   1465          
+   1466          //-------------------------------------------------------------------------------------------------
+   1467          //! @brief      Reads and Writes back AVI info frame. This operation triggers AVI frame
+   1468          //!             update in the chip, as well as color space conversion, if available.
+   1469          //-------------------------------------------------------------------------------------------------
+   1470          
+   1471          void SiiDrvTpiAviFrameUpdate(void)
+   1472          {
+   1473              uint8_t regVal = SiiRegRead(REG_TPI__END_RIGHT_BAR_MSB);
+   1474              SiiRegWrite(REG_TPI__END_RIGHT_BAR_MSB, regVal);
+   1475          }
+   1476          
+   1477          
+   1478          //-------------------------------------------------------------------------------------------------
+   1479          //! @brief      Initiate sending AV Mute command to the sink.
+   1480          //!
+   1481          //!             This feature is useful for switching video modes in order to prevent flicker.
+   1482          //!
+   1483          //! @param[in]  isMuted - true, if AV Mute shall be sent.
+   1484          //-------------------------------------------------------------------------------------------------
+   1485          
+   1486          void SiiDrvTpiAvMuteSendingEnable(bool_t isMuted)
+   1487          {
+   1488              // Allow GCP control from TPI, if muting in direct mode
+   1489          #if (SI_TX_OVRD_TPI_CONTROL == ENABLE)
+   1490              if (pTpi->isPassThroughMode)
+   1491              {
+   1492                  ControlPacketsSourceSet(false, false, isMuted);
+   1493              }
+   1494          #endif
+   1495          
+   1496              SiiRegModify(REG_TPI__SYSTEM_CONTROL, BIT_TPI__SYSTEM_CONTROL__AVMUTE, isMuted ? SET_BITS : CLEAR_BITS);
+   1497          }
+   1498          
+   1499          
+   1500          //-------------------------------------------------------------------------------------------------
+   1501          //! @brief      Enable/Disable sending info frame of a given type.
+   1502          //!
+   1503          //! @param[in]  isEnabled  - true for enable, false for disable sending,
+   1504          //! @param[in]  isAll      - true, if all info frames have to be disabled,
+   1505          //! @param[in]  ifType     - info frame type ID (ignored, if isAll==true).
+   1506          //-------------------------------------------------------------------------------------------------
+   1507          
+   1508          void SiiDrvTpiInfoFrameEnable(bool_t isEnabled, bool_t isAll, infoFrameType_t ifType)
+   1509          {
+   1510              uint8_t selector;
+   1511          
+   1512              if (isAll)
+   1513              {
+   1514                  for (selector = 0; selector <= 7; selector++)
+   1515                  {
+   1516                      InfoFrameEnable(isEnabled, selector);
+   1517                  }
+   1518              }
+   1519              else
+   1520              {
+   1521                  selector = InfoFrameSelectCodeGet(ifType);
+   1522                  InfoFrameEnable(isEnabled, selector);
+   1523              }
+   1524          }
+   1525          
+   1526          
+   1527          //-------------------------------------------------------------------------------------------------
+   1528          //! @brief      Check if an InfoFrame is enabled (transmitted) or not.
+   1529          //!
+   1530          //! @param[in]  ifType - info frame type ID
+   1531          //!
+   1532          //! @retval     true   - enabled and currently transmitting (periodically),
+   1533          //! @retval     false  - InfoFrame disabled.
+   1534          //-------------------------------------------------------------------------------------------------
+   1535          
+   1536          bool_t SiiDrvTpiInfoFrameIsEnabled(infoFrameType_t ifType)
+   1537          {
+   1538              uint8_t selector = InfoFrameSelectCodeGet(ifType);
+   1539          
+   1540              // find out if the buffer is currently transmitting
+   1541              SiiRegWrite(REG_TPI__IF_SELECT, selector | BIT_TPI__IF_SELECT__NO_MODIFY | BIT_TPI__IF_SELECT__OVRD_PACKET);
+   1542              return ((SiiRegRead(REG_TPI__IF_SELECT) & BIT_TPI__IF_SELECT__ENABLE) != 0);
+   1543          
+   1544          }
+   1545          
+   1546          
+   1547          //-------------------------------------------------------------------------------------------------
+   1548          //! @brief      Load InfoFrame data into the chip.
+   1549          //!
+   1550          //!             The function has synchronization mechanism that ensures flawless update
+   1551          //!             of enabled frames. Enabled InfoFrames are being sent periodically, so a proper
+   1552          //!             synchronization is required to prevent transmission of a data block in the middle
+   1553          //!             of the update transaction.
+   1554          //!
+   1555          //! @param[in]  ifType             - info frame type ID,
+   1556          //! @param[in]  pFrame             - pointer to InfoFrame data (with a packet header),
+   1557          //! @param[in]  length             - size in bytes of the InfoFrame data,
+   1558          //! @param[in]  isChecksumIncluded - true, if the InfoFrame
+   1559          //!
+   1560          //! @retval     true   - enabled and currently transmitting (periodically),
+   1561          //! @retval     false  - InfoFrame disabled.
+   1562          //-------------------------------------------------------------------------------------------------
+   1563          
+   1564          void SiiDrvTpiInfoFrameLoad(infoFrameType_t ifType, uint8_t *pFrame, uint8_t length,
+   1565                                      bool_t isChecksumIncluded)
+   1566          {
+   1567              bool_t isHotSwap;
+   1568          
+   1569              // find out if the buffer is currently transmitting
+   1570              isHotSwap = SiiDrvTpiInfoFrameIsEnabled(ifType);
+   1571              // true: the buffer is in use and there is risk of sending out
+   1572              // partially modified packet
+   1573              // false: the buffer is released and ready for new data
+   1574          
+   1575              if (isHotSwap)
+   1576              {
+   1577                  // Modify packet ID (title) to non-existing one.
+   1578                  // This is to ensure that if partially modified packet is sent out,
+   1579                  // it will be ignored by the downstream device,
+   1580                  // Alternatively, the firmware should wait until the buffer is released by polling
+   1581                  // BIT_TPI__IF_SELECT__ENABLE, but it could take up to one video frame length time
+   1582                  // and we do not want waiting that long.
+   1583                  SiiRegWrite(REG_TPI__IF_TYPE, 0x55);
+   1584          
+   1585                  // Fill out packet version and length fields
+   1586                  SiiRegWriteBlock(REG_TPI__IF_VERSION, &pFrame[1], REG_TPI__IF_DBYTE0 - REG_TPI__IF_VERSION);
+   1587              }
+   1588              else
+   1589              {
+   1590                  // Fill out packet type, version and length fields
+   1591                  SiiRegWriteBlock(REG_TPI__IF_TYPE, pFrame, REG_TPI__IF_DBYTE0 - REG_TPI__IF_TYPE);
+   1592              }
+   1593          
+   1594              if (isChecksumIncluded)
+   1595              {
+   1596                  // update check sum field
+   1597                  SiiRegWrite(REG_TPI__IF_DBYTE0, pFrame[IF_CHECKSUM_INDEX]);
+   1598          
+   1599                  // check if the packet was too short for the write strobe
+   1600                  if (ifType == SI_INFO_FRAME_AUDIO)
+   1601                  {
+   1602                      // audio packet strobe is in REG_TPI__IF_DBYTE10 register;
+   1603                      // update REG_TPI__IF_DBYTE1 to REG_TPI__IF_DBYTE10
+   1604                      // (including the strobe)
+   1605                      SiiRegWriteBlock(REG_TPI__IF_DBYTE1, &pFrame[IF_HEADER_LENGTH], REG_TPI__IF_DBYTE10 - REG_TPI__IF_DBYTE1 + 1);
+   1606                  }
+   1607                  else
+   1608                  {
+   1609                      // packet strobe is in REG_TPI__IF_DBYTE27
+   1610                      if (length < (REG_TPI__IF_DBYTE27 - REG_TPI__IF_DBYTE1 + 1))
+   1611                      {
+   1612                          // update only registers present in the packet
+   1613                          SiiRegWriteBlock(REG_TPI__IF_DBYTE1, &pFrame[IF_HEADER_LENGTH], length);
+   1614                          // update the strobe
+   1615                          SiiRegWrite(REG_TPI__IF_DBYTE27, 0);
+   1616                      }
+   1617                      else
+   1618                      {
+   1619                          // update all packet registers including the strobe at once
+   1620                          SiiRegWriteBlock(REG_TPI__IF_DBYTE1, &pFrame[IF_HEADER_LENGTH], REG_TPI__IF_DBYTE27 - REG_TPI__IF_DBYTE1 + 1);
+   1621                      }
+   1622                  }
+   1623              }
+   1624              else
+   1625              {
+   1626                  SiiRegWriteBlock(REG_TPI__IF_DBYTE0, &pFrame[IF_CHECKSUM_INDEX], REG_TPI__IF_DBYTE27 - REG_TPI__IF_DBYTE0 + 1);
+   1627              }
+   1628          
+   1629              if (isHotSwap)
+   1630              {
+   1631                  // Set the real packet ID (title)
+   1632                  SiiRegWrite(REG_TPI__IF_TYPE, pFrame[0]);
+   1633              }
+   1634          }
+   1635          
+   1636          
+   1637          //-------------------------------------------------------------------------------------------------
+   1638          //! @brief      Enable/Disable HDCP protection.
+   1639          //!
+   1640          //! @param[in]  isEnabled - true, if HDCP protection has to be enabled.
+   1641          //-------------------------------------------------------------------------------------------------
+   1642          
+   1643          void SiiDrvTpiHdcpProtectionEnable(bool_t isEnabled)
+   1644          {
+   1645              SiiRegModify(REG_TPI__HDCP_CTRL, HDCP_CTRL_MODE, isEnabled ? SET_BITS : CLEAR_BITS);
+   1646          }
+   1647          
+   1648          //-------------------------------------------------------------------------------------------------
+   1649          //! @brief      Return HDCP Status byte.
+   1650          //-------------------------------------------------------------------------------------------------
+   1651          
+   1652          uint8_t SiiDrvTpiHdcpStatusGet(void)
+   1653          {
+   1654              uint8_t hdcpStatus = SiiRegRead(REG_TPI__HDCP_QUERY);
+   1655              return hdcpStatus;
+   1656          }
+   1657          
+   1658          
+   1659          //-------------------------------------------------------------------------------------------------
+   1660          //! @brief      Check if HDCP authentication Part 2 is done.
+   1661          //-------------------------------------------------------------------------------------------------
+   1662          
+   1663          bool_t SiiDrvTpiHdcpIsPart2Done(void)
+   1664          {
+   1665              uint8_t hdcp_status = SiiDrvTpiHdcpStatusGet();
+   1666              return (PART2_DONE == (hdcp_status & PART2_DONE));
+   1667          }
+   1668          
+   1669          //-------------------------------------------------------------------------------------------------
+   1670          //! @brief      Return true if the link HDCP authentication status is good.
+   1671          //-------------------------------------------------------------------------------------------------
+   1672          
+   1673          bool_t SiiDrvTpiHdcpIsAuthenticationGood(void)
+   1674          {
+   1675              uint8_t hdcpStatus = SiiRegRead(REG_TPI__HDCP_QUERY);
+   1676              bool_t isSuccess = true;
+   1677          
+   1678              switch (hdcpStatus & MSK_TPI__HDCP_QUERY__STATUS)
+   1679              {
+   1680                  case VAL_TPI__HDCP_QUERY__STATUS_LOST:
+   1681                  case VAL_TPI__HDCP_QUERY__STATUS_FAILED:
+   1682                      isSuccess = false;
+   1683              }
+   1684              return isSuccess;
+   1685          }
+   1686          
+   1687          
+   1688          //-------------------------------------------------------------------------------------------------
+   1689          //! @brief      Set dynamic or static Link Integrity mode.
+   1690          //!
+   1691          //!             If downstream repeater is discovered, the dynamic mode shall be enabled.
+   1692          //!             It forces the chip logic to re-authenticate any time the incoming clock
+   1693          //!             resolution changes. Dynamic mode works for non-repeater sink. However
+   1694          //!             the authentication may take a little longer time.
+   1695          //!
+   1696          //! @param[in]  isEnabled - true for dynamic, false for static mode.
+   1697          //-------------------------------------------------------------------------------------------------
+   1698          
+   1699          void SiiDrvTpiHdcpDynamicAuthenticationEnable(bool_t isEnabled)
+   1700          {
+   1701              SiiRegModify(REG_TPI__SYSTEM_CONTROL, BIT_TPI__SYSTEM_CONTROL__REAUTH_EN, isEnabled ? SET_BITS : CLEAR_BITS);
+   1702          }
+   1703          
+   1704          
+   1705          //-------------------------------------------------------------------------------------------------
+   1706          //! @brief      Enable/Disable HDCP encryption of HDMI data.
+   1707          //!
+   1708          //! @param[in]  isEnabled - true: to enable encryption if authentication succeeded,
+   1709          //!                         false: to disable encryption (even after successful authentication).
+   1710          //-------------------------------------------------------------------------------------------------
+   1711          
+   1712          void SiiDrvTpiHdcpEncriptionEnable(bool_t isEnable)
+   1713          {
+   1714              SiiRegModify(REG_TPI__HDCP_CTRL, BIT_TPI__HDCP_CTRL__ENCRYPT_DISABLE, isEnable ? CLEAR_BITS : SET_BITS);
+   1715          }
+   1716          
+   1717          
+   1718          //-------------------------------------------------------------------------------------------------
+   1719          //! @brief      Return true if Sink HDCP is available, false otherwise.
+   1720          //-------------------------------------------------------------------------------------------------
+   1721          
+   1722          bool_t SiiDrvTpiIsDownstreamHdcpAvailable(void)
+   1723          {
+   1724              return ((SiiRegRead(REG_TPI__HDCP_QUERY) & BIT_TPI__HDCP_QUERY__SINK_CAPABLE) != 0);
+   1725          }
+   1726          
+   1727          
+   1728          //-------------------------------------------------------------------------------------------------
+   1729          //! @brief      Read BKSV that is 8*5 = 40 bits.
+   1730          //!
+   1731          //! @param[in]  pBksv - pointer to an array to store the BKSV.
+   1732          //-------------------------------------------------------------------------------------------------
+   1733          
+   1734          void SiiDrvTpiBksvGet(uint8_t aBksv[5])
+   1735          {
+   1736              SiiRegReadBlock(REG_TPI__BKSV_1, aBksv, 5);
+   1737          }
+   1738          
+   1739          
+   1740          //-------------------------------------------------------------------------------------------------
+   1741          //! @brief      Return a number of bytes in the KSV list FIFO ready to be read and Done flag.
+   1742          //!
+   1743          //!             To be used in repeater operation when DS KSV list is copied from DS to US.
+   1744          //!
+   1745          //! @param[out] pBytesToRead - pointer to a variable holding the number of bytes to read,
+   1746          //!
+   1747          //! @return     KSV List reading done flag.
+   1748          //! @retval     true - if a final portion of the KSV list is awaiting to be read.
+   1749          //-------------------------------------------------------------------------------------------------
+   1750          
+   1751          bool_t SiiDrvTpiKsvListPortionSizeGet(uint8_t *pBytesToRead)
+   1752          {
+   1753              bool_t isDone;
+   1754              uint8_t fifoStatus = SiiRegRead(REG_TPI__HDCP_FIFO_LEVEL);
+   1755          
+   1756              *pBytesToRead = fifoStatus & MSK_TPI__HDCP_FIFO_LEVEL;
+   1757              isDone = ((fifoStatus & BIT_TPI__HDCP_FIFO_LEVEL__LAST) != 0);
+   1758          
+   1759              return isDone;
+   1760          }
+   1761          
+   1762          
+   1763          //-------------------------------------------------------------------------------------------------
+   1764          //! @brief      Get DS BKSV list.
+   1765          //!
+   1766          //! @param[in]  pBuffer - pointer to a buffer for the KSV list storage,
+   1767          //! @param[in]  length  - number of bytes to read.
+   1768          //-------------------------------------------------------------------------------------------------
+   1769          
+   1770          void SiiDrvTpiKsvListGet(uint8_t *pBuffer, uint8_t length)
+   1771          {
+   1772              // Note: this FIFO register is a special case. While reading from it in burst mode
+   1773              // the slave I2C interface don't increment the offset after every single reading.
+   1774              // Content of the register gets immediately updated by data waiting in the FIFO
+   1775              // after every reading.
+   1776              SiiRegReadBlock(REG_TPI__HDCP_FIFO_DATA, pBuffer, length);
+   1777          }
+   1778          
+   1779          
+   1780          //-------------------------------------------------------------------------------------------------
+   1781          //! @brief      Checks if zero-length KSV list has been "provided" from downstream.
+   1782          //-------------------------------------------------------------------------------------------------
+   1783          
+   1784          bool_t SiiDrvTpiIsZeroKsvListReady(void)
+   1785          {
+   1786              uint8_t devCount;
+   1787              uint8_t IsRepStateMachineDone;
+   1788          
+   1789              // Repeater state machine is done the KSV list processing if status is set to a magic word 0x66
+   1790              // SWWA: 21471
+   1791              IsRepStateMachineDone = (SiiRegRead(REG_TPI__RPT_SM) == 0x66);
+   1792          
+   1793              if (IsRepStateMachineDone)
+   1794              {
+   1795                  // Get number of downstream devices included into KSV List
+   1796                  devCount = SiiRegRead(REG_TPI__HDCP_BSTATUS1) & MSK_HDCP_DDC__BSTATUS1__DEV_COUNT;
+   1797                  if (devCount == 0)
+   1798                  {
+   1799                      return true;
+   1800                  }
+   1801              }
+   1802          
+   1803              return false;
+   1804          }
+   1805          
+   1806          
+   1807          //-------------------------------------------------------------------------------------------------
+   1808          //! @brief      Get DS BSTATUS information.
+   1809          //!
+   1810          //! @param[out] pDsBStatus - pointer to a buffer of length 2
+   1811          //-------------------------------------------------------------------------------------------------
+   1812          
+   1813          void SiiDrvTpiBStatusGet(uint8_t *pDsBStatus)
+   1814          {
+   1815              SiiRegReadBlock(REG_TPI__HDCP_BSTATUS1, pDsBStatus, 2);
+   1816          }
+   1817          
+   1818          //-------------------------------------------------------------------------------------------------
+   1819          //! @brief      Get DS BCAPS information.
+   1820          //!
+   1821          //! @return     BCAPS status flags.
+   1822          //-------------------------------------------------------------------------------------------------
+   1823          
+   1824          uint8_t  SiiDrvTpiBcapsGet(void)
+   1825          {
+   1826              return SiiRegRead(REG_TPI__HDCP_BCAPS);
+   1827          }
+   1828          
+   1829          
+   1830          //-------------------------------------------------------------------------------------------------
+   1831          //! @brief      Set register value of HDCP Ri_128_COMP
+   1832          //!
+   1833          //! @param[in]  value - need to set to register Ri_128_COMP
+   1834          //!
+   1835          //-------------------------------------------------------------------------------------------------
+   1836          
+   1837          void SiiDrvTpiHdcpRi128Comp(uint8_t value)
+   1838          {
+   1839          	SiiDrvTpiIndirectWrite(REG_TX__Ri_128_COMP, value);
+   1840          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        0  EmbeddedSyncControlPageEnable
+              0 -> SiiRegModify
+        8  InfoFrameEnable
+              8 -> InfoFrameSelectCodeGet
+              8 -> SiiRegRead
+              0 -> SiiRegWrite
+              8 -> SiiRegWrite
+        0  InfoFrameSelectCodeGet
+        8  SiiDrcTpiDisableInterruptStandby
+              0 -> SiiRegModify
+              8 -> SiiRegRead
+              8 -> SiiRegWrite
+        8  SiiDrvTmdsIsPoweredUp
+              8 -> SiiRegRead
+        0  SiiDrvTpiAudioClkDividerSet
+              0 -> SiiDrvTpiIndirectWrite
+        8  SiiDrvTpiAudioClkToggle
+              8 -> SiiOsTimerWait
+              0 -> SiiRegModify
+              8 -> SiiRegModify
+        0  SiiDrvTpiAudioDisable
+              0 -> SiiDrvTpiAudioInterfaceSet
+       16  SiiDrvTpiAudioI2sConfigSet
+             16 -> SiiDrvTpiIndirectWrite
+              0 -> SiiRegWrite
+       24  SiiDrvTpiAudioI2sPinsToFifoAssign
+              0 -> SiiRegModify
+             24 -> SiiRegWrite
+        0  SiiDrvTpiAudioInEnable
+              0 -> SiiDrvTpiIndirectWrite
+       16  SiiDrvTpiAudioInterfaceSet
+             16 -> SiiDrvTpiAudioSamplePacketSourceSet
+             16 -> SiiDrvTpiCtsPacketSourceSet
+             16 -> SiiRegRead
+              0 -> SiiRegWrite
+       16  SiiDrvTpiAudioMuteSet
+             16 -> SiiRegRead
+              0 -> SiiRegWrite
+       16  SiiDrvTpiAudioRxSource
+             16 -> SiiDrvTpiIndirectRead
+              0 -> SiiDrvTpiIndirectWrite
+             16 -> SiiRegModify
+        0  SiiDrvTpiAudioSampleConfigSet
+              0 -> SiiRegWrite
+        0  SiiDrvTpiAudioSamplePacketSourceSet
+              0 -> SiiRegModify
+        0  SiiDrvTpiAudioStatusChannelSet
+              0 -> SiiRegWriteBlock
+        0  SiiDrvTpiAvMuteSendingEnable
+              0 -> SiiRegModify
+        0  SiiDrvTpiAvMuteSourceSet
+              0 -> SiiRegModify
+       16  SiiDrvTpiAviFrameStart
+             16 -> SiiRegWrite
+              0 -> SiiRegWriteBlock
+        8  SiiDrvTpiAviFrameUpdate
+              8 -> SiiRegRead
+              0 -> SiiRegWrite
+        0  SiiDrvTpiBStatusGet
+              0 -> SiiRegReadBlock
+        0  SiiDrvTpiBcapsGet
+              0 -> SiiRegRead
+        0  SiiDrvTpiBksvGet
+              0 -> SiiRegReadBlock
+        0  SiiDrvTpiBlankingLevelsSet
+              0 -> SiiDrvTpiIndirectBlockWrite
+        0  SiiDrvTpiCtsPacketSourceSet
+              0 -> SiiRegModify
+       16  SiiDrvTpiDeGenerationEnable
+             16 -> EmbeddedSyncControlPageEnable
+             16 -> SiiRegModify
+             16 -> SiiRegWriteBlock
+        0  SiiDrvTpiDeepColorGcpEnable
+              0 -> SiiRegModify
+        8  SiiDrvTpiDeviceIdGet
+              8 -> SiiRegRead
+       24  SiiDrvTpiEmbSyncExtractionEnable
+             24 -> EmbeddedSyncControlPageEnable
+             24 -> SiiRegModify
+             24 -> SiiRegWriteBlock
+        8  SiiDrvTpiGetHpdState
+              8 -> SiiRegRead
+        0  SiiDrvTpiHdcpDynamicAuthenticationEnable
+              0 -> SiiRegModify
+        0  SiiDrvTpiHdcpEncriptionEnable
+              0 -> SiiRegModify
+        8  SiiDrvTpiHdcpIsAuthenticationGood
+              8 -> SiiRegRead
+        8  SiiDrvTpiHdcpIsPart2Done
+              8 -> SiiDrvTpiHdcpStatusGet
+        0  SiiDrvTpiHdcpProtectionEnable
+              0 -> SiiRegModify
+        0  SiiDrvTpiHdcpR0CalcConfigSet
+              0 -> SiiRegWrite
+        0  SiiDrvTpiHdcpRi128Comp
+              0 -> SiiDrvTpiIndirectWrite
+        0  SiiDrvTpiHdcpStatusGet
+              0 -> SiiRegRead
+        0  SiiDrvTpiHdmiOutputModeSet
+              0 -> SiiRegModify
+       16  SiiDrvTpiInfoFrameEnable
+              0 -> InfoFrameEnable
+             16 -> InfoFrameEnable
+             16 -> InfoFrameSelectCodeGet
+        8  SiiDrvTpiInfoFrameIsEnabled
+              8 -> InfoFrameSelectCodeGet
+              8 -> SiiRegRead
+              8 -> SiiRegWrite
+       24  SiiDrvTpiInfoFrameLoad
+             24 -> SiiDrvTpiInfoFrameIsEnabled
+              0 -> SiiRegWrite
+             24 -> SiiRegWrite
+             24 -> SiiRegWriteBlock
+        8  SiiDrvTpiInit
+              8 -> SiiDrvTpiDdcInit
+              0 -> SiiDrvTpiHdcpR0CalcConfigSet
+              8 -> SiiRegRead
+              8 -> SiiRegWrite
+        0  SiiDrvTpiInputVideoColorSet
+              0 -> SiiRegWrite
+        8  SiiDrvTpiInterruptsEnable
+              0 -> SiiRegBitsSet
+              8 -> SiiRegBitsSet
+        8  SiiDrvTpiIsDownstreamHdcpAvailable
+              8 -> SiiRegRead
+        8  SiiDrvTpiIsHdmiLinkStable
+              8 -> SiiRegRead
+        8  SiiDrvTpiIsPoweredUp
+              8 -> SiiRegRead
+        0  SiiDrvTpiIsWakeUpRequired
+        8  SiiDrvTpiIsZeroKsvListReady
+              8 -> SiiRegRead
+        0  SiiDrvTpiKsvListGet
+              0 -> SiiRegReadBlock
+        8  SiiDrvTpiKsvListPortionSizeGet
+              8 -> SiiRegRead
+        8  SiiDrvTpiOutputVideoColorSet
+              0 -> SiiRegWrite
+        0  SiiDrvTpiPendingInterruptsClear
+        0  SiiDrvTpiPendingInterruptsGet
+        8  SiiDrvTpiPixelCapturingConfig
+              0 -> SiiRegWrite
+        0  SiiDrvTpiPlugStatusGet
+        0  SiiDrvTpiPowerDown
+              0 -> SiiRegWrite
+        0  SiiDrvTpiPowerUp
+              0 -> SiiRegWrite
+       32  SiiDrvTpiProcessInterrupts
+             32 -> SiiDrvTpiIsPoweredUp
+             32 -> SiiRegRead
+             32 -> SiiRegWrite
+        8  SiiDrvTpiRevisionGet
+              8 -> SiiRegRead
+       16  SiiDrvTpiSourceTerminationEnable
+             16 -> SiiDrvTpiIndirectRead
+              0 -> SiiDrvTpiIndirectWrite
+        8  SiiDrvTpiStandby
+              8 -> SiiDrvTpiInterruptsEnable
+              0 -> SiiRegWrite
+              8 -> SiiRegWrite
+        8  SiiDrvTpiSwReset
+              0 -> SiiOsTimerWait
+              8 -> SiiRegRead
+              8 -> SiiRegWrite
+        8  SiiDrvTpiSyncRegenConfigurationSet
+              8 -> SiiRegRead
+              0 -> SiiRegWrite
+        8  SiiDrvTpiTmdsOutputEnable
+              8 -> SiiDrvTpiIndirectWrite
+              0 -> SiiRegModify
+        0  SiiDrvTpiVideoModeDataSet
+        8  SiiDrvTpiVideoSourceSelect
+              8 -> SiiDrvTpiAvMuteSourceSet
+              8 -> SiiDrvTpiDeepColorGcpEnable
+              8 -> SiiDrvTpiInfoFrameEnable
+              8 -> SiiRegBitsSet
+        0  SiiDrvTpiWakeUpRequestClear
+        0  SiiDrvTpiYcDemuxEnable
+              0 -> SiiRegModify
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable7
+       4  ??DataTable7_1
+       8  ?Subroutine0
+       8  ?Subroutine1
+       8  ?Subroutine10
+      12  ?Subroutine11
+       8  ?Subroutine2
+       8  ?Subroutine3
+      10  ?Subroutine4
+       8  ?Subroutine5
+       8  ?Subroutine6
+       6  ?Subroutine7
+      12  ?Subroutine8
+       6  ?Subroutine9
+      12  EmbeddedSyncControlPageEnable
+      70  InfoFrameEnable
+      64  InfoFrameSelectCodeGet
+      30  SiiDrcTpiDisableInterruptStandby
+      14  SiiDrvTmdsIsPoweredUp
+      78  SiiDrvTpiAudioClkDividerSet
+      36  SiiDrvTpiAudioClkToggle
+       4  SiiDrvTpiAudioDisable
+     106  SiiDrvTpiAudioI2sConfigSet
+      98  SiiDrvTpiAudioI2sPinsToFifoAssign
+      10  SiiDrvTpiAudioInEnable
+      98  SiiDrvTpiAudioInterfaceSet
+      26  SiiDrvTpiAudioMuteSet
+      50  SiiDrvTpiAudioRxSource
+      26  SiiDrvTpiAudioSampleConfigSet
+      12  SiiDrvTpiAudioSamplePacketSourceSet
+      12  SiiDrvTpiAudioStatusChannelSet
+      12  SiiDrvTpiAvMuteSendingEnable
+      12  SiiDrvTpiAvMuteSourceSet
+      32  SiiDrvTpiAviFrameStart
+      14  SiiDrvTpiAviFrameUpdate
+      12  SiiDrvTpiBStatusGet
+       8  SiiDrvTpiBcapsGet
+      12  SiiDrvTpiBksvGet
+      12  SiiDrvTpiBlankingLevelsSet
+      10  SiiDrvTpiCtsPacketSourceSet
+     110  SiiDrvTpiDeGenerationEnable
+      18  SiiDrvTpiDeepColorGcpEnable
+      26  SiiDrvTpiDeviceIdGet
+     116  SiiDrvTpiEmbSyncExtractionEnable
+      12  SiiDrvTpiGetHpdState
+      12  SiiDrvTpiHdcpDynamicAuthenticationEnable
+      10  SiiDrvTpiHdcpEncriptionEnable
+      28  SiiDrvTpiHdcpIsAuthenticationGood
+      22  SiiDrvTpiHdcpIsPart2Done
+      12  SiiDrvTpiHdcpProtectionEnable
+      18  SiiDrvTpiHdcpR0CalcConfigSet
+      10  SiiDrvTpiHdcpRi128Comp
+       8  SiiDrvTpiHdcpStatusGet
+      10  SiiDrvTpiHdmiOutputModeSet
+      42  SiiDrvTpiInfoFrameEnable
+      26  SiiDrvTpiInfoFrameIsEnabled
+     140  SiiDrvTpiInfoFrameLoad
+      64  SiiDrvTpiInit
+      74  SiiDrvTpiInputVideoColorSet
+      32  SiiDrvTpiInterruptsEnable
+      14  SiiDrvTpiIsDownstreamHdcpAvailable
+      14  SiiDrvTpiIsHdmiLinkStable
+      22  SiiDrvTpiIsPoweredUp
+       8  SiiDrvTpiIsWakeUpRequired
+      36  SiiDrvTpiIsZeroKsvListReady
+      12  SiiDrvTpiKsvListGet
+      22  SiiDrvTpiKsvListPortionSizeGet
+      88  SiiDrvTpiOutputVideoColorSet
+      10  SiiDrvTpiPendingInterruptsClear
+       8  SiiDrvTpiPendingInterruptsGet
+      50  SiiDrvTpiPixelCapturingConfig
+       8  SiiDrvTpiPlugStatusGet
+       4  SiiDrvTpiPowerDown
+       4  SiiDrvTpiPowerUp
+     148  SiiDrvTpiProcessInterrupts
+      16  SiiDrvTpiRevisionGet
+      30  SiiDrvTpiSourceTerminationEnable
+      34  SiiDrvTpiStandby
+      46  SiiDrvTpiSwReset
+      72  SiiDrvTpiSyncRegenConfigurationSet
+      28  SiiDrvTpiTmdsOutputEnable
+       2  SiiDrvTpiVideoModeDataSet
+      58  SiiDrvTpiVideoSourceSelect
+      10  SiiDrvTpiWakeUpRequestClear
+      10  SiiDrvTpiYcDemuxEnable
+       4  pTpi
+       2  tmdsClk
+       4  txTpiInstRec
+
+ 
+     6 bytes in section .bss
+     4 bytes in section .data
+ 2 524 bytes in section .text
+ 
+ 2 524 bytes of CODE memory
+    10 bytes of DATA memory
+
+Errors: none
+Warnings: 3

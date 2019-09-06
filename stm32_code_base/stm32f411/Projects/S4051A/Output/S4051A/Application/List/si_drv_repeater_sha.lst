@@ -1,0 +1,599 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:48 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\repeater_avr_drv #
+#                    \si_drv_repeater_sha.c                                   #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\repeater_avr_drv #
+#                    \si_drv_repeater_sha.c -D S4051A -D DEBUG -D FREE_RTOS   #
+#                    -D STM32F40_41xxx -D USE_STM324xG_EVAL -D                #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_drv_repeater_sha.lst                               #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_drv_repeater_sha.o                                  #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\driver\repeater_avr_drv\si_drv_repeater_sha.c
+      1          //***************************************************************************
+      2          //!file     si_drv_repeater_sha.c
+      3          //!brief    Silicon Image Repeater component.
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1060 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2002-2010, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include <stdio.h>
+     14          #include <string.h>
+     15          #include "si_common.h"
+     16          #include "si_drv_repeater_sha.h"
+     17          #include "si_regs_repeater953x.h"
+     18          #include "si_hdcp_ddc.h"
+     19          #include "si_drv_internal.h"
+     20          #include "si_tx_component.h"
+     21          #include "si_drv_tpi_system.h"
+     22          
+     23          #define KSV_FIFO_SEL_CLEAR	0xFF
+     24          #define TX0_KSV_LENGTH(x)	(x)
+     25          #define TX1_KSV_LENGTH(x)	(x + 0x140)
+     26          
+     27          RepeaterTopoMode_t currentMode;
+     28          repeaterShaRequest_t currentSrq;
+     29          bool_t firstTime;
+     30          
+     31          void SiiDrvShaInit(void)
+     32          {
+     33          	currentMode = SI_RPT_MODE_INITIAL;
+     34          	currentSrq.isTx = false;
+     35          	currentSrq.manualTxStart = false;
+     36          	currentSrq.portNum = 0;
+     37          	currentSrq.isValid = false;
+     38          	firstTime = true;
+     39          }
+     40          
+     41          
+     42          repeaterShaRequest_t SiiDrvGetCurrentShaReq()
+     43          {
+     44          	return currentSrq;
+     45          }
+     46          //-------------------------------------------------------------------------------------------------
+     47          //! @brief      Set the current switch mode
+     48          //!				single repeater - InstraPort mode
+     49          //!				multiple repeater - Matrix mode
+     50          //-------------------------------------------------------------------------------------------------
+     51          
+     52          void SiiDrvShaSetSwitchMode(RepeaterTopoMode_t mode)
+     53          {
+     54          	currentMode = mode;
+     55          }
+     56          
+     57          //-------------------------------------------------------------------------------------------------
+     58          //! @brief      Monitors if the SHA is busy
+     59          //!
+     60          //-------------------------------------------------------------------------------------------------
+     61          bool_t SiiDrvShaInUse(void)
+     62          {
+     63              bool_t result = true;
+     64              uint8_t regVal = 0;
+     65          
+     66              if (!currentSrq.isValid)
+     67              {
+     68              	result = false; /*if not a valid req, not busy*/
+     69              }
+     70              else if (!(SiiRegRead( REG_HDCP_STAT ) & BIT_SHA_BUSY))
+     71          	{
+     72          		/*since KSV FIFO cannot be read/write until HDCP done for the previous requester*/
+     73          		if (currentSrq.isTx)
+     74          		{
+     75          		    regVal =  SiiTxInstanceGet();
+     76          			/*wait till HDCP done*/
+     77          #if (SII_NUM_TX > 1)
+     78          			SiiDrvTpiInstanceSet(currentSrq.portNum);
+     79          #endif
+     80          			if (!SiiDrvTpiHdcpIsPart2Done())
+     81          			{
+     82          				result = true;
+     83          			}
+     84          			else
+     85          			{
+     86          				result = false;
+     87          			}
+     88          #if (SII_NUM_TX > 1)
+     89          			SiiDrvTpiInstanceSet(regVal);
+     90          #endif
+     91          		}
+     92          		else
+     93          		{
+     94          			result = false; /*For rx, SHA busy bit is enough to indicate the SHA occupancy*/
+     95          		}
+     96          	}
+     97          	else
+     98          	{
+     99          		result = true;
+    100          	}
+    101          	return result;
+    102          }
+    103          
+    104          //-------------------------------------------------------------------------------------------------
+    105          //! @brief      service the SHA request, point SHA to the right position
+    106          //! @param[in]  srq: the SHA requester 
+    107          //-------------------------------------------------------------------------------------------------
+    108          
+    109          void SiiDrvShaRequestStart(repeaterShaRequest_t srq)
+    110          {
+    111          	srq.isValid = true;
+    112          	currentSrq = srq;
+    113          	if (srq.manualTxStart)
+    114          	{
+    115          		if (srq.isTx)
+    116          		{
+    117          			SiiRegWrite(REG_SHA_CTRL, VAL_SHA_DS_SWMODE); //manual start
+    118          			if (srq.portNum == 0)
+    119          			{
+    120          				SiiRegModify(REG_SHA_CTRL3, BIT_SHA_START_TX0,SET_BITS); //write enable
+    121          			}
+    122          #if (SII_NUM_TX > 1)
+    123          			else if (srq.portNum == 1)
+    124          			{
+    125          				SiiRegModify(REG_SHA_CTRL3, BIT_SHA_START_TX1,SET_BITS);
+    126          			}
+    127          #endif
+    128          		}
+    129          	}
+    130          	else /*SHA HW start*/
+    131          	{
+    132          		if (srq.isTx)
+    133          		{
+    134          			SiiDrvRepeaterKsvPointTo(srq.portNum);
+    135          			SiiRegWrite(REG_SHA_CTRL, BIT_SHA_EN); //no DS enable, HW does it itself
+    136          			DEBUG_PRINT( RPT_MSG_DBG, "Tx %d SHA req\n ", srq.portNum);
+    137          		}
+    138          		else  /*rx ports*/
+    139          		{
+    140          			SiiDrvRepeaterKsvPointTo(KSV_FIFO_SEL_CLEAR);
+    141          			SiiDrvShaAdjustKsvStartAddr( 0 );
+    142          			DEBUG_PRINT( RPT_MSG_DBG, "Rx %d SHA req\n ", srq.portNum);
+    143          			SiiRegWrite(REG_SHA_CTRL, BIT_SHA_EN|BIT_SHA_CTRL_MANUAL_US);
+    144          			if (currentMode == SI_RPT_MODE_SINGLE_REPEATER)
+    145          			{
+    146          				SiiRegWrite(REG_SHA_CTRL, VAL_SHA_US_HWMODE);
+    147          			}
+    148          			else //matrix mode
+    149          			{
+    150          				SiiRegWrite(REG_SHA_CTRL, VAL_SHA_US_SWMODE);
+    151          				//SiiRegWrite(REG_MS_US_PORT_REQ, 0x01<<srq.portNum);
+    152          			}
+    153          		}/*end of rx ports*/
+    154          	}
+    155          }
+    156          
+    157          void SiiDrvShaRequestStop(bool_t isTx, uint8_t portNumber)
+    158          {
+    159          	if (isTx)
+    160          	{
+    161          		if ((currentSrq.isTx) && (currentSrq.portNum == portNumber))
+    162          		{
+    163          			currentSrq.isValid = false;
+    164          		}
+    165          	}
+    166          	else
+    167          	{
+    168          		if ((!currentSrq.isTx) && (currentSrq.portNum == portNumber))
+    169          		{
+    170          			currentSrq.isValid = false;
+    171          		}
+    172          	}
+    173          }
+    174          //-------------------------------------------------------------------------------------------------
+    175          //! @brief      set the SHA length register
+    176          //! @param[in]  slength - SHA length of this SHA calculation
+    177          //-------------------------------------------------------------------------------------------------
+    178          
+    179          void SiiDrvSetShaLength(uint16_t slength)
+    180          {
+    181          	SiiRegWrite(REG_SHA_LEN1, slength & 0xFF);
+    182          	SiiRegWrite(REG_SHA_LEN2, (slength>>8) & 0xFF);
+    183          }
+    184          
+    185          //-------------------------------------------------------------------------------------------------
+    186          //! @brief      set the Ksv start address
+    187          //! @param[in]  startPtr: Ksv start address
+    188          //-------------------------------------------------------------------------------------------------
+    189          
+    190          void SiiDrvShaAdjustKsvStartAddr(uint16_t startPtr )
+    191          {
+    192          	uint8_t temp;/*save the original FIFO select*/
+    193          	temp = SiiRegRead(REG_EDID_FIFO_SEL);
+    194          
+    195          	/*needs to clear the VAL_KSV_SELECT_MASK before modify the SHA start address*/
+    196          	SiiRegModify(REG_EDID_FIFO_SEL, VAL_KSV_SELECT_MASK, CLEAR_BITS);
+    197          	SiiRegWrite(REG_HDCP_KSV_SHA_START1, startPtr & 0xFF);
+    198          	SiiRegWrite(REG_HDCP_KSV_SHA_START2, (startPtr>>8) & 0xFF);
+    199          
+    200          	DEBUG_PRINT( RPT_MSG_DBG, "adjust start adr to %d \n ", startPtr);
+    201          	SiiRegWrite(REG_EDID_FIFO_SEL, temp); /*write back the original setting.*/
+    202          
+    203          }
+    204          //-------------------------------------------------------------------------------------------------
+    205          //! @brief      fill the ksv fifo with the BKSV(s) from DS(s), and set the ksv length registers
+    206          //!
+    207          //! @param[in]  selectedInstance - current instance
+    208          //-------------------------------------------------------------------------------------------------
+    209          
+    210          void SiiDrvRepeaterFillUsKsvInfo(uint16_t ksv_length, uint8_t txsBksv[], uint8_t num_of_tx, uint8_t txIndx)
+    211          {
+    212          
+    213          	if ( currentMode == SI_RPT_MODE_SINGLE_REPEATER )
+    214          	{
+    215          		SiiDrvShaAdjustKsvStartAddr( ksv_length );
+    216          		SiiDrvRepeaterKsvPointTo(KSV_FIFO_SEL_CLEAR);
+    217          		SiiRegWriteBlock(REG_KSV_FIFO, txsBksv, num_of_tx * LEN_HDCP_DDC__BKSV);
+    218          
+    219          	}
+    220          	else if ( currentMode == SI_RPT_MODE_MULTIPLE_REPEATER )
+    221          	{
+    222          		uint8_t temp;
+    223          		temp = SiiRegRead(REG_EDID_FIFO_SEL);
+    224          
+    225          		SiiRegModify(REG_EDID_FIFO_SEL, VAL_KSV_SELECT_MASK, CLEAR_BITS);
+    226                  //SHA is pointing to the current Tx.
+    227          		if (txIndx == 1)
+    228          		{
+    229          			SiiDrvShaAdjustKsvStartAddr( TX1_KSV_LENGTH(ksv_length));
+    230          		}
+    231          		else
+    232          		{
+    233          			SiiDrvShaAdjustKsvStartAddr( TX0_KSV_LENGTH(ksv_length));
+    234          		}
+    235          
+    236          		SiiRegWriteBlock(REG_KSV_FIFO, txsBksv, num_of_tx * LEN_HDCP_DDC__BKSV);
+    237          		SiiRegWrite(REG_EDID_FIFO_SEL, temp); /*write back the original setting*/
+    238          	}
+    239          }
+    240          
+    241          //-------------------------------------------------------------------------------------------------
+    242          //! @brief      define which tx will forward the KSV first, for 1to2 case
+    243          //!
+    244          //! @param[in]  tx_number - current tx first
+    245          //-------------------------------------------------------------------------------------------------
+    246          
+    247          void SiiDrvRepeaterKsvPointTo(uint8_t tx_number)
+    248          {
+    249          	SiiRegModify(REG_EDID_FIFO_SEL, VAL_KSV_SELECT_MASK, CLEAR_BITS);
+    250          	if ((tx_number == 0))
+    251          	{
+    252          		SiiRegModify(REG_EDID_FIFO_SEL, VAL_KSV_SELECT_TX0, SET_BITS);
+    253          		DEBUG_PRINT( RPT_MSG_DBG, "KSV FIFO to Tx 0\n ");
+    254          
+    255          	}
+    256          	else if (tx_number == 1)
+    257          	{
+    258          		SiiRegModify(REG_EDID_FIFO_SEL, VAL_KSV_SELECT_TX1, SET_BITS);
+    259          		DEBUG_PRINT( RPT_MSG_DBG, "KSV FIFO to Tx 1\n ");
+    260          
+    261          	}
+    262          
+    263          
+    264          }
+    265          
+    266          //-------------------------------------------------------------------------------------------------
+    267          //! @brief      disable the auto SHA calculation started by HW
+    268          //!
+    269          //! @param[in]  none
+    270          //-------------------------------------------------------------------------------------------------
+    271          
+    272          void SiiDrvHwAutoShaDisable(void)
+    273          {
+    274          	SiiRegModify(REG_SHA_CTRL, BIT_SHA_CTRL_MANUAL_US, CLEAR_BITS);
+    275          }
+    276          
+    277          
+    278          
+    279          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        4  SiiDrvGetCurrentShaReq
+        0  SiiDrvHwAutoShaDisable
+              0 -> SiiRegModify
+       32  SiiDrvRepeaterFillUsKsvInfo
+             32 -> SiiDrvRepeaterKsvPointTo
+             32 -> SiiDrvShaAdjustKsvStartAddr
+             32 -> SiiRegModify
+             32 -> SiiRegRead
+              0 -> SiiRegWrite
+              0 -> SiiRegWriteBlock
+             32 -> SiiRegWriteBlock
+       16  SiiDrvRepeaterKsvPointTo
+              0 -> SiiRegModify
+             16 -> SiiRegModify
+        8  SiiDrvSetShaLength
+              0 -> SiiRegWrite
+              8 -> SiiRegWrite
+       16  SiiDrvShaAdjustKsvStartAddr
+             16 -> SiiRegModify
+             16 -> SiiRegRead
+              0 -> SiiRegWrite
+             16 -> SiiRegWrite
+       16  SiiDrvShaInUse
+             16 -> SiiDrvTpiHdcpIsPart2Done
+             16 -> SiiRegRead
+             16 -> SiiTxInstanceGet
+        0  SiiDrvShaInit
+       16  SiiDrvShaRequestStart
+             16 -> SiiDrvRepeaterKsvPointTo
+             16 -> SiiDrvShaAdjustKsvStartAddr
+              0 -> SiiRegModify
+              0 -> SiiRegWrite
+             16 -> SiiRegWrite
+        0  SiiDrvShaRequestStop
+        0  SiiDrvShaSetSwitchMode
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable6
+      10  ?Subroutine0
+      12  SiiDrvGetCurrentShaReq
+      10  SiiDrvHwAutoShaDisable
+     116  SiiDrvRepeaterFillUsKsvInfo
+      40  SiiDrvRepeaterKsvPointTo
+      24  SiiDrvSetShaLength
+      48  SiiDrvShaAdjustKsvStartAddr
+      40  SiiDrvShaInUse
+      14  SiiDrvShaInit
+     116  SiiDrvShaRequestStart
+      24  SiiDrvShaRequestStop
+       6  SiiDrvShaSetSwitchMode
+       6  currentSrq
+          currentMode
+          firstTime
+
+ 
+   6 bytes in section .bss
+ 464 bytes in section .text
+ 
+ 464 bytes of CODE memory
+   6 bytes of DATA memory
+
+Errors: none
+Warnings: 2

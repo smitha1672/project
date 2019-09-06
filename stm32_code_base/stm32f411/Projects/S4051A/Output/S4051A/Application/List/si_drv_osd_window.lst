@@ -1,0 +1,920 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:11 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\osd_drv\si_drv_o #
+#                    sd_window.c                                              #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\osd_drv\si_drv_o #
+#                    sd_window.c -D S4051A -D DEBUG -D FREE_RTOS -D           #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_drv_osd_window.lst                                 #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_drv_osd_window.o                                    #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\driver\osd_drv\si_drv_osd_window.c
+      1          //***************************************************************************
+      2          //!file     si_drv_osd_window.c
+      3          //!brief    Silicon Image OSD Driver window control.
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2011-2012, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include "string.h"
+     14          #include "si_drv_osd_internal.h"
+     15          #include "si_drv_internal.h"
+     16          #include "si_regs_osd.h"
+     17          #include "si_drv_tpg.h"
+     18          #include "si_regs_tpg953x.h"
+     19          
+     20          //-------------------------------------------------------------------------------------------------
+     21          //! @brief      Set the row/col count size of the specified window.
+     22          //! @param[in]  winRef      Return value from any SiiOsdCreate function.
+     23          //! @param[in]  rowCount    Number of rows in window.
+     24          //! @param[in]  colCount    Number of columns in window
+     25          //-------------------------------------------------------------------------------------------------
+     26          void SiiDrvOsdSetWindowSize( int winRef, int rowCount, int colCount )
+     27          {
+     28              uint16_t    regOffset;
+     29              uint8_t     mask;
+     30          
+     31              if ( winRef == -1 )
+     32              {
+     33                  pDrvOsd->lastResultCode = SII_OSDDRV_ERR_INVALID_PARAMETER;
+     34                  return;
+     35              }
+     36              pDrvOsd->lastResultCode = SII_OSDDRV_SUCCESS;
+     37          
+     38              //Set row count for specified window
+     39              regOffset = (uint16_t)REG_OSD_W0_W1_ROW_COUNT;
+     40              regOffset = regOffset + ((winRef & 0x2) ? 1 : 0);
+     41              mask = (winRef  & 0x1) ?  MSK_ROW_MASK_HI :  MSK_ROW_MASK_LO;
+     42              rowCount = rowCount << ((winRef & 0x1) ? VAL_ROW_SHIFT_HI : VAL_ROW_SHIFT_LO );
+     43              SiiRegModify( regOffset, mask, rowCount - 1 );
+     44          
+     45              // Set column count for specified window
+     46              regOffset = (uint16_t)REG_OSD_W0_ROW_LEN + winRef;
+     47              SiiRegWrite( regOffset, colCount - 1 );
+     48          }
+     49          
+     50          //-------------------------------------------------------------------------------------------------
+     51          //! @brief      Translate the passed x position to the equivalent x position for the current font size.
+     52          //! @param[in]  virtX       - Default X position
+     53          //! @return     virtX translated to position for current font size.
+     54          //-------------------------------------------------------------------------------------------------
+     55          static int DrvOsdHorizPosition ( int virtX )
+     56          {
+     57              if ( pDrvOsd->defaultFontWidth != pDrvOsd->fontWidth )
+     58              {
+     59                  virtX   = virtX / pDrvOsd->defaultFontWidth;    // Reduce pixel position to character position
+     60                  virtX   = virtX * pDrvOsd->fontWidth;           // Convert back to pixel position with current font size.
+     61              }
+     62          
+     63              return( virtX );
+     64          }
+     65          
+     66          //-------------------------------------------------------------------------------------------------
+     67          //! @brief      Translate the passed y position to the equivalent y position for the current font size.
+     68          //! @param[in]  virtY       - Default Y position
+     69          //! @return     virtY translated to position for current font size.
+     70          //-------------------------------------------------------------------------------------------------
+     71          static int DrvOsdVertPosition ( int virtY )
+     72          {
+     73              if ( pDrvOsd->defaultFontHeight != pDrvOsd->fontHeight )
+     74              {
+     75                  virtY   = virtY / pDrvOsd->defaultFontHeight;   // Reduce pixel position to character position
+     76                  virtY   = virtY * pDrvOsd->fontHeight;          // Convert back to pixel position with current font size.
+     77              }
+     78              if ( pDrvOsd->outputIsInterlace )
+     79              {
+     80                  virtY   = virtY / 2;
+     81              }
+     82          
+     83              return( virtY );
+     84          }
+     85          
+     86          //------------------------------------------------------------------------------
+     87          // Function:    SiiDrvOsdSetHorizVert
+     88          //! @brief      Adjust the OSD Window vertically and horizontally.
+     89          // Parameters:  wId - Window Id 0, 1, 2 or 3
+     90          //				horzVal - adjust OSD Window horizontally
+     91          //              vertVal - adjust OSD window vertically
+     92          // Returns:   	horzVal - return horizontal position of a window
+     93          //              vertVal - return vertical position  of a window
+     94          //------------------------------------------------------------------------------
+     95          void SiiDrvOsdSetHorizVert ( int winRef, uint16_t horizVal, uint16_t vertVal)
+     96          {
+     97              SiiDrvOsdWindow_t   *pDrvWin;
+     98          	uint16_t            regSetOffset, regVal;
+     99          
+    100              if ( winRef == -1 )
+    101              {
+    102                  pDrvOsd->lastResultCode = SII_OSDDRV_ERR_INVALID_PARAMETER;
+    103                  return;
+    104              }
+    105              pDrvOsd->lastResultCode = SII_OSDDRV_SUCCESS;
+    106              pDrvWin = &pDrvOsd->winData[ winRef];
+    107          
+    108              pDrvWin->upperLeftX = horizVal;
+    109              pDrvWin->upperLeftY = vertVal;
+    110          
+    111              regSetOffset = (winRef * OSD_REG_BLOCK_OFFSET);
+    112          
+    113              // Horizontal position
+    114              regVal    = DrvOsdHorizPosition( horizVal );        // Scale position
+    115              SiiRegWrite( REG_OSD_W0_X_L + regSetOffset, regVal & 0xFF );
+    116              SiiRegWrite( REG_OSD_W0_X_H + regSetOffset, (regVal >> 8) & 0x0F );
+    117          
+    118              // Vertical position
+    119              regVal  = DrvOsdVertPosition( vertVal );                        // Scale position
+    120              SiiRegWrite( REG_OSD_W0_Y_L + regSetOffset, regVal & 0xFF );
+    121              SiiRegWrite( REG_OSD_W0_Y_H + regSetOffset, (regVal >> 8) & 0x0F );
+    122          }
+    123          
+    124          //------------------------------------------------------------------------------
+    125          // Function: SiiDrvOsdGetHorizVert   
+    126          // Description: return the current vertical and horizontal position of a window
+    127          // Parameters:  wId - Window Id 0, 1, 2 or 3
+    128          //				horzVal - adjust OSD Window horizontally
+    129          //              vertVal - adjust OSD Window vertically
+    130          // Return: none
+    131          //------------------------------------------------------------------------------
+    132          void SiiDrvOsdGetHorizVert( int winRef, uint16_t *pHorz, uint16_t *pVert)
+    133          {
+    134          	uint16_t regVal;
+    135          
+    136              pDrvOsd->lastResultCode = SII_OSDDRV_SUCCESS;
+    137          
+    138          	regVal = REG_OSD_W0_X_L + winRef * OSD_WINDOW_ID_OFFSET_HORZ;
+    139          	
+    140          	*pHorz = SiiRegRead(regVal);
+    141          	*pHorz = *pHorz | (SiiRegRead(regVal + 1) << 8);
+    142          
+    143          	regVal = REG_OSD_W0_Y_L + winRef * OSD_WINDOW_ID_OFFSET_VERT;
+    144          	*pVert = SiiRegRead(regVal);
+    145          	*pVert = *pVert | (SiiRegRead(regVal + 1) << 8);
+    146          }
+    147          
+    148          //------------------------------------------------------------------------------
+    149          // Function: SiiDrvOsdSetBlending   
+    150          // Description:  set the alpha blending for the osd window
+    151          // Parameters:  SiiOsdPatch_t structure
+    152          //			   wId -- Window id of the chars that going to be patched/
+    153          //			   value -- value to be blending to the window (0-15) 
+    154          //			   ctrl -- enable or disable the alpha blending.
+    155          // Return: none
+    156          //------------------------------------------------------------------------------
+    157          void SiiDrvOsdSetBlending( int winRef, uint8_t value, uint8_t ctrl)
+    158          {
+    159          	uint16_t regVal;
+    160          
+    161              pDrvOsd->lastResultCode = SII_OSDDRV_SUCCESS;
+    162          	
+    163          	if (ctrl)
+    164          	{
+    165          		//Enable Alpha Blending
+    166          		value |= BIT_OSD_WIN_ALPHA_EN;
+    167          	}
+    168          	else
+    169          	{
+    170          		//Disable Alpha Blending
+    171          		value &= ~BIT_OSD_WIN_ALPHA_EN;
+    172          	}
+    173          	regVal = REG_OSD_W0_ALPHA + winRef;
+    174          	SiiRegWrite(regVal, value);
+    175          }
+    176          
+    177          //------------------------------------------------------------------------------
+    178          // Function: SiiDrvOsdGetBlending
+    179          // Description:  Get the alpha blending for the osd window
+    180          // Parameters:  SiiOsdPatch_t structure
+    181          //			   wId -- Window id of the chars that going to be patched/
+    182          //			   value -- value of the current blending to the window (0-15)
+    183          // Return: none
+    184          //------------------------------------------------------------------------------
+    185          void SiiDrvOsdGetBlending( int winRef, uint8_t *value)
+    186          {
+    187          	uint16_t regVal;
+    188          
+    189          	pDrvOsd->lastResultCode = SII_OSDDRV_SUCCESS;
+    190          
+    191          	regVal = REG_OSD_W0_ALPHA + winRef;
+    192          	*value = SiiRegRead(regVal) & MSK_W0_ALPHA_BLENDING;
+    193          }
+    194          
+    195          //-------------------------------------------------------------------------------------------------
+    196          //! @brief      Set the color value for the specified window element
+    197          //! @param[in]  winRef      Return value from SiiDrvOsdCreateWindow function.
+    198          //! @param[in]  color       window color element to modify.
+    199          //! @param[in]  colorVal    new window color val (use OSD_RGB() macro).
+    200          //-------------------------------------------------------------------------------------------------
+    201          void SiiDrvOsdSetColor( int winRef, SiiOsdColorElement_t element, uint8_t colorVal )
+    202          {
+    203              SiiDrvOsdWindow_t   *pDrvWin;
+    204              uint16_t elementReg = 0;
+    205              if ( winRef == -1 )
+    206              {
+    207                  pDrvOsd->lastResultCode = SII_OSDDRV_ERR_INVALID_PARAMETER;
+    208                  return;
+    209              }
+    210              pDrvOsd->lastResultCode = SII_OSDDRV_SUCCESS;
+    211              pDrvWin = &pDrvOsd->winData[ winRef];
+    212          	switch (element)
+    213          	{
+    214                  case OSD_FG:
+    215                      elementReg = REG_OSD_W0_UNSEL_FG;
+    216                      pDrvWin->foreColor = colorVal;
+    217                      break;
+    218                  case OSD_BG:
+    219                      elementReg = REG_OSD_W0_UNSEL_BG;
+    220                      pDrvWin->backColor = colorVal;
+    221                      break;
+    222          		case OSD_FG_HIGHLIGHT:
+    223          		    elementReg = REG_OSD_W0_SELECTED_FG;
+    224          		    pDrvWin->foreColorHighlight = colorVal;
+    225          			break;
+    226          		case OSD_BG_HIGHLIGHT:
+    227          		    elementReg = REG_OSD_W0_SELECTED_BG;
+    228          		    pDrvWin->backColorHighlight = colorVal;
+    229          			break;
+    230          		case OSD_FG_DISABLED:
+    231          		    elementReg = REG_OSD_W0_DISABLED_FG;
+    232          		    pDrvWin->foreColorDisabled = colorVal;
+    233          			break;
+    234          		case OSD_BG_DISABLED:
+    235          		    elementReg = REG_OSD_W0_DISABLED_BG;
+    236          		    pDrvWin->backColorDisabled = colorVal;
+    237          			break;
+    238                  case OSD_BORDER:
+    239                      elementReg = REG_OSD_W0_BORDER;
+    240                      pDrvWin->borderColor = colorVal;
+    241                      break;
+    242                  case OSD_ROW_DIVIDER:
+    243                      elementReg = REG_OSD_W0_DIVIDER;
+    244                      pDrvWin->dividerColor = colorVal;
+    245                      break;
+    246                  default:
+    247                      break;
+    248          	}
+    249          
+    250          	// Offset to correct color register
+    251          	elementReg += ( winRef * OSD_REG_BLOCK_OFFSET);
+    252          	SiiRegWrite( elementReg, colorVal );
+    253          }
+    254          
+    255          //-------------------------------------------------------------------------------------------------
+    256          //! @brief      Get the color value for the specified window element
+    257          //! @param[in]  winRef      Return value from SiiDrvOsdCreateWindow function.
+    258          //! @param[in]  element     window color element
+    259          //! @return     Window color value.
+    260          //-------------------------------------------------------------------------------------------------
+    261          int SiiDrvOsdGetColor( int winRef, SiiOsdColorElement_t element )
+    262          {
+    263          	uint16_t elementReg = 0;
+    264          
+    265              pDrvOsd->lastResultCode = SII_OSDDRV_SUCCESS;
+    266          
+    267          	switch ( element )
+    268          	{
+    269                  case OSD_FG:
+    270                      elementReg = REG_OSD_W0_UNSEL_FG;
+    271                      break;
+    272                  case OSD_BG:
+    273                      elementReg = REG_OSD_W0_UNSEL_BG;
+    274                      break;
+    275                  case OSD_FG_HIGHLIGHT:
+    276                      elementReg = REG_OSD_W0_SELECTED_FG;
+    277                      break;
+    278                  case OSD_BG_HIGHLIGHT:
+    279                      elementReg = REG_OSD_W0_SELECTED_BG;
+    280                      break;
+    281                  case OSD_FG_DISABLED:
+    282                      elementReg = REG_OSD_W0_DISABLED_FG;
+    283                      break;
+    284                  case OSD_BG_DISABLED:
+    285                      elementReg = REG_OSD_W0_DISABLED_BG;
+    286                      break;
+    287                  case OSD_BORDER:
+    288                      elementReg = REG_OSD_W0_BORDER;
+    289                      break;
+    290                  case OSD_ROW_DIVIDER:
+    291                      elementReg = REG_OSD_W0_DIVIDER;
+    292                      break;
+    293                  default:
+    294                      break;
+    295          	}
+    296          
+    297          	// Offset to correct register
+    298          	elementReg += ( winRef * OSD_REG_BLOCK_OFFSET );
+    299          	return( SiiRegRead( elementReg ));
+    300          }
+    301          
+    302          //-------------------------------------------------------------------------------------------------
+    303          //! @brief      Returns the highlight row index of the specified window.
+    304          //! @param[in]  winRef      Return value from the SiiDrvOsdWindowCreate function.
+    305          //! @retval     Highlight row index
+    306          //-------------------------------------------------------------------------------------------------
+    307          int SiiDrvOsdGetCursor ( int winRef )
+    308          {
+    309          	uint16_t regAddr;
+    310          	uint8_t cursor;
+    311          
+    312              pDrvOsd->lastResultCode = SII_OSDDRV_SUCCESS;
+    313          
+    314          	regAddr = REG_OSD_W0_ROW_CTRL + winRef * OSD_REG_BLOCK_OFFSET;
+    315          	cursor = SiiRegRead( regAddr ) & MSK_CURSOR_SELECTED;
+    316          	return( (int)cursor );
+    317          }
+    318          
+    319          //-------------------------------------------------------------------------------------------------
+    320          //! @brief      Returns true if the passed row is enabled
+    321          //! @param[in]  winIndex    - index of target window.
+    322          //! @param[in]  row         - window row (0-15)
+    323          //! @retval     true if enabled
+    324          //! @retval     false if disabled
+    325          //-------------------------------------------------------------------------------------------------
+    326          bool_t SiiDrvOsdRowIsEnabled( int winRef, int row )
+    327          {
+    328              uint16_t rowReg, disabledRowMap;
+    329          
+    330              pDrvOsd->lastResultCode = SII_OSDDRV_SUCCESS;
+    331          
+    332              rowReg = REG_OSD_W0_DISABLED_ROW_L + (winRef  * OSD_REG_BLOCK_OFFSET);
+    333              disabledRowMap = SiiRegRead( rowReg );
+    334              disabledRowMap |= (SiiRegRead( rowReg + 1) << 8);
+    335              return( (disabledRowMap & (1 << (row))) == 0 );
+    336          }
+    337          
+    338          //-------------------------------------------------------------------------------------------------
+    339          //! @brief      Set the enable state of the specified row
+    340          //!             Change takes effect immediately.
+    341          //! @param[in]  winRef      Return value from any SiiOsdCreate function.
+    342          //! @param[in]  row         Window row to mark enabled/disabled
+    343          //! @param[in]  isEnable    true == enable, false == disable.
+    344          //! @retval                 true if successful, false if a failure.
+    345          //-------------------------------------------------------------------------------------------------
+    346          void SiiDrvOsdRowEnable ( int winRef, int row, bool_t isEnable )
+    347          {
+    348          	uint16_t rowReg;
+    349          	uint16_t disabledRowBit;
+    350          
+    351              pDrvOsd->lastResultCode = SII_OSDDRV_SUCCESS;
+    352          
+    353          	rowReg = REG_OSD_W0_DISABLED_ROW_L + (winRef * OSD_REG_BLOCK_OFFSET);
+    354          	disabledRowBit = 1 << row;
+    355          	SiiRegModify( rowReg , disabledRowBit & 0xFF, isEnable ? CLEAR_BITS : SET_BITS);
+    356          	SiiRegModify( rowReg + 1, (disabledRowBit >> 8) & 0xFF, isEnable ? CLEAR_BITS : SET_BITS);
+    357          
+    358              if ( isEnable )
+    359              {
+    360                  pDrvOsd->winData[ winRef].disabledRowMap &= ~(1 << row );
+    361              }
+    362              else
+    363              {
+    364                  pDrvOsd->winData[ winRef].disabledRowMap |= (1 << row );
+    365              }
+    366          }
+    367          
+    368          //-------------------------------------------------------------------------------------------------
+    369          //! @brief      Set the Z-axis position of the passed window to the specified level, with 0 being
+    370          //!             the top-most level.
+    371          //! @note       For the SiI9535, only the top-most level can be specified for any one window.
+    372          //!             The remaining windows follow in descending levels.
+    373          //! @param[in]  winRef      Return value from the SiiOsdCreateListBox function.
+    374          //! @param[in]  level       Z-axis position for window.
+    375          //-------------------------------------------------------------------------------------------------
+    376          void SiiDrvOsdSetWindowZaxis( int winRef, int level )
+    377          {
+    378              pDrvOsd->lastResultCode = SII_OSDDRV_SUCCESS;
+    379              if ( winRef != -1 )
+    380              {
+    381                  // Set the active (top) window and the active window enable bit
+    382                  SiiRegWrite( REG_OSD_SET_ACTIVE_WIN, winRef );
+    383                  SiiRegBitsSet( REG_OSD_INDEX_CTRL, REG_BIT_ACTIVE_WND, true );
+    384              }
+    385          }
+    386          
+    387          //-------------------------------------------------------------------------------------------------
+    388          //! @brief      Enable/disable an individual OSD window for display.  To actually display any windows,
+    389          //!             the OSD window display system must also be enabled (SiiDrvOsdEnable)
+    390          //! @param[in]  enableIt    - true: Enable window system  false: disable window system.
+    391          //-------------------------------------------------------------------------------------------------
+    392          void SiiDrvOsdWndEnable( int winRef, bool_t isEnable )
+    393          {
+    394              pDrvOsd->lastResultCode = SII_OSDDRV_SUCCESS;
+    395          
+    396              SiiRegModify( REG_OSD_WIN_CTRL, (1 << winRef) << BIT_OSD_ENABLE_WINDOW_SHIFT, isEnable ? SET_BITS : CLEAR_BITS);
+    397          }
+    398          
+    399          
+    400          //-------------------------------------------------------------------------------------------------
+    401          //! @brief      Enable/disable an individual OSD window for display.  To actually display any windows,
+    402          //!             the OSD window display system must also be enabled (SiiDrvOsdEnable)
+    403          //! @param[in]  enableIt    - true: Enable window system  false: disable window system.
+    404          //-------------------------------------------------------------------------------------------------
+    405          //void SiiDrvOsdWndEnable( int winRef, bool_t isEnable )
+    406          //{
+    407          //    uint8_t     winCtrl;
+    408          //
+    409          //    pDrvOsd->lastResultCode = SII_OSDDRV_SUCCESS;
+    410          //
+    411          //    winCtrl = SiiRegRead( REG_OSD_WIN_CTRL );
+    412          //    winCtrl &= ~((1 << winRef) << BIT_OSD_ENABLE_WINDOW_SHIFT);
+    413          //    winCtrl |= (isEnable ? ((1 << winRef) << BIT_OSD_ENABLE_WINDOW_SHIFT) : 0);
+    414          //    SiiRegWrite( REG_OSD_WIN_CTRL, winCtrl );
+    415          //
+    416          //    // If no windows are displayed, disable OSD completely
+    417          //    if (( winCtrl & ( BIT_OSD_ENABLE_WINDOW_0  | BIT_OSD_ENABLE_WINDOW_1 | BIT_OSD_ENABLE_WINDOW_2 | BIT_OSD_ENABLE_WINDOW_3)) == 0)
+    418          //    {
+    419          //        SiiDrvOsdEnable( false );
+    420          //    }
+    421          //}
+    422          
+    423          //-------------------------------------------------------------------------------------------------
+    424          //! @brief      Disable the OSD window display.
+    425          //-------------------------------------------------------------------------------------------------
+    426          static void OsdDisable ( void )
+    427          {
+    428              uint8_t srcCtrl, vpgCtrl;
+    429          
+    430          //    DEBUG_PRINT( MSG_DBG, "OSD: Forced Disable\n");
+    431              // Change TCLK source to internal XCLK.
+    432              vpgCtrl = SiiRegRead( REG_VPG_CTRL_3 );
+    433              SiiRegModify( REG_VPG_CTRL_3, MSK_VPG_FORMAT | MSK_VPG_CLK_SEL, (SI_TPG_CLK_XCLK << 1) | (SI_TPG_FMT_VID_480_60 << VAL_VPG_FORMAT_SHIFT));
+    434              srcCtrl = SiiRegRead( REG_TX_VIDEO_SRC );
+    435              SiiRegModify(
+    436                  REG_TX_VIDEO_SRC,
+    437                  BIT_TX0_PIPE_EN | (VAL_MUX_SEL_MASK << VAL_MUX_SEL_TX0_SHIFT),
+    438                  BIT_TX0_PIPE_EN | (VAL_MUX_SEL_INTERNAL << VAL_MUX_SEL_TX0_SHIFT));
+    439          
+    440              // Now we are guaranteed that the OSD_EN bit will propagate through to the OSDRAM clock source mux by the end of the next frame.
+    441              SiiRegBitsSet( REG_OSD_WIN_CTRL, BIT_OSD_ENABLE, false );
+    442              SiiOsTimerWait( MAX_VERT_PERIOD_MS );
+    443          
+    444              // Reset OSD engine to bring back to known state
+    445              SiiRegBitsSet( REG_OSD_INDEX_CTRL, REG_BIT_OSD_RESET, true );
+    446              SiiRegBitsSet( REG_OSD_INDEX_CTRL, REG_BIT_OSD_RESET, false );
+    447          
+    448              // Restore the original TCLK source.
+    449              SiiRegWrite( REG_TX_VIDEO_SRC, srcCtrl );
+    450              SiiRegWrite( REG_VPG_CTRL_3, vpgCtrl );
+    451          }
+    452          
+    453          //-------------------------------------------------------------------------------------------------
+    454          //! @brief      Enable the OSD window display.  To actually display any windows, the appropriate
+    455          //!             window(s) must also be enabled.
+    456          //! @param[in]  enableIt    - true: Enable window system  false: disable window system.
+    457          //-------------------------------------------------------------------------------------------------
+    458          void SiiDrvOsdEnable( bool_t enableIt )
+    459          {
+    460              pDrvOsd->lastResultCode = SII_OSDDRV_SUCCESS;
+    461          
+    462          //    DEBUG_PRINT( MSG_DBG, "OSD: %s\n", enableIt ? "ENABLE" : "DISABLE" );
+    463          
+    464              // If a valid TCLK is present, just do the operation directly.
+    465              if (( SiiRegRead( REG_MP_GCP_STATUS ) & BIT_MP_RES_STABLE ) ||                          // TMDS Clock source is stable
+    466                 (( SiiRegRead( REG_VPG_CTRL_3 ) & MSK_VPG_CLK_SEL) == (SI_TPG_CLK_XCLK << 1)) )      // TPG Clock source is present
+    467              {
+    468          //        DEBUG_PRINT( MSG_DBG, "OSD: Valid clock\n");
+    469                  pDrvOsd->enableState = enableIt ? OSD_STATE_ENABLED : OSD_STATE_DISABLED;
+    470                  SiiRegBitsSet( REG_OSD_WIN_CTRL, BIT_OSD_ENABLE, enableIt );
+    471                  SiiOsTimerWait( MAX_VERT_PERIOD_MS );
+    472              }
+    473              else
+    474              {
+    475          //        DEBUG_PRINT( MSG_DBG, "OSD: No TCLK\n");
+    476                  // We have no TCLK.  This should mean we have no display, so it is OK to move to
+    477                  // the Internal Video source to provide TCLK.
+    478                  if ( enableIt )
+    479                  {
+    480                      // If enabling, we can only PRE_ENABLE and leave the hardware alone (disabled)
+    481                      pDrvOsd->enableState = OSD_STATE_PRE_ENABLE;
+    482                  }
+    483                  else
+    484                  {
+    485                      pDrvOsd->enableState = OSD_STATE_DISABLED;
+    486                      OsdDisable();
+    487                  }
+    488              }
+    489          }
+    490          
+    491          //-------------------------------------------------------------------------------------------------
+    492          //! @brief      If OSD state is PRE_ENABLE, attempt to fully enable it.
+    493          //-------------------------------------------------------------------------------------------------
+    494          void SiiDrvOsdStateUpdate ( void )
+    495          {
+    496          //    DEBUG_PRINT( MSG_DBG, "OSD: State Update\n");
+    497              if (( pDrvOsd->enableState == OSD_STATE_PRE_ENABLE ) || ( pDrvOsd->enableState == OSD_STATE_ENABLED ))
+    498              {
+    499                  SiiDrvOsdEnable( true );
+    500              }
+    501          }
+    502          
+    503          //-------------------------------------------------------------------------------------------------
+    504          //! @brief      Disable the OSD window display, but mark it as PRE_ENABLE if it is currently in
+    505          //!             the ENABLED or PRE_ENABLED state.  The resolution stable interrupt handler uses
+    506          //!             this info to determine if the OSD should be re-enabled.
+    507          //-------------------------------------------------------------------------------------------------
+    508          void DrvOsdDisableInternal ( void )
+    509          {
+    510              pDrvOsd->lastResultCode = SII_OSDDRV_SUCCESS;
+    511          //    DEBUG_PRINT( MSG_DBG, "OSD: Disable Internal\n");
+    512          
+    513              // If currently enabled, set state to PRE_ENABLE and disable the hardware
+    514              if (( pDrvOsd->enableState == OSD_STATE_ENABLED ) && ( SiiRegRead( REG_OSD_WIN_CTRL ) & BIT_OSD_ENABLE ))
+    515              {
+    516                  pDrvOsd->enableState = OSD_STATE_PRE_ENABLE;
+    517                  OsdDisable();
+    518              }
+    519          }
+    520          
+    521          //-------------------------------------------------------------------------------------------------
+    522          //! @brief      Patch the character at the passed window, row, and col with the passed character.
+    523          //! @param[in]  winIndex - Hardware window containing character to be patched (0-3).
+    524          //! @param[in]  isEnable - Enable or disable the match
+    525          //! @param[in]  row      - Window row of character to be patched (0-15).
+    526          //! @param[in]  col      - Window column of character to be patched (0-31).
+    527          //! @param[in]  newChar  - ASCII index of character to replace existing character.
+    528          //-------------------------------------------------------------------------------------------------
+    529          void SiiDrvOsdSetCharPatch( int winIndex, bool_t isEnable, int row, int col, int newChar, int patchIndex )
+    530          {
+    531          	uint16_t    offset, patchCharIndex;
+    532          
+    533              pDrvOsd->lastResultCode = SII_OSDDRV_SUCCESS;
+    534          
+    535          	offset = patchIndex * REG_INDEX_PATCH_OFFSET;
+    536          //    patchCharIndex = OsdCharToIndex(VAL_OSD_FONT_12x16, newChar );
+    537              patchCharIndex = newChar;
+    538          
+    539          	if ( isEnable )
+    540          	{
+    541                  //Set the row/col and index char to be patched
+    542                  SiiRegWrite( REG_OSD_C0_PATCH_IDX_L + offset, patchCharIndex & 0xFF );
+    543                  SiiRegWrite( REG_OSD_C0_PATCH_COL + offset, ((patchCharIndex >> 8) & 0x01) | (col << REG_INDEX_PATCH_COL_SHIFT) );
+    544                  SiiRegWrite( REG_OSD_C0_PATCH_ROW + offset, row | (winIndex << REG_INDEX_PATCH_WND_SHIFT));
+    545          	}
+    546          
+    547          	// Enable the patch char and global patch control.
+    548          	SiiRegModify( REG_OSD_CHAR_PATCH_EN, 1 << patchIndex, isEnable ? SET_BITS : CLEAR_BITS );
+    549              SiiRegModify(REG_OSD_ACCESS_CTRL, REG_BIT_INDEX_PATCH_EN, REG_BIT_INDEX_PATCH_EN);
+    550          }
+    551          
+    552          //-------------------------------------------------------------------------------------------------
+    553          //! @brief      Clear all character patches.
+    554          //-------------------------------------------------------------------------------------------------
+    555          void SiiDrvOsdClearCharPatch( int patchIndex )
+    556          {
+    557              pDrvOsd->lastResultCode = SII_OSDDRV_SUCCESS;
+    558          
+    559              SiiRegModify( REG_OSD_CHAR_PATCH_EN, 1 << patchIndex, CLEAR_BITS );
+    560          }
+    561          
+    562          //-------------------------------------------------------------------------------------------------
+    563          //! @brief      Clear all character patches.
+    564          //-------------------------------------------------------------------------------------------------
+    565          void SiiDrvOsdClearAllCharPatch( void )
+    566          {
+    567              pDrvOsd->lastResultCode = SII_OSDDRV_SUCCESS;
+    568          
+    569              //global register patch enable/disable
+    570              SiiRegModify(REG_OSD_ACCESS_CTRL, REG_BIT_INDEX_PATCH_EN, CLEAR_BITS );
+    571              //clear all patch
+    572              SiiRegWrite( REG_OSD_CHAR_PATCH_EN, CLEAR_BITS);
+    573          }
+    574          
+    575          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        8  DrvOsdDisableInternal
+              0 -> OsdDisable
+              8 -> SiiRegRead
+       24  OsdDisable
+             24 -> SiiOsTimerWait
+             24 -> SiiRegBitsSet
+             24 -> SiiRegModify
+             24 -> SiiRegRead
+              0 -> SiiRegWrite
+             24 -> SiiRegWrite
+        8  SiiDrvOsdClearAllCharPatch
+              8 -> SiiRegModify
+              0 -> SiiRegWrite
+        0  SiiDrvOsdClearCharPatch
+              0 -> SiiRegModify
+       16  SiiDrvOsdEnable
+              0 -> OsdDisable
+              0 -> SiiOsTimerWait
+             16 -> SiiRegBitsSet
+             16 -> SiiRegRead
+        8  SiiDrvOsdGetBlending
+              8 -> SiiRegRead
+        0  SiiDrvOsdGetColor
+              0 -> SiiRegRead
+        8  SiiDrvOsdGetCursor
+              8 -> SiiRegRead
+       24  SiiDrvOsdGetHorizVert
+             24 -> SiiRegRead
+       32  SiiDrvOsdRowEnable
+             32 -> SiiRegModify
+       16  SiiDrvOsdRowIsEnabled
+             16 -> SiiRegRead
+        8  SiiDrvOsdSetBlending
+              0 -> SiiRegWrite
+       32  SiiDrvOsdSetCharPatch
+              0 -> SiiRegModify
+             32 -> SiiRegModify
+             32 -> SiiRegWrite
+       16  SiiDrvOsdSetColor
+              0 -> SiiRegWrite
+       24  SiiDrvOsdSetHorizVert
+              0 -> SiiRegWrite
+             24 -> SiiRegWrite
+       16  SiiDrvOsdSetWindowSize
+             16 -> SiiRegModify
+              0 -> SiiRegWrite
+        8  SiiDrvOsdSetWindowZaxis
+              0 -> SiiRegBitsSet
+              8 -> SiiRegWrite
+        0  SiiDrvOsdStateUpdate
+              0 -> SiiDrvOsdEnable
+        0  SiiDrvOsdWndEnable
+              0 -> SiiRegModify
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable15
+       6  ?Subroutine0
+       8  ?Subroutine1
+       8  ?Subroutine2
+      10  ?Subroutine3
+      10  ?Subroutine4
+      42  DrvOsdDisableInternal
+      98  OsdDisable
+      36  SiiDrvOsdClearAllCharPatch
+      22  SiiDrvOsdClearCharPatch
+      88  SiiDrvOsdEnable
+      30  SiiDrvOsdGetBlending
+      80  SiiDrvOsdGetColor
+      22  SiiDrvOsdGetCursor
+      70  SiiDrvOsdGetHorizVert
+      94  SiiDrvOsdRowEnable
+      44  SiiDrvOsdRowIsEnabled
+      34  SiiDrvOsdSetBlending
+     104  SiiDrvOsdSetCharPatch
+     132  SiiDrvOsdSetColor
+     158  SiiDrvOsdSetHorizVert
+      84  SiiDrvOsdSetWindowSize
+      44  SiiDrvOsdSetWindowZaxis
+      20  SiiDrvOsdStateUpdate
+      34  SiiDrvOsdWndEnable
+
+ 
+ 1 282 bytes in section .text
+ 
+ 1 282 bytes of CODE memory
+
+Errors: none
+Warnings: 1

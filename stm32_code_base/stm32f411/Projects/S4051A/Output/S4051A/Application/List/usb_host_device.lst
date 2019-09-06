@@ -1,0 +1,792 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:26:12 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\APP_SRC\SERVICES\USB_HD\src\usb_host_ #
+#                    device.c                                                 #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\APP_SRC\SERVICES\USB_HD\src\usb_host_ #
+#                    device.c -D S4051A -D DEBUG -D FREE_RTOS -D              #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\usb_host_device.lst                                   #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\usb_host_device.o                                      #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Projects\S4051A\APP_SRC\SERVICES\USB_HD\src\usb_host_device.c
+      1          /**
+      2            ******************************************************************************
+      3            * @file    app.c
+      4            * @author  MCD Application Team
+      5            * @version V1.1.0
+      6            * @date    19-March-2012
+      7            * @brief   This file provides all the Application firmware functions.
+      8            ******************************************************************************
+      9            * @attention
+     10            *
+     11            * <h2><center>&copy; COPYRIGHT 2012 STMicroelectronics</center></h2>
+     12            *
+     13            * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
+     14            * You may not use this file except in compliance with the License.
+     15            * You may obtain a copy of the License at:
+     16            *
+     17            *        http://www.st.com/software_license_agreement_liberty_v2
+     18            *
+     19            * Unless required by applicable law or agreed to in writing, software 
+     20            * distributed under the License is distributed on an "AS IS" BASIS, 
+     21            * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     22            * See the License for the specific language governing permissions and
+     23            * limitations under the License.
+     24            *
+     25            ******************************************************************************
+     26            */ 
+     27          
+     28          /* Includes ------------------------------------------------------------------*/ 
+     29          #include "Defs.h"
+     30          #include "Debug.h"
+     31          #include "freertos_conf.h"
+     32          #include "freertos_task.h"
+     33          #include "freertos_typedef.h"
+     34          
+     35          #include "usbd_cdc_core.h"
+     36          #include "usbd_usr.h"
+     37          #include "usb_conf.h"
+     38          #include "usbd_desc.h"
+     39          
+     40          #include "usbh_core.h"
+     41          #include "usbh_usr.h"
+     42          #include "usbh_msc_core.h"
+     43          #include "ff.h"  
+     44          
+     45          #include "USBMusicManager.h"
+     46          #include "usb_host_device.h"
+     47          #include "GPIOMiddleLevel.h"
+     48          
+     49          typedef struct USB_MUSIC_HANDLE_PARAMETERS
+     50          {
+     51              xTaskHandle TaskHandle;
+     52              xTaskHandle TaskMSCErrHandle;
+     53              xOS_TaskErrIndicator xOS_ErrId;
+     54          } xUSBHostDeviceHandleParams;
+     55          
+     56          typedef enum {
+     57            USB_HD_IDLE   = 0,
+     58            USB_HD_WAIT,  
+     59            USB_HD_DEVICE,
+     60            USB_HD_HOST,
+     61          }USB_HD_STATE;
+     62          
+     63          typedef enum {
+     64            USB_DEVICE_IDLE   = 0,
+     65            USB_DEVICE_WAIT,  
+     66          }USB_DEVICE_STATE;
+     67          
+     68          typedef enum {
+     69            USB_HOST_IDLE   = 0,
+     70            USB_HOST_WAIT,  
+     71          }USB_HOST_STATE;
+     72          
+     73          typedef struct _USB_HD_StateMachine
+     74          {
+     75              USB_HD_STATE	state;
+     76              USB_HOST_STATE	HostState;
+     77              USB_DEVICE_STATE	DeviceState;
+     78              USB_MODE mode;
+     79              uint8_t             select;
+     80            
+     81          }USB_HD_STATE_MACHINE;
+     82          
+     83          //____________________________________________________________________________________________________________
+     84          /* extern variable */
+     85          
+     86          HOST_State usb_state;
+     87          int MSC_ErrCnt = 0;
+     88          #ifdef USB_OTG_HS_INTERNAL_DMA_ENABLED
+     89            #if defined ( __ICCARM__ ) /*!< IAR Compiler */
+     90              #pragma data_alignment=4   
+     91            #endif
+     92          #endif /* USB_OTG_HS_INTERNAL_DMA_ENABLED */
+     93             
+     94          __ALIGN_BEGIN USB_OTG_CORE_HANDLE USB_OTG_Core __ALIGN_END ;
+     95          __ALIGN_BEGIN USBH_HOST USB_Host __ALIGN_END ;
+     96          
+     97          
+     98          //____________________________________________________________________________________________________________
+     99          /*static variable*/
+    100          static USB_HD_STATE_MACHINE mUSB_HD_State = {USB_HD_DEVICE, USB_HOST_IDLE, USB_DEVICE_IDLE, USB_DEVICE, USB_HOST_DEVICE_CMD_VCP_CONNECT}; /*Default is device mode.*/
+    101          static xUSBHostDeviceHandleParams mUSBHostDeviceHandleParams;
+    102          
+    103          //____________________________________________________________________________________________________________
+    104          //static api header
+    105          static void USBHostDeviceHandler_CreateTask(void);
+    106          
+    107          static void USBHostDeviceHandle_Switch(uint8 usb_mode_cmd);
+    108          
+    109          static void USBHostDeviceHandler_ServiceHandle( void *pvParameters );
+    110          
+    111          static USB_MODE USBHostDeviceHandler_get_mode( void );
+    112          
+    113          //____________________________________________________________________________________________________________
+    114          extern CDC_IF_Prop_TypeDef  APP_FOPS;
+    115          
+    116          const USB_HOST_DEVICE_HANDLE_OBJECT   USBHostDeviceHandle =
+    117          {
+    118              USBHostDeviceHandler_CreateTask,
+    119              USBHostDeviceHandle_Switch,
+    120              USBHostDeviceHandler_get_mode,
+    121          };
+    122          const USB_HOST_DEVICE_HANDLE_OBJECT *pUSB_HD_ObjCtrl = &USBHostDeviceHandle;
+    123          
+    124          
+    125          //____________________________________________________________________________________________________________ 
+    126          void usart_putchar( const char c )
+    127          {
+    128          	uint8_t buf = (uint8_t)c;
+    129          
+    130          	APP_FOPS.pIf_DataTx(&buf, 1);
+    131          }
+    132          
+    133          static void USBHostDeviceHandler_MSC_ErrHandle( void *pvParameters )
+    134          {
+    135              for( ;; )
+    136              {
+    137                  USBHostDeviceHandle_Switch( USB_HOST_DEVICE_CMD_VCP_CONNECT );
+    138                  vTaskDelay( TASK_MSEC2TICKS(500));
+    139                  USBHostDeviceHandle_Switch(USB_HOST_DEVICE_CMD_MSC_PROCESS);
+    140                  vTaskSuspend( mUSBHostDeviceHandleParams.TaskMSCErrHandle );
+    141              }
+    142          }
+    143          
+    144          static void USBHostDeviceHandler_CreateTask(void)
+    145          {
+    146              if ( xTaskCreate( 
+    147                   USBHostDeviceHandler_ServiceHandle, 
+    148                   ( portCHAR * ) "USB_HostDevice", 
+    149                   (configMINIMAL_STACK_SIZE*2), 
+    150                   NULL, 
+    151                   tskUSB_DEVICE_PRIORITY, 
+    152                   &mUSBHostDeviceHandleParams.TaskHandle ) != pdPASS )
+    153              {
+    154                  mUSBHostDeviceHandleParams.xOS_ErrId = xOS_TASK_CREATE_FAIL;
+    155                  vTaskDelete( mUSBHostDeviceHandleParams.TaskHandle );
+    156              }
+    157          
+    158              if ( xTaskCreate( 
+    159                   USBHostDeviceHandler_MSC_ErrHandle, 
+    160                   ( portCHAR * ) "USB_MSCErrHandle", 
+    161                   (configMINIMAL_STACK_SIZE), 
+    162                   NULL, 
+    163                   tskUSB_DEVICE_PRIORITY, 
+    164                   &mUSBHostDeviceHandleParams.TaskMSCErrHandle ) != pdPASS )
+    165              {
+    166                  mUSBHostDeviceHandleParams.xOS_ErrId = xOS_TASK_CREATE_FAIL;
+    167                  vTaskDelete( mUSBHostDeviceHandleParams.TaskMSCErrHandle );
+    168              }
+    169              else
+    170              {
+    171                  vTaskSuspend( mUSBHostDeviceHandleParams.TaskMSCErrHandle );
+    172              }
+    173          
+    174              
+    175          }
+    176          
+    177          static USB_MODE USBHostDeviceHandler_get_mode( void )
+    178          {
+    179              return mUSB_HD_State.mode;
+    180          }
+    181          
+    182          static void USBHostDeviceHandle_Switch( uint8 usb_mode_cmd )
+    183          {
+    184              if( ( mUSB_HD_State.select == USB_HOST_DEVICE_CMD_MSC_PROCESS ) && (usb_mode_cmd == USB_HOST_DEVICE_CMD_VCP_CONNECT) )
+    185              {
+    186                  GPIOMiddleLevel_Clr( __O_USB_VIN);
+    187          
+    188                  /*TODO: for usb */
+    189                  //mUSB_HD_State.select = USB_HOST_DEVICE_CMD_MSC_UNMOUNT;
+    190                  //vTaskDelay( TASK_MSEC2TICKS(500));
+    191          
+    192                  mUSB_HD_State.select = USB_HOST_DEVICE_CMD_VCP_CONNECT;
+    193                  //vTaskDelay( TASK_MSEC2TICKS(500));
+    194                  
+    195                  vTaskPrioritySet(mUSBHostDeviceHandleParams.TaskHandle,tskUSB_DEVICE_PRIORITY);
+    196              }
+    197              else if( ( mUSB_HD_State.select == USB_HOST_DEVICE_CMD_VCP_CONNECT ) && (usb_mode_cmd == USB_HOST_DEVICE_CMD_MSC_PROCESS) )
+    198              {
+    199                  /*TODO: for usb */
+    200                  //mUSB_HD_State.select = USB_HOST_DEVICE_CMD_VCP_DISCONNECT;
+    201                  //vTaskDelay( TASK_MSEC2TICKS(500));
+    202          
+    203                  mUSB_HD_State.select = USB_HOST_DEVICE_CMD_MSC_PROCESS;
+    204                  //vTaskDelay( TASK_MSEC2TICKS(500));
+    205                  
+    206                  vTaskPrioritySet(mUSBHostDeviceHandleParams.TaskHandle,tskUSB_HOST_PRIORITY);
+    207              }
+    208          }
+    209          
+    210          static void USBHostDeviceHandler_ServiceHandle( void *pvParameters )
+    211          {
+    212              static uint8_t prev_select = 0;
+    213              uint8_t select_value = 0;
+    214              
+    215              for(;;)
+    216              {
+    217              	switch( mUSB_HD_State.state )
+    218              	{
+    219              		case USB_HD_IDLE:
+    220              		{
+    221              			__disable_irq();
+    222              			__enable_irq();
+    223              			mUSB_HD_State.state = USB_HD_WAIT;
+    224              			mUSB_HD_State.select = 0;
+    225              		}
+    226              			break;
+    227          
+    228              		case USB_HD_WAIT:
+    229              		{	
+    230              			if( mUSB_HD_State.select != prev_select )
+    231              			{
+    232              				prev_select = mUSB_HD_State.select;
+    233              			
+    234              				if( mUSB_HD_State.select & 0x80 )
+    235              				{
+    236              					select_value = (mUSB_HD_State.select & 0x01);
+    237          
+    238              					switch( select_value )
+    239              					{
+    240              						case 0:
+    241              						{
+    242              							mUSB_HD_State.state = USB_HD_HOST;  
+    243              							mUSB_HD_State.HostState = USB_HOST_IDLE;	
+    244              						}
+    245              							break;
+    246          
+    247              						case 1:
+    248              						{
+    249              							mUSB_HD_State.state = USB_HD_DEVICE;  
+    250              							mUSB_HD_State.DeviceState = USB_DEVICE_IDLE;	
+    251              						}
+    252              							break;
+    253          
+    254              						default:
+    255              						{	
+    256              							mUSB_HD_State.state = USB_HD_IDLE;
+    257              						}
+    258              						
+    259              						break;
+    260              					}
+    261              				}
+    262              			}
+    263              		}
+    264              		
+    265              			break;
+    266          
+    267              		case USB_HD_HOST:
+    268              		{
+    269          #if ( configSTM32F411_PORTING == 1 )    		
+    270              			switch( mUSB_HD_State.HostState )
+    271              			{
+    272              				case USB_HOST_IDLE:
+    273              				{
+    274              					USBH_Init(&USB_OTG_Core, 
+    275          #ifdef USE_USB_OTG_FS  
+    276              						USB_OTG_FS_CORE_ID,
+    277          #else 
+    278              						USB_OTG_HS_CORE_ID,
+    279          #endif 
+    280              						&USB_Host,
+    281              						&USBH_MSC_cb, 
+    282              						&USR_USBH_MSC_cb);
+    283          
+    284              					mUSB_HD_State.HostState = USB_HOST_WAIT;
+    285          
+    286              					USB_OTG_DisableGlobalInt(&USB_OTG_Core);
+    287              					USB_OTG_EnableGlobalInt(&USB_OTG_Core);
+    288              				}
+    289              					break;
+    290          
+    291              				case USB_HOST_WAIT:
+    292              				{
+    293          #if 0	/*fix: file list cannot be claified to ZERO when USB flash driver was be re-plugged*/					
+    294              					if (!HCD_IsDeviceConnected(&USB_OTG_Core))
+    295              					{
+    296              						/* Re-Initilaize Host for new Enumeration */
+    297              						USBH_DeInit(&USB_OTG_Core, &USB_Host);
+    298              					}
+    299          #endif					
+    300              					
+    301              					GPIOMiddleLevel_Set(__O_USB_VIN);	
+    302              					/* Handle select item */
+    303              					if(mUSB_HD_State.select & 0x80)
+    304              					{
+    305              						select_value = (mUSB_HD_State.select & 0x0E ) >> 1;
+    306              		
+    307              						switch ( select_value )
+    308              						{
+    309              							case 0:
+    310              							{
+    311              								/*NO PROCESS !!*/
+    312              							}
+    313              								break;
+    314              						
+    315              							case  1: /* USB_HOST_DEVICE_CMD_MSC_PROCESS */
+    316              							{
+    317              								usb_state = USBH_Process(&USB_OTG_Core, &USB_Host);
+    318              								mUSB_HD_State.mode = USB_HOST;
+    319          
+    320              								if ( usb_state == HOST_CTRL_XFER )
+    321              								{
+    322                                                  MSC_ErrCnt ++;
+    323          
+    324                                                  if ( MSC_ErrCnt > 100 )
+    325                                                  {
+    326                                                      if ( xTaskIsTaskSuspended( mUSBHostDeviceHandleParams.TaskMSCErrHandle ) == pdPASS ) /*task is working*/
+    327                                                      {
+    328                                                          vTaskResume( mUSBHostDeviceHandleParams.TaskMSCErrHandle );
+    329                                                      }
+    330                                                      
+    331                                                      MSC_ErrCnt = 0 ;
+    332                                                  }
+    333              								}
+    334              								else
+    335              								{
+    336                                                  MSC_ErrCnt = 0;
+    337              								}
+    338              							}
+    339              								break;
+    340          
+    341              							case 2:	/* USB_HOST_DEVICE_CMD_MSC_UNMOUNT */
+    342              							{
+    343              								mUSB_HD_State.state = USB_HD_IDLE;
+    344              								f_mount(0, NULL);
+    345              								USB_OTG_StopHost(&USB_OTG_Core);
+    346              								
+    347              								/* Re-Initilaize Host for new Enumeration */
+    348              								USBH_DeInit(&USB_OTG_Core, &USB_Host);
+    349              								USB_Host.usr_cb->DeInit();
+    350              								USB_Host.class_cb->DeInit(&USB_OTG_Core, &USB_Host.device_prop);
+    351              							}
+    352              								break;
+    353          
+    354              							default:
+    355              							{
+    356              								mUSB_HD_State.state = USB_HD_WAIT;
+    357              								mUSB_HD_State.HostState = USB_HOST_IDLE;	
+    358              								f_mount(0, NULL);
+    359              								USB_OTG_StopHost(&USB_OTG_Core);
+    360              								
+    361              								/* Re-Initilaize Host for new Enumeration */
+    362              								USBH_DeInit(&USB_OTG_Core, &USB_Host);
+    363              								USB_Host.usr_cb->DeInit();
+    364              								USB_Host.class_cb->DeInit(&USB_OTG_Core, &USB_Host.device_prop);
+    365          
+    366              							}
+    367              								break;
+    368          
+    369              						}
+    370              					}
+    371              				}
+    372              					break;
+    373              			}
+    374          #endif    			
+    375              		}
+    376              			break;
+    377          
+    378              		case USB_HD_DEVICE:
+    379              		{
+    380              			switch( mUSB_HD_State.DeviceState )
+    381              			{
+    382              				case USB_DEVICE_IDLE:
+    383              				{	
+    384              				    GPIOMiddleLevel_Clr( __O_USB_VIN);
+    385              					USBD_Init(&USB_OTG_Core,
+    386          #ifdef USE_USB_OTG_HS 
+    387              						USB_OTG_HS_CORE_ID,
+    388          #else            
+    389              						USB_OTG_FS_CORE_ID,
+    390          #endif  
+    391              						&USR_desc, 
+    392              						&USBD_CDC_cb,	 
+    393              						&USR_cb);
+    394          
+    395              					mUSB_HD_State.DeviceState = USB_DEVICE_WAIT;
+    396          
+    397              					__disable_irq();
+    398              					__enable_irq();
+    399              				}
+    400              				break;
+    401          
+    402              				case USB_DEVICE_WAIT:
+    403              				{
+    404              					/* Handle select item */
+    405              					if(mUSB_HD_State.select & 0x80)
+    406              					{
+    407              						select_value = (mUSB_HD_State.select & 0x0E ) >> 1;
+    408              						
+    409              						switch ( select_value )
+    410              						{
+    411              							case 3: /*USB_HOST_DEVICE_CMD_VCP_CONNECT*/
+    412              							{
+    413              								/*NO PROCESS*/
+    414              								mUSB_HD_State.mode = USB_DEVICE;
+    415              							}
+    416              								break;
+    417          
+    418              							case 4: /* USB_HOST_DEVICE_CMD_VCP_DISCONNECT */
+    419              							{
+    420              								__disable_irq();
+    421              								mUSB_HD_State.state = USB_HD_IDLE;
+    422              								__enable_irq();
+    423              								DCD_DevDisconnect (&USB_OTG_Core);
+    424              								USB_OTG_StopDevice(&USB_OTG_Core);  
+    425              							}
+    426              								break;
+    427              						
+    428              							default:
+    429              							{
+    430              								__disable_irq();
+    431              								mUSB_HD_State.state = USB_HD_WAIT;
+    432              								mUSB_HD_State.DeviceState = USB_DEVICE_IDLE;
+    433              								__enable_irq();
+    434              								DCD_DevDisconnect (&USB_OTG_Core);
+    435              								USB_OTG_StopDevice(&USB_OTG_Core);     
+    436              							}
+    437              								break;
+    438              						}
+    439              			        }
+    440                				}
+    441              				break;
+    442              			}
+    443              				
+    444              		}
+    445              			break;
+    446          
+    447              	}
+    448          
+    449                  vTaskDelay( TASK_MSEC2TICKS(10));
+    450              }
+    451          }
+    452          
+    453          
+    454          #ifdef USE_FULL_ASSERT
+    455          /**
+    456          * @brief  assert_failed
+    457          *         Reports the name of the source file and the source line number
+    458          *         where the assert_param error has occurred.
+    459          * @param  File: pointer to the source file name
+    460          * @param  Line: assert_param error line source number
+    461          * @retval None
+    462          */
+    463          void assert_failed(uint8_t* file, uint32_t line)
+    464          {
+    465            /* User can add his own implementation to report the file name and line number,
+    466            ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+    467            
+    468            /* Infinite loop */
+    469            while (1)
+    470            {}
+    471          }
+    472          #endif
+    473          
+    474          
+    475          
+    476          /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        8  USBHostDeviceHandle_Switch
+              8 -> GPIOMiddleLevel_Clr
+              0 -> vTaskPrioritySet
+       32  USBHostDeviceHandler_CreateTask
+              0 -> vTaskDelete
+             32 -> vTaskDelete
+              0 -> vTaskSuspend
+             32 -> xTaskGenericCreate
+        8  USBHostDeviceHandler_MSC_ErrHandle
+              8 -> USBHostDeviceHandle_Switch
+              8 -> vTaskDelay
+              8 -> vTaskSuspend
+       24  USBHostDeviceHandler_ServiceHandle
+             24 -> DCD_DevDisconnect
+             24 -> GPIOMiddleLevel_Clr
+             24 -> USBD_Init
+             24 -> USB_OTG_StopDevice
+             24 -> vTaskDelay
+        0  USBHostDeviceHandler_get_mode
+        8  usart_putchar
+              8 -- Indirect call
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      16  ?<Constant "USB_HostDevice">
+      20  ?<Constant "USB_MSCErrHandle">
+       4  ??DataTable8
+       4  ??DataTable8_1
+       4  ??DataTable8_2
+       4  ??DataTable8_3
+       4  ??DataTable8_4
+       4  ??DataTable8_5
+       4  MSC_ErrCnt
+      12  USBHostDeviceHandle
+      52  USBHostDeviceHandle_Switch
+     108  USBHostDeviceHandler_CreateTask
+      32  USBHostDeviceHandler_MSC_ErrHandle
+     200  USBHostDeviceHandler_ServiceHandle
+       6  USBHostDeviceHandler_get_mode
+     132  USB_Host
+    2728  mUSBHostDeviceHandleParams
+          mUSB_HD_State
+          prev_select
+          USB_OTG_Core
+       4  pUSB_HD_ObjCtrl
+      18  usart_putchar
+       1  usb_state
+
+ 
+   137 bytes in section .bss
+ 2 732 bytes in section .data
+    12 bytes in section .rodata
+   476 bytes in section .text
+ 
+   476 bytes of CODE  memory
+    12 bytes of CONST memory
+ 2 869 bytes of DATA  memory
+
+Errors: none
+Warnings: none

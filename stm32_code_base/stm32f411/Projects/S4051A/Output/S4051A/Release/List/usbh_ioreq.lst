@@ -1,0 +1,618 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     10/Nov/2014  12:52:16 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\STM32_USB_HOST_Library\Core\src\usbh_ioreq. #
+#                    c                                                        #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\STM32_USB_HOST_Library\Core\src\usbh_ioreq. #
+#                    c -D __ARM_CORTEX_MX__ -D DEBUG -D FREE_RTOS -D          #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D HOST_MODE_ENABLED -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -D STM32_IAP -D S4051A    #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Release\L #
+#                    ist\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Releas #
+#                    e\Obj\ --debug --endian=little --cpu=Cortex-M4 -e        #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Projects\STM32_IAP\inc #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\I #
+#                    nclude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\C #
+#                    MSIS\Device\ST\STM32F4xx\Include\ -I                     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_HO #
+#                    ST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\HT68F30\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Utilities\Third_Party\efsl\inc\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    fat_fs\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Project #
+#                    s\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utiliti #
+#                    es\mainstream_v1\stm32f411\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\it\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\APP_SRC\I #
+#                    nclude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\APP_SRC\ -Ohz -I  #
+#                    "C:\Program Files (x86)\IAR Systems\Embedded Workbench   #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Release\List\u #
+#                    sbh_ioreq.lst                                            #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Release\Obj\us #
+#                    bh_ioreq.o                                               #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\STM32_USB_HOST_Library\Core\src\usbh_ioreq.c
+      1          /** 
+      2            ******************************************************************************
+      3            * @file    usbh_ioreq.c 
+      4            * @author  MCD Application Team
+      5            * @version V2.1.0
+      6            * @date    19-March-2012
+      7            * @brief   This file handles the issuing of the USB transactions
+      8            ******************************************************************************
+      9            * @attention
+     10            *
+     11            * <h2><center>&copy; COPYRIGHT 2012 STMicroelectronics</center></h2>
+     12            *
+     13            * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
+     14            * You may not use this file except in compliance with the License.
+     15            * You may obtain a copy of the License at:
+     16            *
+     17            *        http://www.st.com/software_license_agreement_liberty_v2
+     18            *
+     19            * Unless required by applicable law or agreed to in writing, software 
+     20            * distributed under the License is distributed on an "AS IS" BASIS, 
+     21            * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     22            * See the License for the specific language governing permissions and
+     23            * limitations under the License.
+     24            *
+     25            ******************************************************************************
+     26            */ 
+     27          /* Includes ------------------------------------------------------------------*/
+     28          
+     29          #include "usbh_ioreq.h"
+     30          #include "usb_bsp.h"    //by USB_OTG_BSP_mDelay(); use
+     31          /** @addtogroup USBH_LIB
+     32            * @{
+     33            */
+     34          
+     35          /** @addtogroup USBH_LIB_CORE
+     36          * @{
+     37          */
+     38            
+     39          /** @defgroup USBH_IOREQ 
+     40            * @brief This file handles the standard protocol processing (USB v2.0)
+     41            * @{
+     42            */
+     43          
+     44          
+     45          /** @defgroup USBH_IOREQ_Private_Defines
+     46            * @{
+     47            */ 
+     48          /**
+     49            * @}
+     50            */ 
+     51           
+     52          
+     53          /** @defgroup USBH_IOREQ_Private_TypesDefinitions
+     54            * @{
+     55            */ 
+     56          /**
+     57            * @}
+     58            */ 
+     59          
+     60          
+     61          
+     62          /** @defgroup USBH_IOREQ_Private_Macros
+     63            * @{
+     64            */ 
+     65          /**
+     66            * @}
+     67            */ 
+     68          
+     69          
+     70          /** @defgroup USBH_IOREQ_Private_Variables
+     71            * @{
+     72            */ 
+     73          /**
+     74            * @}
+     75            */ 
+     76          
+     77          
+     78          /** @defgroup USBH_IOREQ_Private_FunctionPrototypes
+     79            * @{
+     80            */ 
+     81          static USBH_Status USBH_SubmitSetupRequest(USBH_HOST *phost,
+     82                                                     uint8_t* buff, 
+     83                                                     uint16_t length);
+     84          
+     85          /**
+     86            * @}
+     87            */ 
+     88          
+     89          
+     90          /** @defgroup USBH_IOREQ_Private_Functions
+     91            * @{
+     92            */ 
+     93          
+     94          
+     95          /**
+     96            * @brief  USBH_CtlReq
+     97            *         USBH_CtlReq sends a control request and provide the status after 
+     98            *            completion of the request
+     99            * @param  pdev: Selected device
+    100            * @param  req: Setup Request Structure
+    101            * @param  buff: data buffer address to store the response
+    102            * @param  length: length of the response
+    103            * @retval Status
+    104            */
+    105          USBH_Status USBH_CtlReq     (USB_OTG_CORE_HANDLE *pdev, 
+    106                                       USBH_HOST           *phost, 
+    107                                       uint8_t             *buff,
+    108                                       uint16_t            length)
+    109          {
+    110            USBH_Status status;
+    111          
+    112            
+    113            URB_STATE URB_Status ;     //Eason ++
+    114            status = USBH_BUSY;
+    115            USB_OTG_BSP_mDelay(50);   //Eason ++
+    116            URB_Status = HCD_GetURB_State(pdev, phost->Control.hc_num_out); //Eason ++
+    117            
+    118            switch (phost->RequestState)
+    119            {
+    120            case CMD_SEND:
+    121              /* Start a SETUP transfer */
+    122              USBH_SubmitSetupRequest(phost, buff, length);
+    123              phost->RequestState = CMD_WAIT;
+    124              status = USBH_BUSY;
+    125              break;
+    126              
+    127            case CMD_WAIT:
+    128              //Eason--if (phost->Control.state == CTRL_COMPLETE ) 
+    129              if( URB_Status ==URB_DONE ) //Eason++
+    130              {
+    131                /* Commands successfully sent and Response Received  */       
+    132                phost->RequestState = CMD_SEND;
+    133                phost->Control.state =CTRL_IDLE;  
+    134                status = USBH_OK;      
+    135              }
+    136              // else if  (phost->Control.state == CTRL_ERROR)
+    137              else  if( URB_Status ==URB_ERROR ) //Eason++
+    138              {
+    139                /* Failure Mode */
+    140                phost->RequestState = CMD_SEND;
+    141                status = USBH_FAIL;
+    142              }   
+    143              // else if  (phost->Control.state == CTRL_STALLED )
+    144              else  if( URB_Status ==URB_STALL ) //Eason++
+    145              {
+    146                /* Commands successfully sent and Response Received  */       
+    147                phost->RequestState = CMD_SEND;
+    148                status = USBH_NOT_SUPPORTED;
+    149              }
+    150              break;
+    151              
+    152            default:
+    153              break; 
+    154            }
+    155            return status;
+    156          }
+    157          
+    158          /**
+    159            * @brief  USBH_CtlSendSetup
+    160            *         Sends the Setup Packet to the Device
+    161            * @param  pdev: Selected device
+    162            * @param  buff: Buffer pointer from which the Data will be send to Device
+    163            * @param  hc_num: Host channel Number
+    164            * @retval Status
+    165            */
+    166          USBH_Status USBH_CtlSendSetup ( USB_OTG_CORE_HANDLE *pdev, 
+    167                                          uint8_t *buff, 
+    168                                          uint8_t hc_num){
+    169            pdev->host.hc[hc_num].ep_is_in = 0;
+    170            pdev->host.hc[hc_num].data_pid = HC_PID_SETUP;   
+    171            pdev->host.hc[hc_num].xfer_buff = buff;
+    172            pdev->host.hc[hc_num].xfer_len = USBH_SETUP_PKT_SIZE;   
+    173          
+    174            return (USBH_Status)HCD_SubmitRequest (pdev , hc_num);   
+    175          }
+    176          
+    177          
+    178          /**
+    179            * @brief  USBH_CtlSendData
+    180            *         Sends a data Packet to the Device
+    181            * @param  pdev: Selected device
+    182            * @param  buff: Buffer pointer from which the Data will be sent to Device
+    183            * @param  length: Length of the data to be sent
+    184            * @param  hc_num: Host channel Number
+    185            * @retval Status
+    186            */
+    187          USBH_Status USBH_CtlSendData ( USB_OTG_CORE_HANDLE *pdev, 
+    188                                          uint8_t *buff, 
+    189                                          uint16_t length,
+    190                                          uint8_t hc_num)
+    191          {
+    192            pdev->host.hc[hc_num].ep_is_in = 0;
+    193            pdev->host.hc[hc_num].xfer_buff = buff;
+    194            pdev->host.hc[hc_num].xfer_len = length;
+    195           
+    196            if ( length == 0 )
+    197            { /* For Status OUT stage, Length==0, Status Out PID = 1 */
+    198              pdev->host.hc[hc_num].toggle_out = 1;   
+    199            }
+    200           
+    201           /* Set the Data Toggle bit as per the Flag */
+    202            if ( pdev->host.hc[hc_num].toggle_out == 0)
+    203            { /* Put the PID 0 */
+    204                pdev->host.hc[hc_num].data_pid = HC_PID_DATA0;    
+    205            }
+    206           else
+    207           { /* Put the PID 1 */
+    208                pdev->host.hc[hc_num].data_pid = HC_PID_DATA1 ;
+    209           }
+    210          
+    211            HCD_SubmitRequest (pdev , hc_num);   
+    212             
+    213            return USBH_OK;
+    214          }
+    215          
+    216          
+    217          /**
+    218            * @brief  USBH_CtlReceiveData
+    219            *         Receives the Device Response to the Setup Packet
+    220            * @param  pdev: Selected device
+    221            * @param  buff: Buffer pointer in which the response needs to be copied
+    222            * @param  length: Length of the data to be received
+    223            * @param  hc_num: Host channel Number
+    224            * @retval Status. 
+    225            */
+    226          USBH_Status USBH_CtlReceiveData(USB_OTG_CORE_HANDLE *pdev, 
+    227                                          uint8_t* buff, 
+    228                                          uint16_t length,
+    229                                          uint8_t hc_num)
+    230          {
+    231          
+    232            pdev->host.hc[hc_num].ep_is_in = 1;
+    233            pdev->host.hc[hc_num].data_pid = HC_PID_DATA1;
+    234            pdev->host.hc[hc_num].xfer_buff = buff;
+    235            pdev->host.hc[hc_num].xfer_len = length;  
+    236          
+    237            HCD_SubmitRequest (pdev , hc_num);   
+    238            
+    239            return USBH_OK;
+    240            
+    241          }
+    242          
+    243          
+    244          /**
+    245            * @brief  USBH_BulkSendData
+    246            *         Sends the Bulk Packet to the device
+    247            * @param  pdev: Selected device
+    248            * @param  buff: Buffer pointer from which the Data will be sent to Device
+    249            * @param  length: Length of the data to be sent
+    250            * @param  hc_num: Host channel Number
+    251            * @retval Status
+    252            */
+    253          USBH_Status USBH_BulkSendData ( USB_OTG_CORE_HANDLE *pdev, 
+    254                                          uint8_t *buff, 
+    255                                          uint16_t length,
+    256                                          uint8_t hc_num)
+    257          { 
+    258            pdev->host.hc[hc_num].ep_is_in = 0;
+    259            pdev->host.hc[hc_num].xfer_buff = buff;
+    260            pdev->host.hc[hc_num].xfer_len = length;  
+    261          
+    262           /* Set the Data Toggle bit as per the Flag */
+    263            if ( pdev->host.hc[hc_num].toggle_out == 0)
+    264            { /* Put the PID 0 */
+    265                pdev->host.hc[hc_num].data_pid = HC_PID_DATA0;    
+    266            }
+    267           else
+    268           { /* Put the PID 1 */
+    269                pdev->host.hc[hc_num].data_pid = HC_PID_DATA1 ;
+    270           }
+    271          
+    272            HCD_SubmitRequest (pdev , hc_num);   
+    273            return USBH_OK;
+    274          }
+    275          
+    276          
+    277          /**
+    278            * @brief  USBH_BulkReceiveData
+    279            *         Receives IN bulk packet from device
+    280            * @param  pdev: Selected device
+    281            * @param  buff: Buffer pointer in which the received data packet to be copied
+    282            * @param  length: Length of the data to be received
+    283            * @param  hc_num: Host channel Number
+    284            * @retval Status. 
+    285            */
+    286          USBH_Status USBH_BulkReceiveData( USB_OTG_CORE_HANDLE *pdev, 
+    287                                          uint8_t *buff, 
+    288                                          uint16_t length,
+    289                                          uint8_t hc_num)
+    290          {
+    291            pdev->host.hc[hc_num].ep_is_in = 1;   
+    292            pdev->host.hc[hc_num].xfer_buff = buff;
+    293            pdev->host.hc[hc_num].xfer_len = length;
+    294            
+    295          
+    296            if( pdev->host.hc[hc_num].toggle_in == 0)
+    297            {
+    298              pdev->host.hc[hc_num].data_pid = HC_PID_DATA0;
+    299            }
+    300            else
+    301            {
+    302              pdev->host.hc[hc_num].data_pid = HC_PID_DATA1;
+    303            }
+    304          
+    305            HCD_SubmitRequest (pdev , hc_num);  
+    306            return USBH_OK;
+    307          }
+    308          
+    309          
+    310          /**
+    311            * @brief  USBH_InterruptReceiveData
+    312            *         Receives the Device Response to the Interrupt IN token
+    313            * @param  pdev: Selected device
+    314            * @param  buff: Buffer pointer in which the response needs to be copied
+    315            * @param  length: Length of the data to be received
+    316            * @param  hc_num: Host channel Number
+    317            * @retval Status. 
+    318            */
+    319          USBH_Status USBH_InterruptReceiveData( USB_OTG_CORE_HANDLE *pdev, 
+    320                                          uint8_t *buff, 
+    321                                          uint8_t length,
+    322                                          uint8_t hc_num)
+    323          {
+    324          
+    325            pdev->host.hc[hc_num].ep_is_in = 1;  
+    326            pdev->host.hc[hc_num].xfer_buff = buff;
+    327            pdev->host.hc[hc_num].xfer_len = length;
+    328            
+    329          
+    330            
+    331            if(pdev->host.hc[hc_num].toggle_in == 0)
+    332            {
+    333              pdev->host.hc[hc_num].data_pid = HC_PID_DATA0;
+    334            }
+    335            else
+    336            {
+    337              pdev->host.hc[hc_num].data_pid = HC_PID_DATA1;
+    338            }
+    339          
+    340            /* toggle DATA PID */
+    341            pdev->host.hc[hc_num].toggle_in ^= 1;  
+    342            
+    343            HCD_SubmitRequest (pdev , hc_num);  
+    344            
+    345            return USBH_OK;
+    346          }
+    347          
+    348          /**
+    349            * @brief  USBH_InterruptSendData
+    350            *         Sends the data on Interrupt OUT Endpoint
+    351            * @param  pdev: Selected device
+    352            * @param  buff: Buffer pointer from where the data needs to be copied
+    353            * @param  length: Length of the data to be sent
+    354            * @param  hc_num: Host channel Number
+    355            * @retval Status. 
+    356            */
+    357          USBH_Status USBH_InterruptSendData( USB_OTG_CORE_HANDLE *pdev, 
+    358                                          uint8_t *buff, 
+    359                                          uint8_t length,
+    360                                          uint8_t hc_num)
+    361          {
+    362          
+    363            pdev->host.hc[hc_num].ep_is_in = 0;  
+    364            pdev->host.hc[hc_num].xfer_buff = buff;
+    365            pdev->host.hc[hc_num].xfer_len = length;
+    366            
+    367            if(pdev->host.hc[hc_num].toggle_in == 0)
+    368            {
+    369              pdev->host.hc[hc_num].data_pid = HC_PID_DATA0;
+    370            }
+    371            else
+    372            {
+    373              pdev->host.hc[hc_num].data_pid = HC_PID_DATA1;
+    374            }
+    375          
+    376            pdev->host.hc[hc_num].toggle_in ^= 1;  
+    377            
+    378            HCD_SubmitRequest (pdev , hc_num);  
+    379            
+    380            return USBH_OK;
+    381          }
+    382          
+    383          
+    384          /**
+    385            * @brief  USBH_SubmitSetupRequest
+    386            *         Start a setup transfer by changing the state-machine and 
+    387            *         initializing  the required variables needed for the Control Transfer
+    388            * @param  pdev: Selected device
+    389            * @param  setup: Setup Request Structure
+    390            * @param  buff: Buffer used for setup request
+    391            * @param  length: Length of the data
+    392            * @retval Status. 
+    393          */
+    394          static USBH_Status USBH_SubmitSetupRequest(USBH_HOST *phost,
+    395                                                     uint8_t* buff, 
+    396                                                     uint16_t length)
+    397          {
+    398            
+    399            /* Save Global State */
+    400            phost->gStateBkp =   phost->gState; 
+    401            
+    402            /* Prepare the Transactions */
+    403            phost->gState = HOST_CTRL_XFER;
+    404            phost->Control.buff = buff; 
+    405            phost->Control.length = length;
+    406            phost->Control.state = CTRL_SETUP;  
+    407          
+    408            return USBH_OK;  
+    409          }
+    410          
+    411          
+    412          /**
+    413            * @brief  USBH_IsocReceiveData
+    414            *         Receives the Device Response to the Isochronous IN token
+    415            * @param  pdev: Selected device
+    416            * @param  buff: Buffer pointer in which the response needs to be copied
+    417            * @param  length: Length of the data to be received
+    418            * @param  hc_num: Host channel Number
+    419            * @retval Status. 
+    420            */
+    421          USBH_Status USBH_IsocReceiveData( USB_OTG_CORE_HANDLE *pdev, 
+    422                                          uint8_t *buff, 
+    423                                          uint32_t length,
+    424                                          uint8_t hc_num)
+    425          {    
+    426            
+    427            pdev->host.hc[hc_num].ep_is_in = 1;  
+    428            pdev->host.hc[hc_num].xfer_buff = buff;
+    429            pdev->host.hc[hc_num].xfer_len = length;
+    430            pdev->host.hc[hc_num].data_pid = HC_PID_DATA0;
+    431            
+    432          
+    433            HCD_SubmitRequest (pdev , hc_num);  
+    434            
+    435            return USBH_OK;
+    436          }
+    437          
+    438          /**
+    439            * @brief  USBH_IsocSendData
+    440            *         Sends the data on Isochronous OUT Endpoint
+    441            * @param  pdev: Selected device
+    442            * @param  buff: Buffer pointer from where the data needs to be copied
+    443            * @param  length: Length of the data to be sent
+    444            * @param  hc_num: Host channel Number
+    445            * @retval Status. 
+    446            */
+    447          USBH_Status USBH_IsocSendData( USB_OTG_CORE_HANDLE *pdev, 
+    448                                          uint8_t *buff, 
+    449                                          uint32_t length,
+    450                                          uint8_t hc_num)
+    451          {
+    452            
+    453            pdev->host.hc[hc_num].ep_is_in = 0;  
+    454            pdev->host.hc[hc_num].xfer_buff = buff;
+    455            pdev->host.hc[hc_num].xfer_len = length;
+    456            pdev->host.hc[hc_num].data_pid = HC_PID_DATA0;
+    457            
+    458            HCD_SubmitRequest (pdev , hc_num);  
+    459            
+    460            return USBH_OK;
+    461          }
+    462          
+    463          /**
+    464          * @}
+    465          */ 
+    466          
+    467          /**
+    468          * @}
+    469          */ 
+    470          
+    471          /**
+    472          * @}
+    473          */
+    474          
+    475          /**
+    476          * @}
+    477          */ 
+    478          
+    479          /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+    480          
+    481          
+    482          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       16  USBH_BulkReceiveData
+             16 -> HCD_SubmitRequest
+       16  USBH_BulkSendData
+             16 -> HCD_SubmitRequest
+       16  USBH_CtlReceiveData
+             16 -> HCD_SubmitRequest
+       24  USBH_CtlReq
+             24 -> HCD_GetURB_State
+             24 -> USB_OTG_BSP_mDelay
+       16  USBH_CtlSendData
+             16 -> HCD_SubmitRequest
+        8  USBH_CtlSendSetup
+              8 -> HCD_SubmitRequest
+       16  USBH_InterruptReceiveData
+             16 -> HCD_SubmitRequest
+       16  USBH_InterruptSendData
+             16 -> HCD_SubmitRequest
+       16  USBH_IsocReceiveData
+             16 -> HCD_SubmitRequest
+       16  USBH_IsocSendData
+             16 -> HCD_SubmitRequest
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      10  ??Subroutine4_0
+      20  ?Subroutine0
+      20  ?Subroutine1
+      16  ?Subroutine2
+      12  ?Subroutine3
+      22  USBH_BulkReceiveData
+      22  USBH_BulkSendData
+      22  USBH_CtlReceiveData
+      98  USBH_CtlReq
+      32  USBH_CtlSendData
+      38  USBH_CtlSendSetup
+      10  USBH_InterruptReceiveData
+       8  USBH_InterruptSendData
+      22  USBH_IsocReceiveData
+      16  USBH_IsocSendData
+
+ 
+ 368 bytes in section .text
+ 
+ 368 bytes of CODE memory
+
+Errors: none
+Warnings: none

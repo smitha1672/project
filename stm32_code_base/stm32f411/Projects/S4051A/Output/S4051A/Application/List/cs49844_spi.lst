@@ -1,0 +1,748 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:25:50 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\CS49844\cs49844_spi.c           #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\CS49844\cs49844_spi.c -D        #
+#                    S4051A -D DEBUG -D FREE_RTOS -D STM32F40_41xxx -D        #
+#                    USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D             #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\cs49844_spi.lst                                       #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\cs49844_spi.o                                          #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\CS49844\cs49844_spi.c
+      1          #include "Debug.h"
+      2          #include "SPILowLevel.h"
+      3          #include "GPIOMiddleLevel.h"
+      4          #include "Config.h"
+      5          
+      6          #include "freertos_conf.h"
+      7          #include "freertos_task.h"
+      8          
+      9          #include "cs49844_spi.h"
+     10          
+     11          
+     12          /*-------------------------------------------------------------------------------------------*/
+     13          #define SLAVE_ADDRESS_W_CS49844	0x80
+     14          #define SLAVE_ADDRESS_R_CS49844	0x81
+     15          
+     16          #define TIMEOUT TASK_MSEC2TICKS(500)
+     17          /*-------------------------------------------------------------------------------------------*/
+     18          
+     19          /** Endianity Mode*/
+     20          static bool m_endianityMode = SPI_LITTEL_ENDIAN;//SPI_BIG_ENDIAN//;SPI_LITTEL_ENDIAN; /*Smith Modify*/
+     21          
+     22          //____________________________________________________________________________________________
+     23          
+     24          //!	< External Application_________________________________________________@{
+     25          //These applicatons is only used on here.
+     26          
+     27          extern bool SPILowLevel_isEnable( void );
+     28          //! @}
+     29          
+     30          
+     31          //___________________________________________________________________________________________________
+     32          int8 CS49844SPI_write_buffer(const byte* data, uint16 length)
+     33          {
+     34              uint16	block_num = 0;
+     35              uint16	insufficient_block = 0;
+     36              int i = 0;
+     37              int ret_val = SCP1_PASS;
+     38              
+     39              portTickType busy_timeout = 0;
+     40          
+     41              if ( SPILowLevel_isEnable( ) == FALSE )
+     42              {
+     43                  ret_val = SCP1_BYPASS;
+     44                  return ret_val;
+     45              }
+     46              /* SPI lock*/
+     47              if (SPI_mutex_lock() == FALSE)
+     48              {
+     49                  ret_val = SCP1_BSY_TIMEOUT;
+     50                  return ret_val;
+     51              }
+     52          
+     53              /* Select SPI chip.*/
+     54              SPI_selectChip(CS49844_SPI_NPCS);
+     55              SPI_write( SLAVE_ADDRESS_W_CS49844 );
+     56          
+     57              /*Write 4 data bytes*/
+     58              block_num = length/4; /*1 block is 4 bytes*/
+     59              if ( block_num != 0)
+     60              {
+     61                  for ( i = 0; i < block_num; i++ )
+     62                  {
+     63                      SPI_writeBuffer((data+(i*4)),4, m_endianityMode);
+     64                      busy_timeout = xTaskGetTickCount( );
+     65                      while( GPIOMiddleLevel_Read_InBit( __I_SCP1_BUSY ) == 0 )
+     66                      {
+     67                          if ( ((xTaskGetTickCount() - busy_timeout)/portTICK_RATE_MS) > TIMEOUT )
+     68                          {
+     69                              busy_timeout = 0;
+     70                              ret_val = SCP1_BSY_TIMEOUT;
+     71                      
+     72                              
+     73                              break;
+     74                          }
+     75                      }
+     76          
+     77                      
+     78                      
+     79                      if (ret_val == SCP1_BSY_TIMEOUT)
+     80                      {
+     81                          break;
+     82                      }
+     83                  }
+     84              }
+     85              
+     86              if (ret_val != SCP1_BSY_TIMEOUT)
+     87              {
+     88              insufficient_block = length%4; /*If data length is insufficient a block, */
+     89              if ( insufficient_block != 0 )  
+     90              {
+     91                  SPI_writeBuffer((data+(i*4)),insufficient_block, m_endianityMode);
+     92                  busy_timeout = xTaskGetTickCount( );
+     93                  while( GPIOMiddleLevel_Read_InBit( __I_SCP1_BUSY ) == 0 )
+     94                  {
+     95                      if ( ((xTaskGetTickCount() - busy_timeout)/portTICK_RATE_MS) > TIMEOUT )
+     96                      {
+     97                          busy_timeout = 0;
+     98                          ret_val = SCP1_BSY_TIMEOUT;
+     99                          break;
+    100                      }
+    101                  }
+    102              }
+    103              }
+    104          
+    105              SPI_unselectChip(CS49844_SPI_NPCS);
+    106              
+    107              /* SPI unlock*/
+    108              SPI_mutex_unlock();
+    109          
+    110              return ret_val;
+    111              
+    112          }
+    113          
+    114          
+    115          int8 CS49844SPI_write_ULD_buffer(const byte* data, uint16 length)
+    116          {
+    117              int i = 0,j=0;
+    118              portTickType busy_timeout = 0;
+    119          
+    120              uint16	block_num = 0;
+    121              uint16	insufficient_block = 0;
+    122              int ret_val = SCP1_PASS;
+    123          
+    124          
+    125              if ( SPILowLevel_isEnable( ) == FALSE )
+    126              {
+    127                  ret_val = SCP1_BYPASS;
+    128                  return ret_val;
+    129              }
+    130              /* SPI lock*/
+    131              if (SPI_mutex_lock() == FALSE)
+    132              {
+    133                  ret_val = SCP1_BSY_TIMEOUT;
+    134                  return ret_val;
+    135              }
+    136          
+    137              /* Select SPI chip.*/
+    138              SPI_selectChip(CS49844_SPI_NPCS);
+    139              SPI_write( SLAVE_ADDRESS_W_CS49844 );
+    140          
+    141          
+    142              block_num = length/4;
+    143          
+    144          
+    145              for ( i = 0; i < block_num; i++ )
+    146              {
+    147                  SPI_write(*(data+i*4));
+    148                  SPI_write(*(data+i*4+1));
+    149                  SPI_write(*(data+i*4+2));
+    150                  SPI_write(*(data+i*4+3));
+    151                  
+    152                  busy_timeout = xTaskGetTickCount( );
+    153                  while( GPIOMiddleLevel_Read_InBit( __I_SCP1_BUSY ) == 0 )
+    154                  {
+    155                      if ( ((xTaskGetTickCount() - busy_timeout)/portTICK_RATE_MS) > TIMEOUT )
+    156                      {
+    157                          busy_timeout = 0;
+    158                          ret_val = SCP1_BSY_TIMEOUT;
+    159                          break;
+    160                      }
+    161                  }
+    162          
+    163                  if (ret_val == SCP1_BSY_TIMEOUT)
+    164                  {
+    165                      break;
+    166                  }
+    167              }
+    168          
+    169              if (ret_val != SCP1_BSY_TIMEOUT)
+    170              {
+    171                  insufficient_block = length%4;
+    172                  if(insufficient_block>0)
+    173                  {
+    174                      for(j=0;j<insufficient_block;j++)
+    175                          SPI_write(*(data+i*4)+j);
+    176          
+    177                      busy_timeout = xTaskGetTickCount( );
+    178                      while( GPIOMiddleLevel_Read_InBit( __I_SCP1_BUSY ) == 0 )
+    179                      {
+    180                          if ( ((xTaskGetTickCount() - busy_timeout)/portTICK_RATE_MS) > TIMEOUT )
+    181                          {
+    182                              busy_timeout = 0;
+    183                              ret_val = SCP1_BSY_TIMEOUT;
+    184                              break;
+    185                          }
+    186                      }
+    187                  }
+    188              }
+    189          
+    190              SPI_unselectChip(CS49844_SPI_NPCS);
+    191          
+    192              /* SPI unlock*/
+    193              SPI_mutex_unlock();
+    194              
+    195              return ret_val;
+    196              
+    197          }
+    198          
+    199          
+    200          int8 CS49844SPI_read_buffer( byte* data, uint16 length )
+    201          {
+    202              portTickType irq_timeout = 0;
+    203              uint16	block_num = 0;
+    204              int i = 0;
+    205              int ret_val = SCP1_PASS;
+    206             
+    207              if ( SPILowLevel_isEnable () == FALSE )
+    208              {
+    209                  ret_val = SCP1_BYPASS;
+    210                  return ret_val;
+    211              }
+    212          
+    213              irq_timeout = xTaskGetTickCount( );
+    214              while( GPIOMiddleLevel_Read_InBit( __I_SCP1_IRQ ) == 1 )
+    215              {
+    216                  if ( ((xTaskGetTickCount() - irq_timeout)/portTICK_RATE_MS) > TASK_MSEC2TICKS(100) )
+    217                  {
+    218                      irq_timeout = 0;
+    219                      ret_val = SCP1_BSY_TIMEOUT;
+    220                      break;
+    221                  }
+    222              }
+    223          
+    224              if (ret_val != SCP1_BSY_TIMEOUT)
+    225              {
+    226                  /* Select SPI chip.*/
+    227                  /* SPI lock*/
+    228                  if (SPI_mutex_lock() == FALSE)
+    229                  {
+    230                      ret_val = SCP1_BSY_TIMEOUT;
+    231                      return ret_val;
+    232                  }
+    233          
+    234                  SPI_selectChip(CS49844_SPI_NPCS);
+    235          
+    236                  /*Write address of chip*/
+    237                  SPI_write(SLAVE_ADDRESS_R_CS49844);
+    238          
+    239                  /*read dummy byte*/
+    240                  SPI_I2S_ReceiveData( _SPI ); 
+    241                  SPI_I2S_ReceiveData( _SPI );
+    242          
+    243                  /*Write 4 data bytes*/
+    244                  block_num = length/4; /*1 block is 4 bytes*/
+    245                  for ( i = 0; i < block_num; i++ )
+    246                  {
+    247                      SPI_readBuffer((data+(i*4)),4, m_endianityMode );
+    248                  }
+    249          
+    250                  /* Unselect SPI chip.*/
+    251                  SPI_unselectChip(CS49844_SPI_NPCS);
+    252          
+    253                  /* SPI unlock*/
+    254                  SPI_mutex_unlock();
+    255              }
+    256          
+    257          
+    258              if (ret_val != SCP1_BSY_TIMEOUT)
+    259              {
+    260                  if ( GPIOMiddleLevel_Read_InBit( __I_SCP1_IRQ ) == 0 )
+    261                  {
+    262                      ret_val = SCP1_IRQ_LOW; /*when IRQ is still a low, DSP require read more date*/   
+    263                  }
+    264              }
+    265              
+    266              return ret_val;
+    267          }
+    268          
+    269          int8 CS49844SPI_nIrq_read_buffer( byte* data, uint16 length )
+    270          {
+    271              uint16	block_num = 0;
+    272               int i = 0;
+    273              int ret_val = SCP1_PASS;
+    274             
+    275              if ( SPILowLevel_isEnable () == FALSE )
+    276              {
+    277                  ret_val = SCP1_BYPASS;
+    278                  return ret_val;
+    279              }
+    280              /* SPI lock*/
+    281              if (SPI_mutex_lock() == FALSE)
+    282              {
+    283                  ret_val = SCP1_BSY_TIMEOUT;
+    284                  return ret_val;
+    285              }
+    286          
+    287              /* Select SPI chip.*/
+    288              SPI_selectChip(CS49844_SPI_NPCS);
+    289          
+    290              /*Write address of chip*/
+    291              SPI_write(SLAVE_ADDRESS_R_CS49844);
+    292          
+    293              /*read dummy byte*/
+    294              SPI_I2S_ReceiveData( _SPI ); 
+    295              SPI_I2S_ReceiveData( _SPI );
+    296          
+    297              /*Write 4 data bytes*/
+    298              block_num = length/4; /*1 block is 4 bytes*/
+    299              for ( i = 0; i < block_num; i++ )
+    300              {
+    301                  SPI_readBuffer((data+(i*4)),4, m_endianityMode );
+    302              }
+    303              /* Unselect SPI chip.*/
+    304              SPI_unselectChip(CS49844_SPI_NPCS);
+    305          
+    306              /* SPI unlock*/
+    307              SPI_mutex_unlock();
+    308          
+    309              return ret_val;
+    310          
+    311          }
+    312          
+    313          
+    314          /*IRQ no drop, (MSG NOTE 1): Read four bytes from the DSP /IRQ will not drop for this read sequence)*/
+    315          int8 CS49844SPI_MsgNote1( byte* data, uint16 length )
+    316          {
+    317              uint16	block_num = 0;
+    318              int i = 0;
+    319              int ret_val = SCP1_PASS;
+    320             
+    321              if ( SPILowLevel_isEnable () == FALSE )
+    322              {
+    323                  ret_val = SCP1_BYPASS;
+    324                  return ret_val;
+    325              }
+    326                  
+    327              /* SPI lock*/
+    328              if (SPI_mutex_lock() == FALSE)
+    329              {
+    330                  ret_val = SCP1_BSY_TIMEOUT;
+    331                  return ret_val;
+    332              }
+    333          
+    334              /* Select SPI chip.*/
+    335              if (SPI_selectChip(CS49844_SPI_NPCS) == FALSE)
+    336              {
+    337                  ret_val = SCP1_BSY_TIMEOUT;
+    338                  //return ret_val;
+    339              }
+    340          
+    341              if (ret_val == SCP1_PASS)
+    342              {
+    343                  /*Write address of chip*/
+    344                  SPI_write(SLAVE_ADDRESS_R_CS49844);
+    345          
+    346                  /*read dummy byte*/
+    347                  SPI_I2S_ReceiveData( _SPI ); 
+    348                  SPI_I2S_ReceiveData( _SPI );
+    349          
+    350                  /*Write 4 data bytes*/
+    351                  block_num = length/4; /*1 block is 4 bytes*/
+    352                  for ( i = 0; i < block_num; i++ )
+    353                  {
+    354                      SPI_readBuffer((data+(i*4)),4, m_endianityMode );
+    355                  }
+    356                  /* Unselect SPI chip.*/
+    357                  SPI_unselectChip(CS49844_SPI_NPCS);
+    358              }
+    359          
+    360              /* SPI unlock*/
+    361              SPI_mutex_unlock();
+    362          
+    363              return ret_val;
+    364          }
+    365          
+    366          bool CS49844SPI_CommandWrite(uint32 cmd, uint32 value)
+    367          {
+    368              uint32 command = cmd;
+    369              uint32 val = value;
+    370          
+    371              if (CS49844SPI_write_buffer((byte*)&command, (sizeof(command)/sizeof(uint8))) == SCP1_IRQ_TIMEOUT )
+    372              {
+    373                  return FALSE;
+    374              }
+    375                  
+    376              if (CS49844SPI_write_buffer((byte*)&val, (sizeof(val)/sizeof(uint8))) == SCP1_IRQ_TIMEOUT )
+    377              {
+    378                  return FALSE;
+    379              }
+    380          
+    381              return TRUE;
+    382          
+    383          }
+    384          
+    385          bool CS49844SPI_ReadSolicited( uint32 cmd, uint32 *pValue )
+    386          {
+    387              bool ret;
+    388              uint32 command = cmd;
+    389              uint32 value = 0;
+    390          
+    391              if ( pValue == NULL )
+    392                  return FALSE;
+    393          
+    394              if( CS49844SPI_write_buffer((byte*)&command, (sizeof(command)/sizeof(uint8)))== SCP1_IRQ_TIMEOUT)
+    395              {
+    396                  return FALSE;
+    397              }
+    398          
+    399              /*Read response command word*/
+    400              if (CS49844SPI_read_buffer((byte*)&value, sizeof(value)/sizeof(uint8))== SCP1_IRQ_TIMEOUT)
+    401              {
+    402                  return FALSE;
+    403              }
+    404          
+    405              /*read respones data word*/
+    406              if (CS49844SPI_read_buffer((byte*)&value, sizeof(value)/sizeof(uint8))== SCP1_IRQ_TIMEOUT)
+    407              {
+    408                  return FALSE;
+    409              }
+    410              *pValue = value;
+    411                  
+    412              return TRUE;
+    413          
+    414          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       16  CS49844SPI_CommandWrite
+             16 -> CS49844SPI_write_buffer
+       24  CS49844SPI_MsgNote1
+             24 -> SPILowLevel_isEnable
+             24 -> SPI_I2S_ReceiveData
+             24 -> SPI_mutex_lock
+             24 -> SPI_mutex_unlock
+             24 -> SPI_readBuffer
+             24 -> SPI_selectChip
+             24 -> SPI_unselectChip
+             24 -> SPI_write
+       16  CS49844SPI_ReadSolicited
+             16 -> CS49844SPI_read_buffer
+             16 -> CS49844SPI_write_buffer
+       24  CS49844SPI_nIrq_read_buffer
+             24 -> SPILowLevel_isEnable
+             24 -> SPI_I2S_ReceiveData
+             24 -> SPI_mutex_lock
+             24 -> SPI_mutex_unlock
+             24 -> SPI_readBuffer
+             24 -> SPI_selectChip
+             24 -> SPI_unselectChip
+             24 -> SPI_write
+       24  CS49844SPI_read_buffer
+             24 -> GPIOMiddleLevel_Read_InBit
+             24 -> SPILowLevel_isEnable
+             24 -> SPI_I2S_ReceiveData
+             24 -> SPI_mutex_lock
+             24 -> SPI_mutex_unlock
+             24 -> SPI_readBuffer
+             24 -> SPI_selectChip
+             24 -> SPI_unselectChip
+             24 -> SPI_write
+             24 -> xTaskGetTickCount
+       32  CS49844SPI_write_ULD_buffer
+             32 -> GPIOMiddleLevel_Read_InBit
+             32 -> SPILowLevel_isEnable
+             32 -> SPI_mutex_lock
+             32 -> SPI_mutex_unlock
+             32 -> SPI_selectChip
+             32 -> SPI_unselectChip
+             32 -> SPI_write
+             32 -> xTaskGetTickCount
+       32  CS49844SPI_write_buffer
+             32 -> GPIOMiddleLevel_Read_InBit
+             32 -> SPILowLevel_isEnable
+             32 -> SPI_mutex_lock
+             32 -> SPI_mutex_unlock
+             32 -> SPI_selectChip
+             32 -> SPI_unselectChip
+             32 -> SPI_write
+             32 -> SPI_writeBuffer
+             32 -> xTaskGetTickCount
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable2
+       6  ?Subroutine0
+       6  ?Subroutine1
+      12  ?Subroutine2
+       6  ?Subroutine3
+      10  ?Subroutine4
+      44  CS49844SPI_CommandWrite
+      90  CS49844SPI_MsgNote1
+      66  CS49844SPI_ReadSolicited
+      80  CS49844SPI_nIrq_read_buffer
+     130  CS49844SPI_read_buffer
+     182  CS49844SPI_write_ULD_buffer
+     154  CS49844SPI_write_buffer
+       1  m_endianityMode
+
+ 
+   1 byte  in section .data
+ 790 bytes in section .text
+ 
+ 790 bytes of CODE memory
+   1 byte  of DATA memory
+
+Errors: none
+Warnings: 1

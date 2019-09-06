@@ -1,0 +1,551 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:43 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\application\sk_app_edid #
+#                    data.c                                                   #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\application\sk_app_edid #
+#                    data.c -D S4051A -D DEBUG -D FREE_RTOS -D                #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\sk_app_ediddata.lst                                   #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\sk_app_ediddata.o                                      #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\application\sk_app_ediddata.c
+      1          //***************************************************************************
+      2          //!file     si_device_edid.c
+      3          //!brief    SiI953x EDID stuff.
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1060 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2002-2010, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include "device_config.h"
+     14          #include "si_drv_nvram_sram.h"
+     15          #include "si_edid_tx_component.h"
+     16          
+     17          //------------------------------------------------------------------------------
+     18          //  Module Data
+     19          //------------------------------------------------------------------------------
+     20          /*
+     21          ROM const uint8_t gEdidFlashEdidVgaTable [ EDID_VGA_TABLE_LEN ] =
+     22          {
+     23          //  00    01    02   03     04    05    06    07   08     09    0A    0B    0C    0D    0E   0F
+     24              0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x10, 0xAC, 0x12, 0x40, 0x51, 0x53, 0x44, 0x42,
+     25              0x1C, 0x10, 0x01, 0x03, 0x0E, 0x22, 0x1B, 0x78, 0xEE, 0xE7, 0xE5, 0xA3, 0x59, 0x4A, 0x9E, 0x23,
+     26              0x14, 0x50, 0x54, 0xA5, 0x4B, 0x00, 0x71, 0x4F, 0x81, 0x80, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01,
+     27              0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x30, 0x2A, 0x00, 0x98, 0x51, 0x00, 0x2A, 0x40, 0x30, 0x70,
+     28              0x13, 0x00, 0x52, 0x0E, 0x11, 0x00, 0x00, 0x1E, 0x00, 0x00, 0x00, 0xFF, 0x00, 0x43, 0x43, 0x32,
+     29              0x38, 0x30, 0x36, 0x37, 0x45, 0x42, 0x44, 0x53, 0x51, 0x0A, 0x00, 0x00, 0x00, 0xFC, 0x00, 0x44,
+     30              0x45, 0x4C, 0x4C, 0x20, 0x31, 0x37, 0x30, 0x37, 0x46, 0x50, 0x0A, 0x20, 0x00, 0x00, 0x00, 0xFD,
+     31              0x00, 0x38, 0x4C, 0x1E, 0x51, 0x0E, 0x00, 0x0A, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x00, 0x1D
+     32          };
+     33          */
+     34          
+     35          /* Basic Audio, with deep color.  */
+     36          const uint8_t gEdidFlashEdidTable [ EDID_TABLE_LEN ] =
+     37          {
+     38          #if ( configSII_DEV_953x_PORTING == 1 ) /*Smith fixes: EDID 8-3 fail: Removes VSDB 48 bits deep color*/
+     39          
+     40          0x00,  0xFF,  0xFF,  0xFF,  0xFF,  0xFF,  0xFF,  0x00,  0x4D,  0x29,  0x33,  0x95,  0x01,  0x00,  0x00,  0x00,
+     41          0x20,  0x15,  0x01,  0x03,  0x80,  0x52,  0x2E,  0x78,  0x0A,  0x0D,  0xC9,  0xA0,  0x57,  0x47,  0x98,  0x27,
+     42              0x12, 0x48, 0x4C, 0x21, 0x09, 0x00, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01,
+     43              0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x02, 0x3A, 0x80, 0x18, 0x71, 0x38, 0x2D, 0x40, 0x58, 0x2C,
+     44          0x45,  0x00,  0xC4,  0x8E,  0x21,  0x00,  0x00,  0x1A,  0x01,  0x1D,  0x00,  0x72,  0x51,  0xD0,  0x1E,  0x20,
+     45              0x6E, 0x28, 0x55, 0x00, 0xC4, 0x8E, 0x21, 0x00, 0x00, 0x1E, 0x00, 0x00, 0x00, 0xFC, 0x00, 0x43,
+     46          0x50,  0x39,  0x36,  0x38,  0x37,  0x0A,  0x20,  0x20,  0x20,  0x20,  0x20,  0x20,  0x00,  0x00,  0x00,  0xFD,
+     47          0x00,  0x17,  0x78,  0x0F,  0x85,  0x1E,  0x00,  0x0A,  0x20,  0x20,  0x20,  0x20,  0x20,  0x20,  0x01,  0x6E,
+     48          //Block 1
+     49          0x02,  0x03,  0x37,  0x72,  0x55,  0x90,  0x84,  0x03,  0x02,  0x0E,  0x0F,  0x07,  0x23,  0x24,  0x05,  0x94,
+     50          0x13,  0x12,  0x11,  0x1D,  0x1E,  0x20,  0x21,  0x22,  0x01,  0x1F,  0x26,  0x09,  0x7F,  0x07,  0x15,  0x07,
+     51          0x50,  0x83,  0x01,  0x00,  0x00,  0x6E,  0x03,  0x0C,  0x00,  0x10,  0x00,  0xB8,  0x3C,  0x21,  0x84,  0x80,
+     52          0x01,  0x02,  0x03,  0x04,  0xE2,  0x00,  0xFF,  0x8C,  0x0A,  0xD0,  0x90,  0x20,  0x40,  0x31,  0x20,  0x0C,
+     53          0x40,  0x55,  0x00,  0xC4,  0x8E,  0x21,  0x00,  0x00,  0x18,  0x01,  0x1D,  0x80,  0x18,  0x71,  0x1C,  0x16,
+     54          0x20,  0x58,  0x2C,  0x25,  0x00,  0xC4,  0x8E,  0x21,  0x00,  0x00,  0x00,  0x9E,  0x00,  0x00,  0x00,  0x00,
+     55          0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00,
+     56          0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0xB0
+     57          
+     58          #else
+     59          
+     60          // Bug 33154 - Melbourne SiI9533 EDID ID Product Code is NOT correct
+     61          #if ( configSII_DEV_9535 == 1)
+     62          	0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x4D, 0x29, 0x35, 0x95, 0x01, 0x00, 0x00, 0x00,
+     63          #else
+     64          	0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x4D, 0x29, 0x33, 0x95, 0x01, 0x00, 0x00, 0x00,
+     65          #endif
+     66          	0x20, 0x15, 0x01, 0x03, 0x80, 0x52, 0x2E, 0x78, 0x0A, 0x0D, 0xC9, 0xA0, 0x57, 0x47, 0x98, 0x27,
+     67          	0x12, 0x48, 0x4C, 0x21, 0x09, 0x00, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01,
+     68          	0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x02, 0x3A, 0x80, 0x18, 0x71, 0x38, 0x2D, 0x40, 0x58, 0x2C,
+     69          	0x45, 0x00, 0xC4, 0x8E, 0x21, 0x00, 0x00, 0x1E, 0x01, 0x1D, 0x00, 0x72, 0x51, 0xD0, 0x1E, 0x20,
+     70          	0x6E, 0x28, 0x55, 0x00, 0xC4, 0x8E, 0x21, 0x00, 0x00, 0x1E, 0x00, 0x00, 0x00, 0xFC, 0x00, 0x43,
+     71          	0x50, 0x39, 0x36, 0x38, 0x37, 0x0A, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x00, 0x00, 0x00, 0xFD,
+     72          // Bug 33154 - Melbourne SiI9533 EDID ID Product Code is NOT correct
+     73          #if ( configSII_DEV_9535 == 1)
+     74          	0x00, 0x17, 0x78, 0x0F, 0x85, 0x1E, 0x00, 0x0A, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x01, 0x68,
+     75          #else
+     76          	0x00, 0x17, 0x78, 0x0F, 0x85, 0x1E, 0x00, 0x0A, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x01, 0x6A,
+     77          #endif
+     78              0x02, 0x03, 0x37, 0x72, 0x55, 0x90, 0x84, 0x03, 0x02, 0x0E, 0x0F, 0x07, 0x23, 0x24, 0x05, 0x94,
+     79              0x13, 0x12, 0x11, 0x1D, 0x1E, 0x20, 0x21, 0x22, 0x01, 0x1F, 0x26, 0x09, 0x7F, 0x07, 0x15, 0x07,
+     80              0x50, 0x83, 0x01, 0x00, 0x00, 0x6E, 0x03, 0x0C, 0x00, 0x10, 0x00, 0xF8, 0x3C, 0x21, 0x84, 0x80,
+     81              0x01, 0x02, 0x03, 0x04, 0xE2, 0x00, 0xFF, 0x8C, 0x0A, 0xD0, 0x90, 0x20, 0x40, 0x31, 0x20, 0x0C,
+     82              0x40, 0x55, 0x00, 0xC4, 0x8E, 0x21, 0x00, 0x00, 0x18, 0x01, 0x1D, 0x80, 0x18, 0x71, 0x1C, 0x16,
+     83              0x20, 0x58, 0x2C, 0x25, 0x00, 0xC4, 0x8E, 0x21, 0x00, 0x00, 0x9E, 0x00, 0x00, 0x00, 0x00, 0x00,
+     84              0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+     85              0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x70
+     86          #endif
+     87          
+     88          };
+     89          
+     90          #if ( configSII_DEV_953x_PORTING == 1 ) /*Smith fixes: EDID 8-3 fail for VSDB 48 bits deep color*/
+     91          #define EDID_B1_CSUM        0xB0 
+     92          #else
+     93          #define EDID_B1_CSUM        0x70 // Last byte of EDID above ------------------------------------^
+     94          #endif
+     95          
+     96          #define CEC_PA_ADDR         0xA9 // Offset of PA in EDID (... 03 0C 00 *10* 00 ...)
+     97          
+     98          // EDID table is supposed to have PA = 1000
+     99          #define CSUM_PA_0     EDID_B1_CSUM                    // PA = 1000
+    100          #define CSUM_PA_1   ((EDID_B1_CSUM - 0x10) & 0xFF)    // PA = 2000
+    101          #define CSUM_PA_2   ((EDID_B1_CSUM - 0x20) & 0xFF)    // PA = 3000
+    102          #define CSUM_PA_3   ((EDID_B1_CSUM - 0x30) & 0xFF)    // PA = 4000
+    103          
+    104          #define ENABLE_TWO_EDID_MODE  DISABLE
+    105          
+    106          SiiDeviceBootData_t gEdidFlashDevBootData =
+    107          {
+    108          /*    0xAA,           // nvm_config;
+    109              0x55,           // edid_valid;
+    110              0x06,           // nvm_version;
+    111          #if (ENABLE_TWO_EDID_MODE == ENABLE)
+    112              0x03,           // edid_copy_dest;  //two edid
+    113          #else
+    114              0x3F,           // edid_copy_dest; 
+    115          #endif    
+    116              0x3F,           // hpd_hw_ctrl;
+    117              0x00,           // ddc_filter_sel;
+    118              0x00,           // wakeup_source;
+    119              0x40,           // edid_vga_copy_dest;
+    120              { 0xFF, 0xFF }, // spare1[2];
+    121              0xA6,           // cec_pa_addr;
+    122              0xFF,           // spare2;
+    123              0x10,           // cec_pad_h_ch0;
+    124              0x00,           // cec_pad_l_ch0;
+    125              0x20,           // cec_pad_h_ch1;
+    126              0x00,           // cec_pad_l_ch1;   Offset 0x0F
+    127              0x30,           // cec_pad_h_ch2;   Offset 0x10
+    128              0x00,           // cec_pad_l_ch2;
+    129              0x40,           // cec_pad_h_ch3;
+    130              0x00,           // cec_pad_l_ch3;
+    131              0x50,           // cec_pad_h_ch4;
+    132              0x00,           // cec_pad_l_ch4;
+    133              0x60,           // cec_pad_h_ch5;
+    134              0x00,           // cec_pad_l_ch5;
+    135              { 0xFF, 0xFF, 0xFF, 0xFF },// spare4[4];
+    136              0x2C,           // checksum_ch0;    Offset 0x1C
+    137              0x1C,           // checksum_ch1;
+    138              0x0C,           // checksum_ch2;
+    139              0xFC,           // checksum_ch3;
+    140              0xEC,           // checksum_ch4;
+    141              0xDC,           // checksum_ch5;    Offset 0x21
+    142              { 0xFF, 0xFF }, // spare6[2];
+    143              0x03,           // mhlPortSelect
+    144              0xFF,           // spare
+    145              0x84,           // miscControl0     RSEN and External Reset;    //0x26
+    146              0xFF,           // Spare7                                       //0x27
+    147              0x35,           // miscControl1                                 //0x28
+    148              { 0 }           // spare8[24]
+    149          
+    150          */
+    151              0xAA,
+    152              0x55,
+    153              0x06,
+    154              0x0F, //00 extra Start
+    155              0x0F,           //04: hpd_hw_ctrl
+    156              0x00,           //05: i2c_filter_sel, sda_delay_en & ddc_filter_sel. CAUTION: non-zero value may lock up I2C permanently
+    157              0x00,           //06: wakeup_source
+    158              0x00,           //07: edid_vga_copy_dest
+    159              {0xFF,0xFF},    //08,09: spare1[2]
+    160              CEC_PA_ADDR,           //0A: cec_pa_addr
+    161              0xFF, //08
+    162          
+    163          #if 1 // smith fixes: EDID 8-3 failure item, FAIL->Physical address in HDMI VSDB is 0.0.3.0
+    164              0x10,
+    165              0x00,
+    166              0x20,
+    167              0x00, //0C
+    168              0x30,
+    169              0x00,
+    170              0x40,
+    171              0x00, //10
+    172          #else    
+    173              0x00,
+    174              0x10,
+    175              0x00,
+    176              0x20, //0C
+    177              0x00,
+    178              0x30,
+    179              0x00,
+    180              0x40, //10
+    181          #endif    
+    182              {0xFF,0xFF,0x00,0x00,0xFF,0xFF}, //14-19: spare3[6]
+    183              {0xFF,0xFF},    //1A-1B: spare4[2]
+    184              CSUM_PA_0,           //1C: checksum_ch0
+    185              CSUM_PA_1,           //1D: checksum_ch1
+    186              CSUM_PA_2,           //1E: checksum_ch2
+    187              CSUM_PA_3,           //1F: checksum_ch3
+    188              {0xFF,0x00,0xFF}, //20,21,22: spare5[3]
+    189              0xFF,           //23: spare6
+    190              0x03,           //24: select MHL for port 0 and 1 (1st byte in this dword)
+    191              0x00,           //25: mhl_version_supported
+    192              0x04,           //26: RSEN and External Reset, mhl_1x_en, mhl_hpd_en, term_timer_en
+    193              0x00,           //27: Spare7[1]
+    194              0x35,           //28: MHl Control Register: (reserved), NVRAM_hpd_retry_sel,MHL_AUTO_TERM, EN_WAKEUP,
+    195                              //                               PDN_IO_POWR, HW_CABLE_DETECT_EN, MHL_TRI_EN,NVM_STPG_EN
+    196              0x01,           //29: MHL_DEV_CAP_03 -- MHL_ADOPTER_ID_HIGH
+    197              0x42,           //2A: MHL_DEV_CAP_04 -- MHL_ADOPTER_ID_LOW
+    198              0x95,           //2B: MHL_DEV_CAP_0B -- MHL_DEVICE_ID_HIGH
+    199          #if ( configSII_DEV_9535 == 1 )
+    200              0x35,           //2C: MHL_DEV_CAP_0C -- MHL_DEVICE_ID_LOW
+    201          #else
+    202              0x33,           //2C: MHL_DEV_CAP_0C -- MHL_DEVICE_ID_LOW
+    203          #endif
+    204              { 0 }           // spare8[19]
+    205          };
+    206          
+    207          #if (MHL_EXTRA == ENABLE)
+    208          // TODO:: TV Vendor needs to populate this
+    209          // These are the 2D Short Video Descriptors that are supported also in 3D
+    210          // These should be exactly in the same order as they are listed in EDID Block 1 (CEA-861)
+    211          const uint8_t g3DEdidTableVIC [ EDID_3D_VIC_TABLE_LEN ] =
+    212          {
+    213          	0x00, 	// burst_id_h
+    214          	0x10, 	// burst_id_l
+    215          	0xB6, 	// checksum:: for this particular WRITE_BURST of max 16 bytes, this includes all the entries
+    216          			//			  along with checksum itself, pls see MHL spec for more info
+    217          	0x15, 	// total # of MHL Video Descriptors in 3D_VIC Write_Burst sequence
+    218          	0x01,	// sequence of this particular WRITE_BURST among others
+    219          	0x05,	// number of 2 byte entries in this WRITE_BURST, anywhere between 0 to 5
+    220          	0x00, 0x06, 0x00, 0x07, 0x00, 0x06, 0x00, 0x06, 0x00, 0x06, // entries
+    221          
+    222          	0x00, 	// burst_id_h , ,
+    223          	0x10, 	// burst_id_l
+    224          	0xB5, 	// checksum:: for this particular WRITE_BURST of max 16 bytes, this includes all the entries
+    225          			//			  along with checksum itself, pls see MHL spec for more info
+    226          	0x15, 	// total # of MHL Video Descriptors in 3D_VIC Write_Burst sequence
+    227          	0x02,	// sequence of this particular WRITE_BURST among others
+    228          	0x05,	// number of 2 byte entries in this WRITE_BURST, anywhere between 0 to 5
+    229          	0x00, 0x06, 0x00, 0x06, 0x00, 0x06, 0x00, 0x06, 0x00, 0x07, // entries
+    230          
+    231          	0x00, 	// burst_id_h , ,
+    232          	0x10, 	// burst_id_l
+    233          	0xB0, 	// checksum:: for this particular WRITE_BURST of max 16 bytes, this includes all the entries
+    234          			//			  along with checksum itself, pls see MHL spec for more info
+    235          	0x15, 	// total # of MHL Video Descriptors in 3D_VIC Write_Burst sequence
+    236          	0x03,	// sequence of this particular WRITE_BURST among others
+    237          	0x05,	// number of 2 byte entries in this WRITE_BURST, anywhere between 0 to 5
+    238          	0x00, 0x07, 0x00, 0x07, 0x00, 0x07, 0x00, 0x07, 0x00, 0x07, // entries
+    239          
+    240          	0x00, 	// burst_id_h , ,
+    241          	0x10, 	// burst_id_l
+    242          	0xB8, 	// checksum:: for this particular WRITE_BURST of max 16 bytes, this includes all the entries
+    243          			//			  along with checksum itself, pls see MHL spec for more info
+    244          	0x15, 	// total # of MHL Video Descriptors in 3D_VIC Write_Burst sequence
+    245          	0x04,	// sequence of this particular WRITE_BURST among others
+    246          	0x05,	// number of 2 byte entries in this WRITE_BURST, anywhere between 0 to 5
+    247          	0x00, 0x07, 0x00, 0x07, 0x00, 0x00, 0x00, 0x06, 0x00, 0x06, // entries
+    248          
+    249          	0x00, 	// burst_id_h , ,
+    250          	0x10, 	// burst_id_l
+    251          	0xCF, 	// checksum:: for this particular WRITE_BURST of max 16 bytes, this includes all the entries
+    252          			//			  along with checksum itself, pls see MHL spec for more info
+    253          	0x15, 	// total # of MHL Video Descriptors in 3D_VIC Write_Burst sequence
+    254          	0x05,	// sequence of this particular WRITE_BURST among others
+    255          	0x01,	// number of 2 byte entries in this WRITE_BURST, anywhere between 0 to 5
+    256          	0x00, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, // entries
+    257          };
+    258          
+    259          // TODO:: TV Vendor needs to populate this
+    260          // These are the 2D Detailed Timing Descriptors that are supported also in 3D
+    261          // These should be exactly in the same order as they are listed in EDID Block 0 and 1
+    262          // Block 1 (CEA-861) DTDs should follow after Block 0's
+    263          const uint8_t g3DEdidTableDTD [ EDID_3D_DTD_TABLE_LEN ] =
+    264          {
+    265          	0x00, 	// burst_id_h
+    266          	0x11, 	// burst_id_l
+    267          	0xDB, 	// checksum:: for this particular WRITE_BURST of max 16 bytes, this includes all the entries
+    268          			//			  along with checksum itself, pls see MHL spec for more info
+    269          	0x04, 	// total # of MHL Detailed Timing Descriptors in 3D_DTD Write_Burst sequence
+    270          	0x01,	// sequence of this particular WRITE_BURST among others
+    271          	0x02,	// number of 2 byte entries in this WRITE_BURST, anywhere between 0 to 5
+    272          	0x00, 0x07, 0x00, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, // entries
+    273          
+    274          	0x00, 	// burst_id_h , ,
+    275          	0x11, 	// burst_id_l
+    276          	0xDA, 	// checksum:: for this particular WRITE_BURST of max 16 bytes, this includes all the entries
+    277          			//			  along with checksum itself, pls see MHL spec for more info
+    278          	0x04, 	// total # of MHL Detailed Timing Descriptors in 3D_DTD Write_Burst sequence
+    279          	0x02,	// sequence of this particular WRITE_BURST among others
+    280          	0x02,	// number of 2 byte entries in this WRITE_BURST, anywhere between 0 to 5
+    281          	0x00, 0x07, 0x00, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, // entries
+    282          };
+    283          #endif
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      32  g3DEdidTableDTD
+      80  g3DEdidTableVIC
+      64  gEdidFlashDevBootData
+     256  gEdidFlashEdidTable
+
+ 
+  64 bytes in section .data
+ 368 bytes in section .rodata
+ 
+ 368 bytes of CONST memory
+  64 bytes of DATA  memory
+
+Errors: none
+Warnings: 1

@@ -1,0 +1,506 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:31 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\application\app_cbus\sk #
+#                    _app_cbus_demo.c                                         #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\application\app_cbus\sk #
+#                    _app_cbus_demo.c -D S4051A -D DEBUG -D FREE_RTOS -D      #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\sk_app_cbus_demo.lst                                  #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\sk_app_cbus_demo.o                                     #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\application\app_cbus\sk_app_cbus_demo.c
+      1          //***************************************************************************
+      2          //!file     sk_app_cbus_demo.c
+      3          //!brief
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2009-2012, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include "sk_app_cbus.h"
+     14          #include "si_regs_mhl953x.h"    //TODO: direct register access is not allowed at the app layer
+     15          
+     16          extern uint8_t portArray[2];
+     17          
+     18          static void PrintSendErr( char *pStr )
+     19          {
+     20              DEBUG_PRINT( MSG_ERR, "Couldn't send %s to peer\n", pStr );
+     21          }
+     22          
+     23          // Selecting the MHL port that you want to sent the demo command on
+     24          static bool_t SelectMHLPort()
+     25          {
+     26          	uint8_t   	i, port;
+     27          	bool_t		isMHLPort;
+     28          
+     29          	DEBUG_PRINT( MSG_ALWAYS, "Which MHL port you want to use for this demo: \n" );
+     30          	isMHLPort = false;
+     31          	port = SkAppIrGetSingleDigit( SII_INPUT_PORT_COUNT - 1 );
+     32          	for ( i = 0; i < MHL_MAX_CHANNELS; i++ )
+     33          	{
+     34          		if ( portArray[i] == port )
+     35          		{
+     36          			isMHLPort = true;
+     37          			break;
+     38          		}
+     39          	}
+     40          
+     41          	if( isMHLPort )
+     42          	{
+     43          		SkAppCbusInstanceSet(i);
+     44          		if( !SiiMhlRxCbusConnected())
+     45          		{
+     46          			DEBUG_PRINT( MSG_ALWAYS, "This CBus channel is not connected!, Please select the one that is connected! \n" );
+     47          			return false;
+     48          		}
+     49          	}
+     50          	else
+     51          	{
+     52          		DEBUG_PRINT( MSG_ALWAYS, "You have chosen a Non-MHL port, please choose wisely!! \n" );
+     53          		return false;
+     54          	}
+     55          
+     56          	return true;
+     57          }
+     58          
+     59          //------------------------------------------------------------------------------
+     60          // Function:    DemoCbus
+     61          // Description: CBUS demo command options
+     62          // Returns:
+     63          //------------------------------------------------------------------------------
+     64          
+     65          static char *pCbusDemoMenu [] =
+     66          {
+     67              "\nCBUS Demo",
+     68              tenDashes,
+     69              ccDisplayThisMenuMsg,
+     70              returnToMainDemoMsg,
+     71              "1 - Display this device's DEV CAPS",
+     72              "2 - Display connected device's DEV CAPS",
+     73              "3 - Send MHL_SET_HPD msg",
+     74              "4 - Send SET_INT msg",
+     75              "5 - Send WRITE_STAT msg",
+     76              "6 - Send MHL_MSC_MSG -> ( RCP 'PLAY' cmd ) msg",
+     77              "7 - Send MHL_WRITE_BURST msg",
+     78              NULL
+     79          };
+     80          
+     81          bool_t SkAppCbusDemo ( RC5Commands_t key )
+     82          {
+     83              uint8_t   	i;
+     84              uint8_t 	devCapValue;
+     85              uint16_t 	regAddr;
+     86              cbus_req_t 	req;
+     87          
+     88              switch ( key )
+     89              {
+     90          #if (PHILIPS_REMOTE == 1)
+     91                  case RC5_CC_SUBTITLE:
+     92          #else
+     93                  case RC5_HELP:
+     94          #endif
+     95                      PrintMenu( pCbusDemoMenu );
+     96                      break;
+     97          
+     98                  case RC5_0:
+     99                      app.demoMenuLevel = 0;
+    100                      PrintAlways( demoMenuExit );
+    101                      break;
+    102          
+    103                  case RC5_1:
+    104                   	 // Get our DEV CAPS
+    105                      PrintAlways( "\n\nMy Device Capability Regs are:: \n" );
+    106                   	for ( i = 0; i < 16; i++ )
+    107                   	{
+    108                   		regAddr = REG_CBUS_DEVICE_CAP_0 + i;
+    109                   		devCapValue = SiiDrvCbusRegisterGet( regAddr );
+    110                   		DEBUG_PRINT( MSG_ALWAYS, " Reg %02X :: %02X\n", REG_CBUS_DEVICE_CAP_0 + i, devCapValue );
+    111                   	}
+    112                       break;
+    113          
+    114                  case RC5_2:
+    115                  	if( SelectMHLPort() )
+    116                  	{
+    117                  		DEBUG_PRINT( MSG_ALWAYS, "Which peer's dev cap register offset you want to read: 0 to 9 ?\n" );
+    118                  		i = SkAppIrGetSingleDigit( 9 );
+    119                  		DEBUG_PRINT( MSG_ALWAYS, "\n\n Reading peer's Dev Cap register %02X: \n", i);
+    120          				// reading register offset
+    121          				SiiMhlRxReadDevCapReg(i);
+    122                  	}
+    123                      break;
+    124          
+    125                  case RC5_3:
+    126                  	if( SelectMHLPort() )
+    127                  	{
+    128          				 // Send MHL_CLR_HPD / and then send MHL_SET_HPD
+    129          				PrintAlways( "\n\nSending MHL_CLR_HPD to peer\n" );
+    130          				if( !(SiiMhlRxHpdSet( false )))
+    131          				{
+    132          					PrintSendErr( "MHL_CLR_HPD" );
+    133          				}
+    134          
+    135          				PrintAlways( "\n\nSending MHL_SET_HPD to peer\n" );
+    136          				if( !(SiiMhlRxHpdSet( true )))
+    137          				{
+    138          					PrintSendErr( "MHL_SET_HPD" );
+    139          				}
+    140                  	}
+    141                      break;
+    142          
+    143                  case RC5_4:
+    144                  	if( SelectMHLPort() )
+    145                  	{
+    146                  		PrintAlways( "\n\nSending MHL_SET_INT to peer, sending EDID_CHG interrupt" );
+    147          				if( !SiiMhlRxSendEdidChange())
+    148          				{
+    149          					PrintSendErr( "\nSiiMhlRxSendEdidChange() failed!!\n" );
+    150          				}
+    151                  	}
+    152                      break;
+    153          
+    154                  case RC5_5:
+    155                  	if( SelectMHLPort() )
+    156                  	{
+    157                  		PrintAlways( "\n\nSending MHL_WRITE_STAT to peer, sending PATH_EN status to peer" );
+    158          				if( !SiiMhlRxPathEnable( true ) )
+    159          				{
+    160          					PrintSendErr( "SiiMhlRxPathEnable() failed!!\n" );
+    161          				}
+    162                  	}
+    163          			break;
+    164          
+    165                  case RC5_6:
+    166                  	if( SelectMHLPort() )
+    167                  	{
+    168          				PrintAlways( "\n\nSending MHL_MSC_MSG -> ( RCP 'PLAY' cmd ) msg to peer\n" );
+    169          				if( !(SiiMhlRxSendRCPCmd(MHL_RCP_CMD_PLAY)) )
+    170          				{
+    171          					PrintSendErr( "MHL_MSC_MSG" );
+    172          				}
+    173                  	}
+    174                      break;
+    175                  case RC5_7:
+    176                  	if( SelectMHLPort() )
+    177                  	{
+    178          				PrintAlways( "\n\nSending MHL_WRITE_BURST to peer, check peer's scratchpad registers!!\n" );
+    179          				// write different values in different registers
+    180          				for ( i = 0; i < 16; i++ )
+    181          				{
+    182          					req.msgData[i] = i + 5;
+    183          				}
+    184          
+    185          				if( !(SiiMhlRxWritePeerScratchpad(0, 16, &req.msgData[0])) )
+    186          				{
+    187          					PrintSendErr( "MHL_WRITE_BURST" );
+    188          				}
+    189                  	}
+    190          			break;
+    191                  default:
+    192                      break;
+    193              }
+    194          
+    195              return( false );
+    196          }
+    197          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        8  SelectMHLPort
+              8 -> SiiMhlRxCbusConnected
+              8 -> SkAppCbusInstanceSet
+              8 -> SkAppIrGetSingleDigit
+       32  SkAppCbusDemo
+             32 -> PrintAlways
+             32 -> PrintMenu
+             32 -> SelectMHLPort
+             32 -> SiiDrvCbusRegisterGet
+             32 -> SiiMhlRxHpdSet
+             32 -> SiiMhlRxPathEnable
+             32 -> SiiMhlRxReadDevCapReg
+             32 -> SiiMhlRxSendEdidChange
+             32 -> SiiMhlRxSendRCPCmd
+             32 -> SiiMhlRxWritePeerScratchpad
+             32 -> SkAppIrGetSingleDigit
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      36  ?<Constant "1 - Display this devi...">
+      40  ?<Constant "2 - Display connected...">
+      28  ?<Constant "3 - Send MHL_SET_HPD msg">
+      24  ?<Constant "4 - Send SET_INT msg">
+      24  ?<Constant "5 - Send WRITE_STAT msg">
+      48  ?<Constant "6 - Send MHL_MSC_MSG ...">
+      32  ?<Constant "7 - Send MHL_WRITE_BU...">
+      12  ?<Constant "\nCBUS Demo">
+      36  ?<Constant "\n\nMy Device Capabilit...">
+      32  ?<Constant "\n\nSending MHL_CLR_HPD...">
+      60  ?<Constant "\n\nSending MHL_MSC_MSG...">
+      32  ?<Constant "\n\nSending MHL_SET_HPD...">
+      60  ?<Constant "\n\nSending MHL_SET_INT...">
+      72  ?<Constant "\n\nSending MHL_WRITE_B...">
+      68  ?<Constant "\n\nSending MHL_WRITE_S...">
+       4  ??DataTable16
+       4  ??DataTable16_1
+       4  ??DataTable16_2
+       4  ??DataTable16_3
+      46  SelectMHLPort
+     260  SkAppCbusDemo
+      48  pCbusDemoMenu
+
+ 
+  48 bytes in section .data
+ 244 bytes in section .rodata
+ 682 bytes in section .text
+ 
+ 682 bytes of CODE  memory
+ 244 bytes of CONST memory
+  48 bytes of DATA  memory
+
+Errors: none
+Warnings: 2

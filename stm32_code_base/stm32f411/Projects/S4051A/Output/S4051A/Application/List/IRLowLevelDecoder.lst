@@ -1,0 +1,1074 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:25:39 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Utilities\mainstream_v1\stm32f411\IRLowLevelDecoder.c #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Utilities\mainstream_v1\stm32f411\IRLowLevelDecoder.c #
+#                     -D S4051A -D DEBUG -D FREE_RTOS -D STM32F40_41xxx -D    #
+#                    USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D             #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\IRLowLevelDecoder.lst                                 #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\IRLowLevelDecoder.o                                    #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Utilities\mainstream_v1\stm32f411\IRLowLevelDecoder.c
+      1          #include "Defs.h"
+      2          #include "freertos_conf.h"
+      3          #include "freertos_task.h"
+      4          #include "api_typedef.h"
+      5          
+      6          #include "Debug.h"
+      7          #include "IRLowLevel.h"
+      8          #include "IRCmdHandler.h"
+      9          
+     10          //____________________________________________________________________________________________________________
+     11          #define IR_TIME_BASE_GAP 5
+     12          #define IR_GAP(X) ( X )
+     13          
+     14          #define IR_NEC_1T_P_MIN ( ( (560-280)/IR_TIME_BASE ) |0x8000 )
+     15          #define IR_NEC_1T_P_MAX ( ( (560+280)/IR_TIME_BASE ) |0x8000 )
+     16          #define IR_NEC_LEAD_P_MIN ( ( (9000-280)/IR_TIME_BASE ) |0x8000 )
+     17          #define IR_NEC_LEAD_P_MAX ( ( (9000+280)/IR_TIME_BASE ) |0x8000 )
+     18          #define IR_NEC_LEAD_S ( ( (4500)/IR_TIME_BASE ) |0x0000 )
+     19          #define IR_NEC_LEAD_S_MIN ( ( (4500-280)/IR_TIME_BASE ) |0x0000 )
+     20          #define IR_NEC_LEAD_S_MAX ( ( (4500+280)/IR_TIME_BASE ) |0x0000 )
+     21          #define IR_NEC_REPEAT_S_MIN ( ( (2250-280)/IR_TIME_BASE ) |0x0000 )
+     22          #define IR_NEC_REPEAT_S_MAX ( ( (2250+280)/IR_TIME_BASE ) |0x0000 )
+     23          #define IR_NEC_LG1_S_MIN ( ( (1690-280)/IR_TIME_BASE ) |0x0000 )
+     24          #define IR_NEC_LG1_S_MAX ( ( (1690+280)/IR_TIME_BASE ) |0x0000 )
+     25          #define IR_NEC_LG0_S_MIN ( ( (560-280)/IR_TIME_BASE ) |0x0000 )
+     26          #define IR_NEC_LG0_S_MAX ( ( (560+280)/IR_TIME_BASE ) |0x0000 )
+     27          
+     28          #define IR_JVC_1T_P_MIN ( ( (527-263)/IR_TIME_BASE ) |0x8000 )
+     29          #define IR_JVC_1T_P_MAX ( ( (527+263)/IR_TIME_BASE ) |0x8000 )
+     30          #define IR_JVC_LEAD_P_MIN ( ( (8440-263)/IR_TIME_BASE ) |0x8000 )
+     31          #define IR_JVC_LEAD_P_MAX ( ( (8440+263)/IR_TIME_BASE ) |0x8000 )
+     32          #define IR_JVC_LEAD_S_MIN ( ( (4220-263)/IR_TIME_BASE ) |0x0000 )
+     33          #define IR_JVC_LEAD_S_MAX ( ( (4220+263)/IR_TIME_BASE ) |0x0000 )
+     34          #define IR_JVC_REPEAT_S_MIN ( ( (12130-280)/IR_TIME_BASE ) |0x0000 )
+     35          #define IR_JVC_REPEAT_S_MAX ( ( (12130+280)/IR_TIME_BASE ) |0x0000 )
+     36          #define IR_JVC_LG1_S_MIN ( ( (1538-280)/IR_TIME_BASE ) |0x0000 )
+     37          #define IR_JVC_LG1_S_MAX ( ( (1538+280)/IR_TIME_BASE ) |0x0000 )
+     38          #define IR_JVC_LG0_S_MIN ( ( (527-280)/IR_TIME_BASE ) |0x0000 )
+     39          #define IR_JVC_LG0_S_MAX ( ( (527+280)/IR_TIME_BASE ) |0x0000 )
+     40          
+     41          #define IR_SONY_5T_S ( ( (3000-0)/IR_TIME_BASE ) |0x0000 )
+     42          #define IR_SONY_1T_S_MIN ( ( (600-300)/IR_TIME_BASE ) |0x0000 )
+     43          #define IR_SONY_1T_S_MAX ( ( (600+300)/IR_TIME_BASE ) |0x0000 )
+     44          #define IR_SONY_LEAD_P_MIN ( ( (2400-300)/IR_TIME_BASE ) |0x8000 )
+     45          #define IR_SONY_LEAD_P_MAX ( ( (2400+300)/IR_TIME_BASE ) |0x8000 )
+     46          #define IR_SONY_LG1_P_MIN ( ( (1200-300)/IR_TIME_BASE ) |0x8000 )
+     47          #define IR_SONY_LG1_P_MAX ( ( (1200+300)/IR_TIME_BASE ) |0x8000 )
+     48          #define IR_SONY_LG0_P_MIN ( ( (600-300)/IR_TIME_BASE ) |0x8000 )
+     49          #define IR_SONY_LG0_P_MAX ( ( (600+300)/IR_TIME_BASE ) |0x8000 )
+     50          
+     51          #define IR_SHARP_1T_P_MIN ( ( (320-160)/IR_TIME_BASE ) |0x8000 )
+     52          #define IR_SHARP_1T_P_MAX ( ( (320+160)/IR_TIME_BASE ) |0x8000 )
+     53          #define IR_SHARP_LG0_S_MIN ( ( (680-320)/IR_TIME_BASE ) |0x0000 )
+     54          #define IR_SHARP_LG0_S_MAX ( ( (680+320)/IR_TIME_BASE ) |0x0000 )
+     55          #define IR_SHARP_LG1_S_MIN ( ( (1680-320)/IR_TIME_BASE ) |0x0000 )
+     56          #define IR_SHARP_LG1_S_MAX ( ( (1680+320)/IR_TIME_BASE ) |0x0000 )
+     57          #define IR_SHARP_INV_S_MIN ( ( (40000-10000)/IR_TIME_BASE ) |0x0000 )
+     58          #define IR_SHARP_INV_S_MAX ( ( (40000+10000)/IR_TIME_BASE ) |0x0000 )
+     59          
+     60          
+     61          #define IR_RC5_SHORT_PULSE  ( (889/IR_TIME_BASE) | 0x8000 )
+     62          #define IR_RC5_SHORT_PULSE_MIN ( (444/IR_TIME_BASE ) | 0x8000 )
+     63          #define IR_RC5_SHORT_PULSE_MAX ( (1333/IR_TIME_BASE ) | 0x8000 )
+     64          
+     65          #define IR_RC5_SHORT_SPACE  ( (889/IR_TIME_BASE) )
+     66          #define IR_RC5_SHORT_SPACE_MIN ( (444/IR_TIME_BASE )  )
+     67          #define IR_RC5_SHORT_SPACE_MAX ( (1333/IR_TIME_BASE )  )
+     68          
+     69          #define IR_RC5_LONG_PULSE ( ((889*2)/IR_TIME_BASE)|0x8000 )
+     70          #define IR_RC5_LONG_PULSE_MIN ( (1334/IR_TIME_BASE )|0x8000 )
+     71          #define IR_RC5_LONG_PULSE_MAX ( (2222/IR_TIME_BASE )|0x8000 )
+     72          
+     73          #define IR_RC5_LONG_SPACE ( ((889*2)/IR_TIME_BASE) )
+     74          #define IR_RC5_LONG_SPACE_MIN ( (1334/IR_TIME_BASE ) )
+     75          #define IR_RC5_LONG_SPACE_MAX ( (2222/IR_TIME_BASE ) )
+     76          
+     77          #define IR_RC6_SHORT_PULSE ( (444/IR_TIME_BASE) |0x8000 )
+     78          #define IR_RC6_SHORT_PULSE_MIN ( (222/IR_TIME_BASE) |0x8000 )
+     79          #define IR_RC6_SHORT_PULSE_MAX ( (666/IR_TIME_BASE) |0x8000 )
+     80          
+     81          #define IR_RC6_LONG_PULSE ( (444*2/IR_TIME_BASE) |0x8000 )
+     82          #define IR_RC6_LONG_PULSE_MIN ( (666/IR_TIME_BASE) |0x8000 )
+     83          #define IR_RC6_LONG_PULSE_MAX ( (1100/IR_TIME_BASE) |0x8000 )
+     84          
+     85          #define IR_RC6_LONG_SPACE ( (444*2/IR_TIME_BASE) )
+     86          #define IR_RC6_LONG_SPACE_MIN ( (666/IR_TIME_BASE) )
+     87          #define IR_RC6_LONG_SPACE_MAX ( (1100/IR_TIME_BASE) )
+     88          
+     89          #define IR_RC6_LEADER_P ( (2666/IR_TIME_BASE) |0x8000 )
+     90          #define IR_RC6_LEADER_P_MIN ( (2444/IR_TIME_BASE) |0x8000 )
+     91          #define IR_RC6_LEADER_P_MAX ( (2888/IR_TIME_BASE) |0x8000 )
+     92          
+     93          #define IR_RC6_LEADER_S ( (889/IR_TIME_BASE) )
+     94          #define IR_RC6_LEADER_S_MIN ( (667/IR_TIME_BASE) )
+     95          #define IR_RC6_LEADER_S_MAX ( (1111/IR_TIME_BASE) )
+     96          
+     97          
+     98          #define IR_RC6_1T (444)
+     99          #define IR_RC6_2T (444*2)
+    100          #define IR_RC6_3T (444*3)
+    101          
+    102          #define IR_RC6_1T_P ( ( (IR_RC6_1T)/IR_TIME_BASE ) |0x8000 )
+    103          #define IR_RC6_1T_P_MIN ( ( (IR_RC6_1T-222)/IR_TIME_BASE ) |0x8000 )
+    104          #define IR_RC6_1T_P_MAX ( ( (IR_RC6_1T+222)/IR_TIME_BASE ) |0x8000 )
+    105          #define IR_RC6_1T_S ( ( (IR_RC6_1T)/IR_TIME_BASE ) |0x0000 )
+    106          #define IR_RC6_1T_S_MIN ( ( (IR_RC6_1T-222)/IR_TIME_BASE ) |0x0000 )
+    107          #define IR_RC6_1T_S_MAX ( ( (IR_RC6_1T+222)/IR_TIME_BASE ) |0x0000 )
+    108          #define IR_RC6_2T_P_MIN ( ( (IR_RC6_2T-222)/IR_TIME_BASE ) |0x8000 )
+    109          #define IR_RC6_2T_P_MAX ( ( (IR_RC6_2T+222)/IR_TIME_BASE ) |0x8000 )
+    110          #define IR_RC6_2T_S_MIN ( ( (IR_RC6_2T-222)/IR_TIME_BASE ) |0x0000 )
+    111          #define IR_RC6_2T_S_MAX ( ( (IR_RC6_2T+222)/IR_TIME_BASE ) |0x0000 )
+    112          #define IR_RC6_3T_P_MIN ( ( (IR_RC6_3T-222)/IR_TIME_BASE ) |0x8000 )
+    113          #define IR_RC6_3T_P_MAX ( ( (IR_RC6_3T+222)/IR_TIME_BASE ) |0x8000 )
+    114          #define IR_RC6_3T_S_MIN ( ( (IR_RC6_3T-222)/IR_TIME_BASE ) |0x0000 )
+    115          #define IR_RC6_3T_S_MAX ( ( (IR_RC6_3T+222)/IR_TIME_BASE ) |0x0000 )
+    116          
+    117          //____________________________________________________________________________________________________________
+    118          #define IR_CMD_REPEAT_TIME 220
+    119          
+    120          //____________________________________________________________________________________________________________
+    121          extern IR_LOWLEVEL_OBJECT *pIR_LowLevel;
+    122          extern IR_CMD_HANDLER_OBJECT *pIRCmdHandle_ObjCtrl;
+    123          //____________________________________________________________________________________________________________
+    124          static portTickType xIrDecoderTimeTick = 0;
+    125          
+    126          uint16 ir_rowdata[IR_ROW_DATA_MAX];
+    127          uint16 ir_queue_number = 0;
+    128          IR_PROTOCOL_PAYLOAD mIrPayload;
+    129          
+    130          
+    131          //____________________________________________________________________________________________________________
+    132          static uint32 IRLowLevelDecoder_BitsReverse(uint32 value )
+    133          {
+    134          	uint32 x = value;
+    135          
+    136              x = (((x & 0xaaaaaaaa) >> 1) | ((x & 0x55555555) << 1));
+    137              x = (((x & 0xcccccccc) >> 2) | ((x & 0x33333333) << 2));
+    138              x = (((x & 0xf0f0f0f0) >> 4) | ((x & 0x0f0f0f0f) << 4));
+    139              x = (((x & 0xff00ff00) >> 8) | ((x & 0x00ff00ff) << 8));
+    140              return((x >> 16) | (x << 16));
+    141          
+    142          }
+    143          
+    144          static IR_PROTOCOL_PAYLOAD IRLowLevelDecoder_RC5_Decode( const uint16 *pIrRowData, uint16 length )
+    145          {
+    146          	/*Smith refer to state machine: http://www.clearwater.com.au/code/rc5*/
+    147          	uint8 state_mach = 0;
+    148          	uint8 i = 0;
+    149          	uint8 data_cnt = 0;
+    150          	IR_PROTOCOL_PAYLOAD ir_payload;
+    151          
+    152          	ir_payload.payload	 = 0;
+    153          	ir_payload.info.byte = 0;
+    154          	if ( pIrRowData == NULL )
+    155          		return ir_payload;
+    156          
+    157          	state_mach = 0;
+    158          	for( i = 0; i < length; i++ )
+    159          	{
+    160          		switch( state_mach )
+    161          		{
+    162          			case 0:
+    163          			{
+    164          				if ( ( *( pIrRowData+i ) > IR_RC5_SHORT_PULSE_MIN ) && ( *( pIrRowData+i ) < IR_RC5_SHORT_PULSE_MAX ) )
+    165          				{
+    166          					state_mach = 2;
+    167          				}
+    168          				else if ( ( *( pIrRowData+i ) > IR_RC5_LONG_PULSE_MIN ) && ( *( pIrRowData+i ) < IR_RC5_LONG_PULSE_MAX ) )
+    169          				{
+    170          					// zero
+    171          					ir_payload.payload <<= 1; 
+    172          					data_cnt ++;
+    173          					state_mach = 1;
+    174          				}
+    175          				
+    176          			}
+    177          				break;
+    178          
+    179          			case 2:
+    180          			{
+    181          				if ( ( *( pIrRowData+i ) > IR_RC5_LONG_SPACE_MIN ) && ( *( pIrRowData+i ) < IR_RC5_LONG_SPACE_MAX ) )
+    182          				{
+    183          					// one	
+    184          					ir_payload.payload <<= 1;
+    185          					ir_payload.payload |=1;
+    186          					data_cnt ++; 
+    187          					state_mach = 0;
+    188          				}
+    189          				else if ( ( *( pIrRowData+i ) > IR_RC5_SHORT_SPACE_MIN ) && ( *( pIrRowData+i ) < IR_RC5_SHORT_SPACE_MAX ) )
+    190          				{
+    191          					//one
+    192          					ir_payload.payload <<= 1;
+    193          					ir_payload.payload |=1;
+    194          					data_cnt ++;
+    195          					state_mach = 0;
+    196          				}
+    197          			}
+    198          				break;
+    199          
+    200          			case 1:
+    201          			{
+    202          				if ( ( *( pIrRowData+i ) > IR_RC5_SHORT_SPACE_MIN ) && ( *( pIrRowData+i ) < IR_RC5_SHORT_SPACE_MAX ) )
+    203          				{
+    204          					state_mach = 3;
+    205          				}
+    206          				else if ( ( *( pIrRowData+i ) > IR_RC5_LONG_SPACE_MIN ) && ( *( pIrRowData+i ) < IR_RC5_LONG_SPACE_MAX ) )
+    207          				{
+    208          					ir_payload.payload <<= 1;
+    209          					ir_payload.payload |=1;
+    210          					data_cnt ++;
+    211          					
+    212          					state_mach = 0;
+    213          				}
+    214          			}
+    215          				break;
+    216          
+    217          			case 3:
+    218          			{
+    219          				if ( ( *( pIrRowData+i ) > IR_RC5_SHORT_PULSE_MIN ) && ( *( pIrRowData+i ) < IR_RC5_SHORT_PULSE_MAX ) )
+    220          				{
+    221          					ir_payload.payload <<= 1;
+    222          					data_cnt ++;
+    223          					state_mach = 1;
+    224          				}
+    225          				else if ( ( *( pIrRowData+i ) > IR_RC5_LONG_PULSE_MIN ) && ( *( pIrRowData+i ) < IR_RC5_LONG_PULSE_MAX ) )
+    226          				{
+    227          					ir_payload.payload <<= 1;
+    228          					data_cnt ++;
+    229          					state_mach = 1;
+    230          				}
+    231          
+    232          			}
+    233          				break;
+    234          		}
+    235          
+    236          		if ( data_cnt >=13)
+    237          		{
+    238          			ir_payload.info.bits.protocol_type = IR_PROTOCOL_36K_RC5;
+    239          			break;
+    240          		}
+    241          			
+    242          	}
+    243          
+    244          #if 0
+    245          	TRACE_DEBUG((0, "rc5 h = 0x%X:%X", GET_HIGH_U16(ir_payload.payload), GET_LOW_U16(ir_payload.payload) ));
+    246          	TRACE_DEBUG((0, "ir_cnt = %d", data_cnt ));
+    247          #endif 	
+    248          	
+    249          	return ir_payload;
+    250          }
+    251          
+    252          static IR_PROTOCOL_PAYLOAD IRLowLevelDecoder_Sharp_Decode( const uint16 *pIrRowData, uint16 length )
+    253          {
+    254          
+    255          	int8 state_mach = 0;
+    256          	uint8 i = 0;
+    257          	uint8 data_cnt = 0;
+    258          	IR_PROTOCOL_PAYLOAD ir_payload;
+    259          
+    260          	uint16 frame1 = 0;
+    261          	uint16 frame2 = 0;
+    262          
+    263          	ir_payload.payload	 = 0;
+    264          	ir_payload.info.byte = 0;
+    265          	
+    266          	if ( pIrRowData == NULL )
+    267          		return ir_payload;
+    268          
+    269          	state_mach = 0;
+    270          	for( i = 0; i < length; i++ )
+    271          	{
+    272          		switch( state_mach )
+    273          		{
+    274          			case 0: // decode data
+    275          			{
+    276          				if ((*( pIrRowData+i) > IR_SHARP_LG1_S_MIN ) && (*( pIrRowData+i) < IR_SHARP_LG1_S_MAX ))
+    277          				{
+    278          					if ((*( pIrRowData+i-1) > IR_SHARP_1T_P_MIN ) && (*( pIrRowData+i-1) < IR_SHARP_1T_P_MAX ))
+    279          					{
+    280          						frame1 <<= 1;
+    281          						frame1 |= 1;
+    282          						data_cnt++;
+    283          					}
+    284          				}
+    285          				else if ((*( pIrRowData+i) > IR_SHARP_LG0_S_MIN ) && (*( pIrRowData+i) < IR_SHARP_LG0_S_MAX ))
+    286          				{
+    287          					if ((*( pIrRowData+i-1) > IR_SHARP_1T_P_MIN ) && (*( pIrRowData+i-1) < IR_SHARP_1T_P_MAX ))
+    288          					{
+    289          						frame1 <<= 1;
+    290          						data_cnt++;
+    291          					}
+    292          				}
+    293          
+    294          				if ( data_cnt >= 15 ) /*address 5 bits + command 8 bits + 2 ext code*/
+    295          				{
+    296          					state_mach = 1;
+    297          				}
+    298          				
+    299          			}
+    300          				break;
+    301          
+    302          			case 1:
+    303          			{
+    304          				if ((*( pIrRowData+i) > IR_SHARP_INV_S_MIN ) && (*( pIrRowData+i) < IR_SHARP_INV_S_MAX ))
+    305          				{
+    306          					state_mach = 2;
+    307          				}
+    308          			}
+    309          				break;
+    310          
+    311          			case 2:
+    312          			{
+    313          				if ((*( pIrRowData+i) > IR_SHARP_LG1_S_MIN ) && (*( pIrRowData+i) < IR_SHARP_LG1_S_MAX ))
+    314          				{
+    315          					if ((*( pIrRowData+i-1) > IR_SHARP_1T_P_MIN ) && (*( pIrRowData+i-1) < IR_SHARP_1T_P_MAX ))
+    316          					{
+    317          						frame2 <<= 1;
+    318          						frame2 |= 1;
+    319          						data_cnt++;
+    320          					}
+    321          				}
+    322          				else if ((*( pIrRowData+i) > IR_SHARP_LG0_S_MIN ) && (*( pIrRowData+i) < IR_SHARP_LG0_S_MAX ))
+    323          				{
+    324          					if ((*( pIrRowData+i-1) > IR_SHARP_1T_P_MIN ) && (*( pIrRowData+i-1) < IR_SHARP_1T_P_MAX ))
+    325          					{
+    326          						frame2 <<= 1;
+    327          						data_cnt++;
+    328          					}
+    329          				}
+    330          
+    331          				if ( data_cnt >= 30 ) // after 40 msec command invert data
+    332          				{
+    333          					if( ( frame1 & 0x03ff ) == ( (~(frame2 & 0x03ff)) & 0x03ff ) )
+    334          					{
+    335          						ir_payload.payload |= frame1;
+    336          						ir_payload.payload = ((ir_payload.payload<<16)|frame2 );
+    337          						ir_payload.info.bits.protocol_type = IR_PROTOCOL_38K_SHARP;
+    338          					}
+    339          
+    340          					state_mach = -1; // done
+    341          				}	
+    342          			}
+    343          				break;
+    344          
+    345          			default:
+    346          			{
+    347          			}
+    348          				break;
+    349          
+    350          		}
+    351          	}
+    352          
+    353          #if 0
+    354          	TRACE_DEBUG((0, "sharp = 0x%X:%X", GET_HIGH_U16(ir_payload.payload), GET_LOW_U16(ir_payload.payload) ));	
+    355          #endif 
+    356          
+    357          	return ir_payload;
+    358          }
+    359          
+    360          
+    361          static IR_PROTOCOL_PAYLOAD IRLowLevelDecoder_SONY_Decode( const uint16 *pIrRowData, uint16 length )
+    362          {
+    363          
+    364          	int8 state_mach = 0;
+    365          	uint8 i = 0;
+    366          	uint8 data_cnt = 0;
+    367          	IR_PROTOCOL_PAYLOAD ir_payload;
+    368          	
+    369          	ir_payload.payload	 = 0;
+    370          	ir_payload.info.byte = 0;
+    371          	
+    372          	if ( pIrRowData == NULL )
+    373          		return ir_payload;
+    374          
+    375          	state_mach = 0;
+    376          	for( i = 0; i < length; i++ )
+    377          	{
+    378          		switch( state_mach )
+    379          		{
+    380          			case 0:
+    381          			{
+    382          				if ((*( pIrRowData+i) > IR_SONY_LEAD_P_MIN ) && (*( pIrRowData+i ) < IR_SONY_LEAD_P_MAX ))
+    383          				{
+    384           					state_mach = 1;
+    385          				}
+    386          			}
+    387          				break;
+    388          
+    389          			case 1:
+    390          			{
+    391          				if ((*( pIrRowData+i ) > IR_SONY_1T_S_MIN ) && (*( pIrRowData+i ) < IR_SONY_1T_S_MAX ))
+    392          				{
+    393          					ir_payload.info.bits.protocol_type = IR_PROTOCOL_40K_SONY;
+    394          					state_mach = 2;
+    395          
+    396          				}
+    397          			
+    398          			}
+    399          				break;
+    400          
+    401          			case 2: // decode data
+    402          			{
+    403          				if ((*( pIrRowData+i ) > IR_SONY_LG1_P_MIN ) && (*( pIrRowData+i ) < IR_SONY_LG1_P_MAX ))
+    404          				{
+    405          					if (*( pIrRowData+i+1 ) > IR_SONY_1T_S_MAX )
+    406          					{
+    407          						ir_payload.payload <<= 1;
+    408          						ir_payload.payload |= 1;
+    409          						data_cnt++;
+    410          						state_mach = 3; 
+    411          					}
+    412          					else if ((*( pIrRowData+i+1 ) > IR_SONY_1T_S_MIN ) && (*( pIrRowData+i+1 ) < IR_SONY_1T_S_MAX ))
+    413          					{
+    414          						ir_payload.payload <<= 1;
+    415          						ir_payload.payload |= 1;
+    416          						data_cnt++;
+    417          					}
+    418          				}
+    419          				else if ((*( pIrRowData+i ) > IR_SONY_LG0_P_MIN ) && (*( pIrRowData+i ) < IR_SONY_LG0_P_MAX ))
+    420          				{
+    421          					if (*( pIrRowData+i+1 ) > IR_SONY_1T_S_MAX )
+    422          					{
+    423          						ir_payload.payload <<=1;
+    424          						data_cnt++;
+    425          						state_mach = 3; 
+    426          						
+    427          					}
+    428          					else if ((*( pIrRowData+i+1 ) > IR_SONY_1T_S_MIN ) && (*( pIrRowData+i+1 ) < IR_SONY_1T_S_MAX ))
+    429          					{
+    430          						ir_payload.payload <<=1;
+    431          						data_cnt++;
+    432          					}
+    433          				}
+    434          			}
+    435          				break;
+    436          
+    437          			case 3:
+    438          			{
+    439          #if 0
+    440          				TRACE_DEBUG((0, "sony = 0x%X:%X", GET_HIGH_U16(ir_payload.payload), GET_LOW_U16(ir_payload.payload) ));
+    441          				TRACE_DEBUG((0, "data cnt = %d", data_cnt ));
+    442          #endif
+    443          
+    444          				state_mach = -1; // done
+    445          				ir_payload.info.bits.protocol_type = IR_PROTOCOL_40K_SONY;
+    446          			}
+    447          				break;
+    448          
+    449          			default:
+    450          			{
+    451          				
+    452          			}
+    453          				break;
+    454          
+    455          		}
+    456          	}
+    457          
+    458          #if 0
+    459          	TRACE_DEBUG((0, "sony = 0x%X:%X", GET_HIGH_U16(ir_payload.payload), GET_LOW_U16(ir_payload.payload) ));
+    460          #endif 	
+    461          
+    462           	return ir_payload;
+    463          }
+    464          
+    465          static IR_PROTOCOL_PAYLOAD IRLowLevelDecoder_JVC_Decode( const uint16 *pIrRowData, uint16 length )
+    466          {
+    467          
+    468          	int8 state_mach = 0;
+    469          	uint8 i = 0;
+    470          	uint8 data_cnt = 0;
+    471          	IR_PROTOCOL_PAYLOAD ir_payload;
+    472          	
+    473          
+    474          	ir_payload.payload	 = 0;
+    475          	ir_payload.info.byte = 0;
+    476          	
+    477          	if ( pIrRowData == NULL )
+    478          		return ir_payload;
+    479          
+    480          	state_mach = 0;
+    481          	for( i = 0; i < length; i++ )
+    482          	{
+    483          		switch( state_mach )
+    484          		{
+    485          			case 0:
+    486          			{
+    487          				if ((*( pIrRowData+i) > IR_JVC_LEAD_P_MIN ) && (*( pIrRowData+i ) < IR_JVC_LEAD_P_MAX ))
+    488          				{
+    489          					ir_payload.info.bits.protocol_type = IR_PROTOCOL_38K_JVC;
+    490          					state_mach = 1;
+    491          				}
+    492          				else if ((*( pIrRowData+i) > IR_JVC_REPEAT_S_MIN ) && (*( pIrRowData+i ) < (IR_JVC_REPEAT_S_MAX*2) ))
+    493          				{
+    494          					ir_payload.info.bits.protocol_type = IR_PROTOCOL_38K_JVC;
+    495          					ir_payload.info.bits.repeat_type = IR_PROTOCOL_38K_JVC_REPEAT;
+    496          					state_mach = 2;
+    497          				}
+    498          			}
+    499          				break;
+    500          
+    501          			case 1:
+    502          			{
+    503          				if ((*( pIrRowData+i ) > IR_JVC_LEAD_S_MIN ) && (*( pIrRowData+i ) < IR_JVC_LEAD_S_MAX ))
+    504          				{
+    505          					state_mach = 2;
+    506          				}
+    507          			}
+    508          				break;
+    509          
+    510          			case 2: // decode data
+    511          			{
+    512          				if ((*( pIrRowData+i ) > IR_JVC_LG1_S_MIN ) && (*( pIrRowData+i ) < IR_JVC_LG1_S_MAX ))
+    513          				{
+    514          					if ((*( pIrRowData+i-1 ) > IR_JVC_1T_P_MIN ) && (*( pIrRowData+i-1 ) < IR_JVC_1T_P_MAX ))
+    515          					{
+    516          						ir_payload.payload <<= 1;
+    517          						ir_payload.payload |= 1;
+    518          						data_cnt++;
+    519          					}
+    520          				}
+    521          				else if ((*( pIrRowData+i ) > IR_JVC_LG0_S_MIN ) && (*( pIrRowData+i ) < IR_JVC_LG0_S_MAX ))
+    522          				{
+    523          					if ((*( pIrRowData+i-1 ) > IR_JVC_1T_P_MIN ) && (*( pIrRowData+i-1 ) < IR_JVC_1T_P_MAX ))
+    524          					{
+    525          						ir_payload.payload <<=1;	
+    526          						data_cnt++;
+    527          					}
+    528          				}
+    529          
+    530          				if ( data_cnt >= 16 )
+    531          				{
+    532          					//TRACE_DEBUG((0, "data index = %d", i));
+    533          					state_mach = -1;
+    534          					break;
+    535          				}
+    536          			}
+    537          				break;
+    538          
+    539          			default:
+    540          			{
+    541          			}
+    542          				break;
+    543          
+    544          		}
+    545          	}
+    546          
+    547          #if 0
+    548          	TRACE_DEBUG((0, "jvc = 0x%X:%X", GET_HIGH_U16(ir_payload.payload), GET_LOW_U16(ir_payload.payload) ));
+    549          #endif 	
+    550          
+    551           	return ir_payload;
+    552          }
+    553          
+    554          static IR_PROTOCOL_PAYLOAD IRLowLevelDecoder_NEC_Decode( const uint16 *pIrRowData, uint16 length )
+    555          {
+    556          
+    557          	int8 state_mach = 0;
+    558          	uint8 i = 0;
+    559          	uint8 data_cnt = 0;
+    560          	IR_PROTOCOL_PAYLOAD ir_payload;
+    561          	
+    562          
+    563          	ir_payload.payload	 = 0;
+    564          	ir_payload.info.byte = 0;
+    565          	
+    566          	if ( pIrRowData == NULL )
+    567          		return ir_payload;
+    568          
+    569          	state_mach = 0;
+    570          	for( i = 0; i < length; i++ )
+    571          	{
+    572          		switch( state_mach )
+    573          		{
+    574          			case 0:
+    575          			{
+    576          				if ((*( pIrRowData+i) > IR_NEC_LEAD_P_MIN ) && (*( pIrRowData+i ) < IR_NEC_LEAD_P_MAX ))
+    577          				{
+    578          					ir_payload.info.bits.protocol_type = IR_PROTOCOL_38K_NEC;
+    579          					state_mach = 1;
+    580          				}
+    581          			}
+    582          				break;
+    583          
+    584          			case 1:
+    585          			{
+    586          				if ((*( pIrRowData+i ) > IR_NEC_LEAD_S_MIN ) && (*( pIrRowData+i ) < IR_NEC_LEAD_S_MAX ))
+    587          				{
+    588          					state_mach = 2;
+    589          				}
+    590          				else if ((*( pIrRowData+i ) > IR_NEC_REPEAT_S_MIN ) && (*( pIrRowData+i ) < IR_NEC_REPEAT_S_MAX ))
+    591          				{
+    592          					ir_payload.info.bits.repeat_type = IR_PROTOCOL_38K_NEC_REPEAT;
+    593          					state_mach = -1; // done
+    594          				}
+    595          			}
+    596          				break;
+    597          
+    598          			case 2: // decode data
+    599          			{
+    600          				if ((*( pIrRowData+i ) > IR_NEC_LG1_S_MIN ) && (*( pIrRowData+i ) < IR_NEC_LG1_S_MAX ))
+    601          				{
+    602          					if ((*( pIrRowData+i-1 ) > IR_NEC_1T_P_MIN ) && (*( pIrRowData+i-1 ) < IR_NEC_1T_P_MAX ))
+    603          					{
+    604          						ir_payload.payload <<= 1;
+    605          						ir_payload.payload |= 1;
+    606          						data_cnt++;
+    607          					}
+    608          				}
+    609          				else if ((*( pIrRowData+i ) > IR_NEC_LG0_S_MIN ) && (*( pIrRowData+i ) < IR_NEC_LG0_S_MAX ))
+    610          				{
+    611          					if ((*( pIrRowData+i-1 ) > IR_NEC_1T_P_MIN ) && (*( pIrRowData+i-1 ) < IR_NEC_1T_P_MAX ))
+    612          					{
+    613          						ir_payload.payload <<=1;	
+    614          						data_cnt++;
+    615          					}
+    616          				}
+    617          
+    618          				if ( data_cnt >= 32 )
+    619          				{
+    620          					state_mach = 3;
+    621          					break;
+    622          				}
+    623          			}
+    624          				break;
+    625          
+    626          			case 3: // check protocol type
+    627          			{
+    628          				uint8 *pData;
+    629          				
+    630          				pData = (uint8*)&ir_payload.payload;
+    631          				if( ( ((*(pData+3))) == ( ~(*(pData+2))&0x0ff  ) ) && ( ((*(pData+1))) == ( ~(*(pData+0))&0x0ff  ) ))
+    632          				{
+    633          					ir_payload.info.bits.protocol_type = IR_PROTOCOL_38K_NEC;
+    634          					state_mach = -1; // done
+    635          				}
+    636          			}
+    637          				break;
+    638          
+    639          			default:
+    640          			{
+    641          			}
+    642          				break;
+    643          
+    644          		}
+    645          	}
+    646          
+    647          #if 0
+    648          	TRACE_DEBUG((0, "nec = 0x%X:%X", GET_HIGH_U16(ir_payload.payload), GET_LOW_U16(ir_payload.payload) ));
+    649          #endif 	
+    650          
+    651           	return ir_payload;
+    652          }
+    653          
+    654          
+    655          static void IRLowLevelDecoder_DecoderTask( void *pvParameters )
+    656          {
+    657          	IR_PROTOCOL_PAYLOAD ir_payload;
+    658          
+    659          	
+    660              for( ;; )
+    661              {
+    662                  ir_queue_number = pIR_LowLevel->get_queue_number();
+    663          		if ( ir_queue_number > 0 )
+    664          		{
+    665          			if( ( xTaskGetTickCount( ) - xIrDecoderTimeTick ) > 110 )
+    666          			{
+    667          	            pIR_LowLevel->get_row_data( ir_rowdata );
+    668          
+    669          				ir_payload.info.byte = 0;
+    670          				ir_payload.payload = IR_PROTOCOL_NULL;
+    671          
+    672          				if (  ir_payload.info.bits.protocol_type == IR_PROTOCOL_NULL )
+    673          				{
+    674          					ir_payload = IRLowLevelDecoder_NEC_Decode(ir_rowdata, ir_queue_number );
+    675          					if( ir_payload.info.bits.protocol_type == IR_PROTOCOL_38K_NEC )
+    676          					{
+    677          						if( ir_payload.info.bits.repeat_type != IR_PROTOCOL_38K_NEC_REPEAT )
+    678          						{
+    679          							mIrPayload.payload = IRLowLevelDecoder_BitsReverse(ir_payload.payload);
+    680          						}
+    681          						
+    682          						mIrPayload.info.bits.repeat_type = ir_payload.info.bits.repeat_type;
+    683          						mIrPayload.info.bits.protocol_type = ir_payload.info.bits.protocol_type;
+    684          						pIRCmdHandle_ObjCtrl->insert_queue( mIrPayload );	
+    685          					}
+    686          				}
+    687          
+    688          				if (  ir_payload.info.bits.protocol_type == IR_PROTOCOL_NULL )
+    689          				{
+    690          					ir_payload = IRLowLevelDecoder_SONY_Decode(ir_rowdata, ir_queue_number );
+    691          					if( ir_payload.info.bits.protocol_type == IR_PROTOCOL_40K_SONY )
+    692          					{
+    693          						mIrPayload.info.bits.repeat_type = ir_payload.info.bits.repeat_type;
+    694          						mIrPayload.info.bits.protocol_type = ir_payload.info.bits.protocol_type;						
+    695          						mIrPayload.payload = ir_payload.payload;
+    696          						pIRCmdHandle_ObjCtrl->insert_queue( mIrPayload );	
+    697          					}
+    698          				}
+    699          
+    700          				if (  ir_payload.info.bits.protocol_type == IR_PROTOCOL_NULL )
+    701          				{
+    702          					ir_payload = IRLowLevelDecoder_Sharp_Decode(ir_rowdata, ir_queue_number );
+    703          					if( ir_payload.info.bits.protocol_type == IR_PROTOCOL_38K_SHARP )
+    704          					{
+    705          						mIrPayload.info.bits.repeat_type = ir_payload.info.bits.repeat_type;
+    706          						mIrPayload.info.bits.protocol_type = ir_payload.info.bits.protocol_type;						
+    707          						mIrPayload.payload = ir_payload.payload;
+    708          						pIRCmdHandle_ObjCtrl->insert_queue( mIrPayload );	
+    709          					}
+    710          				}
+    711          
+    712          				if (  ir_payload.info.bits.protocol_type == IR_PROTOCOL_NULL )
+    713          				{
+    714          					ir_payload = IRLowLevelDecoder_JVC_Decode(ir_rowdata, ir_queue_number );
+    715          					if( ir_payload.info.bits.protocol_type == IR_PROTOCOL_38K_JVC )
+    716          					{
+    717          						mIrPayload.info.bits.repeat_type = ir_payload.info.bits.repeat_type;
+    718          						mIrPayload.info.bits.protocol_type = ir_payload.info.bits.protocol_type;						
+    719          						mIrPayload.payload = ir_payload.payload;
+    720          						pIRCmdHandle_ObjCtrl->insert_queue( mIrPayload );	
+    721          					}
+    722          				}
+    723          
+    724          				if (  ir_payload.info.bits.protocol_type == IR_PROTOCOL_NULL )
+    725          				{
+    726          					ir_payload = IRLowLevelDecoder_RC5_Decode(ir_rowdata, ir_queue_number );
+    727          					if( ir_payload.info.bits.protocol_type == IR_PROTOCOL_36K_RC5 )
+    728          					{
+    729          						mIrPayload.info.bits.repeat_type = ir_payload.info.bits.repeat_type;
+    730          						mIrPayload.info.bits.protocol_type = ir_payload.info.bits.protocol_type;						
+    731          						mIrPayload.payload = ir_payload.payload;
+    732          						pIRCmdHandle_ObjCtrl->insert_queue( mIrPayload );	
+    733          					}
+    734          				}
+    735          	
+    736          				memset( ir_rowdata, 0, IR_ROW_DATA_MAX ); 
+    737          				xIrDecoderTimeTick = xTaskGetTickCount( );
+    738          			}
+    739          			
+    740          		}
+    741          		else
+    742          		{
+    743          			xIrDecoderTimeTick = xTaskGetTickCount( );
+    744          		}
+    745          
+    746          		
+    747          
+    748          		
+    749                  vTaskDelay( 10 ); 
+    750              }
+    751          }
+    752          
+    753          void IRLowLevelDecoder_CreateTask( void )
+    754          {
+    755          	mIrPayload.info.byte = 0;
+    756          	mIrPayload.payload= 0;
+    757          	memset( ir_rowdata, 0, IR_ROW_DATA_MAX );
+    758          	
+    759              if ( xTaskCreate( IRLowLevelDecoder_DecoderTask,
+    760                  ( portCHAR * ) "IR_Decoder",
+    761                   configMINIMAL_STACK_SIZE, NULL,
+    762                   tskHMI_EVENT_PRIORITY, NULL ) != pdPASS)
+    763              {
+    764              	TRACE_ERROR((0, " IRLowLevelDecoder_ServiceHandle task create error !! "));
+    765              }
+    766          }
+    767          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       24  IRLowLevelDecoder_CreateTask
+              0 -> Debug_printError
+             24 -> __aeabi_memclr4
+             24 -> xTaskGenericCreate
+       24  IRLowLevelDecoder_DecoderTask
+             24 -- Indirect call
+             24 -> IRLowLevelDecoder_JVC_Decode
+             24 -> IRLowLevelDecoder_NEC_Decode
+             24 -> IRLowLevelDecoder_RC5_Decode
+             24 -> IRLowLevelDecoder_SONY_Decode
+             24 -> IRLowLevelDecoder_Sharp_Decode
+             24 -> __aeabi_memclr4
+             24 -> vTaskDelay
+             24 -> xTaskGetTickCount
+       28  IRLowLevelDecoder_JVC_Decode
+       36  IRLowLevelDecoder_NEC_Decode
+       28  IRLowLevelDecoder_RC5_Decode
+       28  IRLowLevelDecoder_SONY_Decode
+       40  IRLowLevelDecoder_Sharp_Decode
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      56  ?<Constant " IRLowLevelDecoder_Se...">
+      12  ?<Constant "IR_Decoder">
+       4  ??DataTable3
+       4  ??DataTable3_1
+       4  ??DataTable3_2
+       4  ??DataTable3_3
+      10  ?Subroutine0
+      34  ?Subroutine1
+       8  ?Subroutine2
+      10  ?Subroutine3
+      70  IRLowLevelDecoder_CreateTask
+     308  IRLowLevelDecoder_DecoderTask
+     196  IRLowLevelDecoder_JVC_Decode
+     274  IRLowLevelDecoder_NEC_Decode
+     206  IRLowLevelDecoder_RC5_Decode
+     206  IRLowLevelDecoder_SONY_Decode
+     296  IRLowLevelDecoder_Sharp_Decode
+     152  mIrPayload
+          ir_queue_number
+          xIrDecoderTimeTick
+          ir_rowdata
+
+ 
+   152 bytes in section .bss
+ 1 702 bytes in section .text
+ 
+ 1 702 bytes of CODE memory
+   152 bytes of DATA memory
+
+Errors: none
+Warnings: 1

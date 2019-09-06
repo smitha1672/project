@@ -1,0 +1,583 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:25:28 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\CS8422\CS8422_ISR_Handler.c     #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\CS8422\CS8422_ISR_Handler.c -D  #
+#                    S4051A -D DEBUG -D FREE_RTOS -D STM32F40_41xxx -D        #
+#                    USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D             #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\CS8422_ISR_Handler.lst                                #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\CS8422_ISR_Handler.o                                   #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\CS8422\CS8422_ISR_Handler.c
+      1          #include "Debug.h"
+      2          #include "freertos_conf.h"
+      3          #include "freertos_task.h"
+      4          #include "freertos_typedef.h"
+      5          #include "api_typedef.h"
+      6          
+      7          #include "GPIOMiddleLevel.h"
+      8          #include "GPIOLowLevel.h"
+      9          
+     10          #include "AudioDeviceManager.h"
+     11          #include "CS8422_ISR_Handler.h"
+     12          #include "CS8422.h"
+     13          
+     14          #define CS8422_ISR_QUEUE_LENGTH 3
+     15          #define PS3_SILENT_AVAILABE 1000
+     16          
+     17          //______________________________________________________________________________________________
+     18          /* Struct for easy bit access */
+     19          typedef union CS8422_INT_BITS {
+     20              struct {
+     21                  unsigned src_unlock:1;
+     22                  unsigned fch:1;
+     23                  unsigned qch:1;
+     24                  unsigned rerr:1;
+     25                  unsigned cch:1;
+     26                  unsigned detc:1;
+     27                  unsigned oslip:1;
+     28                  unsigned pcch:1;
+     29              } bits;
+     30              unsigned char byte;
+     31          } CS8422_INT_STATUS;
+     32          
+     33          /* Struct for easy bit access */
+     34          typedef union CS8422_FORMAT_BITS {
+     35              struct {
+     36                  unsigned reserved:2;
+     37                  unsigned dgtl_sil:1;
+     38                  unsigned hd_cd:1;
+     39                  unsigned dts_cd:1;
+     40                  unsigned dts_ld:1;
+     41                  unsigned iec61937:1;
+     42                  unsigned pcm:1;
+     43              } bits;
+     44              unsigned char byte;
+     45          } CS8422_FORMAT_STATUS;
+     46          
+     47          /* Struct for easy bit access */
+     48          typedef union CS8422_RERR_BITS {
+     49              struct {
+     50                  unsigned par:1;
+     51                  unsigned bip:1;
+     52                  unsigned conf:1;
+     53                  unsigned c:1;
+     54                  unsigned unlock:1;
+     55                  unsigned ccrc:1;
+     56                  unsigned qcrc:1;
+     57                  unsigned reserved:1;
+     58              } bits;
+     59              unsigned char byte;
+     60          } CS8422_RERR_BITS;
+     61          
+     62          typedef struct CS8422_ISR_HANDLE_PARAMETERS
+     63          {
+     64              xTaskHandle Handle;
+     65              TaskHandleState taskState;
+     66          	xSemaphoreParameters SParams;
+     67              xQueueParameters QParams;
+     68          } xCS8422IsrHandleParams;
+     69          
+     70          //______________________________________________________________________________________________
+     71          static void CS8422_ISR_QueueSendFromISR( uint8 *pIntType );
+     72          
+     73          static void CS8422_ISR_IntConfig( void );
+     74          
+     75          extern GPIO_ISR_OBJECT *pGPIOIsr_ObjCtrl;
+     76          extern AUDIO_LOWLEVEL_DRIVER_OBJECT *pAudLowLevel_ObjCtrl;
+     77          
+     78          const SRC_ISR_OBJECT SRCIsr_ObjCtrl = 
+     79          {
+     80              CS8422_ISR_IntConfig,
+     81              CS8422_ISR_QueueSendFromISR
+     82          };
+     83          
+     84          const SRC_ISR_OBJECT *pSRCIsr_ObjCtrl = &SRCIsr_ObjCtrl;
+     85          
+     86          //______________________________________________________________________________________________
+     87          xCS8422IsrHandleParams mCS8422IsrParsms;
+     88          
+     89          //______________________________________________________________________________________________
+     90          static void CS8422_ISR_QueueSendFromISR( uint8 *pIntType )
+     91          {
+     92              portBASE_TYPE xHigherPriorityTaskWoken = pdFALSE;
+     93          
+     94              if ( *pIntType == CS8422_ISR_FROM_EXTI )
+     95              {
+     96                  //TRACE_DEBUG((0, "CS8422 ISR !! "));
+     97                  xQueueSendFromISR( mCS8422IsrParsms.QParams.xQueue, pIntType, &xHigherPriorityTaskWoken );
+     98              }
+     99              
+    100              portEND_SWITCHING_ISR( xHigherPriorityTaskWoken );
+    101          }
+    102          
+    103          void CS8422_ISR_Handler( void *pvParameters )
+    104          {
+    105              for( ;; )
+    106              {
+    107                   uint8 ReceiverInt = 0x00;
+    108                   CS8422_INT_STATUS cs8422_int_status;
+    109                   CS8422_FORMAT_STATUS cs8422_fmt_status;
+    110                   CS8422_RERR_BITS cs8422_rerr_status;
+    111                   static CS8422_FORMAT_STATUS LastFmt;
+    112                   static portTickType xTime1Silence = 0;
+    113                   static portTickType xTime2Silence = 0;
+    114                   portTickType SilenceAvailable = 0;
+    115                   AUDIO_EXCEPTION_QUEUE_TYPE tmp_QueueType;
+    116                 
+    117                  /*Got ISR*/
+    118                  if( xQueueReceive( mCS8422IsrParsms.QParams.xQueue, &ReceiverInt, mCS8422IsrParsms.QParams.xBlockTime ) )
+    119                  {
+    120                      if ( ReceiverInt == CS8422_ISR_FROM_EXTI )
+    121                      {
+    122                          /* Tony140620:The following can avoid pop noise for the following cases:
+    123                          1.Sony BD player : restart play the movie.
+    124                          2.PS3 : play movie and music
+    125                          3.TV : Switch PCM and DD */
+    126                          
+    127                          cs8422_int_status.byte = CS8422_ReadI2C_Byte(0x14); /*Get interrupt status*/
+    128                          //TRACE_DEBUG((0, "Int = 0x%X", cs8422_int_status.byte ));
+    129                          if ( cs8422_int_status.bits.fch )
+    130                          {
+    131                              cs8422_fmt_status.byte = CS8422_ReadI2C_Byte(0x12);
+    132                              //TRACE_DEBUG((0, "fmt = 0x%X", cs8422_fmt_status.byte ));
+    133                              if( ( cs8422_fmt_status.bits.dgtl_sil == 1  ) && ( cs8422_fmt_status.bits.pcm == 1 ) ) 
+    134                              {
+    135                                  xTime2Silence = xTaskGetTickCount();
+    136          
+    137                                  SilenceAvailable = (xTime2Silence - xTime1Silence);
+    138                                  //TRACE_DEBUG((0, " SilenceAvailable = %d", SilenceAvailable ));
+    139                                  tmp_QueueType.event = SRC_PCM_SILENCE;
+    140                                  pAudLowLevel_ObjCtrl->ExceptionSender(&tmp_QueueType);
+    141                                  if ( SilenceAvailable > PS3_SILENT_AVAILABE )
+    142                                  {
+    143                                      //pAudLowLevel_ObjCtrl->SetMute( SOUND_MUTE );
+    144                                  }
+    145                                  else
+    146                                  {
+    147                                      //pAudLowLevel_ObjCtrl->SetMute( SOUND_DEMUTE ); /*PS3 click sound release*/
+    148                                  }
+    149                                
+    150                                  xTime1Silence = xTime2Silence;
+    151                              }
+    152                              else if( ( cs8422_fmt_status.bits.pcm == 0 ) && ( cs8422_fmt_status.bits.dgtl_sil == 0 ) )/*TV from PCM to DTS or AC3*/
+    153                              {
+    154                                  //pAudLowLevel_ObjCtrl->SetMute( SOUND_MUTE );
+    155                                  
+    156                                  if( ( LastFmt.bits.pcm == 1 ) && ( LastFmt.bits.dgtl_sil == 1 )) 
+    157                                  {
+    158                                      //pAudLowLevel->LowLevelSetMute( SOUND_MUTE );
+    159                                  }
+    160                                  
+    161                                  LastFmt.byte = cs8422_fmt_status.byte;
+    162                              }
+    163                                  
+    164                          }
+    165          
+    166                          if ( cs8422_int_status.bits.rerr )
+    167                          {
+    168                              cs8422_rerr_status.byte = CS8422_ReadI2C_Byte(0x13);
+    169                              //TRACE_DEBUG((0, "cs8422 error bit =%X",cs8422_rerr_status.byte));
+    170                              if (cs8422_rerr_status.bits.unlock)
+    171                              {
+    172                                  pAudLowLevel_ObjCtrl->SetVolRampEvent(AUD_VOL_EVENT_SET_MUTE);
+    173                                  tmp_QueueType.event = SRC_RECEIVER_ERROR;
+    174                                  pAudLowLevel_ObjCtrl->ExceptionSender(&tmp_QueueType);
+    175                              }
+    176                          }
+    177                      }            
+    178                  }
+    179          		vTaskDelay(TASK_MSEC2TICKS(1));
+    180              }
+    181          }
+    182          
+    183          void CS8422_ISR_SuspendedCtrl( bool val )
+    184          {
+    185              uint8 IntType = 0x00;
+    186              uint8 IntCount = 0;
+    187          
+    188              if ( val == BTASK_SUSPENDED )
+    189              {
+    190                   if ( xTaskIsTaskSuspended( mCS8422IsrParsms.Handle ) != pdPASS ) /*task is working*/
+    191                   {
+    192                      vTaskSuspend( mCS8422IsrParsms.Handle );
+    193                      //TRACE_DEBUG((0, "CS8422_ISR_SuspendedCtrl suspend "));
+    194                   }
+    195              }
+    196              else
+    197              {
+    198                  if ( xTaskIsTaskSuspended( mCS8422IsrParsms.Handle ) == pdPASS ) /*task is not working*/
+    199                  {
+    200                      vTaskResume( mCS8422IsrParsms.Handle );
+    201                      //TRACE_DEBUG((0, "CS8422_ISR_SuspendedCtrl resume "));
+    202                      /* Tony140630: Clean the bytes in 8422 when resume*/
+    203                      for (IntCount =0;IntCount<5;IntCount++)
+    204                      {
+    205                          IntType = CS8422_ReadI2C_Byte(0x14);
+    206                          CS8422_ReadI2C_Byte(0x13); 
+    207                          CS8422_ReadI2C_Byte(0x12); 
+    208                          if (IntType == 0)
+    209                              break;
+    210                      }
+    211                  }
+    212              }
+    213          
+    214          }
+    215          
+    216          static void CS8422_ISR_IntConfig( void )
+    217          {
+    218          #if ( configCS8422_ISR == 1 )
+    219              pGPIOIsr_ObjCtrl->src_isr_configure( );
+    220              
+    221              mCS8422IsrParsms.QParams.xQueue = xQueueCreate( CS8422_ISR_QUEUE_LENGTH, FRTOS_SIZE(uint8) );
+    222              mCS8422IsrParsms.QParams.xBlockTime = BLOCK_TIME(0);
+    223              if( mCS8422IsrParsms.QParams.xQueue == NULL )
+    224              {
+    225                 TRACE_ERROR((0, "mCS8422IsrParsms queue creates failure " ));
+    226              }
+    227          
+    228              if ( xTaskCreate( 
+    229          		CS8422_ISR_Handler, 
+    230          		( portCHAR * ) "CS8422_ISR", 
+    231          		STACK_SIZE, 
+    232          		NULL, 
+    233          		tskCS8422_ISR_HANDLER_PRIORITY, 
+    234          		&mCS8422IsrParsms.Handle ) != pdPASS )
+    235          	{
+    236          		TRACE_ERROR((0, "CS8422_ISR task create failure " ));
+    237          	}
+    238              else
+    239              {
+    240                  vTaskSuspend( mCS8422IsrParsms.Handle );
+    241              }
+    242          #endif     
+    243              
+    244          }
+    245          
+    246          
+    247          void CS8422_ISR_Control( bool bIsrEnable )
+    248          {
+    249          #if ( configCS8422_ISR == 1 )    
+    250              if ( bIsrEnable == TRUE )
+    251              {
+    252                  CS8422_ISR_SuspendedCtrl( BTASK_RESUME );
+    253                  pGPIOIsr_ObjCtrl->src_isr_control( bIsrEnable );
+    254              }
+    255              else if ( bIsrEnable == FALSE )
+    256              {
+    257                  CS8422_ISR_SuspendedCtrl( BTASK_SUSPENDED );
+    258                  pGPIOIsr_ObjCtrl->src_isr_control( bIsrEnable );
+    259              }
+    260              else
+    261              {
+    262                  return;
+    263              }
+    264          #endif     
+    265          }
+    266          
+    267          
+    268          
+    269          
+    270          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        8  CS8422_ISR_Control
+              0 -- Indirect call
+              8 -> CS8422_ISR_SuspendedCtrl
+       40  CS8422_ISR_Handler
+             40 -- Indirect call
+             40 -> CS8422_ReadI2C_Byte
+             40 -> vTaskDelay
+             40 -> xQueueGenericReceive
+             40 -> xTaskGetTickCount
+       24  CS8422_ISR_IntConfig
+             24 -- Indirect call
+              0 -> Debug_printError
+             24 -> Debug_printError
+              0 -> vTaskSuspend
+             24 -> xQueueGenericCreate
+             24 -> xTaskGenericCreate
+        8  CS8422_ISR_QueueSendFromISR
+              8 -> xQueueGenericSendFromISR
+       16  CS8422_ISR_SuspendedCtrl
+             16 -> CS8422_ReadI2C_Byte
+             16 -> vTaskResume
+              0 -> vTaskSuspend
+             16 -> xTaskIsTaskSuspended
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      32  ?<Constant "CS8422_ISR task creat...">
+      12  ?<Constant "CS8422_ISR">
+      40  ?<Constant "mCS8422IsrParsms queu...">
+       4  ??DataTable8
+       4  ??DataTable8_1
+       4  ??DataTable8_2
+       4  ??DataTable8_3
+       4  ??DataTable8_4
+      12  ?Subroutine0
+      40  CS8422_ISR_Control
+     128  CS8422_ISR_Handler
+      96  CS8422_ISR_IntConfig
+      40  CS8422_ISR_QueueSendFromISR
+      74  CS8422_ISR_SuspendedCtrl
+       4  LastFmt
+       8  SRCIsr_ObjCtrl
+      36  mCS8422IsrParsms
+          xTime2Silence
+       4  pSRCIsr_ObjCtrl
+       4  xTime1Silence
+
+ 
+  44 bytes in section .bss
+   4 bytes in section .data
+   8 bytes in section .rodata
+ 494 bytes in section .text
+ 
+ 494 bytes of CODE  memory
+   8 bytes of CONST memory
+  48 bytes of DATA  memory
+
+Errors: none
+Warnings: 1

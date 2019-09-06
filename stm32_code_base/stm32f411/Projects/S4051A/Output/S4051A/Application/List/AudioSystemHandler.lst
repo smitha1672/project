@@ -1,0 +1,1020 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:25:26 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\APP_SRC\Managers\AudioSystemHandler.c #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\APP_SRC\Managers\AudioSystemHandler.c #
+#                     -D S4051A -D DEBUG -D FREE_RTOS -D STM32F40_41xxx -D    #
+#                    USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D             #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\AudioSystemHandler.lst                                #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\AudioSystemHandler.o                                   #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Projects\S4051A\APP_SRC\Managers\AudioSystemHandler.c
+      1          #include "Defs.h"
+      2          #include "Debug.h"
+      3          #include "freertos_conf.h"
+      4          #include "freertos_task.h"
+      5          #include "freertos_typedef.h"
+      6          #include "GPIOMiddleLevel.h"
+      7          #include "audio_gain_parameters.h"
+      8          #include "AudioDeviceManager.h"
+      9          #include "PowerHandler.h"
+     10          #include "BTHandler.h"
+     11          
+     12          #include "AudioSystemHandler.h"
+     13          
+     14          #include "HdmiDeviceManager.h"
+     15          
+     16          //_____________________________________________________________________________
+     17          #define SERVICE_HANLDER_TIME_TICK  TASK_MSEC2TICKS(1)    
+     18          #define AUDIO_SYS_QUEUE_LENGTH 8
+     19          
+     20          //_____________________________________________________________________________
+     21          typedef struct AUDIO_SYS_HANDLE_PARAMETERS
+     22          {
+     23              xTaskHandle Handle;
+     24              uint8 power_handle;
+     25              TaskHandleState taskState;
+     26              xSemaphoreParameters SParams;
+     27              xQueueParameters QParams;
+     28          } xAudSysHandleParams;
+     29          
+     30          typedef enum
+     31          {
+     32              AUD_SYSTEM_CLR_RESET = 0,
+     33              AUD_SYSTEM_SET_RESET,
+     34          }xAudSysRstCtrl;
+     35          
+     36          //_____________________________________________________________________________
+     37          
+     38          
+     39          //_____________________________________________________________________________
+     40          /*static variable*/
+     41          static xAudSysHandleParams AudioSysParams;
+     42          
+     43          //_____________________________________________________________________________
+     44          //static API header
+     45          static void AudioSystemHandler_CreateTask( void );
+     46          
+     47          static uint8 AudioSystemHandler_GetQueueNumber( void );
+     48          
+     49          static void AudioSystemHandler_HardwareRst( void );
+     50          
+     51          static void AudioSystemHandler_ClrRst( void );
+     52          
+     53          static void AudioSystemHandler_SystemInformation( void );
+     54          
+     55          #if ( configSII_DEV_953x_PORTING == 1 )
+     56          static xHMI_SiiAppPowerStatus_t AudioSystemHandler_getHDMIPowerStatus(void);
+     57          #endif
+     58          
+     59          static bool AudioSystemHandler_InstrSender( const void *params ) ;
+     60          
+     61          static xAudioVolParms AudioSystemHandler_AudioVolParmsAdapter( xADMVolEvents event, xHMISystemParams *pSource );
+     62          
+     63          static uint8 AudioSystemHandler_getSignalAvailable( void ) ;
+     64          
+     65          static bool AudioSystemHandler_getRampStatus(void);
+     66          
+     67          static uint8 AudioSystemHandler_getRampVol(void);
+     68          
+     69          static uint8 AudioSystemHandler_getTargetVol(void);
+     70          
+     71          //_____________________________________________________________________________
+     72          extern AUDIO_DEVICE_MANAGER_OBJECT *pADM_ObjCtrl;
+     73          extern POWER_HANDLE_OBJECT *pPowerHandle_ObjCtrl;
+     74          extern HDMI_DEVICE_MANAGER_OBJECT *pHDMI_DM_ObjCtrl;
+     75          extern BT_HANDLE_OBJECT *pBTHandle_ObjCtrl;
+     76          
+     77          const AUDIO_SYSTEM_HANDLER_OBJECT AudioSystemHandler =
+     78          {
+     79              AudioSystemHandler_CreateTask,
+     80              AudioSystemHandler_InstrSender,
+     81              AudioSystemHandler_getSignalAvailable,
+     82              AudioSystemHandler_getRampStatus,
+     83              AudioSystemHandler_getRampVol,
+     84              AudioSystemHandler_getTargetVol,
+     85          #if ( configSII_DEV_953x_PORTING == 1 )
+     86              AudioSystemHandler_getHDMIPowerStatus,
+     87          #endif
+     88          };
+     89          const AUDIO_SYSTEM_HANDLER_OBJECT *pASH_ObjCtrl = &AudioSystemHandler;
+     90          
+     91          //_____________________________________________________________________________
+     92          static uint8 AudioSystemHandler_getSignalAvailable( void ) 
+     93          {
+     94              uint8 ret = 0;
+     95          
+     96              ret = pADM_ObjCtrl->GetSignalAvailable();
+     97          
+     98              return ret;
+     99          }
+    100          
+    101          static bool AudioSystemHandler_getRampStatus(void)
+    102          {
+    103              bool ret = FALSE;
+    104          
+    105              ret = pADM_ObjCtrl->VolController_RampStauts();
+    106          
+    107              return ret;
+    108          }
+    109          
+    110          static uint8 AudioSystemHandler_getRampVol(void)
+    111          {
+    112              uint8 ret = 0;
+    113          
+    114              ret = pADM_ObjCtrl->VolController_VolStauts();
+    115          
+    116              return ret;
+    117          }
+    118          
+    119          static uint8 AudioSystemHandler_getTargetVol(void)
+    120          {
+    121              uint8 ret = 0;
+    122          
+    123              ret = pADM_ObjCtrl->VolController_TargetVol();
+    124          
+    125              return ret;
+    126          }
+    127          
+    128          #if ( configSII_DEV_953x_PORTING == 1 )
+    129          static xHMI_SiiAppPowerStatus_t AudioSystemHandler_getHDMIPowerStatus(void)
+    130          {
+    131              return pHDMI_DM_ObjCtrl->GetHDMIPowerStatus();
+    132          }
+    133          #endif
+    134          
+    135          static bool AudioSystemHandler_InstrSender( const void *params ) 
+    136          {
+    137             xHMISystemParams* pInstr = ( xHMISystemParams *)params;
+    138          
+    139          #if ( configAPP_ASH == 1 )
+    140              if ( pInstr == NULL )
+    141              {
+    142                  TRACE_ERROR((0, "AudioSystemHandler_InstrSender parameters error !! "));
+    143                  return FALSE;
+    144              }
+    145              
+    146              if (AudioSysParams.QParams.xQueue == NULL )
+    147              {
+    148                  TRACE_ERROR((0, "AudioSystemHandler_InstrSender xqueue is null !! "));
+    149                  return FALSE;
+    150              }
+    151              
+    152              if ( xQueueSend( AudioSysParams.QParams.xQueue, pInstr, AudioSysParams.QParams.xBlockTime ) != pdPASS )
+    153              {
+    154                  TRACE_ERROR((0, "AudioSystemHandler_InstrSender sends queue failure "));
+    155                  return FALSE;
+    156              }
+    157          #endif 
+    158              return TRUE;
+    159          
+    160          }
+    161          
+    162          static bool AudioSystemHandler_InstrReceiver( xHMISystemParams *pInstr ) 
+    163          {
+    164              if ( pInstr == NULL )
+    165              {
+    166                  TRACE_ERROR((0, " AudioSystemHandler_InstrReceiver instruction recevier error !! "));
+    167              }
+    168              
+    169              if ( AudioSysParams.QParams.xQueue == NULL )
+    170              {
+    171                  TRACE_ERROR((0, "AudioSystemHandler_InstrReceiver queue is null !! "));
+    172                  return FALSE;
+    173              }
+    174          
+    175              if ( xQueueReceive( AudioSysParams.QParams.xQueue, pInstr, AudioSysParams.QParams.xBlockTime ) != pdPASS )
+    176              {
+    177                  TRACE_ERROR((0, " AudioSystemHandler_InstrReceiver receiver queue is failure "));
+    178                  return FALSE;
+    179              }
+    180          
+    181              return TRUE;
+    182          }
+    183          
+    184          static void AudioSystemHandler_RstCtrl( xAudSysRstCtrl RstCtrl )
+    185          {
+    186              switch ( RstCtrl )
+    187              {
+    188                  case AUD_SYSTEM_SET_RESET:  /*Set device reset pin as High*/
+    189                  {
+    190                      GPIOMiddleLevel_Set(__O_DSP_RES);
+    191                      GPIOMiddleLevel_Set(__O_CS8422_RST);
+    192                      GPIOMiddleLevel_Set(__O_CS5346_RST);
+    193                      GPIOMiddleLevel_Set(__O_RST_AMP);
+    194                      GPIOMiddleLevel_Set(__O_RST_RF);
+    195                      GPIOMiddleLevel_Set(__O_RF_PAIRING);
+    196                  }
+    197                      break;
+    198          
+    199                  case AUD_SYSTEM_CLR_RESET:
+    200                  {
+    201                      GPIOMiddleLevel_Clr(__O_DSP_RES);
+    202                      GPIOMiddleLevel_Clr(__O_CS8422_RST);
+    203                      GPIOMiddleLevel_Clr(__O_CS5346_RST);
+    204                      GPIOMiddleLevel_Clr(__O_RST_AMP);
+    205                      GPIOMiddleLevel_Clr(__O_RST_RF);
+    206                      GPIOMiddleLevel_Clr(__O_RF_PAIRING);
+    207                  }
+    208                      break;
+    209          
+    210              }
+    211          }
+    212          
+    213          static void AudioSystemHandler_HardwareRst( void )
+    214          {
+    215              vTaskDelay(TASK_MSEC2TICKS(200)); /*Smith modify: Working with HW Austin  to modify reset sequence.*/
+    216                  
+    217              AudioSystemHandler_RstCtrl( AUD_SYSTEM_SET_RESET );
+    218              vTaskDelay(TASK_MSEC2TICKS(100));
+    219          }
+    220          
+    221          static void AudioSystemHandler_ClrRst( void )
+    222          {
+    223              AudioSystemHandler_RstCtrl( AUD_SYSTEM_CLR_RESET );
+    224              vTaskDelay(TASK_MSEC2TICKS(100));
+    225          }
+    226          
+    227          static uint8 AudioSystemHandler_GetQueueNumber( void )
+    228          {
+    229              return (uint8)uxQueueMessagesWaiting(AudioSysParams.QParams.xQueue);
+    230          }
+    231          
+    232          static void AudioSystemHandler_IgnoreSameSetting( void *params  )
+    233          {
+    234              xHMISystemParams* pSystemParms = (xHMISystemParams*)params;
+    235              xAudDeviceParms adm_params;
+    236          
+    237              if ( params == NULL )
+    238                  return;  
+    239          
+    240              adm_params = pADM_ObjCtrl->GetAudioParams();
+    241          
+    242              switch( pSystemParms->sys_event )
+    243              {   
+    244                  case SYS_EVENT_SEL_SRC:
+    245                  {
+    246                      if ( adm_params.input_src == pSystemParms->input_src )
+    247                      {
+    248                          pSystemParms->sys_event = SYS_EVENT_NULL; /*same source that does not need to pass audio device manager*/
+    249                      }
+    250          
+    251                  }
+    252                      break;
+    253          
+    254                  case SYS_EVENT_VOLUME_SET:
+    255                  {
+    256                      if ( adm_params.master_gain == pSystemParms->master_gain)
+    257                      {
+    258                          pSystemParms->sys_event = SYS_EVENT_NULL; /*same source that does not need to pass audio device manager*/
+    259                      }
+    260                  }
+    261                      break;
+    262          
+    263                  default:
+    264                  {
+    265                      /*TODO*/
+    266                  }
+    267                      break;
+    268              }
+    269              
+    270          }
+    271          
+    272          static xAudDeviceParms AudioSystemHandler_AudioParmsAdapter( const xHMISystemParams *pSource )
+    273          {
+    274              /*sync audio parameters between auido device manager and hmi interface */
+    275              xAudDeviceParms dest;
+    276          
+    277              dest.op_mode = pSource->op_mode;
+    278              dest.input_src = pSource->input_src;
+    279              dest.mute = pSource->mute;
+    280              dest.master_gain = pSource->master_gain;
+    281              dest.bass_gain = pSource->bass_gain;
+    282              dest.treble_gain = pSource->treble_gain;
+    283              dest.sub_gain = pSource->sub_gain;
+    284              dest.center_gain = pSource->center_gain;
+    285              dest.LsRs_gain = pSource->LsRs_gain;
+    286              dest.balance = pSource->balance;
+    287              dest.srs_truvol = pSource->srs_truvol;
+    288              dest.srs_tshd = pSource->srs_tshd;
+    289              dest.night_mode = pSource->night_mode;
+    290              dest.av_delay = pSource->av_delay;
+    291              
+    292              return dest;
+    293          }
+    294          
+    295          static void AudioSystemHandler_handleCommand( void *params  )
+    296          {
+    297              if ( params == NULL )
+    298                  return;        
+    299              
+    300              xHMISystemParams* pSystemParms = (xHMISystemParams*)params;
+    301          
+    302              switch( pSystemParms->sys_event )
+    303              {
+    304                  case SYS_EVENT_SYSTEM_UP:
+    305          #if ( configSII_DEV_953x_PORTING == 1 )
+    306                  case SYS_EVENT_CEC_SYSTEM_UP:
+    307                  case SYS_EVENT_SAC_SYSTEM_UP:
+    308                  case SYS_EVENT_ARC_SYSTEM_UP:
+    309          #endif
+    310                  {
+    311                      xAudDeviceParms Dest; 
+    312                      
+    313                      AudioSystemHandler_HardwareRst( );
+    314          
+    315                      Dest = AudioSystemHandler_AudioParmsAdapter( pSystemParms );
+    316                      pADM_ObjCtrl->initialize( &Dest );
+    317                      if( pSystemParms->sys_event != SYS_EVENT_CEC_SYSTEM_UP )
+    318                      {
+    319                          pHDMI_DM_ObjCtrl->SendEvent( pSystemParms );
+    320                      }
+    321          #if ( configSTM32F411_PORTING == 1 )             
+    322          
+    323          
+    324                      if ( pSystemParms->input_src == AUDIO_SOURCE_BLUETOOTH )
+    325                      {
+    326                          xBTHandleCommand BTCommand;
+    327          
+    328                          BTCommand = BT_HANDLE_ON;
+    329                          pBTHandle_ObjCtrl->bt_instr_sender(&BTCommand);
+    330                      }
+    331          
+    332                      AudioSystemHandler_SystemInformation( );
+    333          #endif            
+    334                      pPowerHandle_ObjCtrl->turn_on_done( AudioSysParams.power_handle );
+    335                  }
+    336                      break;
+    337          
+    338                  case SYS_EVENT_SYSTEM_DOWN:
+    339                  {
+    340                      pADM_ObjCtrl->Deinitialize( );
+    341                      AudioSystemHandler_ClrRst( );
+    342          #if ( configSTM32F411_PORTING == 1 )             
+    343                      pHDMI_DM_ObjCtrl->SendEvent( pSystemParms );
+    344          #endif
+    345          
+    346                      pPowerHandle_ObjCtrl->turn_off_done( AudioSysParams.power_handle );
+    347                  }
+    348                      break;
+    349          
+    350                  case SYS_EVENT_DEV_CONFIG:
+    351                  {
+    352                      xAudDeviceParms Dest;
+    353                      Dest = AudioSystemHandler_AudioParmsAdapter( pSystemParms );
+    354                      pADM_ObjCtrl->DeviceConfig( &Dest );
+    355          #if ( configSII_DEV_953x_PORTING == 1 ) /*Smith comment: Why use this api*/
+    356                      pADM_ObjCtrl->SetInputPath( Dest.input_src );
+    357          #endif
+    358                  }
+    359                      break;
+    360          
+    361                  case SYS_EVENT_SEL_SRC:
+    362                  {
+    363                      pADM_ObjCtrl->SetInputPath( pSystemParms->input_src );
+    364          #if ( configSTM32F411_PORTING == 1 )             
+    365                      pHDMI_DM_ObjCtrl->SendEvent( pSystemParms );
+    366          #endif
+    367                  }
+    368                      break;
+    369          
+    370                  case SYS_EVENT_VOLUME_SET:
+    371                  {
+    372                      xAudioVolParms Dest;
+    373                      Dest = AudioSystemHandler_AudioVolParmsAdapter( AUD_VOL_EVENT_SET_MASTER_GAIN, pSystemParms );
+    374                      pADM_ObjCtrl->SetVolumeEvent( &Dest );
+    375                  }
+    376                      break;
+    377          
+    378                  case SYS_EVENT_VOLUME_MUTE_SET:
+    379                  {
+    380                      xAudioVolParms Dest;
+    381                      Dest = AudioSystemHandler_AudioVolParmsAdapter( AUD_VOL_EVENT_USER_MUTE, pSystemParms );
+    382                      pADM_ObjCtrl->SetVolumeEvent( &Dest );
+    383                  }
+    384                      break;
+    385                      
+    386                  case SYS_EVENT_VOLUME_DELAY_RELEASE:
+    387                  {
+    388                      xAudioVolParms Dest;
+    389                      Dest = AudioSystemHandler_AudioVolParmsAdapter( AUD_VOL_EVENT_VOLUME_DELAY_RELEASE, pSystemParms );
+    390                      pADM_ObjCtrl->SetVolumeEvent( &Dest );
+    391                  }
+    392                      break;
+    393          #if 1   //Fix issue for play channel check will cause pop sound
+    394          	case SYS_EVENT_CHK_VOLUME_DELAY_RELEASE:
+    395                  {
+    396                      xAudioVolParms Dest;
+    397                      Dest = AudioSystemHandler_AudioVolParmsAdapter( AUD_VOL_EVENT_CHK_VOLUME_DELAY_RELEASE, pSystemParms );
+    398                      pADM_ObjCtrl->SetVolumeEvent( &Dest );
+    399                  }
+    400                      break;
+    401          #endif			
+    402                  case SYS_EVENT_BASS_SET:
+    403                  {
+    404                      pADM_ObjCtrl->SetBassGain( pSystemParms->bass_gain);
+    405                  }
+    406                      break;
+    407          
+    408                  case SYS_EVENT_TREBLE_SET:
+    409                  {
+    410                      pADM_ObjCtrl->SetTrebleGain( pSystemParms->treble_gain);
+    411                  }
+    412                      break;
+    413          
+    414                  case SYS_EVENT_SUB_SET:
+    415                  {
+    416                      pADM_ObjCtrl->SetSubGain( pSystemParms->sub_gain);
+    417                  }
+    418                      break;
+    419          
+    420                  case SYS_EVENT_CENTER_SET:
+    421                  {
+    422                      pADM_ObjCtrl->SetCenterGain( pSystemParms->center_gain);
+    423                  }
+    424                      break;
+    425          
+    426                  case SYS_EVENT_LSRS_SET:
+    427                  {
+    428                      pADM_ObjCtrl->setLsRs( pSystemParms->LsRs_gain);
+    429                  }
+    430                  break;
+    431          
+    432                  case SYS_EVENT_BALANCE_SET:
+    433                  {
+    434                      pADM_ObjCtrl->SetBalance( pSystemParms->balance);
+    435                  }
+    436                      break;
+    437                  
+    438                  case SYS_EVENT_SRS_TRUVOL_TSHD_SET:
+    439                  {
+    440                      xAudDeviceParms Dest;
+    441                      Dest = AudioSystemHandler_AudioParmsAdapter( pSystemParms );
+    442                      pADM_ObjCtrl->SetSRSTruVolTSHD( &Dest );
+    443                  }
+    444                      break;
+    445                      
+    446                  case SYS_EVENT_NIGHT_MODE_SET:
+    447                  {
+    448                      pADM_ObjCtrl->SetNightMode( pSystemParms->night_mode);
+    449                  }
+    450                  break;
+    451          
+    452                  case SYS_EVENT_AV_DELAY_SET:
+    453                  {
+    454                      pADM_ObjCtrl->SetAVDelay( pSystemParms->av_delay);
+    455                  }
+    456                  break;
+    457              
+    458                  case SYS_EVENT_FAC_ROUTE_CTRL_CENTER:
+    459                  {
+    460                      pADM_ObjCtrl->SetAudioRoutCtrl(ROUTE_CTRL_CENTER);
+    461                  }
+    462                  break;
+    463          
+    464                  case SYS_EVENT_FAC_ROUTE_CTRL_LFE0:
+    465                  {
+    466                      pADM_ObjCtrl->SetAudioRoutCtrl(ROUTE_CTRL_LFE0);
+    467                  }
+    468                  break;
+    469          
+    470                  case SYS_EVENT_FAC_ROUTE_CTRL_FL:
+    471                  {
+    472                      pADM_ObjCtrl->SetAudioRoutCtrl(ROUTE_CTRL_FL);
+    473                  }
+    474                  break;
+    475                  
+    476                  case SYS_EVENT_FAC_ROUTE_CTRL_FR:
+    477                  {
+    478                      pADM_ObjCtrl->SetAudioRoutCtrl(ROUTE_CTRL_FR);
+    479                  }
+    480                  break;
+    481          
+    482                  case SYS_EVENT_FAC_ROUTE_CTRL_RR:
+    483                  {
+    484                      pADM_ObjCtrl->SetAudioRoutCtrl(ROUTE_CTRL_RR);
+    485                  }
+    486                  break;
+    487                  
+    488                  case SYS_EVENT_FAC_ROUTE_CTRL_RL:
+    489                  {
+    490                      pADM_ObjCtrl->SetAudioRoutCtrl(ROUTE_CTRL_RL);
+    491                  }
+    492                  break;
+    493          
+    494                  case SYS_EVENT_FAC_ROUTE_CTRL_DISABLE:
+    495                  {
+    496                      //for normal state
+    497                      pADM_ObjCtrl->SetAudioRoutCtrl(ROUTE_CTRL_DISABLE);
+    498                  }
+    499                  break;
+    500          
+    501                  case SYS_EVENT_FAC_ROUTE_CTRL_FL_FR:
+    502                  {
+    503                      //for normal state
+    504                      pADM_ObjCtrl->SetAudioRoutCtrl(ROUTE_CTRL_FL_FR);
+    505                  }
+    506                  break;
+    507          
+    508                  case SYS_EVENT_FAC_ROUTE_CTRL_RR_RL:
+    509                  {
+    510                      //for normal state
+    511                      pADM_ObjCtrl->SetAudioRoutCtrl(ROUTE_CTRL_RR_RL);
+    512                  }
+    513                  break;
+    514          
+    515                  case SYS_EVENT_FAC_ROUTE_CTRL_FL_FR_CENTER:
+    516                  {
+    517                      //for normal state
+    518                      pADM_ObjCtrl->SetAudioRoutCtrl(ROUTE_CTRL_FL_FR_CENTER);
+    519                  }
+    520                  break;
+    521          
+    522                  case SYS_EVENT_FAC_ROUTE_CTRL_RR_RL_WOOFER:
+    523                  {
+    524                      //for normal state
+    525                      pADM_ObjCtrl->SetAudioRoutCtrl(ROUTE_CTRL_RR_RL_WOOFER);
+    526                  }
+    527                  break;
+    528          
+    529                  case SYS_EVENT_FAC_AQ_CTRL_OFF:
+    530                  {
+    531                      pADM_ObjCtrl->Factory_AQBypass(FALSE);
+    532                  }
+    533                  break;
+    534          
+    535                  case SYS_EVENT_FAC_AQ_CTRL_ON:
+    536                  {
+    537                      pADM_ObjCtrl->Factory_AQBypass(TRUE);
+    538                  }
+    539                  break;
+    540          
+    541              default:
+    542                  break;
+    543              }
+    544          }
+    545          
+    546          void AudioSystemHandler_ServiceHandle( void *pvParameters )
+    547          {
+    548              xHMISystemParams systemParams;
+    549              
+    550              for( ;; )
+    551              {
+    552                  switch( AudioSysParams.taskState )
+    553                  {
+    554                      case TASK_SUSPENDED:
+    555                      {
+    556                          if( AudioSystemHandler_GetQueueNumber() > 0 )  
+    557                          {
+    558                              AudioSysParams.taskState = TASK_READY;
+    559                          }
+    560                      }
+    561                          break;
+    562                  
+    563                      case TASK_READY:
+    564                      {
+    565                          if ( AudioSystemHandler_InstrReceiver( (xHMISystemParams*)&systemParams ) == TRUE )
+    566                          {
+    567                              AudioSysParams.taskState = TASK_RUNING;
+    568                          }
+    569                          else
+    570                          {
+    571                              AudioSysParams.taskState = TASK_SUSPENDED;
+    572                          }
+    573                      }
+    574                          break;
+    575          
+    576                      case TASK_RUNING:
+    577                      {
+    578                          AudioSystemHandler_IgnoreSameSetting( (xHMISystemParams*)&systemParams );
+    579                          AudioSystemHandler_handleCommand( (xHMISystemParams*)&systemParams );
+    580                          AudioSysParams.taskState = TASK_BLOCKED;
+    581                      }
+    582                          break;
+    583          
+    584                      case TASK_BLOCKED:
+    585                      {
+    586                          AudioSysParams.taskState = TASK_SUSPENDED;
+    587                      }
+    588                          break;    
+    589                  }
+    590          
+    591                  vTaskDelay( SERVICE_HANLDER_TIME_TICK );
+    592              }
+    593          }
+    594          
+    595          static void AudioSystemHandler_CreateTask( void )
+    596          {
+    597          #if ( configAPP_ASH == 1 )
+    598              vSemaphoreCreateBinary( AudioSysParams.SParams.xSemaphore );
+    599              AudioSysParams.SParams.xBlockTime = BLOCK_TIME(0); /*indicate no block time*/
+    600              if ( AudioSysParams.SParams.xSemaphore == NULL )
+    601              {
+    602                  //TRACE_DEBUG((0, "creates Sema failure "));
+    603                  return;
+    604              }
+    605              else
+    606              {
+    607                  xSemaphoreTake( AudioSysParams.SParams.xSemaphore, AudioSysParams.SParams.xBlockTime );
+    608              }
+    609          
+    610              AudioSysParams.QParams.xQueue = xQueueCreate( AUDIO_SYS_QUEUE_LENGTH, FRTOS_SIZE(xHMISystemParams) );
+    611              AudioSysParams.QParams.xBlockTime = BLOCK_TIME(0);
+    612              if( AudioSysParams.QParams.xQueue == NULL )
+    613              {
+    614                 //TRACE_ERROR((0, "AudioSysParams queue creates failure " ));
+    615              }
+    616              
+    617              if ( xTaskCreate( 
+    618                  AudioSystemHandler_ServiceHandle, 
+    619                  ( portCHAR * ) "AUD_HANDLER", 
+    620                  (STACK_SIZE), 
+    621                  NULL, 
+    622                  tskAUD_HANDLER_PRIORITY, 
+    623                  &AudioSysParams.Handle ) != pdPASS )
+    624              {
+    625                  vTaskDelete( AudioSysParams.Handle );
+    626                  //TRACE_ERROR((0, "AUD_HANDLER task create failure " ));
+    627              }
+    628          
+    629              pADM_ObjCtrl->CreateTask( );
+    630          
+    631          #if ( configSII_DEV_953x_PORTING == 1 )
+    632              pHDMI_DM_ObjCtrl->CreateTask();
+    633          #endif
+    634          
+    635              AudioSysParams.power_handle = pPowerHandle_ObjCtrl->register_handle();
+    636          
+    637              
+    638          #endif     
+    639          
+    640          }
+    641          
+    642          static xAudioVolParms AudioSystemHandler_AudioVolParmsAdapter( xADMVolEvents event, xHMISystemParams *pSource )
+    643          {
+    644              /*sync audio parameters between auido device manager and hmi interface */
+    645              xAudioVolParms destination;
+    646          
+    647              destination.adm_vol_event = event;
+    648              destination.master_gain= pSource->master_gain;
+    649              destination.mute= pSource->mute;
+    650              destination.srs_truvol = pSource->srs_truvol;
+    651              destination.srs_tshd = pSource->srs_tshd;
+    652              
+    653              return destination;
+    654          }
+    655          
+    656          static void AudioSystemHandler_SystemInformation(void)
+    657          {
+    658              TRACE_INFO((STR_ID_NULL, "\n"));
+    659              TRACE_INFO((STR_ID_NULL, "##############################################"));
+    660          #if defined ( S4051A )    
+    661              TRACE_INFO((STR_ID_NULL, "S4051A-OS Version: %X", VERSION));
+    662          #elif defined ( S4051B )    
+    663              TRACE_INFO((STR_ID_NULL, "S4051B-OS Version: %X", VERSION));  
+    664          #elif defined ( S4551A ) 
+    665              TRACE_INFO((STR_ID_NULL, "S4551A-OS Version: %X", VERSION));
+    666          #elif defined ( S3851C )
+    667              TRACE_INFO((STR_ID_NULL, "S3851C-OS Version: %X", VERSION));
+    668          #elif defined ( S3851D )
+    669              TRACE_INFO((STR_ID_NULL, "S3851D-OS Version: %X", VERSION));    
+    670          #elif defined ( S3851E )
+    671              TRACE_INFO((STR_ID_NULL, "S3851E-OS Version: %X", VERSION));      
+    672          #elif defined ( S3851F )
+    673              TRACE_INFO((STR_ID_NULL, "S3851F-OS Version: %X", VERSION));      
+    674          #endif
+    675              TRACE_INFO((STR_ID_NULL, "##############################################"));
+    676              TRACE_INFO((STR_ID_NULL, "\n"));
+    677          }
+    678          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       20  AudioSystemHandler_AudioParmsAdapter
+             20 -> __aeabi_memcpy
+       12  AudioSystemHandler_AudioVolParmsAdapter
+             12 -> __aeabi_memcpy
+       24  AudioSystemHandler_CreateTask
+             24 -- Indirect call
+             24 -> vTaskDelete
+             24 -> xQueueGenericCreate
+             24 -> xQueueGenericReceive
+             24 -> xQueueGenericSend
+             24 -> xTaskGenericCreate
+       24  AudioSystemHandler_IgnoreSameSetting
+             24 -- Indirect call
+        8  AudioSystemHandler_InstrSender
+              8 -> Debug_printError
+              8 -> xQueueGenericSend
+        8  AudioSystemHandler_RstCtrl
+              0 -> GPIOMiddleLevel_Clr
+              8 -> GPIOMiddleLevel_Clr
+              0 -> GPIOMiddleLevel_Set
+              8 -> GPIOMiddleLevel_Set
+       40  AudioSystemHandler_ServiceHandle
+             40 -> AudioSystemHandler_IgnoreSameSetting
+             40 -> AudioSystemHandler_handleCommand
+             40 -> Debug_printError
+             40 -> uxQueueMessagesWaiting
+             40 -> vTaskDelay
+             40 -> xQueueGenericReceive
+        0  AudioSystemHandler_getHDMIPowerStatus
+              0 -- Indirect call
+        0  AudioSystemHandler_getRampStatus
+              0 -- Indirect call
+        0  AudioSystemHandler_getRampVol
+              0 -- Indirect call
+        0  AudioSystemHandler_getSignalAvailable
+              0 -- Indirect call
+        0  AudioSystemHandler_getTargetVol
+              0 -- Indirect call
+       48  AudioSystemHandler_handleCommand
+             48 -- Indirect call
+             48 -> AudioSystemHandler_AudioParmsAdapter
+             48 -> AudioSystemHandler_AudioVolParmsAdapter
+             48 -> AudioSystemHandler_RstCtrl
+             48 -> vTaskDelay
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      64  ?<Constant " AudioSystemHandler_I...">
+      12  ?<Constant "AUD_HANDLER">
+      52  ?<Constant "AudioSystemHandler_In...">
+      52  ?<Constant "AudioSystemHandler_In...">_1
+      52  ?<Constant "AudioSystemHandler_In...">_2
+      52  ?<Constant "AudioSystemHandler_In...">_3
+       4  ??DataTable16
+       4  ??DataTable16_1
+       4  ??DataTable16_2
+       4  ??DataTable16_3
+       4  ??DataTable16_4
+       6  ?Subroutine0
+      32  AudioSysParams
+      28  AudioSystemHandler
+      98  AudioSystemHandler_AudioParmsAdapter
+      40  AudioSystemHandler_AudioVolParmsAdapter
+     124  AudioSystemHandler_CreateTask
+      54  AudioSystemHandler_IgnoreSameSetting
+      54  AudioSystemHandler_InstrSender
+      88  AudioSystemHandler_RstCtrl
+     108  AudioSystemHandler_ServiceHandle
+      10  AudioSystemHandler_getHDMIPowerStatus
+      10  AudioSystemHandler_getRampStatus
+      10  AudioSystemHandler_getRampVol
+      10  AudioSystemHandler_getSignalAvailable
+      10  AudioSystemHandler_getTargetVol
+     500  AudioSystemHandler_handleCommand
+       4  pASH_ObjCtrl
+
+ 
+    32 bytes in section .bss
+     4 bytes in section .data
+    28 bytes in section .rodata
+ 1 426 bytes in section .text
+ 
+ 1 426 bytes of CODE  memory
+    28 bytes of CONST memory
+    36 bytes of DATA  memory
+
+Errors: none
+Warnings: 2

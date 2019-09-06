@@ -1,0 +1,1815 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:06 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\edid_tx\si_ed #
+#                    id_tx_composer.c                                         #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\edid_tx\si_ed #
+#                    id_tx_composer.c -D S4051A -D DEBUG -D FREE_RTOS -D      #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_edid_tx_composer.lst                               #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_edid_tx_composer.o                                  #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\component\edid_tx\si_edid_tx_composer.c
+      1          //************************************************************************************************
+      2          //! @file   si_edid_tx_composer.c
+      3          //! @brief  Generation of the repeater EDID structure
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1060 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2002-2010, Silicon Image, Inc.  All rights reserved.
+     11          //***********************************************************************************************/
+     12          
+     13          
+     14          #include <string.h>
+     15          #include "si_edid_tx_component.h"
+     16          #include "si_edid_tx_internal.h"
+     17          
+     18          #define COMPOSE_SAD_SEPARATELY
+     19          
+     20          
+     21          /*
+     22          This Version Limitations:
+     23          - If DS EDID has native DTDs which does not have corresponding Short Video Descriptor,
+     24            in rare cases, the Native attribute for them can be lost.
+     25          - The Data Collection could be placed into the first extension block.
+     26          */
+     27          
+     28          // Following definitions are to be sure that the EDID buffer margin is not exceeded
+     29          #define BEGIN_BOUNDARY_CHECK do{
+     30          #define CHECK_BOUNDARY(last_idx) if ((last_idx) >= EDID_ADR__CHECK_SUM) {pEdidTx->edidInfo.ErrorCode = EDID_ERROR__NO_SPACE_FOR_DBC; break;}
+     31          #define END_BOUNDARY_CHECK }while(false);
+     32          
+     33          
+     34          //-------------------------------------------------------------------------------------------------
+     35          //! @brief      Calculate and return EDID checksum.
+     36          //!
+     37          //! @param[in]  aEdidBlock - array containing one EDID block
+     38          //!
+     39          //! @return     EDID checksum.
+     40          //-------------------------------------------------------------------------------------------------
+     41          
+     42          static uint8_t EdidCheckSumCalc(uint8_t aEdidBlock[EDID_BLOCK_SIZE])
+     43          {
+     44              uint8_t checkSum = 0;
+     45              int i;
+     46              for (i = 0; i < (EDID_BLOCK_SIZE-1); i++)
+     47                  checkSum += aEdidBlock[i];
+     48              checkSum = 0x100 - checkSum;
+     49              return checkSum;
+     50          }
+     51          
+     52          
+     53          //-------------------------------------------------------------------------------------------------
+     54          //! @brief      Create Short DTD EDID section based on parsed/decoded input DTD.
+     55          //!
+     56          //! @param[out] pTiming - pointer to a DTD section of EDID,
+     57          //! @param[in]  pSdtd   - pointer to a SDTD
+     58          //-------------------------------------------------------------------------------------------------
+     59          
+     60          static void MakeDtdFromSdtd( uint8_t *pTiming, shortDtd_t *pSdtd)
+     61          {
+     62              uint8_t video_idx = pSdtd->VideoIdx;
+     63              const videoMode_t *pVideoTable;
+     64              uint16_t v_size, h_size;
+     65              uint16_t active_v;
+     66              uint8_t flags = 0x18; // means "Digital Interface"
+     67          
+     68              if ( video_idx > NMB_OF_VIDEO_MODES) // protection
+     69              {
+     70                  video_idx = vm1_640x480p;
+     71              }
+     72              pVideoTable = &VideoModeTable[video_idx];
+     73          
+     74              EdidTxImageSizeGet(&(pEdidTx->edidInfo), pSdtd->Ar16x9, &v_size, &h_size);
+     75          
+     76              active_v = (pVideoTable->Active.V >> pVideoTable->Interlaced);
+     77          /*
+     78          CEA-861C:
+     79          7.2.1 Use of EDID Detailed Timing Descriptors
+     80          For the purposes of this standard, a DTV Monitor intended for 60 Hz countries shall support both the
+     81          60 Hz and 59.94 Hz version of any format it supports. The 60 Hz version shall be described in the EDID
+     82          structure for HDTV formats, the 59.94Hz version shall be described for all 480-line formats.
+     83          */
+     84          //  {
+     85          //      uint16_t v_rate = 6000;
+     86          //      uint32_t pix_clk;
+     87          //      if (ABS_DIFF(p_video_table->VFreq, 60) <= 1) // 59/60 Hz modes
+     88          //          if (480 == p_video_table->Active.V) // VGA, 480i, 480p
+     89          //              v_rate = 5994;
+     90          //      pix_clk = v_rate * p_video_table->Total.H * p_video_table->Total.V;
+     91          //      if (p_video_table->Interlaced)
+     92          //          pix_clk /= 2;
+     93          //      pixel_clock = (uint16_t) ((pix_clk + 5000) / 10000); // +5000 is for better rounding
+     94          //  }
+     95          
+     96              pTiming[EDID_DTD_ADR__PIX_CLK_LOW] = (uint8_t) pVideoTable->PixClk;
+     97              pTiming[EDID_DTD_ADR__PIX_CLK_HIGH] = pVideoTable->PixClk >> 8;
+     98              pTiming[EDID_DTD_ADR__H_ACTIVE_LOW] = (uint8_t) pVideoTable->Active.H;
+     99              pTiming[EDID_DTD_ADR__H_BLANK_LOW] = (uint8_t) pVideoTable->Blank.H;
+    100              pTiming[EDID_DTD_ADR__H_HIGH] =
+    101                  ((pVideoTable->Active.H >> 4) & 0xF0) |
+    102                  ((pVideoTable->Blank.H  >> 8) & 0x0F);
+    103              pTiming[EDID_DTD_ADR__V_ACTIVE_LOW] = (uint8_t) active_v;
+    104              pTiming[EDID_DTD_ADR__V_BLANK_LOW] = (uint8_t) pVideoTable->Blank.V;
+    105              pTiming[EDID_DTD_ADR__V_HIGH] =
+    106                  ((active_v >> 4) & 0xF0) |
+    107                  ((pVideoTable->Blank.V  >> 8) & 0x0F);
+    108              pTiming[EDID_DTD_ADR__H_SYNC_OFFSET_LOW] = (uint8_t) pVideoTable->SyncOffset.H;
+    109              pTiming[EDID_DTD_ADR__H_SYNC_WIDTH_LOW] = (uint8_t) pVideoTable->SyncWidth.H;
+    110              pTiming[EDID_DTD_ADR__V_SYNC_LOW] =
+    111                  ((pVideoTable->SyncOffset.V << 4) & 0xF0) |
+    112                  ((pVideoTable->SyncWidth.V) & 0x0F);
+    113              pTiming[EDID_DTD_ADR__H_V_SYNC_HIGH] =
+    114                  ((pVideoTable->SyncOffset.H >> 2) & 0xC0) |
+    115                  ((pVideoTable->SyncWidth.H  >> 4) & 0x30) |
+    116                  ((pVideoTable->SyncOffset.V >> 2) & 0x0C) |
+    117                  ((pVideoTable->SyncWidth.V  >> 4) & 0x03);
+    118              pTiming[EDID_DTD_ADR__H_SIZE_LOW] = (uint8_t) h_size;
+    119              pTiming[EDID_DTD_ADR__V_SIZE_LOW] = (uint8_t) v_size;
+    120              pTiming[EDID_DTD_ADR__H_V_SIZE_HIGH] =
+    121                  ((h_size >> 4) & 0xF0) |
+    122                  ((v_size >> 8) & 0x0F);
+    123              pTiming[EDID_DTD_ADR__H_BORDER] = 0;
+    124              pTiming[EDID_DTD_ADR__V_BORDER] = 0;
+    125              if (pVideoTable->Interlaced)
+    126                  flags |= 0x80;
+    127              if (POS == pVideoTable->HPol)
+    128              {
+    129                  flags |= 0x02;
+    130              }
+    131              if (POS == pVideoTable->VPol)
+    132              {
+    133                  flags |= 0x04;
+    134              }
+    135              if (pSdtd->DisplayType & 0x01)
+    136              {
+    137                  flags |= 0x01;
+    138              }
+    139              if (pSdtd->DisplayType & 0x02)
+    140              {
+    141                  flags |= 0x20;
+    142              }
+    143              if (pSdtd->DisplayType & 0x04)
+    144              {
+    145                  flags |= 0x40;
+    146              }
+    147              pTiming[EDID_DTD_ADR__FLAGS] = flags;
+    148          }
+    149          
+    150          
+    151          //-------------------------------------------------------------------------------------------------
+    152          //! @brief      Create DTD EDID section based on parsed/decoded input DTD.
+    153          //!
+    154          //! @param[out] pTiming - pointer to a DTD section of EDID,
+    155          //! @param[in]  pSdtd   - pointer to a SDTD
+    156          //-------------------------------------------------------------------------------------------------
+    157          
+    158          static void MakeDtdFromDtd(uint8_t *pTiming, dtd_t *pDtd)
+    159          {
+    160              pTiming[EDID_DTD_ADR__PIX_CLK_LOW] = (uint8_t) pDtd->PixClk_10kHz;
+    161              pTiming[EDID_DTD_ADR__PIX_CLK_HIGH] = pDtd->PixClk_10kHz >> 8;
+    162              pTiming[EDID_DTD_ADR__H_ACTIVE_LOW] = (uint8_t) pDtd->HAct_Pix;
+    163              pTiming[EDID_DTD_ADR__H_BLANK_LOW] = (uint8_t) pDtd->HBlank_Pix;
+    164              pTiming[EDID_DTD_ADR__H_HIGH] =
+    165                  ((pDtd->HAct_Pix   >> 4) & 0xF0) |
+    166                  ((pDtd->HBlank_Pix >> 8) & 0x0F);
+    167              pTiming[EDID_DTD_ADR__V_ACTIVE_LOW] = (uint8_t) pDtd->VAct_Pix;
+    168              pTiming[EDID_DTD_ADR__V_BLANK_LOW] = (uint8_t) pDtd->VBlank_Pix;
+    169              pTiming[EDID_DTD_ADR__V_HIGH] =
+    170                  ((pDtd->VAct_Pix   >> 4) & 0xF0) |
+    171                  ((pDtd->VBlank_Pix >> 8) & 0x0F);
+    172              pTiming[EDID_DTD_ADR__H_SYNC_OFFSET_LOW] = (uint8_t) pDtd->HSyncOffset;
+    173              pTiming[EDID_DTD_ADR__H_SYNC_WIDTH_LOW] = (uint8_t) pDtd->HSyncPulseWith;
+    174              pTiming[EDID_DTD_ADR__V_SYNC_LOW] =
+    175                  ((pDtd->VSyncOffset << 4) & 0xF0) |
+    176                  ((pDtd->VSyncPulseWith) & 0x0F);
+    177              pTiming[EDID_DTD_ADR__H_V_SYNC_HIGH] =
+    178                  ((pDtd->HSyncOffset    >> 2) & 0xC0) |
+    179                  ((pDtd->HSyncPulseWith >> 4) & 0x30) |
+    180                  ((pDtd->VSyncOffset    >> 2) & 0x0C) |
+    181                  ((pDtd->VSyncPulseWith >> 4) & 0x03);
+    182              pTiming[EDID_DTD_ADR__H_SIZE_LOW] = (uint8_t) pDtd->HImageSize;
+    183              pTiming[EDID_DTD_ADR__V_SIZE_LOW] = (uint8_t) pDtd->VImageSize;
+    184              pTiming[EDID_DTD_ADR__H_V_SIZE_HIGH] =
+    185                  ((pDtd->HImageSize >> 4) & 0xF0) |
+    186                  ((pDtd->VImageSize >> 8) & 0x0F);
+    187              pTiming[EDID_DTD_ADR__H_BORDER] = pDtd->HBorder;
+    188              pTiming[EDID_DTD_ADR__V_BORDER] = pDtd->VBorder;
+    189              {
+    190                  uint8_t flags = (pDtd->InterfaceType << 1) & 0x1E;
+    191                  if (pDtd->Interlaced)
+    192                  {
+    193                      flags |= 0x80;
+    194                  }
+    195                  if (pDtd->DisplayType & 0x01)
+    196                  {
+    197                      flags |= 0x01;
+    198                  }
+    199                  if (pDtd->DisplayType & 0x02)
+    200                  {
+    201                      flags |= 0x20;
+    202                  }
+    203                  if (pDtd->DisplayType & 0x04)
+    204                  {
+    205                      flags |= 0x40;
+    206                  }
+    207                  pTiming[EDID_DTD_ADR__FLAGS] = flags;
+    208              }
+    209          }
+    210          
+    211          
+    212          //-------------------------------------------------------------------------------------------------
+    213          //! @brief      Calculates pixel clock multiplication factor for 3D modes.
+    214          //!
+    215          //!             This function evaluates 3D_Structure_All structure
+    216          //!             that represents common 3D capabilities of formats marked as referring to this structure
+    217          //!             and decided on pixel clock multiplication factor.
+    218          //!
+    219          //! @return     clock multiplication factor.
+    220          //-------------------------------------------------------------------------------------------------
+    221          
+    222          static uint8_t Comm3DPixFreqMultGet(void)
+    223          {
+    224              decodedEdid_t *pEdidInfo = &(pEdidTx->edidInfo);
+    225              uint8_t pix_clk_mult_3d = 1;
+    226          #if (SI_HDMI_1_4_EDID_PROCESSING == ENABLE)
+    227              uint16_t struct_3d_all = pEdidInfo->HDMI_VSDB.hdmi_3d_structure_all;
+    228              if(struct_3d_all & BIT5)
+    229              {
+    230                  // L + depth + graphics + graphics-depth: progressive only
+    231          
+    232                  // multiply clock x4
+    233                  pix_clk_mult_3d = 4;
+    234              }
+    235              else if(struct_3d_all & (BIT0 | BIT1 | BIT2 | BIT3 | BIT4))
+    236              {
+    237                  // Frame packing: progressive/interlaced
+    238                  // Field alternative: interlaced
+    239                  // Line alternative: progressive only
+    240                  // Side-by-Side (Full): progressive/interlaced
+    241                  // L + depth: progressive only
+    242          
+    243                  // multiply clock x2
+    244                  pix_clk_mult_3d = 2;
+    245              }
+    246          #else // SI_HDMI_1_4_EDID_PROCESSING
+    247              pEdidInfo = pEdidInfo;
+    248          #endif // SI_HDMI_1_4_EDID_PROCESSING
+    249              return pix_clk_mult_3d;
+    250          }
+    251          
+    252          
+    253          //-------------------------------------------------------------------------------------------------
+    254          //! @brief      Protect the repeater from SDTDs with clock higher then the device can handle.
+    255          //!
+    256          //! @param[in]  aSdtds - pointer to an SDTD array to check.
+    257          //-------------------------------------------------------------------------------------------------
+    258          
+    259          static void InvalidateOverclockedSdtds(shortDtd_t aSdtds[MAX_NMB_OF_KNOWN_DTDS])
+    260          {
+    261              int i;
+    262              uint8_t f_pix_max;
+    263              uint8_t pix_freq_mult_3d;
+    264          
+    265              f_pix_max = pEdidTx->edidConfig.maxPixClock10Mhz * 10; // in MHz
+    266              pix_freq_mult_3d = Comm3DPixFreqMultGet();
+    267          
+    268              for (i=0; i<MAX_NMB_OF_KNOWN_DTDS; i++)
+    269              {
+    270                  if (aSdtds[i].Valid)
+    271                  {
+    272                      uint8_t idx = aSdtds[i].VideoIdx;
+    273                      uint16_t format_pix_freq = VideoModeTable[idx].PixFreq;
+    274          
+    275          #if (SI_HDMI_1_4_EDID_PROCESSING == ENABLE)
+    276                      if(aSdtds[i].struct_3d_present)
+    277                      {
+    278                          uint16_t format_pix_freq_3d_individual = format_pix_freq;
+    279                          switch(aSdtds[i].struct_3d)
+    280                          {
+    281                          case 0: // Frame packing: progressive/interlaced
+    282                          case 1: // Field alternative: interlaced
+    283                          case 2: // Line alternative: progressive only
+    284                          case 3: // Side-by-Side (Full): progressive/interlaced
+    285                          case 4: // L + depth: progressive only
+    286                              // multiply clock x2
+    287                              format_pix_freq_3d_individual *= 2;
+    288                              break;
+    289          
+    290                          case 5: // L + depth + graphics + graphics-depth: progressive only
+    291                              // multiply clock x4
+    292                              format_pix_freq_3d_individual *= 4;
+    293                              break;
+    294          
+    295                          //default: // 2D timing compatible: progressive/interlaced
+    296                          }
+    297          
+    298                          if(format_pix_freq_3d_individual > f_pix_max)
+    299                          {
+    300                              // Disable 3D capabilities for given format
+    301                              // if the frequency condition is not met.
+    302                              aSdtds[i].struct_3d_present = false;
+    303                          }
+    304                      }
+    305          
+    306                      if(aSdtds[i].masked_3d)
+    307                      {
+    308                          uint16_t format_pix_freq_3d_common = format_pix_freq * pix_freq_mult_3d;
+    309          
+    310                          // Check if 3D version of the format is within
+    311                          // allowed frequency range.
+    312                          if(format_pix_freq_3d_common > f_pix_max)
+    313                          {
+    314                              // Disable 3D capabilities for given format
+    315                              // if the frequency condition is not met.
+    316                              aSdtds[i].masked_3d = false;
+    317                          }
+    318                      }
+    319          #else  // SI_HDMI_1_4_EDID_PROCESSING
+    320                      pix_freq_mult_3d = pix_freq_mult_3d;
+    321          #endif // SI_HDMI_1_4_EDID_PROCESSING
+    322          
+    323                      if(format_pix_freq > f_pix_max)
+    324                      {
+    325                          // Disable video format if it requires higher
+    326                          // pixel frequency than the device can support.
+    327                          aSdtds[i].Valid = false;
+    328                      }
+    329          
+    330                  }
+    331              }
+    332          }
+    333          
+    334          
+    335          //-------------------------------------------------------------------------------------------------
+    336          //! @brief      Protect the repeater from DTDs with clock higher then the device can handle.
+    337          //!
+    338          //! @param[in]  aDtds - pointer to an SDTD array to check.
+    339          //-------------------------------------------------------------------------------------------------
+    340          
+    341          static void InvalidateOverclockedDtds(dtd_t aDtds[MAX_NMB_OF_UNKNOWN_DTDS])
+    342          {
+    343              int i;
+    344              uint16_t f_pix_max = pEdidTx->edidConfig.maxPixClock10Mhz * 1000; // in 10 kHz units
+    345          
+    346              for (i=0; i<MAX_NMB_OF_UNKNOWN_DTDS; i++)
+    347              {
+    348                  if (aDtds[i].Valid)
+    349                      if (aDtds[i].PixClk_10kHz > f_pix_max)
+    350                          aDtds[i].Valid = false;
+    351              }
+    352          }
+    353          
+    354          
+    355          //-------------------------------------------------------------------------------------------------
+    356          //! @brief      Arrange SDTDs with preferred timing first and native formats next.
+    357          //!             Anything else is placed after the first two categories
+    358          //!
+    359          //! @param[in]  aSdtds   - table of SDTDs
+    360          //!
+    361          //! @return     Number of valid SDTDs
+    362          //-------------------------------------------------------------------------------------------------
+    363          
+    364          static int RearrangeSdtds (shortDtd_t aSdtds[MAX_NMB_OF_KNOWN_DTDS])
+    365          {
+    366              shortDtd_t tempSdtds[MAX_NMB_OF_KNOWN_DTDS];
+    367              int nmbOfSdtds = 0;
+    368              int i;
+    369          
+    370          #if (SI_HDMI_1_4_EDID_PROCESSING == ENABLE)
+    371              // HDMI 1.4a spec does not support 3D for HDMI VIC formats.
+    372              // Although 3D flags should not be set in SDTDs that indicate
+    373              // HDMI VIC, it is better to look through the data and clear
+    374              // the erroneous flags. Otherwise, in case of incorrect
+    375              // SDTD data, some logic in EDID composer module may fail.
+    376              for (i = 0; i < MAX_NMB_OF_KNOWN_DTDS; i++)
+    377              {
+    378                  shortDtd_t *pSdtd = &aSdtds[i];
+    379                  if (pSdtd->HdmiVic)
+    380                  {
+    381                      // BZ#2591
+    382          //        	memset(pSdtd->indiv3dModes, 0, sizeof(pSdtd->indiv3dModes));
+    383                  	pSdtd->indiv3dModeLength = 0;
+    384                      pSdtd->masked_3d = false;
+    385                  }
+    386              }
+    387          #endif // SI_HDMI_1_4_EDID_PROCESSING
+    388          
+    389              // Filter-out video modes having pixel clock higher then the repeater can handle
+    390              InvalidateOverclockedSdtds(aSdtds);
+    391          
+    392              memset(tempSdtds, 0, sizeof(tempSdtds)); // clean it
+    393          
+    394              // copy an SDTD with Preferred Mode bit set
+    395              for (i=0; i<MAX_NMB_OF_KNOWN_DTDS; i++)
+    396              {
+    397                  if (aSdtds[i].Valid)
+    398                      if ( aSdtds[i].PreferredTiming )
+    399                      {
+    400                          memcpy(&tempSdtds[nmbOfSdtds++], &aSdtds[i], sizeof(shortDtd_t));
+    401                          break; // because only one SDTD with "Preferred" attribute set is possible
+    402                      }
+    403              }
+    404          
+    405          #if (SI_HDMI_1_4_EDID_PROCESSING == ENABLE)
+    406              // then copy all Native formats that are not 3D and not Preferred
+    407              for (i=0; i<MAX_NMB_OF_KNOWN_DTDS; i++)
+    408              {
+    409                  if (aSdtds[i].Valid)
+    410                      if ( (!aSdtds[i].PreferredTiming) && aSdtds[i].Native )
+    411                      {
+    412                          memcpy(&tempSdtds[nmbOfSdtds++], &aSdtds[i], sizeof(shortDtd_t));
+    413                      }
+    414              }
+    415          
+    416              // then place 3D formats as they can only take first 16 positions (HDMI 1.4 limitation)
+    417              for (i=0; i<MAX_NMB_OF_KNOWN_DTDS; i++)
+    418              {
+    419                  if (aSdtds[i].Valid)
+    420                      if ( (!aSdtds[i].PreferredTiming) && (!aSdtds[i].Native)
+    421                          && (aSdtds[i].masked_3d || (0 != pEdidTx->edidInfo.SDTD[i].indiv3dModeLength)))
+    422                          memcpy(&tempSdtds[nmbOfSdtds++], &aSdtds[i], sizeof(shortDtd_t));
+    423              }
+    424          
+    425              // then place the rest
+    426              for (i=0; i<MAX_NMB_OF_KNOWN_DTDS; i++)
+    427              {
+    428                  if (aSdtds[i].Valid)
+    429                      if ( !(aSdtds[i].PreferredTiming || aSdtds[i].Native
+    430                          || aSdtds[i].masked_3d || (0 != pEdidTx->edidInfo.SDTD[i].indiv3dModeLength)) )
+    431                      {
+    432                          memcpy(&tempSdtds[nmbOfSdtds++], &aSdtds[i], sizeof(shortDtd_t));
+    433                      }
+    434              }
+    435          #else // SI_HDMI_1_4_EDID_PROCESSING
+    436              // copy all Native except Native && Preferred
+    437              for (i=0; i<MAX_NMB_OF_KNOWN_DTDS; i++)
+    438              {
+    439                  if (aSdtds[i].Valid)
+    440                      if ( (!aSdtds[i].PreferredTiming) && aSdtds[i].Native )
+    441                          memcpy(&tempSdtds[nmbOfSdtds++], &aSdtds[i], sizeof(shortDtd_t));
+    442              }
+    443          
+    444              // then place the rest
+    445              for (i=0; i<MAX_NMB_OF_KNOWN_DTDS; i++)
+    446              {
+    447                  if (aSdtds[i].Valid)
+    448                      if ( !(aSdtds[i].PreferredTiming || aSdtds[i].Native) )
+    449                          memcpy(&tempSdtds[nmbOfSdtds++], &aSdtds[i], sizeof(shortDtd_t));
+    450              }
+    451          #endif // SI_HDMI_1_4_EDID_PROCESSING
+    452          
+    453              // Finally copy to the main array
+    454              memcpy(aSdtds, tempSdtds, sizeof(tempSdtds));
+    455          
+    456              return nmbOfSdtds;
+    457          }
+    458          
+    459          
+    460          
+    461          //-------------------------------------------------------------------------------------------------
+    462          //! @brief      Arrange valid DTDs with preferred timing first.
+    463          //!
+    464          //! @param[in]  aDtds   - table of DTDs
+    465          //!
+    466          //! @return     Number of valid DTDs
+    467          //-------------------------------------------------------------------------------------------------
+    468          
+    469          static int RearrangeDtds (dtd_t aDtds[MAX_NMB_OF_UNKNOWN_DTDS])
+    470          {
+    471              dtd_t temp_dtds[MAX_NMB_OF_UNKNOWN_DTDS];
+    472              int nmb_of_dtds = 0;
+    473              int i;
+    474          
+    475              InvalidateOverclockedDtds(aDtds); // filter-out video modes with pixel clock higher then our repeater can handle
+    476          
+    477              memset(temp_dtds, 0, sizeof(temp_dtds)); // clean it
+    478          
+    479              // copy an SDTD with Preferred Mode bit set
+    480              for (i=0; i<MAX_NMB_OF_UNKNOWN_DTDS; i++)
+    481              {
+    482                  if (aDtds[i].Valid)
+    483                      if (aDtds[i].PreferredTiming)
+    484                      {
+    485                          memcpy(&temp_dtds[nmb_of_dtds++], &aDtds[i], sizeof(dtd_t));
+    486                          break; // because only one SDTD with "Preferred" attribute set is posible
+    487                      }
+    488              }
+    489          
+    490              // then place the rest
+    491              for (i=0; i<MAX_NMB_OF_UNKNOWN_DTDS; i++)
+    492              {
+    493                  if (aDtds[i].Valid)
+    494                      if (!aDtds[i].PreferredTiming)
+    495                          memcpy(&temp_dtds[nmb_of_dtds++], &aDtds[i], sizeof(dtd_t));
+    496              }
+    497          
+    498              // protection- this must not happened
+    499              if (nmb_of_dtds > MAX_NMB_OF_UNKNOWN_DTDS)
+    500                  nmb_of_dtds = MAX_NMB_OF_UNKNOWN_DTDS;
+    501          
+    502              // Finally copy to the main array
+    503              memcpy(aDtds, temp_dtds, sizeof(temp_dtds));
+    504              return nmb_of_dtds;
+    505          }
+    506          
+    507          
+    508          //-------------------------------------------------------------------------------------------------
+    509          //! @brief      Find next index in array of SDTDs structures that points to SDTD suitable for
+    510          //!             composing EDID's DTD block.
+    511          //!
+    512          //! @param[in]  pEdidInfo   - pointer to the input data structure
+    513          //! @param[in]  pSdtdIndex  - pointer to current SDTD index
+    514          //! @param[in]  nmbOfSdtds  - total number of SDTDs
+    515          //!
+    516          //! @return     true, if the next SDTD index is within valid range.
+    517          //-------------------------------------------------------------------------------------------------
+    518          
+    519          static bool_t FindNextSdtdConvertibleToDtd(decodedEdid_t *pEdidInfo, uint8_t *pSdtdIndex, uint8_t nmbOfSdtds)
+    520          {
+    521              uint8_t sdtdIndex = *pSdtdIndex;
+    522          
+    523              for(; sdtdIndex < nmbOfSdtds; sdtdIndex++)
+    524              {
+    525                  if(pEdidInfo->SDTD[sdtdIndex].Valid)
+    526                  {
+    527                      uint8_t videoIdx = pEdidInfo->SDTD[sdtdIndex].VideoIdx;
+    528                      if(videoIdx <= NMB_OF_VIDEO_MODES)
+    529                      {
+    530                          const videoMode_t *pVideoMode = &VideoModeTable[videoIdx];
+    531                          // Check if DTD structure (block) can be made out of SDTD.
+    532                          // It is possible that number of bits allocated in the EDID 1.3's DTD block
+    533                          // is not enough. For example, HDMI VIC (4K2K) formats 2,3, and 4
+    534                          // cannot fit into the DTD structure.
+    535                          if(pVideoMode->SyncOffset.H >= 0x200)
+    536                          {
+    537                              continue;
+    538                          }
+    539                          if(pVideoMode->Active.H >= 0x1000)
+    540                          {
+    541                              continue;
+    542                          }
+    543                          // Note: Other fields are not currently checked as
+    544                          // it is known that the video table does not have
+    545                          // resolutions that do not fit into the DTD fields.
+    546                          break;
+    547                      }
+    548                  }
+    549              }
+    550          
+    551              *pSdtdIndex = sdtdIndex; // return new index
+    552          
+    553              // return true if the index is valid
+    554              return (sdtdIndex < nmbOfSdtds);
+    555          }
+    556          
+    557          
+    558          #if (SI_HDMI_1_4_EDID_PROCESSING == ENABLE)
+    559          
+    560          static uint16_t Get3dMask( void )
+    561          {
+    562              uint8_t  i = 0;
+    563              uint8_t  validVicCount = 0;
+    564              uint16_t mask3d = 0;
+    565              uint16_t slider = 0x0001;
+    566              bool_t   isAllVicSupportMask3d = true;
+    567          
+    568              for (i=0; i<MAX_NMB_OF_KNOWN_DTDS; i++)
+    569              {
+    570                  if (validVicCount > 16)
+    571                  {
+    572                      // only first 16 VICs can have 3D mask
+    573                      break;
+    574                  }
+    575                  if ( pEdidTx->edidInfo.SDTD[i].Valid)
+    576                  {
+    577                      if ( pEdidTx->edidInfo.SDTD[i].masked_3d)
+    578                      {
+    579                          mask3d |= slider;
+    580                      }
+    581                      else
+    582                      {
+    583                          isAllVicSupportMask3d = false;
+    584                      }
+    585                      validVicCount++;
+    586                      slider <<= 1;
+    587                  }
+    588              }
+    589              return isAllVicSupportMask3d ? 0 : mask3d;
+    590          }
+    591          
+    592          
+    593          static uint8_t Calculate3dLength ( bool_t isSupport3dForAnyVic )
+    594          {
+    595              uint8_t i = 0;
+    596              uint8_t valid_vic_count = 0;
+    597              uint8_t length = 0;
+    598              uint8_t validVicCount = 0;
+    599              if ( pEdidTx->edidInfo.HDMI_VSDB.hdmi_3d_structure_all)
+    600              {
+    601                  length += 2; // 2 bytes for 3D_structure_All
+    602          
+    603                  if (!isSupport3dForAnyVic)
+    604                  {
+    605                      length += 2; // 2 bytes for 3D_MASK
+    606                  }
+    607              }
+    608          
+    609              for (i=0; i<MAX_NMB_OF_KNOWN_DTDS; i++)
+    610              {
+    611                  if (valid_vic_count >= 16)
+    612                  {
+    613                      // only first 16 VICs can have 3D structure
+    614                      break;
+    615                  }
+    616                  if ( pEdidTx->edidInfo.SDTD[i].Valid)
+    617                  {
+    618                  	uint8_t j;
+    619          			Indiv3dMode_t *pIndiv3d = pEdidTx->edidInfo.SDTD[i].indiv3dModes;
+    620          			uint8_t indivLength = pEdidTx->edidInfo.SDTD[i].indiv3dModeLength;
+    621                  	for(j = 0; j < indivLength; j++)
+    622                  	{
+    623          				if (pIndiv3d[j].struct_3d_present)
+    624          				{
+    625          					// BZ#2591
+    626          					length++; // at least one byte per 3D format
+    627          					if (pIndiv3d[j].struct_3d >= 8) //HDMI VSDB 3D Details present
+    628          					{
+    629          						length++; // additional byte for 3D_Struct 8...15
+    630          					}
+    631          				}
+    632                  	}
+    633                      validVicCount++;
+    634                  }
+    635              }
+    636          
+    637              return length;
+    638          }
+    639          
+    640          
+    641          static void FillIndividual3dModes ( uint8_t aEdid[EDID_BLOCK_SIZE], uint8_t *pByteIndex )
+    642          {
+    643              uint8_t i = 0;
+    644              uint8_t validVicCount = 0;
+    645          
+    646              for (i = 0; i < MAX_NMB_OF_KNOWN_DTDS; i++)
+    647              {
+    648                  if (validVicCount >= 16)
+    649                  {
+    650                      // only first 16 VICs can have 3D mask
+    651                      break;
+    652                  }
+    653                  if (pEdidTx->edidInfo.SDTD[i].Valid)
+    654                  {
+    655                  	uint8_t j;
+    656          			Indiv3dMode_t *pIndiv3d = pEdidTx->edidInfo.SDTD[i].indiv3dModes;
+    657          			uint8_t indivLength = pEdidTx->edidInfo.SDTD[i].indiv3dModeLength;
+    658                  	for(j = 0; j < indivLength; j++)
+    659                  	{
+    660          				if (pIndiv3d[j].struct_3d_present)
+    661          				{
+    662          	                // at least one byte per 3D format
+    663          	                aEdid[*pByteIndex] = validVicCount << 4;
+    664          	                aEdid[*pByteIndex] |= pIndiv3d[j].struct_3d;
+    665          	                (*pByteIndex)++;
+    666          	                if (pIndiv3d[j].struct_3d >= 8) //HDMI VSDB 3D Details present
+    667          	                {
+    668          	                    // additional byte for 3D_Struct 8...15
+    669          	                    aEdid[*pByteIndex] = pIndiv3d[j].detail_3d << 4;
+    670          	                    (*pByteIndex)++;
+    671          	                }
+    672          				}
+    673                  	}
+    674                  	validVicCount++;
+    675                  }
+    676              }
+    677          }
+    678          #endif  //SI_HDMI_1_4_EDID_PROCESSING
+    679          
+    680          
+    681          static ROM const uint8_t t_sec_formula[8] = {01, 11, 19, 65, 13, 03, 19, 67};
+    682          
+    683          //-------------------------------------------------------------------------------------------------
+    684          //! @brief      Compose block 0 of a new EDID based on the Upstream EDID and
+    685          //!             repeater configuration.
+    686          //!
+    687          //!             Re-arranges the EDID into proper format if necessary, adds
+    688          //!             missing fields, replaces manufacturer ID, etc., with new values, and
+    689          //!             possibly other stuff.
+    690          //!
+    691          //! @param[out] pEdid               - pointer to EDID block,
+    692          //! @param[in]  pDtdIndex           - pointer to DTD structures,
+    693          //! @param[in]  pSdtdIndex          - pointer to SDTD structures,
+    694          //! @param[in]  nmbOfNativeFormats  - a number of native DTDs to be displayed.
+    695          //!
+    696          //! @return     Success flag.
+    697          //-------------------------------------------------------------------------------------------------
+    698          
+    699          
+    700          static bool_t ComposeEdidBlock0( uint8_t *pEdid, uint8_t *pDtdIndex, uint8_t *pSdtdIndex,
+    701                                           uint8_t nmbOfSdtds, uint8_t *nmbOfNativeFormats  )
+    702          {
+    703              uint8_t dtdIndex = *pDtdIndex;
+    704              uint8_t sdtdIndex = *pSdtdIndex;
+    705              bool_t  isSdtdIndexValid;
+    706          
+    707              // Copy header, version number, manufacturer ID...
+    708              memcpy( pEdid, defaultDsEdid, EDID_BL0_ADR__BASIC_DISPLAY_PARAMS);
+    709          
+    710              // Replace certain default values from customer configuration
+    711          
+    712              pEdid[ EDID_BL0_ADR__MANUFACTURER_ID ]      = (uint8_t)(pEdidTx->edidConfig.mfgId >> 8);
+    713              pEdid[ EDID_BL0_ADR__MANUFACTURER_ID + 1]   = (uint8_t)(pEdidTx->edidConfig.mfgId);
+    714          
+    715              pEdid[ EDID_BL0_ADR__PRODUCT_ID ]           = (uint8_t)(pEdidTx->edidConfig.productId >> 8);
+    716              pEdid[ EDID_BL0_ADR__PRODUCT_ID + 1 ]       = (uint8_t)(pEdidTx->edidConfig.productId);
+    717          
+    718              pEdid[EDID_BL0_ADR__SHORT_SERIAL_NUMBER + 0]    = (uint8_t)(pEdidTx->edidConfig.serialNumber >> 24);
+    719              pEdid[EDID_BL0_ADR__SHORT_SERIAL_NUMBER + 1]    = (uint8_t)(pEdidTx->edidConfig.serialNumber >> 16);
+    720              pEdid[EDID_BL0_ADR__SHORT_SERIAL_NUMBER + 2]    = (uint8_t)(pEdidTx->edidConfig.serialNumber >>  8);
+    721              pEdid[EDID_BL0_ADR__SHORT_SERIAL_NUMBER + 3]    = (uint8_t)(pEdidTx->edidConfig.serialNumber >>  0);
+    722              pEdid[EDID_BL0_ADR__MANUFACTURE_WEEK]           = (uint8_t)(pEdidTx->edidConfig.mfgWeek);
+    723              pEdid[EDID_BL0_ADR__MANUFACTURE_YEAR]           = (uint8_t)(pEdidTx->edidConfig.mfgYear);
+    724          
+    725              // Replace other defaults with the decoded info from SiiEdidTxDecode().
+    726          
+    727              memcpy( &pEdid[EDID_BL0_ADR__BASIC_DISPLAY_PARAMS], pEdidTx->edidInfo.BasicDispayParameters, EDID_BL0_LEN__BASIC_DISPLAY_PARAMS);
+    728              memcpy( &pEdid[EDID_BL0_ADR__CHROMATICITY], pEdidTx->edidInfo.Chromaticity, EDID_BL0_LEN__CHROMATICITY);
+    729              pEdid[EDID_BL0_ADR__ESTABLISHED_TIMING_1] = pEdidTx->edidInfo.EstablishedTiming1;
+    730              pEdid[EDID_BL0_ADR__ESTABLISHED_TIMING_2] = pEdidTx->edidInfo.EstablishedTiming2;
+    731              pEdid[EDID_BL0_ADR__MANUFACTURER_RESERVED_TIMING] = pEdidTx->edidInfo.ManufacturerReservedTiming;
+    732              memcpy( &pEdid[EDID_BL0_ADR__STANDARD_TIMING], pEdidTx->edidInfo.StandardTiming, EDID_BL0_LEN__STANDARD_TIMING);
+    733          
+    734              pEdid[EDID_BL0_ADR__BASIC_DISPLAY_PARAMS + 4] |= 0x02; // set the Preferred Bit
+    735              pEdid[EDID_BL0_ADR__BASIC_DISPLAY_PARAMS + 4] &= 0x1F;
+    736              pEdid[EDID_BL0_ADR__BASIC_DISPLAY_PARAMS + 4] |= REPEATER_POWER_FEATURES;
+    737              pEdid[EDID_BL0_ADR__BASIC_DISPLAY_PARAMS + 0] |= 0x80; // Digital Interface
+    738              pEdid[EDID_BL0_ADR__BASIC_DISPLAY_PARAMS + 0] &= 0x81; // clear reserved bits
+    739          
+    740              // Confirm currently processing SDTD can be used to build EDID's DTD block.
+    741              // If it is not usable for this purpose, find the next usable.
+    742              isSdtdIndexValid = FindNextSdtdConvertibleToDtd(&(pEdidTx->edidInfo), &sdtdIndex, nmbOfSdtds);
+    743          
+    744              // use DTD1 place for the Preferred Detail Timing
+    745              if ( pEdidTx->edidInfo.DTD[ dtdIndex].Valid && pEdidTx->edidInfo.DTD[ dtdIndex].PreferredTiming)
+    746              {
+    747                  // if DTD[0] is the Preferred one
+    748                  MakeDtdFromDtd( &pEdid[EDID_BL0_ADR__DTD1], &pEdidTx->edidInfo.DTD[ dtdIndex++]);
+    749              }
+    750          
+    751              else if ( isSdtdIndexValid && pEdidTx->edidInfo.SDTD[ sdtdIndex].Valid &&
+    752                        (pEdidTx->edidInfo.SDTD[ sdtdIndex].PreferredTiming || pEdidTx->edidInfo.SDTD[ sdtdIndex].Native))
+    753              {
+    754                  // if SDTD[0] is the Preferred one or at least Native
+    755                  MakeDtdFromSdtd( &pEdid[EDID_BL0_ADR__DTD1], &pEdidTx->edidInfo.SDTD[sdtdIndex++]);
+    756              }
+    757              else if ( pEdidTx->edidInfo.DTD[ dtdIndex].Valid)
+    758              {
+    759                  // if DTD[0] is existing at least
+    760                  MakeDtdFromDtd( &pEdid[EDID_BL0_ADR__DTD1], &pEdidTx->edidInfo.DTD[dtdIndex++]);
+    761              }
+    762              else if ( isSdtdIndexValid && pEdidTx->edidInfo.SDTD[ sdtdIndex].Valid)
+    763              {
+    764                  // if SDTD[0] is existing at least
+    765                  pEdidTx->edidInfo.SDTD[ sdtdIndex].PreferredTiming = true; // will be used during SVD forming in Data Block Collection
+    766                  MakeDtdFromSdtd( &pEdid[EDID_BL0_ADR__DTD1], &pEdidTx->edidInfo.SDTD[ sdtdIndex++]);
+    767              }
+    768              else
+    769              {
+    770                  // noting found- use default one
+    771                  memcpy( &pEdid[EDID_BL0_ADR__DTD1], &defaultDsEdid[EDID_BL0_ADR__DTD1], EDID_LEN__DTD);
+    772              }
+    773          
+    774              // Confirm currently processing SDTD can be used to build EDID's DTD block.
+    775              // If it is not usable for this purpose, find the next usable.
+    776              isSdtdIndexValid = FindNextSdtdConvertibleToDtd(&(pEdidTx->edidInfo), &sdtdIndex, nmbOfSdtds);
+    777          
+    778              // use DTD2 place for another Detail Timing
+    779              if ( isSdtdIndexValid && pEdidTx->edidInfo.SDTD[ sdtdIndex].Valid && pEdidTx->edidInfo.SDTD[ sdtdIndex].Native)
+    780              {
+    781                  // if SDTD[sdtd_idx] is native
+    782                  MakeDtdFromSdtd( &pEdid[EDID_BL0_ADR__DTD2], &pEdidTx->edidInfo.SDTD[ sdtdIndex++]);
+    783                  (*nmbOfNativeFormats)++;
+    784              }
+    785              else if ( pEdidTx->edidInfo.DTD[ dtdIndex].Valid)
+    786              {
+    787                  // if DTD[dtd_idx] is existing
+    788                  MakeDtdFromDtd( &pEdid[EDID_BL0_ADR__DTD2], &pEdidTx->edidInfo.DTD[ dtdIndex++]);
+    789              }
+    790              else if ( isSdtdIndexValid && pEdidTx->edidInfo.SDTD[ sdtdIndex].Valid)
+    791              {
+    792                  // if SDTD[sdtd_idx] is existing
+    793                  MakeDtdFromSdtd( &pEdid[EDID_BL0_ADR__DTD2], &pEdidTx->edidInfo.SDTD[ sdtdIndex++]);
+    794              }
+    795              else
+    796              {
+    797                  // nothing found - fill with a dummy string descriptor
+    798                  memcpy( &pEdid[EDID_BL0_ADR__DTD2], &defaultDsEdid[DEFAULT_EDID_BL0_ADR__DUMMY_STRING], EDID_LEN__DTD);
+    799              }
+    800          
+    801              // use DTD3 place for a Monitor Name
+    802              memcpy( &pEdid[EDID_BL0_ADR__DTD3], &defaultDsEdid[DEFAULT_EDID_BL0_ADR__MONITOR_NAME], EDID_LEN__DTD);
+    803          
+    804              // use DTD4 place for a Range Limits structure
+    805              memcpy( &pEdid[EDID_BL0_ADR__DTD4], &defaultDsEdid[DEFAULT_EDID_BL0_ADR__RANGE_LIMITS], EDID_LEN__DTD);
+    806              if ( pEdidTx->edidInfo.DescriptorValid.RangeLimits)
+    807              {
+    808                  uint8_t f_pix_max = pEdidTx->edidConfig.maxPixClock10Mhz; // in 10 MHz units
+    809          
+    810                  if ( pEdidTx->edidInfo.RangeLimits.MaxPixClk_10MHz > f_pix_max)
+    811                  {
+    812                      pEdidTx->edidInfo.RangeLimits.MaxPixClk_10MHz = f_pix_max;
+    813                  }
+    814                  pEdid[EDID_BL0_ADR__DTD4 + 5] = pEdidTx->edidInfo.RangeLimits.MinV_Hz;
+    815                  pEdid[EDID_BL0_ADR__DTD4 + 6] = pEdidTx->edidInfo.RangeLimits.MaxV_Hz;
+    816                  pEdid[EDID_BL0_ADR__DTD4 + 7] = pEdidTx->edidInfo.RangeLimits.MinH_kHz;
+    817                  pEdid[EDID_BL0_ADR__DTD4 + 8] = pEdidTx->edidInfo.RangeLimits.MaxH_kHz;
+    818                  pEdid[EDID_BL0_ADR__DTD4 + 9] = pEdidTx->edidInfo.RangeLimits.MaxPixClk_10MHz;
+    819                  memcpy( &pEdid[EDID_BL0_ADR__DTD4 + 10], pEdidTx->edidInfo.RangeLimits.SecondaryTimingFormula, 8);
+    820                  if ( !memcmp( &pEdid[EDID_BL0_ADR__DTD4 + 10], t_sec_formula, sizeof(t_sec_formula)))
+    821                  {
+    822                      pEdid[0x08] = 0x4D;
+    823                      pEdid[0x09] = 0x29;
+    824                  }
+    825              }
+    826          
+    827              if ( pEdidTx->usEdidBlockCount > 128) // current version limitation
+    828              {
+    829                  pEdidTx->edidInfo.ErrorCode |= EDID_ERROR__TOO_MANY_EXTENSIONS;
+    830                  pEdidTx->usEdidBlockCount = 128;
+    831              }
+    832          
+    833              // write number of extensions
+    834              pEdid[ EDID_BL0_ADR__EXTENSION_NMB] = pEdidTx->usEdidBlockCount ? (pEdidTx->usEdidBlockCount - 1) : 0;
+    835          
+    836              // calculate check sum
+    837              pEdid[EDID_ADR__CHECK_SUM] = EdidCheckSumCalc( pEdid );
+    838          
+    839              // Return index values
+    840              *pDtdIndex = dtdIndex;
+    841              *pSdtdIndex = sdtdIndex;
+    842          
+    843              // save block 0
+    844              if ( !EdidTxWriteBlockToRx(0, pEdid, 0))
+    845              {
+    846                  pEdidTx->edidInfo.ErrorCode = EDID_ERROR__CANNOT_WRITE;
+    847                  return( false );
+    848              }
+    849          
+    850              return( true );
+    851          }
+    852          
+    853          
+    854          //-------------------------------------------------------------------------------------------------
+    855          //! @brief      Compose (encode) an HDMI EDID block based on the Downstream EDID
+    856          //!
+    857          //! @param[out] pEdid - pointer to the output EDID buffer
+    858          //! @param[in]  byte_idx_in
+    859          //-------------------------------------------------------------------------------------------------
+    860          
+    861          static void ComposeHdmiEdidBlock ( uint8_t *pEdid, uint8_t *pByteIndexIn, uint8_t *nmbOfSdtds, uint8_t *pCecPhysAddrLocation )
+    862          {
+    863              uint8_t byteIndex = *pByteIndexIn;
+    864              uint8_t header_idx;
+    865              uint8_t cntr = 0;
+    866              uint8_t errorPosition = 0;
+    867          
+    868              BEGIN_BOUNDARY_CHECK
+    869          
+    870              // Make data collection
+    871          
+    872              // add a Video Data Block
+    873              header_idx = byteIndex++;
+    874              if ( *nmbOfSdtds > 31)
+    875              {
+    876                  *nmbOfSdtds = 31;
+    877              }
+    878              errorPosition = 1;
+    879              CHECK_BOUNDARY(byteIndex + 1 + *nmbOfSdtds);
+    880          #if (MHL_20 == ENABLE)
+    881              pEdidTx->edidInfo.numOfVic = *nmbOfSdtds;
+    882          #endif
+    883              if ( *nmbOfSdtds )
+    884              {
+    885                  uint8_t i;
+    886                  for ( i=0; i < *nmbOfSdtds; i++)
+    887                  {
+    888                      uint8_t vic = pEdidTx->edidInfo.SDTD[i].Vic;
+    889                      if(vic) // condition to exclude HDMI VICs
+    890                      {
+    891                          if ( pEdidTx->edidInfo.SDTD[i].Native || pEdidTx->edidInfo.SDTD[i].PreferredTiming )
+    892                          {
+    893                              vic |= 0x80;
+    894                          }
+    895                          pEdid[byteIndex++] = vic;
+    896                          cntr++;
+    897                      }
+    898                  }
+    899              }
+    900              else
+    901              {
+    902                  pEdid[byteIndex++] = DEFAULT_VIC | 0x80; // (must be native/preferred)
+    903                  cntr = 1;
+    904              }
+    905              pEdid[header_idx] = (EDID_DBC_TAG__VIDEO << 5) | cntr;
+    906          
+    907              // add a Short Audio Data Block
+    908          #ifdef COMPOSE_SAD_SEPARATELY
+    909              if ( pEdidTx->edidInfo.SupportAudio && (0 != pEdidTx->edidInfo.SadCount))
+    910              {
+    911                  uint8_t nmbOfSads = pEdidTx->edidInfo.SadCount;
+    912                  errorPosition = 2;
+    913                  CHECK_BOUNDARY(byteIndex + nmbOfSads * 4);
+    914                  for (cntr=0; cntr<nmbOfSads; cntr++)
+    915                  {
+    916                      if ( pEdidTx->edidInfo.SAD[cntr].Common.Coding)
+    917                      {
+    918                          pEdid[byteIndex++] = (EDID_DBC_TAG__AUDIO << 5) | 3;
+    919                          pEdid[byteIndex++] = pEdidTx->edidInfo.SAD[cntr].ByteData.Byte1;
+    920                          pEdid[byteIndex++] = pEdidTx->edidInfo.SAD[cntr].ByteData.Byte2;
+    921                          pEdid[byteIndex++] = pEdidTx->edidInfo.SAD[cntr].ByteData.Byte3;
+    922                      }
+    923                  }
+    924              }
+    925          #else // COMPOSE_SAD_SEPARATELY
+    926              if ( pEdidTx->edidInfo.SupportAudio && (0 != pEdidTx->edidInfo.SadCount))
+    927              {
+    928                  uint8_t nmb_of_sads = pEdidTx->edidInfo.SadCount;
+    929                  errorPosition = 3;
+    930                  CHECK_BOUNDARY(byteIndex + nmb_of_sads * EDID_SAD__LENGTH + 1);
+    931                  if (nmb_of_sads > MAX_NMB_OF_SADS) // could be true only in case of internal error
+    932                      nmb_of_sads = MAX_NMB_OF_SADS;
+    933          #if MAX_NMB_OF_SADS > 10
+    934          #  error MAX_NMB_OF_SADS * EDID_SAD__LENGTH > 2^5
+    935          #endif
+    936                  pEdid[byteIndex++] = (EDID_DBC_TAG__AUDIO << 5) | (nmb_of_sads * EDID_SAD__LENGTH);
+    937                  for (cntr=0; cntr<nmb_of_sads; cntr++)
+    938                  {
+    939                      if ( pEdidTx->edidInfo.SAD[cntr].Common.Coding)
+    940                      {
+    941                          pEdid[byteIndex++] = pEdidTx->edidInfo.SAD[cntr].ByteData.Byte1;
+    942                          pEdid[byteIndex++] = pEdidTx->edidInfo.SAD[cntr].ByteData.Byte2;
+    943                          pEdid[byteIndex++] = pEdidTx->edidInfo.SAD[cntr].ByteData.Byte3;
+    944                      }
+    945                  }
+    946              }
+    947          #endif // COMPOSE_SAD_SEPARATELY
+    948          
+    949              // add a Speaker Allocation Data Block
+    950              if ( pEdidTx->edidInfo.SupportAudio && (0 != pEdidTx->edidInfo.SPK.Data) && (0 != pEdidTx->edidInfo.SadCount))
+    951              {
+    952                  errorPosition = 4;
+    953                  CHECK_BOUNDARY(byteIndex + 4);
+    954                  pEdid[byteIndex++] = (EDID_DBC_TAG__SPEAKER_ALLOCATION << 5) | 3; // header
+    955                  pEdid[byteIndex++] = pEdidTx->edidInfo.SPK.Data;
+    956                  pEdid[byteIndex++] = 0;
+    957                  pEdid[byteIndex++] = 0;
+    958              }
+    959          
+    960              // add an HDMI Vendor Specific Data Block
+    961              {
+    962                  hdmiVsdb_t *pVsdb = &pEdidTx->edidInfo.HDMI_VSDB;
+    963                  bool_t add_hdmi_1_4_fields = false;
+    964                  uint8_t h3d_len = 0; // 3D data length
+    965                  uint8_t hdmi_vic_len = 0; // Number of HDMI VICs (for 4K2K)
+    966          #if (SI_HDMI_1_4_EDID_PROCESSING == ENABLE)
+    967                  uint8_t hdmi_video_flags = pEdidTx->edidInfo.HDMI_VSDB.image_size << 3;
+    968          
+    969                  // Note: hdmi_video_flags bit 7 is set if
+    970                  // DS device support 3D. Only in this case
+    971                  // US EDID is allowed to have any 3D mode.
+    972                  // Bits 5...6 will be overridden in this function.
+    973                  // Bits 2...4 will be kept as is.
+    974                  // Bits 0...1 will be cleared as they are reserved
+    975                  // in HDMI 1.4 and have to be 0.
+    976                  uint16_t mask_3d = 0;
+    977          #endif // SI_HDMI_1_4_EDID_PROCESSING
+    978                  uint8_t extra_len = 3; // HDMI 1.3a extras
+    979          
+    980                  if (pVsdb->Extras[2] & 0x80)
+    981                  {
+    982                      extra_len +=2;
+    983                      if (pVsdb->Extras[2] & 0x40)
+    984                          extra_len +=2;
+    985                  }
+    986          
+    987          #if (SI_HDMI_1_4_EDID_PROCESSING == ENABLE)
+    988          
+    989                  // Count number of HDMI VIC formats
+    990                  for(cntr = 0; cntr < MAX_NMB_OF_HDMI_VIC_FORMATS; cntr++)
+    991                  {
+    992                      if(pEdidTx->pEdidDecodData->hdmi_vic[cntr])
+    993                      {
+    994                          hdmi_vic_len++;
+    995                          // The number of VICs is limited to 7 by HDMI 1.4a spec.
+    996                          if(hdmi_vic_len >= MAX_NMB_OF_HDMI_VIC_FORMATS)
+    997                              break;
+    998                      }
+    999                  }
+   1000          
+   1001                  if (pEdidTx->isHdmi3DEnabled && (pEdidTx->edidConfig.maxPixClock10Mhz > 14))
+   1002                  {
+   1003                      // Declare upstream 3D capabilities if downstream device
+   1004                      // supports 3D.
+   1005                      // Note: at list 148 MHz pixel clock support is required for
+   1006                      // some of the mandatory 3D formats.
+   1007                      if(pEdidTx->edidInfo.HDMI_VSDB.hdmi_3d_present)
+   1008                      {
+   1009                          hdmi_video_flags |= 0x80;
+   1010                      }
+   1011                  }
+   1012          
+   1013                  // If there is a 3D or Image_Size data,
+   1014                  // add HDMI Video Flags plus the length fields.
+   1015                  if(hdmi_video_flags)
+   1016                  {
+   1017                      add_hdmi_1_4_fields = true;
+   1018                      // Check if 3D is allowed at the input
+   1019                      mask_3d = Get3dMask();
+   1020          #if (MHL_20 ==ENABLE)
+   1021                      pEdidTx->edidInfo.HDMI_VSDB.mask_3d_support = mask_3d;
+   1022          #endif
+   1023                      // Calculate what would be 3D data size
+   1024                      h3d_len = Calculate3dLength( 0 == mask_3d);        }
+   1025          
+   1026                  // Do not add extra 3D info and/or HDMI VICs
+   1027                  // if there is not enough space for it.
+   1028                  if(
+   1029                      (hdmi_vic_len || h3d_len) &&
+   1030                      (((byteIndex + h3d_len + hdmi_vic_len) >= (EDID_ADR__CHECK_SUM - 2)) ||
+   1031                      ((h3d_len + extra_len + hdmi_vic_len) >
+   1032                          (30 - 2 - EDID_VSB_LEN__MIN_HDMI_VSDB)))
+   1033                      )
+   1034                  {
+   1035          
+   1036                      // Note: 2 here reserves space for additional 2 bytes
+   1037                      // needed as for 3Dm as for HDMI VIC.
+   1038                      h3d_len = 0;
+   1039          
+   1040                      // Check if it is fits now. If it does not, try cutting off HDMI VICs.
+   1041                      if((byteIndex + h3d_len + hdmi_vic_len) >= (EDID_ADR__CHECK_SUM - 2))
+   1042                      {
+   1043                          // Do not add HDMI VICs.
+   1044                          hdmi_vic_len = 0;
+   1045                      }
+   1046                  }
+   1047          
+   1048                  if(h3d_len || hdmi_vic_len)
+   1049                  {
+   1050                      add_hdmi_1_4_fields = true;
+   1051                  }
+   1052          
+   1053          #endif // SI_HDMI_1_4_EDID_PROCESSING
+   1054          
+   1055                  errorPosition = 5;
+   1056                  CHECK_BOUNDARY(byteIndex + (1 + EDID_VSB_LEN__MIN_HDMI_VSDB + extra_len + h3d_len +
+   1057                                 hdmi_vic_len + (add_hdmi_1_4_fields ? 2 : 0) ));
+   1058          
+   1059                  pEdid[byteIndex++] = // header
+   1060                      (EDID_DBC_TAG__VENDOR_SPECIFIC << 5) |
+   1061                      (EDID_VSB_LEN__MIN_HDMI_VSDB + extra_len + h3d_len +
+   1062                                                     hdmi_vic_len + (add_hdmi_1_4_fields ? 2 : 0));
+   1063                  pEdid[byteIndex++] = 0x03; // HDMI signature byte 1
+   1064                  pEdid[byteIndex++] = 0x0C; // HDMI signature byte 2
+   1065                  pEdid[byteIndex++] = 0x00; // HDMI signature byte 3
+   1066                  *pCecPhysAddrLocation = byteIndex;
+   1067          
+   1068          #if ( configSII_DEV_953x_PORTING == 0 )        
+   1069                  pEdid[byteIndex++] = (pVsdb->CEC.a << 4) | pVsdb->CEC.b; // CEC address a,b
+   1070                  pEdid[byteIndex++] = (pVsdb->CEC.c << 4) | pVsdb->CEC.d; // CEC address c,d
+   1071          #else
+   1072                  pEdid[byteIndex++] = (pVsdb->cec.a << 4) | pVsdb->cec.b; // CEC address a,b
+   1073                  pEdid[byteIndex++] = (pVsdb->cec.c << 4) | pVsdb->cec.d; // CEC address c,d
+   1074          #endif 
+   1075          
+   1076                  memcpy( &pEdid[byteIndex], pVsdb->Extras, extra_len);
+   1077                  if ( add_hdmi_1_4_fields )
+   1078                  {
+   1079                      // Add HDMI_Video_present flag
+   1080                      pEdid[byteIndex+2] |= 0x20;
+   1081                  }
+   1082                  else
+   1083                  {
+   1084                      // Remove HDMI_Video_present flag
+   1085                      pEdid[byteIndex+2] &= ~0x20;
+   1086                  }
+   1087                  // Note: extra_len is at least 3
+   1088                  byteIndex += extra_len;
+   1089          
+   1090          #if (SI_HDMI_1_4_EDID_PROCESSING == ENABLE)
+   1091                  if (add_hdmi_1_4_fields)
+   1092                  {
+   1093                      /*
+   1094                      3D_Structure_All
+   1095                      bit 0:  Frame packing: progressive/interlaced
+   1096                      bit 1:  Field alternative: interlaced
+   1097                      bit 2:  Line alternative: progressive only
+   1098                      bit 3:  Side-by-Side (Full): progressive/interlaced
+   1099                      bit 4:  L + depth: progressive only
+   1100                      bit 5:  L + depth + graphics + graphics-depth: progressive only
+   1101                      bit 6:  Top-and-Bottom
+   1102                      bit 8:  Side-by-Side (Half) with horizontal subsampling
+   1103                      bit 15: Side-by-Side (Half) with quincunx subsampling
+   1104                      */
+   1105          
+   1106                      uint16_t hdmi_3d_structure_all = pVsdb->hdmi_3d_structure_all;
+   1107          
+   1108                      if ( hdmi_3d_structure_all )
+   1109                      {
+   1110                          // Note: 3D_Multi_present = 0 at this point.
+   1111                          if ( mask_3d )
+   1112                          {
+   1113                              // Set 3D_Multi_present = 2
+   1114                              hdmi_video_flags |= 0x40;
+   1115                          }
+   1116                          else
+   1117                          {
+   1118                              // Set 3D_Multi_present = 1
+   1119                              hdmi_video_flags |= 0x20;
+   1120                          }
+   1121                      }
+   1122                      pEdid[byteIndex++] = hdmi_video_flags;
+   1123          
+   1124                      // Add the 3D length field.
+   1125                      pEdid[byteIndex++] = h3d_len + (hdmi_vic_len << 5);
+   1126          
+   1127                      if(hdmi_vic_len)
+   1128                      {
+   1129                          for(cntr = 0; cntr < MAX_NMB_OF_HDMI_VIC_FORMATS; cntr++)
+   1130                          {
+   1131                              uint8_t hdmi_vic = pEdidTx->pEdidDecodData->hdmi_vic[cntr];
+   1132                              if(hdmi_vic)
+   1133                              {
+   1134                                  pEdid[byteIndex++] = hdmi_vic;
+   1135                                  hdmi_vic_len--;
+   1136                                  if(0 == hdmi_vic_len)
+   1137                                      break;
+   1138                              }
+   1139                          }
+   1140                      }
+   1141          
+   1142                      if(h3d_len)
+   1143                      {
+   1144                          if ( hdmi_3d_structure_all )
+   1145                          {
+   1146                              pEdid[byteIndex++] = (uint8_t) (hdmi_3d_structure_all >> 8);
+   1147                              pEdid[byteIndex++] = (uint8_t) (hdmi_3d_structure_all);
+   1148                              if ( mask_3d )
+   1149                              {
+   1150                                  pEdid[byteIndex++] = (uint8_t) (mask_3d >> 8);
+   1151                                  pEdid[byteIndex++] = (uint8_t) (mask_3d);
+   1152                              }
+   1153                          }
+   1154          
+   1155                          FillIndividual3dModes( pEdid, &byteIndex);
+   1156                      }
+   1157                  }
+   1158          #endif // SI_HDMI_1_4_EDID_PROCESSING
+   1159              }
+   1160          
+   1161              // add a Colorimetry Data Block
+   1162              if ( pEdidTx->edidInfo.SupportYCbCr && ( pEdidTx->edidInfo.xv601 || pEdidTx->edidInfo.xv709))
+   1163              {
+   1164                  errorPosition = 6;
+   1165                  CHECK_BOUNDARY(byteIndex + 4);
+   1166          
+   1167                  // 0xE3 // tag (7) + length (3)
+   1168                  // 0x05 // extended tag code
+   1169                  // 0x01 for xvYCC601 or 0x02 xvYCC709 or 0x03 for both
+   1170                  // 0x01 // profile 0
+   1171          
+   1172                  pEdid[byteIndex++] = (EDID_DBC_TAG__USE_EXTENDED_TAG << 5) | 3; // header
+   1173                  pEdid[byteIndex++] = 0x05;
+   1174                  pEdid[byteIndex++] = ( pEdidTx->edidInfo.xv601 ? 0x01 : 0) | (pEdidTx->edidInfo.xv709 ? 0x02 : 0);
+   1175                  pEdid[byteIndex++] = 0x01; // P0 profile
+   1176              }
+   1177          
+   1178          #ifdef COLLECT_EXTENDED_DATA_BLOCKS
+   1179              // add an Extended Audio Data Block
+   1180              if ( pEdidTx->edidInfo.UnknownAudioExt_Idx)
+   1181              {
+   1182                  uint8_t n = 0;
+   1183                  uint8_t buf_size = pEdidTx->edidInfo.UnknownAudioExt_Idx;
+   1184                  if (buf_size > SIZE_OF_UNKNOWN_AUDIO_EXTENDED_BLOCKS_BUFFER)
+   1185                      buf_size = SIZE_OF_UNKNOWN_AUDIO_EXTENDED_BLOCKS_BUFFER;
+   1186                  errorPosition = 7;
+   1187                  CHECK_BOUNDARY(byteIndex + buf_size);
+   1188                  while(n < buf_size)
+   1189                  {
+   1190                      uint8_t length = pEdidTx->edidInfo.UnknownAudioExtBlocks[n++];
+   1191                      if ( (n + length + 1) > buf_size )
+   1192                          break; // protection
+   1193                      pEdid[byteIndex++] = (EDID_DBC_TAG__USE_EXTENDED_TAG << 5) | length;
+   1194                      memcpy(&pEdid[byteIndex], &pEdidTx->edidInfo.UnknownAudioExtBlocks[n], length);
+   1195                      n += length;
+   1196                  }
+   1197              }
+   1198          
+   1199              // add an Extended Video Data Block
+   1200              if ( pEdidTx->edidInfo.UnknownVideoExt_Idx)
+   1201              {
+   1202                  uint8_t n = 0;
+   1203                  uint8_t buf_size = pEdidTx->edidInfo.UnknownVideoExt_Idx;
+   1204                  if ( buf_size > SIZE_OF_UNKNOWN_VIDEO_EXTENDED_BLOCKS_BUFFER)
+   1205                  {
+   1206                      buf_size = SIZE_OF_UNKNOWN_VIDEO_EXTENDED_BLOCKS_BUFFER;
+   1207                  }
+   1208                  errorPosition = 8;
+   1209                  CHECK_BOUNDARY(byteIndex + buf_size);
+   1210                  while ( n < buf_size )
+   1211                  {
+   1212                      uint8_t length = pEdidTx->edidInfo.UnknownVideoExtBlocks[n++];
+   1213                      if ( (n + length + 1) > buf_size )
+   1214                          break; // protection
+   1215                      pEdid[byteIndex++] = (EDID_DBC_TAG__USE_EXTENDED_TAG << 5) | length;
+   1216                      memcpy( &pEdid[byteIndex], &pEdidTx->edidInfo.UnknownVideoExtBlocks[n], length);
+   1217                      n += length;
+   1218                  }
+   1219              }
+   1220          #endif // COLLECT_EXTENDED_DATA_BLOCKS
+   1221          
+   1222              END_BOUNDARY_CHECK
+   1223          
+   1224              *pByteIndexIn = byteIndex;
+   1225          }
+   1226          
+   1227          
+   1228          //-------------------------------------------------------------------------------------------------
+   1229          //! @brief      Calculate dtdOpt which will be used for all extension blocks
+   1230          //!             without changing.
+   1231          //!
+   1232          //!             edid[3] (i.e. dtdOpt) has to be filled with number of
+   1233          //!             native formats. But this value is unknown until all
+   1234          //!             blocks are filled with DTDs and number of Native
+   1235          //!             DTDs is counted. The problem to count before putting
+   1236          //!             all the DTDs into all EDID blocks is in EDID size
+   1237          //!             limitation- it is not clear how many slots are available.
+   1238          //!             To find out this value, the algorithm is trying to predict it.
+   1239          //-------------------------------------------------------------------------------------------------
+   1240          
+   1241          static void ComposeDtdOptEdid ( uint8_t *pEdid, uint8_t extensionIndex, uint8_t *pDtdOptIn,
+   1242                                          uint8_t *nmbOfSdtds, uint8_t *nmbOfNativeFormats )
+   1243          {
+   1244              int     i;
+   1245              uint8_t dtdOpt = *pDtdOptIn;
+   1246          
+   1247              // predict how many DTDs could be allocated
+   1248              int totalNmbOfTimingDts =
+   1249                  (pEdidTx->usEdidBlockCount - 1 - extensionIndex) * 6 +          // DTD slots in the rest of extensions
+   1250                  (EDID_ADR__CHECK_SUM - pEdid[EDID_EXT_ADR__D]) / EDID_LEN__DTD  // DTD slots in the extension block (i.e current block)
+   1251                  + 2; // Timing DTDs in block 0
+   1252          
+   1253              // count how many Natives we have
+   1254              int required_nmb_of_natives = 0;
+   1255              for ( i=0; i< *nmbOfSdtds; i++)
+   1256              {
+   1257                  if ( pEdidTx->edidInfo.SDTD[i].Native || pEdidTx->edidInfo.SDTD[i].PreferredTiming)
+   1258                  {
+   1259                      required_nmb_of_natives++;
+   1260                  }
+   1261              }
+   1262              // Consider the case when the Preferred is placed into pEdidTx->edidInfo.DTD[0]
+   1263          
+   1264              if ( pEdidTx->edidInfo.DTD[0].Valid && pEdidTx->edidInfo.DTD[0].PreferredTiming)
+   1265              {
+   1266                  required_nmb_of_natives++;
+   1267              }
+   1268          
+   1269              // If number of Natives is more then the predicted value,
+   1270              // nmb_of_native_formats = the predicted value.
+   1271              if ( required_nmb_of_natives > totalNmbOfTimingDts)
+   1272              {
+   1273                  *nmbOfNativeFormats = totalNmbOfTimingDts;
+   1274              }
+   1275              // If some of the Natives has to be placed into extension blocks,
+   1276              // use the value we just predicted.
+   1277              else if ( *nmbOfNativeFormats > 2)
+   1278              {
+   1279                  *nmbOfNativeFormats = required_nmb_of_natives;
+   1280              }
+   1281              // If the number as small that could be placed in block 0 only,
+   1282              // nmb_of_native_formats is already the searching value.
+   1283              // The predicted value is not good in this case because
+   1284              // it could be not exact and could be even 0.
+   1285          
+   1286              // make dtdOpt byte which is the same for all extensions
+   1287              if ( *nmbOfNativeFormats > 15) // only 4 bits are allocated for it
+   1288              {
+   1289                  *nmbOfNativeFormats = 0; // "information is not provided"
+   1290              }
+   1291              dtdOpt = *nmbOfNativeFormats;
+   1292              if ( pEdidTx->edidInfo.HDMI_VSDB.HdmiMode)
+   1293              {
+   1294                  // HDMI input
+   1295                  // suppose our repeater always supports audio and YCbCr
+   1296                  // on HDMI inputs (but not on DVI ones)
+   1297                  if ( pEdidTx->edidInfo.SupportYCbCr )
+   1298                  {
+   1299                      dtdOpt |= 0x30; // Support: YCbCr444, YCbCr422
+   1300                  }
+   1301                  if ( pEdidTx->edidInfo.SupportAudio)
+   1302                  {
+   1303                      dtdOpt |= 0x40; // Support: Basic Audio
+   1304                  }
+   1305              }
+   1306              if ( pEdidTx->edidInfo.SupportUnderscan)
+   1307              {
+   1308                  dtdOpt |= 0x80;
+   1309              }
+   1310          
+   1311              *pDtdOptIn = dtdOpt;
+   1312          }
+   1313          
+   1314          
+   1315          //-------------------------------------------------------------------------------------------------
+   1316          //! @brief      Create an EDID map page (used for EDIDs longer than 2 blocks).
+   1317          //!             longer
+   1318          //!
+   1319          //! @return     true: success, false: error occurred writing EDID
+   1320          //-------------------------------------------------------------------------------------------------
+   1321          
+   1322          static bool_t CreateMapPage ( void )
+   1323          {
+   1324              uint8_t aEdid[EDID_BLOCK_SIZE];
+   1325              int i;
+   1326              int i_max = pEdidTx->usEdidBlockCount - 1; // NmbOfUsEdidBlocks is already limited to 128 max
+   1327          
+   1328              // Clear EDID and add one byte of EDID_EXT_TAG__ADDITIONAL_TIMINGS for each
+   1329              // extended block.
+   1330          
+   1331              memset(aEdid, 0, sizeof(aEdid));
+   1332              aEdid[0] = EDID_EXT_TAG__BLOCK_MAP;
+   1333              for (i = 1; i < i_max; i++)
+   1334              {
+   1335                  aEdid[i] = EDID_EXT_TAG__ADDITIONAL_TIMINGS;
+   1336              }
+   1337          
+   1338              // Finish up by calculating checksum and writing the EDID
+   1339          
+   1340              aEdid[EDID_ADR__CHECK_SUM] = EdidCheckSumCalc(aEdid);
+   1341              if (!EdidTxWriteBlockToRx(1, aEdid, 0))
+   1342              {
+   1343                  pEdidTx->edidInfo.ErrorCode = EDID_ERROR__CANNOT_WRITE;
+   1344                  return (false);
+   1345              }
+   1346          
+   1347              return (true);
+   1348          }
+   1349          
+   1350          
+   1351          //-------------------------------------------------------------------------------------------------
+   1352          //! @brief      Create a new EDID based on the Downstream EDID and the repeater configuration.
+   1353          //!
+   1354          //!             Re-arranges the EDID into proper format if necessary, adds
+   1355          //!             missing fields, replaces manufacture ID, etc., with new values, and
+   1356          //!             possibly other stuff.
+   1357          //!
+   1358          //-------------------------------------------------------------------------------------------------
+   1359          
+   1360          void EdidTxCompose ( void )
+   1361          {
+   1362              uint8_t aEdid[EDID_BLOCK_SIZE]; // !!! make sure stack has enough room for 2*EDID_BLOCK_SIZE=256 byte
+   1363              uint8_t extensionIndex = 1;
+   1364              uint8_t dtdOpt = 0;
+   1365              uint8_t nmbOfNativeFormats = 1; // Shows how many native DTDs are displayed. At least one preferred (i.e. native) DTD should exist.
+   1366              uint8_t dtdIndex = 0;
+   1367              uint8_t sdtdIndex = 0;
+   1368          
+   1369              uint8_t nmbOfSdtds = RearrangeSdtds(pEdidTx->edidInfo.SDTD);
+   1370              uint8_t nmbOfDtds = RearrangeDtds(pEdidTx->edidInfo.DTD);
+   1371          
+   1372              DEBUG_PRINT( EDID_TX_MSG_DBG, "US blocks wrote: %d\n", (int)pEdidTx->usEdidBlockCount );
+   1373          
+   1374              pEdidTx->edidInfo.ErrorCode = EDID_ERROR__OK;
+   1375          
+   1376              if (!ComposeEdidBlock0(aEdid, &dtdIndex, &sdtdIndex, nmbOfSdtds, &nmbOfNativeFormats))
+   1377              {
+   1378                  return;
+   1379              }
+   1380          
+   1381              // Create a map page as page 1 if more than 2 EDID blocks
+   1382          
+   1383              if (pEdidTx->usEdidBlockCount > 2)
+   1384              {
+   1385                  if (!CreateMapPage())
+   1386                  {
+   1387                      return;
+   1388                  }
+   1389                  extensionIndex = 2;
+   1390              }
+   1391          
+   1392              // Create extension blocks if needed
+   1393          
+   1394              if (pEdidTx->usEdidBlockCount > 1)
+   1395              {
+   1396                  int i_max = pEdidTx->usEdidBlockCount; // Already limited to 128 max
+   1397                  bool_t isSdtdIndexValid;
+   1398                  bool_t isFirstExtension = true;
+   1399                  uint8_t cecPhysAddrPosition = 0;
+   1400          
+   1401                  for (; extensionIndex < i_max; extensionIndex++)
+   1402                  {
+   1403                      uint8_t byteIdx = EDID_EXT_ADR__DBC; // body start position at all extension blocks
+   1404          
+   1405                      // Set up fixed header stuff
+   1406          
+   1407                      memset(aEdid, 0, sizeof(aEdid));
+   1408                      aEdid[EDID_EXT_ADR__TAG] = EDID_EXT_TAG__ADDITIONAL_TIMINGS;
+   1409                      aEdid[EDID_EXT_ADR__REVISION] = 3;
+   1410          
+   1411                      // If an HDMI EDID, create the special HDMI first extension block
+   1412          
+   1413                      if (pEdidTx->edidInfo.HDMI_VSDB.HdmiMode)
+   1414                      {
+   1415                          if (isFirstExtension)
+   1416                          {
+   1417                              ComposeHdmiEdidBlock(aEdid, &byteIdx, &nmbOfSdtds, &cecPhysAddrPosition);
+   1418                          }
+   1419                      }
+   1420          
+   1421                      // Create DTDs extension blocks
+   1422          
+   1423                      aEdid[EDID_EXT_ADR__D] = byteIdx;
+   1424                      for (; byteIdx <= (EDID_ADR__CHECK_SUM - EDID_LEN__DTD); byteIdx += EDID_LEN__DTD)
+   1425                      {
+   1426                          // Find SDTD that can be used to build EDID's DTD block
+   1427                          isSdtdIndexValid = FindNextSdtdConvertibleToDtd(&(pEdidTx->edidInfo), &sdtdIndex, nmbOfSdtds);
+   1428          
+   1429                          // while there is free space for DTDs
+   1430                          if (isSdtdIndexValid && pEdidTx->edidInfo.SDTD[sdtdIndex].Native)
+   1431                          {
+   1432                              // if SDTD[sdtd_idx] is native
+   1433                              MakeDtdFromSdtd(&aEdid[byteIdx], &pEdidTx->edidInfo.SDTD[sdtdIndex++]);
+   1434                              if (isFirstExtension)
+   1435                              {
+   1436                                  nmbOfNativeFormats++;
+   1437                              }
+   1438                          }
+   1439                          else if (dtdIndex < nmbOfDtds)
+   1440                          {
+   1441                              MakeDtdFromDtd(&aEdid[byteIdx], &pEdidTx->edidInfo.DTD[dtdIndex++]);
+   1442                          }
+   1443                          else if (isSdtdIndexValid)
+   1444                          {
+   1445                              MakeDtdFromSdtd(&aEdid[byteIdx], &pEdidTx->edidInfo.SDTD[sdtdIndex++]);
+   1446                          }
+   1447                          else
+   1448                              break;
+   1449                      }
+   1450          
+   1451                      // Calculate dtdOpt which will be used for all extension blocks
+   1452                      // without changing.
+   1453                      if (isFirstExtension)
+   1454                      {
+   1455                          ComposeDtdOptEdid(aEdid, extensionIndex, &dtdOpt, &nmbOfSdtds, &nmbOfNativeFormats);
+   1456                      }
+   1457                      aEdid[EDID_EXT_ADR__DTD_OPT] = dtdOpt;
+   1458          
+   1459                      // Finish up by calculating checksum and writing the EDID
+   1460          
+   1461                      aEdid[EDID_ADR__CHECK_SUM] = EdidCheckSumCalc(aEdid);
+   1462                      if (!EdidTxWriteBlockToRx(extensionIndex, aEdid, cecPhysAddrPosition))
+   1463                      {
+   1464                          pEdidTx->edidInfo.ErrorCode = EDID_ERROR__CANNOT_WRITE;
+   1465                          return;
+   1466                      }
+   1467          
+   1468                      isFirstExtension = false;
+   1469          
+   1470                  } // for (all extensions)
+   1471              }
+   1472          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       20  Calculate3dLength
+       24  ComposeDtdOptEdid
+       48  ComposeEdidBlock0
+              48 -> EdidCheckSumCalc
+              48 -> EdidTxWriteBlockToRx
+              48 -> FindNextSdtdConvertibleToDtd
+              48 -> MakeDtdFromDtd
+              48 -> MakeDtdFromSdtd
+              48 -> __aeabi_memcpy
+              48 -> memcmp
+       56  ComposeHdmiEdidBlock
+              56 -> Calculate3dLength
+              56 -> FillIndividual3dModes
+              56 -> __aeabi_memcpy
+      144  CreateMapPage
+             144 -> EdidCheckSumCalc
+             144 -> EdidTxWriteBlockToRx
+             144 -> __aeabi_memclr4
+             144 -> __aeabi_memset
+        0  EdidCheckSumCalc
+      176  EdidTxCompose
+             176 -> ComposeDtdOptEdid
+             176 -> ComposeEdidBlock0
+             176 -> ComposeHdmiEdidBlock
+             176 -> CreateMapPage
+             176 -> EdidCheckSumCalc
+             176 -> EdidTxWriteBlockToRx
+             176 -> FindNextSdtdConvertibleToDtd
+             176 -> MakeDtdFromDtd
+             176 -> MakeDtdFromSdtd
+             176 -> RearrangeDtds
+             176 -> RearrangeSdtds
+             176 -> __aeabi_memclr4
+       20  FillIndividual3dModes
+       20  FindNextSdtdConvertibleToDtd
+       20  InvalidateOverclockedSdtds
+        8  MakeDtdFromDtd
+       24  MakeDtdFromSdtd
+              24 -> EdidTxImageSizeGet
+       92  RearrangeDtds
+              92 -> __aeabi_memclr4
+              92 -> __aeabi_memcpy
+      520  RearrangeSdtds
+             520 -> InvalidateOverclockedSdtds
+             520 -> __aeabi_memclr4
+             520 -> __aeabi_memcpy
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable11
+       4  ??DataTable11_1
+       4  ??DataTable12
+       4  ??DataTable12_1
+       4  ??DataTable12_2
+       4  ??DataTable12_3
+       4  ??DataTable12_4
+       4  ??DataTable12_5
+      24  ?Subroutine0
+      12  ?Subroutine1
+      20  ?Subroutine2
+       8  ?Subroutine3
+      18  ?Subroutine4
+      16  ?Subroutine5
+       8  ?Subroutine6
+      88  Calculate3dLength
+     164  ComposeDtdOptEdid
+     724  ComposeEdidBlock0
+    1150  ComposeHdmiEdidBlock
+      84  CreateMapPage
+      22  EdidCheckSumCalc
+     410  EdidTxCompose
+     144  FillIndividual3dModes
+      76  FindNextSdtdConvertibleToDtd
+     164  InvalidateOverclockedSdtds
+     208  MakeDtdFromDtd
+     286  MakeDtdFromSdtd
+     160  RearrangeDtds
+     228  RearrangeSdtds
+       8  t_sec_formula
+
+ 
+ 4 054 bytes in section .text
+ 
+ 4 054 bytes of CODE memory
+
+Errors: none
+Warnings: 2

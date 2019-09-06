@@ -1,0 +1,703 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:23:38 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\si #
+#                    _drv_msw_info.c                                          #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\si #
+#                    _drv_msw_info.c -D S4051A -D DEBUG -D FREE_RTOS -D       #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_drv_msw_info.lst                                   #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_drv_msw_info.o                                      #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\si_drv_msw_info.c
+      1          //**************************************************************************
+      2          //!file     si_drv_msw_info.c
+      3          //!brief    SiI9535 Switch Driver input video and Infoframe information API.
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2008-2011, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include "si_drv_switch.h"
+     14          #include "si_drv_internal.h"
+     15          #include "si_drv_msw_internal.h"
+     16          #include "si_video_tables.h"
+     17          
+     18          
+     19          //-------------------------------------------------------------------------------------------------
+     20          //! @brief      Display the input information
+     21          //!
+     22          //! @param[in]  formatData - video format descriptor
+     23          //-------------------------------------------------------------------------------------------------
+     24          #if 0
+     25          static void VideoInputFormatDisplay (SiiInputformat_t *formatData)
+     26          {
+     27              DEBUG_PRINT( MSG_STAT, "\n============================\n" );
+     28              DEBUG_PRINT( MSG_STAT, "Video Input Information ( %d%s )\n",
+     29                  (int)formatData->vRes, (formatData->isInterlace) ? "i" : "p"
+     30                  );
+     31          
+     32              switch ( formatData->colorDepth )
+     33              {
+     34                  case COLORDEPTH_10:
+     35                      DEBUG_PRINT( MSG_STAT, "Resolution:    %d x %d\n",
+     36                              (int)((formatData->hRes << 2 ) / 5 ), (int)formatData->vRes );
+     37                      DEBUG_PRINT( MSG_STAT, "Color Depth:   10 bit \n" );
+     38                      break;
+     39                  case COLORDEPTH_12:
+     40                      DEBUG_PRINT( MSG_STAT, "Resolution:    %d x %d\n",
+     41                              (int)((formatData->hRes << 1 ) / 3 ), (int)formatData->vRes );
+     42                      DEBUG_PRINT( MSG_STAT, "Color Depth:   12 bit \n" );
+     43                      break;
+     44                  case COLORDEPTH_16:
+     45                      DEBUG_PRINT( MSG_STAT, "Resolution:    %d x %d\n",
+     46                              (int)(formatData->hRes >> 1 ), (int)formatData->vRes );
+     47                      DEBUG_PRINT( MSG_STAT, "Color Depth:   16 bit \n" );
+     48                      break;
+     49                  default:
+     50                      DEBUG_PRINT( MSG_STAT, "Resolution:    %d x %d\n", (int)formatData->hRes, (int)formatData->vRes );
+     51                      DEBUG_PRINT( MSG_STAT, "Color Depth:   8 bit \n" );
+     52                      break;
+     53          
+     54              }
+     55              DEBUG_PRINT( MSG_STAT, "============================\n" );
+     56          }
+     57          #endif
+     58          
+     59          //-------------------------------------------------------------------------------------------------
+     60          //! @brief      Returns the resolution info for the specified CEA861 video mode
+     61          //! @param[in]  format
+     62          //! @param[out] pHoriz
+     63          //! @param[out] pVert
+     64          //! @param[out] pIsInterlaced
+     65          //!
+     66          //! @remark     Any output parameter set to NULL is skipped.
+     67          //-------------------------------------------------------------------------------------------------
+     68          void SiiDrvSwitchVideoFmtParse ( videoFormatId_t format, int_t *pHoriz, int_t *pVert, bool_t *pIsInterlaced )
+     69          {
+     70              int_t   dummy;
+     71          
+     72              // Write locally if caller set a parameter to NULL
+     73              pHoriz          = (pHoriz) ? pHoriz : &dummy;
+     74              pVert           = (pVert) ? pVert : &dummy;
+     75              pIsInterlaced   = (pIsInterlaced) ? pIsInterlaced : (bool_t *)&dummy;
+     76          
+     77              if ( format < vm_numVideoModes)
+     78              {
+     79                  *pHoriz         = VideoModeTable[ format].Active.H;
+     80                  *pVert          = VideoModeTable[ format].Active.V;
+     81                  *pIsInterlaced  = VideoModeTable[ format].Interlaced;
+     82              }
+     83              else
+     84              {
+     85                  *pHoriz         = 0;
+     86                  *pVert          = 0;
+     87                  *pIsInterlaced  = false;
+     88              }
+     89          }
+     90          //-------------------------------------------------------------------------------------------------
+     91          //! @brief      Returns the resolution info for the requested port, if the port
+     92          //!             is connected to an active source.  For DVI modes, the alternate
+     93          //!             resolution detection hardware is used, for HDMI, the AVI VIC
+     94          //!             data is used.
+     95          //! @param[in]  port
+     96          //! @param[in]  isMainPipe
+     97          //! @param[in]  pTmdsClk     - video pixel clock (in 10kHz units)
+     98          //! @param[out] pHoriz
+     99          //! @param[out] pVert
+    100          //! @param[out] pIsInterlaced
+    101          //! @param[out] pIsHdmi
+    102          //!
+    103          //! @note       Any output parameter set to NULL is skipped.
+    104          //-------------------------------------------------------------------------------------------------
+    105          bool_t SiiDrvSwitchPortInfoGet ( uint8_t port, bool_t isMainPipe, int_t *pTmdsClk,
+    106                                           int_t *pHoriz, int_t *pVert, bool_t *pIsInterlaced, bool_t *pIsHdmi )
+    107          {
+    108              bool_t  interlaced, isHdmi, success;
+    109              uint8_t portInfo[18];
+    110              uint8_t vic, prep;
+    111              int_t   horiz, vert, colorDepth, dummy, tmdsClock;
+    112          
+    113              if ( port >= SII_INPUT_PORT_COUNT )
+    114              {
+    115                  pDrvSwitch->lastResultCode = SII_DRV_SWITCH_ERR_INVALID_PARAMETER;
+    116                  return( false );
+    117              }
+    118              pDrvSwitch->lastResultCode = SII_SUCCESS;
+    119          
+    120              // Write locally if caller set a parameter to NULL
+    121              pTmdsClk        = (pTmdsClk) ? pTmdsClk : &dummy;
+    122              pHoriz          = (pHoriz) ? pHoriz : &dummy;
+    123              pVert           = (pVert) ? pVert : &dummy;
+    124              pIsInterlaced   = (pIsInterlaced) ? pIsInterlaced : (bool_t *)&dummy;
+    125              pIsHdmi         = (pIsHdmi) ? pIsHdmi : (bool_t *)&dummy;
+    126          
+    127              success     = false;
+    128              horiz       = 0;
+    129              vert        = 0;
+    130              interlaced  = false;
+    131              tmdsClock   = 0;
+    132          
+    133              // Get raw data for the port.
+    134              SiiRegModify( REG_PORT_INFOFRAME_SELECT, VAL_RD_PORT_SEL_MASK, port );
+    135              colorDepth  = SiiRegRead( isMainPipe ? REG_MP_COLOR_DEPTH : REG_RP_COLOR_DEPTH) & MSK_COLOR_DEPTH;
+    136          
+    137              isHdmi      = ((SiiRegRead( REG_PORT_ALTRES_MISC ) & BIT_IS_HDMI) != 0);
+    138          
+    139             
+    140          
+    141              if (isHdmi)
+    142              {
+    143                  // For HDMI mode, we just extract the VIC information from the
+    144                  // AVI infoframe stored for the requested port.
+    145                  SiiRegReadBlock(REG_SP_AVI_HEADER, portInfo, 18);
+    146          
+    147                  // Use the VIC value from the AVI to look up data in our video mode table
+    148                  if (((portInfo[REG_SP_AVI_VALID - REG_SP_AVI_HEADER] & BIT_SP_AVI_DATA_VALID) != 0))
+    149                  {
+    150                      vic = portInfo[REG_SP_AVI_PB4 - REG_SP_AVI_HEADER];
+    151                      prep = portInfo[REG_SP_AVI_PB5 - REG_SP_AVI_HEADER] + 1; // pixel repetition factor
+    152          
+    153          
+    154                      // Bug 31705 - Huawei Mobile is delivering 1080p/24Hz video but Melbourne is detecting as 480p resolution
+    155          
+    156                      if ((vic > 0) && (vic <= LAST_KNOWN_CEA_VIC) && (prep > 1))
+    157                      {
+    158                          horiz       = VideoModeTable[ceaVicToVideoTableIndex[vic]].Active.H / prep;
+    159                          vert        = VideoModeTable[ceaVicToVideoTableIndex[vic]].Active.V;
+    160                          interlaced  = VideoModeTable[ceaVicToVideoTableIndex[vic]].Interlaced;
+    161                          tmdsClock   = VideoModeTable[ceaVicToVideoTableIndex[vic]].PixClk;
+    162          
+    163                          // Convert pixel clock value to TMDS clock for deep color modes
+    164                          switch ( colorDepth )
+    165                          {
+    166                              case COLORDEPTH_10:
+    167                                  tmdsClock = (tmdsClock * 5) / 4;
+    168                                  break;
+    169                              case COLORDEPTH_12:
+    170                                  tmdsClock = (tmdsClock * 3) / 2;
+    171                                  break;
+    172                              case COLORDEPTH_16:
+    173                                  tmdsClock *= 2;
+    174                                  break;
+    175                          }
+    176                          // protect against too high TMDS clock detection (> 300 MHz)
+    177                          success = (tmdsClock <= 30000);
+    178                      }
+    179                  }
+    180              }
+    181          
+    182              // If we are in DVI mode or if AVI method has failed for HDMI mode
+    183              // and the alternate resolution detection data is valid, return
+    184              // that information to the caller.
+    185              if ( !isHdmi || !success )
+    186              {
+    187                  // Get the resolution info from the alternate resolution detection hardware.
+    188                  SiiRegReadBlock( isMainPipe ? REG_PORT_MP_ALTRES_DATA_0 : REG_PORT_SP_ALTRES_DATA_0, portInfo, 8 );
+    189                  if (((portInfo[7] & BIT_ALT_RES_DATA_VALID) != 0))
+    190                  {
+    191                      interlaced  = ((portInfo[7] & BIT_IS_INTERLACED) != 0);
+    192                      horiz       = portInfo[0] | ((int_t)portInfo[1] << 8);
+    193                      vert        = portInfo[4] | ((int_t)portInfo[5] << 8);
+    194                      success     = true;
+    195                  }
+    196                  tmdsClock = SiiDrvSwitchTmdsClockGet(isMainPipe);   // Read measured TMDS clock frequency
+    197          
+    198          
+    199          
+    200                  // Horizontal size is counted using the TMDS clock, so if this is HDMI deep color
+    201                  // we need to adjust the values.
+    202                  if ( isHdmi )
+    203                  {
+    204                      switch ( colorDepth )
+    205                      {
+    206                          case COLORDEPTH_10:
+    207                              horiz = (horiz * 4) / 5;
+    208                              break;
+    209                          case COLORDEPTH_12:
+    210                              horiz = (horiz * 2) / 3;
+    211                              break;
+    212                          case COLORDEPTH_16:
+    213                              horiz = horiz / 2;
+    214                              break;
+    215                      }
+    216                  }
+    217              }
+    218          
+    219              // If all attempts failed, return default values
+    220              if ( !success )
+    221              {
+    222                  horiz       = 0;
+    223                  vert        = 0;
+    224                  interlaced  = false;
+    225                  tmdsClock   = 0;
+    226                  DEBUG_PRINT( MSG_ERR, "VRES not detected in %s (port %d)\n", isMainPipe ? "MP" : "SP", port);
+    227              }
+    228          
+    229              // Update caller data
+    230              *pHoriz         = horiz;
+    231              *pVert          = vert;
+    232              *pIsInterlaced  = interlaced;
+    233              *pTmdsClk       = tmdsClock;
+    234              *pIsHdmi        = isHdmi;
+    235          
+    236              return( success );
+    237          }
+    238          
+    239          //------------------------------------------------------------------------------
+    240          //! @brief  Returns the resolution info for the currently selected port.
+    241          //------------------------------------------------------------------------------
+    242          bool_t SiiDrvSwitchSelectedPortInfo ( bool_t isMainPipe, int_t *pHoriz, int_t *pVert, bool_t *pIsInterlaced, bool_t *pIsHdmi )
+    243          {
+    244              int_t port, pclk;
+    245          
+    246              port = SiiDrvSwitchStateGet( isMainPipe ? SiiSwitch_SELECTED_PORT : SiiSwitch_SELECTED_PORT_SUB );
+    247              return( SiiDrvSwitchPortInfoGet( port, isMainPipe, &pclk, pHoriz, pVert, pIsInterlaced, pIsHdmi ));
+    248          }
+    249          
+    250          //------------------------------------------------------------------------------
+    251          // Function:    SwitchInfoframeProcessInterrupts
+    252          // Description: Processes InfoFrame change interrupts from the port attached to
+    253          //              the main and sub pipes.
+    254          //              Function checks only the main pipe interrupts so that real-time
+    255          //              notification of changes to the active port is available.
+    256          //              The current status of any of the background ports can be
+    257          //              read from the hardware as necessary.
+    258          // Returns:     true - New Info Frame
+    259          //              false- No Info Frame
+    260          //------------------------------------------------------------------------------
+    261          
+    262          void SwitchInfoframeProcessInterrupts ( void )
+    263          {
+    264              uint8_t intStatus;
+    265          
+    266              // Only check if the main pipe interrupts are enabled
+    267              if ( SiiRegRead( REG_INT_ENABLE_P3 ) & MSK_P3_MP_IF_STATUS )
+    268              {
+    269                  // Check main pipe infoframe status. If the status of an infoframe type
+    270                  // that we are interested in is set, go ahead and process it.
+    271                  intStatus = SiiRegRead( REG_INT_STATUS_P3 ) & MSK_P3_MP_IF_STATUS;
+    272                  SiiRegWrite( REG_INT_STATUS_P3, intStatus );        // Clear all status flags for MP.
+    273                  intStatus >>= 2;                                    // Main pipe bits are MSBs
+    274                  intStatus &= pDrvSwitch->mpInfoFrameMask;
+    275                  pDrvSwitch->mpInfoFrameInterruptStatus = intStatus;
+    276                  if ( intStatus )
+    277                  {
+    278                      pDrvSwitch->statusFlags |= SiiSWITCH_MP_INFOFRAME_INTR_VALID | SiiSWITCH_INT;
+    279                  }
+    280              }
+    281              // Only check if the sub pipe interrupts are enabled
+    282              if ( SiiRegRead( REG_INT_ENABLE_P4 ) & MSK_P4_RP_IF_STATUS )
+    283              {
+    284                  // Check sub pipe infoframe status. If the status of an infoframe type
+    285                  // that we are interested in is set, go ahead and process it.
+    286                  intStatus = SiiRegRead( REG_INT_STATUS_P4 ) & MSK_RP_IF_STATUS;
+    287                  SiiRegWrite( REG_INT_STATUS_P4, intStatus );        // Clear all status flags for RP.
+    288                  pDrvSwitch->spInfoFrameInterruptStatus = intStatus;
+    289                  if ( intStatus )
+    290                  {
+    291                      pDrvSwitch->statusFlags |= SiiSWITCH_SP_INFOFRAME_INTR_VALID | SiiSWITCH_INT;
+    292                  }
+    293              }
+    294          }
+    295          
+    296          
+    297          
+    298          //-------------------------------------------------------------------------------------------------
+    299          //! @brief      Return InfoFrame captured in an input port.
+    300          //!
+    301          //! @param[in]  isMainPipe  - pipe selection (true - main, false - sub)
+    302          //! @param[in]  ifType      - info frame type
+    303          //! @param[out] pInfoFrame  - pointer to the info frame data
+    304          //! @param[out] plen        - pointer to a length of info frame data in bytes
+    305          //-------------------------------------------------------------------------------------------------
+    306          
+    307          bool_t SiiDrvSwitchInfoFrameGet(bool_t isMainPipe, SiiSwitchInfoFrame_t ifType, uint8_t *pInfoFrame, uint8_t *pLen)
+    308          {
+    309              uint8_t reg;
+    310              uint8_t count;
+    311          
+    312              pDrvSwitch->lastResultCode = SII_SUCCESS;
+    313          
+    314              reg = SiiRegRead(REG_PORT_INFOFRAME_SELECT);
+    315          
+    316              // Select main or sub pipe to be source of the info frame data
+    317              SiiRegModify( REG_PORT_INFOFRAME_SELECT, BIT_RD_PIPE_SEL | BIT_CS_PORT_PIPE_SEL | BIT_RD_CS_PIPE_SEL,
+    318                            BIT_CS_PORT_PIPE_SEL | (isMainPipe ? 0 : BIT_RD_CS_PIPE_SEL));
+    319              // Read requested IF data
+    320              switch (ifType)
+    321              {
+    322                  case IF_AVI:
+    323                      SiiRegReadBlock( REG_SP_AVI_HEADER, pInfoFrame, 18 );
+    324                      *pLen = pInfoFrame[2] + 3;
+    325          //            DEBUG_PRINT(MSG_DBG,"\n\n\r Audio Video(AVI) Info Frames : ");
+    326          //            for(count=0 ; count < 18 ; count++)
+    327          //            {
+    328          //            	DEBUG_PRINT(MSG_ALWAYS,"%x ",pInfoFrame[count]);
+    329          //            }
+    330          //            DEBUG_PRINT(MSG_DBG,"\n\n\r");
+    331                      break;
+    332                  case IF_AIF:
+    333                      *pLen = 31;
+    334                      SiiRegReadBlock( REG_SP_AIF_HEADER, pInfoFrame, 32 );
+    335                      *pLen = pInfoFrame[2] + 3;
+    336                      break;
+    337                  case IF_VSI:
+    338                      *pLen = 31;
+    339                      SiiRegReadBlock( REG_RP_VISF_CONTENT_HEADER, pInfoFrame, 32 );
+    340                      *pLen = pInfoFrame[2] + 3;
+    341                      DEBUG_PRINT(MSG_DBG,"\n\n\r Vendor Specific Info Frames : ");
+    342                      for(count=0 ; count < 32 ; count++)
+    343                      {
+    344                      	DEBUG_PRINT(MSG_ALWAYS,"%x ",pInfoFrame[count]);
+    345                      }
+    346                      DEBUG_PRINT(MSG_DBG,"\n\n\r");
+    347                   	break;
+    348                  default:
+    349                      pInfoFrame = 0;
+    350                      pDrvSwitch->lastResultCode = SII_DRV_SWITCH_ERR_INVALID_PARAMETER;
+    351                      return (false);
+    352              }
+    353          
+    354              // Recover port selection settings
+    355              SiiRegWrite(REG_PORT_INFOFRAME_SELECT, reg);
+    356          
+    357              return (true);
+    358          }
+    359          
+    360          //-------------------------------------------------------------------------------------------------
+    361          //! @brief      Return AVI InfoFrame valid value captured in an input port.
+    362          //!
+    363          //! @param[in]  isMainPipe  - pipe selection (true - main, false - sub)
+    364          //-------------------------------------------------------------------------------------------------
+    365          uint8_t SiiDrvSwitchInfoFrameValidGet(bool_t isMainPipe)
+    366          {
+    367          	uint8_t reg;
+    368          	uint8_t valid = 0;
+    369          
+    370              pDrvSwitch->lastResultCode = SII_SUCCESS;
+    371          
+    372          	reg = SiiRegRead(REG_PORT_INFOFRAME_SELECT);
+    373          
+    374          	// Select main or sub pipe to be source of the info frame data
+    375          	SiiRegModify( REG_PORT_INFOFRAME_SELECT, BIT_RD_PIPE_SEL | BIT_CS_PORT_PIPE_SEL | BIT_RD_CS_PIPE_SEL,
+    376          	                  BIT_CS_PORT_PIPE_SEL | (isMainPipe ? 0 : BIT_RD_CS_PIPE_SEL));
+    377          
+    378          	// Read requested AVI Valid bit
+    379          	 valid = SiiRegRead(REG_SP_AVI_VALID);
+    380          
+    381          	// Recover port selection settings
+    382          	SiiRegWrite(REG_PORT_INFOFRAME_SELECT, reg);
+    383          
+    384          	return (valid);
+    385          }
+    386          //-------------------------------------------------------------------------------------------------
+    387          //! @brief      Return InfoFrame captured in an input port.
+    388          //!
+    389          //! @param[in]  isMainPipe  - pipe selection (true - main, false - sub)
+    390          //! @param[in]  ifType      - info frame type
+    391          //! @param[out] pInfoFrame  - pointer to the info frame data
+    392          //! @param[out] plen        - pointer to a length of info frame data in bytes
+    393          //-------------------------------------------------------------------------------------------------
+    394          
+    395          bool_t SiiDrvSwitchPictAspectRatioGet(void)
+    396          {
+    397              uint8_t reg;
+    398          
+    399              reg = SiiRegRead(REG_SP_AVI_PB2);
+    400              DEBUG_PRINT(MSG_DBG,"\n\r SiiDrvSwitchPictAspectRatioGet %x  %x\n\r",reg,( (reg>>4) & 0x03 ));
+    401              reg = ((reg >> 4) & 0x03);
+    402              return(((reg==0x02)?true:0));
+    403          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       32  SiiDrvSwitchInfoFrameGet
+             32 -> SiiRegModify
+             32 -> SiiRegRead
+             32 -> SiiRegReadBlock
+             32 -> SiiRegWrite
+       16  SiiDrvSwitchInfoFrameValidGet
+             16 -> SiiRegModify
+             16 -> SiiRegRead
+             16 -> SiiRegWrite
+        8  SiiDrvSwitchPictAspectRatioGet
+              8 -> SiiRegRead
+       80  SiiDrvSwitchPortInfoGet
+             80 -> SiiDrvSwitchTmdsClockGet
+             80 -> SiiRegModify
+             80 -> SiiRegRead
+             80 -> SiiRegReadBlock
+       40  SiiDrvSwitchSelectedPortInfo
+             40 -> SiiDrvSwitchPortInfoGet
+             40 -> SiiDrvSwitchStateGet
+       16  SiiDrvSwitchVideoFmtParse
+       16  SwitchInfoframeProcessInterrupts
+             16 -> SiiRegRead
+             16 -> SiiRegWrite
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable4
+       4  ??DataTable4_1
+       4  ??DataTable4_2
+     134  SiiDrvSwitchInfoFrameGet
+      66  SiiDrvSwitchInfoFrameValidGet
+      26  SiiDrvSwitchPictAspectRatioGet
+     454  SiiDrvSwitchPortInfoGet
+      48  SiiDrvSwitchSelectedPortInfo
+      54  SiiDrvSwitchVideoFmtParse
+     120  SwitchInfoframeProcessInterrupts
+
+ 
+ 914 bytes in section .text
+ 
+ 914 bytes of CODE memory
+
+Errors: none
+Warnings: 1

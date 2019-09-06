@@ -1,0 +1,714 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:27 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\osd\si_osd_wi #
+#                    n_listbox.c                                              #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\osd\si_osd_wi #
+#                    n_listbox.c -D S4051A -D DEBUG -D FREE_RTOS -D           #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_osd_win_listbox.lst                                #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_osd_win_listbox.o                                   #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\component\osd\si_osd_win_listbox.c
+      1          //***************************************************************************
+      2          //!file     si_osd_win_listbox.c
+      3          //!brief    Silicon Image OSD List Box window.
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2011-2012, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include "string.h"
+     14          #include "si_debug.h"
+     15          #include "si_osd_internal.h"
+     16          
+     17          #if INC_OSD_LISTBOX
+     18          
+     19          #define ITEM_LENGTH pWin->param1
+     20          #define ITEM_MAX    pWin->param2
+     21          #define ITEM_COUNT  pWin->param3
+     22          #define TOP_ITEM    pWin->param4
+     23          
+     24          //-------------------------------------------------------------------------------------------------
+     25          //! @brief      Validate specified window as a listbox.
+     26          //! @param[in]  winRef      - Return value from the SiiOsdCreateListBox function.
+     27          //! @return     true - winRef is a valid list box, false if not
+     28          //-------------------------------------------------------------------------------------------------
+     29          static bool_t OsdListBoxValidate( int winRef )
+     30          {
+     31              SiiOsdWindow_t  *pWin;
+     32          
+     33              pOsd->lastResultCode = SII_OSDDRV_ERR_NOT_ACTIVE;
+     34              while ( winRef != -1 )
+     35              {
+     36                  pWin = &pOsd->winData[ winRef];
+     37          
+     38                  // Ignore window if not enabled.
+     39                  if (( pWin->windowStatus & OSD_WSTAT_ENABLED ) == 0 )
+     40                  {
+     41                      pOsd->lastResultCode = SII_OSDDRV_ERR_NOT_ACTIVE;
+     42                      break;
+     43                  }
+     44                  // If not a list box, can't do this.
+     45                  if ( pWin->windowType != OSD_WINTYPE_LISTBOX )
+     46                  {
+     47                      pOsd->lastResultCode = SII_OSD_ERR_WINTYPE_MISMATCH;
+     48                      break;
+     49                  }
+     50                  // No list data info attached
+     51                  if ( pWin->pExternalData == NULL )
+     52                  {
+     53                      pOsd->lastResultCode = SII_OSD_ERR_NOT_AVAIL;
+     54                      break;
+     55                  }
+     56          
+     57                  pOsd->lastResultCode = SII_OSD_SUCCESS;
+     58                  break;
+     59              }
+     60          
+     61              return( pOsd->lastResultCode == SII_OSD_SUCCESS );
+     62          }
+     63          
+     64          //-------------------------------------------------------------------------------------------------
+     65          //! @brief      Update the listbox display starting at the specified row.
+     66          //! @param[in]  winRef      - Return value from the SiiOsdCreateListBox function.
+     67          //! @param[in]  firstRow    First row to be re-displayed, or -1 if all rows to be re-displayed
+     68          //-------------------------------------------------------------------------------------------------
+     69          static void UpdateListBox( int winRef, int firstRow )
+     70          {
+     71              int             row;
+     72              SiiOsdWindow_t  *pWin = &pOsd->winData[ winRef];
+     73              char            *pStr = (char*)pWin->pExternalData;
+     74          
+     75              // -1 is the same as 0 so that this function can be used directly by the DeleteItem function.
+     76              if ( firstRow == -1 )
+     77              {
+     78                  firstRow = 0;
+     79              }
+     80              for ( row = firstRow; row < pWin->rowCount; row++ )
+     81              {
+     82                  if ( row < ( ITEM_COUNT - TOP_ITEM))
+     83                  {
+     84                      SiiDrvOsdWriteText( winRef, row, 0, &pStr[ (TOP_ITEM + row) * ITEM_LENGTH], OPT_CLEAR_TO_END | OPT_ELLIPSIS );
+     85                  }
+     86                  else
+     87                  {
+     88                      SiiDrvOsdClearTextRow( winRef, row, 0, 0 );
+     89                  }
+     90              }
+     91          }
+     92          
+     93          //-------------------------------------------------------------------------------------------------
+     94          //! @brief      Scroll list box up or down as requested
+     95          //! @param[in]  winRef      - Return value from the SiiOsdCreateListBox function.
+     96          //! @return     true - winRef is a valid list box, false if not
+     97          //-------------------------------------------------------------------------------------------------
+     98          static void ScrollListBox ( int winRef, int key )
+     99          {
+    100              SiiOsdWindow_t  *pWin = &pOsd->winData[ winRef];
+    101          
+    102              if ( key == SIIKEY_SCROLL_UP)
+    103              {
+    104                  // Room to scroll up?
+    105                  if (( ITEM_COUNT - TOP_ITEM ) > pWin->rowCount )
+    106                  {
+    107                      TOP_ITEM++; // Increment top item index
+    108                  }
+    109              }
+    110              else if ( key == SIIKEY_SCROLL_DOWN)
+    111              {
+    112                  // Room to scroll down?
+    113                  if ( TOP_ITEM > 0 )
+    114                  {
+    115                      TOP_ITEM--; // Decrement top item index
+    116                  }
+    117              }
+    118              else
+    119              {
+    120                  return;
+    121              }
+    122          
+    123              UpdateListBox( winRef, 0 );
+    124              SiiOsdShowWindow( winRef, OPT_SHOW );
+    125          }
+    126          
+    127          //-------------------------------------------------------------------------------------------------
+    128          //! @brief      Returns the index of the list item beneath the current list box cursor.
+    129          //! @param[in]  winRef      Return value from the SiiOsdCreateListBox function.
+    130          //! @return     Index of selected item or -1 if nothing selected or other error
+    131          //-------------------------------------------------------------------------------------------------
+    132          int SiiOsdListBoxGetSelect( int winRef )
+    133          {
+    134              SiiOsdWindow_t  *pWin;
+    135          
+    136              if ( !OsdListBoxValidate( winRef ))
+    137              {
+    138                  return( -1 );
+    139              }
+    140              pWin = &pOsd->winData[ winRef];
+    141          
+    142              return( pWin->highlightRow + TOP_ITEM );
+    143          }
+    144          
+    145          //-------------------------------------------------------------------------------------------------
+    146          //! @brief      Initialize a window data structure
+    147          //! @param[in]  winRef      Return value from the SiiOsdCreateListBox function.
+    148          //! @param[in]  itemIndex
+    149          //! @param[in]  options     OPT_SHOW: Scroll row into view if not currently in display area
+    150          //! @return     Pointer to valid SiiDrvOsdWindow_t window structure or NULL if no window is available.
+    151          //-------------------------------------------------------------------------------------------------
+    152          bool_t SiiOsdListBoxSetSelect( int winRef, int itemIndex, SiiOsdOptions_t options  )
+    153          {
+    154              if ( !OsdListBoxValidate( winRef ))
+    155              {
+    156                  return( false );
+    157              }
+    158          
+    159              return( true );
+    160          }
+    161          
+    162          //-------------------------------------------------------------------------------------------------
+    163          //! @brief      Add a list box item string
+    164          //! @param[in]  winRef      - Return value from the SiiOsdCreateListBox function.
+    165          //! @param[in]  pItemText   - ASCII character string.
+    166          //! @param[in]  index       - Position in list to add item.  -1 adds to the end of the list.
+    167          //! @param[in]  options     - OPT_INSERT, OPT_SHOW
+    168          //! @return     true if successful, false if failed.
+    169          //-------------------------------------------------------------------------------------------------
+    170          bool_t SiiOsdListBoxAddItem( int winRef, char *pItemText, int index, SiiOsdOptions_t options )
+    171          {
+    172              int             row;
+    173              SiiOsdWindow_t  *pWin;
+    174              char            *pStr;
+    175          
+    176              if ( !OsdListBoxValidate( winRef ))
+    177              {
+    178                  return( false );
+    179              }
+    180              pWin    = &pOsd->winData[ winRef];
+    181              pStr    = (char*)pWin->pExternalData;
+    182          
+    183              // If an add, must have at least one slot available.
+    184              // index == -1 (add to end)
+    185              // option insert
+    186              // index >= itemCount (treated like -1)
+    187              index = ( index > ITEM_COUNT ) ? -1 : index;
+    188              index = ( index < 0 ) ? ITEM_COUNT : index;
+    189          
+    190              // Update item count only if NOT overwriting an existing entry.
+    191              if (( index == ITEM_COUNT) || ( options & OPT_INSERT ))
+    192              {
+    193                  if (( ITEM_COUNT + 1 ) >= ITEM_MAX )
+    194                  {
+    195                      pOsd->lastResultCode = SII_OSD_ERR_NOT_AVAIL;
+    196                      return( false );
+    197                  }
+    198                  ITEM_COUNT++;
+    199              }
+    200          
+    201              if ( options & OPT_INSERT )
+    202              {
+    203                  // Move all strings at index and below down one.
+    204                  for ( row = ITEM_COUNT; row >= index; row-- )
+    205                  {
+    206                      memcpy( &pStr[ row * ITEM_LENGTH ], &pStr[ (row - 1) * ITEM_LENGTH ], ITEM_LENGTH );
+    207                  }
+    208                  ITEM_COUNT++;
+    209              }
+    210          
+    211              // Now insert the string into the empty spot.
+    212              strncpy( &pStr[ index * ITEM_LENGTH ], pItemText, ITEM_LENGTH - 1 );
+    213              pStr[ (index * ITEM_LENGTH) + ITEM_LENGTH - 1 ] = 0;    // Make sure the item string is terminated
+    214          
+    215              if (( index - TOP_ITEM ) >= 0 )
+    216              {
+    217                  UpdateListBox( winRef, index - TOP_ITEM ); // Update the background surface
+    218              }
+    219          
+    220              // Display if requested
+    221              if ( options & OPT_SHOW )
+    222              {
+    223                  SiiOsdShowWindow( winRef, options );
+    224              }
+    225              return( true );
+    226          }
+    227          
+    228          //-------------------------------------------------------------------------------------------------
+    229          //! @brief      Delete a list box item string
+    230          //! @param[in]  winRef      - Return value from the SiiOsdCreateListBox function.
+    231          //! @param[in]  index       - Position in list to add item.  -1 for the entire list.
+    232          //! @param[in]  options     - OPT_SHOW
+    233          //! @return     true if successful, false if failed.
+    234          //-------------------------------------------------------------------------------------------------
+    235          bool_t SiiOsdListBoxDeleteItem( int winRef, int index, SiiOsdOptions_t options )
+    236          {
+    237              int row, itemLength;
+    238              SiiOsdWindow_t  *pWin;
+    239              char            *pStr;
+    240          
+    241              if ( !OsdListBoxValidate( winRef ))
+    242              {
+    243                  return( false );
+    244              }
+    245              pWin    = &pOsd->winData[ winRef];
+    246              pStr    = (char*)pWin->pExternalData;
+    247          
+    248              // Is item to be deleted in range?
+    249              if ( index >= ITEM_COUNT )
+    250              {
+    251                  pOsd->lastResultCode = SII_OSD_ERR_INVALID_PARAMETER;
+    252                  return( false );
+    253              }
+    254          
+    255              itemLength = pWin->colCount + 1;        // Include the null terminator byte
+    256          
+    257              // Caller wants entire list deleted?
+    258              if ( index == -1 )
+    259              {
+    260                  ITEM_COUNT = 0;
+    261              }
+    262              else
+    263              {
+    264                  // Move all strings below index up one.
+    265                  for ( row = index; row < (ITEM_COUNT - 1); row++ )
+    266                  {
+    267                      memcpy( &pStr[ row * ITEM_LENGTH ], &pStr[ (row + 1) * ITEM_LENGTH ], ITEM_LENGTH );
+    268                  }
+    269                  ITEM_COUNT--;
+    270              }
+    271          
+    272              UpdateListBox( winRef, index ); // Update the background surface
+    273          
+    274              // Display if requested
+    275              if ( options & OPT_SHOW )
+    276              {
+    277                  SiiOsdShowWindow( winRef, options );
+    278              }
+    279          
+    280              return( true );
+    281          }
+    282          
+    283          //-------------------------------------------------------------------------------------------------
+    284          //! @brief      Copies the text of the item at the specified index to the destination string buffer.
+    285          //! @param[in]  winRef      Return value from the SiiOsdCreateListBox function.
+    286          //! @param[in]  index       Index of item to be returned.
+    287          //! @param[in]  pDestStr    Pointer to destination string buffer.
+    288          //! @param[in]  length      Length of destination string buffer.
+    289          //! @return     true if successful, false if error occurred.
+    290          //-------------------------------------------------------------------------------------------------
+    291          bool_t SiiOsdListBoxGetItem( int winRef, int index, char *pDestStr, int length )
+    292          {
+    293              SiiOsdWindow_t  *pWin;
+    294          
+    295              if ( OsdListBoxValidate( winRef ))
+    296              {
+    297                  pWin = &pOsd->winData[ winRef];
+    298          
+    299                  // Make sure it's a valid index and copy the data if so.
+    300                  if ( index < ITEM_COUNT)
+    301                  {
+    302                      char *pString = pWin->pExternalData;
+    303                      strncpy( pDestStr, &pString[ index * ITEM_LENGTH ], length );
+    304                  }
+    305                  else
+    306                  {
+    307                      pOsd->lastResultCode = SII_OSD_ERR_INVALID_PARAMETER;
+    308                  }
+    309              }
+    310          
+    311              return( pOsd->lastResultCode == SII_OSD_SUCCESS );
+    312          }
+    313          
+    314          //-------------------------------------------------------------------------------------------------
+    315          //! @brief      Manage a list box window
+    316          //! @param[in]  winRef      Return value from the SiiOsdCreateSlider function.
+    317          //! @param[in]  key         SIIKEY_SELECT, SIIKEY_CANCEL, SIIKEY_CURSOR_xxx, SIIKEY_SCROLL_xxx.
+    318          //! @param[in]  options     none
+    319          //! @return     true if key was used, false if not.
+    320          //-------------------------------------------------------------------------------------------------
+    321          bool_t SiiOsdListBoxHandler( int winRef, int key, SiiOsdOptions_t options )
+    322          {
+    323              int             prevRow, moveIncrement, newRow;
+    324              bool_t          userFuncResult = false;
+    325              bool_t          keyUsed = true;
+    326              char            *pString;
+    327              SiiOsdWindow_t  *pWin;
+    328          
+    329              if ( !OsdListBoxValidate( winRef ))
+    330              {
+    331                  return( false );
+    332              }
+    333              pWin = &pOsd->winData[ winRef];
+    334          
+    335              if ( winRef == SiiOsdGetFocus())
+    336              {
+    337                  prevRow     = SiiDrvOsdGetCursor( winRef );
+    338                  userFuncResult = SiiOsdBaseWindowHandler( winRef, key, options );
+    339                  switch ( key )
+    340                  {
+    341                      case SIIKEY_CURSOR_UP:
+    342                      case SIIKEY_CURSOR_DOWN:
+    343                          // Check to see if we need to scroll up or down
+    344                          moveIncrement = (key == SIIKEY_CURSOR_DOWN) ? 1 : -1;
+    345          
+    346                          // Determine new row (with optional wrap)
+    347                          newRow = ( prevRow + moveIncrement );
+    348                          if ( newRow >= pWin->rowCount )
+    349                          {
+    350                              // Scroll if more items in list below bottom row
+    351                              if (( TOP_ITEM + pWin->rowCount ) < ITEM_COUNT )
+    352                              {
+    353                                  ScrollListBox( winRef, SIIKEY_SCROLL_UP ); // Need to scroll up a line.
+    354                              }
+    355                          }
+    356                          else if ( newRow < 0 )
+    357                          {
+    358                              if ( TOP_ITEM > 0 )
+    359                              {
+    360                                  ScrollListBox( winRef, SIIKEY_SCROLL_DOWN ); // Need to scroll down a line.
+    361                              }
+    362                          }
+    363                          break;
+    364          
+    365                      case SIIKEY_SCROLL_UP:
+    366                      case SIIKEY_SCROLL_DOWN:
+    367                          ScrollListBox( winRef, key );
+    368                          break;
+    369          
+    370                      case SIIKEY_CURSOR_LEFT:
+    371                          // If the editMode window member is non-zero, that means the current row item text is longer
+    372                          // than the display area and has been shifted to the right, so shift it one character to the left.
+    373                          if ( pWin->editMode > 0 )
+    374                          {
+    375                              pWin->editMode--;
+    376                              pString = &((char *)pWin->pExternalData)[((prevRow + TOP_ITEM) * ITEM_LENGTH) + pWin->editMode ];
+    377                              SiiDrvOsdWriteText( winRef, prevRow, 0, pString, OPT_SHOW | OPT_CLEAR_TO_END | OPT_ELLIPSIS );
+    378                          }
+    379                          break;
+    380                      case SIIKEY_CURSOR_RIGHT:
+    381                          // If the current row item text is longer than the display area, shift the text
+    382                          // one character to the right.
+    383                          pString = &((char *)pWin->pExternalData)[((prevRow + TOP_ITEM) * ITEM_LENGTH) + pWin->editMode ];
+    384                          if ( strlen( pString ) > (size_t)pWin->colCount )
+    385                          {
+    386                              pWin->editMode++;
+    387                              pString++;
+    388                              SiiDrvOsdWriteText( winRef, prevRow, 0, pString, OPT_SHOW | OPT_CLEAR_TO_END | OPT_ELLIPSIS );
+    389                          }
+    390                          break;
+    391                      case SIIKEY_CANCEL:
+    392                      case SIIKEY_SELECT:
+    393                          // Handled completely by the SiiOsdBaseWindowHandler function
+    394                          break;
+    395                      default:
+    396                          keyUsed = false;
+    397                          break;
+    398                  }
+    399              }
+    400          
+    401              return( keyUsed );
+    402          }
+    403          
+    404          #endif // if INC_OSD_LISTBOX
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        0  OsdListBoxValidate
+        8  ScrollListBox
+              0 -> SiiOsdShowWindow
+              8 -> UpdateListBox
+       32  SiiOsdListBoxAddItem
+             32 -> OsdListBoxValidate
+             32 -> SiiOsdShowWindow
+             32 -> UpdateListBox
+             32 -> __aeabi_memcpy
+             32 -> strncpy
+       32  SiiOsdListBoxDeleteItem
+             32 -> OsdListBoxValidate
+             32 -> SiiOsdShowWindow
+             32 -> UpdateListBox
+             32 -> __aeabi_memcpy
+       24  SiiOsdListBoxGetItem
+             24 -> OsdListBoxValidate
+             24 -> strncpy
+        8  SiiOsdListBoxGetSelect
+              8 -> OsdListBoxValidate
+       40  SiiOsdListBoxHandler
+             40 -> OsdListBoxValidate
+             40 -> ScrollListBox
+             40 -> SiiDrvOsdGetCursor
+             40 -> SiiDrvOsdWriteText
+             40 -> SiiOsdBaseWindowHandler
+             40 -> SiiOsdGetFocus
+             40 -> strlen
+        8  SiiOsdListBoxSetSelect
+              8 -> OsdListBoxValidate
+       24  UpdateListBox
+             24 -> SiiDrvOsdClearTextRow
+             24 -> SiiDrvOsdWriteText
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable7
+      60  OsdListBoxValidate
+      72  ScrollListBox
+     168  SiiOsdListBoxAddItem
+     116  SiiOsdListBoxDeleteItem
+      72  SiiOsdListBoxGetItem
+      36  SiiOsdListBoxGetSelect
+     252  SiiOsdListBoxHandler
+      12  SiiOsdListBoxSetSelect
+      90  UpdateListBox
+
+ 
+ 882 bytes in section .text
+ 
+ 882 bytes of CODE memory
+
+Errors: none
+Warnings: 9

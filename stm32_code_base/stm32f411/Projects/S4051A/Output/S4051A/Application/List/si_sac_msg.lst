@@ -1,0 +1,581 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:03 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\cec_system_au #
+#                    dio_control\si_sac_msg.c                                 #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\cec_system_au #
+#                    dio_control\si_sac_msg.c -D S4051A -D DEBUG -D           #
+#                    FREE_RTOS -D STM32F40_41xxx -D USE_STM324xG_EVAL -D      #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_sac_msg.lst                                        #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_sac_msg.o                                           #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\component\cec_system_audio_control\si_sac_msg.c
+      1          //*************************************************************************************************
+      2          //! @file     si_sac_msg.c
+      3          //! @brief    Message level of CEC/System Audio Control
+      4          //
+      5          //
+      6          // No part of this work may be reproduced, modified, distributed,
+      7          // transmitted, transcribed, or translated into any language or computer
+      8          // format, in any form or by any means without written permission of
+      9          // Silicon Image, Inc., 1060 East Arques Avenue, Sunnyvale, California 94085
+     10          //
+     11          // Copyright 2002-2010, Silicon Image, Inc.  All rights reserved.
+     12          //************************************************************************************************/
+     13          
+     14          #include "si_common.h"
+     15          #include "si_cec_internal.h"
+     16          #include "si_sac_msg.h"
+     17          
+     18          #ifndef CEC_PC_SIMULATION
+     19          #include <string.h>    
+     20          #else
+     21          #include "stdio.h"
+     22          #include "memory.h"
+     23          #include "debug_print.h"
+     24          #endif
+     25          
+     26          //-------------------------------------------------------------------------------------------------
+     27          // Global Data
+     28          //-------------------------------------------------------------------------------------------------
+     29          
+     30          extern CecSacInstanceRecord_t   *pSac; //!< global pointer to CEC/SAC Instance Record
+     31          
+     32          
+     33          //-------------------------------------------------------------------------------------------------
+     34          // Service Functions
+     35          //-------------------------------------------------------------------------------------------------
+     36          
+     37                                                      
+     38          //-------------------------------------------------------------------------------------------------
+     39          //! @brief      Sends "CEC System Audio Mode Request" message to initiate
+     40          //!             the SAC feature from TV
+     41          //!
+     42          //! @param[in]  srcPhysAddr - physical address of audio content source device.
+     43          //!                           If the value is 0xFFFF, command is sent without parameter
+     44          //! @param[in]  destLogAddr - logical address of the destination device (AMP)
+     45          //-------------------------------------------------------------------------------------------------
+     46          
+     47          void SiiCecSacSystemAudioModeRequestSend (const uint16_t srcPhysAddr, const uint8_t destLogAddr)
+     48          {
+     49              SiiCpiData_t cecFrame;
+     50              uint8_t argCount;
+     51          
+     52              if (srcPhysAddr != 0xFFFF)
+     53              {
+     54                  cecFrame.args[0] = (srcPhysAddr >> 8) & 0xFF;   // Audio Source Physical Address (MSB)
+     55                  cecFrame.args[1] = srcPhysAddr & 0xFF;          // Audio Source Physical Address (LSB)
+     56                  argCount = 2;
+     57              }
+     58              else
+     59              {
+     60                  argCount = 0;
+     61              }
+     62          
+     63              SiiCecCpiWrite(CECOP_SYSTEM_AUDIO_MODE_REQUEST, argCount, destLogAddr, &cecFrame);
+     64          }
+     65          
+     66          
+     67          //-------------------------------------------------------------------------------------------------
+     68          //! @brief      Sends "CEC Give Audio Status" message to request an Amplifier to
+     69          //!             send its volume and mute status
+     70          //!
+     71          //! @param[in]  destLogAddr - logical address of the destination device (AMP)
+     72          //-------------------------------------------------------------------------------------------------
+     73          
+     74          void SiiCecSacGiveAudioStatusSend (const uint8_t destLogAddr)
+     75          {
+     76              SiiCpiData_t cecFrame;
+     77              SiiCecCpiWrite(CECOP_GIVE_AUDIO_STATUS, 0, destLogAddr, &cecFrame);
+     78          }
+     79          
+     80          
+     81          //-------------------------------------------------------------------------------------------------
+     82          //! @brief      Sends "CEC Set System Audio Mode" message to set
+     83          //!             the SAC mode on or off
+     84          //!
+     85          //! @param[in]  enabled     - SAC mode status,
+     86          //! @param[in]  destLogAddr - logical address of the destination device (TV,STB)
+     87          //-------------------------------------------------------------------------------------------------
+     88          
+     89          void SiiCecSacSetSystemAudioModeSend (const bool_t enabled, const uint8_t destLogAddr)
+     90          {
+     91              SiiCpiData_t cecFrame;
+     92              cecFrame.args[0] = enabled & 0x01;   // SAC mode status
+     93              SiiCecCpiWrite(CECOP_SET_SYSTEM_AUDIO_MODE, 1, destLogAddr, &cecFrame);
+     94          }
+     95          
+     96          
+     97          //-------------------------------------------------------------------------------------------------
+     98          //! @brief      Sends "CEC Report Audio Status" message to report
+     99          //!             Amplifier's volume and mute status
+    100          //!
+    101          //! @param[in]  volume      - master volume value [0-100],
+    102          //! @param[in]  muted       - mute status (on/off),
+    103          //! @param[in]  destLogAddr - logical address of the destination device (TV,STB)
+    104          //-------------------------------------------------------------------------------------------------
+    105          
+    106          void SiiCecSacReportAudioStatusSend (const uint8_t volume, const bool_t muted, const uint8_t destLogAddr)
+    107          {
+    108              SiiCpiData_t cecFrame;
+    109              cecFrame.args[0] = (muted ? 0x80 : 0) | (volume & 0x7F);   // Volume & mute status
+    110              SiiCecCpiWrite(CECOP_REPORT_AUDIO_STATUS, 1, destLogAddr, &cecFrame);
+    111          }
+    112          
+    113          
+    114          //-------------------------------------------------------------------------------------------------
+    115          //! @brief      Sends "CEC Give System Audio Mode Status" message to request an
+    116          //!             Amplifier to send its system audio mode status (on/off)
+    117          //!
+    118          //! @param[in]  destLogAddr - logical address of the destination device (AMP)
+    119          //-------------------------------------------------------------------------------------------------
+    120          
+    121          void SiiCecSacGiveSystemAudioModeStatusSend (const uint8_t destLogAddr)
+    122          {
+    123              SiiCpiData_t cecFrame;
+    124              SiiCecCpiWrite(CECOP_GIVE_SYSTEM_AUDIO_MODE_STATUS, 0, destLogAddr, &cecFrame);
+    125          }
+    126          
+    127          
+    128          //-------------------------------------------------------------------------------------------------
+    129          //! @brief      Sends "CEC Set System Audio Mode" message to report
+    130          //!             the SAC mode (on/off)
+    131          //!
+    132          //! @param[in]  destLogAddr - logical address of the destination device (TV,STB)
+    133          //-------------------------------------------------------------------------------------------------
+    134          
+    135          void SiiCecSacSystemAudioModeStatusSend (const uint8_t destLogAddr)
+    136          {
+    137              SiiCpiData_t cecFrame;
+    138              cecFrame.args[0] = pSac->status.isSystemAudioModeEnabled & 0x01;   // SAC mode status
+    139              SiiCecCpiWrite(CECOP_SYSTEM_AUDIO_MODE_STATUS, 1, destLogAddr, &cecFrame);
+    140          }
+    141          
+    142          
+    143          //-------------------------------------------------------------------------------------------------
+    144          //! @brief      Sends "CEC Report Short Audio Descriptor" message to report
+    145          //!             audio capabilities (supported formats) of the Amplifier
+    146          //!
+    147          //! @param[in]  destLogAddr   - logical address of the destination device (TV,STB)
+    148          //! @param[in]  nFmt          - number of requested audio formats [1-4],
+    149          //! @param[in]  aAudioFormats - list of requested audio format codes
+    150          //-------------------------------------------------------------------------------------------------
+    151          
+    152          void SiiCecSacReportAudioCapabilitySend (const uint8_t destLogAddr, uint8_t nFmt, CecSacAudioFmtCode_t aAudioFormats[4])
+    153          {
+    154              SiiCpiData_t cecFrame;
+    155              uint8_t i;
+    156              uint8_t j;
+    157              uint8_t argCount = 0;
+    158          
+    159              for (j = 0; j < nFmt; j++)
+    160              {
+    161                  for (i = 0; i < pSac->numberOfAudioFormats; i++)
+    162                  {
+    163                      if (aAudioFormats[j] == pSac->aFmt[i].audioFmtCode)
+    164                      {
+    165                          cecFrame.args[argCount++] = (((pSac->aFmt[i].audioFmtCode) & 0x0F) << 3) | (pSac->aFmt[i].maxChanNumber & 0x07);
+    166                          cecFrame.args[argCount++] = pSac->aFmt[i].sampleRate;
+    167                          cecFrame.args[argCount++] = pSac->aFmt[i].quality;
+    168                      }
+    169                  }
+    170              }
+    171          
+    172              if (argCount > 0)
+    173              {
+    174                  SiiCecCpiWrite(CECOP_REPORT_SHORT_AUDIO, argCount, destLogAddr, &cecFrame);
+    175              }
+    176              else
+    177              {
+    178                  DEBUG_PRINT(MSG_ALWAYS, ("SI_CecSacReportAudioCapabilitySend(): None of the requested formats found. Replied with FeatureAbort.\n"));
+    179                  SiiCecFeatureAbortSend(CECOP_REQUEST_SHORT_AUDIO, CECAR_INVALID_OPERAND, destLogAddr);
+    180              }
+    181          }
+    182          
+    183          
+    184          //-------------------------------------------------------------------------------------------------
+    185          //! @brief      Sends "CEC Request Short Audio Descriptor" message to request
+    186          //!             audio capabilities (supported formats) of the Amplifier
+    187          //!
+    188          //! @param[in]  destLogAddr   - logical address of the destination device (AMP),
+    189          //! @param[in]  nFmt          - number of requested audio formats [1-4],
+    190          //! @param[in]  aAudioFormats - list of requested audio format codes
+    191          //-------------------------------------------------------------------------------------------------
+    192          
+    193          void SiiCecSacRequestAudioCapabilitySend (const uint8_t destLogAddr, uint8_t nFmt, CecSacAudioFmtCode_t aAudioFormats[4])
+    194          {
+    195              SiiCpiData_t cecFrame;
+    196              uint8_t i;
+    197              uint8_t AudioFormatID = 0; // Indicates that [Audio Format Code] and [Short Audio Descriptor] are as defined in CEA-861-D
+    198          
+    199              if ((nFmt > 0) && (nFmt <= 4))
+    200              {
+    201                  for (i = 0; i < nFmt; i++)
+    202                  {
+    203                      cecFrame.args[i] = (AudioFormatID << 6) | aAudioFormats[i]; // Audio Format ID [7-6] + Audio Format Code [5-0]
+    204                  }
+    205                  SiiCecCpiWrite(CECOP_REQUEST_SHORT_AUDIO, nFmt, destLogAddr, &cecFrame);
+    206              }
+    207          }
+    208          
+    209          
+    210          //-------------------------------------------------------------------------------------------------
+    211          //! @brief      Sends "CEC User Control Pressed" message to indicate that the
+    212          //!             user pressed a remote control button or switched from one
+    213          //!             remote control button to another
+    214          //!
+    215          //! @param[in]  uiCommand   - UI Command code from the following set:
+    216          //!                           CEC_RC_VOLUME_UP, CEC_RC_VOLUME_DOWN, CEC_RC_MUTE
+    217          //!                           CEC_RC_MUTE_FUNCTION, CEC_RC_RESTORE_VOLUME_FUNCTION
+    218          //! @param[in]  destLogAddr - logical address of the destination device (TV,STB)
+    219          //-------------------------------------------------------------------------------------------------
+    220          
+    221          void SiiCecSacUserControlPressedSend (const SiiCecUiCommand_t uiCommand, const uint8_t destLogAddr)
+    222          {
+    223              SiiCpiData_t cecFrame;
+    224              cecFrame.args[0] = (uint8_t) uiCommand;   // UI Command
+    225              SiiCecCpiWrite(CECOP_USER_CONTROL_PRESSED, 1, destLogAddr, &cecFrame);
+    226          }
+    227          
+    228          
+    229          //-------------------------------------------------------------------------------------------------
+    230          //! @brief      Sends "CEC User Control Released" message to indicate that the
+    231          //!             user released the remote control button that had been pressed
+    232          //!             and accompanied by the last "CEC User Control Pressed" message
+    233          //!
+    234          //! @param[in]  destLogAddr - logical address of the destination device (TV,STB)
+    235          //-------------------------------------------------------------------------------------------------
+    236          
+    237          void SiiCecSacUserControlReleasedSend (const uint8_t destLogAddr)
+    238          {
+    239              SiiCpiData_t cecFrame;
+    240              SiiCecCpiWrite(CECOP_USER_CONTROL_RELEASED, 0, destLogAddr, &cecFrame);
+    241          }
+    242          
+    243          
+    244          //-------------------------------------------------------------------------------------------------
+    245          //! @brief      Verifies if the CEC messaged belongs to the SAC group of messages
+    246          //!
+    247          //! @param[in]  pCecMsg  - pointer to CEC message structure
+    248          //! @retval     true  - if the message belongs to CEC/SAC group
+    249          //! @retval     false - otherwise
+    250          //-------------------------------------------------------------------------------------------------
+    251          
+    252          bool_t CecSacIsMessageValid (SiiCpiData_t *pCecMsg)
+    253          {
+    254              bool_t isValid = false;
+    255          
+    256              if ((pCecMsg->srcDestAddr & 0xF) == SiiCecGetDeviceLA())
+    257              {
+    258                  switch(pCecMsg->opcode)
+    259                  {
+    260                      case CECOP_SYSTEM_AUDIO_MODE_REQUEST:
+    261                      case CECOP_GIVE_AUDIO_STATUS:
+    262                      case CECOP_SET_SYSTEM_AUDIO_MODE:
+    263                      case CECOP_REPORT_AUDIO_STATUS:
+    264                      case CECOP_GIVE_SYSTEM_AUDIO_MODE_STATUS:
+    265                      case CECOP_SYSTEM_AUDIO_MODE_STATUS:
+    266                      case CECOP_REPORT_SHORT_AUDIO:
+    267                      case CECOP_REQUEST_SHORT_AUDIO:
+    268                      case CECOP_USER_CONTROL_PRESSED:
+    269                      case CECOP_USER_CONTROL_RELEASED:
+    270                          isValid = true;
+    271                          break;
+    272                      default:break;
+    273                  }
+    274              }
+    275          
+    276              return isValid;
+    277          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       16  CecSacIsMessageValid
+             16 -> SiiCecGetDeviceLA
+       32  SiiCecSacGiveAudioStatusSend
+             32 -> SiiCecCpiWrite
+       32  SiiCecSacGiveSystemAudioModeStatusSend
+             32 -> SiiCecCpiWrite
+       48  SiiCecSacReportAudioCapabilitySend
+             48 -> SiiCecCpiWrite
+             48 -> SiiCecFeatureAbortSend
+       32  SiiCecSacReportAudioStatusSend
+             32 -> SiiCecCpiWrite
+       40  SiiCecSacRequestAudioCapabilitySend
+             40 -> SiiCecCpiWrite
+       32  SiiCecSacSetSystemAudioModeSend
+             32 -> SiiCecCpiWrite
+       32  SiiCecSacSystemAudioModeRequestSend
+             32 -> SiiCecCpiWrite
+       32  SiiCecSacSystemAudioModeStatusSend
+             32 -> SiiCecCpiWrite
+       32  SiiCecSacUserControlPressedSend
+             32 -> SiiCecCpiWrite
+       32  SiiCecSacUserControlReleasedSend
+             32 -> SiiCecCpiWrite
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+       8  ?Subroutine0
+      12  ?Subroutine1
+      58  CecSacIsMessageValid
+      12  SiiCecSacGiveAudioStatusSend
+      14  SiiCecSacGiveSystemAudioModeStatusSend
+     146  SiiCecSacReportAudioCapabilitySend
+      26  SiiCecSacReportAudioStatusSend
+      44  SiiCecSacRequestAudioCapabilitySend
+      16  SiiCecSacSetSystemAudioModeSend
+      38  SiiCecSacSystemAudioModeRequestSend
+      28  SiiCecSacSystemAudioModeStatusSend
+      12  SiiCecSacUserControlPressedSend
+      14  SiiCecSacUserControlReleasedSend
+
+ 
+ 432 bytes in section .text
+ 
+ 432 bytes of CODE memory
+
+Errors: none
+Warnings: 1

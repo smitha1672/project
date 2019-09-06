@@ -1,0 +1,945 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:26:03 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\application\app_cec\sk_ #
+#                    app_cec.c                                                #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\application\app_cec\sk_ #
+#                    app_cec.c -D S4051A -D DEBUG -D FREE_RTOS -D             #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\sk_app_cec.lst                                        #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\sk_app_cec.o                                           #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\application\app_cec\sk_app_cec.c
+      1          //***************************************************************************
+      2          //!file     sk_app_cec.c
+      3          //!brief    Wraps board and device functions for the CEC component
+      4          //!         and the application
+      5          //
+      6          // No part of this work may be reproduced, modified, distributed,
+      7          // transmitted, transcribed, or translated into any language or computer
+      8          // format, in any form or by any means without written permission of
+      9          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+     10          //
+     11          // Copyright 2009-2012, Silicon Image, Inc.  All rights reserved.
+     12          //***************************************************************************/
+     13          
+     14          #include "sk_app_cec.h"
+     15          #if INC_CBUS
+     16          #include "sk_app_cbus.h"
+     17          #endif
+     18          #include "si_edid_tx_component.h"
+     19          
+     20          #define ALLOW_VIRTUAL_DEVICES 1
+     21          
+     22          static uint8_t  l_sinkCecTypeList[] = { 0, CEC_LOGADDR_UNREGORBC };
+     23          static uint8_t  l_allCecTypeList[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, CEC_LOGADDR_UNREGORBC };
+     24          #if ( configSII_DEV_953x_PORTING == 1 )
+     25          uint8_t  appCecSourceLaList[] = { CEC_LOGADDR_AUDSYS, CEC_LOGADDR_UNREGORBC };
+     26          #else
+     27          uint8_t  appCecSourceLaList[] = { CEC_LOGADDR_AUDSYS,
+     28          #if ALLOW_VIRTUAL_DEVICES
+     29          		CEC_LOGADDR_PLAYBACK1, CEC_LOGADDR_PLAYBACK2,CEC_LOGADDR_PLAYBACK3,
+     30          #else
+     31          		CEC_LOGADDR_UNREGORBC, CEC_LOGADDR_UNREGORBC,	CEC_LOGADDR_UNREGORBC,
+     32          #endif
+     33          		CEC_LOGADDR_UNREGORBC, CEC_LOGADDR_UNREGORBC, CEC_LOGADDR_UNREGORBC, CEC_LOGADDR_UNREGORBC, CEC_LOGADDR_UNREGORBC,
+     34          		CEC_LOGADDR_UNREGORBC, CEC_LOGADDR_UNREGORBC, CEC_LOGADDR_UNREGORBC, CEC_LOGADDR_UNREGORBC, CEC_LOGADDR_UNREGORBC, CEC_LOGADDR_UNREGORBC, CEC_LOGADDR_UNREGORBC };
+     35          #endif
+     36          static char equalSymbolLine [] = "**============================**\n";
+     37          
+     38          static char l_cecAvrOsdNameString [] = "VIZIO SB4051";
+     39          //static char l_cecAvrOsdNameString [] = "SII AVR";
+     40          //static char l_cecAuxOsdNameString [] = "SII AUX";
+     41          
+     42          SiiAppCecInstanceData_t appCec[SII_NUM_CPI];
+     43          SiiAppCecInstanceData_t *pAppCec = &appCec[0];
+     44          
+     45          #if ( configSII_DEV_953x_PORTING == 1 )
+     46          uint8_t SYS_CEC_TASK = 0x00;
+     47          
+     48          extern CecSacInstanceRecord_t *pSac;
+     49          extern CecInstanceData_t *pCec;
+     50          extern void AmTArcAppTaskAssign( AmTArcTaskEvent event);
+     51          #endif
+     52          
+     53          //------------------------------------------------------------------------------
+     54          //! @brief      Set the correct instance for each of the CEC-related components
+     55          //!             and drivers associated with the passed CEC instance.
+     56          //! @param[in]  newInstance - new instnce index.
+     57          //------------------------------------------------------------------------------
+     58          void SkAppCecInstanceSet ( int_t newInstance )
+     59          {
+     60              // In this case, the instances are one-to-one, but it is
+     61              // possible for a mismatch if, for example, you have one
+     62              // CDC instance that is associated with CPI instance 1
+     63              // instead of instance 0.
+     64          
+     65              if ( newInstance < SII_NUM_CPI )
+     66              {
+     67                  pAppCec = &appCec[newInstance];
+     68                  pAppCec->instanceIndex = newInstance;
+     69                  SiiCecInstanceSet( newInstance );
+     70          #if INC_CDC
+     71                  SiiCdcInstanceSet( CDC_INSTANCE_RX );
+     72          #endif
+     73                  SiiDrvCpiInstanceSet( newInstance );
+     74              }
+     75          }
+     76          
+     77          //------------------------------------------------------------------------------
+     78          // Function:    SkAppCecStandby
+     79          //! @brief      Places all CEC components/drivers into standby
+     80          // Returns:     true if the CEC component entered standby mode successfully,
+     81          //              or false if some failure occurred.
+     82          //------------------------------------------------------------------------------
+     83          
+     84          bool_t SkAppCecStandby ( void )
+     85          {
+     86              // If CEC is not enabled by the user, we're done.
+     87          
+     88              if ( !app.cecEnable )
+     89              {
+     90                  return( true );
+     91              }
+     92          
+     93              // Tell CEC that system power is going off
+     94              SkAppCecInstanceSet( CEC_INSTANCE_AVR );
+     95              SiiCecSetPowerState( (SiiCecPowerstatus_t)APP_POWERSTATUS_ON_TO_STANDBY );
+     96          
+     97              // If we're a TV, tell all attached CEC devices to power off
+     98              if ( SiiCecGetDeviceType() == CEC_DT_TV )
+     99              {
+    100                  SiiCecSendMessage( CECOP_STANDBY, CEC_LOGADDR_UNREGORBC );
+    101              }
+    102              SiiCecStandby();
+    103          
+    104              return( true );
+    105          }
+    106          
+    107          //------------------------------------------------------------------------------
+    108          //! @brief      Restore operation to all enabled CEC components/drivers.
+    109          //! @param[in]  powerIsOn   if true, set CEC power state to ON, otherwise the
+    110          //!                         component is operational but does not tell any
+    111          //!                         other CEC devices that it system power is on.
+    112          //! @return     true if the CEC component successfully exited standby mode,
+    113          //!             or false if some failure occurred.
+    114          //------------------------------------------------------------------------------
+    115          bool_t SkAppCecResume ( bool_t powerIsOn )
+    116          {
+    117              // If CEC is not enabled by the user, we're done.
+    118              if ( !app.cecEnable )
+    119              {
+    120                  return( true );
+    121              }
+    122          
+    123              SkAppCecInstanceSet( CEC_INSTANCE_AVR );
+    124              SiiCecResume();
+    125              SiiCecEnumerateDevices( appCecSourceLaList );
+    126              SiiCecEnumerateDeviceLa( appCecSourceLaList );
+    127              if ( powerIsOn )
+    128              {
+    129                  SiiCecSetPowerState( (SiiCecPowerstatus_t)APP_POWERSTATUS_STANDBY_TO_ON );
+    130              }
+    131          
+    132              // Queue-up the enumerate tasks
+    133              if (SiiCecGetDeviceType() == CEC_DT_TV)
+    134              {
+    135                  SiiCecEnumerateDevices( l_allCecTypeList );
+    136                  SiiCecEnumerateDeviceLa( l_sinkCecTypeList );
+    137              }
+    138          
+    139              return( true );
+    140          }
+    141          
+    142          //------------------------------------------------------------------------------
+    143          // Function:    SkAppCecConfigure
+    144          // Description:
+    145          // Parameters:  none
+    146          // Returns:     none
+    147          //------------------------------------------------------------------------------
+    148          
+    149          void SkAppCecConfigure ( bool_t enable )
+    150          {
+    151              // If CEC enable state has changed, tell the component.
+    152          
+    153              if ( app.oldCecEnable != enable )
+    154              {
+    155                  app.cecEnable     = enable;
+    156                  app.oldCecEnable  = enable;
+    157                  SkAppCecInstanceSet( CEC_INSTANCE_AVR );
+    158                  SiiCecConfigure( enable );
+    159                 // PrintStringOnOff( "CEC:", app.cecEnable );
+    160              }
+    161          }
+    162          
+    163          //------------------------------------------------------------------------------
+    164          // Function:    SkAppCecRxMsgHandler
+    165          // Description: Parse received messages and execute response as necessary
+    166          //              Only handle the messages needed at the top level to interact
+    167          //              with the Port Switch hardware.  The SiiAPI message handler
+    168          //              handles all messages not handled here.
+    169          // Parameters:  none
+    170          // Returns:     Returns true if message was processed by this handler
+    171          //------------------------------------------------------------------------------
+    172          
+    173          bool_t SkAppCecRxMsgHandler ( SiiCpiData_t *pMsg )
+    174          {
+    175              bool_t  processedMsg, isDirectAddressed;
+    176          
+    177              isDirectAddressed = (bool_t)!((pMsg->srcDestAddr & 0x0F ) == CEC_LOGADDR_UNREGORBC );
+    178          
+    179          	TRACE_DEBUG((0, "SkAppCecRxMsgHandler pMsg->opcode = 0x%X", pMsg->opcode ));
+    180          
+    181              processedMsg = false;
+    182              switch ( pMsg->opcode )
+    183              {
+    184                  case CECOP_IMAGE_VIEW_ON:       // In our case, respond the same to both these messages
+    185                  case CECOP_TEXT_VIEW_ON:
+    186                      if ( !isDirectAddressed )   break;          // Ignore as broadcast message
+    187          
+    188                      // The CEC Component "First Message Handler" has already seen this message
+    189                      // and turned on the system power status (as necessary).  Now, the application
+    190                      // must do whatever else needs to be done to turn on the display.
+    191          
+    192                      //TODO:OEM - Do whatever else is required to turn on the TV display.
+    193          
+    194                      DEBUG_PRINT( MSG_STAT, equalSymbolLine );
+    195                      DEBUG_PRINT( MSG_STAT, "**     IMAGE/TEXT VIEW ON     **\n");
+    196                      DEBUG_PRINT( MSG_STAT, equalSymbolLine );
+    197                      processedMsg = true;
+    198                      break;
+    199          
+    200                  case CECOP_USER_CONTROL_PRESSED:
+    201                  case CECOP_USER_CONTROL_RELEASED:
+    202                      if ( !isDirectAddressed )   break;          // Ignore as broadcast message
+    203          
+    204          #if INC_CBUS
+    205          //            SkAppCbusReceiveCec( pMsg );
+    206          #endif
+    207                      processedMsg = true;
+    208                      break;
+    209          
+    210                  case CECOP_INACTIVE_SOURCE:
+    211                      if ( !isDirectAddressed )   break;          // Ignore as broadcast message
+    212          
+    213                      DEBUG_PRINT( MSG_STAT, equalSymbolLine );
+    214                      DEBUG_PRINT( MSG_STAT, "** SWITCH TO INTERNAL SOURCE  **\n");
+    215                      DEBUG_PRINT( MSG_STAT, equalSymbolLine );
+    216                      processedMsg = true;
+    217                      break;
+    218                  default:
+    219                      break;
+    220              }
+    221          
+    222              return( processedMsg );
+    223          }
+    224          
+    225          //------------------------------------------------------------------------------
+    226          // Function:    CecTimerSet
+    227          // Description: Elapsed timers for CEC use
+    228          // Parameters:  none
+    229          // Returns:     none
+    230          //------------------------------------------------------------------------------
+    231          
+    232          static void CecTimerSet ( clock_time_t msDelay  )
+    233          {
+    234              app.msCecDelay = msDelay;
+    235              app.msCecStart 	= SiiOsTimerTotalElapsed();
+    236          }
+    237          static bool_t CecTimerElapsed ( void )
+    238          {
+    239              clock_time_t thisTime = SiiOsTimerTotalElapsed();
+    240          
+    241              return((bool_t)(( thisTime - app.msCecStart) >= app.msCecDelay));
+    242          }
+    243          
+    244          //------------------------------------------------------------------------------
+    245          // Function:    SkAppTaskCec
+    246          // Description: CEC control task.  Emulate a task with a blocking semaphore
+    247          //              waiting for a device interrupt or a timer-based poll request
+    248          // Parameters:  none
+    249          // Returns:     none
+    250          //------------------------------------------------------------------------------
+    251          
+    252          void SkAppTaskCec ( void )
+    253          {
+    254              bool_t      	cecProcessed = false;
+    255              uint16_t    	cecComponentStatus;
+    256          
+    257              if ( app.cecEnable == false )
+    258              {
+    259                  return;
+    260              }
+    261          
+    262              // If a CEC interrupt occurred, call the CEC handler.
+    263          
+    264              if ( app.cecInterruptRx || app.cecInterruptTx ||CecTimerElapsed())
+    265              {
+    266                  SkAppCecInstanceSet( CEC_INSTANCE_AVR );
+    267                  SiiCecHandler();
+    268                  cecProcessed = true;
+    269          
+    270                  // This instance is the Switch side, so check for a port change.
+    271          
+    272                  cecComponentStatus = SiiCecStatus();    // Only get one chance at these
+    273                  if ( cecComponentStatus & SiiCEC_PORT_CHANGE )
+    274                  {
+    275                      app.newSource[app.currentZone ] = (SiiSwitchSource_t)SiiCecPortSelectGet();
+    276                  }
+    277          
+    278                  if ( cecComponentStatus & SiiCEC_POWERSTATE_CHANGE )
+    279                  {
+    280                      app.powerState = (SiiAppPowerStatus_t)SiiCecGetPowerState();
+    281                  }
+    282                  app.cecInterruptRx = false;
+    283                  app.cecInterruptTx = false;
+    284              }
+    285          
+    286          #if ( configSII_DEV_953x_PORTING == 1 )
+    287              AmTCecTask();
+    288          #endif
+    289          
+    290          /*    if ( SYS_CEC_TASK | !(SYS_CEC_TASK_INIT_SAC) )
+    291              {
+    292          	xHMISystemParams SysPrams;
+    293          	
+    294          	SysPrams = AmTCecGetSyspramsFromHMI();
+    295          
+    296          	if ( pSac->status.isSystemAudioModeEnabled != SysPrams.cec_sac )
+    297          	{	
+    298          		pSac->taskFlags |= CEC_SAC_TASK_POWER_ON_TV;
+    299          		SiiCecCallbackRegisterSet(SiiCecSacTaskProcess, true);
+    300          		SYS_CEC_TASK &= !(SYS_CEC_TASK_INIT_SAC);
+    301          	}
+    302              }
+    303          */
+    304          
+    305              if ( cecProcessed )
+    306              {
+    307                  CecTimerSet( 100 );     // 100ms before next poll
+    308              }
+    309          }
+    310          
+    311          //------------------------------------------------------------------------------
+    312          //! @brief  Initializes CPI and CEC hardware for both Rx and Tx.
+    313          //!         The hardware is initialized and message handlers registered,
+    314          //!         but the hardware is left in a disabled state.  The hardware (and
+    315          //!         thus CEC support) is enabled/disabled via the SkAppCecConfigure
+    316          //!         function.
+    317          //
+    318          //! @note   TX Instance CPI initialization MUST be done after the TPI driver
+    319          //!         has been initialized.
+    320          //------------------------------------------------------------------------------
+    321          bool_t SkAppDeviceInitCec ( void )
+    322          {
+    323              uint16_t    cecPa;
+    324              bool_t      success = false;
+    325          
+    326              do
+    327              {
+    328                  //**************************************************************************************
+    329                  // Configure/Initialize the RX CEC/CPI as an AUDIO System with SWITCH
+    330                  //**************************************************************************************
+    331          
+    332                  SkAppCecInstanceSet( CEC_INSTANCE_AVR );
+    333                  if ( !SiiDrvCpiInitialize())    break;
+    334          #if INC_CEC_LOGGER
+    335                  if ( !SiiCpiRegisterLogger( SkAppCecMessageLogger ))
+    336                  {
+    337                      DEBUG_PRINT( MSG_ERR, "Unable to register RX CPI logger\n");
+    338                      break;
+    339                  }
+    340          #endif
+    341          
+    342                  SiiEdidTxInstanceSet(0);
+    343                  SkAppTxInstanceSet(0);
+    344                  // Can't initialize if valid physical address not assigned
+    345                  cecPa = SiiEdidTxCecPhysAddrGet();
+    346                  if (cecPa == 0xFFFF)                                                            break;
+    347                  if ( !SiiCecInitialize( cecPa, CEC_DT_AUDIO_SYSTEM ))                           break;
+    348                  SiiCecSetOsdName( l_cecAvrOsdNameString );
+    349          
+    350          #if INC_CEC_SWITCH
+    351                  if(app.isCecAsSwitch)
+    352                  {
+    353                  	// Initialize CEC Switch component and enable its base service
+    354                  	SiiCecSwitchConfig();
+    355                  	if ( !SiiCecCallbackRegisterParser( SiiCecSwitchTaskProcess, false ))            break;
+    356                  	if ( SiiCecSwitchSrvStart())                                                    break;
+    357                  }
+    358          #else
+    359                  if(!SiiCecCallbackRegisterParser( CecRxMsgHandler, false )) break;
+    360          #endif
+    361          
+    362          #if INC_CEC_SAC
+    363                  // Initialize CEC System Audio Control component and enable its base service
+    364                  // Can't initialize SAC if valid physical address not assigned
+    365          #if ( configSII_DEV_953x_PORTING == 1 )
+    366                  SiiCecSacConfig(0); // take default format list
+    367          #else
+    368                  SiiCecSacConfig(0, NULL, 0); // take default format list
+    369          #endif
+    370                  if ( !SiiCecCallbackRegisterParser( SiiCecSacTaskProcess, false ))               break;
+    371                  if ( SiiCecSacSrvStart())                                                       break;
+    372          #endif
+    373          
+    374          #if INC_CBUS
+    375                  // Add in a CEC message parser for CBUS to filter User Key Press and Release
+    376                  // We add this extra parser AFTER the SAC parser to allow the SAC to use
+    377                  // some of the CECOP_USER_CONTROL_PRESSED and CECOP_USER_CONTROL_RELEASED commands
+    378                  // if it needs them. It does not have to be called every time by the CEC handler
+    379                  // because it runs no tasks.
+    380          //        if ( !SiiCecCallbackRegisterParser( SkAppCbusCecRxMsgFilter, false ))           break;
+    381          #endif
+    382          
+    383                  success = true;
+    384              }   while (0);  // Do the above only once
+    385          
+    386              return( success );
+    387          }
+    388          
+    389          //-------------------------------------------------------------------------------------------------
+    390          //! @brief      Informs CEC system about the input port change by user action
+    391          //!
+    392          //!             This function shall be called by the system if user changes
+    393          //!             input port selection
+    394          //!
+    395          //! @param[in]  newInputPortIndex - zero based input port index
+    396          //-------------------------------------------------------------------------------------------------
+    397          
+    398          void SiiCecAppInputPortChangeHandler(uint8_t newInputPortIndex)
+    399          {
+    400              SiiCecSwitchSources( newInputPortIndex );
+    401          #if (INC_CEC_SWITCH == ENABLE)
+    402              SiiCecRoutingChangeSend(newInputPortIndex);
+    403          #endif
+    404          }
+    405          
+    406          //-------------------------------------------------------------------------------------------------
+    407          //! @brief      CEC Callback reporting ACK/NOACK from SiiCecSendMessageTask() function.
+    408          //!
+    409          //! @param[in]  opCode          - Opcode of message being reported
+    410          //! @param[in]  messageAcked    - true if message was ACKed
+    411          //-------------------------------------------------------------------------------------------------
+    412          void SiiCecCbSendMessage( uint8_t opCode, bool_t messageAcked )
+    413          {
+    414          
+    415            //  DEBUG_PRINT( MSG_DBG, "CEC Message %02X was %s\n", opCode, messageAcked ? "ACKed" : "Not ACKed" );
+    416          }
+    417          
+    418          //-------------------------------------------------------------------------------------------------
+    419          //! @brief      CEC Callback requesting to switch input port.
+    420          //!
+    421          //! @param[in]  inputPortIndex - input port to switch to
+    422          //! @return     success flag.
+    423          //-------------------------------------------------------------------------------------------------
+    424          
+    425          bool_t SiiCecCbInputPortSet(uint8_t inputPortIndex)
+    426          {
+    427              app.newSource[app.currentZone] = (SiiSwitchSource_t)inputPortIndex;
+    428              SiiCecPortSelectSet(inputPortIndex);
+    429              return true;
+    430          }
+    431          
+    432          //-------------------------------------------------------------------------------------------------
+    433          //! @brief      CEC Callback requesting standby mode of this device.
+    434          //!
+    435          //! @param[in]  inputPortIndex - input port to switch to
+    436          //! @return     sucess flag.
+    437          //-------------------------------------------------------------------------------------------------
+    438          
+    439          void SiiCbCecStandby(bool_t standby)
+    440          {
+    441              if ( standby && (app.powerState == APP_POWERSTATUS_ON ))
+    442              {
+    443                  app.powerState = APP_POWERSTATUS_ON_TO_STANDBY;
+    444              }
+    445              else if (!standby && (app.powerState != APP_POWERSTATUS_ON))
+    446              {
+    447                  app.powerState = APP_POWERSTATUS_STANDBY_TO_ON;
+    448              }
+    449          }
+    450          
+    451          #if (INC_CEC_SWITCH == ENABLE)
+    452          //-------------------------------------------------------------------------------------------------
+    453          //! @brief      CEC Callback requesting HPD status of selected input port.
+    454          //!
+    455          //! @return     HPD On status.
+    456          //-------------------------------------------------------------------------------------------------
+    457          
+    458          bool_t SiiCbCecSwitchRxHpdGet(void)
+    459          {
+    460          
+    461              return( (bool_t)SiiDrvSwitchStateGet(SiiSwitch_SELECTED_INPUT_CONNECT_STATE));
+    462          }
+    463          
+    464          //-------------------------------------------------------------------------------------------------
+    465          //! @brief      CEC Callback processing messages from CEC/Switch sub-system.
+    466          //!
+    467          //! @param[in]  fbMsg - message code
+    468          //!
+    469          //! @retval     true  - if the message was recognized and processed
+    470          //! @retval     false - if the message is irrelevant and wasn't processed
+    471          //-------------------------------------------------------------------------------------------------
+    472          bool_t SiiCbCecSwitchMessageHandler(uint8_t fbMsg)
+    473          {
+    474              bool_t   usedMessage = true;
+    475          
+    476              /* Process feedback messages.       */
+    477              switch (fbMsg)
+    478              {
+    479                  default:
+    480                  case CEC_SWITCH_FB_MSG_NONE:
+    481                      // nothing to do
+    482                      break;
+    483          
+    484                  case CEC_SWITCH_FB_MSG_STATUS_CHANGED:
+    485          
+    486                      // This message occurs when the switch processes a SET_STREAM_PATH
+    487                      // or ACTIVE_SOURCE message, which must also be passed to subsequent
+    488                      // handlers, so mark message as unused.  They will not feature abort
+    489                      // if nothing else uses it, because they are broadcast messages.
+    490                      usedMessage = false;
+    491                      break;
+    492          
+    493                  case CEC_SWITCH_FB_MSG_SEND_ROUTE_DONE:
+    494                     // DEBUG_PRINT(MSG_STAT, ("CEC Switch send route task finished.\n"));
+    495                      break;
+    496          
+    497                  case CEC_SWITCH_FB_MSG_ERR_NONSWITCH_CMD:
+    498                       usedMessage = false;
+    499                       break;
+    500              }
+    501          
+    502              return( usedMessage );
+    503          }
+    504          #endif
+    505          #if INC_CEC
+    506          //-------------------------------------------------------------------------------------------------
+    507          //! @brief      CEC Callback updating enumeration task status
+    508          //!
+    509          //! @param[in]  isComplete  - true if enumeration task has completed
+    510          //-------------------------------------------------------------------------------------------------
+    511          void SiiCecCbEnumerateComplete( bool_t isComplete )
+    512          {
+    513          
+    514              pAppCec->isEnumerated = isComplete;
+    515          
+    516          #if INC_CBUS
+    517              // May need to assign an available LA to a CBUS device
+    518              SkAppCbusAssignCecDeviceAddress( isComplete );
+    519          #endif
+    520          }
+    521          #endif
+    522          
+    523          #if ( configSII_DEV_953x_PORTING == 1 )
+    524          //-------------------------------------------------------------------------------------------------
+    525          //! @brief      
+    526          //-------------------------------------------------------------------------------------------------
+    527          void AmTCecTask( void )
+    528          {
+    529              xHMISystemParams SysPrams;
+    530          
+    531              SysPrams = AmTCecGetSyspramsFromHMI();
+    532          
+    533              if ( SYS_CEC_TASK & SYS_CEC_TASK_PA_CHANGE )
+    534              {
+    535          	SiiCecSendReportPhysicalAddress( pCec->logicalAddr, pCec->physicalAddr );
+    536          	
+    537          	SYS_CEC_TASK &= !(SYS_CEC_TASK_PA_CHANGE);
+    538              }
+    539          #if INC_ARC
+    540          
+    541              if ( SysPrams.input_src == AUDIO_SOURCE_HDMI_ARC )
+    542              {
+    543          	AmTCecArcTask();
+    544          	AmTCecSacTask();
+    545              }
+    546              else if ( SysPrams.input_src == AUDIO_SOURCE_HDMI_IN )
+    547              {
+    548          	AmTCecSacTask();
+    549              }
+    550          #endif
+    551          
+    552          
+    553          }
+    554          
+    555          //-------------------------------------------------------------------------------------------------
+    556          //! @brief      
+    557          //-------------------------------------------------------------------------------------------------
+    558          void AmTCecTaskAssign( AmTCecTaskEvent event )
+    559          {
+    560          
+    561          	switch ( event )
+    562          	{
+    563          		case Cec_TASK_CHANGE_PA:
+    564          		{
+    565          			if ( pCec->physicalAddr != 0x0000 )	// PA change, reinitial ARC
+    566          			{
+    567          				SYS_CEC_TASK |= SYS_CEC_TASK_PA_CHANGE;
+    568          #if INC_ARC
+    569          				AmTArcAppTaskAssign(ARC_TASK_INIT_PRIVATELY);
+    570          #endif
+    571          			}
+    572          			
+    573          			
+    574          		}
+    575          			break;
+    576          	}
+    577          }
+    578          
+    579          #endif
+    580          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       32  AmTCecTask
+             32 -> AmTCecArcTask
+             32 -> AmTCecGetSyspramsFromHMI
+              0 -> AmTCecSacTask
+             32 -> SiiCecSendReportPhysicalAddress
+        0  AmTCecTaskAssign
+              0 -> AmTArcAppTaskAssign
+        0  SiiCbCecStandby
+        0  SiiCbCecSwitchMessageHandler
+        0  SiiCbCecSwitchRxHpdGet
+              0 -> SiiDrvSwitchStateGet
+        8  SiiCecAppInputPortChangeHandler
+              0 -> SiiCecRoutingChangeSend
+              8 -> SiiCecSwitchSources
+        0  SiiCecCbEnumerateComplete
+              0 -> SkAppCbusAssignCecDeviceAddress
+        8  SiiCecCbInputPortSet
+              8 -> SiiCecPortSelectSet
+        0  SiiCecCbSendMessage
+        8  SkAppCecConfigure
+              0 -> SiiCecConfigure
+              8 -> SkAppCecInstanceSet
+        8  SkAppCecInstanceSet
+              8 -> SiiCdcInstanceSet
+              8 -> SiiCecInstanceSet
+              0 -> SiiDrvCpiInstanceSet
+       16  SkAppCecResume
+             16 -> SiiCecEnumerateDeviceLa
+             16 -> SiiCecEnumerateDevices
+             16 -> SiiCecGetDeviceType
+             16 -> SiiCecResume
+             16 -> SiiCecSetPowerState
+             16 -> SkAppCecInstanceSet
+       16  SkAppCecRxMsgHandler
+             16 -> Debug_printDebug
+        8  SkAppCecStandby
+              8 -> SiiCecGetDeviceType
+              8 -> SiiCecSendMessage
+              8 -> SiiCecSetPowerState
+              8 -> SiiCecStandby
+              8 -> SkAppCecInstanceSet
+        8  SkAppDeviceInitCec
+              8 -> SiiCecCallbackRegisterParser
+              8 -> SiiCecInitialize
+              8 -> SiiCecSacConfig
+              8 -> SiiCecSacSrvStart
+              8 -> SiiCecSetOsdName
+              8 -> SiiCecSwitchConfig
+              8 -> SiiCecSwitchSrvStart
+              8 -> SiiDrvCpiInitialize
+              8 -> SiiEdidTxCecPhysAddrGet
+              8 -> SiiEdidTxInstanceSet
+              8 -> SkAppCecInstanceSet
+              8 -> SkAppTxInstanceSet
+       24  SkAppTaskCec
+             24 -> AmTCecTask
+             24 -> SiiCecGetPowerState
+             24 -> SiiCecHandler
+             24 -> SiiCecPortSelectGet
+             24 -> SiiCecStatus
+             24 -> SiiOsTimerTotalElapsed
+             24 -> SkAppCecInstanceSet
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      44  ?<Constant "SkAppCecRxMsgHandler ...">
+       4  ??DataTable11
+       4  ??DataTable11_1
+       4  ??DataTable11_2
+       4  ??DataTable11_3
+       4  ??DataTable11_4
+       4  ??DataTable11_5
+       4  ??DataTable11_6
+       4  ??DataTable11_7
+       4  ?Subroutine0
+      66  AmTCecTask
+      28  AmTCecTaskAssign
+       1  SYS_CEC_TASK
+      20  SiiCbCecStandby
+      14  SiiCbCecSwitchMessageHandler
+       6  SiiCbCecSwitchRxHpdGet
+      18  SiiCecAppInputPortChangeHandler
+      10  SiiCecCbEnumerateComplete
+      20  SiiCecCbInputPortSet
+       2  SiiCecCbSendMessage
+      38  SkAppCecConfigure
+      44  SkAppCecInstanceSet
+      64  SkAppCecResume
+      62  SkAppCecRxMsgHandler
+      42  SkAppCecStandby
+     110  SkAppDeviceInitCec
+     112  SkAppTaskCec
+      16  l_cecAvrOsdNameString
+      20  l_sinkCecTypeList
+          appCecSourceLaList
+          l_allCecTypeList
+      12  pAppCec
+          appCec
+
+ 
+   1 byte  in section .bss
+  48 bytes in section .data
+ 736 bytes in section .text
+ 
+ 736 bytes of CODE memory
+  49 bytes of DATA memory
+
+Errors: none
+Warnings: 2

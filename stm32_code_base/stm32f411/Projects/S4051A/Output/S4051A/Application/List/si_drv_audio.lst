@@ -1,0 +1,1290 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:08 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\si_ #
+#                    drv_audio.c                                              #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\si_ #
+#                    drv_audio.c -D S4051A -D DEBUG -D FREE_RTOS -D           #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_drv_audio.lst                                      #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_drv_audio.o                                         #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\si_drv_audio.c
+      1          /******************************************************************************/
+      2          //!file     si_drv_audio.c
+      3          //!brief    SiI9589 Audio Driver.
+      4          //
+      5          // NOTE: This driver has a dependency on the Switch driver for the 9535
+      6          //
+      7          // No part of this work may be reproduced, modified, distributed,
+      8          // transmitted, transcribed, or translated into any language or computer
+      9          // format, in any form or by any means without written permission of
+     10          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+     11          //
+     12          // Copyright 2007-2012, Silicon Image, Inc.  All rights reserved.
+     13          /******************************************************************************/
+     14          
+     15          #include "string.h"
+     16          #include "si_drv_audio_internal.h"
+     17          #include "si_audio_enums.h"
+     18          #include "si_drv_internal.h"
+     19          #include "si_drv_switch.h"
+     20          #include "si_audio_component.h"
+     21          #include "si_regs_audio953x.h"
+     22          #include "si_regs_pp953x.h"
+     23          #include "si_drv_device.h"
+     24          
+     25          #define SI_AUDIO_NO_ACP_WORKAROUND		false
+     26          
+     27          
+     28          typedef struct
+     29          {
+     30          	uint8_t instanceIndex;
+     31          	uint8_t intStatus;	
+     32          	bool_t  vsifCheckedByOthers;
+     33          	bool_t  unmuteIntrHappened;
+     34          	bool_t  newAcpIntrHappened;
+     35          	bool_t  isSpdifOutEnabled;
+     36          } AudDrvInstanceData_t;
+     37          
+     38          AudDrvInstanceData_t RxAudioIntStatus[2];
+     39          AudDrvInstanceData_t *pDrvRxAud;
+     40          
+     41          #define SII_AUDIO_INSTANCES
+     42          #define REG_TEMP_ACP_HEADER 	REG_RP_VISF_CONTENT_HEADER
+     43          
+     44          
+     45          //-------------------------------------------------------------------------------------------------
+     46          static uint32_t GetCts(void)
+     47          {
+     48          	uint8_t cts_1;
+     49          	uint8_t cts_2;
+     50          	uint8_t cts_3;
+     51          
+     52          	cts_1 = SiiRegRead(REG_CTS_HVAL1_P0);
+     53          	cts_2 = SiiRegRead(REG_CTS_HVAL2_P0);
+     54          	cts_3 = SiiRegRead(REG_CTS_HVAL3_P0);
+     55          	return (cts_3 << 16) | (cts_2 << 8) | cts_1;
+     56          }
+     57          
+     58          //-------------------------------------------------------------------------------------------------
+     59          static uint32_t GetN(void)
+     60          {
+     61          	uint8_t n_1;
+     62          	uint8_t n_2;
+     63          	uint8_t n_3;
+     64          
+     65          	n_1 = SiiRegRead(REG_N_HVAL1_P0);
+     66          	n_2 = SiiRegRead(REG_N_HVAL2_P0);
+     67          	n_3 = SiiRegRead(REG_N_HVAL3_P0);
+     68          	return (n_3 << 16) | (n_2 << 8) | n_1;
+     69          }
+     70          
+     71          
+     72          
+     73          //------------------------------------------------------------------------------
+     74          // Function:    SiiDrvRxAudioFifoRedirSet
+     75          // Description:  Redirect Audio FIFO for RX extraction or TX insertion
+     76          // Parameters:   isTxInsertion - TX insertion, if true
+     77          //------------------------------------------------------------------------------
+     78          
+     79          void SiiDrvRxAudioFifoRedirSet(bool_t isTxInsertion)
+     80          {
+     81              SiiRegModify(REG_AUDP_CTRL, BIT_REDIR_AUD_FIFO, isTxInsertion ? VAL_AUD_FIFO_TX_INSERT : VAL_AUD_FIFO_RX_EXTR);
+     82          }
+     83          
+     84          //------------------------------------------------------------------------------
+     85          // Function:    SiiDrvRxAudioGetMclk
+     86          // Description:  return the audio Mclk for DSD, HBRA and PCM
+     87          // Parameters:  
+     88          // Returns:     0: 128, 1:256, 2:384, 4: 512
+     89          //------------------------------------------------------------------------------
+     90          uint8_t SiiDrvRxAudioGetMclk()
+     91          {
+     92          	uint8_t mclk;
+     93          	uint8_t audType;
+     94          
+     95              audType = SiiRegRead(REG_AUDIOAUDP_STAT);
+     96              mclk = SiiRegRead(REG_AUDIOAAC_MCLK_SEL);
+     97          
+     98          	if (audType & BIT_HBRA_ON)
+     99          	{
+    100          		mclk = (mclk >> MSK_MCLK_HBRA_SHIFT) & MSK_MCLK;
+    101          	} 
+    102          	else if (audType & BIT_DSD_STATUS)
+    103          	{
+    104          		mclk = (mclk >> MSK_MCLK_DSD_SHIFT) & MSK_MCLK;
+    105          	}
+    106          	else
+    107          	{
+    108          		mclk = (mclk >> MSK_MCLK_PCM_SHIFT) & MSK_MCLK;
+    109          	}	
+    110          	return mclk;
+    111          }
+    112          
+    113          
+    114          //------------------------------------------------------------------------------
+    115          // Function:    SiiDrvRxAudioSampleRateGet
+    116          // Description:  return the audio Fs
+    117          // Parameters:  
+    118          // Returns:     
+    119          //------------------------------------------------------------------------------
+    120          uint8_t SiiDrvRxAudioSampleRateGet()
+    121          {
+    122          	uint8_t audFs;
+    123          
+    124              audFs = SiiRegRead(REG_AUDIO_FS) & MSK_AUD_FS;
+    125          
+    126          	switch (audFs)
+    127          	{
+    128          		case SII_AUD_CHST4_FS_44:
+    129          			return SII_AUD_FS_44_1;
+    130          		case SII_AUD_CHST4_FS_88:
+    131          			return SII_AUD_FS_88_2;
+    132          		case SII_AUD_CHST4_FS_176:
+    133          			return SII_AUD_FS_176_4;
+    134          		case SII_AUD_CHST4_FS_48:
+    135          			return SII_AUD_FS_48;
+    136          		case SII_AUD_CHST4_FS_96:
+    137          			return SII_AUD_FS_96;
+    138          		case SII_AUD_CHST4_FS_192:
+    139          			return SII_AUD_FS_192;	
+    140          		case SII_AUD_CHST4_FS_32:
+    141          			return SII_AUD_FS_32;
+    142          	}
+    143          	return SII_AUD_FS_48;
+    144          }
+    145          
+    146          //------------------------------------------------------------------------------
+    147          // Function:    SiiDrvRxAudioModeGet
+    148          // Description:  return the audio mode: PCM or DSD or HBRA
+    149          // Parameters:  
+    150          // Returns:     1: HBRA, 2: DSD, 3: PCM
+    151          //------------------------------------------------------------------------------
+    152          uint8_t SiiDrvRxAudioModeGet()
+    153          {
+    154          	uint8_t audRx;
+    155          
+    156              audRx = SiiRegRead(REG_AUDIOAUDP_STAT);
+    157          
+    158          	if (audRx & BIT_HBRA_ON)
+    159          	{
+    160          		return SII_AUD_HBRA_MODE;
+    161          	}
+    162          	else if (audRx & BIT_DSD_STATUS)
+    163          	{
+    164          		return SII_AUD_DSD_MODE;
+    165          	}
+    166          	else
+    167          	{
+    168          		return SII_AUD_PCM_MODE;
+    169          	}
+    170          }
+    171          
+    172          bool_t SiiDrvRxAudioHdmiModeGet()   //Bug 31751 - Audio extraction is disabled and not resumed after receiving glitch in the audio
+    173          {
+    174          	return (SiiRegRead(REG_AUDIOAUDP_STAT) & BIT_HDMI_ON) ? true : false;
+    175          }
+    176          //------------------------------------------------------------------------------
+    177          // Function:    SiiDrvRxAudioLayoutGet
+    178          // Description:  Audio Layout: multi-channel or two channel.
+    179          // Parameters:  none
+    180          // Returns:  0: two channels 
+    181          //          1: multi channels 
+    182          //------------------------------------------------------------------------------
+    183          uint8_t SiiDrvRxAudioLayoutGet()
+    184          {
+    185          	uint8_t audRx;
+    186          
+    187              audRx = SiiRegRead(REG_AUDIOAUDP_STAT);
+    188          
+    189          	if (audRx & BIT_AUDIO_LAYOUT)
+    190          	{
+    191          		return SII_AUD_MULTI_CHANNEL;
+    192          	}
+    193          
+    194          	return SII_AUD_TWO_CHANNEL;
+    195          		
+    196          }
+    197          
+    198          //------------------------------------------------------------------------------
+    199          // Function:    SiiDrvRxAudioReset
+    200          // Description:  Reset the audio
+    201          // Parameters:  
+    202          // Returns:     n/a
+    203          //------------------------------------------------------------------------------
+    204          void SiiDrvRxAudioReset(uint8_t audResetType)
+    205          {
+    206          	SiiRegModify( REG_AUD_RST, audResetType, SET_BITS);
+    207          	SiiRegModify( REG_AUD_RST, audResetType, CLEAR_BITS);
+    208          }
+    209          
+    210          
+    211          //------------------------------------------------------------------------------
+    212          // Function:    SiiDrvRxAudioMute
+    213          // Description:  Mute/Unmute the audio
+    214          // Parameters:
+    215          // Returns:     n/a
+    216          //------------------------------------------------------------------------------
+    217          
+    218          void SiiDrvRxAudioMute(bool_t isMuted)
+    219          {
+    220              SiiRegModify( REG_AUDIOHDMI_MUTE, BIT_AUDM, isMuted ? SET_BITS : CLEAR_BITS);
+    221          }
+    222          
+    223          //------------------------------------------------------------------------------
+    224          // Function:    SiiDrvRxAudioSoftMute
+    225          // Description:  Mute/Unmute the audio
+    226          // Parameters:
+    227          // Returns:     n/a
+    228          //------------------------------------------------------------------------------
+    229          
+    230          void SiiDrvRxAudioSoftMute(bool_t isMuted)
+    231          {
+    232              SiiRegModify( REG_AUDIOAUD_CTRL, BIT_MUTE_MODE , isMuted ? SET_BITS : CLEAR_BITS);
+    233          }
+    234          
+    235          //------------------------------------------------------------------------------
+    236          // Function:    SiiDrvRxAudioACRControl
+    237          // Description:  
+    238          // Parameters:  
+    239          // Returns:     n/a
+    240          //------------------------------------------------------------------------------
+    241          void SiiDrvRxAudioACRControl(uint8_t bitFields, uint8_t ctrl )
+    242          {
+    243          	SiiRegModify( REG_AUDIOACR_CTRL1, bitFields, ctrl ? SET_BITS : CLEAR_BITS);
+    244          }
+    245          
+    246          
+    247          //------------------------------------------------------------------------------
+    248          // Function:    SiiDrvRxAudioGetIntStatus
+    249          // Description:  Get Audio Int status of main or sub channel
+    250          // Parameters:  
+    251          // Returns:     n/a
+    252          //------------------------------------------------------------------------------
+    253          void SiiDrvRxAudioGetIntStatus(uint8_t *pStatus)
+    254          {
+    255          	SiiRegReadBlock( REG_AUDIO_INTR11, pStatus, 3);
+    256          }
+    257          
+    258          
+    259          //------------------------------------------------------------------------------
+    260          // Function:    SiiDrvRxAudioClearIntStatus
+    261          // Description:  clear Audio Int status of main or sub channel
+    262          // Parameters:  pStatus points to the interrupt bits that going to be clear
+    263          // Returns:     void
+    264          //------------------------------------------------------------------------------
+    265          void SiiDrvRxAudioClearIntStatus(uint8_t *pStatus)
+    266          {
+    267          	SiiRegWriteBlock( REG_AUDIO_INTR11 , pStatus, 3);
+    268          }
+    269          
+    270          
+    271          //------------------------------------------------------------------------------
+    272          // Function:    SiiDrvRxAudioInit
+    273          // Description:  Initialize the audio for both main and sub channel
+    274          // Parameters:  
+    275          // Returns:     n/a
+    276          //------------------------------------------------------------------------------
+    277          void SiiDrvRxAudioInit ( void )
+    278          {
+    279              uint8_t intStatus[3] = { 0xFF, 0xFF, 0xFF };
+    280          
+    281              memset(&RxAudioIntStatus[0], 0x00, sizeof(AudDrvInstanceData_t));
+    282              memset(&RxAudioIntStatus[1], 0x00, sizeof(AudDrvInstanceData_t));
+    283          
+    284          	SiiRegWrite( REG_APLL_POLE, VAL_AACR_CFG1_VALUE);  //set pll config #1
+    285          	SiiRegWrite( REG_APLL_CLIP, VAL_AACR_CFG2_VALUE);  //set pll config #2
+    286          	SiiRegWriteBlock( REG_AUDIO_INTR11, intStatus, 3); //clear the audio status
+    287          
+    288              intStatus[0] = (BIT_SYNC_DETECT| BIT_CKDT_DETECT | BIT_CABLE_UNPLUG); // BIT_CABLE_UNPLUG removed in order to make audio working with MHL                     
+    289              intStatus[1] = (BIT_HDMI_MODE_CHANGED | BIT_AUDIO_FIFO_UNDERUN | BIT_AUDIO_FIFO_OVERRUN | BIT_FS_CHANGED |
+    290                               BIT_H_RES_CHANGED);
+    291              intStatus[2] = (BIT_V_RES_CHANGED);
+    292          
+    293              SiiRegWriteBlock( REG_AUDIOAEC_EN1, intStatus, 3);
+    294          	SiiRegModify(REG_INT_ENABLE_IP4, BIT_MP_NEW_ACP, SET_BITS);
+    295          
+    296              intStatus[0] = BIT_AAC_UNMUTE_GOT_CTS | BIT_AAC_UNMUTE_GOT_NEW_AUDIO;
+    297              intStatus[1] = BIT_AAC_UNMUTE_GOT_HDMI | BIT_AAC_UNMUTE_GOT_FIFO_UNDER | BIT_AAC_UNMUTE_GOT_FIFO_OVER;
+    298              intStatus[2] = 0x17;
+    299          
+    300              SiiRegWriteBlock(REG_AUDIOAEC3_CTRL, intStatus, 3);
+    301              SiiRegModify(REG_AUDIOAAC_MCLK_SEL, 0xC0, 0xC0);    //add for unmute timing    
+    302          
+    303              SiiRegWrite( REG_AUDIOAUD_CTRL,  VAL_AUD_CTRL );
+    304              SiiRegModify( REG_AUDIO_I2S_CTRL2, BIT_MCLKEN, BIT_MCLKEN);  //enable MCLK    
+    305              SiiRegModify( REG_AUDIOHDMI_MUTE, BIT_AUDM, CLEAR_BITS);   
+    306              
+    307              SiiRegModify( REG_AUDIOAEC_CTRL,  BIT_AAC_EN | BIT_AAC_ALL | BIT_AAC_ACR_EN | BIT_AAC_OE /*0xB7*/, SET_BITS);        //enable auto video/audio configuration
+    308              // Do not set BIT_AAC_ALL
+    309              //SiiRegModify( REG_AUDIOAEC_CTRL,   BIT_AAC_EN|BIT_AAC_ACR_EN | BIT_AAC_OE /*0xB7*/, SET_BITS);        //enable auto video/audio configuration
+    310          
+    311          	SiiDrvRxAudioInitMclk();
+    312          	//SiiDrvRxAudioEnableCHSTINT();
+    313          }
+    314          
+    315          //------------------------------------------------------------------------------
+    316          // @brief   Place Audio RX driver in standby
+    317          //------------------------------------------------------------------------------
+    318          bool_t SiiDrvRxAudioStandby ( void )
+    319          {
+    320              uint8_t intStatus[3] = { 0xFF, 0xFF, 0xFF };
+    321          
+    322              //Disable interrupts used by the audio driver
+    323              SiiRegBitsSet( REG_INT_ENABLE_IP4, BIT_MP_NEW_ACP, false );
+    324              SiiDrvRxAudioIntMaskEnable( false );
+    325          
+    326              // Clear outstanding interrupts
+    327              SiiRegWrite( REG_INT_STATUS_IP4, BIT_MP_NEW_ACP );
+    328              SiiRegWrite( REG_INT_STATUS_IP5, BIT_RP_NEW_ACP );
+    329              SiiDrvRxAudioClearIntStatus( intStatus );
+    330          
+    331              // Tri-state audio outputs for standby mode
+    332              SiiRegWrite( REG_AU_PD_SYS, 0 );
+    333              return( true );
+    334          }
+    335          
+    336          //------------------------------------------------------------------------------
+    337          // Function:    SiiDrvRxAudioInterruptMaskEnable
+    338          // Description:  Enable the mask to assert the global (PIN) interrupts.
+    339          // Parameters:  
+    340          // Returns:     n/a
+    341          //------------------------------------------------------------------------------
+    342          void SiiDrvRxAudioIntMaskEnable ( bool_t isEnable )
+    343          {
+    344              uint8_t intStatus[3] = { 0x00, 0x00, 0x00 };
+    345          
+    346              // Enable/Disable AAC hardware function
+    347              SiiRegModify(REG_AUDIOAEC_CTRL, BIT_AAC_EN, (isEnable) ? SET_BITS : CLEAR_BITS);
+    348          
+    349              if (isEnable)
+    350              {
+    351          		intStatus[0] = BIT_AAC_UNMUTE;
+    352          		intStatus[1] = BIT_AAC_DONE | BIT_FNCHG;
+    353          //		intStatus[1] = BIT_AAC_DONE;
+    354          //		intStatus[2] = BIT_FSCHG;
+    355          		//SiiRegWrite(REG_AUDIO_CHAN_SEL, 0x0);
+    356          		//SiiRegWrite(REG_AUDRX_CTRL_P1, 0x30);
+    357              }
+    358          	SiiRegWriteBlock( REG_AUDIO_INTR11_MASK,  intStatus, 3);
+    359          	SiiRegModify(REG_INT_ENABLE_IP5, BIT_RP_NEW_ACP, isEnable ? SET_BITS : CLEAR_BITS);
+    360          	SiiRegModify(REG_AUDIOACR_CTRL3, VAL_CTS_THRESH_MASK, 0x04 << VAL_CTS_THRESH_SHIFT);  //set ACR interrupt threshold
+    361          }
+    362          
+    363          //------------------------------------------------------------------------------
+    364          // Function:    SiiDrvRxAudioControl
+    365          // Description:   
+    366          // Parameters:  
+    367          // Returns:     n/a
+    368          //------------------------------------------------------------------------------
+    369          //void SiiDrvRxAudioControl ( SiiRxAudioControl_t audSel )
+    370          //{
+    371          //	uint8_t bitCtrl = CLEAR_BITS;
+    372          //
+    373          //	switch (audSel)
+    374          //	{
+    375          //	    case SII_AUD_SUB_MULTI_CHANNEL:
+    376          //	        bitCtrl = SET_BITS;
+    377          //	    case SII_AUD_MAIN_MULTI_CHANNEL:
+    378          //	        SiiRegModify(REG_AUDIO_CHAN_SEL, BIT_MULTI_CHN_OUTPUT, bitCtrl);
+    379          //	        break;
+    380          //
+    381          //	    case SII_AUD_PIN_INSERTION:
+    382          //	        bitCtrl = SET_BITS;
+    383          //	    case SII_AUD_PIN_EXTRACTION:
+    384          //	        SiiRegModify(REG_AUDIO_CHAN_SEL, BIT_PIN_DIR, bitCtrl);
+    385          //	        break;
+    386          //
+    387          //	    case SII_AUD_SWAP:
+    388          //	        bitCtrl = SET_BITS;
+    389          //	    case SII_AUD_NORMAL:
+    390          //	        SiiRegModify(REG_AUDIO_CHAN_SEL, BIT_MULTI_CHN_OUTPUT, bitCtrl);
+    391          //	        break;
+    392          //
+    393          //	    default:
+    394          //	        break;
+    395          //	}
+    396          //}
+    397          
+    398          //------------------------------------------------------------------------------
+    399          // Function:    SiiDrvRxSpdifOutEnable
+    400          // Description:  Enable or disable SPDIF output.
+    401          //               NOTE: In Sub Pipe, disabling SPDIF changes the pin assignment to I2S.
+    402          // Parameters:
+    403          // Returns:     n/a
+    404          //------------------------------------------------------------------------------
+    405          
+    406          void SiiDrvRxSpdifOutEnable(bool_t isEnabled)
+    407          {
+    408              SiiRegBitsSet(REG_AUDIOAUD_CTRL, BIT_SPEN, isEnabled);
+    409              pDrvRxAud->isSpdifOutEnabled = isEnabled;
+    410          }
+    411          
+    412          
+    413          //------------------------------------------------------------------------------
+    414          // Function:    SiiDrvRxAudioIsInterruptAssert
+    415          // Description:  return the status of the interrupts
+    416          // Parameters:  
+    417          // Returns:     n/a
+    418          //------------------------------------------------------------------------------
+    419          uint8_t SiiDrvRxAudioIsInterruptAssert()
+    420          {
+    421          	return pDrvRxAud->intStatus;
+    422          }
+    423          
+    424          
+    425          //------------------------------------------------------------------------------
+    426          // Function:    SiiDrvRxAudioInterruptClearAssert
+    427          // Description:  clear the interrupts
+    428          // Parameters:  
+    429          // Returns:     n/a
+    430          //------------------------------------------------------------------------------
+    431          void SiiDrvRxAudioInterruptClearAssert()
+    432          {
+    433          	pDrvRxAud->intStatus = 0;
+    434          }
+    435          
+    436          //------------------------------------------------------------------------------
+    437          // Function:    SiiDrvRxAudioProcessInterrupts
+    438          // Description:  Initialize the audio state machine and audio hardware start up
+    439          //				for both main and sub channel
+    440          // Parameters:  none
+    441          // Returns:     none
+    442          //------------------------------------------------------------------------------
+    443          void SiiDrvRxAudioProcessInterrupts ( void )
+    444          {   
+    445          	pDrvRxAud->intStatus = 1;
+    446          }
+    447          
+    448          //-------------------------------------------------------------------------------------------------
+    449          //! @brief      Configure Audio PLL to either generate fixed Fout = 11/4 * Fin
+    450          //!             or automatically defined frequency. The fixed frequency can be used for
+    451          //!             internal video generation (74.25 MHz = 11/4 * 27 MHz).
+    452          //!             The auto mode is for audio extraction purposes.
+    453          //!
+    454          //! @param[in]  isOvrd - generate manually set frequency, if true.
+    455          //-------------------------------------------------------------------------------------------------
+    456          
+    457          void SiiDrvRxAudioPllConfig(bool_t isOvrd)
+    458          {
+    459              SiiRegModify(REG_APLL_POLE, MSK_APLL_MANUAL_N, isOvrd ? VAL_APLL_MANUAL_N_11 : 0); // manual value for N = 11
+    460          
+    461              SiiRegModify(REG_AUDP0_TEST0_STAT, BIT_AUDIO_P0_TST_XCLK, isOvrd ? BIT_AUDIO_P0_TST_XCLK : 0);
+    462          
+    463              SiiRegModify(REG_APLL_OVR_CTRL,  BIT_APLL_MANUAL_M_4 | BIT_APLL_OVR_N | BIT_APLL_OVR_M,
+    464                           BIT_APLL_MANUAL_M_4 |                              /* manual value for M = 4 */
+    465                          (isOvrd ? (BIT_APLL_OVR_N | BIT_APLL_OVR_M) : 0));  /* choose manual value for N and M */
+    466          }
+    467          
+    468          //------------------------------------------------------------------------------
+    469          // Function:    SiiDrvCbusInstanceGet
+    470          // Description: Return the current instance index.
+    471          // Parameters:  none
+    472          // Returns:     instance index.
+    473          //------------------------------------------------------------------------------
+    474          
+    475          uint8_t SiiDrvRxAudioInstanceGet ( void )
+    476          {
+    477              return pDrvRxAud->instanceIndex;
+    478          }
+    479          
+    480          
+    481          //------------------------------------------------------------------------------
+    482          // Function:    SiiDrvRxAudioInstanceSet
+    483          // Description: Set the component global data pointer to the requested instance.
+    484          // Parameters:  instanceIndex
+    485          // Returns:     true if legal index, false if index value is illegal.
+    486          //------------------------------------------------------------------------------
+    487          
+    488          bool_t SiiDrvRxAudioInstanceSet ( uint_t instanceIndex )
+    489          {
+    490              SiiRegInstanceSet( PP_PAGE_AUDIO, instanceIndex );
+    491              SiiRegInstanceSet( PP_PAGE_AUDIO_INTS, instanceIndex );
+    492              pDrvRxAud = &RxAudioIntStatus[instanceIndex];
+    493              pDrvRxAud->instanceIndex = instanceIndex;
+    494          
+    495              return( true );
+    496          
+    497          }
+    498          //------------------------------------------------------------------------------
+    499          //! @brief  Verify that the actual audio input Fs matches the value programmed
+    500          //!         into the divider hardware and update if necessary.
+    501          //------------------------------------------------------------------------------
+    502          uint8_t SiiDrvRxAudioCheckFsAndFix ( void )
+    503          {
+    504          	int_t tmds_clk_10kHz ;
+    505          	uint8_t fs_code_per_channel;
+    506          	uint16_t fs_frequency_from_chst;
+    507          	uint16_t fs_calculated_100Hz = 0;
+    508          	uint32_t n;
+    509          	uint32_t cts;
+    510          	uint8_t i;
+    511          
+    512          	if((SiiRegRead(REG_AUDIO_INTR11) & (BIT_GOTAUD|BIT_GOTCTS)) != (BIT_GOTAUD|BIT_GOTCTS))
+    513          	{
+    514          	    //no aud, clear the override bit
+    515          	    SiiRegModify( REG_AUDIOACR_CTRL1, BIT_FS_SEL, CLEAR_BITS);
+    516                  return 0;
+    517          	}
+    518              //not DSD mode
+    519          	else if ((SiiDrvRxAudioModeGet()==SII_AUD_PCM_MODE)||
+    520                      (SiiDrvRxAudioModeGet()==SII_AUD_HBRA_MODE))
+    521              {
+    522          		fs_frequency_from_chst = SiiRegRead(REG_AUDIOTCLK_FS) & MSK__TCLKFS;
+    523                  tmds_clk_10kHz = SiiDrvSwitchTmdsClockGet((pDrvRxAud->instanceIndex==0));
+    524                  n = GetN();
+    525                  cts = GetCts();
+    526          
+    527                  if( (n != 0) && (cts != 0) ){
+    528                  	// Calculate the actual input Fs
+    529                  	// Note: the order of operations is optimized for the maximum precision.
+    530                  	// Overflow should not occur during the operations.
+    531                  	// tmds_clk_10kHz - assume maximum value 30,000 (15bit) for 300 MHz
+    532                  	// n - assume maximum value 192kHz*128/300=81000 (17bit)
+    533                  	// tmds_clk_10kHz*n should fit into 32 bits
+    534                  	// Maximum fs_calculated_100Hz is 192000/100=1920 fits into 16bit
+    535          	        fs_calculated_100Hz = (n*tmds_clk_10kHz/cts)*100 /128;
+    536          
+    537                  	// Find closest standard audio Fs.
+    538                  	for(i = 0; i < AUDIO_FS_LIST_LENGTH; i++)
+    539                  	{
+    540                  		if (fs_calculated_100Hz < audio_fs_list[i].max_Fs)
+    541                  		{
+    542                  			break;
+    543                  		}
+    544                  	}
+    545                  	fs_code_per_channel = audio_fs_list[i].code_value;
+    546                  }else
+    547                  {
+    548                  	fs_code_per_channel = fs_frequency_from_chst;
+    549                  }
+    550          
+    551                  if(fs_code_per_channel == fs_frequency_from_chst)
+    552                  {
+    553                      SiiRegModify( REG_AUDIOACR_CTRL1, BIT_FS_SEL, CLEAR_BITS);//no override
+    554                      return fs_code_per_channel;
+    555                  }
+    556                  // If calculated Fs and channel status Fs do not match,
+    557                  else
+    558          #if 0
+    559                  	if (
+    560                      // AND either the calculated Fs does not match the programmed Fs OR
+    561                      // we're not USING the programmed Fs, then...
+    562                      ((fs_code_per_channel != (SiiRegRead( REG_AUDIOFREQ_SVAL) & MSK_SWFS)) ||
+    563                      (SiiRegRead(REG_AUDIOACR_CTRL1)& BIT_FS_SEL) != BIT_FS_SEL))
+    564          
+    565          #endif
+    566                  {
+    567          /*
+    568                      DEBUG_PRINT(MSG_ALWAYS,"Fs(calculated=%d ) not match (ch4 = %d): tmds=%d, n=%d, cts=%d, fs_cal=%d\n",
+    569                              fs_code_per_channel, fs_frequency_from_chst, tmds_clk_10kHz, n, cts, fs_calculated_100Hz);
+    570          */
+    571          
+    572                      // Program the Fs code that matches the calculated Fs and
+    573                      // tell the hardware to use the programmed value.
+    574                      SiiRegModify(REG_AUDIOFREQ_SVAL, MSK_SWFS, fs_code_per_channel);
+    575                      SiiRegModify(REG_AUDIOACR_CTRL1, BIT_FS_SEL, SET_BITS);
+    576          			return fs_code_per_channel;
+    577                  }
+    578              }
+    579          	else
+    580              {
+    581          	    SiiRegModify(REG_AUDIOACR_CTRL1, BIT_FS_SEL, CLEAR_BITS);//clear for DSD mode
+    582              	return SiiDrvRxAudioSampleRateGet();
+    583              }
+    584          }
+    585          
+    586          void SiiDrvRxAudioInternalMute(bool_t qOn)
+    587          {
+    588          	if(qOn)
+    589          	{
+    590          		pDrvRxAud->unmuteIntrHappened = false;
+    591                  SiiDrvRxAudioCheckFsAndFix();
+    592          	}
+    593          }
+    594          
+    595          void SiiDrvRxAudioUnmuteReady(bool_t qOn)
+    596          {
+    597          	pDrvRxAud->unmuteIntrHappened = qOn;
+    598          	if(qOn)
+    599          	{
+    600          	    // Enable audio output and verify the Fs
+    601                  //SiiDrvRxAudioCheckFsAndFix();
+    602          
+    603          	    SiiRegModify( REG_AUDIOAEC_CTRL,  BIT_AAC_OE, SET_BITS);
+    604          	}
+    605          
+    606          }
+    607          
+    608          bool_t SiiDrvRxAudioGetNewAcpInt(void)
+    609          {
+    610          	bool_t result;
+    611          	if(pDrvRxAud->instanceIndex == 0)
+    612          	{
+    613          		result = (SiiRegRead(REG_INT_STATUS_IP4) & BIT_MP_NEW_ACP) == BIT_MP_NEW_ACP;
+    614          		SiiRegWrite(REG_INT_STATUS_IP4, BIT_MP_NEW_ACP);
+    615          	}
+    616          	else
+    617          	{
+    618          		result = (SiiRegRead(REG_INT_STATUS_IP5) & BIT_RP_NEW_ACP) == BIT_RP_NEW_ACP;
+    619          		SiiRegWrite(REG_INT_STATUS_IP5, BIT_RP_NEW_ACP);
+    620          	}
+    621          
+    622          	pDrvRxAud->newAcpIntrHappened = result;
+    623          
+    624          	return result;
+    625          }
+    626          
+    627          static uint8_t AcpTypeGet()
+    628          {
+    629              uint8_t reg;
+    630              uint8_t typeData;
+    631          
+    632              reg = SiiRegRead(REG_PORT_INFOFRAME_SELECT);
+    633              //here instead of the instance set function
+    634          	//could be changed by other modules
+    635              // Select main or sub pipe to be source of the info frame data
+    636              SiiRegModify( REG_PORT_INFOFRAME_SELECT, BIT_RD_PIPE_SEL,
+    637                             ((pDrvRxAud->instanceIndex == 0) ? CLEAR_BITS : SET_BITS));
+    638              // Read requested IF data
+    639              typeData = SiiRegRead(REG_SP_ACP_HEADER + 1);
+    640              // Recover port selection settings
+    641              SiiRegWrite(REG_PORT_INFOFRAME_SELECT, reg);
+    642              return (typeData);
+    643          
+    644          }
+    645          
+    646          void SiiDrvRxAudioOnNoAcp()
+    647          {
+    648          	//turn on digital output
+    649              SiiRegBitsSet(REG_AUDIOAUD_CTRL, BIT_SPEN, pDrvRxAud->isSpdifOutEnabled);
+    650          }
+    651          
+    652          
+    653          bool_t SiiDrvRxAudioGetNoAcpInt(void)
+    654          {
+    655          //Audio Unmute happens
+    656          	if (pDrvRxAud -> unmuteIntrHappened)
+    657          	{
+    658          		pDrvRxAud -> unmuteIntrHappened = false; //clear status
+    659          		//no New ACP interrupt
+    660          		if(!pDrvRxAud->newAcpIntrHappened)
+    661          		//ACP buffer has type 2 there already
+    662          		{
+    663          			if(AcpTypeGet()>1)
+    664          				return true;
+    665          		}
+    666          	}
+    667          	return false;
+    668          }
+    669          
+    670          
+    671          void SiiDrvRxAudioOnNewAcp(bool_t qOn)
+    672          {
+    673          	if(qOn && (AcpTypeGet()>1))
+    674          	{
+    675          		//disable the auto OE
+    676          		SiiRegModify(REG_AUDIOAEC_CTRL, BIT_AAC_OE, CLEAR_BITS);
+    677          		//turn off digital output
+    678          		SiiRegBitsSet(REG_AUDIOAUD_CTRL, BIT_SPEN, false);
+    679          		// Enable SDx channels while in manual mode
+    680          		SiiRegModify(REG_AUDIO_I2S_CTRL2, MSK_MULTI_CHANNELS, (SiiDrvRxAudioLayoutGet() == SII_AUD_MULTI_CHANNEL) ? MSK_MULTI_CHANNELS : MSK_TWO_CHANNELS );
+    681          	    SiiRegModify( REG_AUDIO_I2S_CTRL2, BIT_MCLKEN, BIT_MCLKEN);  //keeps MCLK SW settings.
+    682          	}
+    683          	else
+    684          	{
+    685          		SiiRegModify(REG_AUDIOAEC_CTRL, BIT_AAC_OE, SET_BITS);
+    686          		//turn on digital output if it was enabled by configuration
+    687                  SiiRegBitsSet(REG_AUDIOAUD_CTRL, BIT_SPEN, pDrvRxAud->isSpdifOutEnabled);
+    688          	}
+    689          
+    690          }
+    691          
+    692          void SiiDrvRxAudioNoAcpPacketcheckStart(bool_t qOn)
+    693          {
+    694          
+    695          #if (SI_AUDIO_NO_ACP_WORKAROUND == true)
+    696          	if(qOn) //start
+    697          	{
+    698          		SiiRegModify(REG_CLR_PACKET_BUFFER, BIT_VSI_ID_CHK_EN, CLEAR_BITS);
+    699          		SiiRegWrite(REG_VSIF_CAPTURE_HEADER, 0x04); //for ACP use
+    700          	}
+    701          	else
+    702          	{
+    703          		SiiRegWrite(REG_VSIF_CAPTURE_HEADER, 0x81); //restore
+    704          		SiiRegModify(REG_CLR_PACKET_BUFFER, BIT_VSI_ID_CHK_EN, SET_BITS);
+    705          	}
+    706          #endif //(SI_AUDIO_NO_ACP_WORKAROUND == true)
+    707          
+    708          }
+    709          
+    710          bool_t SiiDrvRxAudioNoAcpPacketcheckConfirm(void)
+    711          {
+    712          	//if no ACP shows up, return true,
+    713              bool_t result = false;
+    714          
+    715          #if (SI_AUDIO_NO_ACP_WORKAROUND == ENABLE)
+    716              uint8_t reg;
+    717          
+    718              reg = SiiRegRead(REG_PORT_INFOFRAME_SELECT);
+    719              //set the pipe to read
+    720              SiiRegModify( REG_PORT_INFOFRAME_SELECT,
+    721              		((pDrvRxAud->instanceIndex == 0) ? CLEAR_BITS : BIT_RD_CS_PIPE_SEL)
+    722              		|BIT_CS_PORT_PIPE_SEL, SET_BITS );
+    723              // Read requested IF data
+    724              result = SiiRegRead( REG_RP_VISF_CONTENT_HEADER) != 0x04;
+    725              // Recover port selection settings
+    726              SiiRegWrite(REG_PORT_INFOFRAME_SELECT, reg);
+    727          #else
+    728              // Read ACP data
+    729              result = (SiiRegRead( REG_SP_ACP_HEADER) != 0x04);
+    730          
+    731          #endif //#if (SI_AUDIO_NO_ACP_WORKAROUND == true)
+    732          
+    733          	return (result);
+    734          }
+    735          
+    736          void SiiDrvRxAudioVsifCheckedByOthers(void)
+    737          {
+    738          	pDrvRxAud->vsifCheckedByOthers = true;
+    739          }
+    740          
+    741          bool_t SiiDrvRxAudioAcpCheckDisturbance(void)
+    742          {
+    743          	bool_t result =	pDrvRxAud->vsifCheckedByOthers;
+    744          	pDrvRxAud->vsifCheckedByOthers = false;
+    745          
+    746          	return result;
+    747          
+    748          }
+    749          
+    750          void SiiDrvRxAudioChstGet(uint8_t *pChst)
+    751          {
+    752          
+    753          	*pChst++ = SiiRegRead(REG_CHST1_P0);
+    754          	*pChst++ = SiiRegRead(REG_CHST2_P0);
+    755          	*pChst++ = SiiRegRead(REG_CHST3_P0);
+    756          	*pChst++ = SiiRegRead(REG_CHST4_P0);
+    757          	*pChst = SiiRegRead(REG_CHST5_P0);
+    758          
+    759          }
+    760          
+    761          void SiiDrvRxAudioEnableAAC(void)
+    762          {
+    763          	SiiRegModify( REG_AUDIOAEC_CTRL,  BIT_AAC_ALL, SET_BITS);
+    764          }
+    765          void SiiDrvRxAudioDisableAAC(void)
+    766          {
+    767          	SiiRegModify( REG_AUDIOAEC_CTRL,  BIT_AAC_ALL, CLEAR_BITS);
+    768          }
+    769          void SiiDrvRxAudioEnableCHSTINT(void)
+    770          {
+    771          	SiiRegModify( REG_AUDIO_INTR11_MASK + 2, BIT_FSCHG, SET_BITS);
+    772          }
+    773          void SiiDrvRxAudioDisableCHSTINT(void)
+    774          {
+    775          	SiiRegModify( REG_AUDIO_INTR11_MASK + 2, BIT_FSCHG, CLEAR_BITS);
+    776          }
+    777          
+    778          void SiiDrvRxAudioSetMclk(uint8_t audMode, uint8_t audFs){
+    779          	uint8_t cMclksel, bAcrInit;
+    780          	bAcrInit = 0;
+    781          	cMclksel = SiiRegRead(REG_AUDIOAAC_MCLK_SEL);
+    782          
+    783          	if(audMode == SII_AUD_DSD_MODE){
+    784          		if( (cMclksel & (MSK_MCLK << MSK_MCLK_DSD_SHIFT)) != (SII_AUD_MCLK_512 << MSK_MCLK_DSD_SHIFT) ){
+    785          			SiiRegModify( REG_AUDIOAAC_MCLK_SEL, MSK_MCLK << MSK_MCLK_DSD_SHIFT, SII_AUD_MCLK_512 << MSK_MCLK_DSD_SHIFT);
+    786          			bAcrInit = 1;
+    787          		}
+    788          		SiiRegModify( REG_AUDIOFREQ_SVAL, MSK_SWMCLK, VAL_SWMCLK_512);	// ACR Audio Frequency Register
+    789          	}
+    790          	else if(audMode == SII_AUD_HBRA_MODE)
+    791          	{
+    792          		switch(audFs){
+    793          		case SII_AUD_CHST4_FS_176:
+    794          		case SII_AUD_CHST4_FS_192:
+    795          			if( (cMclksel & (MSK_MCLK << MSK_MCLK_HBRA_SHIFT)) != (SII_AUD_MCLK_128 << MSK_MCLK_HBRA_SHIFT) ){
+    796          				SiiRegModify( REG_AUDIOAAC_MCLK_SEL, MSK_MCLK << MSK_MCLK_HBRA_SHIFT, SII_AUD_MCLK_128 << MSK_MCLK_HBRA_SHIFT);
+    797          				bAcrInit = 1;
+    798          			}
+    799          			SiiRegModify( REG_AUDIOFREQ_SVAL, MSK_SWMCLK, VAL_SWMCLK_128);	// ACR Audio Frequency Register
+    800          			break;
+    801          		case SII_AUD_CHST4_FS_88:
+    802          		case SII_AUD_CHST4_FS_96:
+    803          			if( (cMclksel & (MSK_MCLK << MSK_MCLK_HBRA_SHIFT)) != (SII_AUD_MCLK_256 << MSK_MCLK_HBRA_SHIFT) ){
+    804          				SiiRegModify( REG_AUDIOAAC_MCLK_SEL, MSK_MCLK << MSK_MCLK_HBRA_SHIFT, SII_AUD_MCLK_256 << MSK_MCLK_HBRA_SHIFT);
+    805          				bAcrInit = 1;
+    806          			}
+    807          			SiiRegModify( REG_AUDIOFREQ_SVAL, MSK_SWMCLK, VAL_SWMCLK_256);	// ACR Audio Frequency Register
+    808          			break;
+    809          		case SII_AUD_CHST4_FS_32:
+    810          		case SII_AUD_CHST4_FS_44:
+    811          		case SII_AUD_CHST4_FS_48:
+    812          		default:
+    813          			if( (cMclksel & (MSK_MCLK << MSK_MCLK_HBRA_SHIFT)) != (SII_AUD_MCLK_512 << MSK_MCLK_HBRA_SHIFT) ){
+    814          				SiiRegModify( REG_AUDIOAAC_MCLK_SEL, MSK_MCLK << MSK_MCLK_HBRA_SHIFT, SII_AUD_MCLK_512 << MSK_MCLK_HBRA_SHIFT);
+    815          				bAcrInit = 1;
+    816          			}
+    817          			SiiRegModify( REG_AUDIOFREQ_SVAL, MSK_SWMCLK, VAL_SWMCLK_512);	// ACR Audio Frequency Register
+    818          			break;
+    819          		}
+    820          	}
+    821          	else
+    822          	{	/* SII_AUD_PCM_MODE */
+    823          		switch(audFs){
+    824          		case SII_AUD_CHST4_FS_176:
+    825          		case SII_AUD_CHST4_FS_192:
+    826          			if( (cMclksel & (MSK_MCLK << MSK_MCLK_PCM_SHIFT)) != (SII_AUD_MCLK_128 << MSK_MCLK_PCM_SHIFT) ){
+    827          				SiiRegModify( REG_AUDIOAAC_MCLK_SEL, MSK_MCLK << MSK_MCLK_PCM_SHIFT, SII_AUD_MCLK_128 << MSK_MCLK_PCM_SHIFT);
+    828          				bAcrInit = 1;
+    829          			}
+    830          			SiiRegModify( REG_AUDIOFREQ_SVAL, MSK_SWMCLK, VAL_SWMCLK_128);	// ACR Audio Frequency Register
+    831          			break;
+    832          		case SII_AUD_CHST4_FS_88:
+    833          		case SII_AUD_CHST4_FS_96:
+    834          			if( (cMclksel & (MSK_MCLK << MSK_MCLK_PCM_SHIFT)) != (SII_AUD_MCLK_256 << MSK_MCLK_PCM_SHIFT) ){
+    835          				SiiRegModify( REG_AUDIOAAC_MCLK_SEL, MSK_MCLK << MSK_MCLK_PCM_SHIFT, SII_AUD_MCLK_256 << MSK_MCLK_PCM_SHIFT);
+    836          				bAcrInit = 1;
+    837          			}
+    838          			SiiRegModify( REG_AUDIOFREQ_SVAL, MSK_SWMCLK, VAL_SWMCLK_256);	// ACR Audio Frequency Register
+    839          			break;
+    840          		case SII_AUD_CHST4_FS_32:
+    841          		case SII_AUD_CHST4_FS_44:
+    842          		case SII_AUD_CHST4_FS_48:
+    843          		default:
+    844          			if( (cMclksel & (MSK_MCLK << MSK_MCLK_PCM_SHIFT)) != (SII_AUD_MCLK_512 << MSK_MCLK_PCM_SHIFT) ){
+    845          				SiiRegModify( REG_AUDIOAAC_MCLK_SEL, MSK_MCLK << MSK_MCLK_PCM_SHIFT, SII_AUD_MCLK_512 << MSK_MCLK_PCM_SHIFT);
+    846          				bAcrInit = 1;
+    847          			}
+    848          			SiiRegModify( REG_AUDIOFREQ_SVAL, MSK_SWMCLK, VAL_SWMCLK_512);	// ACR Audio Frequency Register
+    849          			break;
+    850          		}
+    851          	}
+    852          	if( bAcrInit ){ // if MCLK ratio changed...
+    853          		SiiDrvRxAudioReset(BIT_ACRRST);
+    854          	}
+    855          }
+    856          
+    857          void SiiDrvRxAudioInitMclk(void)
+    858          {
+    859          	SiiRegWrite(REG_AUDIOAAC_MCLK_SEL,0xc0 | (SII_AUD_MCLK_512 << MSK_MCLK_DSD_SHIFT));
+    860          	SiiRegModify( REG_AUDIOFREQ_SVAL, MSK_SWMCLK, VAL_SWMCLK_128);	// ACR Audio Frequency Register
+    861          
+    862          	SiiDrvRxAudioReset(BIT_ACRRST);
+    863          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       16  AcpTypeGet
+             16 -> SiiRegModify
+             16 -> SiiRegRead
+             16 -> SiiRegWrite
+        0  SiiDrvRxAudioACRControl
+              0 -> SiiRegModify
+        0  SiiDrvRxAudioAcpCheckDisturbance
+       32  SiiDrvRxAudioCheckFsAndFix
+             32 -> SiiDrvRxAudioModeGet
+              0 -> SiiDrvRxAudioSampleRateGet
+             32 -> SiiDrvSwitchTmdsClockGet
+             32 -> SiiRegModify
+             32 -> SiiRegRead
+        8  SiiDrvRxAudioChstGet
+              8 -> SiiRegRead
+        0  SiiDrvRxAudioClearIntStatus
+              0 -> SiiRegWriteBlock
+        0  SiiDrvRxAudioDisableAAC
+              0 -> SiiRegModify
+        0  SiiDrvRxAudioDisableCHSTINT
+              0 -> SiiRegModify
+        0  SiiDrvRxAudioEnableAAC
+              0 -> SiiRegModify
+        0  SiiDrvRxAudioEnableCHSTINT
+              0 -> SiiRegModify
+        0  SiiDrvRxAudioFifoRedirSet
+              0 -> SiiRegModify
+        0  SiiDrvRxAudioGetIntStatus
+              0 -> SiiRegReadBlock
+        8  SiiDrvRxAudioGetMclk
+              8 -> SiiRegRead
+       16  SiiDrvRxAudioGetNewAcpInt
+             16 -> SiiRegRead
+             16 -> SiiRegWrite
+        8  SiiDrvRxAudioGetNoAcpInt
+              8 -> AcpTypeGet
+        8  SiiDrvRxAudioHdmiModeGet
+              8 -> SiiRegRead
+       16  SiiDrvRxAudioInit
+             16 -> SiiDrvRxAudioInitMclk
+             16 -> SiiRegModify
+             16 -> SiiRegWrite
+             16 -> SiiRegWriteBlock
+             16 -> __aeabi_memclr
+             16 -> __aeabi_memclr4
+        8  SiiDrvRxAudioInitMclk
+              0 -> SiiDrvRxAudioReset
+              8 -> SiiRegModify
+              8 -> SiiRegWrite
+        0  SiiDrvRxAudioInstanceGet
+        8  SiiDrvRxAudioInstanceSet
+              8 -> SiiRegInstanceSet
+       16  SiiDrvRxAudioIntMaskEnable
+             16 -> SiiRegModify
+             16 -> SiiRegWriteBlock
+        0  SiiDrvRxAudioInternalMute
+              0 -> SiiDrvRxAudioCheckFsAndFix
+        0  SiiDrvRxAudioInterruptClearAssert
+        0  SiiDrvRxAudioIsInterruptAssert
+        8  SiiDrvRxAudioLayoutGet
+              8 -> SiiRegRead
+        8  SiiDrvRxAudioModeGet
+              8 -> SiiRegRead
+        0  SiiDrvRxAudioMute
+              0 -> SiiRegModify
+        8  SiiDrvRxAudioNoAcpPacketcheckConfirm
+              8 -> SiiRegRead
+        0  SiiDrvRxAudioNoAcpPacketcheckStart
+       16  SiiDrvRxAudioOnNewAcp
+             16 -> AcpTypeGet
+             16 -> SiiDrvRxAudioLayoutGet
+              0 -> SiiRegBitsSet
+             16 -> SiiRegBitsSet
+              0 -> SiiRegModify
+             16 -> SiiRegModify
+        0  SiiDrvRxAudioOnNoAcp
+              0 -> SiiRegBitsSet
+       16  SiiDrvRxAudioPllConfig
+              0 -> SiiRegModify
+             16 -> SiiRegModify
+        0  SiiDrvRxAudioProcessInterrupts
+        8  SiiDrvRxAudioReset
+              0 -> SiiRegModify
+              8 -> SiiRegModify
+        8  SiiDrvRxAudioSampleRateGet
+              8 -> SiiRegRead
+       24  SiiDrvRxAudioSetMclk
+              0 -> SiiDrvRxAudioReset
+             24 -> SiiRegModify
+             24 -> SiiRegRead
+        0  SiiDrvRxAudioSoftMute
+              0 -> SiiRegModify
+        8  SiiDrvRxAudioStandby
+              8 -> SiiDrvRxAudioClearIntStatus
+              8 -> SiiDrvRxAudioIntMaskEnable
+              8 -> SiiRegBitsSet
+              8 -> SiiRegWrite
+        0  SiiDrvRxAudioUnmuteReady
+              0 -> SiiRegModify
+        0  SiiDrvRxAudioVsifCheckedByOthers
+        8  SiiDrvRxSpdifOutEnable
+              8 -> SiiRegBitsSet
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ?<Constant {0, 0, 0}>
+       4  ?<Constant {255, 255, 255}>
+       4  ?<Constant {255, 255, 255}>_1
+       4  ??DataTable19
+      10  ?Subroutine0
+      10  ?Subroutine1
+       6  ?Subroutine2
+       4  ?Subroutine3
+       8  ?Subroutine4
+      10  ?Subroutine5
+      56  AcpTypeGet
+      18  SiiDrvRxAudioACRControl
+      12  SiiDrvRxAudioAcpCheckDisturbance
+     250  SiiDrvRxAudioCheckFsAndFix
+      64  SiiDrvRxAudioChstGet
+      12  SiiDrvRxAudioClearIntStatus
+       2  SiiDrvRxAudioDisableAAC
+       2  SiiDrvRxAudioDisableCHSTINT
+       4  SiiDrvRxAudioEnableAAC
+       4  SiiDrvRxAudioEnableCHSTINT
+      18  SiiDrvRxAudioFifoRedirSet
+      12  SiiDrvRxAudioGetIntStatus
+      36  SiiDrvRxAudioGetMclk
+      62  SiiDrvRxAudioGetNewAcpInt
+      36  SiiDrvRxAudioGetNoAcpInt
+      14  SiiDrvRxAudioHdmiModeGet
+     198  SiiDrvRxAudioInit
+      28  SiiDrvRxAudioInitMclk
+       8  SiiDrvRxAudioInstanceGet
+      42  SiiDrvRxAudioInstanceSet
+      82  SiiDrvRxAudioIntMaskEnable
+      14  SiiDrvRxAudioInternalMute
+       6  SiiDrvRxAudioInterruptClearAssert
+       8  SiiDrvRxAudioIsInterruptAssert
+      16  SiiDrvRxAudioLayoutGet
+      26  SiiDrvRxAudioModeGet
+      18  SiiDrvRxAudioMute
+      22  SiiDrvRxAudioNoAcpPacketcheckConfirm
+       2  SiiDrvRxAudioNoAcpPacketcheckStart
+     104  SiiDrvRxAudioOnNewAcp
+      16  SiiDrvRxAudioOnNoAcp
+      60  SiiDrvRxAudioPllConfig
+       4  SiiDrvRxAudioProcessInterrupts
+      32  SiiDrvRxAudioReset
+      66  SiiDrvRxAudioSampleRateGet
+     198  SiiDrvRxAudioSetMclk
+      18  SiiDrvRxAudioSoftMute
+      70  SiiDrvRxAudioStandby
+      16  SiiDrvRxAudioUnmuteReady
+      10  SiiDrvRxAudioVsifCheckedByOthers
+      24  SiiDrvRxSpdifOutEnable
+      80  audio_fs_list
+      16  pDrvRxAud
+          RxAudioIntStatus
+
+ 
+    16 bytes in section .bss
+     4 bytes in section .rodata
+ 1 830 bytes in section .text
+ 
+ 1 830 bytes of CODE  memory
+     4 bytes of CONST memory
+    16 bytes of DATA  memory
+
+Errors: none
+Warnings: 1

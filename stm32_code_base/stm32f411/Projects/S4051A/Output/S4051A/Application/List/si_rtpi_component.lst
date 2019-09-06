@@ -1,0 +1,817 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:23:39 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\rtpi\si_rtpi_ #
+#                    component.c                                              #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\rtpi\si_rtpi_ #
+#                    component.c -D S4051A -D DEBUG -D FREE_RTOS -D           #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_rtpi_component.lst                                 #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_rtpi_component.o                                    #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\component\rtpi\si_rtpi_component.c
+      1          //***************************************************************************/
+      2          //!file     si_rtpi_component.c
+      3          //!brief    Silicon Image RTPI Component.
+      4          //          RTPI component presents the API for interfacing Silicon Image chip
+      5          //          for repeater operations.
+      6          //
+      7          // No part of this work may be reproduced, modified, distributed,
+      8          // transmitted, transcribed, or translated into any language or computer
+      9          // format, in any form or by any means without written permission of
+     10          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+     11          //
+     12          // Copyright 2011-2012, Silicon Image, Inc.  All rights reserved.
+     13          //***************************************************************************
+     14          
+     15          #include "string.h"
+     16          #include "si_rtpi_internal.h"
+     17          #include "si_drv_switch.h"
+     18          #include "si_drv_audio.h"
+     19          #include "si_eeprom.h"
+     20          
+     21          //------------------------------------------------------------------------------
+     22          //  RTPI Component Instance Data
+     23          //------------------------------------------------------------------------------
+     24          
+     25          SiiRtpiInstanceData_t   rtpiInstance[SII_NUM_RTPI];
+     26          SiiRtpiInstanceData_t   *pRtpi = &rtpiInstance[0];
+     27          
+     28          SiiRtpiBusSetup_t       siiTpiInputBusSetupVal;
+     29          SiiRtpiSystemControl_t  siiTpiSystemControlVal;
+     30          
+     31          // RTPI Registers.
+     32          uint8_t rtpiRegs[RTPI_MAX_REGISTERS];   // RTPI Registers.
+     33          uint8_t rtpiWriteBuf[RTPI_CMD_BUFFER_SIZE][2];
+     34          uint8_t rtpiWrPtr = 0;
+     35          uint8_t rtpiRdPtr = 0;
+     36          
+     37          //------------------------------------------------------------------------------
+     38          //  External Data
+     39          //------------------------------------------------------------------------------
+     40          
+     41          extern uint8_t rtpiInitRegs[RP_L__TOTAL_REGS];      // from platform
+     42          extern char *buildVersion;                          // From buildtime.c
+     43          
+     44          //------------------------------------------------------------------------------
+     45          //! @brief      Set the component global data pointer to the requested instance.
+     46          //! @param[in]  instanceIndex
+     47          //! @return     true if legal index, false if index value is illegal.
+     48          //------------------------------------------------------------------------------
+     49          bool_t SiiRtpiInstanceSet ( uint_t instanceIndex )
+     50          {
+     51          
+     52              if ( instanceIndex < SII_NUM_RTPI )
+     53              {
+     54                  pRtpi = &rtpiInstance[instanceIndex];
+     55                  pRtpi->rtpiInstance = instanceIndex;
+     56                  return( true );
+     57              }
+     58              return( false );
+     59          }
+     60          
+     61          //------------------------------------------------------------------------------
+     62          // Description: Return the current instance index.
+     63          // Parameters:  none
+     64          // Returns:     Always 0.
+     65          //------------------------------------------------------------------------------
+     66          
+     67          int_t SiiRtpiInstanceGet ( void )
+     68          {
+     69              return( (int_t)pRtpi->rtpiInstance );
+     70          }
+     71          
+     72          //------------------------------------------------------------------------------
+     73          // Read/Write functions.
+     74          //------------------------------------------------------------------------------
+     75          
+     76          void SiiRpForceWriteByte(uint8_t address, uint8_t d)
+     77          {
+     78              rtpiRegs[address] =  d ;
+     79          }
+     80          //-------------------------------------------------------------------------------------------------
+     81          //! @brief      I2C slave port write. External master is writing to our registers.
+     82          //!             Callback from platform I2C slave port interrupt handler.
+     83          //!             Can also be used internally to update register.
+     84          //!
+     85          //! @param[in]  regAddr     8-bit register address
+     86          //! @param[in]  regData     8-bit data from external I2C master
+     87          //-------------------------------------------------------------------------------------------------
+     88          void SiiPlatformI2cCbSlaveWriteByte( int busIndex, uint8_t regAddr, uint8_t regData )
+     89          {
+     90              if ( regAddr < RP_A__RUNTIME_REGS ) return;
+     91              if ( regAddr >= RP_L__TOTAL_REGS ) return;
+     92          
+     93              // Place register write info into our register write ring buffer
+     94              rtpiWriteBuf[ rtpiWrPtr ][RTPI_CMD_DATA] = regData;
+     95              rtpiWriteBuf[ rtpiWrPtr ][RTPI_CMD_ADDR] = regAddr;
+     96              rtpiWrPtr++;
+     97          
+     98              if ( rtpiWrPtr >= RTPI_CMD_BUFFER_SIZE)
+     99              {
+    100                  rtpiWrPtr = 0;
+    101              }
+    102          
+    103              // If it is an execute command, clear the ready bit right away.
+    104              if(regAddr == RP_A__CMD_CMD)
+    105              {
+    106                  SiiRpForceWriteByte(RP_A__CMD_STATUS, 0);  // Clear ready bit.
+    107              }
+    108          
+    109              // If it is an interrupt register, clear the interrupt right away.
+    110              else if(regAddr == RP_A__INTERRUPT)
+    111              {
+    112              	SiiRtpiClearInt(regData);
+    113              }
+    114              else if(regAddr == RP_A__INTERRUPT2)
+    115              {
+    116                  SiiRtpiClearInt(regData<<8);
+    117              }
+    118          }
+    119          
+    120          //-------------------------------------------------------------------------------------------------
+    121          //! @brief      I2C slave port read. External master is reading from our registers
+    122          //!             Callback from platform I2C slave port interrupt handler.
+    123          //!
+    124          //! @param[in]  regAddr     8-bit register address
+    125          //! @return                 8-bit data for external I2C master
+    126          //-------------------------------------------------------------------------------------------------
+    127          uint8_t SiiPlatformI2cCbSlaveReadByte( int busIndex, uint8_t regAddr )
+    128          {
+    129              uint8_t regValue = 0;
+    130          
+    131              switch ( regAddr )
+    132              {
+    133                  case 0x24:
+    134                      regValue = SiiRtpiCbUpdateSource( 0, 0 );   // Read source value
+    135                      break;
+    136                  case 0x2A:
+    137                      regValue = SiiDrvSwitchStateGet( SiiSwitch_INPUT_PORTS_CONNECT_STATE );
+    138                      break;
+    139          
+    140                  default:
+    141          
+    142                      if ( regAddr < RP_L__TOTAL_REGS )
+    143                      {
+    144                          regValue = rtpiRegs[ regAddr ];
+    145                      }
+    146                      break;
+    147              }
+    148              DEBUG_PRINT( MSG_DBG, "RTPI Read [%02X]: %02X\n", regAddr, regValue );
+    149          
+    150              return( regValue );
+    151          }
+    152          
+    153          void SiiRpWriteBlock(uint8_t address, uint8_t *p_data, uint8_t length)
+    154          {
+    155              int i;
+    156              for( i=address; i<address+length; i++ )
+    157              {
+    158              	SiiRpForceWriteByte( i, *(p_data++) );
+    159              }
+    160          }
+    161          
+    162          void SiiRpReadBlock(uint8_t address, uint8_t *p_data, uint8_t length)
+    163          {
+    164              int i;
+    165              for( i=address; i<address+length; i++ )
+    166              {
+    167                  *(p_data++) = SiiPlatformI2cCbSlaveReadByte(1, i );
+    168              }
+    169          }
+    170          
+    171          void SiiRtpiClearInt( uint16_t val )
+    172          {
+    173              uint8_t rtpiInt;
+    174              rtpiInt = SiiPlatformI2cCbSlaveReadByte(1, RP_A__INTERRUPT );
+    175              rtpiInt &= ~(uint8_t)val;
+    176              SiiRpForceWriteByte( RP_A__INTERRUPT, rtpiInt);
+    177          
+    178              rtpiInt = SiiPlatformI2cCbSlaveReadByte(1, RP_A__INTERRUPT2 );
+    179              rtpiInt &= ~(uint8_t)(val>>8);
+    180              SiiRpForceWriteByte( RP_A__INTERRUPT2, rtpiInt);
+    181          }
+    182          
+    183          void SiiRtpiSetInt( uint16_t val )
+    184          {
+    185              uint8_t rtpiInt;
+    186              rtpiInt = SiiPlatformI2cCbSlaveReadByte(1, RP_A__INTERRUPT );
+    187              rtpiInt |= (uint8_t)val;
+    188              SiiRpForceWriteByte( RP_A__INTERRUPT, rtpiInt);
+    189          
+    190              rtpiInt = SiiPlatformI2cCbSlaveReadByte(1, RP_A__INTERRUPT2 );
+    191              rtpiInt |= (uint8_t)(val>>8);
+    192              SiiRpForceWriteByte( RP_A__INTERRUPT2, rtpiInt);
+    193          
+    194          }
+    195          
+    196          //------------------------------------------------------------------------------
+    197          // Function:    SiiRtpiInitialize
+    198          // Description: Attempts to initialize the RTPI
+    199          // Returns:     TRUE if no problem
+    200          //------------------------------------------------------------------------------
+    201          bool_t SiiRtpiSetInterrupt( uint8_t intRegAddress, uint8_t intRegValue )
+    202          {
+    203              bool_t  success = true;
+    204              uint8_t rtpiInt;
+    205          
+    206              switch ( intRegAddress )
+    207              {
+    208                  case RP_A__CEC_STAT:
+    209                  case RP_A__INTERRUPT:
+    210                  case RP_A__INTERRUPT2:
+    211                      rtpiInt = SiiPlatformI2cCbSlaveReadByte(1, intRegAddress );
+    212                      rtpiInt |= (uint8_t)intRegValue;
+    213                      SiiRpForceWriteByte( intRegAddress, rtpiInt );
+    214                      break;
+    215                  default:
+    216                      success = false;
+    217                      break;
+    218              }
+    219          
+    220              return( success );
+    221          }
+    222          
+    223          void SiiRtpiPort(uint8_t port, uint8_t flag)
+    224          {
+    225          	uint8_t inputSelector = SiiPlatformI2cCbSlaveReadByte(1, RP_A__BOARD_OPTIONS2);
+    226          	inputSelector &= RP_M__BOARD_OPTIONS2__USE_ONBOARD_INPUT_SELECTOR;
+    227          
+    228          	if (inputSelector == 0 && flag == 0)
+    229          	{
+    230          		SiiRpForceWriteByte( RP_A__INPUT_NMB, port);
+    231          	}
+    232          	else if (inputSelector == 1 && flag == 1)
+    233          	{
+    234          		SiiRpForceWriteByte( RP_A__INPUT_NMB, port);
+    235          	}
+    236          }
+    237          
+    238          void SiiRtpiPortConnect(uint8_t pwr5vStatus)
+    239          {
+    240          	uint8_t mask = 0;
+    241          	uint8_t regAValue = SiiDrvSwitchStateGet(SiiSwitch_SELECTED_PORT);
+    242          
+    243          	uint8_t val = 0x00;
+    244          
+    245          	//DEBUG_PRINT( MSG_DBG, " %x %x  \n",  pwr5vStatus, regAValue);
+    246          	TRACE_DEBUG((0, "pwr5Vstatus = %d, regAValue = 0x%X", pwr5vStatus, regAValue ));
+    247          
+    248          	mask = 1 << regAValue;
+    249          
+    250          	if (pwr5vStatus & mask)
+    251          	{
+    252          	    val = (regAValue << 4);
+    253          	}
+    254          	SiiRpForceWriteByte( RP_A__PIPE_STATUS, val);
+    255          
+    256          }
+    257          void SiiRtpiOnAudioStatusChange(uint8_t formatVal)
+    258          {
+    259              uint8_t aIfData[5];
+    260              uint8_t *pIfData = &aIfData[0];
+    261          
+    262          	SiiRtpiSetInt(RP_M__INTERRUPT__AUDIO_STATUS_CHANGED);
+    263          	SiiRpForceWriteByte(RP_A__RX_AUDIO_FORMAT, formatVal);
+    264          	SiiDrvRxAudioChstGet(pIfData);
+    265          	SiiRpWriteBlock(RP_A__RX_I2S_CHST1, pIfData, 5);
+    266          }
+    267          
+    268          void SiiRtpiOnAudioInfoFrameChange( void )
+    269          {
+    270              uint8_t aIfData[31];
+    271              uint8_t *pIfData = &aIfData[0];
+    272              uint8_t len;
+    273          
+    274          	SiiRtpiSetInt(RP_M__INTERRUPT__AUDIO_FORMAT);
+    275              SiiDrvSwitchInfoFrameGet(true, IF_AIF, pIfData, &len);
+    276          
+    277              SiiRpForceWriteByte(RP_A__RX_AUDIO_INFO_FRAME1, pIfData[4]);
+    278              SiiRpForceWriteByte(RP_A__RX_AUDIO_INFO_FRAME4, pIfData[7]);
+    279              SiiRpForceWriteByte(RP_A__RX_AUDIO_INFO_FRAME5, pIfData[8]);
+    280          }
+    281          
+    282          void SiiRtpiOnAviInfoFrameChange( void )
+    283          {
+    284              uint8_t aIfData[31];
+    285              uint8_t *pIfData = &aIfData[0];
+    286              uint8_t len;
+    287          
+    288          	SiiRtpiSetInt(RP_M__INTERRUPT__AVI_RECEIVED);
+    289              SiiDrvSwitchInfoFrameGet(true, IF_AVI, pIfData, &len);
+    290          	SiiRpWriteBlock(RP_A__RX_AVI1, pIfData + 4, 5);
+    291          }
+    292          
+    293          void SiiRtpiOnPwrStateChange( bool_t qOn)
+    294          {
+    295          	SiiRpForceWriteByte(RP_A__RX_OUTPUT, RP_M__RX_OUTPUT_PWR & qOn);
+    296          }
+    297          
+    298          
+    299          void SiiRtpiLoadEepromInit( void )
+    300          {
+    301              //uint8_t buf[5];
+    302              int i;
+    303              //SiiPlatformEepromReadBlock(0, buf, 5);
+    304          
+    305              for( i=5; i<0x0F; i++ )
+    306              {
+    307                  SiiRpForceWriteByte( i, SiiPlatformEepromReadByte( i ) );
+    308              }
+    309          }
+    310          
+    311          
+    312          //------------------------------------------------------------------------------
+    313          // Function:    SiiRtpiInitialize
+    314          // Description: Attempts to initialize the RTPI
+    315          // Returns:     TRUE if no problem
+    316          //------------------------------------------------------------------------------
+    317          
+    318          bool_t SiiRtpiInitialize ( uint8_t instance )
+    319          {
+    320              int i;
+    321          
+    322              // Set instance value.
+    323              SiiRtpiInstanceSet(instance);
+    324          
+    325              for (i=0; i < RTPI_CMD_BUFFER_SIZE; i++)
+    326              {
+    327                  rtpiWriteBuf[i][RTPI_CMD_ADDR] = 0;
+    328                  rtpiWriteBuf[i][RTPI_CMD_DATA] = 0;
+    329              }
+    330          
+    331              //DEBUG_PRINT(MSG_ALWAYS,"SiiRtpiInitialize %x %x\n", pRtpi, pRtpi->rtpi_regs[10] );
+    332          
+    333              // Clear instance data
+    334              memset( pRtpi, 0, sizeof( SiiRtpiInstanceData_t ));
+    335          
+    336              // Set configuration registers to their default state
+    337              memcpy( &rtpiRegs[0], &rtpiInitRegs[0], RP_L__TOTAL_REGS);
+    338          
+    339              SiiRtpiLoadEepromInit();
+    340          
+    341              // FW version (x.xx.xx)
+    342          
+    343              char *strVersion = "x.xx.xx";
+    344          
+    345              int decimal = 0;
+    346              if (strcmp( buildVersion, strVersion ) != 0 )
+    347              {
+    348                  decimal = (buildVersion[0] - 0x30);
+    349                  decimal = (decimal * 10) + (buildVersion[2] - 0x30);
+    350                  decimal = (decimal * 10) + (buildVersion[3] - 0x30);
+    351                  decimal = (decimal * 10) + (buildVersion[5] - 0x30);
+    352                  decimal = (decimal * 10) + (buildVersion[6] - 0x30);
+    353              }
+    354              rtpiRegs[2] = decimal & 0xFF;
+    355              rtpiRegs[3] = (decimal >> 8) & 0xFF;
+    356          
+    357              return( true );
+    358          }
+    359          
+    360          //------------------------------------------------------------------------------
+    361          //! @brief      Process updates to RTPI registers by external devices/programs.
+    362          //------------------------------------------------------------------------------
+    363          void SiiRtpiProcessRtpi( void )
+    364          {
+    365              uint8_t val, offset;
+    366          
+    367              if (rtpiRdPtr == rtpiWrPtr) return;
+    368          
+    369              while (rtpiWriteBuf[rtpiRdPtr][RTPI_CMD_ADDR] != 0)
+    370              {
+    371                  offset = rtpiWriteBuf[rtpiRdPtr][RTPI_CMD_ADDR];
+    372                  val = rtpiWriteBuf[rtpiRdPtr][RTPI_CMD_DATA];
+    373          
+    374          //#if DEBUG_PRINT == 1
+    375                  if (pRtpi->debugPrintMode == 0)
+    376                  {
+    377                      DEBUG_PRINT( MSG_DBG, "SiiRtpiProcessRtpi: [%02X]: %02X(in) ", offset, val);
+    378                  }
+    379          //#endif // DEBUG_PRINT
+    380          
+    381                  switch( offset )
+    382                  {
+    383                      case 0x18: val = RtpiRegs0x18( val ); break;
+    384          
+    385                      case 0x1C: val = RtpiRegs0x1C( val ); break;
+    386          
+    387                      case 0x20: val = RtpiRegs0x20( val ); break;
+    388                      case 0x21: val = RtpiRegs0x21( val ); break;
+    389          
+    390                      case 0x23: val = RtpiRegs0x23( val ); break;
+    391                      case 0x24: val = RtpiRegs0x24( val ); break;
+    392          
+    393                      case 0x28: val = RtpiRegs0x28( val ); break;
+    394          
+    395                      case 0x2B: val = RtpiRegs0x2B( val ); break;
+    396          
+    397                      case 0x2C: val = RtpiRegs0x2C( val ); break;
+    398                      case 0x2D: val = RtpiRegs0x2D( val ); break;
+    399          
+    400                      case 0x30: val = RtpiRegs0x30( val ); break;
+    401          
+    402                      case 0x33: val = RtpiRegs0x33( val ); break;
+    403                      case 0x34: val = RtpiRegs0x34( val ); break;
+    404                      case 0x35: val = RtpiRegs0x35( val ); break;
+    405                      case 0x36: val = RtpiRegs0x36( val ); break;
+    406                      case 0x37: val = RtpiRegs0x37( val ); break;
+    407                      case 0x38: val = RtpiRegs0x38( val ); break;
+    408          
+    409                      case 0x6A: val = RtpiRegs0x6A( val ); break;
+    410                      case 0x6B: val = RtpiRegs0x6B( val ); break;
+    411                      case 0x6C: val = RtpiRegs0x6C( val ); break;
+    412                      case 0x6D: val = RtpiRegs0x6D( val ); break;
+    413                      case 0x6E: val = RtpiRegs0x6E( val ); break;
+    414                      case 0x6F: val = RtpiRegs0x6F( val ); break;
+    415          
+    416                      default:   val = RtpiRegsDummy( val); break;
+    417                  }
+    418          
+    419          //#if DEBUG_PRINT == 1
+    420                  if (pRtpi->debugPrintMode == 0)
+    421                  {
+    422                      DEBUG_PRINT( MSG_DBG, ": %02X(out)\n",  val);
+    423                  }
+    424          //#endif // DEBUG_PRINT
+    425          
+    426                  rtpiRegs[offset] = val;
+    427          
+    428                  rtpiWriteBuf[rtpiRdPtr][RTPI_CMD_ADDR] = 0;
+    429                  rtpiWriteBuf[rtpiRdPtr][RTPI_CMD_DATA] = 0;
+    430                  rtpiRdPtr++;
+    431                  if (rtpiRdPtr >= RTPI_CMD_BUFFER_SIZE)
+    432                  {
+    433                      rtpiRdPtr = 0;
+    434                  }
+    435                  if (rtpiRdPtr >= rtpiWrPtr)
+    436                  {
+    437                      rtpiRdPtr = rtpiWrPtr;
+    438                  break;
+    439                  }
+    440              }
+    441          }
+    442          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        0  SiiPlatformI2cCbSlaveReadByte
+              0 -> SiiDrvSwitchStateGet
+              0 -> SiiRtpiCbUpdateSource
+        8  SiiPlatformI2cCbSlaveWriteByte
+              0 -> SiiRtpiClearInt
+        0  SiiRpForceWriteByte
+       24  SiiRpReadBlock
+             24 -> SiiPlatformI2cCbSlaveReadByte
+       16  SiiRpWriteBlock
+       16  SiiRtpiClearInt
+             16 -> SiiPlatformI2cCbSlaveReadByte
+       16  SiiRtpiInitialize
+             16 -> SiiRtpiInstanceSet
+             16 -> SiiRtpiLoadEepromInit
+             16 -> __aeabi_memclr
+             16 -> __aeabi_memcpy
+             16 -> strcmp
+        0  SiiRtpiInstanceGet
+        0  SiiRtpiInstanceSet
+       16  SiiRtpiLoadEepromInit
+             16 -> SiiPlatformEepromReadByte
+       40  SiiRtpiOnAudioInfoFrameChange
+             40 -> SiiDrvSwitchInfoFrameGet
+             40 -> SiiRtpiSetInt
+       16  SiiRtpiOnAudioStatusChange
+             16 -> SiiDrvRxAudioChstGet
+             16 -> SiiRpWriteBlock
+             16 -> SiiRtpiSetInt
+       40  SiiRtpiOnAviInfoFrameChange
+             40 -> SiiDrvSwitchInfoFrameGet
+             40 -> SiiRpWriteBlock
+             40 -> SiiRtpiSetInt
+        0  SiiRtpiOnPwrStateChange
+       16  SiiRtpiPort
+             16 -> SiiPlatformI2cCbSlaveReadByte
+       16  SiiRtpiPortConnect
+             16 -> Debug_printDebug
+             16 -> SiiDrvSwitchStateGet
+       16  SiiRtpiProcessRtpi
+             16 -> RtpiRegs0x18
+             16 -> RtpiRegs0x1C
+             16 -> RtpiRegs0x20
+             16 -> RtpiRegs0x21
+             16 -> RtpiRegs0x23
+             16 -> RtpiRegs0x24
+             16 -> RtpiRegs0x28
+             16 -> RtpiRegs0x2B
+             16 -> RtpiRegs0x2C
+             16 -> RtpiRegs0x2D
+             16 -> RtpiRegs0x30
+             16 -> RtpiRegs0x33
+             16 -> RtpiRegs0x34
+             16 -> RtpiRegs0x35
+             16 -> RtpiRegs0x36
+             16 -> RtpiRegs0x37
+             16 -> RtpiRegs0x38
+             16 -> RtpiRegs0x6A
+             16 -> RtpiRegs0x6B
+             16 -> RtpiRegs0x6C
+             16 -> RtpiRegs0x6D
+             16 -> RtpiRegs0x6E
+             16 -> RtpiRegs0x6F
+             16 -> RtpiRegsDummy
+       16  SiiRtpiSetInt
+             16 -> SiiPlatformI2cCbSlaveReadByte
+       16  SiiRtpiSetInterrupt
+             16 -> SiiPlatformI2cCbSlaveReadByte
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      36  ?<Constant "pwr5Vstatus = %d, reg...">
+       8  ?<Constant "x.xx.xx">
+       4  ??DataTable16
+       4  ??DataTable16_1
+       4  ??DataTable16_2
+       4  ??DataTable16_3
+       4  ??DataTable16_4
+       4  ??DataTable16_5
+       4  ??Subroutine2_0
+       6  ?Subroutine0
+       6  ?Subroutine1
+      36  SiiPlatformI2cCbSlaveReadByte
+      82  SiiPlatformI2cCbSlaveWriteByte
+       8  SiiRpForceWriteByte
+      34  SiiRpReadBlock
+      28  SiiRpWriteBlock
+      24  SiiRtpiClearInt
+     110  SiiRtpiInitialize
+      10  SiiRtpiInstanceGet
+      20  SiiRtpiInstanceSet
+      24  SiiRtpiLoadEepromInit
+      52  SiiRtpiOnAudioInfoFrameChange
+      34  SiiRtpiOnAudioStatusChange
+      36  SiiRtpiOnAviInfoFrameChange
+      12  SiiRtpiOnPwrStateChange
+      32  SiiRtpiPort
+      46  SiiRtpiPortConnect
+     308  SiiRtpiProcessRtpi
+      22  SiiRtpiSetInt
+      34  SiiRtpiSetInterrupt
+      72  rtpiInstance
+          rtpiWriteBuf
+          pRtpi
+     256  rtpiRegs
+       2  rtpiWrPtr
+          rtpiRdPtr
+       4  siiTpiInputBusSetupVal
+       8  siiTpiSystemControlVal
+
+ 
+   270 bytes in section .bss
+    72 bytes in section .data
+ 1 036 bytes in section .text
+ 
+ 1 036 bytes of CODE memory
+   342 bytes of DATA memory
+
+Errors: none
+Warnings: 1

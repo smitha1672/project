@@ -1,0 +1,779 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:11 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\nvram_sram_drv\s #
+#                    i_drv_nvram_sram.c                                       #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\nvram_sram_drv\s #
+#                    i_drv_nvram_sram.c -D S4051A -D DEBUG -D FREE_RTOS -D    #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_drv_nvram_sram.lst                                 #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_drv_nvram_sram.o                                    #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\driver\nvram_sram_drv\si_drv_nvram_sram.c
+      1          //***************************************************************************
+      2          //!file     si_drv_nvram_sram.c
+      3          //!brief    Silicon Image NVRAM and SRAM driver.  Contains functions for
+      4          //          reading and writing Silicon Image device NVRAM and port SRAMS
+      5          //          as well as boot data.
+      6          //
+      7          // No part of this work may be reproduced, modified, distributed,
+      8          // transmitted, transcribed, or translated into any language or computer
+      9          // format, in any form or by any means without written permission of
+     10          // Silicon Image, Inc., 1060 East Arques Avenue, Sunnyvale, California 94085
+     11          //
+     12          // Copyright 2002-2010, Silicon Image, Inc.  All rights reserved.
+     13          //***************************************************************************/
+     14          
+     15          #include "string.h"         // For memcpy
+     16          #include "si_osal_timer.h"
+     17          #include "si_common.h"
+     18          #include "si_drv_edid_rx_config.h"
+     19          #include "si_drv_nvram_sram.h"
+     20          #include "si_drv_edid_rx_internal.h"
+     21          #include "si_cra.h"
+     22          #include "si_device_config.h"
+     23          #include "si_regs_rxedid953x.h"
+     24          #include "si_regs_pp953x.h"
+     25          
+     26          //------------------------------------------------------------------------------
+     27          //  Module Data
+     28          //! \addtogroup si_drv_nvram_sram
+     29          //! @{
+     30          //------------------------------------------------------------------------------
+     31          NvramDrvInstanceData_t nvramDrvData;
+     32          NvramDrvInstanceData_t *pDrvNvram = &nvramDrvData;
+     33          
+     34          
+     35          //-------------------------------------------------------------------------------------------------
+     36          //! @brief      Execute the passed NVRAM command.  Does not wait for command to complete.
+     37          //!
+     38          //! @param[in]  command - NVRAM command
+     39          //-------------------------------------------------------------------------------------------------
+     40          static bool_t SendNvramCommand ( uint8_t command, bool_t isSynchronous )
+     41          {
+     42              SiiTimer_t  programTimer;
+     43              uint8_t     test;
+     44          
+     45              // Enable Replacing of BSM registers with alternate values
+     46          //    SiiRegWrite( REG_NVM_BSM_REPLACE, 0x01 );
+     47          //
+     48          //    SiiRegBitsSet( REG_SYS_RESET_2, BIT_NVM_SRST, true );      // NVM Soft Reset
+     49          //    SiiRegBitsSet( REG_SYS_RESET_2, BIT_NVM_SRST, false );     // Release NVM soft reset
+     50          
+     51              SiiRegWrite( REG_NVM_COMMAND, command );    // Start the NVRAM program operation
+     52              if ( isSynchronous )
+     53              {
+     54                  SiiOsTimerSet( &programTimer, 4000 );        // Set 4 second timeout
+     55                  for ( ;; )
+     56                  {
+     57                      test = SiiRegRead( REG_NVM_COMMAND_DONE );
+     58                      if ( test & BIT_NVM_COMMAND_DONE )
+     59                          break;
+     60                      if ( SiiOsTimerExpired( programTimer ))
+     61                      {
+     62                          return( false );
+     63                      }
+     64                  }
+     65              }
+     66          
+     67              return( true );
+     68          }
+     69          
+     70          //-------------------------------------------------------------------------------------------------
+     71          //! @brief      Returns the status of the last NVRAM command initiated.
+     72          //!
+     73          //! @returns    true - No command is in process
+     74          //-------------------------------------------------------------------------------------------------
+     75          bool_t SiiDrvEdidRxIsNvramIdle ( void )
+     76          {
+     77          
+     78              return(( SiiRegRead( REG_NVM_COMMAND_DONE ) & BIT_NVM_COMMAND_DONE ) == BIT_NVM_COMMAND_DONE );
+     79          }
+     80          
+     81          //-------------------------------------------------------------------------------------------------
+     82          //! @brief      Returns the NVRAM BOOT DONE status.
+     83          //! @retval     - true: successful.
+     84          //! @retval     - false: failure
+     85          //-------------------------------------------------------------------------------------------------
+     86          bool_t SiiDrvEdidRxIsBootComplete ( bool_t isSynchronous )
+     87          {
+     88              SiiTimer_t  bootTimer;
+     89              uint8_t     test;
+     90          
+     91              pDrvNvram->lastResultCode = SII_DRV_NVRAM_SUCCESS;
+     92          
+     93              test = SiiRegRead( REG_BSM_STAT );
+     94              if ( isSynchronous )
+     95              {
+     96                  /// Wait for boot loading to be done.
+     97                  SiiOsTimerSet( &bootTimer, 4000 );  // Wait up to 4 seconds
+     98                  while (( test & BIT_BOOT_DONE ) == 0 )
+     99                  {
+    100                      if (( test & BIT_BOOT_ERROR ) || SiiOsTimerExpired( bootTimer ))
+    101                      {
+    102                          pDrvNvram->lastResultCode = SII_DRV_NVRAM_ERR_FAIL_BOOT;
+    103                          break;
+    104                      }
+    105                      test = SiiRegRead( REG_BSM_STAT );
+    106                  }
+    107              }
+    108          
+    109              return( pDrvNvram->lastResultCode == SII_DRV_NVRAM_SUCCESS );
+    110          }
+    111          
+    112          //-------------------------------------------------------------------------------------------------
+    113          //! @brief      Read data from the requested SRAM.
+    114          //  Parameters:
+    115          //!
+    116          //! @retval     - true: successful.
+    117          //! @retval     - false: failure
+    118          //-------------------------------------------------------------------------------------------------
+    119          
+    120          bool_t SiiDrvNvramSramRead ( SiiSramType_t sramType, uint8_t *pDest, int_t offset, int_t length )
+    121          {
+    122              uint8_t ramSelect = 0;
+    123          
+    124              pDrvNvram->lastResultCode = SII_DRV_NVRAM_SUCCESS;
+    125              switch ( sramType )
+    126              {
+    127                  case SRAM_P0:
+    128                  case SRAM_P1:
+    129                  case SRAM_P2:
+    130                  case SRAM_P3:
+    131                  case SRAM_P4:
+    132                  case SRAM_P5:
+    133                  case SRAM_VGA:
+    134                      ramSelect = (uint8_t)sramType;
+    135                      break;
+    136                  case SRAM_BOOT:
+    137                      ramSelect = BIT_SEL_DEVBOOT;
+    138                      break;
+    139          
+    140                  default:
+    141                      pDrvNvram->lastResultCode = SII_DRV_NVRAM_ERR_INVALID_PARAMETER;
+    142                      break;
+    143              }
+    144          
+    145              if ( pDrvNvram->lastResultCode == SII_DRV_NVRAM_SUCCESS )
+    146              {
+    147                  // Point to offset into selected port SRAM.
+    148                  SiiRegModify( REG_EDID_FIFO_SEL, MSK_SEL_EDID_FIFO | BIT_SEL_DEVBOOT, ramSelect );
+    149                  SiiRegWrite( REG_EDID_FIFO_ADDR, offset );
+    150          
+    151                  // Read it into the destination.
+    152                  SiiRegReadBlock( REG_EDID_FIFO_DATA, pDest, length );
+    153              }
+    154          
+    155              return( pDrvNvram->lastResultCode == SII_DRV_NVRAM_SUCCESS );
+    156          }
+    157          
+    158          //-------------------------------------------------------------------------------------------------
+    159          //! @brief      Write data to the requested SRAM.
+    160          //  Parameters:
+    161          //!
+    162          //! @retval     - true: successful.
+    163          //! @retval     - false: failure
+    164          //-------------------------------------------------------------------------------------------------
+    165          
+    166          bool_t SiiDrvNvramSramWrite ( SiiSramType_t sramType, const uint8_t *pSrc, int_t offset, int_t length )
+    167          {
+    168              uint8_t ramSelect = 0;
+    169          
+    170              pDrvNvram->lastResultCode = SII_DRV_NVRAM_SUCCESS;
+    171              switch (sramType)
+    172              {
+    173                  case SRAM_P0:
+    174                  case SRAM_P1:
+    175                  case SRAM_P2:
+    176                  case SRAM_P3:
+    177                  case SRAM_P4:
+    178                  case SRAM_P5:
+    179                  case SRAM_VGA:
+    180                      ramSelect = (uint8_t)sramType;
+    181                      break;
+    182                  case SRAM_BOOT:
+    183                      ramSelect = BIT_SEL_DEVBOOT;
+    184                      break;
+    185          
+    186                  default:
+    187                      pDrvNvram->lastResultCode = SII_DRV_NVRAM_ERR_INVALID_PARAMETER;
+    188                      break;
+    189              }
+    190          
+    191              if ( pDrvNvram->lastResultCode == SII_DRV_NVRAM_SUCCESS )
+    192              {
+    193              	//DEBUG_PRINT( MSG_ERR, "\nNVRAM: In SiiDrvNvramSramWrite() \n" );
+    194                  // Point to offset into selected port SRAM.
+    195                  SiiRegModify( REG_EDID_FIFO_SEL, MSK_SEL_EDID_FIFO | BIT_SEL_DEVBOOT, ramSelect );
+    196                  SiiRegWrite( REG_EDID_FIFO_ADDR, offset );
+    197          
+    198                  // Write data into the destination.
+    199                  SiiRegWriteBlock( REG_EDID_FIFO_DATA, pSrc, length );
+    200              }
+    201          
+    202              return( pDrvNvram->lastResultCode == SII_DRV_NVRAM_SUCCESS );
+    203          }
+    204          
+    205          //-------------------------------------------------------------------------------------------------
+    206          //! @brief      Copy data from NVRAM to SRAM at given input port
+    207          //! @param[in]  nvramType - NVRAM_HDMI_EDID, specifies main NVRAM
+    208          //!                         NVRAM_VGA_EDID, specifies VGA EDID
+    209          //!                         NVRAM_BOOTDATA, specifies Boot Data
+    210          //!
+    211          //! @param[in]  rxPortIdx - input port index (0-6)
+    212          //! @retval     - true: successful.
+    213          //! @retval     - false: failure
+    214          //-------------------------------------------------------------------------------------------------
+    215          bool_t SiiDrvNvramCopyToSram ( SiiNvramType_t nvramType, uint8_t rxPortIdx, bool_t isSynchronous )
+    216          {
+    217              uint8_t nvramCommand = 0;
+    218          
+    219              if (rxPortIdx > (SII_INPUT_PORT_COUNT + 1/*VGA*/))
+    220              {
+    221                  return( pDrvNvram->lastResultCode == SII_DRV_NVRAM_ERR_INVALID_PARAMETER );
+    222              }
+    223          
+    224              pDrvNvram->lastResultCode = SII_DRV_NVRAM_SUCCESS;
+    225              switch ( nvramType )
+    226              {
+    227                  case NVRAM_HDMI_EDID:
+    228                      nvramCommand    = VAL_COPY_EDID;
+    229                      break;
+    230                  case NVRAM_VGA_EDID:
+    231                      nvramCommand    = VAL_COPY_VGA;
+    232                      break;
+    233                  case NVRAM_BOOTDATA:
+    234                      nvramCommand    = VAL_COPY_DEVBOOT;
+    235                      break;
+    236                  default:
+    237                      pDrvNvram->lastResultCode = SII_DRV_NVRAM_ERR_INVALID_PARAMETER;
+    238                      break;
+    239              }
+    240          
+    241              if ( pDrvNvram->lastResultCode == SII_DRV_NVRAM_SUCCESS )
+    242              {
+    243                  // Copy the NVRAM data (whatever type) into EDID ram 0.
+    244                  SiiRegWrite( REG_NVM_COPYTO, (BIT_NVM_COPYTO_PORT0 << rxPortIdx) );
+    245                  if ( !SendNvramCommand( nvramCommand, isSynchronous ))
+    246                  {
+    247                      pDrvNvram->lastResultCode = SII_DRV_NVRAM_ERR_FAIL;
+    248                  }
+    249              }
+    250          
+    251              return( pDrvNvram->lastResultCode == SII_DRV_NVRAM_SUCCESS );
+    252          }
+    253          
+    254          //-------------------------------------------------------------------------------------------------
+    255          //! @brief      Start a program operation of the specified type on the NVRAM
+    256          //! @param[in]  nvramType - NVRAM_HDMI_EDID, specifies main NVRAM
+    257          //!                         NVRAM_VGA_EDID, specifies VGA EDID
+    258          //!                         NVRAM_BOOTDATA, specifies Boot Data
+    259          //!
+    260          //! @retval     - true: successful.
+    261          //! @retval     - false: failure
+    262          //-------------------------------------------------------------------------------------------------
+    263          bool_t SiiDrvNvramProgram ( SiiNvramType_t nvramType, bool_t isSynchronous )
+    264          {
+    265              uint8_t nvramCommand = 0;
+    266          
+    267              pDrvNvram->lastResultCode = SII_DRV_NVRAM_SUCCESS;
+    268              switch ( nvramType )
+    269              {
+    270                  case NVRAM_HDMI_EDID:
+    271                      nvramCommand    = VAL_PRG_EDID;
+    272                      break;
+    273          
+    274                  case NVRAM_VGA_EDID:
+    275                      nvramCommand    = VAL_PRG_VGA;
+    276                      break;
+    277          
+    278                  case NVRAM_BOOTDATA:
+    279                      nvramCommand    = VAL_PRG_DEVBOOT;
+    280                      break;
+    281                  default:
+    282                      pDrvNvram->lastResultCode = SII_DRV_NVRAM_ERR_INVALID_PARAMETER;
+    283                      break;
+    284              }
+    285          
+    286              if ( pDrvNvram->lastResultCode == SII_DRV_NVRAM_SUCCESS )
+    287              {
+    288              	//DEBUG_PRINT( MSG_ERR, "\nNVRAM: In SiiDrvNvramProgram()-- 1 \n" );
+    289                  if ( !SendNvramCommand( nvramCommand, isSynchronous ))
+    290                  {
+    291                      pDrvNvram->lastResultCode = SII_DRV_NVRAM_ERR_FAIL;
+    292                     // DEBUG_PRINT( MSG_ERR, "\nNVRAM: In SiiDrvNvramProgram()--FAILED Here \n" );
+    293                  }
+    294                  else
+    295                  {
+    296                  	//DEBUG_PRINT( MSG_ERR, "\nNVRAM: In SiiDrvNvramProgram()--SUCCESS Here \n" );
+    297                  }
+    298              }
+    299          
+    300              return( pDrvNvram->lastResultCode == SII_DRV_NVRAM_SUCCESS );
+    301          }
+    302          
+    303          //-------------------------------------------------------------------------------------------------
+    304          //! @brief      Read data from the NVRAM of the specified type.
+    305          //! @param[in]  nvramType - NVRAM_HDMI_EDID, specifies main NVRAM
+    306          //!                         NVRAM_VGA_EDID, specifies VGA EDID
+    307          //!                         NVRAM_BOOTDATA, specifies Boot Data
+    308          //!
+    309          //! @retval     - true: successful.
+    310          //! @retval     - false: failure
+    311          //-------------------------------------------------------------------------------------------------
+    312          bool_t SiiDrvNvramNonVolatileRead ( SiiNvramType_t nvramType, uint8_t *pDest, int_t offset, int_t length )
+    313          {
+    314              SiiSramType_t   sramType = 0;
+    315          
+    316              pDrvNvram->lastResultCode = SII_DRV_NVRAM_SUCCESS;
+    317              switch ( nvramType )
+    318              {
+    319                  case NVRAM_HDMI_EDID:
+    320                      sramType        = SRAM_P0;
+    321                      break;
+    322                  case NVRAM_VGA_EDID:
+    323                      sramType        = SRAM_P0;
+    324                      break;
+    325                  case NVRAM_BOOTDATA:
+    326                      sramType        = SRAM_BOOT;
+    327                      break;
+    328                  default:
+    329                      pDrvNvram->lastResultCode = SII_DRV_NVRAM_ERR_INVALID_PARAMETER;
+    330                      break;
+    331              }
+    332          
+    333              if ( pDrvNvram->lastResultCode == SII_DRV_NVRAM_SUCCESS )
+    334              {
+    335                  if ( SiiDrvNvramCopyToSram( nvramType, 0, true ))      // Wait for copy to complete
+    336                  {
+    337                      // Copy the data from SRAM into the callers destination
+    338                      SiiDrvNvramSramRead( sramType, pDest, offset, length );
+    339                  }
+    340              }
+    341          
+    342              return( pDrvNvram->lastResultCode == SII_DRV_NVRAM_SUCCESS );
+    343          }
+    344          
+    345          //-------------------------------------------------------------------------------------------------
+    346          //! @brief      Program the passed data into the NVRAM of the specified TYPE
+    347          //! @param[in]  nvramType - NVRAM_HDMI_EDID, specifies main NVRAM
+    348          //!                         NVRAM_VGA_EDID, specifies VGA EDID
+    349          //!                         NVRAM_BOOTDATA, specifies Boot Data
+    350          //!
+    351          //! @retval     - true: successful.
+    352          //! @retval     - false: failure
+    353          //-------------------------------------------------------------------------------------------------
+    354          bool_t SiiDrvNvramNonVolatileWrite ( SiiNvramType_t nvramType, const uint8_t *pSrc, int_t offset, int_t length )
+    355          {
+    356              SiiSramType_t   sramType = 0;
+    357          
+    358              pDrvNvram->lastResultCode = SII_DRV_NVRAM_SUCCESS;
+    359              switch ( nvramType )
+    360              {
+    361                  case NVRAM_HDMI_EDID:
+    362                      sramType        = SRAM_P0;
+    363                      break;
+    364                  case NVRAM_VGA_EDID:
+    365                      sramType        = SRAM_P0;
+    366                      break;
+    367                  case NVRAM_BOOTDATA:
+    368                      sramType        = SRAM_BOOT;
+    369                      break;
+    370                  default:
+    371                      pDrvNvram->lastResultCode = SII_DRV_NVRAM_ERR_INVALID_PARAMETER;
+    372                      break;
+    373              }
+    374          
+    375              if ( pDrvNvram->lastResultCode == SII_DRV_NVRAM_SUCCESS )
+    376              {
+    377              	//DEBUG_PRINT( MSG_ERR, "\nNVRAM: In SiiDrvNvramNonVolatileWrite() \n" );
+    378                  // Load the source data into the appropriate SRAM
+    379                  if ( SiiDrvNvramSramWrite( sramType, pSrc, offset, length ))
+    380                  {
+    381                  //	DEBUG_PRINT( MSG_ERR, "\nNVRAM: In SiiDrvNvramNonVolatileWrite()-> SRAM WRITE SUCESS \n" );
+    382                      // Start the NVRAM program operation and wait for it to finish.
+    383                      SiiDrvNvramProgram( nvramType, true );
+    384          
+    385          //        	if(nvramType == NVRAM_BOOTDATA)
+    386          //        	{
+    387          //        		// Enable Replcing of BSM registers with alternate values
+    388          //        		//SiiRegWrite( REG_NVM_BSM_REPLACE, 0x01 );
+    389          //        		// Write Second Byte of Boot Data
+    390          //        		SiiRegWrite( REG_NVM_REPLACE_BYTE1, (/*pSrc[1] | */0x0C) );//(pSrc[1] | 0x80)
+    391          //
+    392          //#if 01
+    393          //        		// Write First Byte of Boot Data
+    394          //        		SiiRegWrite( REG_NVM_REPLACE_BYTE0, 0x5F ); //pSrc[0]
+    395          //
+    396          //
+    397          //
+    398          //        		// Write Third Byte of Boot Data
+    399          //        		SiiRegWrite( REG_NVM_REPLACE_BYTE2, 0x06 );
+    400          //
+    401          //
+    402          //        		// Write Fourth Byte of Boot Data
+    403          //        		SiiRegWrite( REG_NVM_REPLACE_BYTE3, 0x03 ); //pSrc[3]
+    404          //#endif
+    405          //        	}
+    406                  }
+    407              }
+    408          
+    409              return( pDrvNvram->lastResultCode == SII_DRV_NVRAM_SUCCESS );
+    410          }
+    411          
+    412          //-------------------------------------------------------------------------------------------------
+    413          //! @brief      Initialize the NVRAM/SRAM driver
+    414          //!
+    415          //! @retval     - true: successful.
+    416          //! @retval     - false: failure
+    417          //-------------------------------------------------------------------------------------------------
+    418          
+    419          bool_t SiiDrvNvramInitialize ( void )
+    420          {
+    421          
+    422              // Clear instance data
+    423              memset( pDrvNvram, 0, sizeof( NvramDrvInstanceData_t ));
+    424          
+    425              return( true );
+    426          }
+    427          
+    428          //-------------------------------------------------------------------------------------------------
+    429          //! @brief      Returns the NVRAM/SRAM driver status flag word
+    430          //!
+    431          //! @retval     - true: successful.
+    432          //! @retval     - false: failure
+    433          //-------------------------------------------------------------------------------------------------
+    434          
+    435          uint_t SiiDrvNvramStatus ( void )
+    436          {
+    437              return( pDrvNvram->statusFlags );
+    438          }
+    439          
+    440          //-------------------------------------------------------------------------------------------------
+    441          //! @brief      Returns the result of the last driver function called
+    442          //!
+    443          //! @retval     - true: successful.
+    444          //! @retval     - false: failure
+    445          //-------------------------------------------------------------------------------------------------
+    446          
+    447          int_t SiiDrvNvramGetLastResult ( void )
+    448          {
+    449          
+    450              return( pDrvNvram->lastResultCode );
+    451          }
+    452          
+    453          //------------------------------------------------------------------------------
+    454          // Close the Doxygen group.
+    455          //! @}
+    456          //------------------------------------------------------------------------------
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       24  SendNvramCommand
+             24 -> SiiOsTimerExpired
+             24 -> SiiOsTimerSet
+             24 -> SiiRegRead
+             24 -> SiiRegWrite
+       32  SiiDrvEdidRxIsBootComplete
+             32 -> SiiOsTimerExpired
+             32 -> SiiOsTimerSet
+             32 -> SiiRegRead
+        8  SiiDrvEdidRxIsNvramIdle
+              8 -> SiiRegRead
+       16  SiiDrvNvramCopyToSram
+             16 -> SendNvramCommand
+             16 -> SiiRegWrite
+        0  SiiDrvNvramGetLastResult
+        8  SiiDrvNvramInitialize
+       24  SiiDrvNvramNonVolatileRead
+             24 -> SiiDrvNvramCopyToSram
+             24 -> SiiDrvNvramSramRead
+       16  SiiDrvNvramNonVolatileWrite
+             16 -> SiiDrvNvramProgram
+             16 -> SiiDrvNvramSramWrite
+        8  SiiDrvNvramProgram
+              8 -> SendNvramCommand
+       24  SiiDrvNvramSramRead
+             24 -> SiiRegModify
+             24 -> SiiRegReadBlock
+             24 -> SiiRegWrite
+       24  SiiDrvNvramSramWrite
+             24 -> SiiRegModify
+             24 -> SiiRegWrite
+             24 -> SiiRegWriteBlock
+        0  SiiDrvNvramStatus
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable9
+      12  ?Subroutine0
+      10  ?Subroutine1
+      12  ?Subroutine2
+      10  ?Subroutine3
+      10  ?Subroutine4
+      56  SendNvramCommand
+      78  SiiDrvEdidRxIsBootComplete
+      16  SiiDrvEdidRxIsNvramIdle
+      92  SiiDrvNvramCopyToSram
+       8  SiiDrvNvramGetLastResult
+      20  SiiDrvNvramInitialize
+      74  SiiDrvNvramNonVolatileRead
+      48  SiiDrvNvramNonVolatileWrite
+      60  SiiDrvNvramProgram
+      58  SiiDrvNvramSramRead
+      58  SiiDrvNvramSramWrite
+       8  SiiDrvNvramStatus
+      16  nvramDrvData
+       4  pDrvNvram
+
+ 
+  16 bytes in section .bss
+   4 bytes in section .data
+ 634 bytes in section .text
+ 
+ 634 bytes of CODE memory
+  20 bytes of DATA memory
+
+Errors: none
+Warnings: 3

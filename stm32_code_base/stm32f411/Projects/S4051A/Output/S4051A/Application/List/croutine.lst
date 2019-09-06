@@ -1,0 +1,689 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:25:48 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\FreeRTOS\Source\croutine.c                  #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\FreeRTOS\Source\croutine.c -D S4051A -D     #
+#                    DEBUG -D FREE_RTOS -D STM32F40_41xxx -D                  #
+#                    USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D             #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\croutine.lst                                          #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\croutine.o                                             #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\FreeRTOS\Source\croutine.c
+      1          /*
+      2              FreeRTOS V8.0.0:rc2 - Copyright (C) 2014 Real Time Engineers Ltd.
+      3              All rights reserved
+      4          
+      5              VISIT http://www.FreeRTOS.org TO ENSURE YOU ARE USING THE LATEST VERSION.
+      6          
+      7              ***************************************************************************
+      8               *                                                                       *
+      9               *    FreeRTOS provides completely free yet professionally developed,    *
+     10               *    robust, strictly quality controlled, supported, and cross          *
+     11               *    platform software that has become a de facto standard.             *
+     12               *                                                                       *
+     13               *    Help yourself get started quickly and support the FreeRTOS         *
+     14               *    project by purchasing a FreeRTOS tutorial book, reference          *
+     15               *    manual, or both from: http://www.FreeRTOS.org/Documentation        *
+     16               *                                                                       *
+     17               *    Thank you!                                                         *
+     18               *                                                                       *
+     19              ***************************************************************************
+     20          
+     21              This file is part of the FreeRTOS distribution.
+     22          
+     23              FreeRTOS is free software; you can redistribute it and/or modify it under
+     24              the terms of the GNU General Public License (version 2) as published by the
+     25              Free Software Foundation >>!AND MODIFIED BY!<< the FreeRTOS exception.
+     26          
+     27              >>! NOTE: The modification to the GPL is included to allow you to distribute
+     28              >>! a combined work that includes FreeRTOS without being obliged to provide
+     29              >>! the source code for proprietary components outside of the FreeRTOS
+     30              >>! kernel.
+     31          
+     32              FreeRTOS is distributed in the hope that it will be useful, but WITHOUT ANY
+     33              WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+     34              FOR A PARTICULAR PURPOSE.  Full license text is available from the following
+     35              link: http://www.freertos.org/a00114.html
+     36          
+     37              1 tab == 4 spaces!
+     38          
+     39              ***************************************************************************
+     40               *                                                                       *
+     41               *    Having a problem?  Start by reading the FAQ "My application does   *
+     42               *    not run, what could be wrong?"                                     *
+     43               *                                                                       *
+     44               *    http://www.FreeRTOS.org/FAQHelp.html                               *
+     45               *                                                                       *
+     46              ***************************************************************************
+     47          
+     48              http://www.FreeRTOS.org - Documentation, books, training, latest versions,
+     49              license and Real Time Engineers Ltd. contact details.
+     50          
+     51              http://www.FreeRTOS.org/plus - A selection of FreeRTOS ecosystem products,
+     52              including FreeRTOS+Trace - an indispensable productivity tool, a DOS
+     53              compatible FAT file system, and our tiny thread aware UDP/IP stack.
+     54          
+     55              http://www.OpenRTOS.com - Real Time Engineers ltd license FreeRTOS to High
+     56              Integrity Systems to sell under the OpenRTOS brand.  Low cost OpenRTOS
+     57              licenses offer ticketed support, indemnification and middleware.
+     58          
+     59              http://www.SafeRTOS.com - High Integrity Systems also provide a safety
+     60              engineered and independently SIL3 certified version for use in safety and
+     61              mission critical applications that require provable dependability.
+     62          
+     63              1 tab == 4 spaces!
+     64          */
+     65          
+     66          #include "FreeRTOS.h"
+     67          #include "task.h"
+     68          #include "croutine.h"
+     69          
+     70          /*
+     71           * Some kernel aware debuggers require data to be viewed to be global, rather
+     72           * than file scope.
+     73           */
+     74          #ifdef portREMOVE_STATIC_QUALIFIER
+     75          	#define static
+     76          #endif
+     77          
+     78          
+     79          /* Lists for ready and blocked co-routines. --------------------*/
+     80          static List_t pxReadyCoRoutineLists[ configMAX_CO_ROUTINE_PRIORITIES ];	/*< Prioritised ready co-routines. */
+     81          static List_t xDelayedCoRoutineList1;									/*< Delayed co-routines. */
+     82          static List_t xDelayedCoRoutineList2;									/*< Delayed co-routines (two lists are used - one for delays that have overflowed the current tick count. */
+     83          static List_t * pxDelayedCoRoutineList;									/*< Points to the delayed co-routine list currently being used. */
+     84          static List_t * pxOverflowDelayedCoRoutineList;							/*< Points to the delayed co-routine list currently being used to hold co-routines that have overflowed the current tick count. */
+     85          static List_t xPendingReadyCoRoutineList;								/*< Holds co-routines that have been readied by an external event.  They cannot be added directly to the ready lists as the ready lists cannot be accessed by interrupts. */
+     86          
+     87          /* Other file private variables. --------------------------------*/
+     88          CRCB_t * pxCurrentCoRoutine = NULL;
+     89          static UBaseType_t uxTopCoRoutineReadyPriority = 0;
+     90          static TickType_t xCoRoutineTickCount = 0, xLastTickCount = 0, xPassedTicks = 0;
+     91          
+     92          /* The initial state of the co-routine when it is created. */
+     93          #define corINITIAL_STATE	( 0 )
+     94          
+     95          /*
+     96           * Place the co-routine represented by pxCRCB into the appropriate ready queue
+     97           * for the priority.  It is inserted at the end of the list.
+     98           *
+     99           * This macro accesses the co-routine ready lists and therefore must not be
+    100           * used from within an ISR.
+    101           */
+    102          #define prvAddCoRoutineToReadyQueue( pxCRCB )																		\
+    103          {																													\
+    104          	if( pxCRCB->uxPriority > uxTopCoRoutineReadyPriority )															\
+    105          	{																												\
+    106          		uxTopCoRoutineReadyPriority = pxCRCB->uxPriority;															\
+    107          	}																												\
+    108          	vListInsertEnd( ( List_t * ) &( pxReadyCoRoutineLists[ pxCRCB->uxPriority ] ), &( pxCRCB->xGenericListItem ) );	\
+    109          }
+    110          
+    111          /*
+    112           * Utility to ready all the lists used by the scheduler.  This is called
+    113           * automatically upon the creation of the first co-routine.
+    114           */
+    115          static void prvInitialiseCoRoutineLists( void );
+    116          
+    117          /*
+    118           * Co-routines that are readied by an interrupt cannot be placed directly into
+    119           * the ready lists (there is no mutual exclusion).  Instead they are placed in
+    120           * in the pending ready list in order that they can later be moved to the ready
+    121           * list by the co-routine scheduler.
+    122           */
+    123          static void prvCheckPendingReadyList( void );
+    124          
+    125          /*
+    126           * Macro that looks at the list of co-routines that are currently delayed to
+    127           * see if any require waking.
+    128           *
+    129           * Co-routines are stored in the queue in the order of their wake time -
+    130           * meaning once one co-routine has been found whose timer has not expired
+    131           * we need not look any further down the list.
+    132           */
+    133          static void prvCheckDelayedList( void );
+    134          
+    135          /*-----------------------------------------------------------*/
+    136          
+    137          BaseType_t xCoRoutineCreate( crCOROUTINE_CODE pxCoRoutineCode, UBaseType_t uxPriority, UBaseType_t uxIndex )
+    138          {
+    139          BaseType_t xReturn;
+    140          CRCB_t *pxCoRoutine;
+    141          
+    142          	/* Allocate the memory that will store the co-routine control block. */
+    143          	pxCoRoutine = ( CRCB_t * ) pvPortMalloc( sizeof( CRCB_t ) );
+    144          	if( pxCoRoutine )
+    145          	{
+    146          		/* If pxCurrentCoRoutine is NULL then this is the first co-routine to
+    147          		be created and the co-routine data structures need initialising. */
+    148          		if( pxCurrentCoRoutine == NULL )
+    149          		{
+    150          			pxCurrentCoRoutine = pxCoRoutine;
+    151          			prvInitialiseCoRoutineLists();
+    152          		}
+    153          
+    154          		/* Check the priority is within limits. */
+    155          		if( uxPriority >= configMAX_CO_ROUTINE_PRIORITIES )
+    156          		{
+    157          			uxPriority = configMAX_CO_ROUTINE_PRIORITIES - 1;
+    158          		}
+    159          
+    160          		/* Fill out the co-routine control block from the function parameters. */
+    161          		pxCoRoutine->uxState = corINITIAL_STATE;
+    162          		pxCoRoutine->uxPriority = uxPriority;
+    163          		pxCoRoutine->uxIndex = uxIndex;
+    164          		pxCoRoutine->pxCoRoutineFunction = pxCoRoutineCode;
+    165          
+    166          		/* Initialise all the other co-routine control block parameters. */
+    167          		vListInitialiseItem( &( pxCoRoutine->xGenericListItem ) );
+    168          		vListInitialiseItem( &( pxCoRoutine->xEventListItem ) );
+    169          
+    170          		/* Set the co-routine control block as a link back from the ListItem_t.
+    171          		This is so we can get back to the containing CRCB from a generic item
+    172          		in a list. */
+    173          		listSET_LIST_ITEM_OWNER( &( pxCoRoutine->xGenericListItem ), pxCoRoutine );
+    174          		listSET_LIST_ITEM_OWNER( &( pxCoRoutine->xEventListItem ), pxCoRoutine );
+    175          
+    176          		/* Event lists are always in priority order. */
+    177          		listSET_LIST_ITEM_VALUE( &( pxCoRoutine->xEventListItem ), ( ( TickType_t ) configMAX_CO_ROUTINE_PRIORITIES - ( TickType_t ) uxPriority ) );
+    178          
+    179          		/* Now the co-routine has been initialised it can be added to the ready
+    180          		list at the correct priority. */
+    181          		prvAddCoRoutineToReadyQueue( pxCoRoutine );
+    182          
+    183          		xReturn = pdPASS;
+    184          	}
+    185          	else
+    186          	{
+    187          		xReturn = errCOULD_NOT_ALLOCATE_REQUIRED_MEMORY;
+    188          	}
+    189          
+    190          	return xReturn;
+    191          }
+    192          /*-----------------------------------------------------------*/
+    193          
+    194          void vCoRoutineAddToDelayedList( TickType_t xTicksToDelay, List_t *pxEventList )
+    195          {
+    196          TickType_t xTimeToWake;
+    197          
+    198          	/* Calculate the time to wake - this may overflow but this is
+    199          	not a problem. */
+    200          	xTimeToWake = xCoRoutineTickCount + xTicksToDelay;
+    201          
+    202          	/* We must remove ourselves from the ready list before adding
+    203          	ourselves to the blocked list as the same list item is used for
+    204          	both lists. */
+    205          	( void ) uxListRemove( ( ListItem_t * ) &( pxCurrentCoRoutine->xGenericListItem ) );
+    206          
+    207          	/* The list item will be inserted in wake time order. */
+    208          	listSET_LIST_ITEM_VALUE( &( pxCurrentCoRoutine->xGenericListItem ), xTimeToWake );
+    209          
+    210          	if( xTimeToWake < xCoRoutineTickCount )
+    211          	{
+    212          		/* Wake time has overflowed.  Place this item in the
+    213          		overflow list. */
+    214          		vListInsert( ( List_t * ) pxOverflowDelayedCoRoutineList, ( ListItem_t * ) &( pxCurrentCoRoutine->xGenericListItem ) );
+    215          	}
+    216          	else
+    217          	{
+    218          		/* The wake time has not overflowed, so we can use the
+    219          		current block list. */
+    220          		vListInsert( ( List_t * ) pxDelayedCoRoutineList, ( ListItem_t * ) &( pxCurrentCoRoutine->xGenericListItem ) );
+    221          	}
+    222          
+    223          	if( pxEventList )
+    224          	{
+    225          		/* Also add the co-routine to an event list.  If this is done then the
+    226          		function must be called with interrupts disabled. */
+    227          		vListInsert( pxEventList, &( pxCurrentCoRoutine->xEventListItem ) );
+    228          	}
+    229          }
+    230          /*-----------------------------------------------------------*/
+    231          
+    232          static void prvCheckPendingReadyList( void )
+    233          {
+    234          	/* Are there any co-routines waiting to get moved to the ready list?  These
+    235          	are co-routines that have been readied by an ISR.  The ISR cannot access
+    236          	the	ready lists itself. */
+    237          	while( listLIST_IS_EMPTY( &xPendingReadyCoRoutineList ) == pdFALSE )
+    238          	{
+    239          		CRCB_t *pxUnblockedCRCB;
+    240          
+    241          		/* The pending ready list can be accessed by an ISR. */
+    242          		portDISABLE_INTERRUPTS();
+    243          		{
+    244          			pxUnblockedCRCB = ( CRCB_t * ) listGET_OWNER_OF_HEAD_ENTRY( (&xPendingReadyCoRoutineList) );
+    245          			( void ) uxListRemove( &( pxUnblockedCRCB->xEventListItem ) );
+    246          		}
+    247          		portENABLE_INTERRUPTS();
+    248          
+    249          		( void ) uxListRemove( &( pxUnblockedCRCB->xGenericListItem ) );
+    250          		prvAddCoRoutineToReadyQueue( pxUnblockedCRCB );
+    251          	}
+    252          }
+    253          /*-----------------------------------------------------------*/
+    254          
+    255          static void prvCheckDelayedList( void )
+    256          {
+    257          CRCB_t *pxCRCB;
+    258          
+    259          	xPassedTicks = xTaskGetTickCount() - xLastTickCount;
+    260          	while( xPassedTicks )
+    261          	{
+    262          		xCoRoutineTickCount++;
+    263          		xPassedTicks--;
+    264          
+    265          		/* If the tick count has overflowed we need to swap the ready lists. */
+    266          		if( xCoRoutineTickCount == 0 )
+    267          		{
+    268          			List_t * pxTemp;
+    269          
+    270          			/* Tick count has overflowed so we need to swap the delay lists.  If there are
+    271          			any items in pxDelayedCoRoutineList here then there is an error! */
+    272          			pxTemp = pxDelayedCoRoutineList;
+    273          			pxDelayedCoRoutineList = pxOverflowDelayedCoRoutineList;
+    274          			pxOverflowDelayedCoRoutineList = pxTemp;
+    275          		}
+    276          
+    277          		/* See if this tick has made a timeout expire. */
+    278          		while( listLIST_IS_EMPTY( pxDelayedCoRoutineList ) == pdFALSE )
+    279          		{
+    280          			pxCRCB = ( CRCB_t * ) listGET_OWNER_OF_HEAD_ENTRY( pxDelayedCoRoutineList );
+    281          
+    282          			if( xCoRoutineTickCount < listGET_LIST_ITEM_VALUE( &( pxCRCB->xGenericListItem ) ) )
+    283          			{
+    284          				/* Timeout not yet expired. */
+    285          				break;
+    286          			}
+    287          
+    288          			portDISABLE_INTERRUPTS();
+    289          			{
+    290          				/* The event could have occurred just before this critical
+    291          				section.  If this is the case then the generic list item will
+    292          				have been moved to the pending ready list and the following
+    293          				line is still valid.  Also the pvContainer parameter will have
+    294          				been set to NULL so the following lines are also valid. */
+    295          				uxListRemove( &( pxCRCB->xGenericListItem ) );
+    296          
+    297          				/* Is the co-routine waiting on an event also? */
+    298          				if( pxCRCB->xEventListItem.pvContainer )
+    299          				{
+    300          					( void ) uxListRemove( &( pxCRCB->xEventListItem ) );
+    301          				}
+    302          			}
+    303          			portENABLE_INTERRUPTS();
+    304          
+    305          			prvAddCoRoutineToReadyQueue( pxCRCB );
+    306          		}
+    307          	}
+    308          
+    309          	xLastTickCount = xCoRoutineTickCount;
+    310          }
+    311          /*-----------------------------------------------------------*/
+    312          
+    313          void vCoRoutineSchedule( void )
+    314          {
+    315          	/* See if any co-routines readied by events need moving to the ready lists. */
+    316          	prvCheckPendingReadyList();
+    317          
+    318          	/* See if any delayed co-routines have timed out. */
+    319          	prvCheckDelayedList();
+    320          
+    321          	/* Find the highest priority queue that contains ready co-routines. */
+    322          	while( listLIST_IS_EMPTY( &( pxReadyCoRoutineLists[ uxTopCoRoutineReadyPriority ] ) ) )
+    323          	{
+    324          		if( uxTopCoRoutineReadyPriority == 0 )
+    325          		{
+    326          			/* No more co-routines to check. */
+    327          			return;
+    328          		}
+    329          		--uxTopCoRoutineReadyPriority;
+    330          	}
+    331          
+    332          	/* listGET_OWNER_OF_NEXT_ENTRY walks through the list, so the co-routines
+    333          	 of the	same priority get an equal share of the processor time. */
+    334          	listGET_OWNER_OF_NEXT_ENTRY( pxCurrentCoRoutine, &( pxReadyCoRoutineLists[ uxTopCoRoutineReadyPriority ] ) );
+    335          
+    336          	/* Call the co-routine. */
+    337          	( pxCurrentCoRoutine->pxCoRoutineFunction )( pxCurrentCoRoutine, pxCurrentCoRoutine->uxIndex );
+    338          
+    339          	return;
+    340          }
+    341          /*-----------------------------------------------------------*/
+    342          
+    343          static void prvInitialiseCoRoutineLists( void )
+    344          {
+    345          UBaseType_t uxPriority;
+    346          
+    347          	for( uxPriority = 0; uxPriority < configMAX_CO_ROUTINE_PRIORITIES; uxPriority++ )
+    348          	{
+    349          		vListInitialise( ( List_t * ) &( pxReadyCoRoutineLists[ uxPriority ] ) );
+    350          	}
+    351          
+    352          	vListInitialise( ( List_t * ) &xDelayedCoRoutineList1 );
+    353          	vListInitialise( ( List_t * ) &xDelayedCoRoutineList2 );
+    354          	vListInitialise( ( List_t * ) &xPendingReadyCoRoutineList );
+    355          
+    356          	/* Start with pxDelayedCoRoutineList using list1 and the
+    357          	pxOverflowDelayedCoRoutineList using list2. */
+    358          	pxDelayedCoRoutineList = &xDelayedCoRoutineList1;
+    359          	pxOverflowDelayedCoRoutineList = &xDelayedCoRoutineList2;
+    360          }
+    361          /*-----------------------------------------------------------*/
+    362          
+    363          BaseType_t xCoRoutineRemoveFromEventList( const List_t *pxEventList )
+    364          {
+    365          CRCB_t *pxUnblockedCRCB;
+    366          BaseType_t xReturn;
+    367          
+    368          	/* This function is called from within an interrupt.  It can only access
+    369          	event lists and the pending ready list.  This function assumes that a
+    370          	check has already been made to ensure pxEventList is not empty. */
+    371          	pxUnblockedCRCB = ( CRCB_t * ) listGET_OWNER_OF_HEAD_ENTRY( pxEventList );
+    372          	( void ) uxListRemove( &( pxUnblockedCRCB->xEventListItem ) );
+    373          	vListInsertEnd( ( List_t * ) &( xPendingReadyCoRoutineList ), &( pxUnblockedCRCB->xEventListItem ) );
+    374          
+    375          	if( pxUnblockedCRCB->uxPriority >= pxCurrentCoRoutine->uxPriority )
+    376          	{
+    377          		xReturn = pdTRUE;
+    378          	}
+    379          	else
+    380          	{
+    381          		xReturn = pdFALSE;
+    382          	}
+    383          
+    384          	return xReturn;
+    385          }
+    386          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       16  vCoRoutineAddToDelayedList
+             16 -> uxListRemove
+              0 -> vListInsert
+             16 -> vListInsert
+       16  vCoRoutineSchedule
+              0 -- Indirect call
+             16 -> ulPortSetInterruptMask
+             16 -> uxListRemove
+             16 -> vListInsertEnd
+             16 -> vPortClearInterruptMask
+             16 -> xTaskGetTickCount
+       24  xCoRoutineCreate
+             24 -> pvPortMalloc
+             24 -> vListInitialise
+             24 -> vListInitialiseItem
+             24 -> vListInsertEnd
+       16  xCoRoutineRemoveFromEventList
+             16 -> uxListRemove
+             16 -> vListInsertEnd
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable3
+      16  ?Subroutine0
+      60  vCoRoutineAddToDelayedList
+     216  vCoRoutineSchedule
+     160  xCoRoutineCreate
+      42  xCoRoutineRemoveFromEventList
+     128  xPendingReadyCoRoutineList
+          pxReadyCoRoutineLists
+          pxDelayedCoRoutineList
+          pxOverflowDelayedCoRoutineList
+          pxCurrentCoRoutine
+          uxTopCoRoutineReadyPriority
+          xCoRoutineTickCount
+          xLastTickCount
+          xPassedTicks
+          xDelayedCoRoutineList1
+          xDelayedCoRoutineList2
+
+ 
+ 128 bytes in section .bss
+ 498 bytes in section .text
+ 
+ 498 bytes of CODE memory
+ 128 bytes of DATA memory
+
+Errors: none
+Warnings: none

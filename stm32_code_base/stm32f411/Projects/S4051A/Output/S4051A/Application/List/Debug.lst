@@ -1,0 +1,638 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:25:30 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\APP_SRC\SERVICES\Debug.c              #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\APP_SRC\SERVICES\Debug.c -D S4051A    #
+#                    -D DEBUG -D FREE_RTOS -D STM32F40_41xxx -D               #
+#                    USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D             #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\Debug.lst                                             #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\Debug.o                                                #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Projects\S4051A\APP_SRC\SERVICES\Debug.c
+      1          #ifdef DEBUG
+      2          #include "Debug.h"
+      3          
+      4          
+      5          /** Table used for hexadecimal and decimal to char conversion */
+      6          static const char CHAR_MAP[] = {'0', '1', '2', '3', '4', '5', '6', '7',
+      7                                          '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'
+      8                                         };
+      9          
+     10          /** Decimal base for decimal to char conversion */
+     11          #define DECIMAL_BASE     10
+     12          
+     13          /** Hexadecimal base */
+     14          #define HEXADECIMAL_BASE 0x10
+     15          
+     16          /** Maximal buffer to use for conversion of a number */
+     17          #define MAX_NUMBER_BUFFER 10
+     18          
+     19          static uint32 m_traceEnableMask;
+     20          
+     21          //! < External Application ___________________________________________________________________________________@{
+     22          //These applicatons is only used on here.
+     23          extern void usart_putchar(const char c);
+     24          //! @}
+     25          
+     26          /**
+     27           * Small implementation of the printf function.
+     28           *
+     29           * @param   moduleId is one of the enums in DEBUG_FIELDS.
+     30           * @param   moduleStr is the module string to be printout as a prefix.
+     31           * @param   strId is the Static String ID that is sent to the AppCom.
+     32           *
+     33           * @note Implements %s %d %X %u %ld %lX and %lu only.
+     34           *
+     35           * @see printf.
+     36           */
+     37          static void Debug_printf(DEBUG_FIELDS moduleId,
+     38                                   const char *moduleStr,
+     39                                   uint16 strId,
+     40                                   va_list args);
+     41          
+     42          /**
+     43           * Writes a single character to the output.
+     44           *
+     45           * @param ch        The character to write.
+     46           */
+     47          static void Debug_writeChar(char ch);
+     48          
+     49          /**
+     50           * Writes a single string to the output.
+     51           *
+     52           * @param str       The string to write.
+     53           */
+     54          static void Debug_writeString(const char *str);
+     55          
+     56          /**
+     57           * Writes a number to the output according to a given base.
+     58           *
+     59           * @param number    The number to write.
+     60           * @param base      The base to write the number in.
+     61           */
+     62          static void Debug_writeNumber(int32 number, int16 base);
+     63          
+     64          /**
+     65           * Writes an unsigned number to the output according to a given base.
+     66           *
+     67           * @param number    The number to write.
+     68           * @param base      The base to write the number in.
+     69           */
+     70          static void Debug_writeUnsignedNumber(uint32 number, uint16 base);
+     71          
+     72          /*This MACRO defines an implementation of a generic module specific
+     73            printout function*/
+     74          #define DEBUG_PRINT(func, id, prefStr)          \
+     75          void Debug_print ##func(uint16 strId, ...)      \
+     76          {                                               \
+     77             va_list args;                                \
+     78             va_start(args, strId);                       \
+     79             Debug_printf(id, prefStr, strId, args);      \
+     80             va_end(args);                                \
+     81          }
+     82          
+     83          /**************************** Implementation **********************************/
+     84          void Debug_initialize(void)
+     85          {
+     86              uint32 mask = 0;
+     87          
+     88              mask |= DEBUG_ERROR | DEBUG_DEBUG | DEBUG_INFO;
+     89          
+     90              /*All printouts are disabled.*/
+     91              m_traceEnableMask = mask;
+     92          }
+     93          
+     94          /*----------------------------------------------------------------------------*/
+     95          uint32 Debug_register(uint32 mask)
+     96          {
+     97              uint32 old = m_traceEnableMask;
+     98              m_traceEnableMask |= mask;
+     99              return old;
+    100          }
+    101          
+    102          /*----------------------------------------------------------------------------*/
+    103          uint32 Debug_unregister(uint32 mask)
+    104          {
+    105              uint32 old = m_traceEnableMask;
+    106              m_traceEnableMask &= ~mask;
+    107              return old;
+    108          }
+    109          
+    110          /*----------------------------------------------------------------------------*/
+    111          /* The below code implements the varius module specific printout functions*/
+    112          DEBUG_PRINT(Info, DEBUG_INFO,   "INFO");
+    113          DEBUG_PRINT(Error, DEBUG_ERROR, "ERR");
+    114          DEBUG_PRINT(I2c, DEBUG_I2C,     "I2C");
+    115          DEBUG_PRINT(Fac, DEBUG_FAC,     "FAC");
+    116          DEBUG_PRINT(Cec, DEBUG_CEC,     "CEC");
+    117          DEBUG_PRINT(Eedid, DEBUG_EEDID, "EEDID");
+    118          DEBUG_PRINT(Debug, DEBUG_DEBUG, "DBG");
+    119          DEBUG_PRINT(Rf, DEBUG_RF, "RF");
+    120          DEBUG_PRINT(SPI, DEBUG_SPI, "SPI");
+    121          
+    122          /*----------------------------------------------------------------------------*/
+    123          static void Debug_printf(
+    124              DEBUG_FIELDS moduleId,
+    125              const char *moduleStr,
+    126              uint16 strId,
+    127              va_list args
+    128          )
+    129          {
+    130              char *str;
+    131          
+    132              /*Check whether the moduleId printouts are enabled*/
+    133              if (!(m_traceEnableMask & moduleId))
+    134              {
+    135                  /* The printouts are disabled. Abort this printout function.*/
+    136                  return;
+    137              }
+    138          
+    139              /*In case the String ID is NULL, the printout will be in legacy mode,
+    140                without sending the String ID to the PC*/
+    141              if (STR_ID_NULL != strId)
+    142              {
+    143                  /* Send the identification code to the AppCom*/
+    144                  /* The AppCom will recognizes this printout as STR ID*/
+    145                  Debug_writeChar(STR_ID_CODE_1);
+    146                  Debug_writeChar(STR_ID_CODE_2);
+    147                  /* Send the String ID to AppCom as a binary coded number*/
+    148          
+    149                  /* Send the high bype of a 16 bits integer*/
+    150                  Debug_writeChar(strId >> 8);
+    151          
+    152                  /* Send the high bype of a 16 bits integer*/
+    153                  Debug_writeChar(strId & 0xff);
+    154              }
+    155          
+    156              str = va_arg(args, char *);
+    157          
+    158              /*Printout the printed module string*/
+    159              Debug_writeString(moduleStr);
+    160              Debug_writeString("\t>>  ");
+    161          
+    162              while ((*str != '\0') && (str != NULL))
+    163              {
+    164                  if (*str == '%')
+    165                  {
+    166                      str++;
+    167          
+    168                      switch (*str)
+    169                      {
+    170                          case 'd':
+    171                              Debug_writeNumber(va_arg(args, int), DECIMAL_BASE);
+    172                              break;
+    173                          case 'u':
+    174                              Debug_writeUnsignedNumber(
+    175                                  va_arg(args, int), DECIMAL_BASE);
+    176                              break;
+    177                          case 'X':
+    178                              Debug_writeUnsignedNumber(
+    179                                  va_arg(args, int), HEXADECIMAL_BASE);
+    180                              break;
+    181                          case 's':
+    182                              Debug_writeString(va_arg(args, const char *));
+    183                              break;
+    184                          default:
+    185                              Debug_writeChar(*str);
+    186                              break;
+    187                      }
+    188                  }
+    189                  else
+    190                  {
+    191                      Debug_writeChar(*str);
+    192                  }
+    193                  str++;
+    194              }
+    195          
+    196              Debug_writeChar(' ');
+    197              Debug_writeChar('\r');
+    198              Debug_writeChar('\n');
+    199          
+    200              va_end(args);
+    201          }
+    202          
+    203          void putch(char c)
+    204          {
+    205              usart_putchar(c);
+    206          }
+    207          
+    208          /*----------------------------------------------------------------------------*/
+    209          static void Debug_writeChar(char ch)
+    210          {
+    211              putch(ch);
+    212          }
+    213          
+    214          /*----------------------------------------------------------------------------*/
+    215          static void Debug_writeString(const char *str)
+    216          {
+    217              char ch;
+    218              while ((ch = *str++) != '\0')
+    219              {
+    220                  Debug_writeChar(ch);
+    221              }
+    222          }
+    223          
+    224          /*----------------------------------------------------------------------------*/
+    225          static void Debug_writeNumber(int32 number, int16 base)
+    226          {
+    227              if (number < 0)
+    228              {
+    229                  Debug_writeChar('-');
+    230                  /* Possible bug. MIN_INT */
+    231                  number *= -1;
+    232              }
+    233          
+    234              Debug_writeUnsignedNumber(number, base);
+    235          }
+    236          
+    237          /*----------------------------------------------------------------------------*/
+    238          static void Debug_writeUnsignedNumber(uint32 number, uint16 base)
+    239          {
+    240              static char result[MAX_NUMBER_BUFFER];
+    241              uint16 pos = MAX_NUMBER_BUFFER - 1;
+    242          
+    243              /* For the LSD to the MSD, convert each digit to a char */
+    244              while (number >= base)
+    245              {
+    246                  result[pos] = CHAR_MAP[number % base];
+    247                  number = number / base;
+    248                  pos--;
+    249              }
+    250          
+    251              result[pos] = CHAR_MAP[number];
+    252          
+    253              /* Print the characters in the right order */
+    254              while (pos < MAX_NUMBER_BUFFER)
+    255              {
+    256                  putch(result[pos]);
+    257                  pos++;
+    258              }
+    259          }
+    260          
+    261          void Debug_printEEDIDData(uint8 *buff, uint16 size)
+    262          {
+    263              int i;
+    264              uint8 data;
+    265          
+    266              /* Send the identification code to the AppCom*/
+    267              /* The AppCom will recognizes this printout as EEDID data*/
+    268              Debug_writeChar(STR_EEDID_ID_CODE_1);
+    269              Debug_writeChar(STR_EEDID_ID_CODE_2);
+    270          
+    271              /* Send the high bype of a 16 bits integer*/
+    272              Debug_writeChar(size >> 8);
+    273          
+    274              /* Send the low bype of a 16 bits integer*/
+    275              Debug_writeChar(size & 0xff);
+    276          
+    277              /** Print out the buffer */
+    278              for (i = 0; i < size; i++)
+    279              {
+    280                  data = *(buff + i);
+    281                  Debug_writeUnsignedNumber(data, HEXADECIMAL_BASE);
+    282                  putch((char)STR_EEDID_DELIMITER);
+    283              }
+    284          
+    285              Debug_writeChar('\n');
+    286          }
+    287          
+    288          
+    289          
+    290          
+    291          #endif
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        0  Debug_initialize
+       16  Debug_printCec
+             16 -> Debug_printf
+       16  Debug_printDebug
+             16 -> Debug_printf
+       16  Debug_printEEDIDData
+             16 -> Debug_writeUnsignedNumber
+              0 -> usart_putchar
+             16 -> usart_putchar
+       16  Debug_printEedid
+             16 -> Debug_printf
+       16  Debug_printError
+             16 -> Debug_printf
+       16  Debug_printFac
+             16 -> Debug_printf
+       16  Debug_printI2c
+             16 -> Debug_printf
+       16  Debug_printInfo
+             16 -> Debug_printf
+       16  Debug_printRf
+             16 -> Debug_printf
+       16  Debug_printSPI
+             16 -> Debug_printf
+       16  Debug_printf
+             16 -> Debug_writeString
+             16 -> Debug_writeUnsignedNumber
+              0 -> usart_putchar
+             16 -> usart_putchar
+        0  Debug_register
+        0  Debug_unregister
+        8  Debug_writeString
+              8 -> usart_putchar
+       16  Debug_writeUnsignedNumber
+             16 -> usart_putchar
+        0  putch
+              0 -> usart_putchar
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ?<Constant "CEC">
+       4  ?<Constant "DBG">
+       8  ?<Constant "EEDID">
+       4  ?<Constant "ERR">
+       4  ?<Constant "FAC">
+       4  ?<Constant "I2C">
+       8  ?<Constant "INFO">
+       4  ?<Constant "RF">
+       4  ?<Constant "SPI">
+       8  ?<Constant "\t>>  ">
+       4  ??DataTable20
+       4  ??DataTable20_1
+       4  ??DataTable20_2
+       4  ??DataTable20_3
+       4  ??DataTable20_4
+       4  ??DataTable20_5
+       4  ??DataTable20_6
+       4  ??DataTable20_7
+       4  ??DataTable20_8
+       6  ?Subroutine0
+       8  ?Subroutine1
+      10  ?Subroutine2
+      16  CHAR_MAP
+       8  Debug_initialize
+      14  Debug_printCec
+      14  Debug_printDebug
+      54  Debug_printEEDIDData
+      16  Debug_printEedid
+      12  Debug_printError
+      14  Debug_printFac
+      14  Debug_printI2c
+      16  Debug_printInfo
+      16  Debug_printRf
+      16  Debug_printSPI
+     168  Debug_printf
+       8  Debug_register
+       8  Debug_unregister
+      20  Debug_writeString
+      56  Debug_writeUnsignedNumber
+       4  m_traceEnableMask
+       4  putch
+      12  result
+
+ 
+  16 bytes in section .bss
+  28 bytes in section .rodata
+ 558 bytes in section .text
+ 
+ 558 bytes of CODE  memory
+  28 bytes of CONST memory
+  16 bytes of DATA  memory
+
+Errors: none
+Warnings: none

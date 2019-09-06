@@ -1,0 +1,884 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:25:21 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\edid_tx\si_ed #
+#                    id_tx_scaler.c                                           #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\edid_tx\si_ed #
+#                    id_tx_scaler.c -D S4051A -D DEBUG -D FREE_RTOS -D        #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_edid_tx_scaler.lst                                 #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_edid_tx_scaler.o                                    #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\component\edid_tx\si_edid_tx_scaler.c
+      1          //************************************************************************************************
+      2          //! @file   si_edid_tx_scaler.c
+      3          //! @brief  Part of the EDID conversion considering A/V stream modifications (scaling) in repeater
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1060 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2002-2010, Silicon Image, Inc.  All rights reserved.
+     11          //***********************************************************************************************/
+     12          
+     13          
+     14          #include <string.h>
+     15          #include "si_edid_tx_component.h"
+     16          #include "si_edid_tx_internal.h"
+     17          #include "si_scaler_tables.h"
+     18          
+     19          #ifndef SII_USE_SCALER_TABLE_IN_NVM // NOT
+     20          extern ROM const videoScalerMapping_t DefaultAllowedScalerModes[];
+     21          const videoScalerMapping_t *pAllowedScalerModes = DefaultAllowedScalerModes;
+     22          #endif // NOT SII_USE_SCALER_TABLE_IN_NVM
+     23          
+     24          
+     25          //-------------------------------------------------------------------------------------------------
+     26          //! @brief      Convert EDID taking into account the video scaler conversion.
+     27          //!
+     28          //-------------------------------------------------------------------------------------------------
+     29          
+     30          void EdidTxScalerConvert( void )
+     31          {
+     32              int i, j, k;
+     33              bool_t add_vga = false;
+     34              shortDtd_t us_sdtd[MAX_NMB_OF_KNOWN_DTDS];
+     35              int nmb_of_sdtds = 0;
+     36          
+     37          #ifdef SII_USE_SCALER_TABLE_IN_NVM
+     38              videoScalerMapping_t   conversion_element;
+     39              if (!SI_HalNvmGetElement(NV__SCALER_CONVERSION, &conversion_element, 0, sizeof(conversion_element)))
+     40          #else // SII_USE_SCALER_TABLE_IN_NVM
+     41              if (!pAllowedScalerModes) // protection
+     42          #endif // SII_USE_SCALER_TABLE_IN_NVM
+     43              {
+     44                  pEdidTx->pEdidDecodData->edidInfo.ErrorCode = EDID_ERROR__INTERNAL_ERROR;
+     45                  //return;
+     46                  goto label_exit;
+     47              }
+     48          
+     49              if ( pEdidTx->parseOptions.BypassScaler)
+     50              {
+     51                  if ( pEdidTx->parseOptions.AllowPcModesOnScalerBypass)
+     52                  {
+     53                      goto label_exit;
+     54                  }
+     55                  else
+     56                  {
+     57                      if ( pEdidTx->pEdidDecodData->edidInfo.EstablishedTiming1 & 0x20) // VGA 640 x 480 @ 60Hz
+     58                      {
+     59                          add_vga = true;
+     60                      }
+     61                      goto label_disable_pc_modes;
+     62                  }
+     63              }
+     64          
+     65              // Clear new short DTD structure
+     66              memset( us_sdtd, 0, sizeof(us_sdtd));
+     67          
+     68              // move preferred and native modes to the beginning of pEdidTx->pEdidDecodData->edidInfo.SDTD[i]
+     69              // (it is needed to be sure that native/preferred modes are not cut off
+     70              // due to the limitation of US SDTD array)
+     71              // put Native and Preferred SDTDs to the beginning of the list
+     72          
+     73              for ( i=0; i<MAX_NMB_OF_KNOWN_DTDS; i++)
+     74              {
+     75                  if ( pEdidTx->pEdidDecodData->edidInfo.SDTD[i].Valid)
+     76                  {
+     77                      if ( pEdidTx->pEdidDecodData->edidInfo.SDTD[i].PreferredTiming || pEdidTx->pEdidDecodData->edidInfo.SDTD[i].Native)
+     78                      {
+     79                          memcpy( &us_sdtd[nmb_of_sdtds++], &pEdidTx->pEdidDecodData->edidInfo.SDTD[i], sizeof(shortDtd_t));
+     80                      }
+     81                  }
+     82              }
+     83              // then place the rest
+     84              for ( i=0; i<MAX_NMB_OF_KNOWN_DTDS; i++)
+     85              {
+     86                  if ( pEdidTx->pEdidDecodData->edidInfo.SDTD[i].Valid )
+     87                  {
+     88                      if ( !(pEdidTx->pEdidDecodData->edidInfo.SDTD[i].PreferredTiming || pEdidTx->pEdidDecodData->edidInfo.SDTD[i].Native))
+     89                      {
+     90                          memcpy(&us_sdtd[nmb_of_sdtds++], &pEdidTx->pEdidDecodData->edidInfo.SDTD[i], sizeof(shortDtd_t));
+     91                      }
+     92                  }
+     93              }
+     94              if ( nmb_of_sdtds > MAX_NMB_OF_KNOWN_DTDS) // protection- this must not happened
+     95              {
+     96                  nmb_of_sdtds = MAX_NMB_OF_KNOWN_DTDS;
+     97                  pEdidTx->pEdidDecodData->edidInfo.ErrorCode = EDID_ERROR__INTERNAL_ERROR;
+     98              }
+     99              // Finally copy to the DS array
+    100              memcpy( pEdidTx->pEdidDecodData->edidInfo.SDTD, us_sdtd, sizeof( pEdidTx->pEdidDecodData->edidInfo.SDTD));
+    101          
+    102              // Clear new short DTD structure
+    103              memset(us_sdtd, 0, sizeof(us_sdtd));
+    104          
+    105              // compose a list of allowed input modes based on given output modes and
+    106              // a mode conversion table
+    107          
+    108              for ( i=0; i < nmb_of_sdtds; i++)
+    109              {
+    110                  if ( pEdidTx->pEdidDecodData->edidInfo.SDTD[i].Valid)
+    111                  {
+    112                      // a valid DS SDTD
+    113                      uint8_t out_idx = pEdidTx->pEdidDecodData->edidInfo.SDTD[i].VideoIdx;
+    114                      bool_t out_ar16x9 = pEdidTx->pEdidDecodData->edidInfo.SDTD[i].Ar16x9;
+    115          
+    116          #ifdef SII_USE_SCALER_TABLE_IN_NVM
+    117                      for (j=0; SI_HalNvmGetElement(NV__SCALER_CONVERSION, &conversion_element, j, sizeof(conversion_element)) && (0xFF != conversion_element.OutFmtId); j++)
+    118                      {
+    119                          if ((out_idx == conversion_element.OutFmtId) &&
+    120                              (out_ar16x9 == conversion_element.OutAspectRatio16x9))
+    121                          {
+    122                              // output mode found
+    123                              uint8_t in_idx = conversion_element.InFmtId;
+    124                              bool_t in_ar16x9 = conversion_element.InAspectRatio16x9;
+    125          #  if (SI_HDMI_1_4_EDID_PROCESSING == ENABLE)
+    126                              bool_t capable_3d = conversion_element.CapableOf3D;
+    127          #  endif // SI_HDMI_1_4_EDID_PROCESSING
+    128          #else // SII_USE_SCALER_TABLE_IN_NVM
+    129                      for (j=0; 0xFF != pAllowedScalerModes[j].OutFmtId; j++)
+    130                      {
+    131                          if ((out_idx == pAllowedScalerModes[j].OutFmtId) &&
+    132                              (out_ar16x9 == pAllowedScalerModes[j].OutAspectRatio16x9))
+    133                          {
+    134                              // output mode found
+    135                              uint8_t in_idx = pAllowedScalerModes[j].InFmtId;
+    136                              bool_t in_ar16x9 = pAllowedScalerModes[j].InAspectRatio16x9;
+    137          #  if (SI_HDMI_1_4_EDID_PROCESSING == ENABLE)
+    138                              bool_t capable_3d = pAllowedScalerModes[j].CapableOf3D;
+    139          #  endif // SI_HDMI_1_4_EDID_PROCESSING
+    140          #endif // SII_USE_SCALER_TABLE_IN_NVM
+    141                              uint8_t in_vic = in_ar16x9 ? VideoModeTable[in_idx].Vic16x9 : VideoModeTable[in_idx].Vic4x3;
+    142                              if (0 == in_vic)
+    143                              {
+    144                                  // pAllowedScalerModes[] has an incorrect record (i.e. internal error)
+    145                                  in_ar16x9 = !in_ar16x9;
+    146                                  in_vic = in_ar16x9 ? VideoModeTable[in_idx].Vic16x9 : VideoModeTable[in_idx].Vic4x3;
+    147                                  pEdidTx->pEdidDecodData->edidInfo.ErrorCode = EDID_ERROR__INTERNAL_ERROR;
+    148                              }
+    149          
+    150                              if (vm1_640x480p == in_idx)
+    151                              {
+    152                                  // VGA 640x480
+    153                                  add_vga = true;
+    154                                  //continue;
+    155                              }
+    156          
+    157                              { // adding
+    158                                  bool_t already_added = false;
+    159                                  // Check whether a SDTD with the same VIC exists.
+    160                                  // If it does, do not allow it to be added again.
+    161                                  for (k=0; k<MAX_NMB_OF_KNOWN_DTDS; k++) // find an empty slot in us_sdtd[]
+    162                                  {
+    163                                      if (us_sdtd[k].Valid)
+    164                                      {
+    165                                          if (in_vic == us_sdtd[k].Vic)
+    166                                          {
+    167                                              already_added = true;
+    168                                              break;
+    169                                          }
+    170                                      }
+    171                                  } // for (k) 1st
+    172          
+    173                                  if ( !already_added)
+    174                                  {
+    175                                      // find an empty slot in us_sdtd[] to add a new element
+    176                                      for (k=0; k<MAX_NMB_OF_KNOWN_DTDS; k++)
+    177                                      {
+    178                                          if (!us_sdtd[k].Valid)
+    179                                          {
+    180                                              // found an empty slot in the us_sdtd table
+    181                                              us_sdtd[k].Valid = true; // occupate the slot
+    182                                              us_sdtd[k].VideoIdx = in_idx;
+    183                                              us_sdtd[k].Vic = in_vic;
+    184                                              us_sdtd[k].Ar16x9 = in_ar16x9;
+    185                                              us_sdtd[k].DisplayType = pEdidTx->pEdidDecodData->edidInfo.SDTD[i].DisplayType;
+    186          #if (SI_HDMI_1_4_EDID_PROCESSING == ENABLE)
+    187                                              if (capable_3d)
+    188                                              {
+    189                                                  us_sdtd[k].masked_3d = pEdidTx->pEdidDecodData->edidInfo.SDTD[i].masked_3d;
+    190                                                  us_sdtd[k].struct_3d_present = pEdidTx->pEdidDecodData->edidInfo.SDTD[i].struct_3d_present;
+    191                                                  us_sdtd[k].struct_3d = pEdidTx->pEdidDecodData->edidInfo.SDTD[i].struct_3d;
+    192                                                  us_sdtd[k].detail_3d = pEdidTx->pEdidDecodData->edidInfo.SDTD[i].detail_3d;
+    193           memcpy(us_sdtd[k].indiv3dModes,
+    194                                                  		pEdidTx->edidInfo.SDTD[i].indiv3dModes,
+    195                                                  		sizeof(Indiv3dMode_t) * MAX_INDIVIDUAL_3D_MODES_PER_VIC);
+    196                                                  us_sdtd[k].indiv3dModeLength = pEdidTx->edidInfo.SDTD[i].indiv3dModeLength;										
+    197                                              }
+    198          #endif // SI_HDMI_1_4_EDID_PROCESSING
+    199                                              break;
+    200                                          }  // if (US SDTD valid)
+    201                                      } // for (k) 2nd
+    202                                      if (MAX_NMB_OF_KNOWN_DTDS == k)
+    203                                      {
+    204                                          // no more empty slots
+    205                                          pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__NOT_ENOUGH_ROOM;
+    206                                          goto label_leave_all_cycles;
+    207                                      }
+    208                                  } // if (!already_added)
+    209                              } // adding
+    210                          }
+    211                      } // for (j)
+    212                  } // if (DS SDTD valid)
+    213              } // for (i)
+    214          label_leave_all_cycles:
+    215          
+    216              // Copy Preferred and Native flags to those input formats
+    217              // that match output formats with the flags
+    218              for ( i=0; i<nmb_of_sdtds; i++)
+    219              {
+    220                  if ( pEdidTx->pEdidDecodData->edidInfo.SDTD[i].Valid)
+    221                  {
+    222                      // a valid DS SDTD
+    223                      uint8_t out_idx = pEdidTx->pEdidDecodData->edidInfo.SDTD[i].VideoIdx;
+    224                      uint8_t out_vic = pEdidTx->pEdidDecodData->edidInfo.SDTD[i].Vic;
+    225                      for ( k=0; k<MAX_NMB_OF_KNOWN_DTDS; k++) // look through us_sdtd[]
+    226                      {
+    227                          if ( (us_sdtd[k].Valid) &&
+    228                              (out_idx == us_sdtd[k].VideoIdx) &&
+    229                              (out_vic == us_sdtd[k].Vic) )
+    230                          {
+    231                              // found the same input video mode as the given output one
+    232                              us_sdtd[k].Native = pEdidTx->pEdidDecodData->edidInfo.SDTD[i].Native;
+    233                              us_sdtd[k].PreferredTiming = pEdidTx->pEdidDecodData->edidInfo.SDTD[i].PreferredTiming;
+    234                              break;
+    235                          }
+    236                      } // for (k)
+    237                  } // if (DS SDTD valid)
+    238              } // for (i)
+    239          
+    240          
+    241          
+    242              // Copy allowed scaler input modes to the input/result buffer
+    243          
+    244              memcpy( pEdidTx->pEdidDecodData->edidInfo.SDTD, us_sdtd, sizeof( pEdidTx->pEdidDecodData->edidInfo.SDTD));
+    245          
+    246              pEdidTx->pEdidDecodData->edidInfo.RangeLimits.MinV_Hz   = pEdidTx->edidConfig.minVertHz;
+    247              pEdidTx->pEdidDecodData->edidInfo.RangeLimits.MaxV_Hz   = pEdidTx->edidConfig.maxVertHz;
+    248              pEdidTx->pEdidDecodData->edidInfo.RangeLimits.MinH_kHz  = pEdidTx->edidConfig.minHorizKhz;
+    249              pEdidTx->pEdidDecodData->edidInfo.RangeLimits.MaxH_kHz  = pEdidTx->edidConfig.maxHorizKhz;
+    250              pEdidTx->pEdidDecodData->edidInfo.RangeLimits.MaxPixClk_10MHz = pEdidTx->edidConfig.maxPixClock10Mhz;
+    251              pEdidTx->pEdidDecodData->edidInfo.DescriptorValid.RangeLimits = true;
+    252          
+    253              // Suppose our scaler does not support PC modes except VGA.
+    254              // If it is not true, modify the code below.
+    255          label_disable_pc_modes:
+    256              // Disable PC video modes
+    257          //  if (pEdidTx->parseOptions.VgaSupportedByScaler) // a user option
+    258          //      pEdidTx->pEdidDecodData->edidInfo.EstablishedTiming1 = 0x20; // 640 x 480 @ 60Hz
+    259          //  else
+    260              pEdidTx->pEdidDecodData->edidInfo.EstablishedTiming1 = 0;
+    261              if (add_vga)
+    262              {
+    263                  pEdidTx->pEdidDecodData->edidInfo.EstablishedTiming1 |= 0x20; // 640 x 480 @ 60Hz
+    264              }
+    265              pEdidTx->pEdidDecodData->edidInfo.EstablishedTiming2 = 0x00;
+    266              pEdidTx->pEdidDecodData->edidInfo.ManufacturerReservedTiming = 0x00;
+    267              memset( pEdidTx->pEdidDecodData->edidInfo.StandardTiming, 0x01, sizeof( pEdidTx->pEdidDecodData->edidInfo.StandardTiming));
+    268          #ifdef COLLECT_EXCESSIVE_INFO
+    269              pEdidTx->pEdidDecodData->edidInfo.DescriptorValid.StandardTiming = false;
+    270          #endif // COLLECT_EXCESSIVE_INFO
+    271          #ifdef COLLECT_EXTENDED_DATA_BLOCKS
+    272              pEdidTx->pEdidDecodData->edidInfo.UnknownVideoExt_Idx = 0;
+    273          #endif // COLLECT_EXTENDED_DATA_BLOCKS
+    274              memset( pEdidTx->pEdidDecodData->edidInfo.DTD, 0, sizeof( pEdidTx->pEdidDecodData->edidInfo.DTD));
+    275          
+    276          label_exit:
+    277          ;
+    278          }
+    279          
+    280          
+    281          //-------------------------------------------------------------------------------------------------
+    282          //! @brief      Check if scaler can do given conversion (from one video mode to another).
+    283          //!
+    284          //!             More detailed description.
+    285          //!
+    286          //! @param[in]  inIndex        - input video mode ID,
+    287          //! @param[in]  inAspectRatio  - input aspect ratio,
+    288          //! @param[in]  outIndex       - output video mode ID,
+    289          //! @param[in]  outAspectRatio - output aspect ratio.
+    290          //!
+    291          //! @retval     true  - conversion supported,
+    292          //! @retval     false - conversion not supported.
+    293          //-------------------------------------------------------------------------------------------------
+    294          
+    295          static bool_t DoesScalerSupport(uint8_t inIndex, aspectRatio_t inAspectRatio, uint8_t outIndex, aspectRatio_t outAspectRatio)
+    296          {
+    297              int i;
+    298              bool_t ret = false;
+    299              bool_t in_ar16x9 = (inAspectRatio == SI_EDID_TX_ASPECT_RATIO_UNKNOWN_16x9);
+    300              bool_t out_ar16x9 = (outAspectRatio == SI_EDID_TX_ASPECT_RATIO_UNKNOWN_16x9);
+    301              bool_t in_ar_unknown = (SI_EDID_TX_ASPECT_RATIO_UNKNOWN == inAspectRatio);
+    302              bool_t out_ar_unknown = (SI_EDID_TX_ASPECT_RATIO_UNKNOWN == outAspectRatio);
+    303          
+    304          #ifdef SII_USE_SCALER_TABLE_IN_NVM
+    305              videoScalerMapping_t   conversion_element;
+    306              for (i=0; SI_HalNvmGetElement(NV__SCALER_CONVERSION, &conversion_element, i, sizeof(conversion_element)) && (0xFF != conversion_element.OutFmtId); i++)
+    307              {
+    308                  if ( (inIndex == conversion_element.InFmtId) &&
+    309                      (outIndex == conversion_element.OutFmtId) &&
+    310                      (in_ar_unknown || (in_ar16x9 == conversion_element.InAspectRatio16x9)) &&
+    311                      (out_ar_unknown || (out_ar16x9 == conversion_element.OutAspectRatio16x9)) )
+    312                  {
+    313                      ret = true;
+    314                      break;
+    315                  }
+    316              }
+    317          #else // SII_USE_SCALER_TABLE_IN_NVM
+    318              for (i=0; 0xFF != pAllowedScalerModes[i].OutFmtId; i++)
+    319              {
+    320                  if ( (inIndex == pAllowedScalerModes[i].InFmtId) &&
+    321                      (outIndex == pAllowedScalerModes[i].OutFmtId) &&
+    322                      (in_ar_unknown || (in_ar16x9 == pAllowedScalerModes[i].InAspectRatio16x9)) &&
+    323                      (out_ar_unknown || (out_ar16x9 == pAllowedScalerModes[i].OutAspectRatio16x9)) )
+    324                  {
+    325                      ret = true;
+    326                      break;
+    327                  }
+    328              }
+    329          #endif // SII_USE_SCALER_TABLE_IN_NVM
+    330              return ret;
+    331          }
+    332          
+    333          //-------------------------------------------------------------------------------------------------
+    334          //! @brief      Return the downstream best fit output video mode for the given input mode.
+    335          //!
+    336          //!             This function is intended to be called when user selected automatic selection
+    337          //!             of output resolution, input video mode is determined on RX side and
+    338          //!             it is time to make decision on it to configure repeater's scaler.
+    339          //!
+    340          //! @param[in]  inIdx        - input video format ID,
+    341          //! @param[in]  inAspRatio   - input video aspect ratio,
+    342          //! @param[out] pOutIdx      - pointer to output video format ID,
+    343          //! @param[out] pOutAspRatio - pointer to output video aspect ratio,
+    344          //!
+    345          //! @return     true - if a scaler supported mode is found, false - otherwise.
+    346          //-------------------------------------------------------------------------------------------------
+    347          
+    348          bool_t SiiEdidTxBestDsVideoModeGet(uint8_t inIdx, aspectRatio_t inAspRatio, uint8_t *pOutIdx, aspectRatio_t *pOutAspRatio)
+    349          {
+    350              bool_t scaler_supported = true; // true if a scaler supported mode is found
+    351              uint8_t best_fit_rate = 0; // tells how good the output mode fits to the DS device
+    352              uint8_t best_out_idx = vm1_640x480p; // VGA
+    353              aspectRatio_t best_out_ar = SI_EDID_TX_ASPECT_RATIO_4x3; // default aspect ratio for VGA
+    354          
+    355              {
+    356                  int i;
+    357                  bool_t in_ar16x9 = (SI_EDID_TX_ASPECT_RATIO_UNKNOWN_16x9 == inAspRatio);
+    358                  bool_t in_ar_unknown = (SI_EDID_TX_ASPECT_RATIO_UNKNOWN == inAspRatio);
+    359          
+    360          #ifdef SII_USE_SCALER_TABLE_IN_NVM
+    361                  videoScalerMapping_t   conversion_element;
+    362                  for (i=0; SI_HalNvmGetElement(NV__SCALER_CONVERSION, &conversion_element, i, sizeof(conversion_element)) && (0xFF != conversion_element.OutFmtId); i++)
+    363                  {
+    364                      if ((inIdx == conversion_element.InFmtId) &&
+    365                          (in_ar_unknown || (in_ar16x9 == conversion_element.InAspectRatio16x9)))
+    366                      {
+    367                          uint8_t out_idx = conversion_element.OutFmtId;
+    368                          uint8_t out_ar16x9 = conversion_element.OutAspectRatio16x9;
+    369                          uint8_t fit_rate = SiiEdidTxOutVideoModeRankGet(out_idx, inAspRatio);
+    370                          if (fit_rate > best_fit_rate)
+    371                          {
+    372                              best_fit_rate = fit_rate;
+    373                              best_out_idx = out_idx;
+    374                              best_out_ar = out_ar16x9 ? SI_EDID_TX_ASPECT_RATIO_UNKNOWN_16x9 : SI_EDID_TX_ASPECT_RATIO_4x3;
+    375                          }
+    376                      }
+    377                  }
+    378          #else // SII_USE_SCALER_TABLE_IN_NVM
+    379                  for (i=0; 0xFF != pAllowedScalerModes[i].OutFmtId; i++)
+    380                  {
+    381                      if ((inIdx == pAllowedScalerModes[i].InFmtId) &&
+    382                          (in_ar_unknown || (in_ar16x9 == pAllowedScalerModes[i].InAspectRatio16x9)))
+    383                      {
+    384                          uint8_t out_idx = pAllowedScalerModes[i].OutFmtId;
+    385                          uint8_t out_ar16x9 = pAllowedScalerModes[i].OutAspectRatio16x9;
+    386                          uint8_t fit_rate = SiiEdidTxOutVideoModeRankGet(out_idx, inAspRatio);
+    387                          if (fit_rate > best_fit_rate)
+    388                          {
+    389                              best_fit_rate = fit_rate;
+    390                              best_out_idx = out_idx;
+    391                              best_out_ar = out_ar16x9 ? SI_EDID_TX_ASPECT_RATIO_UNKNOWN_16x9 : SI_EDID_TX_ASPECT_RATIO_4x3;
+    392                          }
+    393                      }
+    394                  }
+    395          #endif // SII_USE_SCALER_TABLE_IN_NVM
+    396              }
+    397          
+    398              if (0 == best_fit_rate)
+    399              {
+    400                  // no supported modes were found
+    401          #ifdef DEFAULT_SYSTEM__PAL
+    402          #  define FIRST_SYSTEM SI_EDID_TX_SUPPORT_PAL
+    403          #  define FIRST_MODE vm17_18_720x576p
+    404          #  define SECOND_SYSTEM SI_EDID_TX_SUPPORT_NTSC
+    405          #  define SECOND_MODE vm2_3_720x480p
+    406          #else // DEFAULT_SYSTEM__PAL
+    407          #  define FIRST_SYSTEM SI_EDID_TX_SUPPORT_NTSC
+    408          #  define FIRST_MODE vm2_3_720x480p
+    409          #  define SECOND_SYSTEM SI_EDID_TX_SUPPORT_PAL
+    410          #  define SECOND_MODE vm17_18_720x576p
+    411          #endif // DEFAULT_SYSTEM__PAL
+    412          
+    413                  bool_t only16x9 = ((!SiiEdidTxDoesDsSupport(SI_EDID_TX_SUPPORT_AR_4x3)) &&
+    414                          SiiEdidTxDoesDsSupport(SI_EDID_TX_SUPPORT_AR_16x9));
+    415          
+    416                  // if the scaler supports that transformation !!!
+    417          
+    418                  if (SiiEdidTxDoesDsSupport(FIRST_SYSTEM))
+    419                  {
+    420                      if (only16x9)
+    421                      {
+    422                          if ( DoesScalerSupport(inIdx, inAspRatio, FIRST_MODE, SI_EDID_TX_ASPECT_RATIO_UNKNOWN_16x9) )
+    423                          {
+    424                              best_out_idx = FIRST_MODE;
+    425                              best_out_ar = SI_EDID_TX_ASPECT_RATIO_UNKNOWN_16x9;
+    426                          }
+    427                          else if ( DoesScalerSupport(inIdx, inAspRatio, FIRST_MODE, SI_EDID_TX_ASPECT_RATIO_4x3) )
+    428                          {
+    429                              best_out_idx = FIRST_MODE;
+    430                              best_out_ar = SI_EDID_TX_ASPECT_RATIO_4x3;
+    431                          }
+    432                      }
+    433                      else
+    434                      {
+    435                          if ( DoesScalerSupport(inIdx, inAspRatio, FIRST_MODE, SI_EDID_TX_ASPECT_RATIO_4x3) )
+    436                          {
+    437                              best_out_idx = FIRST_MODE;
+    438                              best_out_ar = SI_EDID_TX_ASPECT_RATIO_4x3;
+    439                          }
+    440                          else if ( DoesScalerSupport(inIdx, inAspRatio, FIRST_MODE, SI_EDID_TX_ASPECT_RATIO_UNKNOWN_16x9) )
+    441                          {
+    442                              best_out_idx = FIRST_MODE;
+    443                              best_out_ar = SI_EDID_TX_ASPECT_RATIO_UNKNOWN_16x9;
+    444                          }
+    445                      }
+    446                  }
+    447                  else if (SiiEdidTxDoesDsSupport(SECOND_SYSTEM))
+    448                  {
+    449                      if (only16x9)
+    450                      {
+    451                          if ( DoesScalerSupport(inIdx, inAspRatio, SECOND_MODE, SI_EDID_TX_ASPECT_RATIO_UNKNOWN_16x9) )
+    452                          {
+    453                              best_out_idx = SECOND_MODE;
+    454                              best_out_ar = SI_EDID_TX_ASPECT_RATIO_UNKNOWN_16x9;
+    455                          }
+    456                          else if ( DoesScalerSupport(inIdx, inAspRatio, SECOND_MODE, SI_EDID_TX_ASPECT_RATIO_4x3) )
+    457                          {
+    458                              best_out_idx = SECOND_MODE;
+    459                              best_out_ar = SI_EDID_TX_ASPECT_RATIO_4x3;
+    460                          }
+    461                      }
+    462                      else
+    463                      {
+    464                          if ( DoesScalerSupport(inIdx, inAspRatio, SECOND_MODE, SI_EDID_TX_ASPECT_RATIO_4x3) )
+    465                          {
+    466                              best_out_idx = SECOND_MODE;
+    467                              best_out_ar = SI_EDID_TX_ASPECT_RATIO_4x3;
+    468                          }
+    469                          else if ( DoesScalerSupport(inIdx, inAspRatio, FIRST_MODE, SI_EDID_TX_ASPECT_RATIO_UNKNOWN_16x9) )
+    470                          {
+    471                              best_out_idx = SECOND_MODE;
+    472                              best_out_ar = SI_EDID_TX_ASPECT_RATIO_UNKNOWN_16x9;
+    473                          }
+    474                      }
+    475                  }
+    476                  else if ( DoesScalerSupport(inIdx, inAspRatio, vm1_640x480p, SI_EDID_TX_ASPECT_RATIO_4x3) )
+    477                  {
+    478                      best_out_idx = vm1_640x480p;
+    479                      best_out_ar = SI_EDID_TX_ASPECT_RATIO_4x3;
+    480                  }
+    481                  else if ( DoesScalerSupport(inIdx, inAspRatio, inIdx, inAspRatio) )
+    482                  {
+    483                      best_out_idx = inIdx;
+    484                      best_out_ar = inAspRatio;
+    485                  }
+    486                  else
+    487                  {
+    488                      // switch off scaler
+    489                      scaler_supported = false;
+    490                      best_out_idx = inIdx;
+    491                      best_out_ar = inAspRatio;
+    492                  }
+    493              }
+    494              *pOutIdx = best_out_idx;
+    495              *pOutAspRatio = (uint8_t) best_out_ar;
+    496          
+    497              return scaler_supported;
+    498          }
+    499          
+    500          
+    501          //-------------------------------------------------------------------------------------------------
+    502          //! @brief      Return aspect ratio of scaled video.
+    503          //!
+    504          //!             This function is intended to be called when user selected one
+    505          //!             of the output resolutions, input video mode is determined on RX and
+    506          //!             it is time to determine whether scaler can do that conversion and if
+    507          //!             it can- what is the output aspect ratio.
+    508          //!
+    509          //! @param[in]  in_idx  - input video mode ID,
+    510          //! @param[in]  out_idx - output video mode ID,
+    511          //! @param[in]  in_ar   - aspect ratio of input video,
+    512          //!
+    513          //! @return     the aspect ratio if the conversion is possible.
+    514          //! @retval     SI_EDID_TX_ASPECT_RATIO_UNKNOWN - if out_idx is not available.
+    515          //-------------------------------------------------------------------------------------------------
+    516          
+    517          aspectRatio_t SiiEdidTxScalerOutAspectRatioGet(uint8_t inIdx, aspectRatio_t inAspRatio, uint8_t outIdx)
+    518          {
+    519              aspectRatio_t out_ar = SI_EDID_TX_ASPECT_RATIO_UNKNOWN;
+    520              bool_t ar4x3 = false;
+    521              bool_t ar16x9 = false;
+    522              if ( DoesScalerSupport(inIdx, inAspRatio, outIdx, SI_EDID_TX_ASPECT_RATIO_4x3) )
+    523                  ar4x3 = true;
+    524              if ( DoesScalerSupport(inIdx, inAspRatio, outIdx, SI_EDID_TX_ASPECT_RATIO_UNKNOWN_16x9) )
+    525                  ar16x9 = true;
+    526              if (ar4x3 && (SI_EDID_TX_ASPECT_RATIO_4x3 == inAspRatio))
+    527                  out_ar = SI_EDID_TX_ASPECT_RATIO_4x3;
+    528              else if (ar16x9 && (SI_EDID_TX_ASPECT_RATIO_UNKNOWN_16x9 == inAspRatio))
+    529                  out_ar = SI_EDID_TX_ASPECT_RATIO_UNKNOWN_16x9;
+    530              else if (ar4x3 && (!ar16x9))
+    531                  out_ar = SI_EDID_TX_ASPECT_RATIO_4x3;
+    532              else if ((!ar4x3) && ar16x9)
+    533                  out_ar = SI_EDID_TX_ASPECT_RATIO_UNKNOWN_16x9;
+    534              else if (ar4x3 && ar16x9)
+    535              {
+    536                  bool_t only16x9 = ((!SiiEdidTxDoesDsSupport(SI_EDID_TX_SUPPORT_AR_4x3)) &&
+    537                          SiiEdidTxDoesDsSupport(SI_EDID_TX_SUPPORT_AR_16x9));
+    538                  out_ar = only16x9 ? SI_EDID_TX_ASPECT_RATIO_UNKNOWN_16x9 : SI_EDID_TX_ASPECT_RATIO_4x3;
+    539              }
+    540          
+    541          
+    542              return out_ar;
+    543          }
+    544          
+    545          
+    546          //-------------------------------------------------------------------------------------------------
+    547          //! @brief      This function determines if the scaler supports the given video mode.
+    548          //!
+    549          //!             The function could be used in conjunction with SiiEdidTxOutVideoModeRankGet()
+    550          //!             to determine whether or not to dim given resolution in a repeater output mode menu.
+    551          //!
+    552          //! @param[in]  idx - video mode ID,
+    553          //! @param[in]  ar  - aspect ratio.
+    554          //!
+    555          //! @return     If it returns true the mode is supported, false otherwise.
+    556          //-------------------------------------------------------------------------------------------------
+    557          
+    558          bool_t SiiEdidTxScalerIsOutVideoModeSupported(uint8_t idx, aspectRatio_t aspRatio)
+    559          {
+    560              bool_t support = false;
+    561              int i;
+    562              bool_t ar16x9 = (SI_EDID_TX_ASPECT_RATIO_UNKNOWN_16x9 == aspRatio);
+    563              bool_t ar_unknown = (SI_EDID_TX_ASPECT_RATIO_UNKNOWN == aspRatio);
+    564          
+    565          #ifdef SII_USE_SCALER_TABLE_IN_NVM
+    566              videoScalerMapping_t   conversion_element;
+    567              for (i=0; SI_HalNvmGetElement(NV__SCALER_CONVERSION, &conversion_element, i, sizeof(conversion_element)) && (0xFF != conversion_element.OutFmtId); i++)
+    568              {
+    569                  if ( (ar_unknown || (ar16x9 == conversion_element.OutAspectRatio16x9)) &&
+    570                      (idx == conversion_element.OutFmtId) )
+    571                  {
+    572                      support = true;
+    573                      break;
+    574                  }
+    575              }
+    576          #else // SII_USE_SCALER_TABLE_IN_NVM
+    577              for (i=0; 0xFF != pAllowedScalerModes[i].OutFmtId; i++)
+    578              {
+    579                  if ( (ar_unknown || (ar16x9 == pAllowedScalerModes[i].OutAspectRatio16x9)) &&
+    580                      (idx == pAllowedScalerModes[i].OutFmtId) )
+    581                  {
+    582                      support = true;
+    583                      break;
+    584                  }
+    585              }
+    586          #endif // SII_USE_SCALER_TABLE_IN_NVM
+    587              return support;
+    588          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       28  DoesScalerSupport
+      552  EdidTxScalerConvert
+             552 -> __aeabi_memclr4
+             552 -> __aeabi_memcpy
+             552 -> __aeabi_memcpy4
+             552 -> __aeabi_memset4
+       56  SiiEdidTxBestDsVideoModeGet
+              56 -> DoesScalerSupport
+              56 -> SiiEdidTxDoesDsSupport
+              56 -> SiiEdidTxOutVideoModeRankGet
+       16  SiiEdidTxScalerIsOutVideoModeSupported
+       32  SiiEdidTxScalerOutAspectRatioGet
+              32 -> DoesScalerSupport
+              32 -> SiiEdidTxDoesDsSupport
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable3
+       4  ??DataTable3_1
+       4  ??DataTable3_2
+      16  ?Subroutine0
+      14  ?Subroutine1
+      10  ?Subroutine2
+      10  ?Subroutine3
+     112  DoesScalerSupport
+     850  EdidTxScalerConvert
+     312  SiiEdidTxBestDsVideoModeGet
+      70  SiiEdidTxScalerIsOutVideoModeSupported
+     104  SiiEdidTxScalerOutAspectRatioGet
+       4  pAllowedScalerModes
+
+ 
+     4 bytes in section .data
+ 1 510 bytes in section .text
+ 
+ 1 510 bytes of CODE memory
+     4 bytes of DATA memory
+
+Errors: none
+Warnings: 2

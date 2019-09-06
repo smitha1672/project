@@ -1,0 +1,725 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:23:48 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\application\sk_app_infr #
+#                    ared.c                                                   #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\application\sk_app_infr #
+#                    ared.c -D S4051A -D DEBUG -D FREE_RTOS -D                #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\sk_app_infrared.lst                                   #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\sk_app_infrared.o                                      #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\application\sk_app_infrared.c
+      1          //***************************************************************************
+      2          //!file     sk_app_infrared.c
+      3          //!brief    Processes RC commands.
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2009-2012, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include "sk_application.h"
+     14          #include "si_timer.h" // for SiiPlatformTimerSysTicksGet();
+     15          #if INC_CEC
+     16          #include "si_cec_component.h"
+     17          #endif
+     18          #include "si_osal_timer.h"
+     19          #include "si_drv_switch.h"
+     20          #include "cea931_keys.h"
+     21          
+     22          //------------------------------------------------------------------------------
+     23          // RC5 remote key to CEA931 key mapping
+     24          // Commented out commands below are not required for this product
+     25          //------------------------------------------------------------------------------
+     26          SiiCea931Translate_t cea931Translate[43] =
+     27          {
+     28              {  CEA931_KEY_SELECT,          RC5_INFO,                   "Select"},
+     29              {  CEA931_KEY_UP,              RC5_CURSOR_STEP_UP,         "Up"},
+     30              {  CEA931_KEY_DOWN,            RC5_CURSOR_STEP_DOWN,       "Down"},
+     31              {  CEA931_KEY_LEFT,            RC5_CURSOR_STEP_LEFT,       "Left"},
+     32              {  CEA931_KEY_RIGHT,           RC5_CURSOR_STEP_RIGHT,      "Right"},
+     33              /*
+     34              {  CEA931_KEY_RIGHT_UP,        RC5_UNKNOWN,                 "Right Up"},
+     35              {  CEA931_KEY_RIGHT_DOWN,      RC5_UNKNOWN,                 "Right Down"},
+     36              {  CEA931_KEY_LEFT_UP,         RC5_UNKNOWN,                 "Left Up"},
+     37              {  CEA931_KEY_LEFT_DOWN,       RC5_UNKNOWN,                 "Left Down"},
+     38              */
+     39              {  CEA931_KEY_ROOT_MENU,       RC5_MENU,                   "Root Menu"},
+     40              /*
+     41              {  CEA931_KEY_SETUP_MENU,      RC5_UNKNOWN,                 "Setup Menu"},
+     42              {  CEA931_KEY_CONTENTS_MENU,   RC5_UNKNOWN,                 "Contents Menu"},
+     43              {  CEA931_KEY_FAVORITE_MENU,   RC5_UNKNOWN,                 "Favorite Menu"},
+     44              */
+     45              {  CEA931_KEY_EXIT,            RC5_UNKNOWN,                "Exit"},
+     46                 //0x0E - 0x1F Reserved
+     47              {  CEA931_KEY_NUM_0,           RC5_0,                      "Num 0"},
+     48              {  CEA931_KEY_NUM_1,           RC5_1,                      "Num 1"},
+     49              {  CEA931_KEY_NUM_2,           RC5_2,                      "Num 2"},
+     50              {  CEA931_KEY_NUM_3,           RC5_3,                      "Num 3"},
+     51              {  CEA931_KEY_NUM_4,           RC5_4,                      "Num 4"},
+     52              {  CEA931_KEY_NUM_5,           RC5_5,                      "Num 5"},
+     53              {  CEA931_KEY_NUM_6,           RC5_6,                      "Num 6"},
+     54              {  CEA931_KEY_NUM_7,           RC5_7,                      "Num 7"},
+     55              {  CEA931_KEY_NUM_8,           RC5_8,                      "Num 8"},
+     56              {  CEA931_KEY_NUM_9,           RC5_9,                      "Num 9"},
+     57              /*
+     58              {  CEA931_KEY_DOT,             RC5_UNKNOWN,                "Dot"},
+     59              */
+     60              {  CEA931_KEY_ENTER,           RC5_UNKNOWN,                "Enter"},
+     61              {  CEA931_KEY_CLEAR,           RC5_UNKNOWN,                "Clear"},
+     62                 //0x2D - 0x2F Reserved
+     63              {  CEA931_KEY_CH_UP,           RC5_PRG_UP,                 "Channel Up"},
+     64              {  CEA931_KEY_CH_DOWN,         RC5_PRG_DOWN,               "Channel Down"},
+     65              {  CEA931_KEY_PRE_CH,          RC5_ALT_CHANNEL,            "Previous Channel"},
+     66              {  CEA931_KEY_SOUND_SELECT,    RC5_UNKNOWN,                "Sound Select"},
+     67              /*
+     68              {  CEA931_KEY_INPUT_SELECT,    RC5_INPUT,                  "Input Select"},
+     69              {  CEA931_KEY_SHOW_INFO,       RC5_UNKNOWN,                "Show Info"},
+     70              {  CEA931_KEY_HELP,            RC5_UNKNOWN,                "Help"},
+     71              {  CEA931_KEY_PAGE_UP,         RC5_UNKNOWN,                "Page Up"},
+     72              {  CEA931_KEY_PAGE_DOWN,       RC5_UNKNOWN,                "Page Down"},
+     73              */
+     74                 //0x39 - 0x3F Reserved
+     75              {  CEA931_KEY_POWER_TOGGLE_FUNC,    RC5_STANDBY,           "Power"},
+     76              {  CEA931_KEY_VOL_UP,               RC5_VOL_UP,            "Volume Up"},
+     77              {  CEA931_KEY_VOL_DOWN,             RC5_VOL_DOWN,          "Volume Down"},
+     78              {  CEA931_KEY_MUTE,                 RC5_MUTE,           "Mute"},
+     79              {  CEA931_KEY_PLAY,                 RC5_PLAY,              "Play"},
+     80              {  CEA931_KEY_STOP,                 RC5_STOP,              "Stop"},
+     81              {  CEA931_KEY_PAUSE,                RC5_PAUSE,             "Pause"},
+     82          #if (PHILIPS_REMOTE == 1)
+     83              {  CEA931_KEY_RECORD,               RC5_TOGGLE,            "Record"},
+     84          #else
+     85              {  CEA931_KEY_RECORD,               RC5_GUIDE,            "Record"},
+     86          #endif
+     87              {  CEA931_KEY_REWIND,               RC5_FAST_REW,          "Rewind"},
+     88              {  CEA931_KEY_FAST_FWD,             RC5_FAST_FWD,          "Fast Fwd"},
+     89              {  CEA931_KEY_EJECT,                RC5_UNKNOWN,           "Eject"},
+     90              {  CEA931_KEY_FWD,                  RC5_UNKNOWN,           "Forward"},
+     91              {  CEA931_KEY_BKWD,                 RC5_UNKNOWN,           "Backward"},
+     92                 //0X4D - 0x4F Reserved
+     93              /*
+     94              {  CEA931_KEY_ANGLE,           RC5_UNKNOWN,                "Angle"},
+     95              {  CEA931_KEY_SUBPICTURE,      RC5_UNKNOWN,                "Subpicture"},
+     96              */
+     97                 //0x52 - 0x5F Reserved
+     98              {  CEA931_KEY_PLAY_FUNC,       RC5_UNKNOWN,                "Play Function"},
+     99              {  CEA931_KEY_PAUSE_PLAY_FUNC, RC5_UNKNOWN,                "Pause Play Function"},
+    100              {  CEA931_KEY_RECORD_FUNC,     RC5_UNKNOWN,                "Record Function"},
+    101              {  CEA931_KEY_PAUSE_REC_FUNC,  RC5_UNKNOWN,                "Pause Record Function"},
+    102              {  CEA931_KEY_STOP_FUNC,       RC5_UNKNOWN,                "Stop Function"},
+    103              {  CEA931_KEY_MUTE_FUNC,       RC5_UNKNOWN,                "Mute Function"},
+    104              {  CEA931_KEY_UN_MUTE_FUNC,    RC5_UNKNOWN,                "Un-Mute Function"},
+    105              /*
+    106              {  CEA931_KEY_TUNE_FUNC,       RC5_UNKNOWN,                "Tune Function"},
+    107              {  CEA931_KEY_MEDIA_FUNC,      RC5_UNKNOWN,                "Media Function"},
+    108                 //0x69 - 0x70 Reserved
+    109              {  CEA931_KEY_F1,              RC5_UNKNOWN,                "F1"},
+    110              {  CEA931_KEY_F2,              RC5_UNKNOWN,                "F2"},
+    111              {  CEA931_KEY_F3,              RC5_UNKNOWN,                "F3"},
+    112              {  CEA931_KEY_F4,              RC5_UNKNOWN,                "F4"},
+    113              {  CEA931_KEY_F5,              RC5_UNKNOWN,                "F5"}
+    114              {  //0x76
+    115              */
+    116                 // 0x77 - 0x7F Reserved
+    117          };
+    118          
+    119          //------------------------------------------------------------------------------
+    120          //! @brief  Convert the passed RC5 key code to CEA-931 spec key code.
+    121          //! @param[in]  keyData - RC5 key code
+    122          //! @return     uint8_t - CEA931 key code
+    123          //------------------------------------------------------------------------------
+    124          uint8_t SkAppIrConvertToCea931 ( uint8_t keyData )
+    125          {
+    126              uint8_t i, keyCompare;
+    127              uint8_t retVal = 0xFF;
+    128              uint8_t length = sizeof(cea931Translate)/sizeof(SiiCea931Translate_t);
+    129          
+    130              // Translate RC5 key to CEA931 key
+    131              for ( i = 0; i < length ; i++ )
+    132              {
+    133                  keyCompare = cea931Translate[i].rc5KeyCode;
+    134                  if ( keyData == keyCompare )
+    135                  {
+    136                      retVal = cea931Translate[i].rcpKeyCode;
+    137                      DEBUG_PRINT( MSG_DBG, "RCP:: Key ID: %s\n", cea931Translate[i].rcpName );
+    138                      break;
+    139                  }
+    140              }
+    141          
+    142              /* Return the new code or 0xFF if not found.    */
+    143          
+    144              return( ( i == length ) ? 0xFF : retVal );
+    145          }
+    146          
+    147          //------------------------------------------------------------------------------
+    148          // Module data
+    149          //------------------------------------------------------------------------------
+    150          
+    151          extern bool_t SkRemoteRequestHandler ( void );
+    152          
+    153          char *zoneMsgs [] =
+    154          {
+    155              "Zone 1",
+    156              "Zone 2"
+    157          };
+    158          
+    159          //------------------------------------------------------------------------------
+    160          // Function:    SkAppIrGetSingleDigit
+    161          // Description: Waits for user to press digit key within passed range.
+    162          // Parameters:  rangeEnd - maximum value (0 is minimum)
+    163          // Returns:     Valid digit pressed by user.
+    164          //------------------------------------------------------------------------------
+    165          
+    166          uint8_t SkAppIrGetSingleDigit ( uint8_t rangeEnd )
+    167          {
+    168              uint16_t        rcKey;
+    169              uint8_t         digitValue = 0;
+    170              bool_t          done = false;
+    171              static uint16_t oldKey = 0xFF;
+    172              int_t           rc5Address;
+    173              uint8_t         irOldUartKey=0xFF;
+    174              
+    175          	app.irUartKey = 0xFF;
+    176          
+    177          
+    178              while ( !done )
+    179              {
+    180              	SkRemoteRequestHandler();
+    181              	    	
+    182                  rcKey = SiiPlatformInfraRedGetKey();
+    183          
+    184                  //DEBUG_PRINT( MSG_ALWAYS, "\nSkAppIrGetSingleDigit:1 Key code: %x\n",rcKey );
+    185          
+    186          	    if (( rcKey != RC5_BUFFER_EMPTY) && (rcKey != oldKey ))
+    187          	    {
+    188          	        oldKey = rcKey;
+    189          	        rc5Address = (rcKey & RC5_ADDRESS_FIELD) >> 6;
+    190          	        rcKey &= RC5_COMMAND_FIELD;     // We don't care if it's a TV or VCR
+    191          
+    192          	        //DEBUG_PRINT( MSG_ALWAYS, "\nSkAppIrGetSingleDigit:2 Key code: %x\n",rcKey );
+    193          	    }
+    194          
+    195                 	if (app.irUartKey != irOldUartKey)
+    196                  {
+    197          			rcKey = app.irUartKey;
+    198          			irOldUartKey = 0xFF;
+    199          			app.irUartKey = 0xFF;
+    200                  }
+    201          
+    202                  switch ( rcKey )
+    203                  {
+    204                      case RC5_QUIT:
+    205                          // Cancel mode
+    206                          done = true;
+    207                          break;
+    208          
+    209                      case RC5_0:
+    210                      case RC5_1:
+    211                      case RC5_2:
+    212                      case RC5_3:
+    213                      case RC5_4:
+    214                      case RC5_5:
+    215                      case RC5_6:
+    216                      case RC5_7:
+    217                      case RC5_8:
+    218                      case RC5_9:
+    219                          digitValue = rcKey;
+    220                          if ( digitValue > rangeEnd )
+    221                              break;
+    222          
+    223                          DEBUG_PRINT( MSG_ALWAYS, "%d \n", (int)digitValue );
+    224                          done = true;
+    225                          break;
+    226                      case RC5_BUFFER_EMPTY:
+    227                          break;
+    228                  }
+    229              }
+    230          
+    231              return( digitValue );
+    232          }
+    233          
+    234          // Function:    SkAppIrRemoteReturnToTV
+    235          // Description: 
+    236          //------------------------------------------------------------------------------
+    237          
+    238          void SkAppIrRemoteReturnToTV ( void )
+    239          {
+    240              app.modeSelect = SK_MODE_TV;
+    241              PrintAlways( "\nTV Mode -- Press GUIDE key to exit Demo mode\n" );
+    242          }
+    243          
+    244          //------------------------------------------------------------------------------
+    245          // Function:    IrRemoteKeyParser
+    246          // Description: Parse special 'superuser' keys for the IR task.
+    247          //------------------------------------------------------------------------------
+    248          static char *pAppModeMenu [] =
+    249          {
+    250              "\n Application Mode",
+    251                " ----------------",
+    252              "0 - TV",
+    253              "1 - Demo",
+    254              "2 - Setup",
+    255              NULL
+    256          };
+    257          
+    258          static bool_t IrRemoteKeyParser ( RC5Commands_t key )
+    259          {
+    260              bool_t  usedKey = false;
+    261             uint8_t digit;
+    262          
+    263              switch ( key )
+    264              {
+    265                  case RC5_STANDBY:
+    266                      if ( app.powerState == APP_POWERSTATUS_ON )
+    267                      {
+    268                          app.powerState = APP_POWERSTATUS_ON_TO_STANDBY;
+    269                      }
+    270                      else if (( app.powerState == APP_POWERSTATUS_STANDBY ) || ( app.powerState == APP_POWERSTATUS_INITIAL ))
+    271                      {
+    272                          app.powerState = APP_POWERSTATUS_STANDBY_TO_ON;
+    273                      }
+    274                      usedKey = true;
+    275                      break;
+    276          
+    277          #if (PHILIPS_REMOTE == 1)
+    278                  case RC5_TOGGLE:
+    279          #else
+    280                  case RC5_GUIDE:
+    281          #endif
+    282                     // Application Mode select only available in TV Mode (Main App Mode)
+    283          #if SII_MARKETING_DEMO
+    284                     usedKey = true;
+    285          		   app.modeSelect = SK_MODE_TV;
+    286          		   return( usedKey );
+    287          #endif
+    288                     if ( app.modeSelect == SK_MODE_TV )
+    289                     {
+    290                         PrintMenu( pAppModeMenu );
+    291                         //DEBUG_PRINT( MSG_ALWAYS, "3 - Select Remote Control Zone (%d, tracking: %s)\n", app.currentZone + 1, SiiDrvSwitchZoneTrackingGet() ? "ON" : "OFF" );
+    292                         //DEBUG_PRINT( MSG_ALWAYS, "3 - Enable/Disable Zone %d (%s)\n", app.currentZone + 1, app.newZoneEnabled[app.currentZone] ? "Enabled" : "Disabled" );
+    293                         DEBUG_PRINT( MSG_ALWAYS, "\n Mode (0-%d): ", 2 );
+    294          
+    295                         digit = SkAppIrGetSingleDigit( 2 );
+    296                         usedKey = false;
+    297                         app.modeSelect = digit;
+    298                         usedKey = false; // Leave the key unused so that it gets passed to the new mode to display its menu
+    299          
+    300                     }
+    301                     break;
+    302          
+    303                 default:
+    304                     break;
+    305              }
+    306          
+    307              return( usedKey );
+    308          }
+    309          
+    310          
+    311          //------------------------------------------------------------------------------
+    312          // Function:    SkAppParseKey
+    313          // Description: Parse the key from IR or UART.
+    314          // Parameters:  fullAccess - true if allowed to respond to all normal keys
+    315          //                           false if only allowed to respond to power keys
+    316          // Returns:     none
+    317          //------------------------------------------------------------------------------
+    318          void SkAppParseKey ( uint16_t irKey, bool_t fullAccess  )
+    319          {
+    320              RC5Commands_t   key;
+    321          
+    322              if ( irKey != RC5_BUFFER_EMPTY)
+    323              {
+    324                  key = (RC5Commands_t)irKey;
+    325                  //DEBUG_PRINT( MSG_ALWAYS, "\nSkAppParseKey:1 Key code: %x\n",key );
+    326          
+    327                  for ( ;; )
+    328                  {
+    329                      if ( IrRemoteKeyParser( key ))
+    330                      {
+    331                          break;
+    332                      }
+    333          
+    334                      // Run the appropriate key parser
+    335          
+    336                      switch ( app.modeSelect )
+    337                      {
+    338                          case SK_MODE_TV:
+    339                              SkAppTvIrRemote( key, fullAccess );
+    340                              break;
+    341          
+    342                          case SK_MODE_DEMO:
+    343                              SkAppDemoIrRemote( key, fullAccess );
+    344                              break;
+    345          
+    346                          case SK_MODE_SETUP:
+    347                              SkAppSetupIrRemote( key, fullAccess );
+    348                              break;
+    349          
+    350          #if INC_BENCH_TEST
+    351                          case SK_MODE_BTST:
+    352                              SkAppBenchTestIrRemote( key, fullAccess );
+    353                              break;
+    354          #endif
+    355          
+    356                          default:
+    357                              break;
+    358                      }
+    359          
+    360                      break;  // Always break if you get this far...
+    361                  }
+    362              }
+    363          }
+    364          
+    365          //------------------------------------------------------------------------------
+    366          // Function:    SkAppTaskIrRemote
+    367          // Description: IR Remote Control task.
+    368          // Parameters:  fullAccess - true if allowed to respond to all normal keys
+    369          //                           false if only allowed to respond to power keys
+    370          // Returns:     none
+    371          //------------------------------------------------------------------------------
+    372          
+    373          void SkAppTaskIrRemote ( bool_t fullAccess )
+    374          {
+    375              uint16_t        irKey;
+    376              static uint16_t oldKey = 0xFF;
+    377          
+    378              if ( !app.irEnable )
+    379              {
+    380                  return;
+    381              }
+    382          
+    383              irKey = SiiPlatformInfraRedGetKey();
+    384          
+    385          //    if(irKey != RC5_BUFFER_EMPTY)
+    386          //    {
+    387          //        DEBUG_PRINT( MSG_ALWAYS, "\nSkAppTaskIrRemote:1 Key code: %x\n",irKey );
+    388          //    }
+    389          
+    390              if ( irKey != RC5_BUFFER_EMPTY )
+    391              {
+    392                  oldKey = irKey;
+    393          
+    394                  irKey &= RC5_COMMAND_FIELD;     // We don't care if it's a TV or VCR
+    395          
+    396          //        DEBUG_PRINT( MSG_ALWAYS, "\nSkAppTaskIrRemote:2 Key code: %x\n",irKey );
+    397              }
+    398          
+    399              SkAppParseKey( irKey, fullAccess );
+    400          }
+    401          
+    402          //-------------------------------------------------------------------------------------------------
+    403          //! @brief      Callback from SiiMon debugger.
+    404          //!
+    405          //!             Brings simulated IR codes from SiIMon tool.
+    406          //!
+    407          //! @param[in]  irKey  - IR Key code
+    408          //! @param[in]  irAddr - RC5 Address
+    409          //-------------------------------------------------------------------------------------------------
+    410          
+    411          void SiiMonCbIrCmdSet(uint8_t irKey, uint8_t irAddr)
+    412          {
+    413              app.irUartKey = irKey;
+    414              app.irUartAddr = irAddr ;
+    415          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        0  SiiMonCbIrCmdSet
+       16  SkAppIrConvertToCea931
+       24  SkAppIrGetSingleDigit
+             24 -> SiiPlatformInfraRedGetKey
+             24 -> SkRemoteRequestHandler
+        0  SkAppIrRemoteReturnToTV
+              0 -> PrintAlways
+       16  SkAppParseKey
+             16 -> PrintMenu
+              0 -> SkAppDemoIrRemote
+             16 -> SkAppIrGetSingleDigit
+              0 -> SkAppSetupIrRemote
+              0 -> SkAppTvIrRemote
+        8  SkAppTaskIrRemote
+              8 -> SiiPlatformInfraRedGetKey
+              0 -> SkAppParseKey
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      20  ?<Constant " ----------------">
+       8  ?<Constant "0 - TV">
+      12  ?<Constant "1 - Demo">
+      12  ?<Constant "2 - Setup">
+       8  ?<Constant "Zone 1">
+       8  ?<Constant "Zone 2">
+      20  ?<Constant "\n Application Mode">
+      48  ?<Constant "\nTV Mode -- Press GUI...">
+       4  ??DataTable13
+       4  ??DataTable13_1
+       4  ??DataTable13_2
+       4  ??DataTable13_3
+      12  SiiMonCbIrCmdSet
+      40  SkAppIrConvertToCea931
+      84  SkAppIrGetSingleDigit
+      14  SkAppIrRemoteReturnToTV
+     114  SkAppParseKey
+      36  SkAppTaskIrRemote
+    1376  cea931Translate
+       2  oldKey
+       2  oldKey
+      24  pAppModeMenu
+       8  zoneMsgs
+
+ 
+ 1 412 bytes in section .data
+    88 bytes in section .rodata
+   364 bytes in section .text
+ 
+   364 bytes of CODE  memory
+    88 bytes of CONST memory
+ 1 412 bytes of DATA  memory
+
+Errors: none
+Warnings: 6

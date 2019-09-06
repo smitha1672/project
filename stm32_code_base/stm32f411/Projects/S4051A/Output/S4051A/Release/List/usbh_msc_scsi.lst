@@ -1,0 +1,812 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     10/Nov/2014  12:52:20 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\STM32_USB_HOST_Library\Class\MSC\src\usbh_m #
+#                    sc_scsi.c                                                #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\STM32_USB_HOST_Library\Class\MSC\src\usbh_m #
+#                    sc_scsi.c -D __ARM_CORTEX_MX__ -D DEBUG -D FREE_RTOS -D  #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D HOST_MODE_ENABLED -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -D STM32_IAP -D S4051A    #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Release\L #
+#                    ist\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Releas #
+#                    e\Obj\ --debug --endian=little --cpu=Cortex-M4 -e        #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Projects\STM32_IAP\inc #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\I #
+#                    nclude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\C #
+#                    MSIS\Device\ST\STM32F4xx\Include\ -I                     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_HO #
+#                    ST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\HT68F30\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Utilities\Third_Party\efsl\inc\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    fat_fs\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Project #
+#                    s\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utiliti #
+#                    es\mainstream_v1\stm32f411\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\it\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\APP_SRC\I #
+#                    nclude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\APP_SRC\ -Ohz -I  #
+#                    "C:\Program Files (x86)\IAR Systems\Embedded Workbench   #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Release\List\u #
+#                    sbh_msc_scsi.lst                                         #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Release\Obj\us #
+#                    bh_msc_scsi.o                                            #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\STM32_USB_HOST_Library\Class\MSC\src\usbh_msc_scsi.c
+      1          /**
+      2            ******************************************************************************
+      3            * @file    usbh_msc_scsi.c 
+      4            * @author  MCD Application Team
+      5            * @version V2.1.0
+      6            * @date    19-March-2012
+      7            * @brief   This file implements the SCSI commands
+      8            ******************************************************************************
+      9            * @attention
+     10            *
+     11            * <h2><center>&copy; COPYRIGHT 2012 STMicroelectronics</center></h2>
+     12            *
+     13            * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
+     14            * You may not use this file except in compliance with the License.
+     15            * You may obtain a copy of the License at:
+     16            *
+     17            *        http://www.st.com/software_license_agreement_liberty_v2
+     18            *
+     19            * Unless required by applicable law or agreed to in writing, software 
+     20            * distributed under the License is distributed on an "AS IS" BASIS, 
+     21            * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     22            * See the License for the specific language governing permissions and
+     23            * limitations under the License.
+     24            *
+     25            ******************************************************************************
+     26            */ 
+     27          
+     28          /* Includes ------------------------------------------------------------------*/
+     29          #include "usbh_msc_core.h"
+     30          #include "usbh_msc_scsi.h"
+     31          #include "usbh_msc_bot.h"
+     32          #include "usbh_ioreq.h"
+     33          #include "usbh_def.h"
+     34          
+     35          
+     36          /** @addtogroup USBH_LIB
+     37            * @{
+     38            */
+     39          
+     40          /** @addtogroup USBH_CLASS
+     41            * @{
+     42            */
+     43          
+     44          /** @addtogroup USBH_MSC_CLASS
+     45            * @{
+     46            */
+     47            
+     48          /** @defgroup USBH_MSC_SCSI 
+     49            * @brief    This file includes the mass storage related functions
+     50            * @{
+     51            */ 
+     52          
+     53          
+     54          /** @defgroup USBH_MSC_SCSI_Private_TypesDefinitions
+     55            * @{
+     56            */ 
+     57          
+     58          MassStorageParameter_TypeDef USBH_MSC_Param; 
+     59          /**
+     60            * @}
+     61            */ 
+     62          
+     63          /** @defgroup USBH_MSC_SCSI_Private_Defines
+     64            * @{
+     65            */ 
+     66          /**
+     67            * @}
+     68            */ 
+     69          
+     70          /** @defgroup USBH_MSC_SCSI_Private_Macros
+     71            * @{
+     72            */ 
+     73          /**
+     74            * @}
+     75            */ 
+     76          
+     77          
+     78          /** @defgroup USBH_MSC_SCSI_Private_Variables
+     79            * @{
+     80            */ 
+     81            
+     82          #ifdef USB_OTG_HS_INTERNAL_DMA_ENABLED
+     83            #if defined ( __ICCARM__ ) /*!< IAR Compiler */
+     84              #pragma data_alignment=4   
+     85            #endif
+     86          #endif /* USB_OTG_HS_INTERNAL_DMA_ENABLED */
+     87          __ALIGN_BEGIN uint8_t USBH_DataInBuffer[512] __ALIGN_END ;
+     88          
+     89          #ifdef USB_OTG_HS_INTERNAL_DMA_ENABLED
+     90            #if defined ( __ICCARM__ ) /*!< IAR Compiler */
+     91              #pragma data_alignment=4   
+     92            #endif
+     93          #endif /* USB_OTG_HS_INTERNAL_DMA_ENABLED */
+     94          __ALIGN_BEGIN uint8_t USBH_DataOutBuffer[512] __ALIGN_END ;
+     95          /**
+     96            * @}
+     97            */ 
+     98          
+     99          
+    100          /** @defgroup USBH_MSC_SCSI_Private_FunctionPrototypes
+    101            * @{
+    102            */ 
+    103          /**
+    104            * @}
+    105            */ 
+    106          
+    107          
+    108          /** @defgroup USBH_MSC_SCSI_Exported_Variables
+    109            * @{
+    110            */ 
+    111          
+    112          /**
+    113            * @}
+    114            */ 
+    115          
+    116          
+    117          /** @defgroup USBH_MSC_SCSI_Private_Functions
+    118            * @{
+    119            */ 
+    120          
+    121          
+    122          
+    123          
+    124          /**
+    125            * @brief  USBH_MSC_TestUnitReady 
+    126            *         Issues 'Test unit ready' command to the device. Once the response  
+    127            *         received, it updates the status to upper layer.
+    128            * @param  None
+    129            * @retval Status
+    130            */
+    131          uint8_t USBH_MSC_TestUnitReady (USB_OTG_CORE_HANDLE *pdev)
+    132          {
+    133            uint8_t index;
+    134            USBH_MSC_Status_TypeDef status = USBH_MSC_BUSY;
+    135            
+    136            if(HCD_IsDeviceConnected(pdev))
+    137            {  
+    138              switch(USBH_MSC_BOTXferParam.CmdStateMachine)
+    139              {
+    140              case CMD_SEND_STATE:  
+    141                /*Prepare the CBW and relevent field*/
+    142                USBH_MSC_CBWData.field.CBWTransferLength = 0;       /* No Data Transfer */
+    143                USBH_MSC_CBWData.field.CBWFlags = USB_EP_DIR_OUT;
+    144                USBH_MSC_CBWData.field.CBWLength = CBW_LENGTH_TEST_UNIT_READY;
+    145                USBH_MSC_BOTXferParam.pRxTxBuff = USBH_MSC_CSWData.CSWArray;
+    146                USBH_MSC_BOTXferParam.DataLength = USBH_MSC_CSW_MAX_LENGTH;
+    147                USBH_MSC_BOTXferParam.MSCStateCurrent = USBH_MSC_TEST_UNIT_READY;
+    148                
+    149                for(index = CBW_CB_LENGTH; index != 0; index--)
+    150                {
+    151                  USBH_MSC_CBWData.field.CBWCB[index] = 0x00;
+    152                }
+    153                
+    154                USBH_MSC_CBWData.field.CBWCB[0]  = OPCODE_TEST_UNIT_READY; 
+    155                USBH_MSC_BOTXferParam.BOTState = USBH_MSC_SEND_CBW;
+    156                /* Start the transfer, then let the state 
+    157                machine magage the other transactions */
+    158                USBH_MSC_BOTXferParam.MSCState = USBH_MSC_BOT_USB_TRANSFERS;
+    159                USBH_MSC_BOTXferParam.BOTXferStatus = USBH_MSC_BUSY;
+    160                USBH_MSC_BOTXferParam.CmdStateMachine = CMD_WAIT_STATUS;
+    161                
+    162                status = USBH_MSC_BUSY; 
+    163                break;
+    164                
+    165              case CMD_WAIT_STATUS: 
+    166                if(USBH_MSC_BOTXferParam.BOTXferStatus == USBH_MSC_OK)
+    167                { 
+    168                  /* Commands successfully sent and Response Received  */       
+    169                  USBH_MSC_BOTXferParam.CmdStateMachine = CMD_SEND_STATE;
+    170                 
+    171                  status = USBH_MSC_OK;      
+    172                }
+    173                else if ( USBH_MSC_BOTXferParam.BOTXferStatus == USBH_MSC_FAIL )
+    174                {
+    175                  /* Failure Mode */
+    176                  USBH_MSC_BOTXferParam.CmdStateMachine = CMD_SEND_STATE;
+    177                  status = USBH_MSC_FAIL;
+    178                }
+    179                
+    180                else if ( USBH_MSC_BOTXferParam.BOTXferStatus == USBH_MSC_PHASE_ERROR )
+    181                {
+    182                  /* Failure Mode */
+    183                  USBH_MSC_BOTXferParam.CmdStateMachine = CMD_SEND_STATE;
+    184                  status = USBH_MSC_PHASE_ERROR;    
+    185                }  
+    186                break;
+    187                
+    188              default:
+    189                break;
+    190              }
+    191            }
+    192            return status;
+    193          }
+    194          
+    195          
+    196          /**
+    197            * @brief  USBH_MSC_ReadCapacity10  
+    198            *         Issue the read capacity command to the device. Once the response 
+    199            *         received, it updates the status to upper layer
+    200            * @param  None
+    201            * @retval Status
+    202            */
+    203          uint8_t USBH_MSC_ReadCapacity10(USB_OTG_CORE_HANDLE *pdev)
+    204          {
+    205            uint8_t index;
+    206            USBH_MSC_Status_TypeDef status = USBH_MSC_BUSY;
+    207            
+    208            if(HCD_IsDeviceConnected(pdev))
+    209            {  
+    210              switch(USBH_MSC_BOTXferParam.CmdStateMachine)
+    211              {
+    212              case CMD_SEND_STATE:
+    213                /*Prepare the CBW and relevent field*/
+    214                USBH_MSC_CBWData.field.CBWTransferLength = XFER_LEN_READ_CAPACITY10;
+    215                USBH_MSC_CBWData.field.CBWFlags = USB_EP_DIR_IN;
+    216                USBH_MSC_CBWData.field.CBWLength = CBW_LENGTH;
+    217                
+    218                USBH_MSC_BOTXferParam.pRxTxBuff = USBH_DataInBuffer;
+    219                USBH_MSC_BOTXferParam.MSCStateCurrent = USBH_MSC_READ_CAPACITY10;
+    220                
+    221                for(index = CBW_CB_LENGTH; index != 0; index--)
+    222                {
+    223                  USBH_MSC_CBWData.field.CBWCB[index] = 0x00;
+    224                }    
+    225                
+    226                USBH_MSC_CBWData.field.CBWCB[0]  = OPCODE_READ_CAPACITY10; 
+    227                USBH_MSC_BOTXferParam.BOTState = USBH_MSC_SEND_CBW;
+    228                
+    229                /* Start the transfer, then let the state machine manage the other 
+    230                                                                          transactions */
+    231                USBH_MSC_BOTXferParam.MSCState = USBH_MSC_BOT_USB_TRANSFERS;
+    232                USBH_MSC_BOTXferParam.BOTXferStatus = USBH_MSC_BUSY;
+    233                USBH_MSC_BOTXferParam.CmdStateMachine = CMD_WAIT_STATUS;
+    234                
+    235                status = USBH_MSC_BUSY;
+    236                break;
+    237                
+    238              case CMD_WAIT_STATUS:
+    239                if(USBH_MSC_BOTXferParam.BOTXferStatus == USBH_MSC_OK)
+    240                {
+    241                  /*assign the capacity*/
+    242                  (((uint8_t*)&USBH_MSC_Param.MSCapacity )[3]) = USBH_DataInBuffer[0];
+    243                  (((uint8_t*)&USBH_MSC_Param.MSCapacity )[2]) = USBH_DataInBuffer[1];
+    244                  (((uint8_t*)&USBH_MSC_Param.MSCapacity )[1]) = USBH_DataInBuffer[2];
+    245                  (((uint8_t*)&USBH_MSC_Param.MSCapacity )[0]) = USBH_DataInBuffer[3];
+    246                  
+    247                  /*assign the page length*/
+    248                  (((uint8_t*)&USBH_MSC_Param.MSPageLength )[1]) = USBH_DataInBuffer[6];
+    249                  (((uint8_t*)&USBH_MSC_Param.MSPageLength )[0]) = USBH_DataInBuffer[7];
+    250                  
+    251                  /* Commands successfully sent and Response Received  */       
+    252                  USBH_MSC_BOTXferParam.CmdStateMachine = CMD_SEND_STATE;
+    253                  status = USBH_MSC_OK;      
+    254                }
+    255                else if ( USBH_MSC_BOTXferParam.BOTXferStatus == USBH_MSC_FAIL )
+    256                {
+    257                  /* Failure Mode */
+    258                  USBH_MSC_BOTXferParam.CmdStateMachine = CMD_SEND_STATE;
+    259                  status = USBH_MSC_FAIL;
+    260                }  
+    261                else if ( USBH_MSC_BOTXferParam.BOTXferStatus == USBH_MSC_PHASE_ERROR )
+    262                {
+    263                  /* Failure Mode */
+    264                  USBH_MSC_BOTXferParam.CmdStateMachine = CMD_SEND_STATE;
+    265                  status = USBH_MSC_PHASE_ERROR;    
+    266                } 
+    267                else
+    268                {
+    269                  /* Wait for the Commands to get Completed */
+    270                  /* NO Change in state Machine */
+    271                }
+    272                break;
+    273                
+    274              default:
+    275                break;
+    276              }
+    277            }
+    278            return status;
+    279          }
+    280          
+    281          
+    282          /**
+    283            * @brief  USBH_MSC_ModeSense6  
+    284            *         Issue the Mode Sense6 Command to the device. This function is used 
+    285            *          for reading the WriteProtect Status of the Mass-Storage device. 
+    286            * @param  None
+    287            * @retval Status
+    288            */
+    289          uint8_t USBH_MSC_ModeSense6(USB_OTG_CORE_HANDLE *pdev)
+    290          {
+    291            uint8_t index;
+    292            USBH_MSC_Status_TypeDef status = USBH_MSC_BUSY;
+    293            
+    294            if(HCD_IsDeviceConnected(pdev))
+    295            {  
+    296              switch(USBH_MSC_BOTXferParam.CmdStateMachine)
+    297              {
+    298              case CMD_SEND_STATE:
+    299                /*Prepare the CBW and relevent field*/
+    300                USBH_MSC_CBWData.field.CBWTransferLength = XFER_LEN_MODE_SENSE6;
+    301                USBH_MSC_CBWData.field.CBWFlags = USB_EP_DIR_IN;
+    302                USBH_MSC_CBWData.field.CBWLength = CBW_LENGTH;
+    303                
+    304                USBH_MSC_BOTXferParam.pRxTxBuff = USBH_DataInBuffer;
+    305                USBH_MSC_BOTXferParam.MSCStateCurrent = USBH_MSC_MODE_SENSE6;
+    306                
+    307                for(index = CBW_CB_LENGTH; index != 0; index--)
+    308                {
+    309                  USBH_MSC_CBWData.field.CBWCB[index] = 0x00;
+    310                }    
+    311                
+    312                USBH_MSC_CBWData.field.CBWCB[0]  = OPCODE_MODE_SENSE6; 
+    313                USBH_MSC_CBWData.field.CBWCB[2]  = MODE_SENSE_PAGE_CONTROL_FIELD | \
+    314                                                   MODE_SENSE_PAGE_CODE;
+    315                                                     
+    316                USBH_MSC_CBWData.field.CBWCB[4]  = XFER_LEN_MODE_SENSE6;
+    317                                                                                                
+    318                USBH_MSC_BOTXferParam.BOTState = USBH_MSC_SEND_CBW;
+    319                
+    320                /* Start the transfer, then let the state machine manage the other 
+    321                                                                          transactions */
+    322                USBH_MSC_BOTXferParam.MSCState = USBH_MSC_BOT_USB_TRANSFERS;
+    323                USBH_MSC_BOTXferParam.BOTXferStatus = USBH_MSC_BUSY;
+    324                USBH_MSC_BOTXferParam.CmdStateMachine = CMD_WAIT_STATUS;
+    325                
+    326                status = USBH_MSC_BUSY;
+    327                break;
+    328                
+    329              case CMD_WAIT_STATUS:
+    330                if(USBH_MSC_BOTXferParam.BOTXferStatus == USBH_MSC_OK)
+    331                {
+    332                  /* Assign the Write Protect status */
+    333                  /* If WriteProtect = 0, Writing is allowed 
+    334                     If WriteProtect != 0, Disk is Write Protected */
+    335                  if ( USBH_DataInBuffer[2] & MASK_MODE_SENSE_WRITE_PROTECT)
+    336                  {
+    337                    USBH_MSC_Param.MSWriteProtect   = DISK_WRITE_PROTECTED;
+    338                  }
+    339                  else
+    340                  {
+    341                    USBH_MSC_Param.MSWriteProtect   = 0;
+    342                  }
+    343                  
+    344                  /* Commands successfully sent and Response Received  */       
+    345                  USBH_MSC_BOTXferParam.CmdStateMachine = CMD_SEND_STATE;
+    346                  status = USBH_MSC_OK;      
+    347                }
+    348                else if ( USBH_MSC_BOTXferParam.BOTXferStatus == USBH_MSC_FAIL )
+    349                {
+    350                  /* Failure Mode */
+    351                  USBH_MSC_BOTXferParam.CmdStateMachine = CMD_SEND_STATE;
+    352                  status = USBH_MSC_FAIL;
+    353                }
+    354                else if ( USBH_MSC_BOTXferParam.BOTXferStatus == USBH_MSC_PHASE_ERROR )
+    355                {
+    356                  /* Failure Mode */
+    357                  USBH_MSC_BOTXferParam.CmdStateMachine = CMD_SEND_STATE;
+    358                  status = USBH_MSC_PHASE_ERROR;    
+    359                }
+    360                else
+    361                {
+    362                  /* Wait for the Commands to get Completed */
+    363                  /* NO Change in state Machine */
+    364                }
+    365                break;
+    366                
+    367              default:
+    368                break;
+    369              }
+    370            }
+    371            return status;
+    372          }
+    373          
+    374          /**
+    375            * @brief  USBH_MSC_RequestSense  
+    376            *         Issues the Request Sense command to the device. Once the response 
+    377            *         received, it updates the status to upper layer
+    378            * @param  None
+    379            * @retval Status
+    380            */
+    381          uint8_t USBH_MSC_RequestSense(USB_OTG_CORE_HANDLE *pdev)
+    382          {
+    383            USBH_MSC_Status_TypeDef status = USBH_MSC_BUSY;
+    384            
+    385            uint8_t index;
+    386            
+    387            
+    388            if(HCD_IsDeviceConnected(pdev))
+    389            {  
+    390              switch(USBH_MSC_BOTXferParam.CmdStateMachine)
+    391              {
+    392              case CMD_SEND_STATE:
+    393                
+    394                /*Prepare the CBW and relevent field*/
+    395                USBH_MSC_CBWData.field.CBWTransferLength = \
+    396                                                          ALLOCATION_LENGTH_REQUEST_SENSE;
+    397                USBH_MSC_CBWData.field.CBWFlags = USB_EP_DIR_IN;
+    398                USBH_MSC_CBWData.field.CBWLength = CBW_LENGTH;
+    399                
+    400                USBH_MSC_BOTXferParam.pRxTxBuff = USBH_DataInBuffer;
+    401                USBH_MSC_BOTXferParam.MSCStateBkp = USBH_MSC_BOTXferParam.MSCStateCurrent;
+    402                USBH_MSC_BOTXferParam.MSCStateCurrent = USBH_MSC_REQUEST_SENSE;
+    403                
+    404          
+    405                for(index = CBW_CB_LENGTH; index != 0; index--)
+    406                {
+    407                  USBH_MSC_CBWData.field.CBWCB[index] = 0x00;
+    408                }    
+    409                
+    410                USBH_MSC_CBWData.field.CBWCB[0]  = OPCODE_REQUEST_SENSE; 
+    411                USBH_MSC_CBWData.field.CBWCB[1]  = DESC_REQUEST_SENSE;
+    412                USBH_MSC_CBWData.field.CBWCB[4]  = ALLOCATION_LENGTH_REQUEST_SENSE;
+    413                
+    414                USBH_MSC_BOTXferParam.BOTState = USBH_MSC_SEND_CBW;
+    415                /* Start the transfer, then let the state machine magage 
+    416                the other transactions */
+    417                USBH_MSC_BOTXferParam.MSCState = USBH_MSC_BOT_USB_TRANSFERS;
+    418                USBH_MSC_BOTXferParam.BOTXferStatus = USBH_MSC_BUSY;
+    419                USBH_MSC_BOTXferParam.CmdStateMachine = CMD_WAIT_STATUS;
+    420                
+    421                status = USBH_MSC_BUSY;
+    422                
+    423                break;
+    424                
+    425              case CMD_WAIT_STATUS:
+    426                
+    427                if(USBH_MSC_BOTXferParam.BOTXferStatus == USBH_MSC_OK)
+    428                {
+    429                  /* Get Sense data*/
+    430                  (((uint8_t*)&USBH_MSC_Param.MSSenseKey )[3]) = USBH_DataInBuffer[0];
+    431                  (((uint8_t*)&USBH_MSC_Param.MSSenseKey )[2]) = USBH_DataInBuffer[1];
+    432                  (((uint8_t*)&USBH_MSC_Param.MSSenseKey )[1]) = USBH_DataInBuffer[2];
+    433                  (((uint8_t*)&USBH_MSC_Param.MSSenseKey )[0]) = USBH_DataInBuffer[3];
+    434                  
+    435                  /* Commands successfully sent and Response Received  */       
+    436                  USBH_MSC_BOTXferParam.CmdStateMachine = CMD_SEND_STATE;
+    437                  status = USBH_MSC_OK;      
+    438                }
+    439                else if ( USBH_MSC_BOTXferParam.BOTXferStatus == USBH_MSC_FAIL )
+    440                {
+    441                  /* Failure Mode */
+    442                  USBH_MSC_BOTXferParam.CmdStateMachine = CMD_SEND_STATE;
+    443                  status = USBH_MSC_FAIL;
+    444                }
+    445                
+    446                else if ( USBH_MSC_BOTXferParam.BOTXferStatus == USBH_MSC_PHASE_ERROR )
+    447                {
+    448                  /* Failure Mode */
+    449                  USBH_MSC_BOTXferParam.CmdStateMachine = CMD_SEND_STATE;
+    450                  status = USBH_MSC_PHASE_ERROR;    
+    451                }
+    452                
+    453                else
+    454                {
+    455                  /* Wait for the Commands to get Completed */
+    456                  /* NO Change in state Machine */
+    457                }
+    458                break;
+    459                
+    460              default:
+    461                break;
+    462              }
+    463            }
+    464            return status;
+    465          }
+    466          
+    467          
+    468          /**
+    469            * @brief  USBH_MSC_Write10 
+    470            *         Issue the write command to the device. Once the response received, 
+    471            *         it updates the status to upper layer
+    472            * @param  dataBuffer : DataBuffer contains the data to write
+    473            * @param  address : Address to which the data will be written
+    474            * @param  nbOfbytes : NbOfbytes to be written
+    475            * @retval Status
+    476            */
+    477          uint8_t USBH_MSC_Write10(USB_OTG_CORE_HANDLE *pdev, 
+    478                                   uint8_t *dataBuffer,
+    479                                   uint32_t address,
+    480                                   uint32_t nbOfbytes)
+    481          {
+    482            uint8_t index;
+    483            USBH_MSC_Status_TypeDef status = USBH_MSC_BUSY;
+    484            uint16_t nbOfPages;
+    485            
+    486            if(HCD_IsDeviceConnected(pdev))
+    487            {  
+    488              switch(USBH_MSC_BOTXferParam.CmdStateMachine)
+    489              {
+    490              case CMD_SEND_STATE:   
+    491                USBH_MSC_CBWData.field.CBWTransferLength = nbOfbytes;
+    492                USBH_MSC_CBWData.field.CBWFlags = USB_EP_DIR_OUT;
+    493                USBH_MSC_CBWData.field.CBWLength = CBW_LENGTH;
+    494                USBH_MSC_BOTXferParam.pRxTxBuff = dataBuffer;
+    495                
+    496                
+    497                for(index = CBW_CB_LENGTH; index != 0; index--)  
+    498                {
+    499                  USBH_MSC_CBWData.field.CBWCB[index] = 0x00;
+    500                }
+    501                
+    502                USBH_MSC_CBWData.field.CBWCB[0]  = OPCODE_WRITE10; 
+    503                
+    504                /*logical block address*/
+    505                USBH_MSC_CBWData.field.CBWCB[2]  = (((uint8_t*)&address)[3]) ;
+    506                USBH_MSC_CBWData.field.CBWCB[3]  = (((uint8_t*)&address)[2]);
+    507                USBH_MSC_CBWData.field.CBWCB[4]  = (((uint8_t*)&address)[1]);
+    508                USBH_MSC_CBWData.field.CBWCB[5]  = (((uint8_t*)&address)[0]);
+    509                
+    510                /*USBH_MSC_PAGE_LENGTH = 512*/
+    511                nbOfPages = nbOfbytes/ USBH_MSC_PAGE_LENGTH; 
+    512                
+    513                /*Tranfer length */
+    514                USBH_MSC_CBWData.field.CBWCB[7]  = (((uint8_t *)&nbOfPages)[1]) ; 
+    515                USBH_MSC_CBWData.field.CBWCB[8]  = (((uint8_t *)&nbOfPages)[0]) ; 
+    516                
+    517                USBH_MSC_BOTXferParam.BOTState = USBH_MSC_SEND_CBW;
+    518                /* Start the transfer, then let the state machine 
+    519                magage the other transactions */
+    520                USBH_MSC_BOTXferParam.MSCState = USBH_MSC_BOT_USB_TRANSFERS;
+    521                USBH_MSC_BOTXferParam.BOTXferStatus = USBH_MSC_BUSY;
+    522                USBH_MSC_BOTXferParam.CmdStateMachine = CMD_WAIT_STATUS;
+    523                
+    524                status = USBH_MSC_BUSY;
+    525                
+    526                break;
+    527                
+    528              case CMD_WAIT_STATUS:
+    529                if(USBH_MSC_BOTXferParam.BOTXferStatus == USBH_MSC_OK)
+    530                { 
+    531                  /* Commands successfully sent and Response Received  */       
+    532                  USBH_MSC_BOTXferParam.CmdStateMachine = CMD_SEND_STATE;
+    533                  status = USBH_MSC_OK;      
+    534                }
+    535                else if ( USBH_MSC_BOTXferParam.BOTXferStatus == USBH_MSC_FAIL )
+    536                {
+    537                  /* Failure Mode */
+    538                  USBH_MSC_BOTXferParam.CmdStateMachine = CMD_SEND_STATE;
+    539                }
+    540                
+    541                else if ( USBH_MSC_BOTXferParam.BOTXferStatus == USBH_MSC_PHASE_ERROR )
+    542                {
+    543                  /* Failure Mode */
+    544                  USBH_MSC_BOTXferParam.CmdStateMachine = CMD_SEND_STATE;
+    545                  status = USBH_MSC_PHASE_ERROR;    
+    546                }
+    547                break;
+    548                
+    549              default:
+    550                break;
+    551              }
+    552            }
+    553            return status;
+    554          }
+    555          
+    556          /**
+    557            * @brief  USBH_MSC_Read10 
+    558            *         Issue the read command to the device. Once the response received, 
+    559            *         it updates the status to upper layer
+    560            * @param  dataBuffer : DataBuffer will contain the data to be read
+    561            * @param  address : Address from which the data will be read
+    562            * @param  nbOfbytes : NbOfbytes to be read
+    563            * @retval Status
+    564            */
+    565          uint8_t USBH_MSC_Read10(USB_OTG_CORE_HANDLE *pdev,
+    566                                  uint8_t *dataBuffer,
+    567                                  uint32_t address,
+    568                                  uint32_t nbOfbytes)
+    569          {
+    570            uint8_t index;
+    571            static USBH_MSC_Status_TypeDef status = USBH_MSC_BUSY;
+    572            uint16_t nbOfPages;
+    573            status = USBH_MSC_BUSY;
+    574            
+    575            if(HCD_IsDeviceConnected(pdev))
+    576            {
+    577              switch(USBH_MSC_BOTXferParam.CmdStateMachine)
+    578              {
+    579              case CMD_SEND_STATE:
+    580                /*Prepare the CBW and relevent field*/
+    581                USBH_MSC_CBWData.field.CBWTransferLength = nbOfbytes;
+    582                USBH_MSC_CBWData.field.CBWFlags = USB_EP_DIR_IN;
+    583                USBH_MSC_CBWData.field.CBWLength = CBW_LENGTH;
+    584                
+    585                USBH_MSC_BOTXferParam.pRxTxBuff = dataBuffer;
+    586                
+    587                for(index = CBW_CB_LENGTH; index != 0; index--)
+    588                {
+    589                  USBH_MSC_CBWData.field.CBWCB[index] = 0x00;
+    590                }
+    591                
+    592                USBH_MSC_CBWData.field.CBWCB[0]  = OPCODE_READ10; 
+    593                
+    594                /*logical block address*/
+    595                
+    596                USBH_MSC_CBWData.field.CBWCB[2]  = (((uint8_t*)&address)[3]);
+    597                USBH_MSC_CBWData.field.CBWCB[3]  = (((uint8_t*)&address)[2]);
+    598                USBH_MSC_CBWData.field.CBWCB[4]  = (((uint8_t*)&address)[1]);
+    599                USBH_MSC_CBWData.field.CBWCB[5]  = (((uint8_t*)&address)[0]);
+    600                
+    601                /*USBH_MSC_PAGE_LENGTH = 512*/
+    602                nbOfPages = nbOfbytes/ USBH_MSC_PAGE_LENGTH;  
+    603                
+    604                /*Tranfer length */
+    605                USBH_MSC_CBWData.field.CBWCB[7]  = (((uint8_t *)&nbOfPages)[1]) ; 
+    606                USBH_MSC_CBWData.field.CBWCB[8]  = (((uint8_t *)&nbOfPages)[0]) ; 
+    607                
+    608                
+    609                USBH_MSC_BOTXferParam.BOTState = USBH_MSC_SEND_CBW;
+    610                /* Start the transfer, then let the state machine 
+    611                magage the other transactions */
+    612                USBH_MSC_BOTXferParam.MSCState = USBH_MSC_BOT_USB_TRANSFERS;
+    613                USBH_MSC_BOTXferParam.BOTXferStatus = USBH_MSC_BUSY;
+    614                USBH_MSC_BOTXferParam.CmdStateMachine = CMD_WAIT_STATUS;
+    615                
+    616                status = USBH_MSC_BUSY;
+    617                
+    618                break;
+    619                
+    620              case CMD_WAIT_STATUS:
+    621                
+    622                if((USBH_MSC_BOTXferParam.BOTXferStatus == USBH_MSC_OK) && \
+    623                  (HCD_IsDeviceConnected(pdev)))
+    624                { 
+    625                  /* Commands successfully sent and Response Received  */       
+    626                  USBH_MSC_BOTXferParam.CmdStateMachine = CMD_SEND_STATE;
+    627                  status = USBH_MSC_OK;      
+    628                }
+    629                else if (( USBH_MSC_BOTXferParam.BOTXferStatus == USBH_MSC_FAIL ) && \
+    630                  (HCD_IsDeviceConnected(pdev)))
+    631                {
+    632                  /* Failure Mode */
+    633                  USBH_MSC_BOTXferParam.CmdStateMachine = CMD_SEND_STATE;
+    634                }
+    635                
+    636                else if ( USBH_MSC_BOTXferParam.BOTXferStatus == USBH_MSC_PHASE_ERROR )
+    637                {
+    638                  /* Failure Mode */
+    639                  USBH_MSC_BOTXferParam.CmdStateMachine = CMD_SEND_STATE;
+    640                  status = USBH_MSC_PHASE_ERROR;    
+    641                }
+    642                else
+    643                {
+    644                  /* Wait for the Commands to get Completed */
+    645                  /* NO Change in state Machine */
+    646                }
+    647                break;
+    648                
+    649              default:
+    650                break;
+    651              }
+    652            }
+    653            return status;
+    654          }
+    655          
+    656          
+    657          /**
+    658            * @}
+    659            */ 
+    660          
+    661          /**
+    662            * @}
+    663            */ 
+    664          
+    665          /**
+    666            * @}
+    667            */
+    668          
+    669          /**
+    670            * @}
+    671            */ 
+    672          
+    673          /**
+    674            * @}
+    675            */
+    676          
+    677          /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+    678          
+    679          
+    680          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       16  USBH_MSC_ModeSense6
+             16 -> HCD_IsDeviceConnected
+       32  USBH_MSC_Read10
+             32 -> HCD_IsDeviceConnected
+       16  USBH_MSC_ReadCapacity10
+             16 -> HCD_IsDeviceConnected
+       16  USBH_MSC_RequestSense
+             16 -> HCD_IsDeviceConnected
+       16  USBH_MSC_TestUnitReady
+             16 -> HCD_IsDeviceConnected
+       24  USBH_MSC_Write10
+             24 -> HCD_IsDeviceConnected
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable5
+       4  ??DataTable5_1
+       4  ??DataTable5_2
+       4  ??DataTable5_3
+       4  ??DataTable5_4
+       4  ??DataTable5_5
+       6  ?Subroutine0
+     512  USBH_DataInBuffer
+     512  USBH_DataOutBuffer
+     134  USBH_MSC_ModeSense6
+      16  USBH_MSC_Param
+     192  USBH_MSC_Read10
+     140  USBH_MSC_ReadCapacity10
+     138  USBH_MSC_RequestSense
+     118  USBH_MSC_TestUnitReady
+     148  USBH_MSC_Write10
+       1  status
+
+ 
+ 1 040 bytes in section .bss
+     1 byte  in section .data
+   900 bytes in section .text
+ 
+   900 bytes of CODE memory
+ 1 041 bytes of DATA memory
+
+Errors: none
+Warnings: none

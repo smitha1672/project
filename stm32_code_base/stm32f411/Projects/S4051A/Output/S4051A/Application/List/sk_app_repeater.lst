@@ -1,0 +1,936 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:23:44 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\application\sk_app_repe #
+#                    ater.c                                                   #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\application\sk_app_repe #
+#                    ater.c -D S4051A -D DEBUG -D FREE_RTOS -D                #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\sk_app_repeater.lst                                   #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\sk_app_repeater.o                                      #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\application\sk_app_repeater.c
+      1          //***************************************************************************
+      2          //!file     sk_app_repeater.c
+      3          //!brief    Application level control of the repeater component and driver.
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2009-2011, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          #include <string.h>
+     13          #include "sk_application.h"
+     14          #include "si_repeater_component.h"
+     15          #include "si_tx_component.h"
+     16          
+     17          
+     18          
+     19          typedef struct
+     20          {
+     21          	RepeaterTopoMode_t				switchMode;                     /*restart rep if mode change*/
+     22          	uint8_t							numberOfRepeater;               /*number of active repeater*/
+     23          	RepeaterInstanceData_t			repeaterPipe[SII_NUM_PIPE]; /*pipe 0 is main, 1 is sub*/
+     24          
+     25          }RepeaterConfigureData_t;
+     26          
+     27          //------------------------------------------------------------------------------
+     28          // Module variables
+     29          //------------------------------------------------------------------------------
+     30          RepeaterConfigureData_t 	initSwitchSetting;
+     31          RepeaterInstanceData_t     *pSwitchSetting = &initSwitchSetting.repeaterPipe[0];
+     32          
+     33          //------------------------------------------------------------------------------
+     34          // Function:    RepeaterTimerSet
+     35          // Description: starts timer for Repeater use
+     36          // Parameters:  none
+     37          // Returns:     none
+     38          //------------------------------------------------------------------------------
+     39          
+     40          static void RepeaterTimerSet ( clock_time_t msDelay  )
+     41          {
+     42              app.msRepeaterDelay = msDelay;
+     43              app.msRepeaterStart = SiiOsTimerTotalElapsed();
+     44          }
+     45          
+     46          //------------------------------------------------------------------------------
+     47          // Function:    RepeaterTimerElapsed
+     48          // Description: Elapsed timers for Repeater use
+     49          // Parameters:  none
+     50          // Returns:     -true: timer time out
+     51          //
+     52          //------------------------------------------------------------------------------
+     53          static bool_t RepeaterTimerElapsed ( clock_time_t *msDiff )
+     54          {
+     55              *msDiff = SkTimeDiffMs(app.msRepeaterStart, SiiOsTimerTotalElapsed());
+     56          
+     57              return(*msDiff >= app.msRepeaterDelay);
+     58          }
+     59          
+     60          
+     61          static uint8_t RepeaterInstanceGetFromTx( uint8_t tx_number)
+     62          {
+     63          	uint8_t i;
+     64          
+     65          	for (i = 0; i<SII_NUM_TX; i++ )  //single repeater may on subpipe
+     66          
+     67          	{
+     68          		if(initSwitchSetting.repeaterPipe[i].txOnThePipe[tx_number].txStat.isRptTxOn)
+     69          		{
+     70          			SiiRepeaterInstanceSet(i);
+     71          			break;
+     72          		}
+     73          	}
+     74          	return i;
+     75          }
+     76          
+     77          //------------------------------------------------------------------------------
+     78          // Function:    RepeaterOnInputPortSwitch
+     79          // Description: Perform the repeater action when Tx#1 has detected Hpd ON or OFF
+     80          // Parameters:  [in] qOn
+     81          //				- true: TPI active downstream detected
+     82          //				- false: TPI inactive downstream detected
+     83          // Returns:     none
+     84          //------------------------------------------------------------------------------
+     85          
+     86          static void	RepeaterOnInputPortSwitch (uint8_t ins, uint8_t rx)
+     87          {
+     88          	initSwitchSetting.repeaterPipe[ins].inputPort = rx;
+     89          	SiiRepeaterInstanceSet(ins);
+     90          	SiiRepeaterSetActiveSource(rx);
+     91          }
+     92          
+     93          
+     94          //------------------------------------------------------------------------------
+     95          // Function:    RepeaterSourceToOutputSel
+     96          // Description: Update the Tx to the right repeater pipe
+     97          // Parameters:  -muxSel: Tx input from main/sub/TPG
+     98          ///             -txIndx: the Tx number
+     99          // Returns:     none
+    100          //------------------------------------------------------------------------------
+    101          static void	RepeaterSourceToOutputSel (SiiSwitchHdmiPipe_t muxSel, uint8_t txIndx)
+    102          {
+    103          	uint8_t repeaterIns;
+    104          	repeaterIns = RepeaterInstanceGetFromTx(txIndx);
+    105          
+    106          	initSwitchSetting.repeaterPipe[repeaterIns].txOnThePipe[txIndx].txStat.isRptTxOn=false;
+    107          
+    108          	if ((muxSel > SiiSwitchHdmiPipeSub) ) //disabled, or not a HDMI input
+    109          	{
+    110          		SkAppTxInstanceSet(txIndx);
+    111          		if (SiiTxStatusGet().isDsConnected)
+    112          		{
+    113          		    SiiRepeaterCbTxStandby();
+    114          			SiiTxHdcpDisable();
+    115          			// TX needs to be in standalone mode
+    116          			SiiTxHdcpConfigure(OFF, 0, OFF);
+    117          		}
+    118          	}
+    119          	else //main or sub, add the tx to new pipe
+    120          	{
+    121          		initSwitchSetting.repeaterPipe[muxSel].txOnThePipe[txIndx].txStat.isRptTxOn=true;
+    122          	}
+    123          
+    124          }
+    125          
+    126          //------------------------------------------------------------------------------
+    127          // Function:    SkAppRepeaterSourceConfig
+    128          // Description: Configure the repeater instances when the system topology changes
+    129          //              disable the HDCP and TMDS of the changed Tx before re-conf,
+    130          //              re-activate afterwards.
+    131          // Parameters:  - sourceSel: the HDMI input port of the zone(tx)
+    132          //              - PipeConf: the input source (mian/sub/TPG) of the zone, and Matrix en
+    133          //              - txHdcpRestart: if the Tx TPG with audio insertion change needs Rx EDID and HDCP restart
+    134          // Returns:		- none
+    135          //------------------------------------------------------------------------------
+    136          
+    137          void SkAppRepeaterSourceConfig( SiiSwitchSource_t sourceSel[],
+    138                                          SiiMswInstanceCommonData_t PipeConf,
+    139                                          bool_t txHdcpRestart[])
+    140          {
+    141          	bool_t txChange[2] = {false, false};
+    142          	bool_t pipeChange[2] = {false, false};
+    143          
+    144          	bool_t modeChange = false;
+    145          	txStatus_t tst;
+    146          	uint8_t i, j;
+    147          
+    148          	if( !app.repeaterEnable )
+    149          	{
+    150          		return;
+    151          	}
+    152          	if (initSwitchSetting.switchMode != SI_RPT_MODE_SINGLE_REPEATER)
+    153          	{
+    154          		initSwitchSetting.switchMode = SI_RPT_MODE_SINGLE_REPEATER;
+    155          		initSwitchSetting.numberOfRepeater = 1;
+    156          		modeChange = true;
+    157          	}
+    158          
+    159          	for( i = 0; i < SII_NUM_TX; i++ )
+    160          	{
+    161          		 //if the tx input pipe-source is changed:
+    162          		 //(1)main <-> sub
+    163                   //(2)TPG -> Main/Sub (if TPG <- Main/Sub, do nothing)
+    164          		 //or Matrix / InstaPort mode change
+    165          	     if ( modeChange
+    166          	    	//previously not on this pipe
+    167          	    	||((!initSwitchSetting.repeaterPipe[PipeConf.pipeSel[i]].txOnThePipe[i].txStat.isRptTxOn )
+    168          	    	//and now is HDMI source that valid to this pipe
+    169          	    	  && (PipeConf.pipeSel[i] < SiiSwitchHdmiPipeNone )))
+    170          		 {
+    171          			 RepeaterSourceToOutputSel(PipeConf.pipeSel[i], i); //re-conf the tx  pipe
+    172          			 txChange[i] = true;
+    173          			 if (PipeConf.pipeSel[i] < SiiSwitchHdmiPipeNone )
+    174          			 {
+    175          				 pipeChange[PipeConf.pipeSel[i]] = true;
+    176          			 }
+    177          		 }
+    178          	    	//previously on this pipe
+    179          		 if (PipeConf.pipeSel[i] >= SiiSwitchHdmiPipeNone )
+    180          		 {
+    181          			 uint8_t ins = RepeaterInstanceGetFromTx(i);//get the previous pipe instance for the Tx
+    182          			 if( ins < SII_NUM_PIPE )//the Tx was active in repeater pipe before
+    183          			 {
+    184          				 RepeaterSourceToOutputSel(PipeConf.pipeSel[i], i); //set new configuration
+    185          				 SiiRepeaterPipeTxConnectionSet(i, OFF);
+    186          			 }
+    187          
+    188          		 }
+    189                   //re-conf the input HDMI to the pipe,
+    190          		 else if (initSwitchSetting.repeaterPipe[PipeConf.pipeSel[i]].inputPort != sourceSel[i])
+    191          		 {
+    192          	    	 RepeaterOnInputPortSwitch (PipeConf.pipeSel[i], sourceSel[i]);
+    193          		 }
+    194          	}
+    195          
+    196          	//configure each repeater instance
+    197          	for( j = 0; j<SII_NUM_TX; j++ )
+    198          	{
+    199          		if( modeChange || pipeChange[j])
+    200          		{
+    201          			for( i = 0; i<SII_NUM_TX; i++ )
+    202          			{
+    203          				if(initSwitchSetting.repeaterPipe[j].txOnThePipe[i].txStat.isRptTxOn )
+    204          				{
+    205          					SkAppTxInstanceSet(i);
+    206          					SiiTxHdcpConfigure(ON, 0, ON);
+    207          					tst = SiiTxStatusGet();
+    208          					if (tst.isSinkReady)
+    209          					{
+    210          					    SiiRepeaterCbTxStandby();
+    211          						SiiTxHdcpDisable();
+    212          					}
+    213          
+    214          				}
+    215          			}
+    216          		}
+    217          	}
+    218          
+    219          	if( modeChange )
+    220          	{
+    221          		SiiRepeaterSwitchModeSet( initSwitchSetting.switchMode );
+    222          
+    223          		for( j = 0; j<SII_NUM_TX; j++ )
+    224          		{
+    225          			SiiRepeaterInstanceSet(j);
+    226          			pSwitchSetting = &initSwitchSetting.repeaterPipe[j];
+    227          			SiiRepeaterPipeConfigureSet(pSwitchSetting);
+    228          		}
+    229          	}
+    230          	else for( i = 0; i<SII_NUM_TX; i++ )
+    231          	{
+    232          		if ( txChange[i] && (PipeConf.pipeSel[i] < SiiSwitchHdmiPipeNone))
+    233          		{
+    234          			SiiRepeaterInstanceSet(PipeConf.pipeSel[i]);
+    235          			pSwitchSetting = &initSwitchSetting.repeaterPipe[PipeConf.pipeSel[i]];
+    236          			SiiRepeaterPipeConfigureSet(pSwitchSetting);
+    237          		}
+    238          	}
+    239          
+    240          	//activate the instance if the Tx is already on.
+    241          	//after the Tx has been turned off to avoid snow noise
+    242          	for( j = 0; j<SII_NUM_TX; j++ )
+    243          	{
+    244          		if( modeChange || pipeChange[j])
+    245          		{
+    246          			for( i = 0; i<SII_NUM_TX; i++ )
+    247                      {
+    248                          if(initSwitchSetting.repeaterPipe[j].txOnThePipe[i].txStat.isRptTxOn )
+    249                          {
+    250                              SkAppTxInstanceSet(i);
+    251                              tst = SiiTxStatusGet();
+    252                              //Bug 31744 - With samsung S3 and S4 as MHL source, video out is not consistent when plug/unplug cable at source side
+    253                              if (tst.isDsConnected)
+    254                              {
+    255                                  //SkAppProcessTxEdid(i);
+    256                              	SiiOsTimerWait(200);
+    257                              }
+    258                              if (tst.isSinkReady)
+    259                              {
+    260                                  SkAppTxHpdConnection(SI_RPT_TX_HPD_ON);
+    261                              }
+    262                              else
+    263                              {
+    264                                  SkAppTxHpdConnection(SI_RPT_TX_HPD_OFF);
+    265                              }
+    266                          }
+    267                      }
+    268          		}
+    269          		else
+    270          		{
+    271                      for( i = 0; i<SII_NUM_TX; i++ )
+    272                    {
+    273                          if ((txHdcpRestart[i])&&
+    274                              (initSwitchSetting.repeaterPipe[j].txOnThePipe[i].txStat.isRptTxOn ))
+    275                      {
+    276                          SkAppTxInstanceSet(i);
+    277                          tst = SiiTxStatusGet();
+    278                          if (tst.isSinkReady)
+    279                          {
+    280                              SkAppTxHpdConnection(SI_RPT_TX_HPD_ON);
+    281                          }
+    282                      }
+    283                    }
+    284          		}
+    285          
+    286          	}
+    287          
+    288          }
+    289          //------------------------------------------------------------------------------
+    290          // Function:    SkAppDeviceInitRepeater
+    291          // Description: Perform any board-level initialization required at the same
+    292          //              time as Repeater component initialization
+    293          // Parameters:  isPowerUp
+    294          //              - true:  called when power up
+    295          //				- false: called to change the mode on fly
+    296          
+    297          // Returns:
+    298          //				- true:  success
+    299          //				- false: fail
+    300          //------------------------------------------------------------------------------
+    301          bool_t SkAppDeviceInitRepeater( bool_t isPowerUp )
+    302          {
+    303          	memset(&initSwitchSetting, 0, sizeof(RepeaterConfigureData_t));
+    304          
+    305          	initSwitchSetting.switchMode = SI_RPT_MODE_INITIAL;
+    306          
+    307          	initSwitchSetting.numberOfRepeater = 0;
+    308          
+    309              SiiRepeaterInitialize(app.repeaterEnable, isPowerUp);
+    310          
+    311              return true;
+    312          }
+    313          
+    314          //------------------------------------------------------------------------------
+    315          // Function:    SkAppRepeaterConfigure
+    316          // Description: Enable/disable repeater function
+    317          //              Must be followed by configuration of the
+    318          //              correct topo settings
+    319          // Parameters:  enable
+    320          //				- true:  enable repeater
+    321          //				- false: disable repeater
+    322          // Returns:
+    323          //				- true:  success
+    324          //				- false: fail
+    325          //------------------------------------------------------------------------------
+    326          bool_t SkAppRepeaterConfigure ( bool_t enable )
+    327          {
+    328          	uint8_t i;
+    329              // If Repeater enable state has changed, tell the component.
+    330          	// app.oldRepeaterEnable by default is false
+    331          	if( app.oldRepeaterEnable != enable )
+    332          	{
+    333          		app.oldRepeaterEnable = enable;
+    334              //	app.repeaterEnable default is determined by the SW1-2 on starter board
+    335          		app.repeaterEnable = enable;
+    336          	//  only call init as repeater when SW1-2 is on
+    337          	//  if SW1-2 is off, SkAppDeviceInitRepeater()is called by AppDeviceInitialize
+    338          	//  or later change on fly
+    339          		SkAppDeviceInitRepeater( false );
+    340          	}
+    341          	if(!enable)
+    342          	{
+    343          		for( i = 0; i<SII_NUM_TX; i++ )
+    344          		{
+    345          			SkAppTxInstanceSet(i);
+    346          			SiiTxHdcpConfigure(OFF, 0, OFF);
+    347          		}
+    348          	}
+    349          
+    350          	PrintStringOnOff( "Repeater ", app.repeaterEnable );
+    351          
+    352              return( true );
+    353          }
+    354          
+    355          
+    356          
+    357          //------------------------------------------------------------------------------
+    358          // Function:    SkAppTxHpdConnection
+    359          // Description: Perform the repeater action when Tx has detected Hpd ON or OFF
+    360          // Parameters:  [in] qOn
+    361          //				- true: TPI active downstream detected
+    362          //				- false: TPI inactive downstream detected
+    363          // Returns:     none
+    364          //------------------------------------------------------------------------------
+    365          
+    366          void SkAppTxHpdConnection (rptHpdTxEvent_t qOn)
+    367          {
+    368          	uint8_t tx_number;
+    369          	tx_number = SiiTxInstanceGet();
+    370          
+    371              if ( app.repeaterEnable )
+    372              {
+    373              	(void)RepeaterInstanceGetFromTx(tx_number);
+    374                  SiiRepeaterOnTxHpdChange(qOn, tx_number);
+    375              }
+    376          }
+    377          
+    378          //------------------------------------------------------------------------------
+    379          // Function:    SkAppTxHdcpAuthDone
+    380          // Description: Perform the repeater action when Tx has complete HDCP DS auth
+    381          // Parameters:  none
+    382          // Returns:     none
+    383          //------------------------------------------------------------------------------
+    384          
+    385          void SkAppTxHdcpAuthDone ( void )
+    386          {
+    387          	uint8_t tx_number;
+    388          	tx_number = SiiTxInstanceGet();
+    389          
+    390              if ( app.repeaterEnable )
+    391              {
+    392              	(void)RepeaterInstanceGetFromTx(tx_number);
+    393                  SiiRepeaterOnTxHdcpDone(tx_number);
+    394              }
+    395          
+    396          }
+    397          
+    398          //------------------------------------------------------------------------------
+    399          // Function:    SkAppTaskRepeater
+    400          // Description: Repeater tasks run at the back ground
+    401          // Parameters:  none
+    402          // Returns:     none
+    403          //------------------------------------------------------------------------------
+    404          
+    405          void SkAppTaskRepeater ( void )
+    406          {
+    407              clock_time_t msDiff = 0;
+    408              uint8_t instance;
+    409              bool_t timeOut = false;
+    410          
+    411              if(RepeaterTimerElapsed( &msDiff ))
+    412              {
+    413              	timeOut = true;
+    414              	RepeaterTimerSet( 40 );
+    415              }
+    416          	for (instance = 0; instance < SII_NUM_TX; instance++)
+    417          	{
+    418          		SiiRepeaterInstanceSet(instance);
+    419          		if ( timeOut || (app.repeaterEnable && SiiRepeaterInterruptPending()) )
+    420          		{
+    421          			SiiRepeaterHandler( msDiff );
+    422          		}
+    423          	}
+    424          
+    425              timeOut = false;
+    426          
+    427          }
+    428          
+    429          //-------------------------------------------------------------------------------------------------
+    430          //! @brief      TX callback function. Informs App/Repeater that downstream HDCP authentication
+    431          //!             is already done. Only upstream has to be authenticated.
+    432          //-------------------------------------------------------------------------------------------------
+    433          
+    434          void SkAppRepeaterHdcpUsOnlyAuthentication(void)
+    435          {
+    436          	uint8_t tx_number;
+    437          	tx_number = SiiTxInstanceGet();
+    438          
+    439          	(void)RepeaterInstanceGetFromTx(tx_number);
+    440              SiiRepeaterHdcpUsOnlyAuthentication(tx_number);
+    441          }
+    442          
+    443          
+    444          //-------------------------------------------------------------------------------------------------
+    445          //! @brief      TX callback function. Informs App/Repeater if downstream HDCP is available.
+    446          //!
+    447          //! @param[in]  isAcknowledged - true:  DS HDCP responded, false: no DDC acknowledge at DS
+    448          //-------------------------------------------------------------------------------------------------
+    449          
+    450          void SkAppRepeaterHdcpDsDdcAck(bool_t isAcknowledged)
+    451          {
+    452          	uint8_t tx_number;
+    453          	tx_number = SiiTxInstanceGet();
+    454          
+    455          	(void)RepeaterInstanceGetFromTx(tx_number);
+    456          	SiiRepeaterHdcpDsDdcAck(isAcknowledged, tx_number);
+    457          
+    458          }
+    459          
+    460          
+    461          //-------------------------------------------------------------------------------------------------
+    462          //! @brief      TX callback function. Send BSTATUS from TX to App/Repeater for processing.
+    463          //!
+    464          //! @param[in]  dsBstatus - 2-byte array carrying BSTATUS data
+    465          //-------------------------------------------------------------------------------------------------
+    466          
+    467          bool_t SkAppRepeaterHdcpProcessDsBstatus(uint8_t dsBstatus[2])
+    468          {
+    469          	uint8_t tx_number;
+    470          	tx_number = SiiTxInstanceGet();
+    471          
+    472          	(void)RepeaterInstanceGetFromTx(tx_number);
+    473              return SiiRepeaterHdcpProcessDsBstatus(dsBstatus, tx_number);
+    474          }
+    475          
+    476          
+    477          //-------------------------------------------------------------------------------------------------
+    478          //! @brief      TX callback function. Send 20-bit BKSV from TX to App/Repeater in order to
+    479          //!             finalize 2nd part of repeater HDCP authentication.
+    480          //!
+    481          //! @param[in]  aDsBksv - 5-byte array carrying downstream BKSV data
+    482          //-------------------------------------------------------------------------------------------------
+    483          
+    484          void SkAppRepeaterHdcpFinishUsPart2(uint8_t aDsBksv[5])
+    485          {
+    486          	uint8_t tx_number;
+    487          	tx_number = SiiTxInstanceGet();
+    488          
+    489          	(void)RepeaterInstanceGetFromTx(tx_number);
+    490              SiiRepeaterHdcpFinishUsPart2(aDsBksv, tx_number);
+    491          }
+    492          
+    493          
+    494          //-------------------------------------------------------------------------------------------------
+    495          //! @brief      TX callback function. Informs App/Repeater if BCAPS FIFO is ready.
+    496          //!
+    497          //! @param[in]  isFifoReady - BCAPS FIFO ready flag.
+    498          //-------------------------------------------------------------------------------------------------
+    499          
+    500          void SkAppRepeaterHdcpSetBcapsFifoRdyBits(bool_t isFifoReady)
+    501          {
+    502          	uint8_t tx_number;
+    503          	tx_number = SiiTxInstanceGet();
+    504          
+    505          	(void)RepeaterInstanceGetFromTx(tx_number);
+    506              SiiRepeaterHdcpSetBcapsFifoRdyBits(isFifoReady);
+    507          }
+    508          
+    509          
+    510          //-------------------------------------------------------------------------------------------------
+    511          //! @brief      TX callback function. Informs App/Repeater that TX is about to receive KSV List.
+    512          //-------------------------------------------------------------------------------------------------
+    513          
+    514          bool_t SkAppRepeaterHdcpPrepareForKsvListProcessing(void)
+    515          {
+    516          	uint8_t tx_number;
+    517          	tx_number = SiiTxInstanceGet();
+    518          
+    519          	(void)RepeaterInstanceGetFromTx(tx_number);
+    520              return (SiiRepeaterHdcpPrepareForKsvListProcessing(tx_number));
+    521          }
+    522          
+    523          //-------------------------------------------------------------------------------------------------
+    524          //! @brief      TX callback function. Informs App/Repeater that TX is about to receive KSV List.
+    525          //-------------------------------------------------------------------------------------------------
+    526          
+    527          bool_t SkAppRepeaterHdcpPrepareFor0KsvListProcessing(void)
+    528          {
+    529          	uint8_t tx_number;
+    530          	tx_number = SiiTxInstanceGet();
+    531          
+    532          	(void)RepeaterInstanceGetFromTx(tx_number);
+    533              return(SiiRepeaterHdcpPrepareFor0KsvListProcessing(tx_number));
+    534          }
+    535          
+    536          //-------------------------------------------------------------------------------------------------
+    537          //! @brief      TX callback function. Informs App/Repeater about HDCP failure.
+    538          //!
+    539          //! @param[in]  isFatal - true:  fatal HDCP issue, TX won't retry,
+    540          //!                       false: minor issue, TX will retry to authenticate
+    541          //-------------------------------------------------------------------------------------------------
+    542          
+    543          void SkAppRepeaterHdcpInformUsDeviceAboutFailure(bool_t isFatal)
+    544          {
+    545          	uint8_t tx_number;
+    546          	tx_number = SiiTxInstanceGet();
+    547          
+    548          	(void)RepeaterInstanceGetFromTx(tx_number);
+    549              SiiRepeaterHdcpInformUsDeviceAboutFailure(isFatal, tx_number);
+    550          }
+    551          
+    552          
+    553          //-------------------------------------------------------------------------------------------------
+    554          //! @brief      Repeater callback function setting transmitter instance
+    555          //-------------------------------------------------------------------------------------------------
+    556          void SiiRepeaterCbTxSelect(uint8_t instance)
+    557          {
+    558              SkAppTxInstanceSet(instance);
+    559          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        8  RepeaterInstanceGetFromTx
+              8 -> SiiRepeaterInstanceSet
+       24  RepeaterSourceToOutputSel
+             24 -> RepeaterInstanceGetFromTx
+             24 -> SiiRepeaterCbTxStandby
+              0 -> SiiTxHdcpConfigure
+             24 -> SiiTxHdcpDisable
+             24 -> SiiTxStatusGet
+             24 -> SkAppTxInstanceSet
+        0  SiiRepeaterCbTxSelect
+              0 -> SkAppTxInstanceSet
+       16  SkAppDeviceInitRepeater
+             16 -> SiiRepeaterInitialize
+             16 -> __aeabi_memclr4
+       16  SkAppRepeaterConfigure
+             16 -> PrintStringOnOff
+             16 -> SiiTxHdcpConfigure
+             16 -> SkAppDeviceInitRepeater
+             16 -> SkAppTxInstanceSet
+       16  SkAppRepeaterHdcpDsDdcAck
+             16 -> RepeaterInstanceGetFromTx
+              0 -> SiiRepeaterHdcpDsDdcAck
+             16 -> SiiTxInstanceGet
+       16  SkAppRepeaterHdcpFinishUsPart2
+             16 -> RepeaterInstanceGetFromTx
+              0 -> SiiRepeaterHdcpFinishUsPart2
+             16 -> SiiTxInstanceGet
+       16  SkAppRepeaterHdcpInformUsDeviceAboutFailure
+             16 -> RepeaterInstanceGetFromTx
+              0 -> SiiRepeaterHdcpInformUsDeviceAboutFailure
+             16 -> SiiTxInstanceGet
+        8  SkAppRepeaterHdcpPrepareFor0KsvListProcessing
+              8 -> RepeaterInstanceGetFromTx
+              0 -> SiiRepeaterHdcpPrepareFor0KsvListProcessing
+              8 -> SiiTxInstanceGet
+        8  SkAppRepeaterHdcpPrepareForKsvListProcessing
+              8 -> RepeaterInstanceGetFromTx
+              0 -> SiiRepeaterHdcpPrepareForKsvListProcessing
+              8 -> SiiTxInstanceGet
+       16  SkAppRepeaterHdcpProcessDsBstatus
+             16 -> RepeaterInstanceGetFromTx
+              0 -> SiiRepeaterHdcpProcessDsBstatus
+             16 -> SiiTxInstanceGet
+        8  SkAppRepeaterHdcpSetBcapsFifoRdyBits
+              8 -> RepeaterInstanceGetFromTx
+              0 -> SiiRepeaterHdcpSetBcapsFifoRdyBits
+              8 -> SiiTxInstanceGet
+        8  SkAppRepeaterHdcpUsOnlyAuthentication
+              8 -> RepeaterInstanceGetFromTx
+              0 -> SiiRepeaterHdcpUsOnlyAuthentication
+              8 -> SiiTxInstanceGet
+       40  SkAppRepeaterSourceConfig
+             40 -> RepeaterInstanceGetFromTx
+             40 -> RepeaterSourceToOutputSel
+             40 -> SiiOsTimerWait
+             40 -> SiiRepeaterCbTxStandby
+             40 -> SiiRepeaterInstanceSet
+             40 -> SiiRepeaterPipeConfigureSet
+             40 -> SiiRepeaterPipeTxConnectionSet
+             40 -> SiiRepeaterSetActiveSource
+             40 -> SiiRepeaterSwitchModeSet
+             40 -> SiiTxHdcpConfigure
+             40 -> SiiTxHdcpDisable
+             40 -> SiiTxStatusGet
+             40 -> SkAppTxHpdConnection
+             40 -> SkAppTxInstanceSet
+       24  SkAppTaskRepeater
+             24 -> SiiOsTimerTotalElapsed
+              0 -> SiiRepeaterHandler
+             24 -> SiiRepeaterInstanceSet
+             24 -> SiiRepeaterInterruptPending
+        8  SkAppTxHdcpAuthDone
+              8 -> RepeaterInstanceGetFromTx
+              0 -> SiiRepeaterOnTxHdcpDone
+              8 -> SiiTxInstanceGet
+       16  SkAppTxHpdConnection
+             16 -> RepeaterInstanceGetFromTx
+              0 -> SiiRepeaterOnTxHpdChange
+             16 -> SiiTxInstanceGet
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      12  ?<Constant "Repeater ">
+       2  ?<Constant {0, 0}>
+       2  ?<Constant {0, 0}>_1
+       4  ??DataTable10
+       4  ??DataTable10_1
+       6  ?Subroutine0
+       6  ?Subroutine1
+       4  ?Subroutine2
+      32  RepeaterInstanceGetFromTx
+     102  RepeaterSourceToOutputSel
+       4  SiiRepeaterCbTxSelect
+      34  SkAppDeviceInitRepeater
+      60  SkAppRepeaterConfigure
+      22  SkAppRepeaterHdcpDsDdcAck
+      22  SkAppRepeaterHdcpFinishUsPart2
+      22  SkAppRepeaterHdcpInformUsDeviceAboutFailure
+      22  SkAppRepeaterHdcpPrepareFor0KsvListProcessing
+      22  SkAppRepeaterHdcpPrepareForKsvListProcessing
+      22  SkAppRepeaterHdcpProcessDsBstatus
+      20  SkAppRepeaterHdcpSetBcapsFifoRdyBits
+      22  SkAppRepeaterHdcpUsOnlyAuthentication
+     350  SkAppRepeaterSourceConfig
+      78  SkAppTaskRepeater
+      34  SkAppTxHdcpAuthDone
+      36  SkAppTxHpdConnection
+      64  initSwitchSetting
+          pSwitchSetting
+
+ 
+  64 bytes in section .data
+   4 bytes in section .rodata
+ 940 bytes in section .text
+ 
+ 940 bytes of CODE  memory
+   4 bytes of CONST memory
+  64 bytes of DATA  memory
+
+Errors: none
+Warnings: 1

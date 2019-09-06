@@ -1,0 +1,920 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:23:54 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\application\sk_app_demo #
+#                    .c                                                       #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\application\sk_app_demo #
+#                    .c -D S4051A -D DEBUG -D FREE_RTOS -D STM32F40_41xxx -D  #
+#                    USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D             #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\sk_app_demo.lst                                       #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\sk_app_demo.o                                          #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\application\sk_app_demo.c
+      1          //***************************************************************************
+      2          //!file     sk_app_demo.c
+      3          //!brief    Built-in Demo manager
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2009-2011, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include "si_timer.h"
+     14          
+     15          #include "sk_application.h"
+     16          #if INC_CBUS
+     17          #include "sk_app_cbus.h"
+     18          #endif
+     19          #if INC_CEC
+     20          #include "si_cec_component.h"
+     21          #endif
+     22          #include "si_tx_component.h"
+     23          #include "si_drv_tpi_system.h"
+     24          #include "si_drv_switch.h"
+     25          #if INC_AUDIO_RX
+     26          #include "si_drv_audio.h"
+     27          #endif
+     28          
+     29          //-------------------------------------------------------------------------------------------------
+     30          //! @brief      Service function for IV & PV demo.
+     31          //-------------------------------------------------------------------------------------------------
+     32          static void DemoLocalVideoModeEnable ( bool_t isEnabled, SiiSwitchSource_t txSrc[2])
+     33          {
+     34              uint8_t i;
+     35          
+     36              if (isEnabled)
+     37              {
+     38                  for (i = 0; i < SII_NUM_TX; ++i)
+     39                  {
+     40                      // Save current state of TX source type configuration
+     41                      if(app.currentSource[i] != txSrc[i])
+     42                      {
+     43                          app.txSourcePipe[i] = app.currentSource[i];
+     44                      }
+     45                      // Select source for TX0 and TX1
+     46                      app.newSource[i] = txSrc[i];
+     47                  }
+     48              }
+     49              else
+     50              {
+     51                  for (i = 0; i < SII_NUM_TX; ++i)
+     52                  {
+     53                      // Recover source for TX0 and TX1
+     54                      app.newSource[i] = app.txSourcePipe[i];
+     55                  }
+     56              }
+     57          
+     58          }
+     59          
+     60          //-------------------------------------------------------------------------------------------------
+     61          //! @brief      TPG on/off demo.
+     62          //-------------------------------------------------------------------------------------------------
+     63          #if INC_IV
+     64          void DemoTpgModeEnable ( bool_t isEnabled )
+     65          {
+     66              SiiSwitchSource_t txSrc[2] = {SiiSwitchSourceInternalVideo, SiiSwitchSourceInternalVideo};
+     67              DemoLocalVideoModeEnable(isEnabled, txSrc);
+     68          }
+     69          #endif
+     70          
+     71          #if INC_IV
+     72          
+     73          static char *patternNames [] =
+     74          {
+     75              "Red", "Green", "Blue", "Black", "White", "Ramp", "Chess board", "Color Bars"
+     76          };
+     77          
+     78          static char * PatternNameGet(tpgVideoPattern_t patternCode)
+     79          {
+     80              if ( patternCode < 8 )
+     81              {
+     82                  return( patternNames[ patternCode]);
+     83              }
+     84              else
+     85              {
+     86                  return( "-" );
+     87              }
+     88          }
+     89          
+     90          //------------------------------------------------------------------------------
+     91          // Function:    SkDemoTpg
+     92          // Description: Internal Video (TPG) demo command options
+     93          // Returns:
+     94          //------------------------------------------------------------------------------
+     95          
+     96          static char *pTpgMenuNames [] =
+     97          {
+     98              "\nInternal Video Demo",
+     99              "--------",
+    100              ccDisplayThisMenuMsg,
+    101              returnToMainDemoMsg,
+    102              "1 - IV display ON",
+    103              "2 - IV display OFF",
+    104              "3 - Change Video mode",
+    105              "4 - Change Audio type",
+    106              "5 - Change Audio Source",
+    107              "6 - Change VCLK Source",
+    108              "7 - Change Video Pattern",
+    109              NULL
+    110          };
+    111          
+    112          bool_t SkDemoTpg ( RC5Commands_t key )
+    113          {
+    114              uint8_t i;
+    115              uint8_t digit;
+    116          
+    117              switch ( key )
+    118              {
+    119          #if (PHILIPS_REMOTE == 1)
+    120                  case RC5_CC_SUBTITLE:
+    121          #else
+    122                  case RC5_HELP:
+    123          #endif
+    124                      PrintMenu( pTpgMenuNames );
+    125                      //PrintStringOnOff( "8 - HDCP", !app.isTxHdcpRequired[0] ); // Bug 33490 - Melbourne SiI9535 | FW Menu System|Internal Video Demo|HDCP fails to work
+    126          
+    127                      break;
+    128          
+    129                  case RC5_0:
+    130                      app.demoMenuLevel = 0;
+    131                      PrintAlways( demoMenuExit );
+    132                      break;
+    133          
+    134                  case RC5_1:
+    135                      DemoTpgModeEnable(true);
+    136                      break;
+    137          
+    138                  case RC5_2:
+    139                      DemoTpgModeEnable(false);
+    140                      break;
+    141          
+    142                  case RC5_3:
+    143                      PrintAlways( tenDashes );
+    144                      PrintStringCheckMark( "0 - 480p60", (app.tpgVideoFormat == SI_TPG_FMT_VID_480_60) );
+    145                      PrintStringCheckMark( "1 - 576p50", (app.tpgVideoFormat == SI_TPG_FMT_VID_576_50) );
+    146                      PrintStringCheckMark( "2 - 720p60", (app.tpgVideoFormat == SI_TPG_FMT_VID_720_60) );
+    147                      PrintStringCheckMark( "3 - 720p50", (app.tpgVideoFormat == SI_TPG_FMT_VID_720_50) );
+    148                      PrintStringCheckMark( "4 - 1080p60-8b", (app.tpgVideoFormat == SI_TPG_FMT_VID_1080_60_8bpp) );
+    149                      PrintStringCheckMark( "5 - 1080p50-8b", (app.tpgVideoFormat == SI_TPG_FMT_VID_1080_50_8bpp) );
+    150                      PrintStringCheckMark( "6 - 1080p60-10b", (app.tpgVideoFormat == SI_TPG_FMT_VID_1080_60_10bpp) );
+    151                      PrintStringCheckMark( "7 - 1080p50-10b", (app.tpgVideoFormat == SI_TPG_FMT_VID_1080_50_10bpp) );
+    152                      PrintStringCheckMark( "8 - 1080p60-12b", (app.tpgVideoFormat == SI_TPG_FMT_VID_1080_60_12bpp) );
+    153                      PrintStringCheckMark( "9 - 1080p50-12b", (app.tpgVideoFormat == SI_TPG_FMT_VID_1080_50_12bpp) );
+    154          
+    155                      digit = SkAppIrGetSingleDigit(10);
+    156                      switch (digit)
+    157                      {
+    158                          default:
+    159                          case 0:
+    160                              app.tpgVideoFormat = SI_TPG_FMT_VID_480_60;
+    161                              PrintAlways( "TPG RES: 480p60, VCLK = 27.00 MHz\n" );
+    162                              break;
+    163                          case 1:
+    164                              app.tpgVideoFormat = SI_TPG_FMT_VID_576_50;
+    165                              PrintAlways( "TPG RES: 576p50, VCLK = 27.00 MHz\n" );
+    166                              break;
+    167                          case 2:
+    168                              app.tpgVideoFormat = SI_TPG_FMT_VID_720_60;
+    169                              PrintAlways( "TPG RES: 720p60, VCLK = 74.25 MHz\n" );
+    170                              break;
+    171                          case 3:
+    172                              app.tpgVideoFormat = SI_TPG_FMT_VID_720_50;
+    173                              PrintAlways( "TPG RES: 720p50, VCLK = 74.25 MHz\n" );
+    174                              break;
+    175                          case 4:
+    176                              app.tpgVideoFormat = SI_TPG_FMT_VID_1080_60_8bpp;
+    177                              PrintAlways( "TPG RES: 1080p60-8b, VCLK = 148.5 MHz\n" );
+    178                              break;
+    179                          case 5:
+    180                              app.tpgVideoFormat = SI_TPG_FMT_VID_1080_50_8bpp;
+    181                              PrintAlways( "TPG RES: 1080p50-8b, VCLK = 148.5 MHz\n" );
+    182                              break;
+    183                          case 6:
+    184                              app.tpgVideoFormat = SI_TPG_FMT_VID_1080_60_10bpp;
+    185                              PrintAlways( "TPG RES: 1080p60-10b, VCLK = 185.625 MHz\n" );
+    186                              break;
+    187                          case 7:
+    188                              app.tpgVideoFormat = SI_TPG_FMT_VID_1080_50_10bpp;
+    189                              PrintAlways( "TPG RES: 1080p50-10b, VCLK = 185.625 MHz\n" );
+    190                              break;
+    191                          case 8:
+    192                              app.tpgVideoFormat = SI_TPG_FMT_VID_1080_60_12bpp;
+    193                              PrintAlways( "TPG RES: 1080p60-12b, VCLK = 222.75 MHz\n" );
+    194                              break;
+    195                          case 9:
+    196                              app.tpgVideoFormat = SI_TPG_FMT_VID_1080_50_12bpp;
+    197                              PrintAlways( "TPG RES: 1080p50-12b, VCLK = 222.75 MHz\n" );
+    198                              break;
+    199                      }
+    200                      break;
+    201          
+    202                  case RC5_4:
+    203                      PrintAlways( tenDashes );
+    204                      DEBUG_PRINT( MSG_ALWAYS, "0 - TX %s SPDIF\n", (app.currentAudioType[0] == SI_TX_AUDIO_SRC_SPDIF) ? "<--" : "   ");
+    205                      DEBUG_PRINT( MSG_ALWAYS, "1 - TX %s I2S 2ch\n", (app.currentAudioType[0] == SI_TX_AUDIO_SRC_I2S_L0) ? "<--" : "   ");
+    206          
+    207                      digit = SkAppIrGetSingleDigit(1);
+    208                      switch (digit)
+    209                      {
+    210                          case 0:
+    211                              app.currentAudioType[0] = SI_TX_AUDIO_SRC_SPDIF;
+    212                              PrintAlways( "SPDIF >> TX\n" );
+    213                              break;
+    214                          case 1:
+    215                              app.currentAudioType[0] = SI_TX_AUDIO_SRC_I2S_L0;
+    216                              PrintAlways( "I2S 2ch >> TX\n" );
+    217                              break;
+    218                      }
+    219                      break;
+    220          
+    221                  case RC5_5:
+    222                      PrintAlways( tenDashes );
+    223                      DEBUG_PRINT( MSG_ALWAYS, "0 - TX %s DEF\n", (app.currentAudioSource[0] == SiiSwitchAudioSourceDefault) ? "<--" : "   ");
+    224                      DEBUG_PRINT( MSG_ALWAYS, "1 - TX %s EXT\n", (app.currentAudioSource[0] == SiiSwitchAudioSourceExternal) ? "<--" : "   ");
+    225          
+    226                      digit = SkAppIrGetSingleDigit(1);
+    227                      switch (digit)
+    228                      {
+    229                          case 0:
+    230                              app.newAudioSource[0] = SiiSwitchAudioSourceDefault;
+    231                              PrintAlways( "DEFAULT\n" );
+    232                              break;
+    233          
+    234                          case 1:
+    235                              app.newAudioSource[0] = SiiSwitchAudioSourceExternal;
+    236                              PrintAlways( "EXT\n" );
+    237                              break;
+    238                      }
+    239                      break;
+    240          
+    241                  case RC5_6:
+    242                      PrintAlways( tenDashes );
+    243                      PrintStringCheckMark( "0 - Main Pipe", (app.tpgClockSrc == SI_TPG_CLK_MAIN_PIPE) );
+    244                      PrintStringCheckMark( "1 - XCLK", (app.tpgClockSrc == SI_TPG_CLK_XCLK) );
+    245                      PrintStringCheckMark( "2 - Audio PLL 0", (app.tpgClockSrc == SI_TPG_CLK_P0) );
+    246                      digit = SkAppIrGetSingleDigit(2);
+    247                      switch (digit)
+    248                      {
+    249                          case 0:
+    250                              app.tpgClockSrc = SI_TPG_CLK_MAIN_PIPE;
+    251                              PrintAlways( "MP CLK\n" );
+    252                              break;
+    253                          case 1:
+    254                              app.tpgClockSrc = SI_TPG_CLK_XCLK;
+    255                              PrintAlways( "XCLK\n" );
+    256                              break;
+    257                          case 2:
+    258                              app.tpgClockSrc = SI_TPG_CLK_P0;
+    259                              PrintAlways( "AUD PLL 0\n" );
+    260                              break;
+    261                      }
+    262                      break;
+    263          
+    264                  case RC5_7:
+    265                      while(true)
+    266                      {
+    267                          PrintAlways( "Press 0 to Quit, (1-8) to Select Pattern:\n--------\n");
+    268                          for (i = 0; i < 8; ++i)
+    269                          {
+    270                              DEBUG_PRINT( MSG_ALWAYS,"%s\t%d - %s\n", (i == app.tpgVideoPattern) ? " -->": "", i + 1, PatternNameGet(i));
+    271                          }
+    272                          digit = SkAppIrGetSingleDigit(8);
+    273                          if (digit == 0)
+    274                          {
+    275                              break;
+    276                          }
+    277                          SiiDrvExtTpgPatternSet((tpgVideoPattern_t) (digit - 1));
+    278                          app.tpgVideoPattern = digit - 1;
+    279                      }
+    280                      break;
+    281          
+    282                  case RC5_8:
+    283                      // Bug 33490 - Melbourne SiI9535 | FW Menu System|Internal Video Demo|HDCP fails to work
+    284                      //app.isTxHdcpRequired[0] = !app.isTxHdcpRequired[0]; // Toggle TX0 HDCP
+    285                      //app.isTxHdcpRequired[1] = !app.isTxHdcpRequired[1]; // Toggle TX1 HDCP
+    286                      //PrintStringOnOff( "TX0 HDCP", app.isTxHdcpRequired[0] );
+    287                      //PrintStringOnOff( "TX1 HDCP", app.isTxHdcpRequired[1] );
+    288                      break;
+    289          
+    290                  default:
+    291                      break;
+    292              }
+    293          
+    294              return( false );
+    295          }
+    296          
+    297          #endif
+    298          
+    299          static char * AudioTypeNameGet(txAudioSrc_t audioTypeCode)
+    300          {
+    301              char *pName;
+    302          
+    303              switch(audioTypeCode)
+    304              {
+    305                  default:
+    306                   case SI_TX_AUDIO_SRC_NONE:
+    307                       pName = "None";
+    308                       break;
+    309                   case SI_TX_AUDIO_SRC_I2S_L0:
+    310                   case SI_TX_AUDIO_SRC_I2S_L1:
+    311                       pName = "I2S";
+    312                       break;
+    313                   case SI_TX_AUDIO_SRC_HBRA:
+    314                       pName = "HBR";
+    315                       break;
+    316                   case SI_TX_AUDIO_SRC_DSD_L0:
+    317                   case SI_TX_AUDIO_SRC_DSD_L1:
+    318                       pName = "DSD";
+    319                       break;
+    320                   case SI_TX_AUDIO_SRC_SPDIF:
+    321                       pName = "SPDIF";
+    322                       break;
+    323              }
+    324              return pName;
+    325          }
+    326          
+    327          
+    328          //------------------------------------------------------------------------------
+    329          // Function:    SkAppAudioDemo
+    330          // Description: Internal and External Audio insertion demo
+    331          // Returns:
+    332          //------------------------------------------------------------------------------
+    333          static char *pAudioDemoMenu [] =
+    334          {
+    335              "\nAudio Demo",
+    336              tenDashes,
+    337              ccDisplayThisMenuMsg,
+    338              returnToMainDemoMsg,
+    339              NULL
+    340          };
+    341          
+    342          bool_t SkAppAudioDemo ( RC5Commands_t key )
+    343          {
+    344              uint8_t digit;
+    345          
+    346              switch (key)
+    347              {
+    348          #if (PHILIPS_REMOTE == 1)
+    349                  case RC5_CC_SUBTITLE:
+    350          #else
+    351                  case RC5_HELP:
+    352          #endif
+    353                      PrintMenu( pAudioDemoMenu );
+    354                      DEBUG_PRINT( MSG_ALWAYS, "1 - External Audio Format (%s)\n", AudioTypeNameGet(app.currentAudioType[0]) );
+    355                      PrintStringOnOff( "2 - External Audio Insertion", (app.currentAudioSource[0] == SiiSwitchAudioSourceExternal) );
+    356                      PrintStringOnOff( "3 - Internal Audio Insertion", (app.currentAudioSource[0] == SiiSwitchAudioSourceSubPipe) );
+    357                      PrintStringOnOff( "4 - Multi-channel Audio extraction from MP", app.isAudioExtractionEnabled[0] );
+    358                      break;
+    359          
+    360                  case RC5_0:
+    361                      app.demoMenuLevel = 0;
+    362                      PrintAlways( demoMenuExit );
+    363                      break;
+    364          
+    365                  case RC5_1:
+    366                      PrintAlways( tenDashes );
+    367                      DEBUG_PRINT( MSG_ALWAYS, "0 - Tx %s SPDIF\n", (app.currentAudioType[0] == SI_TX_AUDIO_SRC_SPDIF) ? "<--" : "   ");
+    368                      DEBUG_PRINT( MSG_ALWAYS, "1 - Tx %s I2S 2ch\n", (app.currentAudioType[0] == SI_TX_AUDIO_SRC_I2S_L0) ? "<--" : "   ");
+    369          
+    370                      digit = SkAppIrGetSingleDigit(3);
+    371                      switch (digit)
+    372                      {
+    373                          case 0:
+    374                              app.currentAudioType[0] = SI_TX_AUDIO_SRC_SPDIF;
+    375                              PrintAlways( "SPDIF >> Tx\n" );
+    376                              break;
+    377                          case 1:
+    378                              app.currentAudioType[0] = SI_TX_AUDIO_SRC_I2S_L0;
+    379                              PrintAlways( "I2S 2ch >> Tx\n" );
+    380                              break;
+    381                      }
+    382                      DEBUG_PRINT( MSG_ALWAYS, "!! Check Jumper(JP10) Settings \n");
+    383                      break;
+    384          
+    385                  case RC5_2:
+    386                      if (app.currentAudioSource[0] == SiiSwitchAudioSourceExternal)
+    387                      {
+    388                          app.newAudioSource[0] = SiiSwitchAudioSourceDefault;
+    389                          PrintAlways( "Audio SRC: Default\n" );
+    390                      }
+    391                      else
+    392                      {
+    393                          app.newAudioSource[0] = SiiSwitchAudioSourceExternal;
+    394                          PrintAlways( "Audio SRC: External\n" );
+    395                          PrintAlways( "!! Check External Audio Format and Jumper (JP10) Settings \n" );
+    396                      }
+    397                      break;
+    398          
+    399                  case RC5_3:
+    400                      if (app.currentAudioSource[0] == SiiSwitchAudioSourceSubPipe)
+    401                      {
+    402                          app.newAudioSource[0] = SiiSwitchAudioSourceDefault;
+    403                          PrintAlways( "Audio SRC: Default\n" );
+    404                      }
+    405                      else
+    406                      {
+    407          #if INC_IPV
+    408                      	if(app.ipvPipEnabled)
+    409                      	{
+    410                      		app.newAudioSource[0] = SiiSwitchAudioSourceSubPipe;
+    411                      		PrintAlways( "Audio SRC: Sub Pipe\n" );
+    412                      	}
+    413                      	else
+    414                      	{
+    415                      		PrintAlways( "\n\r!!!Internal Audio insertion will work only when PIP is Enabled!!!\n" );
+    416                      	}
+    417          #else
+    418                      	PrintAlways( "\n\rIPV is Disabled\n\r" );
+    419          #endif
+    420                      }
+    421                      break;
+    422          
+    423                  case RC5_4:
+    424                      app.isAudioExtractionEnabled[0] = !app.isAudioExtractionEnabled[0];
+    425                      (void)SiiDrvRxAudioInstanceSet(0);
+    426                      SiiDrvRxAudioMute(!app.isAudioExtractionEnabled[0]);
+    427                      DEBUG_PRINT( MSG_ALWAYS, "MP Audio Extraction %s\n", app.isAudioExtractionEnabled[0] ? "Enabled" : "Disabled" );
+    428                      break;
+    429          
+    430                  default:
+    431                      break;
+    432              }
+    433          
+    434              return (false);
+    435          }
+    436          
+    437          
+    438          //------------------------------------------------------------------------------
+    439          // Function:    SkAppDemoIrRemote
+    440          // Description: Parse remote control keys for the Demo application
+    441          //------------------------------------------------------------------------------
+    442          
+    443          bool_t SkAppDemoIrRemote ( RC5Commands_t key, bool_t fullAccess )
+    444          {
+    445              bool_t  usedKey = false;
+    446          
+    447          #if (PHILIPS_REMOTE == 1)
+    448              if ( key == RC5_TOGGLE )
+    449          #else
+    450                  if ( key == RC5_GUIDE )
+    451          #endif
+    452              {
+    453                  PrintAlways( "\n Demo Menu\n" );
+    454                  PrintAlways( " -----------\n" );
+    455                  PrintAlways( "0 - Return to TV Mode\n" );
+    456                  PrintAlways( "1 - Audio Demo\n" );
+    457          #if INC_ARC
+    458                  PrintAlways( "2 - ARC Demo\n" );
+    459          #endif
+    460                  PrintAlways( "3 - Internal Video Demo\n" );
+    461          #if INC_CBUS
+    462                //  PrintAlways( "4 - CBUS Demo\n" );
+    463          #endif
+    464          #if INC_IPV
+    465                  PrintAlways( "4 - InstaPrevue Demo\n" );
+    466          #endif
+    467          #if INC_CEC
+    468                  PrintAlways( "5 - CEC Demo\n" );
+    469          #endif
+    470          
+    471          #if INC_CEC
+    472                  PrintAlways( "\n Select Demo (0-5): " );
+    473          #else
+    474                  PrintAlways( "\n Select Demo (0-4): " );
+    475          #endif
+    476          
+    477                 app.demoMenuLevel = SkAppIrGetSingleDigit( 6 ) + 1;
+    478          #if (PHILIPS_REMOTE == 1)
+    479                 key = RC5_CC_SUBTITLE;    // Cause new level menu to be displayed
+    480          #else
+    481                 key = RC5_HELP;    // Cause new level menu to be displayed
+    482          #endif
+    483              }
+    484          
+    485              switch ( app.demoMenuLevel )
+    486              {
+    487                  case 0:     // Menu IDLE mode
+    488                      break;
+    489                  case 1:
+    490                      SkAppIrRemoteReturnToTV();
+    491                      break;
+    492                  case 2:
+    493                      SkAppAudioDemo( key );
+    494                      break;
+    495          #if INC_ARC
+    496                  case 3:
+    497                      SkAppArcDemo( key );
+    498                      break;
+    499          #endif
+    500          #if INC_IV
+    501                  case 4:
+    502                      SkDemoTpg( key );
+    503                      break;
+    504          #endif
+    505          #if INC_CBUS
+    506          //        case 5:
+    507          //            SkAppCbusDemo( key );
+    508          //            break;
+    509          #endif
+    510          #if INC_IPV
+    511                  case 5:
+    512                      SkAppIpvDemo( key );
+    513                      break;
+    514          #endif
+    515          #if INC_CEC
+    516                  case 6:
+    517                      SkAppCecDemo( key );
+    518                      break;
+    519          #endif
+    520          
+    521                  default:
+    522                      break;
+    523              }
+    524          
+    525              return( usedKey );
+    526          }
+    527          
+    528          //------------------------------------------------------------------------------
+    529          // Function:    SkAppDemo
+    530          // Description: Demo handler
+    531          //------------------------------------------------------------------------------
+    532          
+    533          void SkAppDemo ( void )
+    534          {
+    535              if ( !SiiPlatformTimerExpired( TIMER_1 ))
+    536              {
+    537                  return;
+    538              }
+    539              SiiPlatformTimerSet( TIMER_1, DEM_POLLING_DELAY );     // Reset poll timer
+    540          
+    541              // Check the UI here rather than in the main loop because we don't need
+    542              // to check it at such a high rate, and besides, if the user changed the
+    543              // rotary switch in between polling delays, the next time it was checked
+    544              // it would report unchanged - you have only one chance to get the changed value.
+    545          
+    546              SkAppUiUpdate();
+    547          
+    548          }
+    549          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        4  DemoTpgModeEnable
+       16  SkAppAudioDemo
+             16 -> PrintAlways
+             16 -> PrintMenu
+             16 -> PrintStringOnOff
+             16 -> SiiDrvRxAudioInstanceSet
+             16 -> SiiDrvRxAudioMute
+             16 -> SkAppIrGetSingleDigit
+        8  SkAppDemo
+              8 -> SiiPlatformTimerExpired
+              8 -> SiiPlatformTimerSet
+              0 -> SkAppUiUpdate
+        8  SkAppDemoIrRemote
+              8 -> PrintAlways
+              8 -> SkAppArcDemo
+              8 -> SkAppAudioDemo
+              8 -> SkAppCecDemo
+              8 -> SkAppIpvDemo
+              8 -> SkAppIrGetSingleDigit
+              8 -> SkAppIrRemoteReturnToTV
+              8 -> SkDemoTpg
+       16  SkDemoTpg
+             16 -> DemoTpgModeEnable
+             16 -> PrintAlways
+             16 -> PrintMenu
+             16 -> PrintStringCheckMark
+             16 -> SiiDrvExtTpgPatternSet
+             16 -> SkAppIrGetSingleDigit
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      16  ?<Constant " -----------\n">
+      60  ?<Constant "!! Check External Aud...">
+      12  ?<Constant "--------">
+      12  ?<Constant "0 - 480p60">
+      16  ?<Constant "0 - Main Pipe">
+      24  ?<Constant "0 - Return to TV Mode\n">
+      12  ?<Constant "1 - 576p50">
+      16  ?<Constant "1 - Audio Demo\n">
+      20  ?<Constant "1 - IV display ON">
+      12  ?<Constant "1 - XCLK">
+      12  ?<Constant "2 - 720p60">
+      16  ?<Constant "2 - ARC Demo\n">
+      16  ?<Constant "2 - Audio PLL 0">
+      32  ?<Constant "2 - External Audio In...">
+      20  ?<Constant "2 - IV display OFF">
+      12  ?<Constant "3 - 720p50">
+      24  ?<Constant "3 - Change Video mode">
+      32  ?<Constant "3 - Internal Audio In...">
+      28  ?<Constant "3 - Internal Video Demo\n">
+      16  ?<Constant "4 - 1080p60-8b">
+      24  ?<Constant "4 - Change Audio type">
+      24  ?<Constant "4 - InstaPrevue Demo\n">
+      44  ?<Constant "4 - Multi-channel Aud...">
+      16  ?<Constant "5 - 1080p50-8b">
+      16  ?<Constant "5 - CEC Demo\n">
+      24  ?<Constant "5 - Change Audio Source">
+      16  ?<Constant "6 - 1080p60-10b">
+      24  ?<Constant "6 - Change VCLK Source">
+      16  ?<Constant "7 - 1080p50-10b">
+      28  ?<Constant "7 - Change Video Pattern">
+      16  ?<Constant "8 - 1080p60-12b">
+      16  ?<Constant "9 - 1080p50-12b">
+      12  ?<Constant "AUD PLL 0\n">
+      20  ?<Constant "Audio SRC: Default\n">
+      24  ?<Constant "Audio SRC: External\n">
+      24  ?<Constant "Audio SRC: Sub Pipe\n">
+      12  ?<Constant "DEFAULT\n">
+       8  ?<Constant "EXT\n">
+      16  ?<Constant "I2S 2ch >> TX\n">
+      16  ?<Constant "I2S 2ch >> Tx\n">
+       8  ?<Constant "MP CLK\n">
+      52  ?<Constant "Press 0 to Quit, (1-8...">
+      16  ?<Constant "SPDIF >> TX\n">
+      16  ?<Constant "SPDIF >> Tx\n">
+      44  ?<Constant "TPG RES: 1080p50-10b,...">
+      44  ?<Constant "TPG RES: 1080p50-12b,...">
+      40  ?<Constant "TPG RES: 1080p50-8b, ...">
+      44  ?<Constant "TPG RES: 1080p60-10b,...">
+      44  ?<Constant "TPG RES: 1080p60-12b,...">
+      40  ?<Constant "TPG RES: 1080p60-8b, ...">
+      36  ?<Constant "TPG RES: 480p60, VCLK...">
+      36  ?<Constant "TPG RES: 576p50, VCLK...">
+      36  ?<Constant "TPG RES: 720p50, VCLK...">
+      36  ?<Constant "TPG RES: 720p60, VCLK...">
+       8  ?<Constant "XCLK\n">
+      16  ?<Constant "\n Demo Menu\n">
+      24  ?<Constant "\n Select Demo (0-5): ">
+      12  ?<Constant "\nAudio Demo">
+      24  ?<Constant "\nInternal Video Demo">
+      72  ?<Constant "\n\r!!!Internal Audio i...">
+       2  ?<Constant {3, 3}>
+       4  ??DataTable64
+       4  ??DataTable64_1
+       4  ??DataTable64_2
+       4  ??DataTable64_3
+       4  ??DataTable64_4
+      54  DemoTpgModeEnable
+     236  SkAppAudioDemo
+      30  SkAppDemo
+     152  SkAppDemoIrRemote
+     616  SkDemoTpg
+      20  pAudioDemoMenu
+      48  pTpgMenuNames
+
+ 
+    68 bytes in section .data
+   212 bytes in section .rodata
+ 2 350 bytes in section .text
+ 
+ 2 350 bytes of CODE  memory
+   212 bytes of CONST memory
+    68 bytes of DATA  memory
+
+Errors: none
+Warnings: 4

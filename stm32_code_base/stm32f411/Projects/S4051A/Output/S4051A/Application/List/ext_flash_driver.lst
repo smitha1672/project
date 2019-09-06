@@ -1,0 +1,897 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:25:52 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\EXT_FLASH\ext_flash_driver.c    #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\EXT_FLASH\ext_flash_driver.c    #
+#                    -D S4051A -D DEBUG -D FREE_RTOS -D STM32F40_41xxx -D     #
+#                    USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D             #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ext_flash_driver.lst                                  #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\ext_flash_driver.o                                     #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\EXT_FLASH\ext_flash_driver.c
+      1          #include "ext_flash_driver.h"
+      2          #include "SPILowLevel.h"
+      3          
+      4          #if ( configSPI_FLASH == 1 )
+      5          //___________________________________________________________________________________________
+      6          
+      7          #define sFLASH_SPI SPI1
+      8          #define sFLASH_CMD_WRITE          0x02  /*!< Write to Memory instruction */
+      9          #define sFLASH_CMD_WRSR           0x01  /*!< Write Status Register instruction */
+     10          #define sFLASH_CMD_WREN           0x06  /*!< Write enable instruction */
+     11          #define sFLASH_CMD_READ           0x03  /*!< Read from Memory instruction */
+     12          #define sFLASH_CMD_RDSR           0x05  /*!< Read Status Register instruction  */
+     13          #define sFLASH_CMD_RDID           0x9F  /*!< Read identification */
+     14          #define sFLASH_CMD_SE             0xD8  /*!< Sector Erase instruction */
+     15          #define sFLASH_CMD_CE             0xC7  /*!< Bulk Erase instruction */ /*chip erase*/
+     16          
+     17          #define sFLASH_WIP_FLAG           0x01  /*!< Write In Progress (WIP) flag */
+     18          
+     19          #define sFLASH_DUMMY_BYTE         0x00
+     20          #define sFLASH_SPI_PAGESIZE       0x100
+     21          
+     22          #define sFLASH_M25P128_ID         0x202018
+     23          #define sFLASH_M25P64_ID          0x202017
+     24          
+     25          
+     26          #if defined ( FREE_RTOS )
+     27          #define sFLASH_MUTEX_LOCK        SPI_mutex_lock();
+     28          #define sFLASH_MUTEX_UNLOCK      SPI_mutex_unlock();
+     29          #endif 
+     30          
+     31          #define sFLASH_CS_LOW()       SPI_selectChip( 1 )
+     32          #define sFLASH_CS_HIGH()      SPI_unselectChip( 1 )
+     33          
+     34          #define W25Q80BV_PAGE_LEN  256U
+     35          #define W25Q80BV_NUM_PAGES 4096U
+     36          #define W25Q80BV_NUM_BYTES 1048576U
+     37          #define W25Q80BV_WRITE_ENABLE 0x06
+     38          #define W25Q80BV_CHIP_ERASE 0xC7
+     39          #define W25Q80BV_READ_STATUS1 0x05
+     40          #define W25Q80BV_PAGE_PROGRAM 0x02
+     41          #define W25Q80BV_DEVICE_ID 0xAB
+     42          #define W25Q80BV_UNIQUE_ID 0x4B
+     43          #define W25Q80BV_STATUS_BUSY 0x01
+     44          #define W25Q80BV_DEVICE_ID_RES 0x13 /* Expected device_id for W25Q80BV */
+     45          
+     46          
+     47          //___________________________________________________________________________________________
+     48          uint8_t device_id;
+     49          //___________________________________________________________________________________________
+     50          
+     51          static void sFLASH_WriteEnable(void);
+     52          
+     53          static void sFLASH_WaitForWriteEnd(void);
+     54          
+     55          //static
+     56              uint32_t sFLASH_ReadID(void);
+     57          
+     58          
+     59          //___________________________________________________________________________________
+     60          void sFLASH_EraseSector(uint32_t SectorAddr)
+     61          {
+     62          
+     63          #if defined ( FREE_RTOS )
+     64            if (SPI_mutex_lock() == FALSE)
+     65            {
+     66              return;
+     67            }
+     68          #endif   
+     69          
+     70            /*!< Send write enable instruction */
+     71            sFLASH_WriteEnable();
+     72          
+     73            /*!< Sector Erase */
+     74            /*!< Select the FLASH: Chip Select low */
+     75            sFLASH_CS_LOW();
+     76            /*!< Send Sector Erase instruction */
+     77            sFLASH_SendByte(sFLASH_CMD_SE);
+     78            /*!< Send SectorAddr high nibble address byte */
+     79            sFLASH_SendByte((SectorAddr & 0xFF0000) >> 16);
+     80            /*!< Send SectorAddr medium nibble address byte */
+     81            sFLASH_SendByte((SectorAddr & 0xFF00) >> 8);
+     82            /*!< Send SectorAddr low nibble address byte */
+     83            sFLASH_SendByte(SectorAddr & 0xFF);
+     84            /*!< Deselect the FLASH: Chip Select high */
+     85            sFLASH_CS_HIGH();
+     86          
+     87            /*!< Wait the end of Flash writing */
+     88            sFLASH_WaitForWriteEnd();
+     89          
+     90          #if defined  ( FREE_RTOS )  
+     91            SPI_mutex_unlock();
+     92          #endif 
+     93          
+     94          }
+     95          
+     96          /**
+     97            * @brief  Erases the entire FLASH.
+     98            * @param  None
+     99            * @retval None
+    100            */
+    101          void sFLASH_EraseChip(void)
+    102          {
+    103          
+    104          #if defined ( FREE_RTOS )
+    105              if (SPI_mutex_lock() == FALSE)
+    106              {
+    107                return;
+    108              }
+    109          #endif 	
+    110          
+    111            /*!< Send write enable instruction */
+    112            sFLASH_WriteEnable();
+    113          
+    114            /*!< Bulk Erase */
+    115            /*!< Select the FLASH: Chip Select low */
+    116            sFLASH_CS_LOW();
+    117            /*!< Send Bulk Erase instruction  */
+    118            sFLASH_SendByte(sFLASH_CMD_CE);
+    119            /*!< Deselect the FLASH: Chip Select high */
+    120            sFLASH_CS_HIGH();
+    121          
+    122            /*!< Wait the end of Flash writing */
+    123            sFLASH_WaitForWriteEnd();
+    124          
+    125          #if defined ( FREE_RTOS )  
+    126            SPI_mutex_unlock();
+    127          #endif 
+    128          
+    129          }
+    130          
+    131          /**
+    132            * @brief  Writes more than one byte to the FLASH with a single WRITE cycle 
+    133            *         (Page WRITE sequence).
+    134            * @note   The number of byte can't exceed the FLASH page size.
+    135            * @param  pBuffer: pointer to the buffer  containing the data to be written
+    136            *         to the FLASH.
+    137            * @param  WriteAddr: FLASH's internal address to write to.
+    138            * @param  NumByteToWrite: number of bytes to write to the FLASH, must be equal
+    139            *         or less than "sFLASH_PAGESIZE" value.
+    140            * @retval None
+    141            */
+    142          void sFLASH_WritePage(uint8_t* pBuffer, uint32_t WriteAddr, uint16_t NumByteToWrite)
+    143          {
+    144          #if defined ( FREE_RTOS )  
+    145              if (SPI_mutex_lock() == FALSE)
+    146              {
+    147                return;
+    148              }
+    149          #endif 	
+    150          
+    151            /*!< Enable the write access to the FLASH */
+    152            sFLASH_WriteEnable();
+    153          
+    154            /*!< Select the FLASH: Chip Select low */
+    155            sFLASH_CS_LOW();
+    156            /*!< Send "Write to Memory " instruction */
+    157            sFLASH_SendByte(sFLASH_CMD_WRITE);
+    158            /*!< Send WriteAddr high nibble address byte to write to */
+    159            sFLASH_SendByte((WriteAddr & 0xFF0000) >> 16);
+    160            /*!< Send WriteAddr medium nibble address byte to write to */
+    161            sFLASH_SendByte((WriteAddr & 0xFF00) >> 8);
+    162            /*!< Send WriteAddr low nibble address byte to write to */
+    163            sFLASH_SendByte(WriteAddr & 0xFF);
+    164          
+    165            /*!< while there is data to be written on the FLASH */
+    166            while (NumByteToWrite--)
+    167            {
+    168              /*!< Send the current byte */
+    169              sFLASH_SendByte(*pBuffer);
+    170              /*!< Point on the next byte to be written */
+    171              pBuffer++;
+    172            }
+    173          
+    174          	/*!< Deselect the FLASH: Chip Select high */
+    175          	sFLASH_CS_HIGH();
+    176          
+    177          	/*!< Wait the end of Flash writing */
+    178          	sFLASH_WaitForWriteEnd();
+    179          
+    180          #if defined ( FREE_RTOS )  
+    181          	SPI_mutex_unlock();
+    182          #endif 
+    183          }
+    184          
+    185          /**
+    186            * @brief  Writes block of data to the FLASH. In this function, the number of
+    187            *         WRITE cycles are reduced, using Page WRITE sequence.
+    188            * @param  pBuffer: pointer to the buffer  containing the data to be written
+    189            *         to the FLASH.
+    190            * @param  WriteAddr: FLASH's internal address to write to.
+    191            * @param  NumByteToWrite: number of bytes to write to the FLASH.
+    192            * @retval None
+    193            */
+    194          void sFLASH_WriteBuffer(uint8_t* pBuffer, uint32_t *pWriteAddr, uint16_t NumByteToWrite)
+    195          {
+    196              uint8_t NumOfPage = 0, NumOfSingle = 0, Addr = 0, count = 0, temp = 0;
+    197              uint32_t WriteAddr = 0;
+    198          
+    199              if ( pBuffer == NULL )
+    200                  return;
+    201          
+    202              if ( pWriteAddr == NULL )
+    203                  return;
+    204          
+    205              if ( NumByteToWrite == 0 )
+    206                  return;        
+    207          
+    208          
+    209              WriteAddr = *pWriteAddr;
+    210              Addr = WriteAddr % sFLASH_SPI_PAGESIZE;
+    211              count = sFLASH_SPI_PAGESIZE - Addr;
+    212              NumOfPage =  NumByteToWrite / sFLASH_SPI_PAGESIZE;
+    213              NumOfSingle = NumByteToWrite % sFLASH_SPI_PAGESIZE;
+    214          
+    215              if (Addr == 0) /*!< WriteAddr is sFLASH_PAGESIZE aligned  */
+    216              {
+    217                  if (NumOfPage == 0) /*!< NumByteToWrite < sFLASH_PAGESIZE */
+    218                  {
+    219                      sFLASH_WritePage(pBuffer, WriteAddr, NumByteToWrite);
+    220                  }
+    221                  else /*!< NumByteToWrite > sFLASH_PAGESIZE */
+    222                  {
+    223                      while (NumOfPage--)
+    224                      {
+    225                          sFLASH_WritePage(pBuffer, WriteAddr, sFLASH_SPI_PAGESIZE);
+    226                          WriteAddr +=  sFLASH_SPI_PAGESIZE;
+    227                          pBuffer += sFLASH_SPI_PAGESIZE;
+    228                      }
+    229          
+    230                      sFLASH_WritePage(pBuffer, WriteAddr, NumOfSingle);
+    231                  }
+    232              }
+    233              else /*!< WriteAddr is not sFLASH_PAGESIZE aligned  */
+    234              {
+    235                  if (NumOfPage == 0) /*!< NumByteToWrite < sFLASH_PAGESIZE */
+    236                  {
+    237                      if (NumOfSingle > count) /*!< (NumByteToWrite + WriteAddr) > sFLASH_PAGESIZE */
+    238                      {
+    239                          temp = NumOfSingle - count;
+    240          
+    241                          sFLASH_WritePage(pBuffer, WriteAddr, count);
+    242                          WriteAddr +=  count;
+    243                          pBuffer += count;
+    244          
+    245                          sFLASH_WritePage(pBuffer, WriteAddr, temp);
+    246                      }
+    247                      else
+    248                      {
+    249                          sFLASH_WritePage(pBuffer, WriteAddr, NumByteToWrite);
+    250                      }
+    251                  }
+    252                  else /*!< NumByteToWrite > sFLASH_PAGESIZE */
+    253                  {
+    254                      NumByteToWrite -= count;
+    255                      NumOfPage =  NumByteToWrite / sFLASH_SPI_PAGESIZE;
+    256                      NumOfSingle = NumByteToWrite % sFLASH_SPI_PAGESIZE;
+    257          
+    258                      sFLASH_WritePage(pBuffer, WriteAddr, count);
+    259                      WriteAddr +=  count;
+    260                      pBuffer += count;
+    261          
+    262                      while (NumOfPage--)
+    263                      {
+    264                          sFLASH_WritePage(pBuffer, WriteAddr, sFLASH_SPI_PAGESIZE);
+    265                          WriteAddr +=  sFLASH_SPI_PAGESIZE;
+    266                          pBuffer += sFLASH_SPI_PAGESIZE;
+    267                      }
+    268          
+    269                      if (NumOfSingle != 0)
+    270                      {
+    271                          sFLASH_WritePage(pBuffer, WriteAddr, NumOfSingle);
+    272                      }
+    273                  }
+    274              }
+    275          
+    276            *pWriteAddr = WriteAddr;
+    277          
+    278            
+    279          }
+    280          
+    281          /**
+    282            * @brief  Reads a block of data from the FLASH.
+    283            * @param  pBuffer: pointer to the buffer that receives the data read from the FLASH.
+    284            * @param  ReadAddr: FLASH's internal address to read from.
+    285            * @param  NumByteToRead: number of bytes to read from the FLASH.
+    286            * @retval None
+    287            */
+    288          void sFLASH_ReadBuffer(uint8_t* pBuffer, uint32_t ReadAddr, uint16_t NumByteToRead)
+    289          {
+    290          #if defined ( FREE_RTOS )	
+    291          	if (SPI_mutex_lock() == FALSE)
+    292          	{
+    293          		return;
+    294          	}
+    295          #endif 	
+    296          
+    297          
+    298          	/*!< Select the FLASH: Chip Select low */
+    299          	sFLASH_CS_LOW();
+    300          
+    301          	/*!< Send "Read from Memory " instruction */
+    302          	sFLASH_SendByte(sFLASH_CMD_READ);
+    303          
+    304          	/*!< Send ReadAddr high nibble address byte to read from */
+    305          	sFLASH_SendByte((ReadAddr & 0xFF0000) >> 16);
+    306          	/*!< Send ReadAddr medium nibble address byte to read from */
+    307          	sFLASH_SendByte((ReadAddr& 0xFF00) >> 8);
+    308          	/*!< Send ReadAddr low nibble address byte to read from */
+    309          	sFLASH_SendByte(ReadAddr & 0xFF);
+    310          
+    311          	while (NumByteToRead--) /*!< while there is data to be read */
+    312          	{
+    313          		/*!< Read a byte from the FLASH */
+    314          		*pBuffer = sFLASH_SendByte(sFLASH_DUMMY_BYTE);
+    315          		/*!< Point to the next location where the byte read will be saved */
+    316          		pBuffer++;
+    317          	}
+    318          
+    319          	/*!< Deselect the FLASH: Chip Select high */
+    320          	sFLASH_CS_HIGH();
+    321          
+    322          #if defined ( FREE_RTOS )
+    323          	SPI_mutex_unlock();
+    324          #endif 
+    325          
+    326          }
+    327          
+    328          /**
+    329            * @brief  Reads FLASH identification.
+    330            * @param  None
+    331            * @retval FLASH identification
+    332            */
+    333          uint32_t sFLASH_ReadID(void)
+    334          {
+    335            uint32_t Temp = 0, Temp0 = 0, Temp1 = 0, Temp2 = 0;
+    336          
+    337          #if defined ( FREE_RTOS )
+    338            if (SPI_mutex_lock() == FALSE)
+    339            {
+    340              return 0;
+    341            }
+    342          #endif   
+    343          
+    344            /*!< Select the FLASH: Chip Select low */
+    345            sFLASH_CS_LOW();
+    346          
+    347            /*!< Send "RDID " instruction */
+    348            sFLASH_SendByte(0x9F);
+    349          
+    350            /*!< Read a byte from the FLASH */
+    351            Temp0 = sFLASH_SendByte(sFLASH_DUMMY_BYTE);
+    352          
+    353            /*!< Read a byte from the FLASH */
+    354            Temp1 = sFLASH_SendByte(sFLASH_DUMMY_BYTE);
+    355          
+    356            /*!< Read a byte from the FLASH */
+    357            Temp2 = sFLASH_SendByte(sFLASH_DUMMY_BYTE);
+    358          
+    359            /*!< Deselect the FLASH: Chip Select high */
+    360            sFLASH_CS_HIGH();
+    361          
+    362            Temp = (Temp0 << 16) | (Temp1 << 8) | Temp2;
+    363          
+    364          #if defined ( FREE_RTOS )
+    365            SPI_mutex_unlock();
+    366          #endif 
+    367          
+    368            return Temp;
+    369          }
+    370          
+    371          /**
+    372            * @brief  Initiates a read data byte (READ) sequence from the Flash.
+    373            *   This is done by driving the /CS line low to select the device, then the READ
+    374            *   instruction is transmitted followed by 3 bytes address. This function exit
+    375            *   and keep the /CS line low, so the Flash still being selected. With this
+    376            *   technique the whole content of the Flash is read with a single READ instruction.
+    377            * @param  ReadAddr: FLASH's internal address to read from.
+    378            * @retval None
+    379            */
+    380          void sFLASH_StartReadSequence(uint32_t ReadAddr)
+    381          {
+    382          #if defined ( FREE_RTOS )
+    383              if (SPI_mutex_lock() == FALSE)
+    384              {
+    385                return ;
+    386              }
+    387          #endif 
+    388          
+    389            /*!< Select the FLASH: Chip Select low */
+    390            sFLASH_CS_LOW();
+    391          
+    392            /*!< Send "Read from Memory " instruction */
+    393            sFLASH_SendByte(sFLASH_CMD_READ);
+    394          
+    395            /*!< Send the 24-bit address of the address to read from -------------------*/
+    396            /*!< Send ReadAddr high nibble address byte */
+    397            sFLASH_SendByte((ReadAddr & 0xFF0000) >> 16);
+    398            /*!< Send ReadAddr medium nibble address byte */
+    399            sFLASH_SendByte((ReadAddr& 0xFF00) >> 8);
+    400            /*!< Send ReadAddr low nibble address byte */
+    401            sFLASH_SendByte(ReadAddr & 0xFF);
+    402          
+    403            sFLASH_CS_HIGH();
+    404          
+    405          #if defined ( FREE_RTOS )
+    406            SPI_mutex_unlock();
+    407          #endif 
+    408          
+    409          }
+    410          
+    411          /**
+    412            * @brief  Reads a byte from the SPI Flash.
+    413            * @note   This function must be used only if the Start_Read_Sequence function
+    414            *         has been previously called.
+    415            * @param  None
+    416            * @retval Byte Read from the SPI Flash.
+    417            */
+    418          uint8_t sFLASH_ReadByte(void)
+    419          {
+    420            return (sFLASH_SendByte(sFLASH_DUMMY_BYTE));
+    421          }
+    422          
+    423          /**
+    424            * @brief  Sends a byte through the SPI interface and return the byte received
+    425            *         from the SPI bus.
+    426            * @param  byte: byte to send.
+    427            * @retval The value of the received byte.
+    428            */
+    429          uint8_t sFLASH_SendByte(uint8_t byte)
+    430          {
+    431          
+    432            /*!< Loop while DR register in not emplty */
+    433            while (SPI_I2S_GetFlagStatus(sFLASH_SPI, SPI_I2S_FLAG_TXE) == RESET);
+    434          
+    435            /*!< Send byte through the SPI1 peripheral */
+    436            SPI_I2S_SendData(sFLASH_SPI, byte);
+    437          
+    438            /*!< Wait to receive a byte */
+    439            while (SPI_I2S_GetFlagStatus(sFLASH_SPI, SPI_I2S_FLAG_RXNE) == RESET);
+    440          
+    441            /*!< Return the byte read from the SPI bus */
+    442            return SPI_I2S_ReceiveData(sFLASH_SPI);
+    443          
+    444          }
+    445          
+    446          /**
+    447            * @brief  Sends a Half Word through the SPI interface and return the Half Word
+    448            *         received from the SPI bus.
+    449            * @param  HalfWord: Half Word to send.
+    450            * @retval The value of the received Half Word.
+    451            */
+    452          uint16_t sFLASH_SendHalfWord(uint16_t HalfWord)
+    453          {
+    454            /*!< Loop while DR register in not emplty */
+    455            while (SPI_I2S_GetFlagStatus(sFLASH_SPI, SPI_I2S_FLAG_TXE) == RESET);
+    456          
+    457            /*!< Send Half Word through the sFLASH peripheral */
+    458            SPI_I2S_SendData(sFLASH_SPI, HalfWord);
+    459          
+    460            /*!< Wait to receive a Half Word */
+    461            while (SPI_I2S_GetFlagStatus(sFLASH_SPI, SPI_I2S_FLAG_RXNE) == RESET);
+    462          
+    463            /*!< Return the Half Word read from the SPI bus */
+    464            return SPI_I2S_ReceiveData(sFLASH_SPI);
+    465          }
+    466          
+    467          /**
+    468            * @brief  Enables the write access to the FLASH.
+    469            * @param  None
+    470            * @retval None
+    471            */
+    472          void sFLASH_WriteEnable(void)
+    473          {
+    474          #if defined ( FREE_RTOS )	
+    475            /*!< Select the FLASH: Chip Select low */
+    476            if (SPI_mutex_lock() == FALSE)
+    477            {
+    478              return ;
+    479            }
+    480          #endif 
+    481          
+    482            sFLASH_CS_LOW();
+    483          
+    484            /*!< Send "Write Enable" instruction */
+    485            sFLASH_SendByte(sFLASH_CMD_WREN);
+    486          
+    487            /*!< Deselect the FLASH: Chip Select high */
+    488            sFLASH_CS_HIGH();
+    489          
+    490          #if defined ( FREE_RTOS )
+    491            SPI_mutex_unlock();
+    492          #endif 
+    493          
+    494          
+    495          }
+    496          
+    497          /**
+    498            * @brief  Polls the status of the Write In Progress (WIP) flag in the FLASH's
+    499            *         status register and loop until write opertaion has completed.
+    500            * @param  None
+    501            * @retval None
+    502            */
+    503          void sFLASH_WaitForWriteEnd(void)
+    504          {
+    505            uint8_t flashstatus = 0;
+    506          
+    507          #if defined ( FREE_RTOS )
+    508          
+    509            if (SPI_mutex_lock() == FALSE)
+    510            {
+    511              return ;
+    512            }
+    513          #endif   
+    514          
+    515            /*!< Select the FLASH: Chip Select low */
+    516            sFLASH_CS_LOW();
+    517          
+    518            /*!< Send "Read Status Register" instruction */
+    519            sFLASH_SendByte(sFLASH_CMD_RDSR);
+    520          
+    521            /*!< Loop as long as the memory is busy with a write cycle */
+    522            do
+    523            {
+    524              /*!< Send a dummy byte to generate the clock needed by the FLASH
+    525              and put the value of the status register in FLASH_Status variable */
+    526              flashstatus = sFLASH_SendByte(sFLASH_DUMMY_BYTE);
+    527          
+    528            }
+    529            while ((flashstatus & sFLASH_WIP_FLAG) == SET); /* Write in progress */
+    530          
+    531            /*!< Deselect the FLASH: Chip Select high */
+    532            sFLASH_CS_HIGH();
+    533          
+    534          #if defined ( FREE_RTOS )
+    535            SPI_mutex_unlock();
+    536          #endif 
+    537          
+    538          }
+    539          
+    540          #endif /*EXT_FLASH*/
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        8  sFLASH_EraseChip
+              8 -> SPI_mutex_lock
+              0 -> SPI_mutex_unlock
+              8 -> SPI_selectChip
+              8 -> SPI_unselectChip
+              8 -> sFLASH_SendByte
+              8 -> sFLASH_WaitForWriteEnd
+              8 -> sFLASH_WriteEnable
+        8  sFLASH_EraseSector
+              8 -> SPI_mutex_lock
+              0 -> SPI_mutex_unlock
+              8 -> SPI_selectChip
+              8 -> SPI_unselectChip
+              8 -> sFLASH_SendByte
+              8 -> sFLASH_WaitForWriteEnd
+              8 -> sFLASH_WriteEnable
+       16  sFLASH_ReadBuffer
+             16 -> SPI_mutex_lock
+              0 -> SPI_mutex_unlock
+             16 -> SPI_selectChip
+             16 -> SPI_unselectChip
+             16 -> sFLASH_SendByte
+        0  sFLASH_ReadByte
+              0 -> sFLASH_SendByte
+       16  sFLASH_ReadID
+             16 -> SPI_mutex_lock
+             16 -> SPI_mutex_unlock
+             16 -> SPI_selectChip
+             16 -> SPI_unselectChip
+             16 -> sFLASH_SendByte
+       16  sFLASH_SendByte
+             16 -> SPI_I2S_GetFlagStatus
+             16 -> SPI_I2S_ReceiveData
+             16 -> SPI_I2S_SendData
+       16  sFLASH_SendHalfWord
+             16 -> SPI_I2S_GetFlagStatus
+              0 -> SPI_I2S_ReceiveData
+             16 -> SPI_I2S_SendData
+        8  sFLASH_StartReadSequence
+              8 -> SPI_mutex_lock
+              0 -> SPI_mutex_unlock
+              8 -> SPI_selectChip
+              8 -> SPI_unselectChip
+              8 -> sFLASH_SendByte
+        8  sFLASH_WaitForWriteEnd
+              8 -> SPI_mutex_lock
+              0 -> SPI_mutex_unlock
+              8 -> SPI_selectChip
+              8 -> SPI_unselectChip
+              8 -> sFLASH_SendByte
+       40  sFLASH_WriteBuffer
+             40 -> sFLASH_WritePage
+        8  sFLASH_WriteEnable
+              8 -> SPI_mutex_lock
+              0 -> SPI_mutex_unlock
+              8 -> SPI_selectChip
+              8 -> SPI_unselectChip
+              8 -> sFLASH_SendByte
+       16  sFLASH_WritePage
+             16 -> SPI_mutex_lock
+              0 -> SPI_mutex_unlock
+             16 -> SPI_selectChip
+             16 -> SPI_unselectChip
+             16 -> sFLASH_SendByte
+             16 -> sFLASH_WaitForWriteEnd
+             16 -> sFLASH_WriteEnable
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+      12  ?Subroutine0
+       8  ?Subroutine1
+       8  ?Subroutine2
+       6  ?Subroutine3
+       6  ?Subroutine4
+       6  ?Subroutine5
+      10  ?Subroutine6
+       4  ?Subroutine7
+      10  ?Subroutine8
+       8  ?Subroutine9
+       1  device_id
+      34  sFLASH_EraseChip
+      52  sFLASH_EraseSector
+      64  sFLASH_ReadBuffer
+       2  sFLASH_ReadByte
+      54  sFLASH_ReadID
+      42  sFLASH_SendByte
+      42  sFLASH_SendHalfWord
+      44  sFLASH_StartReadSequence
+      32  sFLASH_WaitForWriteEnd
+     160  sFLASH_WriteBuffer
+      22  sFLASH_WriteEnable
+      68  sFLASH_WritePage
+
+ 
+   1 byte  in section .bss
+ 698 bytes in section .text
+ 
+ 698 bytes of CODE memory
+   1 byte  of DATA memory
+
+Errors: none
+Warnings: 1

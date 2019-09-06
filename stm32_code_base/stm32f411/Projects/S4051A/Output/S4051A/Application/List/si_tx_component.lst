@@ -1,0 +1,1734 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:29 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\tx\si_tx_comp #
+#                    onent.c                                                  #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\tx\si_tx_comp #
+#                    onent.c -D S4051A -D DEBUG -D FREE_RTOS -D               #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_tx_component.lst                                   #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_tx_component.o                                      #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\component\tx\si_tx_component.c
+      1          //************************************************************************************************
+      2          //! @file   si_tx_component.c
+      3          //! @brief  Transmitter software component
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1060 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2002-2010, Silicon Image, Inc.  All rights reserved.
+     11          //************************************************************************************************/
+     12          
+     13          #include <string.h>
+     14          #include "si_tx_component_internal.h"
+     15          #include "si_drv_tpi_access.h"
+     16          #include "si_drv_tpi_system.h"
+     17          #include "si_tx_video.h"
+     18          #include "si_tx_audio.h"
+     19          #include "si_tx_avi.h"
+     20          #include "si_tx_info_frm.h"
+     21          #include "si_tx_hdcp.h"
+     22          
+     23          
+     24          //-------------------------------------------------------------------------------------------------
+     25          //  Component Instance Data
+     26          //-------------------------------------------------------------------------------------------------
+     27          
+     28          txInstanceData_t txInstRec[SII_NUM_TX];
+     29          txInstanceData_t *pTx = &txInstRec[0];
+     30          
+     31          //-------------------------------------------------------------------------------------------------
+     32          //  Local service functions
+     33          //-------------------------------------------------------------------------------------------------
+     34          
+     35          static const char * ErrorMessageGet(txErrCode_t error)
+     36          {
+     37              static const char * aMessage[SI_TX_TOTAL_NUM_OF_ERROR_CODES] = {
+     38                      "",
+     39                      "instance doesn't exist",
+     40                      "invalid parameter",
+     41                      "incompatible power mode",
+     42                      "HDMI not supported by DS",
+     43                      "invalid video source",
+     44                      "",
+     45                      "same power mode requested"
+     46              };
+     47          
+     48              if (error < SI_TX_TOTAL_NUM_OF_ERROR_CODES)
+     49              {
+     50                  return aMessage[error];
+     51              }
+     52              else
+     53              {
+     54                  return aMessage[0];
+     55              }
+     56          }
+     57          
+     58          //-------------------------------------------------------------------------------------------------
+     59          //! @brief      Update last result structure and print an error message.
+     60          //!
+     61          //!             This function shall be used to report any error or warning in the component.
+     62          //!
+     63          //! @param[in]  code  - error or warning message code
+     64          //-------------------------------------------------------------------------------------------------
+     65          
+     66          static void ReportIssue(txErrCode_t err_code)
+     67          {
+     68              if (err_code == SI_TX_ERROR_CODE_NO_ERROR)
+     69              {
+     70                  pTx->lastResult.lastErrorCode = err_code;
+     71              }
+     72              else
+     73              {
+     74                  if (err_code < SI_TX_WARN_CODE_NO_WARNING)
+     75                  {
+     76                      pTx->lastResult.lastErrorCode = err_code;
+     77                      pTx->lastResult.errorCount++;
+     78          
+     79                      DEBUG_PRINT(TX_MSG_ERR, "TX last error: %s. Total: %d\n", ErrorMessageGet(err_code), pTx->lastResult.errorCount);
+     80                  }
+     81                  else
+     82                  {
+     83                      DEBUG_PRINT(TX_MSG_DBG, "TX Warning: %s\n", ErrorMessageGet(err_code));
+     84                  }
+     85              }
+     86          }
+     87          
+     88          //-------------------------------------------------------------------------------------------------
+     89          //! @brief      Clear previous error code.
+     90          //!
+     91          //!             This function should be used as a default success reporter for the functions
+     92          //!             where ReportIssue() is used.
+     93          //-------------------------------------------------------------------------------------------------
+     94          
+     95          static void ClearErrorStatus(void)
+     96          {
+     97              ReportIssue(SI_TX_ERROR_CODE_NO_ERROR);
+     98          }
+     99          
+    100          //-------------------------------------------------------------------------------------------------
+    101          //! @brief      Attempt to Enable or Disable TMDS output signals.
+    102          //!
+    103          //!             When asked to enable TMDS, this function either does it immediately or schedules
+    104          //!             enabling for later, if off time was too short. TMDS disabling is fulfilled
+    105          //!             always immediately.
+    106          //!
+    107          //! @param[in]  isEnabled - true enables TMDS, false disables TMDS
+    108          //-------------------------------------------------------------------------------------------------
+    109          
+    110          static void RequestTmdsOutputEnable(bool_t isEnabled)
+    111          {
+    112              if (isEnabled)
+    113              {
+    114                  if (pTx->isTmdsBlackoutPauseRequired || pTx->timeToTmdsEnable)
+    115                  {
+    116                      // too early to enable TMDS; schedule enabling for later
+    117                      pTx->isDelayedTmdsEnableRequested = true;
+    118                  }
+    119                  else
+    120                  {
+    121                      if (!pTx->isTmdsEnabled)
+    122                      {
+    123                          SiiDrvTpiTmdsOutputEnable(true);
+    124                          pTx->isTmdsEnabled = true;
+    125          
+    126                          DEBUG_PRINT(TX_MSG_DBG, "TX TMDS Enabled\n");
+    127                          TxHdcpOnOutputEnable();
+    128          
+    129                          // re-start info frame and info packets that came before powering up
+    130                          //TxAllInfoFramesUpdate();
+    131                      }
+    132                  }
+    133              }
+    134              else
+    135              {
+    136                  if (pTx->isTmdsEnabled)
+    137                  {
+    138                      SiiDrvTpiTmdsOutputEnable(false);
+    139                      pTx->isTmdsEnabled = false;
+    140          
+    141                      DEBUG_PRINT(TX_MSG_DBG, "TX TMDS Disabled\n");
+    142                  }
+    143          
+    144                  pTx->isTmdsBlackoutPauseRequired = true;
+    145                  pTx->timeToTmdsEnable = SI_TX_MIN_OFF_TIME_MS;
+    146                  pTx->isDelayedTmdsEnableRequested = false;
+    147              }
+    148          }
+    149          
+    150          //-------------------------------------------------------------------------------------------------
+    151          //! @brief      Local timer handler implementing delayed TMDS enabling.
+    152          //!
+    153          //! @param[in]  timeDelta - time in ms elapsed since the last call.
+    154          //-------------------------------------------------------------------------------------------------
+    155          
+    156          static void TmdsTimerHandler(time_ms_t delta)
+    157          {
+    158              if(pTx->isTmdsBlackoutPauseRequired)
+    159              {
+    160                  // Just skip one serving.
+    161                  // It'll make sure the count down happens at appropriate time.
+    162                  pTx->isTmdsBlackoutPauseRequired = false;
+    163              }
+    164              else
+    165              {
+    166                  if(IS_UPDATED_TIMER_EXPIRED(pTx->timeToTmdsEnable, delta))
+    167                  {
+    168                      if(pTx->isDelayedTmdsEnableRequested)
+    169                      {
+    170                          pTx->isDelayedTmdsEnableRequested = false;
+    171                          SiiDrvTpiTmdsOutputEnable(true);
+    172                          pTx->isTmdsEnabled = true;
+    173          
+    174                          DEBUG_PRINT(TX_MSG_DBG, "TX TMDS Enabled\n");
+    175          //                TxTmdsBlankPause();
+    176                          TxHdcpOnOutputEnable();
+    177                      }
+    178                  }
+    179              }
+    180          
+    181          }
+    182          
+    183          //-------------------------------------------------------------------------------------------------
+    184          //! @brief      Set parameters of DE generator in order to recover synchronization signals
+    185          //!             embedded into the video data, if any.
+    186          //!
+    187          //! @param[in]  syncSrc - input HV Sync and DE signals descriptor,
+    188          //! @param[in]  pSynRg  - pointer to a structure defining the regeneration options.
+    189          //!                       If equal to NULL, the default DE settings will be applied.
+    190          //-------------------------------------------------------------------------------------------------
+    191          
+    192          static void SyncSignalsRegenerationSet(syncSignals_t syncSrc, syncRegen_t *pSynRg)
+    193          {
+    194              // Default values of synchronization signals regeneration structure
+    195              syncRegen_t DefaultSynRg =
+    196              {
+    197                      0,
+    198                      true,
+    199                      false,
+    200                      0,
+    201                      0,
+    202                      0,
+    203                      0,
+    204                      0,
+    205                      false,
+    206                      false,
+    207                      0,
+    208                      0,
+    209                      0,
+    210                      0
+    211              };
+    212          
+    213              if(pSynRg == NULL)
+    214              {
+    215                  pSynRg = &DefaultSynRg;
+    216              }
+    217          
+    218              switch (syncSrc)
+    219              {
+    220                  default:
+    221                  case SI_TX_VIDEO_HVSYNC_DE:
+    222                      // Neither generate DE nor extract HV syncs
+    223                      SiiDrvTpiDeGenerationEnable(false, NULL);
+    224                      pTx->isDeGeneratorEnabled = false;
+    225          
+    226                      SiiDrvTpiEmbSyncExtractionEnable(false, NULL);
+    227                      pTx->isEmbSyncExtractEnabled = false;
+    228                      break;
+    229          
+    230                  case SI_TX_VIDEO_DE:
+    231                      // Extract HV syncs and not generate DE
+    232                      SiiDrvTpiDeGenerationEnable(false, NULL);
+    233                      pTx->isDeGeneratorEnabled = false;
+    234          
+    235                      SiiDrvTpiEmbSyncExtractionEnable(true, pSynRg);
+    236                      pTx->isEmbSyncExtractEnabled = true;
+    237                      break;
+    238          
+    239                  case SI_TX_VIDEO_HVSYNC:
+    240                      // Generate DE and not extract HV syncs
+    241                      SiiDrvTpiEmbSyncExtractionEnable(false, NULL);
+    242                      pTx->isEmbSyncExtractEnabled = false;
+    243          
+    244                      SiiDrvTpiDeGenerationEnable(true, pSynRg);
+    245                      pTx->isDeGeneratorEnabled = true;
+    246                      break;
+    247          
+    248                  case SI_TX_VIDEO_NONE:
+    249                      // Generate DE and extract HV syncs
+    250                      SiiDrvTpiEmbSyncExtractionEnable(true, pSynRg);
+    251                      pTx->isEmbSyncExtractEnabled = true;
+    252          
+    253                      SiiDrvTpiDeGenerationEnable(true, pSynRg);
+    254                      pTx->isDeGeneratorEnabled = true;
+    255                      break;
+    256              }
+    257          
+    258              SiiDrvTpiSyncRegenConfigurationSet(pSynRg);
+    259          }
+    260          
+    261          
+    262          //-------------------------------------------------------------------------------------------------
+    263          //  TX instance data access functions and methods for internal use by the component modules
+    264          //-------------------------------------------------------------------------------------------------
+    265          
+    266          //-------------------------------------------------------------------------------------------------
+    267          //! @brief      Return TMDS status.
+    268          //-------------------------------------------------------------------------------------------------
+    269          
+    270          bool_t TxIsTmdsEnabled(void)
+    271          {
+    272              return pTx->isTmdsEnabled;
+    273          }
+    274          
+    275          
+    276          //-------------------------------------------------------------------------------------------------
+    277          //! @brief      Return true if transmitter is powered up and the output is in HDMI mode.
+    278          //-------------------------------------------------------------------------------------------------
+    279          
+    280          bool_t TxIsRunningInHdmiMode(void)
+    281          {
+    282              return (pTx->powerMode == SI_TX_POWER_MODE_FULL) && (pTx->isTxOutInHdmiMode);
+    283          }
+    284          
+    285          
+    286          //-------------------------------------------------------------------------------------------------
+    287          //! @brief      Return true if transmitter is powered up.
+    288          //-------------------------------------------------------------------------------------------------
+    289          
+    290          bool_t TxIsRunning(void)
+    291          {
+    292              return (pTx->powerMode == SI_TX_POWER_MODE_FULL);
+    293          }
+    294          
+    295          
+    296          //-------------------------------------------------------------------------------------------------
+    297          //! @brief      Return video format ID.
+    298          //-------------------------------------------------------------------------------------------------
+    299          
+    300          uint8_t TxVideoFormatIdGet(void)
+    301          {
+    302              return pTx->videoFormatId;
+    303          }
+    304          
+    305          
+    306          //-------------------------------------------------------------------------------------------------
+    307          //! @brief      Return pixel clock frequency in MHz.
+    308          //-------------------------------------------------------------------------------------------------
+    309          
+    310          uint16_t TxPixelFreqMhzGet(void)
+    311          {
+    312              return pTx->pixelFrequency / 100;
+    313          }
+    314          
+    315          
+    316          //-------------------------------------------------------------------------------------------------
+    317          //! @brief      Return true if output is in HDMI mode.
+    318          //-------------------------------------------------------------------------------------------------
+    319          
+    320          bool_t TxIsOutInHdmiMode(void)
+    321          {
+    322              return pTx->isTxOutInHdmiMode;
+    323          }
+    324          
+    325          
+    326          //-------------------------------------------------------------------------------------------------
+    327          //! @brief      Temporal disabling of TMDS output for a short period of time.
+    328          //!
+    329          //!             If TMDS is ON, turn it OFF for at least 100ms.
+    330          //!             After the timeout, the output will be enabled.
+    331          //!             This function is used in order to reset DS HDCP engine.
+    332          //!             Note: the function is non-blocking.
+    333          //-------------------------------------------------------------------------------------------------
+    334          
+    335          void TxTmdsBlankPause(void)
+    336          {
+    337              if(pTx->isTmdsEnabled)
+    338              {
+    339                  // If TMDS is ON, temporary turn it off.
+    340                  RequestTmdsOutputEnable(false);
+    341          
+    342                  // Enabling TMDS will be delayed by at least 100ms
+    343                  RequestTmdsOutputEnable(true);
+    344              }
+    345          }
+    346          
+    347          
+    348          
+    349          //-------------------------------------------------------------------------------------------------
+    350          //  TX API functions
+    351          //-------------------------------------------------------------------------------------------------
+    352          
+    353          //-------------------------------------------------------------------------------------------------
+    354          //! @brief      Initialization of the HDMI transmitter
+    355          //!
+    356          //!             Initializes Tx module and sets default parameters of the component.
+    357          //!             This function shall be called once and foremost.
+    358          //-------------------------------------------------------------------------------------------------
+    359          
+    360          void SiiTxInitialize(void)
+    361          {
+    362              // Initialize the internal data structures
+    363              memset(pTx, 0x0, sizeof(txInstanceData_t));
+    364              pTx->videoFormatId = SI_VIDEO_MODE_NON_STD;
+    365          
+    366              // Software reset and initialization of Tx to bring it to a known initial state
+    367              SiiDrvTpiAccessInit();
+    368              SiiDrvTpiSwReset();
+    369              SiiDrvTpiInit();
+    370          
+    371              SiiDrvTpiInterruptsEnable(true);
+    372          
+    373              // Downstream device is considered disconnected by default
+    374              pTx->status.isDsConnected = false;
+    375          
+    376          #if (SI_TX_INIT_TO_STANDBY == ENABLE)
+    377              SiiDrvTpiTmdsOutputEnable(false);
+    378              SiiDrvTpiStandby();
+    379              pTx->powerMode = SI_TX_POWER_MODE_STANDBY;
+    380          #else
+    381              SiiDrvTpiPowerUp();
+    382              pTx->powerMode = SI_TX_POWER_MODE_FULL;
+    383          #endif
+    384          
+    385              TxInfoInit();
+    386              TxAviInit();
+    387          
+    388              SiiTxAvUnmute();
+    389          
+    390              TxHdcpInit();
+    391          
+    392          #if (SI_TX_VIDEO_CONVERSION == ENABLE)
+    393              TxVideoConversionInit();
+    394          #endif
+    395          
+    396              TxAudioInit();
+    397          
+    398              // Retrieve revision information
+    399              pTx->revision.deviceId  = SiiDrvTpiDeviceIdGet();
+    400              pTx->revision.tpi       = SiiDrvTpiRevisionGet();
+    401              pTx->revision.component = SI_TX_COMP_REVISION;
+    402          }
+    403          
+    404          
+    405          //-------------------------------------------------------------------------------------------------
+    406          //! @brief      Returns index of an instance selected in context
+    407          //!
+    408          //! @return     Index of an instance record
+    409          //-------------------------------------------------------------------------------------------------
+    410          
+    411          uint8_t SiiTxInstanceGet(void)
+    412          {
+    413              return (pTx - &txInstRec[0]);
+    414          }
+    415          
+    416          
+    417          //-------------------------------------------------------------------------------------------------
+    418          //! @brief      Brings an instance referred by given index into current context.
+    419          //!
+    420          //! @param[in]  instance - index of an instance record
+    421          //-------------------------------------------------------------------------------------------------
+    422          
+    423          void SiiTxInstanceSet(uint8_t instance)
+    424          {
+    425          #if (SII_NUM_TX > 1)
+    426              if (instance < SII_NUM_TX)
+    427              {
+    428                  pTx = &txInstRec[instance];
+    429          
+    430                  // Switch context in submodules
+    431                  SiiDrvTpiInstanceSet(instance);
+    432                  TxHdcpInstanceSet(instance);
+    433                  TxInfoInstanceSet(instance);
+    434          
+    435          #if (SI_TX_VIDEO_CONVERSION == ENABLE)
+    436                  TxVideoConversionInstanceSet(instance);
+    437          #endif
+    438          
+    439                  TxAviInstanceSet(instance);
+    440                  TxAudioInstanceSet(instance);
+    441              }
+    442              else
+    443              {
+    444                  ReportIssue(SI_TX_ERROR_CODE_INSTANCE_NOT_EXIST);
+    445              }
+    446          #endif
+    447          }
+    448          
+    449          
+    450          //-------------------------------------------------------------------------------------------------
+    451          //! @brief      Return current TX status flags such as HPD and RxSense.
+    452          //!
+    453          //! @return     status structure.
+    454          //-------------------------------------------------------------------------------------------------
+    455          
+    456          txStatus_t SiiTxStatusGet(void)
+    457          {
+    458              uint8_t interrupts = SiiDrvTpiPendingInterruptsGet();
+    459              uint8_t status = SiiDrvTpiPlugStatusGet();
+    460          
+    461              pTx->status.isHotPlugDetected = ((status & SI_TX_STATUS_MASK_HPD) != 0);
+    462              pTx->status.isRxSensed = ((status & SI_TX_STATUS_MASK_RX_SENSE) != 0);
+    463          
+    464              pTx->status.isIrqPending = (interrupts != 0);
+    465          
+    466              return pTx->status;
+    467          }
+    468          
+    469          
+    470          //-------------------------------------------------------------------------------------------------
+    471          //! @brief      Return error code structure.
+    472          //!
+    473          //!             Can be used to check if the last operation was a success or a failure.
+    474          //!             Error status is cleared after the call.
+    475          //!
+    476          //! @return     structure having the lastly caught error code and total number of errors
+    477          //-------------------------------------------------------------------------------------------------
+    478          
+    479          txError_t SiiTxGetLastResult(void)
+    480          {
+    481              txError_t retErr = pTx->lastResult;
+    482          
+    483              // Clear error status
+    484              pTx->lastResult.lastErrorCode = SI_TX_ERROR_CODE_NO_ERROR;
+    485              pTx->lastResult.errorCount = 0;
+    486          
+    487              return retErr;
+    488          }
+    489          
+    490          
+    491          //-------------------------------------------------------------------------------------------------
+    492          //! @brief      Return an identification information for the driver.
+    493          //!
+    494          //! @return     structure containing revision of Tx component, TPI interface and Tx Device ID
+    495          //-------------------------------------------------------------------------------------------------
+    496          
+    497          txRevision_t SiiTxRevisionGet(void)
+    498          {
+    499              return pTx->revision;
+    500          }
+    501          
+    502          
+    503          //-------------------------------------------------------------------------------------------------
+    504          //! @brief      Sets DVI or HDMI mode of the output interface.
+    505          //!
+    506          //!             The output interface must be set during Hot Plug service loop before switching
+    507          //!             to the the full power mode.
+    508          //!
+    509          //! @param[in]  mode - output mode code
+    510          //-------------------------------------------------------------------------------------------------
+    511          
+    512          void SiiTxOutputInterfaceSet(txHdmiMode_t mode)
+    513          {
+    514              pTx->isTxOutInHdmiMode = false; // default is DVI
+    515          
+    516              ClearErrorStatus();
+    517          
+    518              switch(mode)
+    519              {
+    520                  default:
+    521                  case SI_TX_OUTPUT_MODE_DVI:
+    522                      // Any downstream device must support DVI mode. No check is needed.
+    523                      SiiDrvTpiHdmiOutputModeSet(false);
+    524                      TxAudioOnHdmiModeChange();
+    525                      break;
+    526          
+    527                  case SI_TX_OUTPUT_MODE_HDMI:
+    528                      // Verify if the downstream device supports HDMI using the EDID info
+    529                      if(SiiEdidTxDoesDsSupport(SI_EDID_TX_SUPPORT_HDMI))
+    530                      {
+    531                          // DS is an HDMI device
+    532                          SiiDrvTpiHdmiOutputModeSet(true);
+    533                          pTx->isTxOutInHdmiMode = true;
+    534          
+    535                          TxAviInfoFrameUpdate();
+    536                          TxAudioOnHdmiModeChange();
+    537                      }
+    538                      else
+    539                      {
+    540                          // DS is a DVI only device
+    541                          // so we fail to set HDMI output type
+    542                          ReportIssue(SI_TX_ERROR_CODE_HDMI_NOT_SUPPORTED_BY_DS);
+    543                      }
+    544              }
+    545          
+    546          }
+    547          
+    548          //-------------------------------------------------------------------------------------------------
+    549          //! @brief      Returns output interface type (DVI or HDMI).
+    550          //!
+    551          //! @return     output mode code
+    552          //-------------------------------------------------------------------------------------------------
+    553          
+    554          txHdmiMode_t SiiTxOutputInterfaceGet(void)
+    555          {
+    556              return pTx->isTxOutInHdmiMode;
+    557          }
+    558          
+    559          
+    560          //-------------------------------------------------------------------------------------------------
+    561          //! @brief      Switches TX into Standby low-power mode.
+    562          //!
+    563          //!             Brings transmitter into low power mode (D2) when TMDS output is disabled,
+    564          //!             but register access is enabled.
+    565          //-------------------------------------------------------------------------------------------------
+    566          
+    567          void SiiTxStandby(void)
+    568          {
+    569              if (pTx->powerMode == SI_TX_POWER_MODE_STANDBY)
+    570              {
+    571                  ReportIssue(SI_TX_WARN_CODE_POWER_MODE_ALREADY_SET);
+    572              }
+    573              else if (pTx->powerMode != SI_TX_POWER_MODE_FULL)
+    574              {
+    575                  ReportIssue(SI_TX_ERROR_CODE_INCOMPATIBLE_POWER_MODE);
+    576                  return;
+    577              }
+    578          
+    579              // Switch to Standby mode
+    580              RequestTmdsOutputEnable(false);
+    581              TxHdcpReset();
+    582              SiiDrvTpiStandby();
+    583              pTx->powerMode = SI_TX_POWER_MODE_STANDBY;
+    584              DEBUG_PRINT(TX_MSG_ALWAYS, "Standby Mode\n");
+    585              ClearErrorStatus(); // success
+    586          }
+    587          
+    588          //-------------------------------------------------------------------------------------------------
+    589          //! @brief      Switches TX to normal power mode.
+    590          //!
+    591          //!             Brings transmitter into normal power mode (D0) when all parts
+    592          //!             of Tx chip are enabled, including TMDS output.
+    593          //-------------------------------------------------------------------------------------------------
+    594          
+    595          void SiiTxResume(void)
+    596          {
+    597              if (pTx->powerMode == SI_TX_POWER_MODE_FULL)
+    598              {
+    599                  ReportIssue(SI_TX_WARN_CODE_POWER_MODE_ALREADY_SET);
+    600              }
+    601              else if (pTx->powerMode != SI_TX_POWER_MODE_STANDBY)
+    602              {
+    603                  ReportIssue(SI_TX_ERROR_CODE_INCOMPATIBLE_POWER_MODE);
+    604                  return;
+    605              }
+    606          
+    607              // Resume Tx
+    608              SiiDrvTpiPowerUp();
+    609              pTx->powerMode = SI_TX_POWER_MODE_FULL;
+    610              DEBUG_PRINT(TX_MSG_ALWAYS, "Full Power Mode\n");
+    611          
+    612              // Make sure there is a delay between powering up the chip and enabling TMDS
+    613              if (pTx->timeToTmdsEnable < SI_TX_PWRUP_TO_TMDS_TIME_MS)
+    614              {
+    615                  pTx->timeToTmdsEnable = SI_TX_PWRUP_TO_TMDS_TIME_MS;
+    616                  pTx->isTmdsBlackoutPauseRequired = true;
+    617              }
+    618          
+    619              // Enable interrupts (if previously disabled)
+    620              SiiDrvTpiInterruptsEnable(true);
+    621              RequestTmdsOutputEnable(true);
+    622              ClearErrorStatus(); // success
+    623          }
+    624          
+    625          
+    626          //-------------------------------------------------------------------------------------------------
+    627          //! @brief      Switches TX to power down mode.
+    628          //!
+    629          //!             Brings transmitter into lowest power mode (D3) when all parts
+    630          //!             of Tx chip are disabled. Hardware reset is required to return from this state
+    631          //!             as the register access is disabled as well.
+    632          //-------------------------------------------------------------------------------------------------
+    633          
+    634          void SiiTxShutDown(void)
+    635          {
+    636              if ((pTx->powerMode == SI_TX_POWER_MODE_FULL) || (pTx->powerMode == SI_TX_POWER_MODE_STANDBY))
+    637              {
+    638                  RequestTmdsOutputEnable(false);
+    639          
+    640                  // Disable interrupts
+    641                  //SiiDrvTpiInterruptsEnable(false);
+    642          
+    643                  TxHdcpReset();
+    644          
+    645                  SiiDrvTpiPowerDown();
+    646                  pTx->powerMode = SI_TX_POWER_MODE_OFF;
+    647                  DEBUG_PRINT(TX_MSG_ALWAYS, "Power Down Mode\n");
+    648          
+    649                  ClearErrorStatus(); // success
+    650              }
+    651              else
+    652              {
+    653                  ReportIssue(SI_TX_WARN_CODE_POWER_MODE_ALREADY_SET);
+    654              }
+    655          
+    656          }
+    657          
+    658          //-------------------------------------------------------------------------------------------------
+    659          //! @brief      Handle pending TX interrupts and run background sub-tasks.
+    660          //!
+    661          //! @param[in]  elapsedTimeMs - time in milliseconds elapsed since the last call of this function.
+    662          //!
+    663          //! @return     A message to the application layer.
+    664          //! @retval     value - meaning
+    665          //-------------------------------------------------------------------------------------------------
+    666          
+    667          txFeedbackMsg_t SiiTxTaskProcess(time_ms_t elapsedTimeMs)
+    668          {
+    669              txFeedbackMsg_t fbMsg = SI_TX_FB_MSG_NONE;
+    670              uint16_t txInterruptWord;
+    671          
+    672              txInterruptWord = SiiDrvTpiPendingInterruptsGet();
+    673          
+    674              // Service a request to wake up from power down state
+    675              if(SiiDrvTpiIsWakeUpRequired())
+    676              {
+    677                  if (!SiiDrvTpiIsPoweredUp())
+    678                  {
+    679                      // Power up TX first to enable IRQ decoding and the HPD debouncing logic
+    680                      SiiDrvTpiPowerUp();
+    681                  }
+    682                  else if (txInterruptWord & SI_TX_IRQ__HPD)
+    683                  {
+    684                      // Once debounced HPD interrupt captured, fall in Standby again
+    685                      // Application will decide when and if to Resume the TX upon new HPD arrival
+    686                      SiiDrvTpiStandby();
+    687                      SiiDrvTpiWakeUpRequestClear();
+    688                  }
+    689              }
+    690          
+    691              // Process interrupts, if pending
+    692              if (txInterruptWord && TxIsRunning())
+    693              {
+    694                  //DEBUG_PRINT(TX_MSG_DBG, "TX Ints: 0x%04X\n", (int) txInterruptWord);
+    695                  TxHdcpInterruptHandler(txInterruptWord);
+    696          
+    697          #if (CHECK_FOR_P_STABLE == ENABLE)
+    698                  if(txInterrupts & SI_TX_IRQ__P_STABLE)
+    699                  {
+    700                      bool_t p_stable = SiiDrvTpiIsHdmiLinkStable();
+    701                      bool_t pdo = SiiDrvTpiIsTmdsClockStable();
+    702          
+    703                      DEBUG_PRINT(MSG_DBG_TX, ("TX: p_stable = %c, pdo = %c\n", p_stable ? 'Y' : 'N', pdo ? 'Y' : 'N'));
+    704          
+    705                      if(p_stable)
+    706                      {
+    707                          SiiTxRecoverAfterSourceClockInterruption();
+    708                      }
+    709                  }
+    710          #endif // CHECK_FOR_P_STABLE
+    711              }
+    712          
+    713          
+    714              // If Downstream Plug interrupt event has occurred (HPD or/and RSEN change)
+    715              // or if TX is in one of the transient states: RE-CONNECTING or CONNECTED
+    716              if ((txInterruptWord & (SI_TX_IRQ__HPD | SI_TX_IRQ__RX_SENSE))    ||
+    717                      (pTx->status.isSinkReady && (!pTx->status.isDsConnected)) ||
+    718                      ((!pTx->status.isSinkReady) && pTx->status.isDsConnected) )
+    719              {
+    720                  txStatus_t txStat = SiiTxStatusGet();
+    721          
+    722                  // Bug 33223 - Melbourne SiI9535 MHL | Hot-unplug and hot-plug SiI9535 HDMI output cable causes wrong color on TV
+    723                  txStat.isRxSensed = txStat.isHotPlugDetected;
+    724          
+    725                  if (pTx->status.isSinkReady)
+    726                  {
+    727                      if (pTx->status.isDsConnected)
+    728                      {
+    729                          // SINK READY State
+    730                          if (!txStat.isRxSensed)
+    731                          {
+    732                              // If RSEN is lost, the DS must be disconnected
+    733                              fbMsg = SI_TX_FB_MSG_HOT_PLUG_DISCONNECTED;
+    734                              pTx->status.isSinkReady = false;
+    735                              pTx->status.isDsConnected = false;
+    736                              DEBUG_PRINT( TX_MSG_DBG, "PLUG ST: RDY -> DIS\n");
+    737                          }
+    738                          else /*if (!txStat.isHotPlugDetected)*/
+    739                          {
+    740                              // Most likely an HPD glitch, or short H->L->H pulse.
+    741                              // This is a special case. We must react with re-connect
+    742                              // message to handle the pulse properly.
+    743                              fbMsg = SI_TX_FB_MSG_HOT_PLUG_RECONNECT;
+    744                              pTx->status.isDsConnected = false;
+    745                              DEBUG_PRINT( TX_MSG_DBG, "PLUG ST: RDY -> REC\n");
+    746                              RequestTmdsOutputEnable(false);
+    747                          }
+    748                      }
+    749                      else
+    750                      {
+    751                          // RE-CONNECTION State
+    752                          if (txStat.isHotPlugDetected)
+    753                          {
+    754                              fbMsg = SI_TX_FB_MSG_HOT_PLUG_CONNECTED;
+    755                              pTx->status.isSinkReady = false;
+    756                              pTx->status.isDsConnected = true;
+    757                              DEBUG_PRINT( TX_MSG_DBG, "PLUG ST: REC -> CON\n");
+    758                          }
+    759                          else if (!txStat.isRxSensed)
+    760                          {
+    761                              fbMsg = SI_TX_FB_MSG_HOT_PLUG_DISCONNECTED;
+    762                              pTx->status.isSinkReady = false;
+    763                              DEBUG_PRINT( TX_MSG_DBG, "PLUG ST: REC -> DIS\n");
+    764                          }
+    765                      }
+    766                  }
+    767                  else
+    768                  {
+    769                      if (pTx->status.isDsConnected)
+    770                      {
+    771                          // CONNECTED State
+    772                          if (txStat.isHotPlugDetected && txStat.isRxSensed)
+    773                          {
+    774                              fbMsg = SI_TX_FB_MSG_SINK_READY;
+    775                              pTx->status.isSinkReady = true;
+    776                              DEBUG_PRINT( TX_MSG_DBG, "PLUG ST: CON -> RDY\n");
+    777                          }
+    778                          else if (!txStat.isHotPlugDetected)
+    779                          {
+    780                              fbMsg = SI_TX_FB_MSG_HOT_PLUG_DISCONNECTED;
+    781                              pTx->status.isDsConnected = false;
+    782                              DEBUG_PRINT( TX_MSG_DBG, "PLUG ST: CON -> DIS\n");
+    783                          }
+    784                      }
+    785                      else
+    786                      {
+    787                          // DISCONNECTED State
+    788                          if (txStat.isHotPlugDetected)
+    789                          {
+    790                              // Plug In conditions: HPD Low -> High, disconnected previously
+    791                              // Hardware ensures debouncing at plug stage
+    792                              fbMsg = SI_TX_FB_MSG_HOT_PLUG_CONNECTED;
+    793                              pTx->status.isDsConnected = true;
+    794                              DEBUG_PRINT( TX_MSG_DBG, "PLUG ST: DIS -> CON\n");
+    795                          }
+    796                      }
+    797          
+    798                  }
+    799          
+    800                  //DEBUG_PRINT( TX_MSG_DBG, "After: HPD: %d  RSEN: %d  isDsConnected: %d isSinkReady: %d\n",
+    801                  //      txStat.isHotPlugDetected, txStat.isRxSensed, pTx->status.isDsConnected,  pTx->status.isSinkReady);
+    802              }
+    803          
+    804              // Reset all interrupt flags to avoid repeated response
+    805              SiiDrvTpiPendingInterruptsClear();
+    806          
+    807              // Service timer handlers
+    808              while (!fbMsg)
+    809              {
+    810                  TmdsTimerHandler(elapsedTimeMs);
+    811          
+    812                  (void) TxHdcpTimerHandler(elapsedTimeMs);
+    813                  fbMsg = TxHdcpLastMessageGet();
+    814          
+    815                  break;
+    816              }
+    817          
+    818              return fbMsg;
+    819          }
+    820          
+    821          
+    822          //-------------------------------------------------------------------------------------------------
+    823          //! @brief      Return time in millisecond of requested recall of the SiiTxTaskProcess() function.
+    824          //-------------------------------------------------------------------------------------------------
+    825          
+    826          time_ms_t SiiTxTaskRecallTimeMsGet(void)
+    827          {
+    828              return 0;
+    829          }
+    830          
+    831          
+    832          //-------------------------------------------------------------------------------------------------
+    833          //! @brief      Configures video bus source parameters of the video:
+    834          //!             color encoding, pixel clock properties and the bus width.
+    835          //!
+    836          //! @param[in]  source   - input video interface type,
+    837          //! @param[in]  pBusMode - pointer to input video bus configuration structure.
+    838          //-------------------------------------------------------------------------------------------------
+    839          
+    840          void SiiTxVideoSourceConfig(txVideoSource_t source, txVideoBusMode_t *pBusMode)
+    841          {
+    842              pTx->videoSource = source;
+    843              ClearErrorStatus();
+    844          
+    845              // Switch TX chip to the given source of video
+    846              if(!SiiDrvTpiVideoSourceSelect(source))
+    847              {
+    848                  ReportIssue(SI_TX_ERROR_CODE_INVALID_VIDEO_SOURCE);
+    849                  return;
+    850              }
+    851          
+    852              if (pBusMode != NULL)
+    853              {
+    854                  pTx->videoBusMode = *pBusMode;
+    855          
+    856          #if (SI_TX_VIDEO_CONVERSION == ENABLE)
+    857                  if (TxIsRunning() && (source == SI_TX_VIDEO_SOURCE_VBUS))
+    858                  {
+    859                      // Update TX path if TX is ON, but
+    860                      // do not update if TX is OFF
+    861                      // (to reduce unnecessary I2C traffic)
+    862                      TxVideoConversionSet(pTx->isTxOutInHdmiMode, &(pTx->videoBusMode), true);
+    863                  }
+    864                  else if (source == SI_TX_VIDEO_SOURCE_HDMI)
+    865                  {
+    866                      TxVideoBlankingLevelsSet(pTx->videoBusMode.colorSpace != SI_TX_VBUS_COLOR_SPACE_RGB,
+    867                                               pTx->videoBusMode.quantRange == SI_TX_VIDEO_QRANGE_FULL);
+    868                  }
+    869          #endif
+    870              }
+    871          
+    872          }
+    873          
+    874          
+    875          //-------------------------------------------------------------------------------------------------
+    876          //! @brief      Set input video format.
+    877          //!
+    878          //!             Sets resolution, timings, clock parameters for correct capturing of video on
+    879          //!             the input bus. 3D modes are defined using combination of 3D format ID and
+    880          //!             standard video format ID.
+    881          //!
+    882          //! @param[in]  stdFormatId - Standard (CEA-861-D) video format ID.
+    883          //!                           If this number is equal to SI_TX_VIDEO_MODE_NON_STD  (0xFF),
+    884          //!                           the structure addressed by pFmt parameter has to provide all timings
+    885          //!                           and resolution data.
+    886          //! @param[in]  pFmt        - pointer to a structure describing video format parameters related
+    887          //!                           to a frame geometry and refresh rate.
+    888          //! @param[in]  v3dFormatId - ID of 3D frame structure for 3D video modes.
+    889          //! @param[in]  syncSrc     - Specifies wired video synchronization signals that are provided
+    890          //!                           and not embedded into data.
+    891          //! @param[in]  pSynRg      - Pointer to a structure defining the way how synchronization signals
+    892          //!                           (VSYNC, HSYNC, DE)  are extracted or regenerated
+    893          //!                           from video data stream.
+    894          //-------------------------------------------------------------------------------------------------
+    895          
+    896          void SiiTxInputVideoModeSet(uint8_t stdFormatId, videoFormat_t *pFmt, video3dFormat_t v3dFormatId,
+    897                                      syncSignals_t syncSrc, syncRegen_t *pSynRg)
+    898          {
+    899              bool_t isUseVideoTable = (stdFormatId != SI_VIDEO_MODE_NON_STD);
+    900              ClearErrorStatus();
+    901          
+    902              // In case of non-standard video format, pFmt must be a valid pointer.
+    903              // Caller must provide Sync/DE regeneration parameters, if at least one of the synchronization
+    904              // signals is not present at the video input and has to be generated.
+    905              if (((syncSrc != SI_TX_VIDEO_HVSYNC_DE) && (pSynRg == NULL))  ||
+    906                  ((stdFormatId == SI_VIDEO_MODE_NON_STD) && (pFmt == NULL)) ||
+    907                  (stdFormatId >= NMB_OF_VIDEO_MODES))
+    908              {
+    909                  ReportIssue(SI_TX_ERROR_CODE_INVALID_PARAMETER);
+    910                  return;
+    911              }
+    912          
+    913              pTx->videoFormatId = stdFormatId;
+    914          
+    915              if (isUseVideoTable)
+    916              {
+    917                  const videoMode_t *pVideoMode = &VideoModeTable[stdFormatId];
+    918                  bool_t isInterlaced = pVideoMode->Interlaced;
+    919                  videoFormat_t videoMode;
+    920          
+    921                  // Create local copy of the table entry to be able to modify the parameters
+    922                  // to accommodate 3D video modes
+    923                  videoMode.pixelFrequency = pVideoMode->PixClk;
+    924                  videoMode.verticalFrequency = pVideoMode->VFreq;
+    925                  videoMode.pixelsPerLine = pVideoMode->Total.H;
+    926                  videoMode.linesPerFrame = pVideoMode->Total.V;
+    927          
+    928                  // In 3D mode modify pix clock etc.
+    929                  switch (v3dFormatId)
+    930                  {
+    931                      case SI_TX_VIDEO_3D_NONE:               // Don't modify video parameters for non-3D modes
+    932                          break;
+    933          
+    934                      case SI_TX_VIDEO_3D_FRAME_PACKING:      // Frame packing: progressive/interlaced
+    935                      case SI_TX_VIDEO_3D_LINE_ALTERNATIVE:   // Line alternative: progressive only
+    936                      case SI_TX_VIDEO_3D_L_PLUS_DEPTH:       // L + depth: progressive only
+    937                          // multiply lines x2; multiply clock x2
+    938                          videoMode.linesPerFrame *= 2;
+    939                          videoMode.pixelFrequency *= 2;
+    940                          break;
+    941          
+    942                      case SI_TX_VIDEO_3D_FIELD_ALTERNATIVE:  // Field alternative: progressive/interlaced
+    943                          // multiply clock x2
+    944                          videoMode.pixelFrequency *= 2;
+    945                          break;
+    946          
+    947                      case SI_TX_VIDEO_3D_SIDE_BY_SIDE_FULL: // Side-by-Side (Full): progressive/interlaced
+    948                          // multiply pixel x2; multiply clock x2
+    949                          videoMode.pixelsPerLine *= 2;
+    950                          videoMode.pixelFrequency *= 2;
+    951                          if (isInterlaced)
+    952                          {
+    953                              videoMode.linesPerFrame /= 2;
+    954                          }
+    955                          break;
+    956          
+    957                      case SI_TX_VIDEO_3D_L_PLUS_DEPTH_GFX: // L + depth + graphics + graphics-depth: progressive only
+    958                          // multiply lines x4; multiply clock x4
+    959                          videoMode.linesPerFrame *= 4;
+    960                          videoMode.pixelFrequency *= 4;
+    961                          break;
+    962          
+    963                      default: // 2D timing compatible: progressive/interlaced
+    964                          if (isInterlaced)
+    965                          {
+    966                              videoMode.linesPerFrame /= 2;
+    967                          }
+    968                  }
+    969          
+    970                  pTx->pixelFrequency = videoMode.pixelFrequency;
+    971                  SiiDrvTpiVideoModeDataSet(videoMode.pixelFrequency, videoMode.verticalFrequency, videoMode.pixelsPerLine, videoMode.linesPerFrame);
+    972              }
+    973              else
+    974              {
+    975                  pTx->pixelFrequency = pFmt->pixelFrequency;
+    976                  SiiDrvTpiVideoModeDataSet(pFmt->pixelFrequency, pFmt->verticalFrequency, pFmt->pixelsPerLine, pFmt->linesPerFrame);
+    977              }
+    978          
+    979              SyncSignalsRegenerationSet(syncSrc, pSynRg);
+    980          
+    981              // Release lock from AVI, if it was set
+    982              TxInfoFrameLockSet(SI_INFO_FRAME_AVI, false);
+    983              // Create AVI Packet based on provided video settings
+    984              TxAviFrameCreate(pTx->videoFormatId, &(pTx->videoBusMode));
+    985          
+    986              // Update TX video conversion path as range control depends on video index.
+    987              // Note: changing resolution alone should not affect sending out AVI packet
+    988              // because it changes range control option only.
+    989          #if (SI_TX_VIDEO_CONVERSION == ENABLE)
+    990              TxVideoConversionSet(pTx->isTxOutInHdmiMode, &(pTx->videoBusMode), false);
+    991          #endif
+    992          
+    993              // Start AVI transmission.
+    994              // If output is DVI, the packet will be gated by HW logic.
+    995              // Note: updating last AVI packet byte also triggers
+    996              // color space conversion data update.
+    997              TxAviPostAviPacket();
+    998          
+    999          }
+   1000          
+   1001          
+   1002          //-------------------------------------------------------------------------------------------------
+   1003          //! @brief      Set source of input audio and audio bus configuration.
+   1004          //!
+   1005          //!             Configures the interface, such as the I2S input bus,
+   1006          //!             if the source selected is I2S. pSetting will be ignored for all sources other
+   1007          //!             than  I2S and DSD and can be set to zero.
+   1008          //!
+   1009          //! @param[in]  source             - wired audio source type,
+   1010          //! @param[in]  pInterfaceSettings - pointer to a structure defining settings for I2S receiver.
+   1011          //-------------------------------------------------------------------------------------------------
+   1012          
+   1013          void SiiTxAudioSourceConfig(txAudioSrc_t source, txAudioSrcConfig_t *pInterfaceSettings)
+   1014          {
+   1015              ClearErrorStatus();
+   1016          
+   1017              if (pInterfaceSettings)
+   1018              {
+   1019                  switch (source)
+   1020                  {
+   1021                      case SI_TX_AUDIO_SRC_I2S_L0:
+   1022                      case SI_TX_AUDIO_SRC_I2S_L1:
+   1023                      case SI_TX_AUDIO_SRC_DSD_L0:
+   1024                      case SI_TX_AUDIO_SRC_DSD_L1:
+   1025                      case SI_TX_AUDIO_SRC_HBRA:
+   1026                          TxAudioI2SConfigSet(source, pInterfaceSettings);
+   1027                          break;
+   1028                      case SI_TX_AUDIO_SRC_SPDIF:
+   1029                          break;
+   1030                      default:
+   1031                          ReportIssue(SI_TX_ERROR_CODE_INVALID_PARAMETER);
+   1032                  }
+   1033              }
+   1034              else
+   1035              {
+   1036                  ReportIssue(SI_TX_ERROR_CODE_INVALID_PARAMETER);
+   1037              }
+   1038          
+   1039          }
+   1040          
+   1041          
+   1042          //-------------------------------------------------------------------------------------------------
+   1043          //! @brief      Set format of the audio stream.
+   1044          //!
+   1045          //! @param[in]  source - wired audio source type,
+   1046          //! @param[in]  pFmt   - pointer to a structure defining audio parameters.
+   1047          //-------------------------------------------------------------------------------------------------
+   1048          
+   1049          void SiiTxInputAudioModeSet(txAudioSrc_t source, audioFormat_t *pFmt)
+   1050          {
+   1051              if (pFmt != NULL)
+   1052              {
+   1053                  // Release lock from AIF, if it was set
+   1054                  TxInfoFrameLockSet(SI_INFO_FRAME_AUDIO, false);
+   1055                  TxAudioModeSet(source, pFmt);
+   1056                  ClearErrorStatus();
+   1057              }
+   1058              else
+   1059              {
+   1060                  ReportIssue(SI_TX_ERROR_CODE_INVALID_PARAMETER);
+   1061              }
+   1062          }
+   1063          
+   1064          
+   1065          //-------------------------------------------------------------------------------------------------
+   1066          //! @brief      Mute HDMI Audio source.
+   1067          //-------------------------------------------------------------------------------------------------
+   1068          
+   1069          void SiiTxInputAudioMute(void)
+   1070          {
+   1071              TxAudioMute(true);
+   1072          }
+   1073          
+   1074          
+   1075          //-------------------------------------------------------------------------------------------------
+   1076          //! @brief      Unmute Audio source.
+   1077          //-------------------------------------------------------------------------------------------------
+   1078          
+   1079          void SiiTxInputAudioUnmute(void)
+   1080          {
+   1081              TxAudioMute(false);
+   1082          }
+   1083          
+   1084          
+   1085          //-------------------------------------------------------------------------------------------------
+   1086          //! @brief      Does necessary steps to return transmitter to operational state when input video
+   1087          //!             clock signal has been unsteady due to video source change or error.
+   1088          //-------------------------------------------------------------------------------------------------
+   1089          
+   1090          void SiiTxRecoverAfterSourceClockInterruption(void)
+   1091          {
+   1092              //TxHdcpRequestReauthentication();
+   1093              TxAllInfoFramesUpdate();
+   1094              TxAviInfoFrameUpdate();
+   1095          }
+   1096          
+   1097          
+   1098          //-------------------------------------------------------------------------------------------------
+   1099          //! @brief      Set output video parameters.
+   1100          //!             Currently, only setting the color dithering mode for YCbCr 4:2:2 color space
+   1101          //!             is supported.
+   1102          //!
+   1103          //! @param[in]  mode - pointer to a parameter structure.
+   1104          //-------------------------------------------------------------------------------------------------
+   1105          
+   1106          void SiiTxOutputVideoConfig(txVideoOutMode_t *pMode)
+   1107          {
+   1108          #if (SI_TX_VIDEO_CONVERSION == ENABLE)
+   1109              TxVideoConversionDitheringEnable(pMode->isDitheringEnabled);
+   1110          
+   1111              if (pMode->isForceColorSpace)
+   1112              {
+   1113                  TxVideoConversionOutColorSpaceSet(pMode->colorSpace);
+   1114              }
+   1115          #endif
+   1116          }
+   1117          
+   1118          
+   1119          //-------------------------------------------------------------------------------------------------
+   1120          //! @brief      Mute output Video and Audio.
+   1121          //-------------------------------------------------------------------------------------------------
+   1122          
+   1123          void SiiTxAvMute(void)
+   1124          {
+   1125              TxInfoAvMute(true);
+   1126          }
+   1127          
+   1128          
+   1129          //-------------------------------------------------------------------------------------------------
+   1130          //! @brief      Unmute output Video and Audio.
+   1131          //-------------------------------------------------------------------------------------------------
+   1132          
+   1133          void SiiTxAvUnmute(void)
+   1134          {
+   1135              TxInfoAvMute(false);
+   1136          }
+   1137          
+   1138          
+   1139          //-------------------------------------------------------------------------------------------------
+   1140          //! @brief      Set InfoFrame of a given type.
+   1141          //!
+   1142          //!             This function is typically used in Repeater applications where Rx and Tx systems
+   1143          //!             are in separate chips, and properly formatted frame structures are transferred
+   1144          //!             from Rx to Tx by the microcontroller.
+   1145          //!             @note This function only loads InfoFrame data into the Tx. Actual sending is
+   1146          //!             triggered by SiiTxInfoFrameEnable() function.
+   1147          //!
+   1148          //! @param[in]  ifType - InfoFrame/Packet type,
+   1149          //! @param[in]  pFrame - pointer to the InfoFrame. The frame must be properly formatted,
+   1150          //!                      in accordance with HDMI specification
+   1151          //-------------------------------------------------------------------------------------------------
+   1152          void SiiTxInfoFrameSet(infoFrameType_t ifType, void *pFrame)
+   1153          {
+   1154              TxInfoFrameLockSet(ifType, false); // Unlock info frame for modifications
+   1155          
+   1156              switch (ifType)
+   1157              {
+   1158                  // Update audio settings based on new AIF
+   1159                  case SI_INFO_FRAME_AUDIO:
+   1160                      TxAudioUpdateFromInfoFrame((uint8_t *)pFrame);
+   1161                      break;
+   1162                  default:
+   1163                      break;
+   1164              }
+   1165          
+   1166              TxInfoPacketSet(ifType, pFrame);
+   1167              // Lock explicitly defined info frame, so that it won't be replaced by implicit (generated) data
+   1168              TxInfoFrameLockSet(ifType, true);
+   1169          }
+   1170          
+   1171          
+   1172          //-------------------------------------------------------------------------------------------------
+   1173          //! @brief      Gets info frame of given type.
+   1174          //!             @note Not implemented in this version of firmware.
+   1175          //-------------------------------------------------------------------------------------------------
+   1176          
+   1177          void * SiiTxInfoFrameGet(infoFrameType_t ifType)
+   1178          {
+   1179              return (void *)NULL;
+   1180          }
+   1181          
+   1182          
+   1183          //-------------------------------------------------------------------------------------------------
+   1184          //! @brief      Enable sending InfoFrame of a given type over HDMI link.
+   1185          //!
+   1186          //!             The InfoFrame shall be loaded first by SiiTxInfoFrameSet() function.
+   1187          //!
+   1188          //! @param[in]  ifType - InfoFrame/Packet type.
+   1189          //-------------------------------------------------------------------------------------------------
+   1190          
+   1191          void SiiTxInfoFrameEnable(infoFrameType_t ifType)
+   1192          {
+   1193              switch (ifType)
+   1194              {
+   1195                  case SI_INFO_FRAME_ACP:
+   1196                      // determine if audio content protection is required
+   1197                      TxAudioOnAcpPacketUpdate(false);
+   1198                      break;
+   1199                  default:
+   1200                      TxInfoPacketTransmissionEnable(ifType, true);
+   1201              }
+   1202          }
+   1203          
+   1204          
+   1205          //-------------------------------------------------------------------------------------------------
+   1206          //! @brief      Disable sending InfoFrame of a given type over HDMI link.
+   1207          //!
+   1208          //! @param[in]  ifType - InfoFrame/Packet type.
+   1209          ///-------------------------------------------------------------------------------------------------
+   1210          
+   1211          void SiiTxInfoFrameDisable(infoFrameType_t ifType)
+   1212          {
+   1213              TxInfoPacketTransmissionEnable(ifType, false);
+   1214          }
+   1215          
+   1216          
+   1217          //-------------------------------------------------------------------------------------------------
+   1218          //! @brief      Sets parameters of Tx HDCP engine.
+   1219          //!
+   1220          //!
+   1221          //! @param[in]  isRepeaterMode - true for Repeater mode, false for Source mode;
+   1222          //! @param[in]  umuteDelayMs   - minimum time delay in milliseconds between successful finishing
+   1223          //!                              of HDCP authentication and unmuting of AV content on HDMI output.
+   1224          //!                              Proper setting of this parameter should prevent any transient
+   1225          //!                              effects to be visible as flicker at the downstream TV;
+   1226          //!
+   1227          //! @param[in]  isNotifyRxOnDdcFailure -  This flag makes sense and can be set to true for a
+   1228          //!                                       repeater application. It makes the HDCP control logic
+   1229          //!                                       to notify HDMI receiver (by the API call) about
+   1230          //!                                       HDCP failure in downstream device. Such notification
+   1231          //!                                       is essential for Rx part of the repeater to be able
+   1232          //!                                       to handle the error on upstream device side.
+   1233          //-------------------------------------------------------------------------------------------------
+   1234          
+   1235          void SiiTxHdcpConfigure(bool_t isRepeaterMode, uint_t umuteDelayMs, bool_t isNotifyRxOnDdcFailure)
+   1236          {
+   1237              TxHdcpConfig(isRepeaterMode, umuteDelayMs, isNotifyRxOnDdcFailure);
+   1238          }
+   1239          
+   1240          
+   1241          //-------------------------------------------------------------------------------------------------
+   1242          //! @brief      Initiate HDCP authentication process with a downstream device.
+   1243          //!
+   1244          //!             A/V content will be muted in case of any HDCP failure, while authenticating
+   1245          //!             and upon its completion while maintaining secure (encrypted) link.
+   1246          //!             A notification message upon completion of the authentication is
+   1247          //!             returned by SiiTxTaskProcess().
+   1248          //-------------------------------------------------------------------------------------------------
+   1249          
+   1250          void SiiTxHdcpEnable(void)
+   1251          {
+   1252              TxHdcpStart();
+   1253          }
+   1254          
+   1255          
+   1256          //-------------------------------------------------------------------------------------------------
+   1257          //! @brief      Disable established HDCP authentication with downstream device.
+   1258          //!
+   1259          //!             This function is used to remove HDCP protection from the A/V content.
+   1260          //!             The A/V content will not be muted.
+   1261          //-------------------------------------------------------------------------------------------------
+   1262          
+   1263          void SiiTxHdcpDisable(void)
+   1264          {
+   1265              TxHdcpStop();
+   1266          }
+   1267          
+   1268          
+   1269          //-------------------------------------------------------------------------------------------------
+   1270          //! @brief      Return physical address of this device provided by the downstream EDID.
+   1271          //!
+   1272          //! @return     2-byte physical address.
+   1273          //-------------------------------------------------------------------------------------------------
+   1274          
+   1275          uint16_t    SiiTxPhysicalAddressGet(void)
+   1276          {
+   1277              return SiiEdidTxCecPhysAddrGet();
+   1278          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        0  ReportIssue
+        8  RequestTmdsOutputEnable
+              8 -> SiiDrvTpiTmdsOutputEnable
+              0 -> TxHdcpOnOutputEnable
+       16  SiiTxAudioSourceConfig
+              0 -> ReportIssue
+             16 -> ReportIssue
+              0 -> TxAudioI2SConfigSet
+        0  SiiTxAvMute
+              0 -> TxInfoAvMute
+        0  SiiTxAvUnmute
+              0 -> TxInfoAvMute
+        8  SiiTxGetLastResult
+        0  SiiTxHdcpConfigure
+              0 -> TxHdcpConfig
+        0  SiiTxHdcpDisable
+              0 -> TxHdcpStop
+        0  SiiTxHdcpEnable
+              0 -> TxHdcpStart
+        0  SiiTxInfoFrameDisable
+              0 -> TxInfoPacketTransmissionEnable
+        0  SiiTxInfoFrameEnable
+              0 -> TxAudioOnAcpPacketUpdate
+              0 -> TxInfoPacketTransmissionEnable
+        0  SiiTxInfoFrameGet
+       16  SiiTxInfoFrameSet
+             16 -> TxAudioUpdateFromInfoFrame
+              0 -> TxInfoFrameLockSet
+             16 -> TxInfoFrameLockSet
+             16 -> TxInfoPacketSet
+        8  SiiTxInitialize
+              8 -> SiiDrvTpiAccessInit
+              8 -> SiiDrvTpiDeviceIdGet
+              8 -> SiiDrvTpiInit
+              8 -> SiiDrvTpiInterruptsEnable
+              8 -> SiiDrvTpiRevisionGet
+              8 -> SiiDrvTpiStandby
+              8 -> SiiDrvTpiSwReset
+              8 -> SiiDrvTpiTmdsOutputEnable
+              8 -> TxAudioInit
+              8 -> TxAviInit
+              8 -> TxHdcpInit
+              8 -> TxInfoAvMute
+              8 -> TxInfoInit
+              8 -> __aeabi_memclr4
+       16  SiiTxInputAudioModeSet
+              0 -> ReportIssue
+             16 -> TxAudioModeSet
+             16 -> TxInfoFrameLockSet
+        0  SiiTxInputAudioMute
+              0 -> TxAudioMute
+        0  SiiTxInputAudioUnmute
+              0 -> TxAudioMute
+       32  SiiTxInputVideoModeSet
+              0 -> ReportIssue
+             32 -> ReportIssue
+             32 -> SiiDrvTpiVideoModeDataSet
+             32 -> SyncSignalsRegenerationSet
+             32 -> TxAviFrameCreate
+              0 -> TxAviPostAviPacket
+             32 -> TxInfoFrameLockSet
+        0  SiiTxInstanceGet
+        0  SiiTxInstanceSet
+        0  SiiTxOutputInterfaceGet
+       16  SiiTxOutputInterfaceSet
+              0 -> ReportIssue
+             16 -> ReportIssue
+             16 -> SiiDrvTpiHdmiOutputModeSet
+             16 -> SiiEdidTxDoesDsSupport
+              0 -> TxAudioOnHdmiModeChange
+             16 -> TxAviInfoFrameUpdate
+        0  SiiTxOutputVideoConfig
+        0  SiiTxPhysicalAddressGet
+              0 -> SiiEdidTxCecPhysAddrGet
+        8  SiiTxRecoverAfterSourceClockInterruption
+              8 -> TxAllInfoFramesUpdate
+              0 -> TxAviInfoFrameUpdate
+        8  SiiTxResume
+              0 -> ReportIssue
+              8 -> ReportIssue
+              8 -> RequestTmdsOutputEnable
+              8 -> SiiDrvTpiInterruptsEnable
+              8 -> SiiDrvTpiPowerUp
+        4  SiiTxRevisionGet
+        8  SiiTxShutDown
+              0 -> ReportIssue
+              8 -> RequestTmdsOutputEnable
+              8 -> SiiDrvTpiPowerDown
+              8 -> TxHdcpReset
+        8  SiiTxStandby
+              0 -> ReportIssue
+              8 -> ReportIssue
+              8 -> RequestTmdsOutputEnable
+              8 -> SiiDrvTpiStandby
+              8 -> TxHdcpReset
+       16  SiiTxStatusGet
+             16 -> SiiDrvTpiPendingInterruptsGet
+             16 -> SiiDrvTpiPlugStatusGet
+       24  SiiTxTaskProcess
+             24 -> RequestTmdsOutputEnable
+             24 -> SiiDrvTpiIsPoweredUp
+             24 -> SiiDrvTpiIsWakeUpRequired
+             24 -> SiiDrvTpiPendingInterruptsClear
+             24 -> SiiDrvTpiPendingInterruptsGet
+             24 -> SiiDrvTpiPowerUp
+             24 -> SiiDrvTpiStandby
+             24 -> SiiDrvTpiTmdsOutputEnable
+             24 -> SiiDrvTpiWakeUpRequestClear
+             24 -> SiiTxStatusGet
+             24 -> TxHdcpInterruptHandler
+             24 -> TxHdcpLastMessageGet
+             24 -> TxHdcpOnOutputEnable
+             24 -> TxHdcpTimerHandler
+             24 -> TxIsRunning
+        0  SiiTxTaskRecallTimeMsGet
+       16  SiiTxVideoSourceConfig
+              0 -> ReportIssue
+             16 -> ReportIssue
+             16 -> SiiDrvTpiVideoSourceSelect
+              0 -> __aeabi_memcpy
+       40  SyncSignalsRegenerationSet
+             40 -> SiiDrvTpiDeGenerationEnable
+             40 -> SiiDrvTpiEmbSyncExtractionEnable
+             40 -> SiiDrvTpiSyncRegenConfigurationSet
+             40 -> __aeabi_memcpy4
+        0  TxIsOutInHdmiMode
+        0  TxIsRunning
+        0  TxIsRunningInHdmiMode
+        0  TxIsTmdsEnabled
+        0  TxPixelFreqMhzGet
+        8  TxTmdsBlankPause
+              0 -> RequestTmdsOutputEnable
+              8 -> RequestTmdsOutputEnable
+        0  TxVideoFormatIdGet
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      24  ?<Constant {0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+       4  ??DataTable21
+       4  ??DataTable21_1
+      12  ?Subroutine0
+       6  ?Subroutine1
+       4  ?Subroutine2
+       4  ?Subroutine3
+       4  ?Subroutine4
+      12  ?Subroutine5
+      10  ?Subroutine6
+      26  ReportIssue
+     102  RequestTmdsOutputEnable
+      44  SiiTxAudioSourceConfig
+       6  SiiTxAvMute
+       6  SiiTxAvUnmute
+      24  SiiTxGetLastResult
+       6  SiiTxHdcpConfigure
+       4  SiiTxHdcpDisable
+       4  SiiTxHdcpEnable
+       6  SiiTxInfoFrameDisable
+      16  SiiTxInfoFrameEnable
+       4  SiiTxInfoFrameGet
+      42  SiiTxInfoFrameSet
+     110  SiiTxInitialize
+      36  SiiTxInputAudioModeSet
+       6  SiiTxInputAudioMute
+       6  SiiTxInputAudioUnmute
+     222  SiiTxInputVideoModeSet
+      16  SiiTxInstanceGet
+       2  SiiTxInstanceSet
+       2  SiiTxOutputInterfaceGet
+      78  SiiTxOutputInterfaceSet
+       2  SiiTxOutputVideoConfig
+       4  SiiTxPhysicalAddressGet
+      14  SiiTxRecoverAfterSourceClockInterruption
+      66  SiiTxResume
+      24  SiiTxRevisionGet
+      36  SiiTxShutDown
+      48  SiiTxStandby
+      66  SiiTxStatusGet
+     338  SiiTxTaskProcess
+       4  SiiTxTaskRecallTimeMsGet
+      52  SiiTxVideoSourceConfig
+     164  SyncSignalsRegenerationSet
+       2  TxIsOutInHdmiMode
+      20  TxIsRunning
+      18  TxIsRunningInHdmiMode
+      14  TxIsTmdsEnabled
+      18  TxPixelFreqMhzGet
+      28  TxTmdsBlankPause
+      10  TxVideoFormatIdGet
+      36  pTx
+          txInstRec
+
+ 
+    36 bytes in section .data
+ 1 780 bytes in section .text
+ 
+ 1 780 bytes of CODE memory
+    36 bytes of DATA memory
+
+Errors: none
+Warnings: 4

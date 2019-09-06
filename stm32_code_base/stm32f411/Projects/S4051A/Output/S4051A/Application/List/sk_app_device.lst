@@ -1,0 +1,890 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:33 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\application\sk_app_devi #
+#                    ce.c                                                     #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\application\sk_app_devi #
+#                    ce.c -D S4051A -D DEBUG -D FREE_RTOS -D STM32F40_41xxx   #
+#                    -D USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D          #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\sk_app_device.lst                                     #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\sk_app_device.o                                        #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\application\sk_app_device.c
+      1          //***************************************************************************
+      2          //!file     sk_app_device.c
+      3          //!brief    Silicon Image SiI9535 Starter Kit Application device functions.
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2011-2012, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include "string.h"
+     14          #include "sk_application.h"
+     15          #include "si_gpio.h"
+     16          
+     17          #if INC_CEC
+     18          #include "si_cec_component.h"
+     19          #endif
+     20          #if INC_CBUS
+     21          #include "sk_app_cbus.h"
+     22          #endif
+     23          #include "si_repeater_component.h"
+     24          #include "si_tx_component.h"
+     25          #if INC_AUDIO_RX
+     26          #include "si_audio_component.h"
+     27          #endif
+     28          #include "si_cra.h"
+     29          #include "si_drv_device.h"
+     30          #include "si_drv_nvram_sram.h"
+     31          #include "si_drv_repeater.h"
+     32          #include "si_drv_switch.h"
+     33          #include "si_drv_gpio.h"
+     34          #include "si_drv_tpi_system.h"
+     35          
+     36          #if (FPGA_BUILD == ENABLE)
+     37          #include "si_fpga.h"
+     38          #endif
+     39          
+     40          #if INC_RTPI
+     41          #include "si_rtpi_component.h"
+     42          #endif
+     43          
+     44          #if ( configSII_DEV_953x_PORTING == 1 )
+     45          #include "Debug.h"
+     46          #include "GPIOMiddleLevel.h"
+     47          #include "HdmiDeviceManager.h"
+     48          #endif 
+     49          
+     50          
+     51          extern const char lSignonMsg [];
+     52          extern char *buildVersion;  // From buildtime.c
+     53          
+     54          
+     55          //------------------------------------------------------------------------------
+     56          //! @brief  Initialize the various components of the SiI9535 device
+     57          //------------------------------------------------------------------------------
+     58          bool_t SkAppDeviceInitialize ( void )
+     59          {
+     60          #if INC_CEC
+     61          #ifndef POWER_UP_ONLY
+     62              int     i;
+     63          #endif
+     64          #endif
+     65              bool_t  success = false;
+     66          
+     67              do
+     68              {
+     69                  // Initialize device drivers.
+     70                  if ( !SiiCraInitialize())           break;
+     71                  if ( !SiiDrvNvramInitialize())      break;
+     72                  if ( !SiiDrvDeviceInitialize(app.powerState == APP_POWERSTATUS_ON)) break;
+     73          #ifndef POWER_UP_ONLY
+     74          
+     75          #if (FPGA_BUILD == ENABLE)
+     76                  SiiPlatformFpgaInit();
+     77          #endif
+     78          #if ( SII_POWER_TYPE != APP_POWERTYPE_FULL )
+     79                  if ( app.powerState == APP_POWERSTATUS_ON )
+     80          #endif
+     81                  {
+     82                      if ( !SkAppDeviceInitMsw())             break;  // Initialize before TX
+     83                      if ( !SkAppDeviceInitTx())              break;  // Initialize before the others
+     84                      if ( !SkAppDeviceInitRepeater( true ))  break;
+     85          #if INC_CBUS
+     86                      if ( !SkAppDeviceInitCbus())        break;
+     87          #endif
+     88                      if ( !SiiDrvDeviceRelease())        break;
+     89                      if ( !SkAppDeviceInitAudio())       break;
+     90          
+     91          #if INC_OSD
+     92                      SkAppDeviceInitOsd();   // Do not stop if this init fails
+     93          #endif
+     94          #if INC_IPV
+     95                      if ( !SkAppTaskIpvInitialize())     break;
+     96          #endif
+     97                      if ( !SkAppDeviceInitThx())         break;
+     98                  }
+     99          
+    100          #if ( configSII_DEV_953x_PORTING == 1 )	 /*Smith modify: if configSII_DEV_953x_PORTING == 1, that is able to enable mc pcm up to 8 channels; sad becomes FL/FR, LFE, FC, RL/RR and RLC/RRC*/
+    101                  if ( !SkAppDeviceInitEdidTx( false )) break;
+    102          #else	
+    103          	  	if ( !SkAppDeviceInitEdidTx( true )) break;
+    104          #endif 
+    105          
+    106          #if INC_CEC
+    107          #if ( SII_POWER_TYPE != APP_POWERTYPE_FULL )
+    108                  if ( app.powerState == APP_POWERSTATUS_ON )
+    109          #endif
+    110                  {
+    111                      // Check for a downstream device and get it's EDID
+    112                      // if available so that we can assign a CEC physical address
+    113                      // for ourselves.  This requires power to the PWD domain
+    114                      // of the SiI9535.
+    115                      for( i = 0; i < SII_NUM_TX; i++ )
+    116                      {
+    117                          // Get physical state of HPD without bothering the rest of
+    118                          // the driver component.
+    119                          SkAppTxInstanceSet(i);
+    120                          if ( SiiDrvTpiGetHpdState())
+    121                          {
+    122                              SkAppProcessTxEdid(i);
+    123                          }
+    124                      }
+    125                  }
+    126                  if ( !SkAppDeviceInitCec())         break;  // Must initialize AFTER Tx1
+    127          #endif
+    128          #if INC_ARC
+    129                  if ( app.powerState == APP_POWERSTATUS_ON )
+    130                  {
+    131                      if ( !SkAppDeviceInitArc())     break;  // Must initialize AFTER CEC
+    132                  }
+    133          #endif
+    134          
+    135          #if INC_CBUS
+    136                  if ( !SkAppDeviceInitGpio())        break;
+    137          #endif
+    138          #if INC_CDC
+    139                  if ( !SkAppInitCdc())               break;
+    140          #endif
+    141          #if INC_RTPI
+    142                  if ( !SiiRtpiInitialize(0))         break;
+    143          #endif
+    144          
+    145          #endif
+    146                  success = true;
+    147              }   while (0);  // Do the above only once
+    148          #ifndef POWER_UP_ONLY
+    149              DEBUG_PRINT(
+    150                  MSG_ALWAYS, "\nDeviceInit: %04X r%02X  ",
+    151                  SiiDrvDeviceInfo( SiiDEV_ID ), SiiDrvDeviceInfo( SiiDEV_REV ) );
+    152          
+    153          	TRACE_DEBUG((0, "DeviceInit: 0x%X 0x%X", SiiDrvDeviceInfo( SiiDEV_ID ), SiiDrvDeviceInfo( SiiDEV_REV ) ));
+    154              if ( success )
+    155              {
+    156                  PrintAlways( "successful\n" );
+    157          		TRACE_DEBUG((0, "successful"));
+    158              }
+    159              else
+    160              {
+    161                  DEBUG_PRINT( MSG_ERR, "!!!!Failure, halting...\n" );
+    162          		TRACE_ERROR((0, "halting..."));
+    163              }
+    164              // Don't call SiiDrvDeviceStart() unless prior stages were successful
+    165              if ( success && !SiiDrvDeviceStart())
+    166              {
+    167                  success = false;
+    168                  DEBUG_PRINT( MSG_ERR, "!!!!Device Driver Start failure, halting...\n" );
+    169          		TRACE_DEBUG((0, "!!!!Device Driver Start failure, halting...\n"));
+    170              }
+    171          #endif
+    172              return( success );
+    173          }
+    174          
+    175          //------------------------------------------------------------------------------
+    176          //! @brief  Put chip into lowest power mode that can be done with power still on
+    177          //------------------------------------------------------------------------------
+    178          void SkAppLowPowerStandby ( void )
+    179          {
+    180          	int i;
+    181          #if ( SII_POWER_TYPE != APP_POWERTYPE_MAIN )
+    182              SiiRxAudioStandby();
+    183              SiiDrvSwitchStandby();
+    184          #if INC_ARC
+    185              SiiDrvArcStandby();
+    186          #endif
+    187          #if INC_IPV
+    188              SiiDrvIpvStandby();
+    189          #endif
+    190          #if INC_CBUS
+    191              //SiiDrvCbusStandby();
+    192              SkAppCbusStandby();
+    193          #endif
+    194          
+    195              // Shut down both sub-instances of the repeater
+    196              for (i=0; i<SII_NUM_PIPE; i++)
+    197              {
+    198              	SiiRepeaterInstanceSet(i);
+    199              	SiiDrvRepeaterEnable(false);
+    200              }
+    201              SiiDrvDeviceStandby();  // Last standby called is always the device main driver.
+    202          #endif
+    203          }
+    204          
+    205          //------------------------------------------------------------------------------
+    206          // Function:    AppDeviceStandby
+    207          // Description: Places the device into standby mode if available
+    208          // Parameters:  none
+    209          // Returns:     true if the device entered standby mode successfully, or false
+    210          //              if some failure occurred.
+    211          //------------------------------------------------------------------------------
+    212          static void AppDeviceStandby ( void )
+    213          {
+    214              bool_t failure = false;
+    215          
+    216              PrintAlways( "********************************\n");
+    217              PrintAlways( "** DEVICE STANDBY (POWER OFF) **\n");
+    218              PrintAlways( "********************************\n");
+    219          	TRACE_DEBUG((0, "SIL9533 POWER OFF "));
+    220          
+    221              // Place all components/drivers in standby
+    222          #if INC_CEC
+    223              failure = !SkAppCecStandby() || failure;  // Do this first because it sends a CEC Standby message
+    224          #endif
+    225          
+    226          #if INC_CBUS
+    227              failure = !SkAppCbusStandby() || failure;
+    228          #endif
+    229          #if INC_CDC == 1
+    230              failure = !SiiCdcStandby() || failure;
+    231          #endif
+    232              SiiTxStandby();
+    233              SkAppLowPowerStandby();
+    234          
+    235          #if ( configSII_DEV_953x_PORTING == 1 ) /*Smith Fixes Bug: For USB playback is not smoothly*/
+    236          	SiiDrcTpiDisableInterruptStandby( );
+    237          #endif	
+    238          
+    239              if ( failure )
+    240              {
+    241                  DEBUG_PRINT( MSG_ERR, "\n!!!!!! Error occurred entering Standby !!!!!!\n");
+    242          		TRACE_DEBUG((0, " !!!!!! Error occurred entering Standby !!!!!! "));
+    243              }
+    244          }
+    245          
+    246          //------------------------------------------------------------------------------
+    247          //! @brief  Causes operation of the device to return to the state it was
+    248          //!         prior to the previous call to SiiDeviceStandby.
+    249          //! @return true if the device successfully exited standby mode , or false
+    250          //!         if some failure occurred.
+    251          //! @note   TX module is not restored to operation by this function.  When
+    252          //!         the first HOTPLUG detect interrupt occurs following the power on
+    253          //!         state, the TX module will automatically be restarted
+    254          //------------------------------------------------------------------------------
+    255          static void AppDeviceResume ( void )
+    256          {
+    257              bool_t failure = false;
+    258          
+    259              PrintAlways( "********************************\n");
+    260              PrintAlways( "** DEVICE RESUME (POWER ON)   **\n");
+    261              PrintAlways( "********************************\n");
+    262          
+    263              // Power is back on, so restore any configuration information that
+    264              // was saved at the last standby.
+    265          
+    266              failure = !SiiDrvDeviceResume() || failure;   // First resume called is always the device main driver.
+    267          
+    268          #if INC_CEC
+    269              failure = !SkAppCecResume(true) || failure;
+    270          #endif
+    271          #if INC_CDC == 1
+    272              failure = !SiiCdcResume() || failure;
+    273          #endif
+    274          #if INC_CBUS
+    275              failure = !SkAppCbusResume() || failure;
+    276          #endif
+    277              // Tx will resume when a downstream hotplug is detected
+    278          
+    279              if ( failure )
+    280              {
+    281                  DEBUG_PRINT( MSG_ERR, "\n!!!!!! Error occurred during Resume !!!!!!\n");
+    282              }
+    283          }
+    284          
+    285          //------------------------------------------------------------------------------
+    286          //! @brief  Monitor and implement device power requests.
+    287          //!         If any module has changed the app.powerState value, apply
+    288          //!         the appropriate action for the current application power state.
+    289          //!         This state may have been modified by the physical UI, the remote
+    290          //!         control, a CEC or CBUS message, or some other external influence.
+    291          //------------------------------------------------------------------------------
+    292          void SkAppDevicePower ( void)
+    293          {
+    294          #if ( configSII_DEV_953x_PORTING == 0 )	
+    295              // Check for physical power button change.
+    296          #if (FPGA_BUILD == DISABLE)
+    297              if (SiiPlatformGpioPowerVCC5() || (app.mhlcabledetect) )
+    298          #else
+    299              if (true)
+    300          #endif
+    301              {
+    302                  // Power button has been pressed, toggle the power state.
+    303                  // Since we're the power button, don't modify the power
+    304                  // state if it is in a transitional stage.
+    305                  if ( app.powerState == APP_POWERSTATUS_ON )
+    306                  {
+    307          #if (FPGA_BUILD == DISABLE)
+    308                      app.powerState = APP_POWERSTATUS_ON_TO_STANDBY;
+    309          #endif
+    310                  }
+    311                  else if (( app.powerState == APP_POWERSTATUS_STANDBY ) || ( app.powerState == APP_POWERSTATUS_INITIAL ))
+    312                  {
+    313                      app.powerState = APP_POWERSTATUS_STANDBY_TO_ON;
+    314                  }
+    315                  app.mhlcabledetect = false;
+    316              }
+    317          #endif /* ( configSII_DEV_953x_PORTING == 0 )	 */
+    318          
+    319              // If power state was changed by somebody, act on it.
+    320              if ( app.powerState != app.oldPowerState )
+    321              {
+    322          #if 0    
+    323                  PrintAlways( "\n====================================================\n");
+    324                  DEBUG_PRINT( MSG_ALWAYS, "==  Main Power: %-7s                           ==\n",
+    325                      ( app.powerState == APP_POWERSTATUS_STANDBY_TO_ON )? "ON     " : "STANDBY");
+    326                  DEBUG_PRINT( MSG_ALWAYS, "==  %s%s                      ==\n", lSignonMsg, buildVersion );
+    327                  PrintAlways( "====================================================\n");
+    328          #endif        
+    329          
+    330                  switch ( app.powerState )
+    331                  {
+    332                      case APP_POWERSTATUS_STANDBY_TO_ON:
+    333          
+    334          #if ( SII_POWER_TYPE != APP_POWERTYPE_FULL )
+    335                          // Turn on the device power
+    336                          SiiPlatformGpioSetPower(SII_GPIO_POWER_ALL, ON );
+    337          #endif
+    338          
+    339          #ifdef POWER_UP_ONLY
+    340                          app.powerState = APP_POWERSTATUS_ON;
+    341          #else // #ifndef POWER_UP_ONLY
+    342                          if ( SkAppInitialize())
+    343                          {
+    344                              app.powerState = APP_POWERSTATUS_ON;
+    345                              if ( SkAppDeviceInitialize())
+    346                              {
+    347                                  AppDeviceResume();
+    348                                  break;
+    349                              }
+    350                          }
+    351          				
+    352                          // Initialization failed somehow, let the user know it.
+    353                          SkAppBlinkTilReset( ERRLED_BAD_INIT );
+    354          #endif //#ifdef POWER_UP_ONLY
+    355                          break;
+    356          
+    357                      case APP_POWERSTATUS_ON_TO_STANDBY:
+    358                          AppDeviceStandby();
+    359                          app.powerState = APP_POWERSTATUS_STANDBY;
+    360          
+    361          #if ( SII_POWER_TYPE != APP_POWERTYPE_FULL )
+    362                          // Power down the device
+    363                          SiiPlatformGpioSetPower(SII_GPIO_POWER_ALL, OFF );
+    364          #endif
+    365                          break;
+    366          
+    367                      case APP_POWERSTATUS_ON:
+    368                      case APP_POWERSTATUS_STANDBY:
+    369                      default:
+    370                          break;
+    371                  }
+    372                  app.oldPowerState = app.powerState;
+    373          #ifndef POWER_UP_ONLY
+    374          #if INC_RTPI
+    375                  SiiRtpiOnPwrStateChange((APP_POWERSTATUS_ON == app.oldPowerState));
+    376          #endif //INC_RTPI
+    377          #endif //#ifndef POWER_UP_ONLY
+    378              }
+    379          }
+    380          
+    381          
+    382          
+    383          
+    384          #if INC_RTPI
+    385          //-------------------------------------------------------------------------------------------------
+    386          //! @brief      Callback for the RTPI component to call and set power state.
+    387          //-------------------------------------------------------------------------------------------------
+    388          bool_t SiiRtpiCbPowerControl( int newState ) {
+    389          
+    390              switch ( newState )
+    391              {
+    392                  case 0:
+    393                      app.powerState = APP_POWERSTATUS_ON_TO_STANDBY;
+    394                      break;
+    395                  case 1:
+    396                      app.powerState = APP_POWERSTATUS_STANDBY_TO_ON;
+    397                      break;
+    398                  case 2:
+    399                      app.powerState = APP_POWERSTATUS_ON_TO_STANDBY;
+    400                      SkAppDevicePower();
+    401                      app.powerState = APP_POWERSTATUS_STANDBY_TO_ON;
+    402                      break;
+    403              }
+    404              SkAppDevicePower();
+    405          
+    406              return( true );
+    407          }
+    408          
+    409          //-------------------------------------------------------------------------------------------------
+    410          //! @brief      Callback for the RTPI power state.
+    411          //-------------------------------------------------------------------------------------------------
+    412          uint8_t SiiRtpiCbPowerState ( void )
+    413          {
+    414          	return(( app.powerState != APP_POWERSTATUS_ON ) ? 0 : 1 );
+    415          }
+    416          #endif // INC_RTPI
+    417          
+    418          //-------------------------------------------------------------------------------------------------
+    419          //! @brief      Callback for the OSD component to obtain the specified zone resolution.
+    420          //-------------------------------------------------------------------------------------------------
+    421          bool_t  SiiOsdCbGetOutputRes( int zone, int_t *pHoriz, int_t *pVert, bool_t *pIsInterlaced )
+    422          {
+    423              bool_t  success;
+    424          
+    425              success = true;
+    426          
+    427              // If HDMI is source for zone, use the selected port resolution
+    428              if ( app.currentSource[zone] < SiiSwitchSourceInternalVideo )
+    429              {
+    430                  if ( !SiiDrvSwitchPortInfoGet( app.currentSource[zone], (zone == 0), NULL, pHoriz, pVert, pIsInterlaced, NULL )) // Get current port info
+    431                  {
+    432                      success = false;
+    433                  }
+    434              }
+    435              // Otherwise, use the current video mode of the TPG source.
+    436              else
+    437              {
+    438                  if ( app.currentVideoFormat[zone] < vm_numVideoModes)
+    439                  {
+    440                      *pHoriz         = VideoModeTable[ app.currentVideoFormat[zone]].Active.H;
+    441                      *pVert          = VideoModeTable[ app.currentVideoFormat[zone]].Active.V;
+    442                      *pIsInterlaced  = VideoModeTable[ app.currentVideoFormat[zone]].Interlaced;
+    443                  }
+    444                  else
+    445                  {
+    446                      success = false;
+    447                  }
+    448              }
+    449          
+    450              if ( !success )
+    451              {
+    452                  DEBUG_PRINT( MSG_DBG, "\nUnable to get output resolution for OSD\n");
+    453              }
+    454          
+    455              return( success );
+    456          }
+    457          
+    458          //-------------------------------------------------------------------------------------------------
+    459          //! @brief      Monitors SiI953x device interrupts and notifies drivers that have received
+    460          //!             an interrupt.
+    461          //-------------------------------------------------------------------------------------------------
+    462          void SkAppTaskSiiDevice( void )
+    463              {
+    464              uint16_t statusFlags;
+    465          
+    466              // Check for any SiI953x interrupt.
+    467              if ( SiiDrvDeviceManageInterrupts( app.powerState == APP_POWERSTATUS_ON ))
+    468              {
+    469          #if INC_CEC
+    470                  SiiDrvCpiInstanceSet( CPI_INSTANCE_AVR );
+    471                  if ( SiiDrvCpiStatus() & SiiCPI_CEC_INT)
+    472                  {
+    473                      app.cecInterruptRx = true;
+    474                  }
+    475          #if 0
+    476                  SiiDrvCpiInstanceSet( CPI_INSTANCE_AUXTX );
+    477                  if ( SiiDrvCpiStatus() & SiiCPI_CEC_INT)
+    478                  {
+    479                      app.cecInterruptTx = true;
+    480                  }
+    481          #endif
+    482          #endif //#if INC_CEC
+    483          
+    484                  statusFlags = SiiDrvDeviceStatus();
+    485                  // Resolution stable event is available in MP only and is filtered from intermittent events
+    486                  if ( statusFlags & (SiiDEV_STATUS_RES_STB_CHG | SiiDEV_STATUS_MP_RES_CHG) )
+    487                  {
+    488                      app.resChangeIntr[0] = true;
+    489          #if INC_RTPI
+    490                      SiiRtpiSetInt(RP_M__INTERRUPT__RESOLUTION_DETECTED);
+    491          #endif
+    492                  }
+    493                  // SP has only resolution change events, so react on them, even though
+    494                  // those events may happen more than one time during the resolution stabilization stage
+    495          //        if ( statusFlags & SiiDEV_STATUS_SP_RES_CHG )
+    496          //        {
+    497          //            app.resChangeIntr[1] = true;
+    498          //        }
+    499          
+    500          
+    501          #if INC_RTPI
+    502                  if ( statusFlags & SiiDEV_STATUS_AVI_READY )
+    503                  {
+    504                  	SiiRtpiOnAviInfoFrameChange();
+    505          
+    506                  }
+    507                  if ( statusFlags & SiiDEV_STATUS_AIF_READY )
+    508                  {
+    509                  	SiiRtpiOnAudioInfoFrameChange();
+    510                  }
+    511          #endif
+    512          
+    513          #if ( configSII_DEV_953x_PORTING_CBUS == 1 )	 
+    514          #if INC_CBUS
+    515              {
+    516                  uint8_t i;
+    517          		for (i=0; i < MHL_MAX_CHANNELS; i++)
+    518          		{
+    519                      SkAppCbusInstanceSet( i );
+    520                 		if ( SiiDrvCbusStatus() & SiiCBUS_INT )     // CBUS interrupts
+    521                  	{
+    522                    	 	pAppCbus->cbusInterrupt = true;
+    523                  	}
+    524          		}
+    525              }
+    526          #endif
+    527          #endif
+    528          
+    529                  // Check Switch interrupts but don't clear them.
+    530                  statusFlags = SiiDrvSwitchStatus( SiiSWITCH_PEEK_STATUS );
+    531                  if ( statusFlags & SiiSWITCH_INT )
+    532                  {
+    533                      app.switchInterrupt = true;
+    534                  }
+    535              }
+    536          }
+    537          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       32  SiiOsdCbGetOutputRes
+             32 -> SiiDrvSwitchPortInfoGet
+        8  SiiRtpiCbPowerControl
+              8 -> SkAppDevicePower
+        0  SiiRtpiCbPowerState
+       16  SkAppDeviceInitialize
+             16 -> Debug_printDebug
+             16 -> Debug_printError
+             16 -> PrintAlways
+             16 -> SiiCraInitialize
+             16 -> SiiDrvDeviceInfo
+             16 -> SiiDrvDeviceInitialize
+             16 -> SiiDrvDeviceRelease
+             16 -> SiiDrvDeviceStart
+             16 -> SiiDrvNvramInitialize
+             16 -> SiiDrvTpiGetHpdState
+             16 -> SiiRtpiInitialize
+             16 -> SkAppDeviceInitArc
+             16 -> SkAppDeviceInitAudio
+             16 -> SkAppDeviceInitCbus
+             16 -> SkAppDeviceInitCec
+             16 -> SkAppDeviceInitEdidTx
+             16 -> SkAppDeviceInitGpio
+             16 -> SkAppDeviceInitMsw
+             16 -> SkAppDeviceInitRepeater
+             16 -> SkAppDeviceInitThx
+             16 -> SkAppDeviceInitTx
+             16 -> SkAppInitCdc
+             16 -> SkAppProcessTxEdid
+             16 -> SkAppTaskIpvInitialize
+             16 -> SkAppTxInstanceSet
+       16  SkAppDevicePower
+             16 -> Debug_printDebug
+             16 -> PrintAlways
+             16 -> SiiCdcResume
+             16 -> SiiCdcStandby
+             16 -> SiiDrcTpiDisableInterruptStandby
+             16 -> SiiDrvDeviceResume
+             16 -> SiiPlatformGpioSetPower
+              0 -> SiiRtpiOnPwrStateChange
+             16 -> SiiTxStandby
+             16 -> SkAppBlinkTilReset
+             16 -> SkAppCbusResume
+             16 -> SkAppCbusStandby
+             16 -> SkAppCecResume
+             16 -> SkAppCecStandby
+             16 -> SkAppDeviceInitialize
+             16 -> SkAppInitialize
+             16 -> SkAppLowPowerStandby
+        8  SkAppLowPowerStandby
+              8 -> SiiDrvArcStandby
+              0 -> SiiDrvDeviceStandby
+              8 -> SiiDrvIpvStandby
+              8 -> SiiDrvRepeaterEnable
+              8 -> SiiDrvSwitchStandby
+              8 -> SiiRepeaterInstanceSet
+              8 -> SiiRxAudioStandby
+              8 -> SkAppCbusStandby
+       16  SkAppTaskSiiDevice
+             16 -> SiiDrvCpiInstanceSet
+             16 -> SiiDrvCpiStatus
+             16 -> SiiDrvDeviceManageInterrupts
+             16 -> SiiDrvDeviceStatus
+             16 -> SiiDrvSwitchStatus
+             16 -> SiiRtpiOnAudioInfoFrameChange
+             16 -> SiiRtpiOnAviInfoFrameChange
+             16 -> SiiRtpiSetInt
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      48  ?<Constant " !!!!!! Error occurre...">
+      48  ?<Constant "!!!!Device Driver Sta...">
+      36  ?<Constant "** DEVICE RESUME (POW...">
+      36  ?<Constant "** DEVICE STANDBY (PO...">
+      36  ?<Constant "*********************...">
+      24  ?<Constant "DeviceInit: 0x%X 0x%X">
+      20  ?<Constant "SIL9533 POWER OFF ">
+      12  ?<Constant "halting...">
+      12  ?<Constant "successful">
+      12  ?<Constant "successful\n">
+       4  ??DataTable15
+       4  ??DataTable15_1
+       6  ?Subroutine0
+     116  SiiOsdCbGetOutputRes
+      38  SiiRtpiCbPowerControl
+      12  SiiRtpiCbPowerState
+     248  SkAppDeviceInitialize
+     202  SkAppDevicePower
+      54  SkAppLowPowerStandby
+      94  SkAppTaskSiiDevice
+
+ 
+ 1 062 bytes in section .text
+ 
+ 1 062 bytes of CODE memory
+
+Errors: none
+Warnings: 1

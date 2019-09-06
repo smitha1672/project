@@ -1,0 +1,863 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:59 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Utilities\Third_Party\efsl\src\file.c                 #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Utilities\Third_Party\efsl\src\file.c -D S4051A -D    #
+#                    DEBUG -D FREE_RTOS -D STM32F40_41xxx -D                  #
+#                    USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D             #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\file.lst                                              #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\file.o                                                 #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Utilities\Third_Party\efsl\src\file.c
+      1          /*****************************************************************************\
+      2          *              efs - General purpose Embedded Filesystem library              *
+      3          *          --------------------- -----------------------------------          *
+      4          *                                                                             *
+      5          * Filename : file.c                                                           *
+      6          * Description : This file contains functions dealing with files such as:      *
+      7          *               fopen, fread and fwrite.                                      *
+      8          *                                                                             *
+      9          * This program is free software; you can redistribute it and/or               *
+     10          * modify it under the terms of the GNU General Public License                 *
+     11          * as published by the Free Software Foundation; version 2                     *
+     12          * of the License.                                                             *
+     13                                                                                        *
+     14          * This program is distributed in the hope that it will be useful,             *
+     15          * but WITHOUT ANY WARRANTY; without even the implied warranty of              *
+     16          * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the               *
+     17          * GNU General Public License for more details.                                *
+     18          *                                                                             *
+     19          * As a special exception, if other files instantiate templates or             *
+     20          * use macros or inline functions from this file, or you compile this          *
+     21          * file and link it with other works to produce a work based on this file,     *
+     22          * this file does not by itself cause the resulting work to be covered         *
+     23          * by the GNU General Public License. However the source code for this         *
+     24          * file must still be made available in accordance with section (3) of         *
+     25          * the GNU General Public License.                                             *
+     26          *                                                                             *
+     27          * This exception does not invalidate any other reasons why a work based       *
+     28          * on this file might be covered by the GNU General Public License.            *
+     29          *                                                                             *
+     30          *                                                    (c)2006 Lennart Yseboodt *
+     31          *                                                    (c)2006 Michael De Nil   *
+     32          \*****************************************************************************/
+     33          
+     34          /*****************************************************************************/
+     35          
+     36          #include "file.h"
+     37          /*****************************************************************************/
+     38          
+     39          /* ****************************************************************************  
+     40           * euint32 file_fread(File *file,euint32 offset, euint32 size,euint8 *buf)
+     41           * Description: This function reads 'size' bytes from 'file' starting at
+     42           * 'offset' and puts the result in '*buf'.
+     43           * Return value: amount of bytes actually read (can differ from the given
+     44           * size when the file was smaller
+     45          */
+     46          euint32 file_fread(File *file,euint32 offset, euint32 size,euint8 *buf)
+     47          {
+     48          	euint32 bytes_read=0,size_left=size,coffset=offset;
+     49          	euint32 cclus,csec,cbyte;
+     50          	euint32 rclus,rsec;
+     51          	euint32 btr;
+     52          	euint8 *tbuf;
+     53          		
+     54          	if(!file_getAttr(file,FILE_STATUS_OPEN))return(0);
+     55          	
+     56          	if(offset>=file->FileSize)
+     57          		size_left=0; /* Offset check */
+     58          	
+     59          	if( (offset+size > file->FileSize) && size_left!=0)
+     60          		size_left=file->FileSize-offset;
+     61          	
+     62          	while(size_left>0){
+     63          	
+     64          		cclus = coffset/(512*file->fs->volumeId.SectorsPerCluster);
+     65          		csec = (coffset/(512))%file->fs->volumeId.SectorsPerCluster;
+     66          		cbyte = coffset%512;
+     67          		
+     68          		if(cbyte!=0 || size_left<512){
+     69          			btr = 512-(coffset%512)>=size_left?size_left:512-(coffset%512);
+     70          		}else{
+     71          			btr = 512;
+     72          		}
+     73          
+     74          		if((fat_LogicToDiscCluster(file->fs,&(file->Cache),cclus))!=0){
+     75          			return(0);
+     76          		}
+     77          		rclus=file->Cache.DiscCluster;
+     78          		rsec=fs_clusterToSector(file->fs,rclus);
+     79          		
+     80          		
+     81          		if(btr==512){
+     82          			/*part_readBuf(file->fs->part,rsec+csec,buf+bytes_read);*/
+     83          			part_directSectorRead(file->fs->part,rsec+csec,buf+bytes_read);
+     84          		}else{
+     85          			/*part_readBuf(file->fs->part,rsec+csec,tbuf);*/
+     86          			tbuf = part_getSect(file->fs->part,rsec+csec,IOM_MODE_READONLY);
+     87          			/* correction to original EFSL */
+     88          			if (tbuf)
+     89          			{
+     90          			  memCpy(tbuf+(coffset%512),buf+bytes_read,btr);
+     91          			  part_relSect(file->fs->part,tbuf);
+     92          			}
+     93          			else return 0;
+     94          		}
+     95          		
+     96          		coffset+=btr;
+     97          		bytes_read+=btr;
+     98          		size_left-=btr;
+     99          	}
+    100          		
+    101          	return(bytes_read);
+    102          }
+    103          /*****************************************************************************/
+    104          
+    105          /* ****************************************************************************  
+    106           * euint32 file_read (File *file,euint32 size,euint8 *buf)
+    107           * Description: This function reads from a file, taking the FilePtr into account
+    108           * and advancing it according to the freadcall.
+    109           * Return value: Value obtained from fread
+    110          */
+    111          euint32 file_read(File *file,euint32 size,euint8 *buf)
+    112          {
+    113          	euint32 r;
+    114          	
+    115          	r=file_fread(file,file->FilePtr,size,buf);
+    116          	file->FilePtr+=r;
+    117          	return(r);
+    118          }
+    119          /*****************************************************************************/
+    120          
+    121          /* ****************************************************************************  
+    122           * euint32 file_write(File *file, euint32 size,euint8 *buf)
+    123           * Description: This function writes to a file, taking FilePtr into account
+    124           * and advancing it according to the fwritecall.
+    125           * Return value: Value obtained from fread
+    126          */
+    127          euint32 file_write(File *file, euint32 size,euint8 *buf)
+    128          {
+    129          	euint32 r;
+    130          	
+    131          	r=file_fwrite(file,file->FilePtr,size,buf);
+    132          	file->FilePtr+=r;
+    133          	return(r);
+    134          }
+    135          /*****************************************************************************/
+    136          
+    137          /* ****************************************************************************  
+    138           * esint16 file_setpos(File *file,euint32 pos)
+    139           * Description: This function does a sanity check on the requested position
+    140           * and changes the fileptr accordingly.
+    141           * Return value: 0 on success and -1 on failure.
+    142          */
+    143          esint16 file_setpos(File *file,euint32 pos)
+    144          {
+    145          	if(pos<=file->FileSize){
+    146          		file->FilePtr=pos;
+    147          		return(0);
+    148          	}
+    149          	return(-1);
+    150          }
+    151          /*****************************************************************************/
+    152          
+    153          /* ****************************************************************************  
+    154           * euint32 file_fwrite(File* file,euint32 offset,euint32 size,euint8* buf)
+    155           * Description: This function writes to a file, at offset 'offset' and size 'size'.
+    156           * It also updates the FileSize in the object, and discstructure.
+    157           * Return value: Bytes actually written.
+    158          */
+    159          euint32 file_fwrite(File* file,euint32 offset,euint32 size,euint8* buf)
+    160          {
+    161          	euint32 need_cluster;
+    162          	euint32 cclus,csec,cbyte;
+    163          	euint32 size_left=size,bytes_written=0;
+    164          	euint32 rclus,rsec;
+    165          	euint32 coffset=offset;
+    166          	euint16 btr;
+    167          	euint8 *tbuf;
+    168          
+    169          	if(!file_getAttr(file,FILE_STATUS_OPEN) || !file_getAttr(file,FILE_STATUS_WRITE))return(0);
+    170          	
+    171          	if(offset>file->FileSize){
+    172          		offset=file->FileSize;
+    173          	}
+    174          	
+    175          	need_cluster = file_requiredCluster(file,offset,size);
+    176          	
+    177          	if(need_cluster){
+    178          		if(fat_allocClusterChain(file->fs,&(file->Cache),need_cluster+CLUSTER_PREALLOC_FILE)!=0){
+    179          			return(0);
+    180          		}
+    181          	}
+    182          	
+    183          	while(size_left>0){
+    184          	
+    185          		cclus = coffset/(512*file->fs->volumeId.SectorsPerCluster);
+    186          		csec = (coffset/(512))%file->fs->volumeId.SectorsPerCluster;
+    187          		cbyte = coffset%512;
+    188          		
+    189          		if(cbyte!=0 || size_left<512){
+    190          			btr = 512-(coffset%512)>=size_left?size_left:512-(coffset%512);
+    191          		}else{
+    192          			btr = 512;
+    193          		}
+    194          
+    195          		if((fat_LogicToDiscCluster(file->fs,&(file->Cache),cclus))!=0){
+    196          			file->FileSize+=bytes_written;
+    197          			dir_setFileSize(file->fs,&(file->Location),file->FileSize);
+    198          			return(bytes_written);
+    199          		}
+    200          		rclus=file->Cache.DiscCluster;
+    201          		rsec=fs_clusterToSector(file->fs,rclus);
+    202          		
+    203          		if(btr==512){
+    204          			/*part_writeBuf(file->fs->part,rsec+csec,buf+bytes_written);*/
+    205          			part_directSectorWrite(file->fs->part,rsec+csec,buf+bytes_written);
+    206          		}else{
+    207          			/*part_readBuf(file->fs->part,rsec+csec,tbuf);*/
+    208          			tbuf = part_getSect(file->fs->part,rsec+csec,IOM_MODE_READWRITE);
+    209          			memCpy(buf+bytes_written,tbuf+(coffset%512),btr);
+    210          			/*part_writeBuf(file->fs->part,rsec+csec,tbuf);*/
+    211          			part_relSect(file->fs->part,tbuf);
+    212          		}
+    213          		
+    214          		coffset+=btr;
+    215          		bytes_written+=btr;
+    216          		size_left-=btr;
+    217          	}
+    218          	
+    219          	if(bytes_written>file->FileSize-offset){
+    220          		file->FileSize+=bytes_written-(file->FileSize-offset);
+    221              }
+    222          	
+    223          	return(bytes_written);	
+    224          }
+    225          
+    226          /* ***************************************************************************\
+    227           * signed eint8 file_fopen(FileSystem *fs,File* file,eint8* filename)      
+    228           * Description: This functions opens a file.                               
+    229           * This function is about to be redesigned. No Docs.                       
+    230           * Return value:
+    231          */
+    232          esint8 file_fopen(File* file,FileSystem *fs,eint8* filename,eint8 mode)
+    233          {
+    234              FileLocation loc;
+    235              FileRecord wtmp;
+    236              eint8 fatfilename[11];
+    237              euint32 sec;
+    238          
+    239              dir_getFatFileName(filename,fatfilename);
+    240          	
+    241              switch(mode)
+    242          	{
+    243                  case MODE_READ:
+    244                      if(fs_findFile(fs,filename,&loc,0)==1)
+    245          			{
+    246                          dir_getFileStructure(fs,&(file->DirEntry), &loc);
+    247                          file_initFile(file,fs,&loc);
+    248          				file_setAttr(file,FILE_STATUS_OPEN,1);
+    249          				file_setAttr(file,FILE_STATUS_WRITE,0);
+    250                          return(0);
+    251                      }
+    252                      return(-1);
+    253                      //break;
+    254                  case MODE_WRITE:
+    255                      if(fs_findFile(fs,filename,&loc,&sec)) /* File may NOT exist, but parent HAS to exist */
+    256          			{
+    257                          return(-2);
+    258          			}
+    259          			if(sec==0){ /* Parent dir does not exist */
+    260           				return(-4);
+    261          			}
+    262                      if(fs_findFreeFile(fs,filename,&loc,0))
+    263          			{
+    264                          dir_createDefaultEntry(fs,&wtmp,fatfilename);
+    265                          dir_createDirectoryEntry(fs,&wtmp,&loc);
+    266                          memCpy(&wtmp,&(file->DirEntry),sizeof(wtmp));
+    267          				file_initFile(file,fs,&loc);
+    268                          sec=fs_getNextFreeCluster(file->fs,fs_giveFreeClusterHint(file->fs));
+    269                          dir_setFirstCluster(file->fs,&(file->Location),sec);
+    270                          fs_setFirstClusterInDirEntry(&(file->DirEntry),sec);
+    271                          fs_initClusterChain(fs,&(file->Cache),sec);
+    272                          fat_setNextClusterAddress(fs,sec,fat_giveEocMarker(fs));
+    273          				file_setAttr(file,FILE_STATUS_OPEN,1);
+    274          				file_setAttr(file,FILE_STATUS_WRITE,1);
+    275                      	return(0);
+    276          			}
+    277                      else
+    278          			{
+    279                          return(-3);
+    280          			}
+    281                      //break;
+    282                  case MODE_APPEND:
+    283          			if(fs_findFile(fs,filename,&loc,0)==1) /* File exists */
+    284          			{
+    285          				dir_getFileStructure(fs,&(file->DirEntry), &loc);
+    286          				file_initFile(file,fs,&loc);
+    287          				if(file->Cache.FirstCluster==0){
+    288          					sec=fs_getNextFreeCluster(file->fs,fs_giveFreeClusterHint(file->fs));
+    289          					dir_setFirstCluster(file->fs,&(file->Location),sec);
+    290          					fs_setFirstClusterInDirEntry(&(file->DirEntry),sec);
+    291          					fat_setNextClusterAddress(fs,sec,fat_giveEocMarker(fs));
+    292          					file_initFile(file,fs,&loc);
+    293          				}
+    294          				file_setpos(file,file->FileSize);
+    295          				file_setAttr(file,FILE_STATUS_OPEN,1);
+    296          				file_setAttr(file,FILE_STATUS_WRITE,1);
+    297          			}
+    298          			else /* File does not excist */
+    299          			{
+    300          				if(fs_findFreeFile(fs,filename,&loc,0))
+    301          				{
+    302          					dir_createDefaultEntry(fs,&wtmp,fatfilename);
+    303          					dir_createDirectoryEntry(fs,&wtmp,&loc);
+    304          					memCpy(&wtmp,&(file->DirEntry),sizeof(wtmp));
+    305          					file_initFile(file,fs,&loc);
+    306          					sec=fs_getNextFreeCluster(file->fs,fs_giveFreeClusterHint(file->fs));
+    307          					dir_setFirstCluster(file->fs,&(file->Location),sec);
+    308          	                fs_setFirstClusterInDirEntry(&(file->DirEntry),sec);
+    309              	            fs_initClusterChain(fs,&(file->Cache),sec);
+    310          					fat_setNextClusterAddress(fs,sec,fat_giveEocMarker(fs));
+    311          					file_setAttr(file,FILE_STATUS_OPEN,1);
+    312          					file_setAttr(file,FILE_STATUS_WRITE,1);
+    313          				}
+    314          				else
+    315          				{
+    316          					return(-3);
+    317          				}
+    318          			}
+    319          			return(0);
+    320                      //break;
+    321                  default:
+    322                      return(-4);
+    323                    //  break;
+    324              }
+    325              //return(-5);
+    326          }
+    327          /*****************************************************************************/
+    328          
+    329          /* ****************************************************************************  
+    330           * esint8 file_fclose(File *file)
+    331           * Description: This function closes a file, by clearing the object.
+    332           * Return value: 0 on success.
+    333          */
+    334          esint8 file_fclose(File *file)
+    335          {
+    336          	if(fs_hasTimeSupport()){
+    337          		file->DirEntry.AccessDate = time_getDate();
+    338          		if(file_getAttr(file,FILE_STATUS_WRITE)){
+    339          			file->DirEntry.FileSize = file->FileSize;
+    340          			file->DirEntry.WriteDate = file->DirEntry.AccessDate;
+    341          			file->DirEntry.WriteTime = time_getTime();
+    342          		}
+    343          		dir_updateDirectoryEntry(file->fs,&(file->DirEntry),&(file->Location));
+    344          	}else{
+    345          		if(file_getAttr(file,FILE_STATUS_WRITE)){
+    346          			dir_setFileSize(file->fs,&(file->Location),file->FileSize);
+    347          		}
+    348          	}
+    349          	
+    350          	memClr(file,sizeof(*file));
+    351          	file_setAttr(file,FILE_STATUS_OPEN,0);
+    352          	file_setAttr(file,FILE_STATUS_WRITE,0);
+    353          	return(0);
+    354          }
+    355          
+    356          
+    357          /* ****************************************************************************  
+    358           * void file_initFile(File *file, FileSystem *fs, FileLocation *loc)
+    359           * Description: This function initialises a new file object, by filling in
+    360           * the fs pointer, filesize (note, that DirEntry must already be filled in)
+    361           * and known cache parameters.
+    362           * Return value: void
+    363          */
+    364          void file_initFile(File *file, FileSystem *fs, FileLocation *loc)
+    365          {
+    366          	file->fs=fs;
+    367          	file->FileSize=file->DirEntry.FileSize;
+    368          	file->FilePtr=0;
+    369          	file->Location.Sector=loc->Sector;
+    370          	file->Location.Offset=loc->Offset;
+    371          	file->Cache.Linear=0;
+    372          	file->Cache.FirstCluster=(((euint32)file->DirEntry.FirstClusterHigh)<<16)+ 
+    373          	                                    file->DirEntry.FirstClusterLow;
+    374          	file->Cache.LastCluster=0; 
+    375          	file->Cache.LogicCluster=0;
+    376          	file->Cache.DiscCluster=file->Cache.FirstCluster;
+    377          }
+    378          /*****************************************************************************/
+    379          
+    380          /* ****************************************************************************  
+    381           * euint8* file_normalToFatName(eint8* filename,eint8* fatfilename)
+    382           * Description: This function converts a human readable filename (limited to 
+    383           * 8.3 eint8 character) to a valid FAT (not VFAT) filename. Invalid characters are 
+    384           * changed to capital X and only the first 11 characters are used.
+    385           * Furthermore all letters are capitalised.
+    386           * Return value: pointer after the filename
+    387          */
+    388          eint8* file_normalToFatName(eint8* filename,eint8* fatfilename)
+    389          {
+    390          	euint8 c,dot=0,vc=0;
+    391          	
+    392          	for(c=0;c<11;c++)fatfilename[c]=' ';
+    393          	
+    394          	c=0;
+    395          	
+    396          	if(*filename == '.'){
+    397          		fatfilename[0]='.';
+    398          		vc++; 
+    399          		if(*(filename+1) == '.'){
+    400          			fatfilename[1]='.';
+    401          			filename+=2;
+    402          		}else{
+    403          			filename++;
+    404          		}
+    405          	}else{
+    406          		while(*filename != '\0' && /**filename != ' ' &&*/ *filename != '/'){   //issue found with short filenames <8 chars
+    407          			if(*filename=='.' && !dot){
+    408          				dot=1;
+    409          				c=8;
+    410                                        
+    411          			}else{
+    412          				if(dot){
+    413          					if(c<=10){
+    414          						fatfilename[c]=file_validateChar(*filename);
+    415          						c++; 
+    416          					}
+    417          				}else{
+    418          					if(c<=7){
+    419          						fatfilename[c]=file_validateChar(*filename);
+    420          						c++; vc++;
+    421          					}
+    422          				}
+    423          			}
+    424          			filename++;
+    425          		}
+    426          	}
+    427          	
+    428          	if(vc>0){
+    429          		if(*filename=='\0'){
+    430          			return(filename);
+    431          		}else{
+    432          			return(filename+1);
+    433          		}
+    434          	}else{
+    435          		return(0);
+    436          	}
+    437          }
+    438          /*****************************************************************************/
+    439          
+    440          /* ****************************************************************************  
+    441           *
+    442           * Description: This function takes the character c, and if it is not a       *
+    443           * valid FAT Filename character returns X. If it is a lowercase letter the    *
+    444           * uppercase equivalent is returned. The remaining characters are returned    *
+    445           * as they are.      
+    446           * Return value: The validated char
+    447          */
+    448          euint8 file_validateChar(euint8 c)
+    449          {
+    450              if( (c<0x20) || (c>0x20&&c<0x30&&c!='-') || (c>0x39&&c<0x41) || (c>0x5A&&c<0x61&&c!='_') ||	(c>0x7A&&c!='~') )
+    451          		return(0x58);
+    452              if( c>=0x61 && c<=0x7A )
+    453          		return(c-32);
+    454          
+    455          	return(c);
+    456          }
+    457          /*****************************************************************************/
+    458          
+    459          /* ****************************************************************************  
+    460           * void ioman_setAttr(IOManager *ioman,euint16 bufplace,euint8 attribute,euint8 val)
+    461           * Description: This sets the attribute of 'bufplace' to the given value (binary).
+    462           *
+    463           * Return value: void
+    464          */
+    465          void file_setAttr(File* file,euint8 attribute,euint8 val)
+    466          {
+    467          	if(val){
+    468          		file->FileStatus|=1<<attribute;
+    469          	}else{
+    470          		file->FileStatus&=~(1<<attribute);
+    471          	}
+    472          }
+    473          /*****************************************************************************/
+    474          
+    475          /* ****************************************************************************  
+    476           * euint8 ioman_getAttr(IOManager *ioman,euint16 bufplace,euint8 attribute)
+    477           * Description: This function retrieves an attribute from the bufstat array.
+    478           * It returns nonzero when it attribute is true and 0 when it is false.
+    479           * Please note, I said "nonzero", not 1.
+    480           * Return value: Attribute.
+    481          */
+    482          euint8 file_getAttr(File* file,euint8 attribute)
+    483          {
+    484          	return(file->FileStatus&(1<<attribute));
+    485          }
+    486          /*****************************************************************************/
+    487          
+    488          euint32 file_requiredCluster(File *file,euint32 offset, euint32 size)
+    489          {
+    490          	euint32 clusters_required,clustersize;
+    491          	euint32 hc;
+    492          
+    493          	if((offset+size)>file->FileSize){
+    494          		if(file->Cache.ClusterCount==0){ /* Number of cluster unknown */
+    495          			hc = fat_countClustersInChain(file->fs,file->Cache.FirstCluster);
+    496          			file->Cache.ClusterCount = hc;
+    497          		}else{
+    498          			hc = file->Cache.ClusterCount; /* This better be right */
+    499          		}
+    500          		clustersize = file->fs->volumeId.BytesPerSector * file->fs->volumeId.SectorsPerCluster;
+    501          		if((size-file->FileSize+offset)>
+    502          		   ((hc-((file->FileSize+clustersize-1)/clustersize))*clustersize)){
+    503          			clusters_required = (((offset+size)-(hc*clustersize))+clustersize-1)/clustersize;
+    504          		}else{
+    505          			clusters_required = 0;
+    506          		}
+    507          	}else{
+    508          		clusters_required = 0;
+    509          	}
+    510          	return(clusters_required);
+    511          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        8  file_fclose
+              8 -> dir_setFileSize
+              8 -> dir_updateDirectoryEntry
+              8 -> file_getAttr
+              8 -> file_setAttr
+              8 -> fs_hasTimeSupport
+              8 -> memClr
+       80  file_fopen
+             80 -> dir_createDefaultEntry
+             80 -> dir_createDirectoryEntry
+             80 -> dir_getFatFileName
+             80 -> dir_getFileStructure
+             80 -> dir_setFirstCluster
+             80 -> fat_giveEocMarker
+             80 -> fat_setNextClusterAddress
+             80 -> file_initFile
+             80 -> file_setAttr
+             80 -> file_setpos
+             80 -> fs_findFile
+             80 -> fs_findFreeFile
+             80 -> fs_getNextFreeCluster
+             80 -> fs_giveFreeClusterHint
+             80 -> fs_initClusterChain
+             80 -> fs_setFirstClusterInDirEntry
+             80 -> memCpy
+       40  file_fread
+             40 -> fat_LogicToDiscCluster
+             40 -> file_getAttr
+             40 -> fs_clusterToSector
+             40 -> memCpy
+             40 -> part_directSectorRead
+             40 -> part_getSect
+             40 -> part_relSect
+       48  file_fwrite
+             48 -> dir_setFileSize
+             48 -> fat_LogicToDiscCluster
+             48 -> fat_allocClusterChain
+             48 -> file_getAttr
+             48 -> file_requiredCluster
+             48 -> fs_clusterToSector
+             48 -> memCpy
+             48 -> part_directSectorWrite
+             48 -> part_getSect
+             48 -> part_relSect
+        0  file_getAttr
+        0  file_initFile
+       32  file_normalToFatName
+             32 -> __aeabi_memset
+             32 -> file_validateChar
+        8  file_read
+              8 -> file_fread
+       24  file_requiredCluster
+             24 -> fat_countClustersInChain
+        8  file_setAttr
+        0  file_setpos
+        0  file_validateChar
+        8  file_write
+              8 -> file_fwrite
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       8  ?Subroutine0
+       8  ?Subroutine1
+      12  ?Subroutine10
+      10  ?Subroutine11
+      10  ?Subroutine12
+       8  ?Subroutine13
+      10  ?Subroutine14
+      10  ?Subroutine15
+       8  ?Subroutine2
+      12  ?Subroutine3
+      10  ?Subroutine4
+       6  ?Subroutine5
+       8  ?Subroutine6
+      14  ?Subroutine7
+      10  ?Subroutine8
+      12  ?Subroutine9
+      92  file_fclose
+     296  file_fopen
+     204  file_fread
+     264  file_fwrite
+      14  file_getAttr
+      50  file_initFile
+     136  file_normalToFatName
+      16  file_read
+      78  file_requiredCluster
+      28  file_setAttr
+      18  file_setpos
+      62  file_validateChar
+      14  file_write
+
+ 
+ 1 428 bytes in section .text
+ 
+ 1 428 bytes of CODE memory
+
+Errors: none
+Warnings: none

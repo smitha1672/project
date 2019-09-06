@@ -1,0 +1,1267 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:23:43 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\si #
+#                    _drv_msw.c                                               #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\si #
+#                    _drv_msw.c -D S4051A -D DEBUG -D FREE_RTOS -D            #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_drv_msw.lst                                        #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_drv_msw.o                                           #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\si_drv_msw.c
+      1          //**************************************************************************
+      2          //!file     si_drv_msw.c
+      3          //!brief    SiI9535 Matrix Port Switch driver functions.
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2008-2012, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include "string.h"
+     14          #include "si_drv_msw_internal.h"
+     15          #include "si_drv_msw_cfg.h"
+     16          #include "si_drv_internal.h"
+     17          #include "si_regs_rxedid953x.h"
+     18          #if INC_CBUS
+     19          #include "si_regs_mhl953x.h"
+     20          #include "sk_app_cbus.h"    //Bug 31744 - With samsung S3 and S4 as MHL source, video out is not consistent when plug/unplug cable at source side
+     21          #endif
+     22          #include "si_drv_device.h"
+     23          #include "si_drv_switch.h"
+     24          #include "si_gpio.h"
+     25          #include "sk_application.h"
+     26          //------------------------------------------------------------------------------
+     27          //  Driver Data
+     28          //------------------------------------------------------------------------------
+     29          
+     30          SwitchDrvInstanceData_t drvSwitchInstance[SII_NUM_SWITCH];
+     31          SwitchDrvInstanceData_t *pDrvSwitch = &drvSwitchInstance[0];
+     32          
+     33          SwitchDrvCommonData_t drvSwitchCommon;
+     34          
+     35          SiiMswRegisterConfData_t  drvSwitchRegisterConf;
+     36          SiiMswInstanceCommonData_t drvCommonData;
+     37          
+     38          //------------------------------------------------------------------------------
+     39          // Switch Driver Register initialization list
+     40          //------------------------------------------------------------------------------
+     41          
+     42          static uint8_t  videoSourceSelects [SiiSwitchSourceCount] =
+     43          {
+     44              VAL_MUX_SEL_HDMI_MP,
+     45              VAL_MUX_SEL_HDMI_MP,
+     46              VAL_MUX_SEL_HDMI_MP,
+     47          #if ( configSII_DEV_9535 == 1 )
+     48              VAL_MUX_SEL_HDMI_MP,
+     49          #endif
+     50              VAL_MUX_SEL_INTERNAL
+     51          };
+     52          
+     53          
+     54          //------------------------------------------------------------------------------
+     55          // Function:    SiiDrvSwitchInstanceSet
+     56          // Description: Set the component global data pointer to the requested instance.
+     57          // Parameters:  instanceIndex
+     58          // Returns:     true if legal index, false if index value is illegal.
+     59          //------------------------------------------------------------------------------
+     60          
+     61          bool_t SiiDrvSwitchInstanceSet ( uint_t instanceIndex )
+     62          {
+     63              // Always use instance 0 for CRA
+     64              SiiRegInstanceSet( PP_PAGE, 0 );
+     65          
+     66              if ( instanceIndex < SII_NUM_SWITCH )
+     67              {
+     68                  pDrvSwitch = &drvSwitchInstance[ instanceIndex];
+     69                  return( true );
+     70              }
+     71          
+     72              return( false );
+     73          }
+     74          
+     75          //------------------------------------------------------------------------------
+     76          // Function:    SiiDrvSwitchInstanceGet
+     77          // Description: Return the current instance index.
+     78          // Parameters:  none
+     79          // Returns:     instance index.
+     80          //------------------------------------------------------------------------------
+     81          
+     82          int_t SiiDrvSwitchInstanceGet ( void )
+     83          {
+     84              return( pDrvSwitch->instanceIndex );
+     85          }
+     86          
+     87          //------------------------------------------------------------------------------
+     88          // Function:    SiiDrvSwitchInitialize
+     89          // Description:
+     90          // Parameters:  none
+     91          // Returns:     It returns true if the initialization is successful, or false
+     92          //              if some failure occurred.
+     93          //------------------------------------------------------------------------------
+     94          
+     95          bool_t SiiDrvSwitchInitialize ( void )
+     96          {
+     97              // Clear instance data
+     98              memset( pDrvSwitch, 0, sizeof( SwitchDrvInstanceData_t ));
+     99          
+    100              // Set instance-specific values.
+    101              if ( pDrvSwitch == &drvSwitchInstance[0])
+    102              {
+    103                  pDrvSwitch->instanceIndex           = 0;
+    104                  pDrvSwitch->mswZoneEnabled          = true;
+    105                  pDrvSwitch->mswVideoSource          = SiiSwitchSource0;
+    106                  pDrvSwitch->mswAudioZoneSource      = SiiSwitchSource0;
+    107                  pDrvSwitch->mpInfoFrameMask         = 0xFF; //Enable New VSIF indicator on MP
+    108                  pDrvSwitch->zoneTracking            = true;
+    109              }
+    110          #if (SII_NUM_SWITCH > 1)
+    111              else
+    112              {
+    113                  pDrvSwitch->instanceIndex           = 1;
+    114                  pDrvSwitch->mswZoneEnabled          = true;
+    115                  pDrvSwitch->mswVideoSource          = SiiSwitchSource0;
+    116                  pDrvSwitch->mswAudioZoneSource      = SiiSwitchSource0;
+    117                  pDrvSwitch->mpInfoFrameMask         = 0xFF; //Enable New VSIF indicator on RP
+    118                  pDrvSwitch->zoneTracking            = true;
+    119              }
+    120          #endif
+    121              drvCommonData.pipeSel[pDrvSwitch->instanceIndex] = SiiSwitchHdmiPipeMain;
+    122          
+    123              if ( pDrvSwitch->instanceIndex == 0 )
+    124              {
+    125                  // Clear the hardware Auto-HPD mask to default (All HDMI),
+    126                  SiiRegModify( REG_PHYS_HPD_DISABLE, VAL_FW_HPE_MASK, CLEAR_BITS );
+    127          
+    128                  // Set the end point for the EDID DDC disable timer to 1200ms
+    129                  SiiRegWrite( REG_IP_HPE_EDID_DDC_END, 0x0C );
+    130          
+    131                  // Enable the interrupts for this driver
+    132                  SiiRegBitsSet( REG_INT_ENABLE_P3, BIT_P3_ENABLE_MP_NEW_ALL | BIT_P3_ENABLE_MP_NO_ALL, true ); // MP
+    133                  SiiRegBitsSet( REG_INT_ENABLE_P4, BIT_RP_NEW_AVI, false ); // RP: disabled by default
+    134                  SiiRegBitsSet( REG_INT_ENABLE_5, 0xFF, true );
+    135          
+    136                  // Enable both Tx0 and Tx1 by default
+    137                  SiiRegWrite( REG_TX_VIDEO_SRC, BIT_TX0_PIPE_EN);
+    138                  drvSwitchRegisterConf.sourceControl |= BIT_TX0_PIPE_EN; //same as initial values
+    139                  drvSwitchRegisterConf.tmdsPortSelect = 0;
+    140              }
+    141          
+    142              // Enable Video clock counter
+    143              SiiRegInstanceSet( PP_PAGE_AUDIO, pDrvSwitch->instanceIndex);
+    144              SiiRegBitsSet(REG_XPCLK_ENABLE, BIT_XPCLK_ENABLE, SET_BITS);
+    145          
+    146              return( true );
+    147          }
+    148          
+    149          //------------------------------------------------------------------------------
+    150          //! @brief      Place the switch driver in standby state.
+    151          //------------------------------------------------------------------------------
+    152          bool_t SiiDrvSwitchStandby ( void )
+    153          {
+    154              // Disable interrupts used by this driver
+    155              SiiDrvDeviceSpResDetectionEnable(false);
+    156              SiiRegBitsSet( REG_INT_ENABLE_P3, BIT_P3_ENABLE_MP_NEW_ALL | BIT_P3_ENABLE_MP_NO_ALL, false );
+    157              SiiRegBitsSet( REG_INT_ENABLE_P4, BIT_RP_NEW_AVI, false );
+    158              SiiRegBitsSet( REG_INT_ENABLE_5, 0xFF, false );
+    159          
+    160              // Clear outstanding interrupts
+    161              SiiRegWrite( REG_INT_STATUS_P3, BIT_P3_ENABLE_MP_NEW_ALL | BIT_P3_ENABLE_MP_NO_ALL );
+    162              SiiRegWrite( REG_INT_STATUS_P4, BIT_RP_NEW_AVI );
+    163              SiiRegWrite( REG_INT_STATUS_5, 0xFF );
+    164          
+    165              // No longer want to respond to sources plugged into our ports.
+    166              return( SiiDrvRxHpeStateSet( SiiPORT_ALL, SiiHPD_INACTIVE ) );
+    167          }
+    168          
+    169          //------------------------------------------------------------------------------
+    170          //! @brief      Restore normal switch driver operation.
+    171          //------------------------------------------------------------------------------
+    172          bool_t SiiDrvSwitchResume ( void )
+    173          {
+    174          
+    175              return( true );
+    176          }
+    177          
+    178          //------------------------------------------------------------------------------
+    179          // Function:    SiiDrvSwitchStatus
+    180          // Description: Returns a status flag word containing Switch driver-specific
+    181          //              information about the state of the device.
+    182          // Parameters:  mask - 0x0000:   Return the entire status word without clearing driver status flags
+    183          //                     non-zero: Return the status bits indicated by the set mask bits.
+    184          //                               If a mask bit refers to one of the switch interrupt flags covered
+    185          //                               (except the main switch INT flag), the bit is cleared in the driver
+    186          //                               status.  The main switch INT status bit is NOT cleared until
+    187          //                               ALL switch interrupt flag bits have been read.
+    188          // Returns:     Sixteen-bit status flags word for the Switch Driver
+    189          //------------------------------------------------------------------------------
+    190          
+    191          SwitchStatusFlags_t SiiDrvSwitchStatus ( SwitchStatusFlags_t mask )
+    192          {
+    193              SwitchStatusFlags_t intClearMask;
+    194              SwitchStatusFlags_t statusFlags = pDrvSwitch->statusFlags;
+    195          
+    196              if ( mask )
+    197              {
+    198                  // Return only the flags they are interested in
+    199          
+    200                  statusFlags &= mask;
+    201          
+    202                  // Clear the interrupt flags that were requested (except main interrupt flag).
+    203          
+    204                  intClearMask = mask & SiiSWITCH_INTFLAGS;
+    205                  pDrvSwitch->statusFlags &= ~intClearMask;
+    206          
+    207                  // If all interrupt flags are cleared, clear the main interrupt flag
+    208          
+    209                  if (( pDrvSwitch->statusFlags & (SiiSWITCH_INTFLAGS | SiiSWITCH_SCDT_CHANGE |
+    210                          SiiSWITCH_MP_INFOFRAME_INTR_VALID | SiiSWITCH_SP_INFOFRAME_INTR_VALID)) == 0 )
+    211                  {
+    212                      pDrvSwitch->statusFlags &= ~SiiSWITCH_INT;
+    213                  }
+    214              }
+    215          
+    216              return( statusFlags );
+    217          }
+    218          
+    219          //------------------------------------------------------------------------------
+    220          // Function:    SiiDrvSwitchIfInterruptStatusGet
+    221          // Description: Returns the last Infoframe interrupt Status data retrieved by
+    222          //              the Switch ISR.
+    223          // Parameters:  pMpIntStatus, pSpIntStatus - pointers to return data buffer (1 byte).
+    224          // Returns:     true if new interrupt status data is available, false if not.
+    225          //              pData - Destination for interrupt status data.
+    226          //------------------------------------------------------------------------------
+    227          
+    228          bool_t  SiiDrvSwitchIfInterruptStatusGet ( uint8_t *pMpIntStatus, uint8_t *pSpIntStatus)
+    229          {
+    230          
+    231              *pMpIntStatus = pDrvSwitch->mpInfoFrameInterruptStatus;
+    232              *pSpIntStatus = pDrvSwitch->spInfoFrameInterruptStatus;
+    233              if ( pDrvSwitch->statusFlags & (SiiSWITCH_MP_INFOFRAME_INTR_VALID | SiiSWITCH_SP_INFOFRAME_INTR_VALID))
+    234              {
+    235                  if ( pDrvSwitch->statusFlags & SiiSWITCH_MP_INFOFRAME_INTR_VALID )
+    236                  {
+    237                      pDrvSwitch->statusFlags &= ~SiiSWITCH_MP_INFOFRAME_INTR_VALID;
+    238                  }
+    239          
+    240                  if ( pDrvSwitch->statusFlags & SiiSWITCH_SP_INFOFRAME_INTR_VALID )
+    241                  {
+    242                      pDrvSwitch->statusFlags &= ~SiiSWITCH_SP_INFOFRAME_INTR_VALID;
+    243                  }
+    244          
+    245                  // If all interrupt flags are cleared, clear the main interrupt flag
+    246                  // (we KNOW the above interrupt has been cleared, check the rest.)
+    247          
+    248                  if (( pDrvSwitch->statusFlags & (SiiSWITCH_INTFLAGS | SiiSWITCH_SCDT_CHANGE )) == 0 )
+    249                  {
+    250                      pDrvSwitch->statusFlags &= ~SiiSWITCH_INT;
+    251                  }
+    252                  return( true );
+    253              }
+    254              return( false );
+    255          }
+    256          
+    257          
+    258          //------------------------------------------------------------------------------
+    259          // Function:    SiiDrvSwitchStateGet
+    260          // Description: Get the selected state type information.
+    261          // Parameters:  stateType   - Type of state returned.
+    262          // Returns:     Returns an eight bit state value of the selected type.
+    263          //------------------------------------------------------------------------------
+    264          
+    265          uint8_t SiiDrvSwitchStateGet ( SiiDrvSwitchStateTypes_t stateType )
+    266          {
+    267              uint8_t stateValue;
+    268          
+    269              stateValue = 0;
+    270              switch ( stateType )
+    271              {
+    272                  case SiiSwitch_SELECTED_INPUT_CONNECT_STATE:
+    273                      stateValue = drvSwitchCommon.mpCableIn;
+    274                      break;
+    275                  case SiiSwitch_INPUT_PORTS_CONNECT_STATE:
+    276          
+    277                      // Include both HDMI and MHD.
+    278                      stateValue  = SiiRegRead( REG_PWR5V_STATUS ) & MSK_PWR5V_ALL;
+    279          #if INC_CBUS
+    280                      stateValue  |= SiiRegRead( REG_HDMIM_CP_PAD_STAT ) & MSK_MHL_PORT_ALL;
+    281          #endif
+    282                      break;
+    283                  case SiiSwitch_SELECTED_PORT:       // For main pipe only
+    284          
+    285                      stateValue  = SiiRegRead( REG_RX_PORT_SEL ) & MSK_MP_PORT_SEL;
+    286                      break;
+    287                  case SiiSwitch_SELECTED_PORT_SUB:   // For sub-pipe only
+    288          
+    289                      stateValue  = (SiiRegRead( REG_RX_PORT_SEL ) & MSK_RP_PORT_SEL) >> VAL_RP_SHIFT;
+    290                      break;
+    291          #if INC_RTPI
+    292                  case  SiiSwitch_TX_VIDEO_SRC:		// For TX video Source
+    293          
+    294                  	stateValue  = SiiRegRead(REG_TX_VIDEO_SRC);
+    295                  	break;
+    296          #endif
+    297              }
+    298          
+    299              return( stateValue );
+    300          }
+    301          
+    302          #if (SWITCH_LINK_CALLBACK == DISABLE)
+    303          //------------------------------------------------------------------------------
+    304          // Function:    SwitchCallback
+    305          // Description: Call the specified indirect callback function if it has been
+    306          //              registered.
+    307          //------------------------------------------------------------------------------
+    308          static void SwitchCallback ( int callbackType, uint16_t statusFlags )
+    309          {
+    310              void (*pCallback)(uint16_t) = 0;
+    311          
+    312              switch ( callbackType )
+    313              {
+    314              case CALLBACK_STATUS_CHANGE:
+    315          
+    316                  pCallback = pDrvSwitch->pCallbackStatusChange;
+    317                  break;
+    318              }
+    319          
+    320              if ( pCallback )
+    321              {
+    322                  (pCallback)( statusFlags );
+    323              }
+    324          }
+    325          #endif
+    326          
+    327          //-------------------------------------------------------------------------------------------------
+    328          //! @brief      Disable both TX outputs (not a mute)
+    329          //!
+    330          //! @remarks    This function is a 'cross-instance' function that affects both instances at once.
+    331          //-------------------------------------------------------------------------------------------------
+    332          void SiiDrvSwitchOutputEnable ( bool_t isEnable )
+    333          {
+    334              SiiSwitchZoneEnables_t  zoneEnable;
+    335              uint8_t sourceControl;
+    336          
+    337              pDrvSwitch->lastResultCode = SII_SUCCESS;
+    338              sourceControl = drvSwitchRegisterConf.sourceControl & ~(BIT_TX0_PIPE_EN);
+    339          
+    340              if ( isEnable )
+    341              {
+    342                  zoneEnable = 0;
+    343                  if ( drvSwitchInstance[0].mswZoneEnabled )
+    344                  {
+    345                      zoneEnable |= SiiSwitchZone1Enabled;
+    346                  }
+    347          #if (SII_NUM_SWITCH > 1)
+    348                  if ( drvSwitchInstance[1].mswZoneEnabled )
+    349                  {
+    350                      zoneEnable |= SiiSwitchZone2Enabled;
+    351                  }
+    352          #endif
+    353                  sourceControl |= (zoneEnable << VAL_PIPE_EN_SHIFT);
+    354              }
+    355              drvSwitchRegisterConf.sourceControl = sourceControl;
+    356              SiiDrvSwitchZoneConfigSet();
+    357          }
+    358          
+    359          //-------------------------------------------------------------------------------------------------
+    360          //! @brief      Enable or disable zone tracking mode
+    361          //
+    362          //! @remarks    This function is a 'cross-instance' function that affects both instances at once.
+    363          //-------------------------------------------------------------------------------------------------
+    364          void SiiDrvSwitchZoneTrackingSet( bool_t isEnabled )
+    365          {
+    366          
+    367              drvSwitchInstance[0].zoneTracking = isEnabled;
+    368          #if (SII_NUM_SWITCH > 1)
+    369              drvSwitchInstance[1].zoneTracking = isEnabled;
+    370          #endif
+    371          }
+    372          
+    373          //-------------------------------------------------------------------------------------------------
+    374          //! @brief      Return zone tracking mode state.
+    375          //
+    376          //-------------------------------------------------------------------------------------------------
+    377          bool_t SiiDrvSwitchZoneTrackingGet( void )
+    378          {
+    379              return( pDrvSwitch->zoneTracking );
+    380          }
+    381          
+    382          //-------------------------------------------------------------------------------------------------
+    383          //! @brief      Return zone enable state for this instance
+    384          //
+    385          //-------------------------------------------------------------------------------------------------
+    386          bool_t SiiDrvSwitchZoneEnableGet( void )
+    387          {
+    388              return( pDrvSwitch->mswZoneEnabled );
+    389          }
+    390          
+    391          //-------------------------------------------------------------------------------------------------
+    392          //! @brief      Set the current zone (instance) enable flag
+    393          //
+    394          //-------------------------------------------------------------------------------------------------
+    395          void SiiDrvSwitchZoneEnableSet ( bool_t isEnable )
+    396          {
+    397              pDrvSwitch->lastResultCode = SII_SUCCESS;
+    398          
+    399              pDrvSwitch->mswZoneEnabled = isEnable;
+    400          }
+    401          
+    402          //-------------------------------------------------------------------------------------------------
+    403          //! @brief      Configure the matrix switch according to the current source and
+    404          //! @brief      zone settings.
+    405          //
+    406          //! @remarks    This function is a 'cross-instance' function that affects both instances at once.
+    407          //-------------------------------------------------------------------------------------------------
+    408          void SiiDrvSwitchConfigureMatrixSwitch ( bool_t forceNonMatrix, bool_t portSelectOnly )
+    409          {
+    410              uint8_t sourceControl;
+    411              uint8_t tmdsPortSelect;
+    412              uint8_t mpPortSelect;
+    413              uint8_t tx0Source = 0;
+    414              uint8_t zone1Source;     // HDMI transmitter zones
+    415              uint8_t zoneA1Source;   // Audio extraction zones
+    416          #if (SII_NUM_SWITCH > 1)
+    417              uint8_t spPortSelect;
+    418              uint8_t tx1Source = 0;
+    419              uint8_t zone2Source;     // HDMI transmitter zones
+    420              uint8_t zoneA2Source;   // Audio extraction zones
+    421          #endif
+    422              uint8_t rxPort;
+    423          
+    424              pDrvSwitch->lastResultCode = SII_SUCCESS;
+    425          
+    426              zone1Source = drvSwitchInstance[0].mswVideoSource;
+    427              zoneA1Source = drvSwitchInstance[0].mswAudioZoneSource;
+    428          #if (SII_NUM_SWITCH > 1)
+    429              zone2Source = drvSwitchInstance[1].mswVideoSource;
+    430              zoneA2Source = drvSwitchInstance[1].mswAudioZoneSource;
+    431          #endif
+    432              // Get current hardware settings and clear the parts we're interested in.
+    433              tmdsPortSelect  = SiiRegRead( REG_RX_PORT_SEL) & MASK_PORT_SEL;
+    434              sourceControl   = SiiRegRead( REG_TX_VIDEO_SRC ) & ~(BIT_TX0_PIPE_EN);
+    435          
+    436              // Zone 1 source and/or audio zone 1 source
+    437              if (zone1Source < SiiSwitchSourceInternalVideo)
+    438              {
+    439                  tx0Source = VAL_MUX_SEL_HDMI_MP;
+    440                  mpPortSelect = zone1Source;
+    441              }
+    442              else
+    443              {
+    444                  tx0Source = videoSourceSelects[zone1Source];
+    445                  mpPortSelect = zoneA1Source;
+    446              }
+    447          #if (SII_NUM_SWITCH > 1)
+    448              // Zone 2 source and/or audio zone 2 source
+    449              if (zone2Source < SiiSwitchSourceInternalVideo)
+    450              {
+    451                  tx1Source = VAL_MUX_SEL_HDMI_RP;
+    452                  spPortSelect = zone2Source;
+    453              }
+    454              else
+    455              {
+    456                  tx1Source = videoSourceSelects[zone2Source];
+    457                  spPortSelect = zoneA2Source;
+    458              }
+    459          #endif
+    460          
+    461              tmdsPortSelect = (tmdsPortSelect & ~MSK_MP_PORT_SEL) | (mpPortSelect << VAL_MP_SHIFT);
+    462          #if (SII_NUM_SWITCH > 1)
+    463              tmdsPortSelect = (tmdsPortSelect & ~MSK_RP_PORT_SEL) | (spPortSelect << VAL_RP_SHIFT);
+    464          #endif
+    465              //mpPortSelect=spPortSelect;
+    466              // If the two TMDS sources are different ports
+    467             // if ((mpPortSelect != spPortSelect))
+    468              if(0)//for melboune we don't have two separtate Tx.so we dont have Matrix mode.By default non matrix has to work.Due to this Pip is not working..
+    469              {
+    470                  // Disable Rx ports that are not active sources, otherwise enable
+    471                  for (rxPort = SiiPORT_0; rxPort < SII_INPUT_PORT_COUNT; ++rxPort)
+    472                  {
+    473                      if ((rxPort != zone1Source) &&(rxPort != zoneA1Source)
+    474          #if (SII_NUM_SWITCH > 1)
+    475                      		&& (rxPort != zone2Source) && (rxPort != zoneA2Source)
+    476          #endif
+    477                      		)
+    478                      {
+    479                          SiiDrvRxTermControl(rxPort, false);
+    480                          SiiDrvRxHdcpDdcControl(rxPort, false);
+    481                      }
+    482                      else
+    483                      {
+    484                          SiiDrvRxTermControl(rxPort, true);
+    485                          SiiDrvRxHdcpDdcControl(rxPort, true);
+    486                      }
+    487                  }
+    488          
+    489                  // Enable SP resolution change detection
+    490                  SiiDrvDeviceSpResDetectionEnable(true);
+    491              }
+    492              else
+    493              {
+    494             	    //   DEBUG_PRINT(MSG_ALWAYS,"\n Non-Matrix mode \n");
+    495          		if ((tx0Source < VAL_MUX_SEL_INTERNAL))
+    496          		{
+    497          			// If both TMDS sources are the same port or one of the sources is non-TMDS,
+    498          			// disable matrix mode and point pipe0 at TXs associated with TMDS input
+    499          		if (tx0Source < VAL_MUX_SEL_INTERNAL)
+    500          		{
+    501          			tx0Source = VAL_MUX_SEL_HDMI_MP;
+    502          		}
+    503          #if (SII_NUM_SWITCH > 1)
+    504          		if (tx1Source < VAL_MUX_SEL_INTERNAL)
+    505          		{
+    506          			tx1Source = VAL_MUX_SEL_HDMI_MP;
+    507          		}
+    508          #endif
+    509                      // Enable all ports to allow PA and IPV functions
+    510                      for (rxPort = SiiPORT_0; rxPort < SII_INPUT_PORT_COUNT; ++rxPort)
+    511                      {
+    512                          SiiDrvRxTermControl(rxPort, true);
+    513                          SiiDrvRxHdcpDdcControl(rxPort, true);
+    514                      }
+    515                  }
+    516                  // Disable SP resolution change detection
+    517                  SiiDrvDeviceSpResDetectionEnable(false);
+    518              }
+    519          
+    520              // Zone 1 source becomes tx0 source
+    521              // Zone 2 source becomes tx1 source
+    522              // Clear out previous TX0 and TX1 source muxes and add in new values
+    523          #if (SII_NUM_SWITCH > 1)
+    524              sourceControl = sourceControl & ~(MSK_MUX_SEL_TX0 | MSK_MUX_SEL_TX1);
+    525          #else
+    526              sourceControl = sourceControl & ~(MSK_MUX_SEL_TX0);
+    527          #endif
+    528          
+    529              sourceControl |= (tx0Source << VAL_MUX_SEL_TX0_SHIFT);
+    530          
+    531          #if (SII_NUM_SWITCH > 1)
+    532              sourceControl |= (tx1Source << VAL_MUX_SEL_TX1_SHIFT);
+    533          #endif
+    534              // enable pipe
+    535              sourceControl |= (BIT_TX0_PIPE_EN);
+    536          
+    537          
+    538              if ( pDrvSwitch->lastResultCode == SII_SUCCESS )
+    539              {
+    540                  // Update database for next call to SiiDrvSwitchOutputEnable()
+    541              	drvCommonData.pipeSel[0] = (tx0Source > VAL_MUX_SEL_HDMI_RP) ? SiiSwitchHdmiPipeNone : tx0Source;
+    542          #if (SII_NUM_SWITCH > 1)
+    543              	drvCommonData.pipeSel[1] = (tx1Source > VAL_MUX_SEL_HDMI_RP) ? SiiSwitchHdmiPipeNone : tx1Source;
+    544          #endif
+    545                  // Don't change source configuration (not Rx port selection!) if in IP mode
+    546              	if (!portSelectOnly)
+    547              	{
+    548              	    drvSwitchRegisterConf.sourceControl = sourceControl;
+    549              	}
+    550              	drvSwitchRegisterConf.tmdsPortSelect = tmdsPortSelect;
+    551              }
+    552          }
+    553          
+    554          
+    555          void SiiDrvSwitchZoneConfigGet (SiiMswInstanceCommonData_t *pZoneInfo )
+    556          {
+    557          	*pZoneInfo  = drvCommonData;
+    558          }
+    559          
+    560          //-------------------------------------------------------------------------------------------------
+    561          //! @brief      Set the current zone configuration data to the registers to be effective.
+    562          //! @remarks    This function is a 'cross-instance' function that affects both instances at once.
+    563          //-------------------------------------------------------------------------------------------------
+    564          void SiiDrvSwitchZoneConfigSet ( void )
+    565          {
+    566              uint8_t i;
+    567              uint8_t eqDataNM[4] = {0x20, 0x40, 0x43, 0x53};
+    568          
+    569          	// Non-matrix mode
+    570          	for (i = 0; i < 4; i++)
+    571          	{
+    572          		SiiRegWrite(REG_A1_EQ_DATA0 + i, eqDataNM[i]);
+    573          	}
+    574          	SiiRegWrite(REG_TMDS1_CNTL, 0x00);
+    575          
+    576              SiiRegWrite( REG_RX_PORT_SEL, drvSwitchRegisterConf.tmdsPortSelect );
+    577          	SiiRegWrite( REG_TX_VIDEO_SRC, drvSwitchRegisterConf.sourceControl );
+    578          }
+    579          
+    580          //-------------------------------------------------------------------------------------------------
+    581          //! @brief      Select the requested video source into the current instance.
+    582          //  Parameters:
+    583          //!
+    584          //! @remarks    This function is a 'cross-instance' function that affects both instances
+    585          //!             at once if zone tracking mode is enabled.
+    586          //-------------------------------------------------------------------------------------------------
+    587          SiiDrvSwitchResults_t SiiDrvSwitchSourceSelect ( SiiSwitchSource_t newSource)
+    588          {
+    589              pDrvSwitch->lastResultCode = SII_SUCCESS;
+    590          
+    591              // Set new source for this instance and update the zone muxes and matrix enable if needed.
+    592              // SiiDrvSwitchConfigureMatrixSwitch() must be called to apply changes to hardware
+    593              if ( pDrvSwitch->zoneTracking )
+    594              {
+    595                  drvSwitchInstance[0].mswVideoSource = newSource;
+    596          #if (SII_NUM_SWITCH > 1)
+    597                  drvSwitchInstance[1].mswVideoSource = newSource;
+    598          #endif
+    599              }
+    600              else
+    601              {
+    602                  pDrvSwitch->mswVideoSource = newSource;
+    603              }
+    604          
+    605              return( pDrvSwitch->lastResultCode );
+    606          }
+    607          
+    608          //-------------------------------------------------------------------------------------------------
+    609          //! @brief      Select the requested video source into the current instance.
+    610          //!
+    611          //! @param[in]  newAudioZoneSource - source for local audio zone (only TMDS sources are acceptable)
+    612          //!
+    613          //! @remarks    This function is a 'cross-instance' function that affects both instances
+    614          //!             at once if zone tracking mode is enabled.
+    615          //-------------------------------------------------------------------------------------------------
+    616          SiiDrvSwitchResults_t SiiDrvSwitchAudioZoneSourceSet ( SiiSwitchSource_t newAudioZoneSource )
+    617          {
+    618              pDrvSwitch->lastResultCode = SII_SUCCESS;
+    619          
+    620          #if ( configSII_DEV_9535 == 1 )
+    621              if ( newAudioZoneSource <= SiiSwitchSource3 )
+    622          #else
+    623              if ( newAudioZoneSource <= SiiSwitchSource2 )
+    624          #endif
+    625              {
+    626          
+    627                  if ( pDrvSwitch->zoneTracking )
+    628                  {
+    629                      drvSwitchInstance[0].mswAudioZoneSource = newAudioZoneSource;
+    630          #if (SII_NUM_SWITCH > 1)
+    631                      drvSwitchInstance[1].mswAudioZoneSource = newAudioZoneSource;
+    632          #endif
+    633                  }
+    634                  else
+    635                  {
+    636                      pDrvSwitch->mswAudioZoneSource = newAudioZoneSource;
+    637                  }
+    638              }
+    639              else
+    640              {
+    641                  pDrvSwitch->lastResultCode = SII_ERR_INVALID_PARAMETER;
+    642              }
+    643          
+    644              return( pDrvSwitch->lastResultCode );
+    645          }
+    646          
+    647          //-------------------------------------------------------------------------------------------------
+    648          //! @brief      Get the video source selected in the current instance.
+    649          //  Parameters:
+    650          //!
+    651          //-------------------------------------------------------------------------------------------------
+    652          SiiSwitchSource_t SiiDrvSwitchSourceGet ( void )
+    653          {
+    654              pDrvSwitch->lastResultCode = SII_SUCCESS;
+    655              return( pDrvSwitch->mswVideoSource );
+    656          }
+    657          
+    658          //-------------------------------------------------------------------------------------------------
+    659          //! @brief      Get the audio zone source selected in the current instance.
+    660          //  Parameters:
+    661          //!
+    662          //-------------------------------------------------------------------------------------------------
+    663          SiiSwitchSource_t SiiDrvSwitchAudioZoneSourceGet ( void )
+    664          {
+    665              pDrvSwitch->lastResultCode = SII_SUCCESS;
+    666              return( pDrvSwitch->mswAudioZoneSource );
+    667          }
+    668          
+    669          //-------------------------------------------------------------------------------------------------
+    670          //! @brief      Returns state of matrix enable logic
+    671          //  Parameters:
+    672          //!
+    673          //-------------------------------------------------------------------------------------------------
+    674          bool_t SiiDrvSwitchMatrixModeEnableGet ( void )
+    675          {
+    676              return (false);
+    677          }
+    678          
+    679          //-------------------------------------------------------------------------------------------------
+    680          //! @brief      Select the requested audio source into the current instance.
+    681          //  Parameters:
+    682          //!
+    683          //! @remarks    This function is a 'cross-instance' function that affects both instances
+    684          //!             at once if zone tracking mode is enabled.
+    685          //-------------------------------------------------------------------------------------------------
+    686          SiiDrvSwitchResults_t SiiDrvSwitchAudioSourceSelect ( SiiSwitchAudioSource_t newSource, SiiSwitchSource_t newPort)
+    687          {
+    688              uint8_t reg;
+    689              uint8_t pipeSel;
+    690          
+    691              pDrvSwitch->lastResultCode = SII_SUCCESS;
+    692          	 //DEBUG_PRINT( MSG_DBG, "SiiDrvSwitchAudioSourceSelect %x %x %x\n", pDrvSwitch->instanceIndex,newSource,newPort);
+    693              switch(pDrvSwitch->instanceIndex)
+    694              {
+    695                  default:
+    696                  case 0:
+    697                      reg = REG_PACKET_MUX0_CTRL;
+    698                      break;
+    699                  case 1:
+    700                      reg = REG_PACKET_MUX1_CTRL;
+    701                      break;
+    702              }
+    703          
+    704              switch (newSource)
+    705              {
+    706                  default:
+    707                  case SiiSwitchAudioSourceDefault:
+    708                     	pipeSel = BIT_PIPE_SUB_SELECT;
+    709                  	SiiRegWrite( REG_PAUTH_RPOVR, 0 );
+    710                      break;
+    711                  case SiiSwitchAudioSourceMainPipe:
+    712          
+    713                  	//SiiRegWrite( REG_PAUTH_RPOVR, (BIT_FORCE_RP_SELECTION | (BIT_FORCE_RP_PORT << newPort) ) );
+    714                  	// Enable Audio Mixing
+    715                  	//SiiRegWrite( REG_PAUTH_RP_AOVR, (BIT_FORCE_RP_PORT << newPort) );
+    716          
+    717                      pipeSel = BIT_PIPE_SELECTION_ENABLE;
+    718                      break;
+    719                  case SiiSwitchAudioSourceSubPipe:
+    720                  	//SiiRegWrite( REG_PAUTH_RPOVR, (BIT_FORCE_RP_SELECTION | (BIT_FORCE_RP_PORT << newPort) ) );
+    721                  	// Enable Audio Mixing
+    722                    //  SiiRegWrite( REG_PAUTH_RP_AOVR, (BIT_FORCE_RP_PORT << newPort) );
+    723          #if INC_IPV
+    724                  	 if ( !app.ipvPipEnabled )
+    725                  	 {
+    726                  		// SiiRegWrite( REG_IP_CONFIG_47, CLEAR_BITS );
+    727                  		  SiiRegModify(REG_IP_CONFIG_47, MSK_ALL_PORTS, 0x01 << newPort);
+    728                  		  SiiRegModify( REG_IP_CONFIG_43, BGND_DISABLE, true );
+    729                  		  SiiRegBitsSet( REG_INT_ENABLE_P4, BIT_RP_NEW_AVI, true );
+    730                  	 }
+    731          #endif
+    732                  	pipeSel =  BIT_PIPE_SUB_SELECT | BIT_PIPE_SELECTION_ENABLE;
+    733                  	break;
+    734              }
+    735              SiiRegModify(reg, BIT_PIPE_SELECTION_ENABLE | BIT_PIPE_SUB_SELECT, pipeSel);
+    736          
+    737              return( pDrvSwitch->lastResultCode );
+    738          }
+    739          
+    740          //------------------------------------------------------------------------------
+    741          // Function:    SiiDrvSwitchPortsProcessTermCtrl
+    742          // Description: sets the termination control appropriately
+    743          // Parameters:
+    744          // Returns:     void
+    745          //------------------------------------------------------------------------------
+    746          
+    747          void SiiDrvSwitchPortsProcessTermCtrl()
+    748          {
+    749          	uint8_t i;
+    750          	for( i = 0; i < SII_INPUT_PORT_COUNT; i++)
+    751          	{
+    752          		if( ( (drvSwitchCommon.rPwrIntrPorts >> i) & BIT0 ) || ( pDrvSwitch->portType[i] == SiiPortType_MHL ) )
+    753          		{
+    754          			//DEBUG_PRINT(MSG_ALWAYS,"\n SiiDrvSwitchPortsProcessTermCtrl() -- true -- port %d\n",i);
+    755                      SiiDrvRxTermControl( i, true );
+    756          		}
+    757          	}
+    758          }
+    759          
+    760          //------------------------------------------------------------------------------
+    761          // Function:    SiiDrvSwitchSelectedPorttype
+    762          // Description: returns the currently selected port type for main pipe
+    763          // Parameters:
+    764          // Returns:     port type: MHL or HDMI
+    765          //------------------------------------------------------------------------------
+    766          
+    767          SiiPortType_t SiiDrvSwitchSelectedPorttype()
+    768          {
+    769          	if( (SiiRegRead(REG_RX_PORT_SEL) & MSK_MP_PORT_SEL) != SiiSwitchSource1)
+    770          	{
+    771          		return ((SiiRegRead(REG_MP_STATE) & BIT_MHL)? SiiPortType_MHL:SiiPortType_HDMI);
+    772          	}
+    773          	else
+    774          	{
+    775          		return (SiiPlatformMHLCDSensePinGet( SiiSwitchSource1 )? SiiPortType_HDMI:SiiPortType_MHL);
+    776          	}
+    777          }
+    778          
+    779          //-------------------------------------------------------------------------------------------------
+    780          //! @brief      Parse the switch driver interrupts.
+    781          //  Parameters:
+    782          //!
+    783          //-------------------------------------------------------------------------------------------------
+    784          
+    785          void SiiDrvSwitchProcessInterrupts( uint8_t globalIntStatus )
+    786          {
+    787              uint8_t     intStatus;
+    788              uint16_t    statusFlags = 0;                // generate a new set every time
+    789              bool_t      mpCableIn;
+    790          
+    791              if ( globalIntStatus & BIT_INTR_GRP1 )
+    792              {
+    793                  // Check plug/unplug interrupt for the main pipe (selected port).
+    794                  intStatus = SiiRegRead( REG_INT_STATUS_5 );
+    795                  if (intStatus )
+    796                  {
+    797                      drvSwitchCommon.rPwrIntrPorts = intStatus & MSK_5VPWR_CHG_ALL_PORTS;
+    798                      if (intStatus & BIT_5VPWR_CHG_MP)
+    799                      {
+    800          
+    801                      	if( (SiiRegRead(REG_RX_PORT_SEL) & MSK_MP_PORT_SEL) != SiiSwitchSource1)
+    802          				{
+    803                      		mpCableIn =  (SiiRegRead( REG_MP_STATE ) & ( BIT_PWR5V | BIT_MHL ));
+    804                      		DEBUG_PRINT( MSG_STAT | DBGF_TS, "MP Cable Source %d\n", (SiiRegRead(REG_RX_PORT_SEL) & MSK_MP_PORT_SEL) );
+    805          				}
+    806          				else
+    807          				{
+    808          					mpCableIn =  (SiiRegRead( REG_MP_STATE ) & ( BIT_PWR5V ));
+    809          					DEBUG_PRINT( MSG_STAT | DBGF_TS, "MP Cable Source 1: %d\n", mpCableIn );
+    810          					mpCableIn |= SkAppCbusIsMhlCableConnected((SiiRegRead(REG_RX_PORT_SEL) & MSK_MP_PORT_SEL));
+    811          					DEBUG_PRINT( MSG_STAT | DBGF_TS, "MP Cable Source 1: %d\n", mpCableIn );
+    812          				}
+    813          
+    814                          // Update the main pipe port cable state.
+    815                      	if ( mpCableIn)
+    816                          {
+    817                              drvSwitchCommon.mpCableIn = true;
+    818                              DEBUG_PRINT( MSG_STAT | DBGF_TS, "MP Cable IN\n" );
+    819                          }
+    820                          else
+    821                          {
+    822                              drvSwitchCommon.mpCableIn = false;
+    823                              DEBUG_PRINT( MSG_STAT | DBGF_TS, "MP Cable OUT\n" );
+    824                          }
+    825                      }
+    826          
+    827                      if (intStatus & BIT_5VPWR_CHG_RP)
+    828                      {
+    829                          // Update the sub pipe port cable state.
+    830                          if ( !(SiiRegRead( REG_RP_STATE ) & ( BIT_MHL )))
+    831                          {
+    832                              DEBUG_PRINT( MSG_STAT | DBGF_TS, "SP Cable OUT\n" );
+    833                          }
+    834                          else
+    835                          {
+    836                              DEBUG_PRINT( MSG_STAT | DBGF_TS, "SP Cable IN\n" );
+    837                          }
+    838                      }
+    839          
+    840                      statusFlags |= SiiSWITCH_CABLE_CHANGE;
+    841                  }
+    842                  SiiRegWrite( REG_INT_STATUS_5, intStatus );
+    843              }
+    844          
+    845              if ( globalIntStatus & BIT_INTR_GRP_PA )   // PA interrupts
+    846              {
+    847                  // Handle CBUS/CDC Main Pipe port HPE requests from pre-authentication hardware.
+    848                  // NOTE:    For RP requests, the HPE must be triggered by the firmware as soon as
+    849                  //          possible after receiving this interrupt; before the RP switches to another port.
+    850                  intStatus = SiiRegRead( REG_INT_STATUS_IP1 ) & (BIT_MP_CEC_HPE | BIT_RP_CEC_HPE);
+    851                  if ( intStatus )
+    852                  {
+    853                      SiiRegWrite( REG_INT_STATUS_IP1, intStatus );
+    854                      if ( intStatus & BIT_MP_CEC_HPE)
+    855                      {
+    856                          DEBUG_PRINT( SW_DBG, "Trigger HPE for MP\n" );
+    857                          SiiDrvRxHpeStateSet( SiiPORT_Pipe0, SiiHPD_TOGGLE );
+    858                      }
+    859          
+    860                      if ( intStatus & BIT_RP_CEC_HPE)
+    861                      {
+    862                          DEBUG_PRINT( SW_DBG, "Trigger HPE for RP\n" );
+    863                          SiiDrvRxHpeStateSet( SiiPORT_Pipe1, SiiHPD_TOGGLE );
+    864                      }
+    865                  }
+    866          
+    867                  SwitchInfoframeProcessInterrupts();     // Check RX infoframe changes
+    868              }
+    869          
+    870              // Notify upper layer that a switch module interrupt occurred
+    871              if ( statusFlags )
+    872              {
+    873                  pDrvSwitch->statusFlags |= ( statusFlags | SiiSWITCH_INT );
+    874              }
+    875          
+    876          }
+    877          
+    878          
+    879          //-------------------------------------------------------------------------------------------------
+    880          //! @brief      Return measured TMDS clock frequency in Main or Sub pipes
+    881          //!
+    882          //! @param[in]  isMainPipe - true for main pipe
+    883          //! @return     TMDS clock frequency in 10^4 Hz units
+    884          //-------------------------------------------------------------------------------------------------
+    885          
+    886          int_t SiiDrvSwitchTmdsClockGet( bool_t isMainPipe )
+    887          {
+    888              int32_t xpclk;
+    889          
+    890              // Read measured TMDS clock frequency
+    891              SiiRegInstanceSet( PP_PAGE_AUDIO, isMainPipe ? 0 : 1 );
+    892              // Freeze TMDS counter before reading its MSB&LSB portions to avoid loss of precision
+    893              SiiRegBitsSet(REG_XPCLK_ENABLE, BIT_XPCLK_ENABLE, CLEAR_BITS);
+    894              xpclk = SiiRegRead(REG_XPCLK_CNT_0) | (SiiRegRead(REG_XPCLK_CNT_1) << 8);
+    895              // Enable the TMDS counter counter back again
+    896              SiiRegBitsSet(REG_XPCLK_ENABLE, BIT_XPCLK_ENABLE, SET_BITS);
+    897              return (2700 * 2048 / xpclk);
+    898          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       16  SiiDrvSwitchAudioSourceSelect
+             16 -> SiiRegBitsSet
+             16 -> SiiRegModify
+             16 -> SiiRegWrite
+        0  SiiDrvSwitchAudioZoneSourceGet
+        0  SiiDrvSwitchAudioZoneSourceSet
+       32  SiiDrvSwitchConfigureMatrixSwitch
+             32 -> SiiDrvDeviceSpResDetectionEnable
+             32 -> SiiDrvRxHdcpDdcControl
+             32 -> SiiDrvRxTermControl
+             32 -> SiiRegRead
+        0  SiiDrvSwitchIfInterruptStatusGet
+       16  SiiDrvSwitchInitialize
+             16 -> SiiRegBitsSet
+             16 -> SiiRegInstanceSet
+             16 -> SiiRegModify
+             16 -> SiiRegWrite
+             16 -> __aeabi_memclr4
+        0  SiiDrvSwitchInstanceGet
+        8  SiiDrvSwitchInstanceSet
+              8 -> SiiRegInstanceSet
+        0  SiiDrvSwitchMatrixModeEnableGet
+        0  SiiDrvSwitchOutputEnable
+              0 -> SiiDrvSwitchZoneConfigSet
+       16  SiiDrvSwitchPortsProcessTermCtrl
+             16 -> SiiDrvRxTermControl
+       24  SiiDrvSwitchProcessInterrupts
+             24 -> SiiDrvRxHpeStateSet
+             24 -> SiiRegRead
+             24 -> SiiRegWrite
+             24 -> SkAppCbusIsMhlCableConnected
+             24 -> SwitchInfoframeProcessInterrupts
+        0  SiiDrvSwitchResume
+        8  SiiDrvSwitchSelectedPorttype
+              8 -> SiiPlatformMHLCDSensePinGet
+              8 -> SiiRegRead
+        0  SiiDrvSwitchSourceGet
+        0  SiiDrvSwitchSourceSelect
+        8  SiiDrvSwitchStandby
+              8 -> SiiDrvDeviceSpResDetectionEnable
+              0 -> SiiDrvRxHpeStateSet
+              8 -> SiiRegBitsSet
+              8 -> SiiRegWrite
+        8  SiiDrvSwitchStateGet
+              0 -> SiiRegRead
+              8 -> SiiRegRead
+        0  SiiDrvSwitchStatus
+       16  SiiDrvSwitchTmdsClockGet
+             16 -> SiiRegBitsSet
+             16 -> SiiRegInstanceSet
+             16 -> SiiRegRead
+        0  SiiDrvSwitchZoneConfigGet
+       16  SiiDrvSwitchZoneConfigSet
+             16 -> SiiRegWrite
+        0  SiiDrvSwitchZoneEnableGet
+        0  SiiDrvSwitchZoneEnableSet
+        0  SiiDrvSwitchZoneTrackingGet
+        0  SiiDrvSwitchZoneTrackingSet
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ?<Constant {32, 64, 67, 83}>
+       4  ??DataTable22
+       4  ??DataTable22_1
+       4  ??DataTable22_2
+       4  ??DataTable22_3
+       4  ??DataTable22_4
+      12  ?Subroutine0
+      10  ?Subroutine1
+       6  ?Subroutine2
+     110  SiiDrvSwitchAudioSourceSelect
+      14  SiiDrvSwitchAudioZoneSourceGet
+      40  SiiDrvSwitchAudioZoneSourceSet
+     126  SiiDrvSwitchConfigureMatrixSwitch
+      68  SiiDrvSwitchIfInterruptStatusGet
+     158  SiiDrvSwitchInitialize
+      10  SiiDrvSwitchInstanceGet
+      28  SiiDrvSwitchInstanceSet
+       4  SiiDrvSwitchMatrixModeEnableGet
+      36  SiiDrvSwitchOutputEnable
+      42  SiiDrvSwitchPortsProcessTermCtrl
+     186  SiiDrvSwitchProcessInterrupts
+       4  SiiDrvSwitchResume
+      36  SiiDrvSwitchSelectedPorttype
+      14  SiiDrvSwitchSourceGet
+      32  SiiDrvSwitchSourceSelect
+      68  SiiDrvSwitchStandby
+      86  SiiDrvSwitchStateGet
+      40  SiiDrvSwitchStatus
+      72  SiiDrvSwitchTmdsClockGet
+      12  SiiDrvSwitchZoneConfigGet
+      66  SiiDrvSwitchZoneConfigSet
+      10  SiiDrvSwitchZoneEnableGet
+      14  SiiDrvSwitchZoneEnableSet
+      10  SiiDrvSwitchZoneTrackingGet
+       8  SiiDrvSwitchZoneTrackingSet
+      12  drvCommonData
+          drvSwitchRegisterConf
+          videoSourceSelects
+       4  drvSwitchCommon
+      52  drvSwitchInstance
+          pDrvSwitch
+
+ 
+     4 bytes in section .bss
+    64 bytes in section .data
+ 1 346 bytes in section .text
+ 
+ 1 346 bytes of CODE memory
+    68 bytes of DATA memory
+
+Errors: none
+Warnings: 7

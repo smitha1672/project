@@ -1,0 +1,752 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     10/Nov/2014  15:19:45 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\STM32_USB_HOST_Library\Core\src\usbh_stdreq #
+#                    .c                                                       #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\STM32_USB_HOST_Library\Core\src\usbh_stdreq #
+#                    .c -D __ARM_CORTEX_MX__ -D DEBUG -D FREE_RTOS -D         #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D HOST_MODE_ENABLED -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -D STM32_IAP -D S4051A    #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Bootloade #
+#                    r\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Boo #
+#                    tloader\Obj\ --debug --endian=little --cpu=Cortex-M4 -e  #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Projects\STM32_IAP\inc #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\I #
+#                    nclude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\C #
+#                    MSIS\Device\ST\STM32F4xx\Include\ -I                     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_HO #
+#                    ST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\HT68F30\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Utilities\Third_Party\efsl\inc\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    fat_fs\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Project #
+#                    s\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utiliti #
+#                    es\mainstream_v1\stm32f411\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\it\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\APP_SRC\I #
+#                    nclude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\APP_SRC\ -Ohz -I  #
+#                    "C:\Program Files (x86)\IAR Systems\Embedded Workbench   #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Bootloader\Lis #
+#                    t\usbh_stdreq.lst                                        #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Bootloader\Obj #
+#                    \usbh_stdreq.o                                           #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\STM32_USB_HOST_Library\Core\src\usbh_stdreq.c
+      1          /**
+      2            ******************************************************************************
+      3            * @file    usbh_stdreq.c 
+      4            * @author  MCD Application Team
+      5            * @version V2.1.0
+      6            * @date    19-March-2012
+      7            * @brief   This file implements the standard requests for device enumeration
+      8            ******************************************************************************
+      9            * @attention
+     10            *
+     11            * <h2><center>&copy; COPYRIGHT 2012 STMicroelectronics</center></h2>
+     12            *
+     13            * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
+     14            * You may not use this file except in compliance with the License.
+     15            * You may obtain a copy of the License at:
+     16            *
+     17            *        http://www.st.com/software_license_agreement_liberty_v2
+     18            *
+     19            * Unless required by applicable law or agreed to in writing, software 
+     20            * distributed under the License is distributed on an "AS IS" BASIS, 
+     21            * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     22            * See the License for the specific language governing permissions and
+     23            * limitations under the License.
+     24            *
+     25            ******************************************************************************
+     26            */ 
+     27          /* Includes ------------------------------------------------------------------*/
+     28          
+     29          #include "usbh_ioreq.h"
+     30          #include "usbh_stdreq.h"
+     31          
+     32          /** @addtogroup USBH_LIB
+     33          * @{
+     34          */
+     35          
+     36          /** @addtogroup USBH_LIB_CORE
+     37          * @{
+     38          */
+     39          
+     40          /** @defgroup USBH_STDREQ 
+     41          * @brief This file implements the standard requests for device enumeration
+     42          * @{
+     43          */
+     44          
+     45          
+     46          /** @defgroup USBH_STDREQ_Private_Defines
+     47          * @{
+     48          */ 
+     49          /**
+     50          * @}
+     51          */ 
+     52          
+     53          
+     54          /** @defgroup USBH_STDREQ_Private_TypesDefinitions
+     55          * @{
+     56          */ 
+     57          /**
+     58          * @}
+     59          */ 
+     60          
+     61          
+     62          
+     63          /** @defgroup USBH_STDREQ_Private_Macros
+     64          * @{
+     65          */ 
+     66          /**
+     67          * @}
+     68          */ 
+     69          
+     70          
+     71          /** @defgroup USBH_STDREQ_Private_Variables
+     72          * @{
+     73          */
+     74          /**
+     75          * @}
+     76          */ 
+     77          #ifdef USB_OTG_HS_INTERNAL_DMA_ENABLED
+     78            #if defined ( __ICCARM__ ) /*!< IAR Compiler */
+     79              #pragma data_alignment=4   
+     80            #endif
+     81          #endif /* USB_OTG_HS_INTERNAL_DMA_ENABLED */
+     82          __ALIGN_BEGIN uint8_t          USBH_CfgDesc[512] __ALIGN_END ;
+     83          
+     84          
+     85          /** @defgroup USBH_STDREQ_Private_FunctionPrototypes
+     86          * @{
+     87          */
+     88          static void USBH_ParseDevDesc (USBH_DevDesc_TypeDef* , uint8_t *buf, uint16_t length);
+     89          
+     90          static void USBH_ParseCfgDesc (USBH_CfgDesc_TypeDef* cfg_desc,
+     91                                         USBH_InterfaceDesc_TypeDef* itf_desc,
+     92                                         USBH_EpDesc_TypeDef  ep_desc[][USBH_MAX_NUM_ENDPOINTS],                                                           
+     93                                         uint8_t *buf, 
+     94                                         uint16_t length);
+     95          
+     96          
+     97          static void USBH_ParseInterfaceDesc (USBH_InterfaceDesc_TypeDef  *if_descriptor, uint8_t *buf);
+     98          static void USBH_ParseEPDesc (USBH_EpDesc_TypeDef  *ep_descriptor, uint8_t *buf);
+     99          
+    100          static void USBH_ParseStringDesc (uint8_t* psrc, uint8_t* pdest, uint16_t length);
+    101          /**
+    102          * @}
+    103          */ 
+    104          
+    105          
+    106          /** @defgroup USBH_STDREQ_Private_Functions
+    107          * @{
+    108          */ 
+    109          
+    110          
+    111          /**
+    112          * @brief  USBH_Get_DevDesc
+    113          *         Issue Get Device Descriptor command to the device. Once the response 
+    114          *         received, it parses the device descriptor and updates the status.
+    115          * @param  pdev: Selected device
+    116          * @param  dev_desc: Device Descriptor buffer address
+    117          * @param  pdev->host.Rx_Buffer: Receive Buffer address
+    118          * @param  length: Length of the descriptor
+    119          * @retval Status
+    120          */
+    121          USBH_Status USBH_Get_DevDesc(USB_OTG_CORE_HANDLE *pdev,
+    122                                       USBH_HOST *phost,
+    123                                       uint8_t length)
+    124          {
+    125            
+    126            USBH_Status status;
+    127            
+    128            if((status = USBH_GetDescriptor(pdev, 
+    129                                            phost,
+    130                                            USB_REQ_RECIPIENT_DEVICE | USB_REQ_TYPE_STANDARD,                          
+    131                                            USB_DESC_DEVICE, 
+    132                                            pdev->host.Rx_Buffer,
+    133                                            length)) == USBH_OK)
+    134            {
+    135              /* Commands successfully sent and Response Received */       
+    136              USBH_ParseDevDesc(&phost->device_prop.Dev_Desc, pdev->host.Rx_Buffer, length);
+    137            }
+    138            return status;      
+    139          }
+    140          
+    141          /**
+    142          * @brief  USBH_Get_CfgDesc
+    143          *         Issues Configuration Descriptor to the device. Once the response 
+    144          *         received, it parses the configuartion descriptor and updates the 
+    145          *         status.
+    146          * @param  pdev: Selected device
+    147          * @param  cfg_desc: Configuration Descriptor address
+    148          * @param  itf_desc: Interface Descriptor address
+    149          * @param  ep_desc: Endpoint Descriptor address
+    150          * @param  length: Length of the descriptor
+    151          * @retval Status
+    152          */
+    153          USBH_Status USBH_Get_CfgDesc(USB_OTG_CORE_HANDLE *pdev, 
+    154                                       USBH_HOST           *phost,                      
+    155                                       uint16_t length)
+    156          
+    157          {
+    158            USBH_Status status;
+    159            uint16_t index = 0;
+    160            
+    161            if((status = USBH_GetDescriptor(pdev,
+    162                                            phost,
+    163                                            USB_REQ_RECIPIENT_DEVICE | USB_REQ_TYPE_STANDARD,                          
+    164                                            USB_DESC_CONFIGURATION, 
+    165                                            pdev->host.Rx_Buffer,
+    166                                            length)) == USBH_OK)
+    167            {
+    168              /*save Cfg descriptor for class parsing usage */
+    169              for( ; index < length ; index ++)
+    170              {
+    171                USBH_CfgDesc[index] = pdev->host.Rx_Buffer[index];
+    172              }
+    173              
+    174              /* Commands successfully sent and Response Received  */       
+    175              USBH_ParseCfgDesc (&phost->device_prop.Cfg_Desc,
+    176                                 phost->device_prop.Itf_Desc,
+    177                                 phost->device_prop.Ep_Desc, 
+    178                                 pdev->host.Rx_Buffer,
+    179                                 length); 
+    180              
+    181            }
+    182            return status;
+    183          }
+    184          
+    185          
+    186          /**
+    187          * @brief  USBH_Get_StringDesc
+    188          *         Issues string Descriptor command to the device. Once the response 
+    189          *         received, it parses the string descriptor and updates the status.
+    190          * @param  pdev: Selected device
+    191          * @param  string_index: String index for the descriptor
+    192          * @param  buff: Buffer address for the descriptor
+    193          * @param  length: Length of the descriptor
+    194          * @retval Status
+    195          */
+    196          USBH_Status USBH_Get_StringDesc(USB_OTG_CORE_HANDLE *pdev,
+    197                                          USBH_HOST *phost,
+    198                                          uint8_t string_index, 
+    199                                          uint8_t *buff, 
+    200                                          uint16_t length)
+    201          {
+    202            USBH_Status status;
+    203            
+    204            if((status = USBH_GetDescriptor(pdev,
+    205                                            phost,
+    206                                            USB_REQ_RECIPIENT_DEVICE | USB_REQ_TYPE_STANDARD,                                    
+    207                                            USB_DESC_STRING | string_index, 
+    208                                            pdev->host.Rx_Buffer,
+    209                                            length)) == USBH_OK)
+    210            {
+    211              /* Commands successfully sent and Response Received  */       
+    212              USBH_ParseStringDesc(pdev->host.Rx_Buffer,buff, length);    
+    213            }
+    214            return status;
+    215          }
+    216          
+    217          /**
+    218          * @brief  USBH_GetDescriptor
+    219          *         Issues Descriptor command to the device. Once the response received,
+    220          *         it parses the descriptor and updates the status.
+    221          * @param  pdev: Selected device
+    222          * @param  req_type: Descriptor type
+    223          * @param  value_idx: wValue for the GetDescriptr request
+    224          * @param  buff: Buffer to store the descriptor
+    225          * @param  length: Length of the descriptor
+    226          * @retval Status
+    227          */
+    228          USBH_Status USBH_GetDescriptor(USB_OTG_CORE_HANDLE *pdev,
+    229                                         USBH_HOST           *phost,                                
+    230                                         uint8_t  req_type,
+    231                                         uint16_t value_idx, 
+    232                                         uint8_t* buff, 
+    233                                         uint16_t length )
+    234          { 
+    235            phost->Control.setup.b.bmRequestType = USB_D2H | req_type;
+    236            phost->Control.setup.b.bRequest = USB_REQ_GET_DESCRIPTOR;
+    237            phost->Control.setup.b.wValue.w = value_idx;
+    238            
+    239            if ((value_idx & 0xff00) == USB_DESC_STRING)
+    240            {
+    241              phost->Control.setup.b.wIndex.w = 0x0409;
+    242            }
+    243            else
+    244            {
+    245              phost->Control.setup.b.wIndex.w = 0;
+    246            }
+    247            phost->Control.setup.b.wLength.w = length;           
+    248            return USBH_CtlReq(pdev, phost, buff , length );     
+    249          }
+    250          
+    251          /**
+    252          * @brief  USBH_SetAddress
+    253          *         This command sets the address to the connected device
+    254          * @param  pdev: Selected device
+    255          * @param  DeviceAddress: Device address to assign
+    256          * @retval Status
+    257          */
+    258          USBH_Status USBH_SetAddress(USB_OTG_CORE_HANDLE *pdev, 
+    259                                      USBH_HOST *phost,
+    260                                      uint8_t DeviceAddress)
+    261          {
+    262            phost->Control.setup.b.bmRequestType = USB_H2D | USB_REQ_RECIPIENT_DEVICE | \
+    263              USB_REQ_TYPE_STANDARD;
+    264            
+    265            phost->Control.setup.b.bRequest = USB_REQ_SET_ADDRESS;
+    266            
+    267            phost->Control.setup.b.wValue.w = (uint16_t)DeviceAddress;
+    268            phost->Control.setup.b.wIndex.w = 0;
+    269            phost->Control.setup.b.wLength.w = 0;
+    270            
+    271            return USBH_CtlReq(pdev, phost, 0 , 0 );
+    272          }
+    273          
+    274          /**
+    275          * @brief  USBH_SetCfg
+    276          *         The command sets the configuration value to the connected device
+    277          * @param  pdev: Selected device
+    278          * @param  cfg_idx: Configuration value
+    279          * @retval Status
+    280          */
+    281          USBH_Status USBH_SetCfg(USB_OTG_CORE_HANDLE *pdev, 
+    282                                  USBH_HOST *phost,
+    283                                  uint16_t cfg_idx)
+    284          {
+    285            
+    286            phost->Control.setup.b.bmRequestType = USB_H2D | USB_REQ_RECIPIENT_DEVICE |\
+    287              USB_REQ_TYPE_STANDARD;
+    288            phost->Control.setup.b.bRequest = USB_REQ_SET_CONFIGURATION;
+    289            phost->Control.setup.b.wValue.w = cfg_idx;
+    290            phost->Control.setup.b.wIndex.w = 0;
+    291            phost->Control.setup.b.wLength.w = 0;           
+    292            
+    293            return USBH_CtlReq(pdev, phost, 0 , 0 );      
+    294          }
+    295          
+    296          /**
+    297          * @brief  USBH_SetInterface
+    298          *         The command sets the Interface value to the connected device
+    299          * @param  pdev: Selected device
+    300          * @param  itf_idx: Interface value
+    301          * @retval Status
+    302          */
+    303          USBH_Status USBH_SetInterface(USB_OTG_CORE_HANDLE *pdev, 
+    304                                  USBH_HOST *phost,
+    305                                  uint8_t ep_num, uint8_t altSetting)
+    306          {
+    307            
+    308            
+    309            phost->Control.setup.b.bmRequestType = USB_H2D | USB_REQ_RECIPIENT_INTERFACE | \
+    310              USB_REQ_TYPE_STANDARD;
+    311            
+    312            phost->Control.setup.b.bRequest = USB_REQ_SET_INTERFACE;
+    313            phost->Control.setup.b.wValue.w = altSetting;
+    314            phost->Control.setup.b.wIndex.w = ep_num;
+    315            phost->Control.setup.b.wLength.w = 0;           
+    316           
+    317            return USBH_CtlReq(pdev, phost, 0 , 0 );     
+    318          }
+    319          /**
+    320          * @brief  USBH_ClrFeature
+    321          *         This request is used to clear or disable a specific feature.
+    322          
+    323          * @param  pdev: Selected device
+    324          * @param  ep_num: endpoint number 
+    325          * @param  hc_num: Host channel number 
+    326          * @retval Status
+    327          */
+    328          USBH_Status USBH_ClrFeature(USB_OTG_CORE_HANDLE *pdev,
+    329                                      USBH_HOST *phost,
+    330                                      uint8_t ep_num, 
+    331                                      uint8_t hc_num) 
+    332          {
+    333            
+    334            phost->Control.setup.b.bmRequestType = USB_H2D | 
+    335                                                   USB_REQ_RECIPIENT_ENDPOINT |
+    336                                                   USB_REQ_TYPE_STANDARD;
+    337            
+    338            phost->Control.setup.b.bRequest = USB_REQ_CLEAR_FEATURE;
+    339            phost->Control.setup.b.wValue.w = FEATURE_SELECTOR_ENDPOINT;
+    340            phost->Control.setup.b.wIndex.w = ep_num;
+    341            phost->Control.setup.b.wLength.w = 0;           
+    342            
+    343            if ((ep_num & USB_REQ_DIR_MASK ) == USB_D2H)
+    344            { /* EP Type is IN */
+    345              pdev->host.hc[hc_num].toggle_in = 0; 
+    346            }
+    347            else
+    348            {/* EP Type is OUT */
+    349              pdev->host.hc[hc_num].toggle_out = 0; 
+    350            }
+    351            
+    352            return USBH_CtlReq(pdev, phost, 0 , 0 );   
+    353          }
+    354          
+    355          /**
+    356          * @brief  USBH_ParseDevDesc 
+    357          *         This function Parses the device descriptor
+    358          * @param  dev_desc: device_descriptor destinaton address 
+    359          * @param  buf: Buffer where the source descriptor is available
+    360          * @param  length: Length of the descriptor
+    361          * @retval None
+    362          */
+    363          static void  USBH_ParseDevDesc (USBH_DevDesc_TypeDef* dev_desc,
+    364                                          uint8_t *buf, 
+    365                                          uint16_t length)
+    366          {
+    367            dev_desc->bLength            = *(uint8_t  *) (buf +  0);
+    368            dev_desc->bDescriptorType    = *(uint8_t  *) (buf +  1);
+    369            dev_desc->bcdUSB             = LE16 (buf +  2);
+    370            dev_desc->bDeviceClass       = *(uint8_t  *) (buf +  4);
+    371            dev_desc->bDeviceSubClass    = *(uint8_t  *) (buf +  5);
+    372            dev_desc->bDeviceProtocol    = *(uint8_t  *) (buf +  6);
+    373            dev_desc->bMaxPacketSize     = *(uint8_t  *) (buf +  7);
+    374            
+    375            if (length > 8)
+    376            { /* For 1st time after device connection, Host may issue only 8 bytes for 
+    377              Device Descriptor Length  */
+    378              dev_desc->idVendor           = LE16 (buf +  8);
+    379              dev_desc->idProduct          = LE16 (buf + 10);
+    380              dev_desc->bcdDevice          = LE16 (buf + 12);
+    381              dev_desc->iManufacturer      = *(uint8_t  *) (buf + 14);
+    382              dev_desc->iProduct           = *(uint8_t  *) (buf + 15);
+    383              dev_desc->iSerialNumber      = *(uint8_t  *) (buf + 16);
+    384              dev_desc->bNumConfigurations = *(uint8_t  *) (buf + 17);
+    385            }
+    386          }
+    387          
+    388          /**
+    389          * @brief  USBH_ParseCfgDesc 
+    390          *         This function Parses the configuration descriptor
+    391          * @param  cfg_desc: Configuration Descriptor address
+    392          * @param  itf_desc: Interface Descriptor address
+    393          * @param  ep_desc: Endpoint Descriptor address
+    394          * @param  buf: Buffer where the source descriptor is available
+    395          * @param  length: Length of the descriptor
+    396          * @retval None
+    397          */
+    398          static void  USBH_ParseCfgDesc (USBH_CfgDesc_TypeDef* cfg_desc,
+    399                                          USBH_InterfaceDesc_TypeDef* itf_desc,
+    400                                          USBH_EpDesc_TypeDef   ep_desc[][USBH_MAX_NUM_ENDPOINTS], 
+    401                                          uint8_t *buf, 
+    402                                          uint16_t length)
+    403          {  
+    404            USBH_InterfaceDesc_TypeDef    *pif ;
+    405            USBH_InterfaceDesc_TypeDef    temp_pif ;  
+    406            USBH_EpDesc_TypeDef           *pep;  
+    407            USBH_DescHeader_t             *pdesc = (USBH_DescHeader_t *)buf;
+    408            uint16_t                      ptr;
+    409            int8_t                        if_ix = 0;
+    410            int8_t                        ep_ix = 0;  
+    411            static uint16_t               prev_ep_size = 0;
+    412            static uint8_t                prev_itf = 0;  
+    413            
+    414            
+    415            pdesc   = (USBH_DescHeader_t *)buf;
+    416            
+    417            /* Parse configuration descriptor */
+    418            cfg_desc->bLength             = *(uint8_t  *) (buf + 0);
+    419            cfg_desc->bDescriptorType     = *(uint8_t  *) (buf + 1);
+    420            cfg_desc->wTotalLength        = LE16 (buf + 2);
+    421            cfg_desc->bNumInterfaces      = *(uint8_t  *) (buf + 4);
+    422            cfg_desc->bConfigurationValue = *(uint8_t  *) (buf + 5);
+    423            cfg_desc->iConfiguration      = *(uint8_t  *) (buf + 6);
+    424            cfg_desc->bmAttributes        = *(uint8_t  *) (buf + 7);
+    425            cfg_desc->bMaxPower           = *(uint8_t  *) (buf + 8);    
+    426            
+    427            
+    428            if (length > USB_CONFIGURATION_DESC_SIZE)
+    429            {
+    430              ptr = USB_LEN_CFG_DESC;
+    431              
+    432              if ( cfg_desc->bNumInterfaces <= USBH_MAX_NUM_INTERFACES) 
+    433              {
+    434                pif = (USBH_InterfaceDesc_TypeDef *)0;
+    435                
+    436                while (ptr < cfg_desc->wTotalLength ) 
+    437                {
+    438                  pdesc = USBH_GetNextDesc((uint8_t *)pdesc, &ptr);
+    439                  if (pdesc->bDescriptorType   == USB_DESC_TYPE_INTERFACE) 
+    440                  {
+    441                    if_ix             = *(((uint8_t *)pdesc ) + 2);
+    442                    pif               = &itf_desc[if_ix];
+    443                    
+    444                    if((*((uint8_t *)pdesc + 3)) < 3)
+    445                    {
+    446                    USBH_ParseInterfaceDesc (&temp_pif, (uint8_t *)pdesc);            
+    447                    ep_ix = 0;
+    448                    
+    449                    /* Parse Ep descriptors relative to the current interface */
+    450                    if(temp_pif.bNumEndpoints <= USBH_MAX_NUM_ENDPOINTS)
+    451                    {          
+    452                      while (ep_ix < temp_pif.bNumEndpoints) 
+    453                      {
+    454                        pdesc = USBH_GetNextDesc((void* )pdesc, &ptr);
+    455                        if (pdesc->bDescriptorType   == USB_DESC_TYPE_ENDPOINT) 
+    456                        {  
+    457                          pep               = &ep_desc[if_ix][ep_ix];
+    458                          
+    459                          if(prev_itf != if_ix)
+    460                          {
+    461                            prev_itf = if_ix;
+    462                            USBH_ParseInterfaceDesc (pif, (uint8_t *)&temp_pif); 
+    463                          }
+    464                          else
+    465                          {
+    466                            if(prev_ep_size > LE16((uint8_t *)pdesc + 4))
+    467                            {
+    468                              break;
+    469                            }
+    470                            else
+    471                            {
+    472                              USBH_ParseInterfaceDesc (pif, (uint8_t *)&temp_pif);    
+    473                            }
+    474                          }
+    475                          USBH_ParseEPDesc (pep, (uint8_t *)pdesc);
+    476                          prev_ep_size = LE16((uint8_t *)pdesc + 4);
+    477                          ep_ix++;
+    478                        }
+    479                      }
+    480                    }
+    481                   }
+    482                  }
+    483                }
+    484              }
+    485              prev_ep_size = 0;
+    486              prev_itf = 0; 
+    487            }  
+    488          }
+    489          
+    490          
+    491          /**
+    492          * @brief  USBH_ParseInterfaceDesc 
+    493          *         This function Parses the interface descriptor
+    494          * @param  if_descriptor : Interface descriptor destination
+    495          * @param  buf: Buffer where the descriptor data is available
+    496          * @retval None
+    497          */
+    498          static void  USBH_ParseInterfaceDesc (USBH_InterfaceDesc_TypeDef *if_descriptor, 
+    499                                                uint8_t *buf)
+    500          {
+    501            if_descriptor->bLength            = *(uint8_t  *) (buf + 0);
+    502            if_descriptor->bDescriptorType    = *(uint8_t  *) (buf + 1);
+    503            if_descriptor->bInterfaceNumber   = *(uint8_t  *) (buf + 2);
+    504            if_descriptor->bAlternateSetting  = *(uint8_t  *) (buf + 3);
+    505            if_descriptor->bNumEndpoints      = *(uint8_t  *) (buf + 4);
+    506            if_descriptor->bInterfaceClass    = *(uint8_t  *) (buf + 5);
+    507            if_descriptor->bInterfaceSubClass = *(uint8_t  *) (buf + 6);
+    508            if_descriptor->bInterfaceProtocol = *(uint8_t  *) (buf + 7);
+    509            if_descriptor->iInterface         = *(uint8_t  *) (buf + 8);
+    510          }
+    511          
+    512          /**
+    513          * @brief  USBH_ParseEPDesc 
+    514          *         This function Parses the endpoint descriptor
+    515          * @param  ep_descriptor: Endpoint descriptor destination address
+    516          * @param  buf: Buffer where the parsed descriptor stored
+    517          * @retval None
+    518          */
+    519          static void  USBH_ParseEPDesc (USBH_EpDesc_TypeDef  *ep_descriptor, 
+    520                                         uint8_t *buf)
+    521          {
+    522            
+    523            ep_descriptor->bLength          = *(uint8_t  *) (buf + 0);
+    524            ep_descriptor->bDescriptorType  = *(uint8_t  *) (buf + 1);
+    525            ep_descriptor->bEndpointAddress = *(uint8_t  *) (buf + 2);
+    526            ep_descriptor->bmAttributes     = *(uint8_t  *) (buf + 3);
+    527            ep_descriptor->wMaxPacketSize   = LE16 (buf + 4);
+    528            ep_descriptor->bInterval        = *(uint8_t  *) (buf + 6);
+    529          }
+    530          
+    531          /**
+    532          * @brief  USBH_ParseStringDesc 
+    533          *         This function Parses the string descriptor
+    534          * @param  psrc: Source pointer containing the descriptor data
+    535          * @param  pdest: Destination address pointer
+    536          * @param  length: Length of the descriptor
+    537          * @retval None
+    538          */
+    539          static void USBH_ParseStringDesc (uint8_t* psrc, 
+    540                                            uint8_t* pdest, 
+    541                                            uint16_t length)
+    542          {
+    543            uint16_t strlength;
+    544            uint16_t idx;
+    545            
+    546            /* The UNICODE string descriptor is not NULL-terminated. The string length is
+    547            computed by substracting two from the value of the first byte of the descriptor.
+    548            */
+    549            
+    550            /* Check which is lower size, the Size of string or the length of bytes read 
+    551            from the device */
+    552            
+    553            if ( psrc[1] == USB_DESC_TYPE_STRING)
+    554            { /* Make sure the Descriptor is String Type */
+    555              
+    556              /* psrc[0] contains Size of Descriptor, subtract 2 to get the length of string */      
+    557              strlength = ( ( (psrc[0]-2) <= length) ? (psrc[0]-2) :length); 
+    558              psrc += 2; /* Adjust the offset ignoring the String Len and Descriptor type */
+    559              
+    560              for (idx = 0; idx < strlength; idx+=2 )
+    561              {/* Copy Only the string and ignore the UNICODE ID, hence add the src */
+    562                *pdest =  psrc[idx];
+    563                pdest++;
+    564              }  
+    565              *pdest = 0; /* mark end of string */  
+    566            }
+    567          }
+    568          
+    569          /**
+    570          * @brief  USBH_GetNextDesc 
+    571          *         This function return the next descriptor header
+    572          * @param  buf: Buffer where the cfg descriptor is available
+    573          * @param  ptr: data popinter inside the cfg descriptor
+    574          * @retval next header
+    575          */
+    576          USBH_DescHeader_t  *USBH_GetNextDesc (uint8_t   *pbuf, uint16_t  *ptr)
+    577          {
+    578            USBH_DescHeader_t  *pnext;
+    579           
+    580            *ptr += ((USBH_DescHeader_t *)pbuf)->bLength;  
+    581            pnext = (USBH_DescHeader_t *)((uint8_t *)pbuf + \
+    582                   ((USBH_DescHeader_t *)pbuf)->bLength);
+    583           
+    584            return(pnext);
+    585          }
+    586          
+    587          /**
+    588          * @}
+    589          */ 
+    590          
+    591          /**
+    592          * @}
+    593          */ 
+    594          
+    595          /**
+    596          * @}
+    597          */
+    598          
+    599          /**
+    600          * @}
+    601          */ 
+    602          
+    603          /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+    604          
+    605          
+    606          
+    607          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        8  USBH_ClrFeature
+              0 -> USBH_CtlReq
+       16  USBH_GetDescriptor
+              0 -> USBH_CtlReq
+        0  USBH_GetNextDesc
+       40  USBH_Get_CfgDesc
+             40 -> USBH_GetDescriptor
+             40 -> USBH_ParseCfgDesc
+       32  USBH_Get_DevDesc
+             32 -> USBH_GetDescriptor
+             32 -> USBH_ParseDevDesc
+       24  USBH_Get_StringDesc
+             24 -> USBH_GetDescriptor
+       56  USBH_ParseCfgDesc
+             56 -> USBH_GetNextDesc
+             56 -> USBH_ParseInterfaceDesc
+        8  USBH_ParseDevDesc
+        0  USBH_ParseInterfaceDesc
+        0  USBH_SetAddress
+              0 -> USBH_CtlReq
+        0  USBH_SetCfg
+              0 -> USBH_CtlReq
+        8  USBH_SetInterface
+              0 -> USBH_CtlReq
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+       4  ??DataTable1_1
+       6  ??Subroutine1_0
+      10  ?Subroutine0
+     512  USBH_CfgDesc
+      42  USBH_ClrFeature
+      54  USBH_GetDescriptor
+      16  USBH_GetNextDesc
+      80  USBH_Get_CfgDesc
+      46  USBH_Get_DevDesc
+      76  USBH_Get_StringDesc
+     270  USBH_ParseCfgDesc
+      88  USBH_ParseDevDesc
+      38  USBH_ParseInterfaceDesc
+       8  USBH_SetAddress
+       6  USBH_SetCfg
+      24  USBH_SetInterface
+       4  prev_itf
+          prev_ep_size
+
+ 
+ 516 bytes in section .bss
+ 772 bytes in section .text
+ 
+ 772 bytes of CODE memory
+ 516 bytes of DATA memory
+
+Errors: none
+Warnings: none

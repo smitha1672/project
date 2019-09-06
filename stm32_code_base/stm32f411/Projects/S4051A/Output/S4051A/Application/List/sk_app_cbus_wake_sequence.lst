@@ -1,0 +1,540 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:28 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\application\app_cbus\sk #
+#                    _app_cbus_wake_sequence.c                                #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\application\app_cbus\sk #
+#                    _app_cbus_wake_sequence.c -D S4051A -D DEBUG -D          #
+#                    FREE_RTOS -D STM32F40_41xxx -D USE_STM324xG_EVAL -D      #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\sk_app_cbus_wake_sequence.lst                         #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\sk_app_cbus_wake_sequence.o                            #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\application\app_cbus\sk_app_cbus_wake_sequence.c
+      1          //***************************************************************************
+      2          //!file     sk_app_cbus_wake_sequence.c
+      3          //!brief
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2009-2012, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include "sk_app_cbus.h"
+     14          #include "si_timer.h"
+     15          #include "si_gpio.h"
+     16          
+     17          //------------------------------------------------------------------------------
+     18          // Local constants and type definitions
+     19          //------------------------------------------------------------------------------
+     20          
+     21          #define CBUS_SRC_POLLING_W1               20 //
+     22          #define CBUS_SRC_WP_WIDTH1                CBUS_SRC_POLLING_W1
+     23          #define CBUS_SRC_WP_WIDTH1_MIN          ((CBUS_SRC_WP_WIDTH1 - (CBUS_SRC_WP_WIDTH1 / 20)) - 2) // 5% tolerance
+     24          #define CBUS_SRC_WP_WIDTH1_MAX          ((CBUS_SRC_WP_WIDTH1 + (CBUS_SRC_WP_WIDTH1 / 20)) + 2) // 5% tolerance
+     25          
+     26          #define CBUS_SRC_POLLING_W2               60
+     27          #define CBUS_SRC_WP_WIDTH2                CBUS_SRC_POLLING_W2
+     28          #define CBUS_SRC_WP_WIDTH2_MIN          ((CBUS_SRC_WP_WIDTH2 - (CBUS_SRC_WP_WIDTH2 / 20)) - 2) // 5% tolerance
+     29          #define CBUS_SRC_WP_WIDTH2_MAX          ((CBUS_SRC_WP_WIDTH2 + (CBUS_SRC_WP_WIDTH2 / 20)) + 2) // 5% tolerance
+     30          
+     31          #define CBUS_SRC_WP_DISCOVER_MIN            100
+     32          #define CBUS_SRC_WP_DISCOVER_MAX            1000
+     33          
+     34          #define CBUS_SRC_WP_POLARITY                1
+     35          #define CBUS_SRC_PULSE_MAX                  6
+     36          
+     37          #define CBUS_INST_SWAP_TIMER    1000
+     38          
+     39          enum
+     40          {
+     41              CBUS_SRC_WAKE_PULSE,
+     42              CBUS_SRC_DISCOVERY_PULSE,
+     43          };
+     44          
+     45          typedef struct _SiiCbusWakeUpData_t
+     46          {
+     47              uint8_t cbusPin;
+     48              uint16_t cbusTimeCount;
+     49              uint16_t cbusMax;
+     50              uint16_t cbusMin;
+     51              uint8_t cbusPulse;
+     52              uint8_t cbusState;
+     53          } SiiCbusWakeUpData_t;
+     54          
+     55          typedef struct _SiiAppCbusWakeupInstanceData_t
+     56          {
+     57              int                 instanceIndex;
+     58              bool_t              wakeDetect;
+     59              SiiCbusWakeUpData_t cbusWakeup;
+     60          }   SiiAppCbusWakeupInstanceData_t;
+     61          
+     62          
+     63          static SiiAppCbusWakeupInstanceData_t appCbusWake[MHL_MAX_CHANNELS];
+     64          static SiiAppCbusWakeupInstanceData_t *pAppCbusWake = &appCbusWake[0];
+     65          
+     66          static uint8_t cbusInst = 0;
+     67          static SiiTimer_t cbusInstSwitchTimer;       	// used in wake-up detection by switching between instances
+     68          static bool_t wake_up_sensed = false;
+     69          
+     70          //------------------------------------------------------------------------------
+     71          //! @brief  Reset all the Cbus Wake up Status
+     72          //------------------------------------------------------------------------------
+     73          static void SkCbusPulseReset()
+     74          {
+     75          	memset( &pAppCbusWake->cbusWakeup, 0, sizeof(SiiCbusWakeUpData_t));
+     76          }
+     77          
+     78          //------------------------------------------------------------------------------
+     79          //! @brief  Check the CBUS wakeup pulse status
+     80          //------------------------------------------------------------------------------
+     81          static bool_t SkCbusWakeupPulseCheck( uint8_t channel )
+     82          {
+     83          	//cBusPin has changed the state
+     84          	if ( pAppCbusWake->cbusWakeup.cbusPin )
+     85          	{
+     86          		//ok the pulse is in range
+     87          		if ((pAppCbusWake->cbusWakeup.cbusTimeCount >= pAppCbusWake->cbusWakeup.cbusMin) &&
+     88          		    (pAppCbusWake->cbusWakeup.cbusTimeCount <= pAppCbusWake->cbusWakeup.cbusMax))
+     89          		{
+     90          			//DEBUG_PRINT(MSG_DBG, "\n**Inst: %0x Pulse : %02X width : %02X\n", channel, pAppCbus->cbusWakeup.cbusPulse, pAppCbus->cbusWakeup.cbusTimeCount);
+     91          		    pAppCbusWake->cbusWakeup.cbusPulse++;
+     92          		    pAppCbusWake->cbusWakeup.cbusTimeCount=0;
+     93          
+     94          		    if(!wake_up_sensed)
+     95          			{
+     96          				wake_up_sensed = true;
+     97          				//DEBUG_PRINT(MSG_DBG, "\n wake up pulse sensed on cbus channel %0x\n", channel);
+     98          			}
+     99          		}
+    100          		else
+    101          		{
+    102          			//DEBUG_PRINT(MSG_DBG, "\n**Inst: %0x Pusle Not in Range!! Pulse : %02X width : %02X\n", channel, pAppCbus->cbusWakeup.cbusPulse, pAppCbus->cbusWakeup.cbusTimeCount);
+    103          			return false;
+    104          		}
+    105          	}
+    106          	else
+    107          	{
+    108          		//hi for too long
+    109          		//DEBUG_PRINT(MSG_DBG, "\n** Inst: %02X Pulse : %02X width : %02X\n", channel, pAppCbus->cbusWakeup.cbusPulse, pAppCbus->cbusWakeup.cbusTimeCount);
+    110          		if (pAppCbusWake->cbusWakeup.cbusTimeCount > pAppCbusWake->cbusWakeup.cbusMax)
+    111          		{
+    112          		    pAppCbusWake->cbusWakeup.cbusTimeCount=0;
+    113          			return false;
+    114          		}
+    115          		pAppCbusWake->cbusWakeup.cbusTimeCount++;
+    116          	}
+    117          	return true;
+    118          }
+    119          
+    120          //------------------------------------------------------------------------------
+    121          //! @brief  If system power is off, check for a wakeup request from the CBUS
+    122          //! @note   This function relies on being called at least once per millisecond
+    123          //------------------------------------------------------------------------------
+    124          #if ( configSII_DEV_953x_PORTING == 1 ) /*fix IAR building issue: Error[Pe147]: declaration is incompatible with "__interwork __softfp bool_t SkAppCbusWakeupSequence(uint8_t)" (declared <SRCREF line=95 file="D:\FreeRTOS_SB\Libraries\AMT_Drivers\sii953x\application\app_cbus\sk_app_cbus.h">at line 95 of "D:\FreeRTOS_SB\Libraries\AMT_Drivers\sii953x\application\app_cbus\sk_app_cbus.h"</SRCREF>)
+    125          Error while running C/C++ Compiler*/
+    126          bool_t SkAppCbusWakeupSequence( uint8_t powerIsOn )
+    127          #else
+    128          bool_t SkAppCbusWakeupSequence( bool_t powerIsOn )
+    129          #endif 
+    130          {
+    131          	bool_t cbusPin  = false;
+    132          	bool_t results  = false;
+    133          	
+    134          	if ( powerIsOn )
+    135          	{
+    136          		wake_up_sensed = false;
+    137          		return true;
+    138          	}
+    139          
+    140          	if ( SiiOsTimerExpired( cbusInstSwitchTimer ))
+    141          	{
+    142          		if ( !wake_up_sensed )
+    143          		{
+    144          			SiiOsTimerSet( &cbusInstSwitchTimer, CBUS_INST_SWAP_TIMER);
+    145          			cbusInst++;
+    146          			if ( cbusInst == MHL_MAX_CHANNELS )
+    147          			{
+    148          				cbusInst = 0;
+    149          			}
+    150          			//DEBUG_PRINT(MSG_DBG, "\n Current Inst:: %0x\n", cbusInst);
+    151          		}
+    152          	}
+    153          
+    154          	// Can't be called more often than 1ms.
+    155          	pAppCbusWake = &appCbusWake[cbusInst];
+    156              if (!SiiPlatformTimerExpired( TIMER_3 ))
+    157              {
+    158                  return results;
+    159              }
+    160              SiiPlatformTimerSet( TIMER_3, 1);
+    161          //TODO: OEM: Here is where the system GPIO connected to the wakeup pin is read.
+    162          //    cbusPin = SiiPlatformCbusWakeupPinGet( cbusInst );
+    163          
+    164              if ((cbusPin == CBUS_SRC_WP_POLARITY) && !pAppCbusWake->wakeDetect)
+    165              {
+    166                  SkCbusPulseReset();
+    167                  pAppCbusWake->cbusWakeup.cbusState = CBUS_SRC_WAKE_PULSE;
+    168                  return false;
+    169              }
+    170          
+    171              //DEBUG_PRINT(MSG_DBG, "cbusPin: %0x, pAppCbus->wakeDetect: %0x\n", cbusPin, pAppCbus->wakeDetect);
+    172              pAppCbusWake->wakeDetect = true;
+    173              switch (pAppCbusWake->cbusWakeup.cbusState)
+    174              {
+    175                  case CBUS_SRC_WAKE_PULSE:
+    176                      if (pAppCbusWake->cbusWakeup.cbusPulse == 3)
+    177                      {
+    178                          pAppCbusWake->cbusWakeup.cbusMin = CBUS_SRC_WP_WIDTH2_MIN;
+    179                          pAppCbusWake->cbusWakeup.cbusMax = CBUS_SRC_WP_WIDTH2_MAX;
+    180                      }
+    181                      else
+    182                      {
+    183                          pAppCbusWake->cbusWakeup.cbusMin = CBUS_SRC_WP_WIDTH1_MIN;
+    184                          pAppCbusWake->cbusWakeup.cbusMax = CBUS_SRC_WP_WIDTH1_MAX;
+    185                      }
+    186          
+    187                      //complement the cbusPin for Odd pulse
+    188                      if (pAppCbusWake->cbusWakeup.cbusPulse % 2)
+    189                      {
+    190                          pAppCbusWake->cbusWakeup.cbusPin = !cbusPin;
+    191                      }
+    192                      else
+    193                      {
+    194                          pAppCbusWake->cbusWakeup.cbusPin = cbusPin;
+    195                      }
+    196          
+    197                      results = SkCbusWakeupPulseCheck( cbusInst );
+    198          
+    199                      //Number of pulse has been reached.
+    200                      if (pAppCbusWake->cbusWakeup.cbusPulse > CBUS_SRC_PULSE_MAX)
+    201                      {
+    202                          pAppCbusWake->cbusWakeup.cbusState = CBUS_SRC_DISCOVERY_PULSE;
+    203                      }
+    204                      else
+    205                      {
+    206                          break;
+    207                      }
+    208                  case CBUS_SRC_DISCOVERY_PULSE:
+    209                      pAppCbusWake->cbusWakeup.cbusMin = CBUS_SRC_WP_DISCOVER_MIN;
+    210                      pAppCbusWake->cbusWakeup.cbusMin = CBUS_SRC_WP_DISCOVER_MAX;
+    211                      pAppCbusWake->cbusWakeup.cbusState = CBUS_SRC_WAKE_PULSE;
+    212                      pAppCbusWake->wakeDetect = false;
+    213          
+    214                      DEBUG_PRINT(MSG_DBG, "\n" );
+    215                      DEBUG_PRINT(MSG_DBG, asterisks );
+    216                      DEBUG_PRINT(MSG_DBG, "CBUS Power Up by detecting wake up pulse sequence\n");
+    217                      DEBUG_PRINT(MSG_DBG, asterisks );
+    218          
+    219                      if ( app.powerState != APP_POWERSTATUS_ON )
+    220                      {
+    221                          app.powerState = APP_POWERSTATUS_STANDBY_TO_ON;
+    222                      }
+    223                      SkCbusPulseReset();
+    224                      return true;
+    225              }
+    226          
+    227              if (!results)
+    228              {
+    229                  pAppCbusWake->cbusWakeup.cbusState = CBUS_SRC_WAKE_PULSE;
+    230                  pAppCbusWake->wakeDetect = false;
+    231                  SkCbusPulseReset();
+    232              }
+    233          	return false;
+    234          }
+    235          
+    236          //------------------------------------------------------------------------------
+    237          //! @brief:     Initialize the CBUS wakeup code
+    238          //------------------------------------------------------------------------------
+    239          bool_t SkAppDeviceInitCbusWakeup ( void )
+    240          {
+    241          
+    242              memset( &appCbusWake[0], 0, sizeof(SiiAppCbusWakeupInstanceData_t) * MHL_MAX_CHANNELS);
+    243              pAppCbusWake = &appCbusWake[0];
+    244              SiiOsTimerSet(&cbusInstSwitchTimer, CBUS_INST_SWAP_TIMER);
+    245          
+    246              return( true );
+    247          }
+    248          
+    249          
+    250          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       16  SkAppCbusWakeupSequence
+             16 -> SiiOsTimerExpired
+             16 -> SiiOsTimerSet
+             16 -> SiiPlatformTimerExpired
+             16 -> SiiPlatformTimerSet
+             16 -> SkCbusPulseReset
+        8  SkAppDeviceInitCbusWakeup
+              8 -> SiiOsTimerSet
+              8 -> __aeabi_memclr4
+        0  SkCbusPulseReset
+              0 -> __aeabi_memclr
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable2
+       4  ??DataTable2_1
+     236  SkAppCbusWakeupSequence
+      34  SkAppDeviceInitCbusWakeup
+      12  SkCbusPulseReset
+      52  cbusInstSwitchTimer
+          cbusInst
+          wake_up_sensed
+          pAppCbusWake
+          appCbusWake
+
+ 
+  52 bytes in section .data
+ 290 bytes in section .text
+ 
+ 290 bytes of CODE memory
+  52 bytes of DATA memory
+
+Errors: none
+Warnings: 1

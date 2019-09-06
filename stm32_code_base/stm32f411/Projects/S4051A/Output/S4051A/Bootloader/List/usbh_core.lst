@@ -1,0 +1,1044 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     10/Nov/2014  15:19:41 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\STM32_IAP\src\usbh_core.c                    #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\STM32_IAP\src\usbh_core.c -D                 #
+#                    __ARM_CORTEX_MX__ -D DEBUG -D FREE_RTOS -D               #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D HOST_MODE_ENABLED -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -D STM32_IAP -D S4051A    #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Bootloade #
+#                    r\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Boo #
+#                    tloader\Obj\ --debug --endian=little --cpu=Cortex-M4 -e  #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Projects\STM32_IAP\inc #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\I #
+#                    nclude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\C #
+#                    MSIS\Device\ST\STM32F4xx\Include\ -I                     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_HO #
+#                    ST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\HT68F30\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Utilities\Third_Party\efsl\inc\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    fat_fs\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Project #
+#                    s\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utiliti #
+#                    es\mainstream_v1\stm32f411\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\it\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\APP_SRC\I #
+#                    nclude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\APP_SRC\ -Ohz -I  #
+#                    "C:\Program Files (x86)\IAR Systems\Embedded Workbench   #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Bootloader\Lis #
+#                    t\usbh_core.lst                                          #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Bootloader\Obj #
+#                    \usbh_core.o                                             #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Projects\STM32_IAP\src\usbh_core.c
+      1          /**
+      2            ******************************************************************************
+      3            * @file    usbh_core.c 
+      4            * @author  MCD Application Team
+      5            * @version V2.1.0
+      6            * @date    19-March-2012
+      7            * @brief   This file implements the functions for the core state machine process
+      8            *          the enumeration and the control transfer process
+      9            ******************************************************************************
+     10            * @attention
+     11            *
+     12            * <h2><center>&copy; COPYRIGHT 2012 STMicroelectronics</center></h2>
+     13            *
+     14            * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
+     15            * You may not use this file except in compliance with the License.
+     16            * You may obtain a copy of the License at:
+     17            *
+     18            *        http://www.st.com/software_license_agreement_liberty_v2
+     19            *
+     20            * Unless required by applicable law or agreed to in writing, software 
+     21            * distributed under the License is distributed on an "AS IS" BASIS, 
+     22            * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     23            * See the License for the specific language governing permissions and
+     24            * limitations under the License.
+     25            *
+     26            ******************************************************************************
+     27            */ 
+     28          /* Includes ------------------------------------------------------------------*/
+     29          
+     30          #include "usbh_ioreq.h"
+     31          #include "usb_bsp.h"
+     32          #include "usbh_hcs.h"
+     33          #include "usbh_stdreq.h"
+     34          #include "usbh_core.h"
+     35          #include "usb_hcd_int.h"
+     36          
+     37          #include "command.h"
+     38          
+     39          /** @addtogroup USBH_LIB
+     40            * @{
+     41            */
+     42          
+     43          /** @addtogroup USBH_LIB_CORE
+     44          * @{
+     45          */
+     46          
+     47          /** @defgroup USBH_CORE 
+     48            * @brief TThis file handles the basic enumaration when a device is connected 
+     49            *          to the host.
+     50            * @{
+     51            */ 
+     52          
+     53          /** @defgroup USBH_CORE_Private_TypesDefinitions
+     54            * @{
+     55            */ 
+     56          uint8_t USBH_Disconnected (USB_OTG_CORE_HANDLE *pdev); 
+     57          uint8_t USBH_Connected (USB_OTG_CORE_HANDLE *pdev); 
+     58          uint8_t USBH_SOF (USB_OTG_CORE_HANDLE *pdev); 
+     59          
+     60          USBH_HCD_INT_cb_TypeDef USBH_HCD_INT_cb = 
+     61          {
+     62            USBH_SOF,
+     63            USBH_Connected, 
+     64            USBH_Disconnected,    
+     65          };
+     66          
+     67          USBH_HCD_INT_cb_TypeDef  *USBH_HCD_INT_fops = &USBH_HCD_INT_cb;
+     68          /**
+     69            * @}
+     70            */ 
+     71          
+     72          
+     73          /** @defgroup USBH_CORE_Private_Defines
+     74            * @{
+     75            */ 
+     76          /**
+     77            * @}
+     78            */ 
+     79          
+     80          
+     81          /** @defgroup USBH_CORE_Private_Macros
+     82            * @{
+     83            */ 
+     84          /**
+     85            * @}
+     86            */ 
+     87          
+     88          
+     89          /** @defgroup USBH_CORE_Private_Variables
+     90            * @{
+     91            */ 
+     92          /**
+     93            * @}
+     94            */ 
+     95          
+     96          
+     97          /** @defgroup USBH_CORE_Private_FunctionPrototypes
+     98            * @{
+     99            */
+    100          static USBH_Status USBH_HandleEnum(USB_OTG_CORE_HANDLE *pdev, USBH_HOST *phost);
+    101          USBH_Status USBH_HandleControl (USB_OTG_CORE_HANDLE *pdev, USBH_HOST *phost);
+    102          
+    103          /**
+    104            * @}
+    105            */ 
+    106          
+    107          
+    108          /** @defgroup USBH_CORE_Private_Functions
+    109            * @{
+    110            */ 
+    111          
+    112          
+    113          /**
+    114            * @brief  USBH_Connected
+    115            *         USB Connect callback function from the Interrupt. 
+    116            * @param  selected device
+    117            * @retval Status
+    118          */
+    119          uint8_t USBH_Connected (USB_OTG_CORE_HANDLE *pdev)
+    120          {
+    121            pdev->host.ConnSts = 1;
+    122            return 0;
+    123          }
+    124          
+    125          /**
+    126          * @brief  USBH_Disconnected
+    127          *         USB Disconnect callback function from the Interrupt. 
+    128          * @param  selected device
+    129          * @retval Status
+    130          */
+    131          
+    132          uint8_t USBH_Disconnected (USB_OTG_CORE_HANDLE *pdev)
+    133          {
+    134            pdev->host.ConnSts = 0;
+    135            return 0;  
+    136          }
+    137          
+    138          /**
+    139            * @brief  USBH_SOF
+    140            *         USB SOF callback function from the Interrupt. 
+    141            * @param  selected device
+    142            * @retval Status
+    143            */
+    144          
+    145          uint8_t USBH_SOF (USB_OTG_CORE_HANDLE *pdev)
+    146          {
+    147            /* This callback could be used to implement a scheduler process */
+    148            return 0;  
+    149          }
+    150          /**
+    151            * @brief  USBH_Init
+    152            *         Host hardware and stack initializations 
+    153            * @param  class_cb: Class callback structure address
+    154            * @param  usr_cb: User callback structure address
+    155            * @retval None
+    156            */
+    157          void USBH_Init(USB_OTG_CORE_HANDLE *pdev,
+    158                         USB_OTG_CORE_ID_TypeDef coreID,
+    159                         USBH_HOST *phost,               
+    160                         USBH_Class_cb_TypeDef *class_cb, 
+    161                         USBH_Usr_cb_TypeDef *usr_cb)
+    162          {
+    163               
+    164            /* Hardware Init */
+    165            USB_OTG_BSP_Init(pdev);  
+    166            
+    167            /* configure GPIO pin used for switching VBUS power */
+    168            USB_OTG_BSP_ConfigVBUS(0);  
+    169            
+    170            
+    171            /* Host de-initializations */
+    172            USBH_DeInit(pdev, phost);
+    173            
+    174            /*Register class and user callbacks */
+    175            phost->class_cb = class_cb;
+    176            phost->usr_cb = usr_cb;  
+    177              
+    178            /* Start the USB OTG core */     
+    179             HCD_Init(pdev , coreID);
+    180             
+    181            /* Upon Init call usr call back */
+    182            phost->usr_cb->Init();
+    183            
+    184            /* Enable Interrupts */
+    185            USB_OTG_BSP_EnableInterrupt(pdev);
+    186          }
+    187          
+    188          /**
+    189            * @brief  USBH_DeInit 
+    190            *         Re-Initialize Host
+    191            * @param  None 
+    192            * @retval status: USBH_Status
+    193            */
+    194          USBH_Status USBH_DeInit(USB_OTG_CORE_HANDLE *pdev, USBH_HOST *phost)
+    195          {
+    196            /* Software Init */
+    197            
+    198            phost->gState = HOST_IDLE;
+    199            phost->gStateBkp = HOST_IDLE; 
+    200            phost->EnumState = ENUM_IDLE;
+    201            phost->RequestState = CMD_SEND;  
+    202            
+    203            phost->Control.state = CTRL_SETUP;
+    204            phost->Control.ep0size = USB_OTG_MAX_EP0_SIZE;  
+    205            
+    206            phost->device_prop.address = USBH_DEVICE_ADDRESS_DEFAULT;
+    207            phost->device_prop.speed = HPRT0_PRTSPD_FULL_SPEED;
+    208            
+    209            USBH_Free_Channel  (pdev, phost->Control.hc_num_in);
+    210            USBH_Free_Channel  (pdev, phost->Control.hc_num_out);  
+    211            return USBH_OK;
+    212          }
+    213          
+    214          /**
+    215          * @brief  USBH_Process
+    216          *         USB Host core main state machine process
+    217          * @param  None 
+    218          * @retval None
+    219          */
+    220          HOST_State USBH_Process(USB_OTG_CORE_HANDLE *pdev , USBH_HOST *phost)
+    221          {
+    222            volatile USBH_Status status = USBH_FAIL;
+    223          
+    224            static uint8_t HostDeviceCount = 0;
+    225            
+    226            
+    227            /* check for Host port events */
+    228            if ((HCD_IsDeviceConnected(pdev) == 0)&& (phost->gState != HOST_IDLE)) 
+    229            {
+    230              if(phost->gState != HOST_DEV_DISCONNECTED) 
+    231              {
+    232                phost->gState = HOST_DEV_DISCONNECTED;
+    233              }
+    234            }
+    235              
+    236            switch (phost->gState)
+    237            {
+    238            
+    239            case HOST_IDLE :
+    240              
+    241              if (HCD_IsDeviceConnected(pdev))  
+    242              {
+    243                phost->gState = HOST_DEV_ATTACHED;
+    244                USB_OTG_BSP_mDelay(100);
+    245              }
+    246              else	//Jerry add for new FW upgrade behavior
+    247              {
+    248                  USB_OTG_BSP_mDelay(10);
+    249          		HostDeviceCount ++;
+    250          
+    251          		/*Smith: Don't modify HostDeviceCount that interfere USB flash driver compatibility*/
+    252          		if ( HostDeviceCount >= 220 ) 
+    253          		{
+    254          			HostDeviceCount = 0;
+    255          			return 	HOST_ERROR_STATE;
+    256          		}
+    257              }
+    258              break;
+    259             
+    260            case HOST_DEV_ATTACHED :
+    261              
+    262              phost->usr_cb->DeviceAttached();
+    263              phost->Control.hc_num_out = USBH_Alloc_Channel(pdev, 0x00);
+    264              phost->Control.hc_num_in = USBH_Alloc_Channel(pdev, 0x80);  
+    265            
+    266              /* Reset USB Device */
+    267              if ( HCD_ResetPort(pdev) == 0)
+    268              {
+    269                phost->usr_cb->ResetDevice();
+    270                /*  Wait for USB USBH_ISR_PrtEnDisableChange()  
+    271                Host is Now ready to start the Enumeration 
+    272                */
+    273                
+    274                phost->device_prop.speed = HCD_GetCurrentSpeed(pdev);
+    275                
+    276                phost->gState = HOST_ENUMERATION;
+    277                phost->usr_cb->DeviceSpeedDetected(phost->device_prop.speed);
+    278                  
+    279                /* Open Control pipes */
+    280                USBH_Open_Channel (pdev,
+    281                                     phost->Control.hc_num_in,
+    282                                     phost->device_prop.address,
+    283                                     phost->device_prop.speed,
+    284                                     EP_TYPE_CTRL,
+    285                                     phost->Control.ep0size); 
+    286                
+    287                /* Open Control pipes */
+    288                USBH_Open_Channel (pdev,
+    289                                     phost->Control.hc_num_out,
+    290                                     phost->device_prop.address,
+    291                                     phost->device_prop.speed,
+    292                                     EP_TYPE_CTRL,
+    293                                     phost->Control.ep0size);          
+    294             }
+    295              break;
+    296              
+    297            case HOST_ENUMERATION:     
+    298              /* Check for enumeration status */  
+    299              if ( USBH_HandleEnum(pdev , phost) == USBH_OK)
+    300              { 
+    301                /* The function shall return USBH_OK when full enumeration is complete */
+    302                
+    303                /* user callback for end of device basic enumeration */
+    304                phost->usr_cb->EnumerationDone();
+    305                
+    306                phost->gState  = HOST_USR_INPUT;    
+    307              }
+    308              break;
+    309              
+    310            case HOST_USR_INPUT:    
+    311              /*The function should return user response true to move to class state */
+    312              if ( phost->usr_cb->UserInput() == USBH_USR_RESP_OK)
+    313              {
+    314                if((phost->class_cb->Init(pdev, phost))\
+    315                  == USBH_OK)
+    316                {
+    317                  phost->gState  = HOST_CLASS_REQUEST;     
+    318                }     
+    319              }   
+    320              break;
+    321              
+    322            case HOST_CLASS_REQUEST:  
+    323              /* process class standard contol requests state machine */ 
+    324              status = phost->class_cb->Requests(pdev, phost);
+    325              
+    326               if(status == USBH_OK)
+    327               {
+    328                 phost->gState  = HOST_CLASS;
+    329               }  
+    330               
+    331               else
+    332               {
+    333                 USBH_ErrorHandle(phost, status);
+    334               }
+    335           
+    336              
+    337              break;    
+    338            case HOST_CLASS:   
+    339              /* process class state machine */
+    340              status = phost->class_cb->Machine(pdev, phost);
+    341              USBH_ErrorHandle(phost, status);
+    342              break;       
+    343              
+    344            case HOST_CTRL_XFER:
+    345              /* process control transfer state machine */
+    346              USBH_HandleControl(pdev, phost);    
+    347              break;
+    348              
+    349            case HOST_SUSPENDED:
+    350              break;
+    351            
+    352            case HOST_ERROR_STATE:
+    353              /* Re-Initilaize Host for new Enumeration */
+    354              USBH_DeInit(pdev, phost);
+    355              phost->usr_cb->DeInit();
+    356              phost->class_cb->DeInit(pdev, &phost->device_prop);
+    357              break;
+    358              
+    359            case HOST_DEV_DISCONNECTED :
+    360              
+    361              /* Manage User disconnect operations*/
+    362              phost->usr_cb->DeviceDisconnected();
+    363              
+    364              /* Re-Initilaize Host for new Enumeration */
+    365              USBH_DeInit(pdev, phost);
+    366              phost->usr_cb->DeInit();
+    367              phost->class_cb->DeInit(pdev, &phost->device_prop); 
+    368              USBH_DeAllocate_AllChannel(pdev);  
+    369              phost->gState = HOST_IDLE;
+    370              
+    371              break;
+    372              
+    373            default :
+    374              break;
+    375          	
+    376            }
+    377          
+    378          	return phost->gState; /*smith implemented*/
+    379          }
+    380          
+    381          
+    382          /**
+    383            * @brief  USBH_ErrorHandle 
+    384            *         This function handles the Error on Host side.
+    385            * @param  errType : Type of Error or Busy/OK state
+    386            * @retval None
+    387            */
+    388          void USBH_ErrorHandle(USBH_HOST *phost, USBH_Status errType)
+    389          {
+    390            /* Error unrecovered or not supported device speed */
+    391            if ( (errType == USBH_ERROR_SPEED_UNKNOWN) ||
+    392                 (errType == USBH_UNRECOVERED_ERROR) )
+    393            {
+    394              phost->usr_cb->UnrecoveredError(); 
+    395              phost->gState = HOST_ERROR_STATE;   
+    396            }  
+    397            /* USB host restart requested from application layer */
+    398            else if(errType == USBH_APPLY_DEINIT)
+    399            {
+    400              phost->gState = HOST_ERROR_STATE;  
+    401              /* user callback for initalization */
+    402              phost->usr_cb->Init();
+    403            } 
+    404          }
+    405          
+    406          
+    407          /**
+    408            * @brief  USBH_HandleEnum 
+    409            *         This function includes the complete enumeration process
+    410            * @param  pdev: Selected device
+    411            * @retval USBH_Status
+    412            */
+    413          static USBH_Status USBH_HandleEnum(USB_OTG_CORE_HANDLE *pdev, USBH_HOST *phost)
+    414          {
+    415            USBH_Status Status = USBH_BUSY;  
+    416            uint8_t Local_Buffer[64];
+    417            
+    418            switch (phost->EnumState)
+    419            {
+    420            case ENUM_IDLE:  
+    421              /* Get Device Desc for only 1st 8 bytes : To get EP0 MaxPacketSize */
+    422              if ( USBH_Get_DevDesc(pdev , phost, 8) == USBH_OK)
+    423              {
+    424                phost->Control.ep0size = phost->device_prop.Dev_Desc.bMaxPacketSize;
+    425                
+    426                /* Issue Reset  */
+    427                HCD_ResetPort(pdev);
+    428                phost->EnumState = ENUM_GET_FULL_DEV_DESC;
+    429                
+    430                /* modify control channels configuration for MaxPacket size */
+    431                USBH_Modify_Channel (pdev,
+    432                                     phost->Control.hc_num_out,
+    433                                     0,
+    434                                     0,
+    435                                     0,
+    436                                     phost->Control.ep0size);
+    437                
+    438                USBH_Modify_Channel (pdev,
+    439                                     phost->Control.hc_num_in,
+    440                                     0,
+    441                                     0,
+    442                                     0,
+    443                                     phost->Control.ep0size);      
+    444              }
+    445              break;
+    446              
+    447            case ENUM_GET_FULL_DEV_DESC:  
+    448              /* Get FULL Device Desc  */
+    449              if ( USBH_Get_DevDesc(pdev, phost, USB_DEVICE_DESC_SIZE)\
+    450                == USBH_OK)
+    451              {
+    452                /* user callback for device descriptor available */
+    453                phost->usr_cb->DeviceDescAvailable(&phost->device_prop.Dev_Desc);      
+    454                phost->EnumState = ENUM_SET_ADDR;
+    455              }
+    456              break;
+    457             
+    458            case ENUM_SET_ADDR: 
+    459              /* set address */
+    460              if ( USBH_SetAddress(pdev, phost, USBH_DEVICE_ADDRESS) == USBH_OK)
+    461              {
+    462                USB_OTG_BSP_mDelay(2);
+    463                phost->device_prop.address = USBH_DEVICE_ADDRESS;
+    464                
+    465                /* user callback for device address assigned */
+    466                phost->usr_cb->DeviceAddressAssigned();
+    467                phost->EnumState = ENUM_GET_CFG_DESC;
+    468                
+    469                /* modify control channels to update device address */
+    470                USBH_Modify_Channel (pdev,
+    471                                     phost->Control.hc_num_in,
+    472                                     phost->device_prop.address,
+    473                                     0,
+    474                                     0,
+    475                                     0);
+    476                
+    477                USBH_Modify_Channel (pdev,
+    478                                     phost->Control.hc_num_out,
+    479                                     phost->device_prop.address,
+    480                                     0,
+    481                                     0,
+    482                                     0);         
+    483              }
+    484              break;
+    485              
+    486            case ENUM_GET_CFG_DESC:  
+    487              /* get standard configuration descriptor */
+    488              if ( USBH_Get_CfgDesc(pdev, 
+    489                                    phost,
+    490                                    USB_CONFIGURATION_DESC_SIZE) == USBH_OK)
+    491              {
+    492                phost->EnumState = ENUM_GET_FULL_CFG_DESC;
+    493              }
+    494              break;
+    495              
+    496            case ENUM_GET_FULL_CFG_DESC:  
+    497              /* get FULL config descriptor (config, interface, endpoints) */
+    498              if (USBH_Get_CfgDesc(pdev, 
+    499                                   phost,
+    500                                   phost->device_prop.Cfg_Desc.wTotalLength) == USBH_OK)
+    501              {
+    502                /* User callback for configuration descriptors available */
+    503                phost->usr_cb->ConfigurationDescAvailable(&phost->device_prop.Cfg_Desc,
+    504                                                                phost->device_prop.Itf_Desc,
+    505                                                                phost->device_prop.Ep_Desc[0]);
+    506                
+    507                phost->EnumState = ENUM_GET_MFC_STRING_DESC;
+    508              }
+    509              break;
+    510              
+    511            case ENUM_GET_MFC_STRING_DESC:  
+    512              if (phost->device_prop.Dev_Desc.iManufacturer != 0)
+    513              { /* Check that Manufacturer String is available */
+    514                
+    515                if ( USBH_Get_StringDesc(pdev,
+    516                                         phost,
+    517                                         phost->device_prop.Dev_Desc.iManufacturer, 
+    518                                         Local_Buffer , 
+    519                                         0xff) == USBH_OK)
+    520                {
+    521                  /* User callback for Manufacturing string */
+    522                  phost->usr_cb->ManufacturerString(Local_Buffer);
+    523                  phost->EnumState = ENUM_GET_PRODUCT_STRING_DESC;
+    524                }
+    525              }
+    526              else
+    527              {
+    528                phost->usr_cb->ManufacturerString("N/A");      
+    529                phost->EnumState = ENUM_GET_PRODUCT_STRING_DESC;
+    530              }
+    531              break;
+    532              
+    533            case ENUM_GET_PRODUCT_STRING_DESC:   
+    534              if (phost->device_prop.Dev_Desc.iProduct != 0)
+    535              { /* Check that Product string is available */
+    536                if ( USBH_Get_StringDesc(pdev,
+    537                                         phost,
+    538                                         phost->device_prop.Dev_Desc.iProduct, 
+    539                                         Local_Buffer, 
+    540                                         0xff) == USBH_OK)
+    541                {
+    542                  /* User callback for Product string */
+    543                  phost->usr_cb->ProductString(Local_Buffer);
+    544                  phost->EnumState = ENUM_GET_SERIALNUM_STRING_DESC;
+    545                }
+    546              }
+    547              else
+    548              {
+    549                phost->usr_cb->ProductString("N/A");
+    550                phost->EnumState = ENUM_GET_SERIALNUM_STRING_DESC;
+    551              } 
+    552              break;
+    553              
+    554            case ENUM_GET_SERIALNUM_STRING_DESC:   
+    555              if (phost->device_prop.Dev_Desc.iSerialNumber != 0)
+    556              { /* Check that Serial number string is available */    
+    557                if ( USBH_Get_StringDesc(pdev, 
+    558                                         phost,
+    559                                         phost->device_prop.Dev_Desc.iSerialNumber, 
+    560                                         Local_Buffer, 
+    561                                         0xff) == USBH_OK)
+    562                {
+    563                  /* User callback for Serial number string */
+    564                  phost->usr_cb->SerialNumString(Local_Buffer);
+    565                  phost->EnumState = ENUM_SET_CONFIGURATION;
+    566                }
+    567              }
+    568              else
+    569              {
+    570                phost->usr_cb->SerialNumString("N/A");      
+    571                phost->EnumState = ENUM_SET_CONFIGURATION;
+    572              }  
+    573              break;
+    574                
+    575            case ENUM_SET_CONFIGURATION:
+    576              /* set configuration  (default config) */
+    577              if (USBH_SetCfg(pdev, 
+    578                              phost,
+    579                              phost->device_prop.Cfg_Desc.bConfigurationValue) == USBH_OK)
+    580              {
+    581                phost->EnumState = ENUM_DEV_CONFIGURED;
+    582              }
+    583              break;
+    584          
+    585              
+    586            case ENUM_DEV_CONFIGURED:
+    587              /* user callback for enumeration done */
+    588              Status = USBH_OK;
+    589              break;
+    590              
+    591            default:
+    592              break;
+    593            }  
+    594            return Status;
+    595          }
+    596          
+    597          
+    598          /**
+    599            * @brief  USBH_HandleControl
+    600            *         Handles the USB control transfer state machine
+    601            * @param  pdev: Selected device
+    602            * @retval Status
+    603            */
+    604          USBH_Status USBH_HandleControl (USB_OTG_CORE_HANDLE *pdev, USBH_HOST *phost)
+    605          {
+    606            uint8_t direction;  
+    607            static uint16_t timeout = 0;
+    608            USBH_Status status = USBH_OK;
+    609            URB_STATE URB_Status = URB_IDLE;
+    610            
+    611            phost->Control.status = CTRL_START;
+    612          
+    613            
+    614            switch (phost->Control.state)
+    615            {
+    616            case CTRL_SETUP:
+    617              /* send a SETUP packet */
+    618              USBH_CtlSendSetup     (pdev, 
+    619          	                   phost->Control.setup.d8 , 
+    620          	                   phost->Control.hc_num_out);  
+    621              phost->Control.state = CTRL_SETUP_WAIT;  
+    622              break; 
+    623              
+    624            case CTRL_SETUP_WAIT:
+    625              
+    626              URB_Status = HCD_GetURB_State(pdev , phost->Control.hc_num_out); 
+    627              /* case SETUP packet sent successfully */
+    628              if(URB_Status == URB_DONE)
+    629              { 
+    630                direction = (phost->Control.setup.b.bmRequestType & USB_REQ_DIR_MASK);
+    631                
+    632                /* check if there is a data stage */
+    633                if (phost->Control.setup.b.wLength.w != 0 )
+    634                {        
+    635                  timeout = DATA_STAGE_TIMEOUT;
+    636                  if (direction == USB_D2H)
+    637                  {
+    638                    /* Data Direction is IN */
+    639                    phost->Control.state = CTRL_DATA_IN;
+    640                  }
+    641                  else
+    642                  {
+    643                    /* Data Direction is OUT */
+    644                    phost->Control.state = CTRL_DATA_OUT;
+    645                  } 
+    646                }
+    647                /* No DATA stage */
+    648                else
+    649                {
+    650                  timeout = NODATA_STAGE_TIMEOUT;
+    651                  
+    652                  /* If there is No Data Transfer Stage */
+    653                  if (direction == USB_D2H)
+    654                  {
+    655                    /* Data Direction is IN */
+    656                    phost->Control.state = CTRL_STATUS_OUT;
+    657                  }
+    658                  else
+    659                  {
+    660                    /* Data Direction is OUT */
+    661                    phost->Control.state = CTRL_STATUS_IN;
+    662                  } 
+    663                }          
+    664                /* Set the delay timer to enable timeout for data stage completion */
+    665                phost->Control.timer = HCD_GetCurrentFrame(pdev);
+    666              }
+    667              else if(URB_Status == URB_ERROR)
+    668              {
+    669                phost->Control.state = CTRL_ERROR;     
+    670                phost->Control.status = CTRL_XACTERR;
+    671              }    
+    672              break;
+    673              
+    674            case CTRL_DATA_IN:  
+    675              /* Issue an IN token */ 
+    676              USBH_CtlReceiveData(pdev,
+    677                                  phost->Control.buff, 
+    678                                  phost->Control.length,
+    679                                  phost->Control.hc_num_in);
+    680           
+    681              phost->Control.state = CTRL_DATA_IN_WAIT;
+    682              break;    
+    683              
+    684            case CTRL_DATA_IN_WAIT:
+    685              
+    686              URB_Status = HCD_GetURB_State(pdev , phost->Control.hc_num_in); 
+    687              
+    688              /* check is DATA packet transfered successfully */
+    689              if  (URB_Status == URB_DONE)
+    690              { 
+    691                phost->Control.state = CTRL_STATUS_OUT;
+    692              }
+    693             
+    694              /* manage error cases*/
+    695              if  (URB_Status == URB_STALL) 
+    696              { 
+    697                /* In stall case, return to previous machine state*/
+    698                phost->gState =   phost->gStateBkp;
+    699              }   
+    700              else if (URB_Status == URB_ERROR)
+    701              {
+    702                /* Device error */
+    703                phost->Control.state = CTRL_ERROR;    
+    704              }
+    705              else if ((HCD_GetCurrentFrame(pdev)- phost->Control.timer) > timeout)
+    706              {
+    707                /* timeout for IN transfer */
+    708                phost->Control.state = CTRL_ERROR; 
+    709              }   
+    710              break;
+    711              
+    712            case CTRL_DATA_OUT:
+    713              /* Start DATA out transfer (only one DATA packet)*/
+    714              pdev->host.hc[phost->Control.hc_num_out].toggle_out = 1; 
+    715                  
+    716              USBH_CtlSendData (pdev,
+    717                                phost->Control.buff, 
+    718                                phost->Control.length , 
+    719                                phost->Control.hc_num_out);
+    720              
+    721          
+    722          
+    723          
+    724              
+    725              phost->Control.state = CTRL_DATA_OUT_WAIT;
+    726              break;
+    727              
+    728            case CTRL_DATA_OUT_WAIT:
+    729              
+    730              URB_Status = HCD_GetURB_State(pdev , phost->Control.hc_num_out);     
+    731              if  (URB_Status == URB_DONE)
+    732              { /* If the Setup Pkt is sent successful, then change the state */
+    733                phost->Control.state = CTRL_STATUS_IN;
+    734              }
+    735              
+    736              /* handle error cases */
+    737              else if  (URB_Status == URB_STALL) 
+    738              { 
+    739                /* In stall case, return to previous machine state*/
+    740                phost->gState =   phost->gStateBkp;
+    741                phost->Control.state = CTRL_STALLED;  
+    742              } 
+    743              else if  (URB_Status == URB_NOTREADY)
+    744              { 
+    745                /* Nack received from device */
+    746                phost->Control.state = CTRL_DATA_OUT;
+    747              }    
+    748              else if (URB_Status == URB_ERROR)
+    749              {
+    750                /* device error */
+    751                phost->Control.state = CTRL_ERROR;      
+    752              } 
+    753              break;
+    754              
+    755              
+    756            case CTRL_STATUS_IN:
+    757              /* Send 0 bytes out packet */
+    758              USBH_CtlReceiveData (pdev,
+    759                                   0,
+    760                                   0,
+    761                                   phost->Control.hc_num_in);
+    762              
+    763              phost->Control.state = CTRL_STATUS_IN_WAIT;
+    764              
+    765              break;
+    766              
+    767            case CTRL_STATUS_IN_WAIT:
+    768              
+    769              URB_Status = HCD_GetURB_State(pdev , phost->Control.hc_num_in); 
+    770              
+    771              if  ( URB_Status == URB_DONE)
+    772              { /* Control transfers completed, Exit the State Machine */
+    773                phost->gState =   phost->gStateBkp;
+    774                phost->Control.state = CTRL_COMPLETE;
+    775              }
+    776              
+    777              else if (URB_Status == URB_ERROR)
+    778              {
+    779                phost->Control.state = CTRL_ERROR;  
+    780              }
+    781              
+    782              else if((HCD_GetCurrentFrame(pdev)\
+    783                - phost->Control.timer) > timeout)
+    784              {
+    785                phost->Control.state = CTRL_ERROR; 
+    786              }
+    787               else if(URB_Status == URB_STALL)
+    788              {
+    789                /* Control transfers completed, Exit the State Machine */
+    790                phost->gState =   phost->gStateBkp;
+    791                phost->Control.status = CTRL_STALL;
+    792                status = USBH_NOT_SUPPORTED;
+    793              }
+    794              break;
+    795              
+    796            case CTRL_STATUS_OUT:
+    797              pdev->host.hc[phost->Control.hc_num_out].toggle_out ^= 1; 
+    798              USBH_CtlSendData (pdev,
+    799                                0,
+    800                                0,
+    801                                phost->Control.hc_num_out);
+    802              
+    803              phost->Control.state = CTRL_STATUS_OUT_WAIT;
+    804              break;
+    805              
+    806            case CTRL_STATUS_OUT_WAIT: 
+    807              
+    808              URB_Status = HCD_GetURB_State(pdev , phost->Control.hc_num_out);  
+    809              if  (URB_Status == URB_DONE)
+    810              { 
+    811                phost->gState =   phost->gStateBkp; 
+    812                phost->Control.state = CTRL_COMPLETE; 
+    813              }
+    814              else if  (URB_Status == URB_NOTREADY)
+    815              { 
+    816                phost->Control.state = CTRL_STATUS_OUT;
+    817              }      
+    818              else if (URB_Status == URB_ERROR)
+    819              {
+    820                phost->Control.state = CTRL_ERROR;      
+    821              }
+    822              break;
+    823              
+    824            case CTRL_ERROR:
+    825              /* 
+    826              After a halt condition is encountered or an error is detected by the 
+    827              host, a control endpoint is allowed to recover by accepting the next Setup 
+    828              PID; i.e., recovery actions via some other pipe are not required for control
+    829              endpoints. For the Default Control Pipe, a device reset will ultimately be 
+    830              required to clear the halt or error condition if the next Setup PID is not 
+    831              accepted.
+    832              */
+    833              if (++ phost->Control.errorcount <= USBH_MAX_ERROR_COUNT)
+    834              {
+    835                /* Do the transmission again, starting from SETUP Packet */
+    836                phost->Control.state = CTRL_SETUP; 
+    837              }
+    838              else
+    839              {
+    840                phost->Control.status = CTRL_FAIL;
+    841                phost->gState =   phost->gStateBkp;
+    842                
+    843                status = USBH_FAIL;
+    844              }
+    845              break;
+    846              
+    847            default:
+    848              break;
+    849            }
+    850            return status;
+    851          }
+    852          
+    853          
+    854          /**
+    855          * @}
+    856          */ 
+    857          
+    858          /**
+    859          * @}
+    860          */ 
+    861          
+    862          /**
+    863          * @}
+    864          */
+    865          
+    866          /**
+    867          * @}
+    868          */ 
+    869          
+    870          /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+    871          
+    872          
+    873          
+    874          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        0  USBH_Connected
+       16  USBH_DeInit
+             16 -> USBH_Free_Channel
+        0  USBH_Disconnected
+        8  USBH_ErrorHandle
+              0 -- Indirect call
+              8 -- Indirect call
+       24  USBH_HandleControl
+             24 -> HCD_GetCurrentFrame
+             24 -> HCD_GetURB_State
+             24 -> USBH_CtlReceiveData
+             24 -> USBH_CtlSendData
+             24 -> USBH_CtlSendSetup
+       96  USBH_HandleEnum
+             96 -- Indirect call
+             96 -> HCD_ResetPort
+             96 -> USBH_Get_CfgDesc
+             96 -> USBH_Get_DevDesc
+             96 -> USBH_Get_StringDesc
+             96 -> USBH_Modify_Channel
+             96 -> USBH_SetAddress
+             96 -> USBH_SetCfg
+             96 -> USB_OTG_BSP_mDelay
+       24  USBH_Init
+             24 -- Indirect call
+             24 -> HCD_Init
+             24 -> USBH_DeInit
+             24 -> USB_OTG_BSP_ConfigVBUS
+              0 -> USB_OTG_BSP_EnableInterrupt
+             24 -> USB_OTG_BSP_Init
+       24  USBH_Process
+             24 -- Indirect call
+             24 -> HCD_GetCurrentSpeed
+             24 -> HCD_IsDeviceConnected
+             24 -> HCD_ResetPort
+             24 -> USBH_Alloc_Channel
+             24 -> USBH_DeAllocate_AllChannel
+             24 -> USBH_DeInit
+             24 -> USBH_ErrorHandle
+             24 -> USBH_HandleControl
+             24 -> USBH_HandleEnum
+             24 -> USBH_Open_Channel
+             24 -> USB_OTG_BSP_mDelay
+        0  USBH_SOF
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ?<Constant "N/A">
+       4  ??DataTable2
+       4  ??DataTable3
+       4  ??DataTable3_1
+       8  ?Subroutine0
+       8  ?Subroutine1
+      12  ?Subroutine2
+      18  ?Subroutine3
+      14  ?Subroutine4
+       1  HostDeviceCount
+       4  USBH_Connected
+      56  USBH_DeInit
+       2  USBH_Disconnected
+      48  USBH_ErrorHandle
+      12  USBH_HCD_INT_cb
+       4  USBH_HCD_INT_fops
+     422  USBH_HandleControl
+     392  USBH_HandleEnum
+      64  USBH_Init
+     388  USBH_Process
+       4  USBH_SOF
+       2  timeout
+
+ 
+     3 bytes in section .bss
+    16 bytes in section .data
+     4 bytes in section .rodata
+ 1 452 bytes in section .text
+ 
+ 1 452 bytes of CODE  memory
+     4 bytes of CONST memory
+    19 bytes of DATA  memory
+
+Errors: none
+Warnings: none

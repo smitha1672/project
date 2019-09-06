@@ -1,0 +1,500 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:23:30 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\osd_drv\si_drv_o #
+#                    sd_ram.c                                                 #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\osd_drv\si_drv_o #
+#                    sd_ram.c -D S4051A -D DEBUG -D FREE_RTOS -D              #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_drv_osd_ram.lst                                    #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_drv_osd_ram.o                                       #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\driver\osd_drv\si_drv_osd_ram.c
+      1          //***************************************************************************
+      2          //!file     si_drv_osd_ram.c
+      3          //!brief    Silicon Image OSD Driver OSD RAM read/write.
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2011-2012, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include "string.h"
+     14          #include "si_drv_osd_internal.h"
+     15          #include "si_drv_internal.h"
+     16          #include "si_regs_osd.h"
+     17          #include "si_drv_tpg.h"
+     18          #include "si_regs_tpg953x.h"
+     19          
+     20          //-------------------------------------------------------------------------------------------------
+     21          //! @brief      Wait for OSD write operation to complete
+     22          //! @return     true - completed successfully, false: timed out @ 100ms
+     23          //-------------------------------------------------------------------------------------------------
+     24          bool_t OsdWaitForWriteIntDone(void)
+     25          {
+     26              clock_time_t start = SiiPlatformTimerSysTicksGet();
+     27              while (SkTimeDiffMs(start, SiiPlatformTimerSysTicksGet()) < 200)
+     28              {
+     29                  if ( SiiRegRead( REG_INT_STATUS_OSD) & BIT_RAM_I2C_WR_DONE)
+     30                  {
+     31                      SiiRegWrite( REG_INT_STATUS_OSD, BIT_RAM_I2C_WR_DONE ); // Clear the flag
+     32                      return true;
+     33                  }
+     34              }
+     35              DEBUG_PRINT( MSG_DBG, "FP1519: -------------------------->>> OsdWaitForWriteIntDone: TIME OUT\n" );
+     36              return false;
+     37          }
+     38          
+     39          //-------------------------------------------------------------------------------------------------
+     40          //! @brief      Determines if it is OK to read/write OSDRAM, and if not, disables OSD to allow
+     41          //!             read/write to occur.
+     42          //-------------------------------------------------------------------------------------------------
+     43          static void OsdRamEnableReadWrite ( void )
+     44          {
+     45              if (!( SiiRegRead( REG_OSD_WIN_CTRL )   & BIT_OSD_ENABLE )    ||                        // OSD is disabled (OSDRAM is using XCLK)
+     46                  ( SiiRegRead( REG_MP_GCP_STATUS )   & BIT_MP_RES_STABLE ) ||                        // TMDS Clock source is stable
+     47                 (( SiiRegRead( REG_VPG_CTRL_3 )      & MSK_VPG_CLK_SEL) == (SI_TPG_CLK_XCLK << 1)) ) // TPG Clock source is present
+     48              {
+     49                  return;
+     50              }
+     51              DEBUG_PRINT( MSG_DBG, "*");
+     52              DrvOsdDisableInternal();
+     53          }
+     54          
+     55          
+     56          //-------------------------------------------------------------------------------------------------
+     57          //! @brief      Write passed byte data to the OSD RAM via I2C
+     58          //! @param[in]  osdWordAddr     - Starting OSD WORD address within OSD RAM
+     59          //! @param[in]  osdWordCount    - Length in RAM words (6 bytes/word).
+     60          //! @param[in]  pByteData       - pointer to byte array to be written to OSD RAM.
+     61          //-------------------------------------------------------------------------------------------------
+     62          bool_t SiiDrvOsdRamI2cWrite ( int osdWordAddr,  int osdWordCount, uint8_t *pByteData )
+     63          {
+     64          	int         i, count;
+     65          	bool_t      success = false;
+     66          	uint8_t     *pData;
+     67          	
+     68              for ( ;; )
+     69              {
+     70                  pData = pByteData;
+     71                  count = osdWordCount;
+     72          
+     73                  OsdRamEnableReadWrite();    // Force correct conditions to allow read/write
+     74          
+     75                  SiiRegModify(REG_OSD_ACCESS_CTRL, ~REG_BIT_INDEX_PATCH_EN, CLEAR_BITS); // Clear all but patch index enable
+     76          
+     77                  // Set up write address and word count
+     78                  SiiRegWrite(REG_OSD_RAM_ADDR_L, osdWordAddr & 0xFF);
+     79                  SiiRegWrite(REG_OSD_RAM_ADDR_H, (osdWordAddr >> 0x08) & 0x07);
+     80                  SiiRegWrite(REG_OSD_RAM_WORD_COUNT_L, osdWordCount & 0xFF);
+     81                  SiiRegWrite(REG_OSD_RAM_WORD_COUNT_H, (osdWordCount >> 0x08) & 0x0F);
+     82          
+     83                  //Strobe to start OSD RAM Write
+     84                  SiiRegModify(REG_OSD_ACCESS_CTRL, REG_BIT_I2C_TO_RAM_EN | REG_BIT_I2C_RAM_WRITE, SET_BITS);
+     85          
+     86                  //Write data to OSD RAM
+     87                  while ( count--)
+     88                  {
+     89                      for ( i = 0; i < OSD_RAM_BURST_SIZE; i++)
+     90                      {
+     91                          SiiRegWrite( REG_OSD_RAM_WR_DATA, *pData++);
+     92                      }
+     93                  }
+     94          
+     95                  if ( SiiRegRead( REG_INT_STATUS_OSD) & BIT_RAM_I2C_WR_DONE)
+     96                  {
+     97                      success = true;
+     98                      SiiRegWrite( REG_INT_STATUS_OSD, BIT_RAM_I2C_WR_DONE ); // Clear the flag
+     99                      break;
+    100                  }
+    101                  else
+    102                  {
+    103                      // Are we in OSD_EN state or internal clock?
+    104                      if ( SiiRegRead( REG_OSD_WIN_CTRL ) & BIT_OSD_ENABLE )
+    105                      {
+    106                          // Force switch to XCLK.  The write will be tried again.
+    107                          DrvOsdDisableInternal();
+    108                      }
+    109                      else
+    110                      {
+    111                          // We are already using internal clock, so break off the attempt.
+    112                          break;
+    113                      }
+    114                  }
+    115              }
+    116          
+    117              pDrvOsd->lastResultCode = success ? SII_OSDDRV_SUCCESS : SII_OSDDRV_OSDRAM_ACCESS_ERR;
+    118          	return( success );
+    119          }
+    120          
+    121          //-------------------------------------------------------------------------------------------------
+    122          //! @brief      Read OSD RAM data into passed byte array via I2C
+    123          //! @param[in]  osdWordAddr     - Starting OSD WORD address within OSD RAM
+    124          //! @param[in]  osdWordCount    - Length in RAM words (6 bytes/word).
+    125          //! @param[in]  pByteData       - pointer to byte array to be written from OSD RAM.
+    126          //-------------------------------------------------------------------------------------------------
+    127          bool_t SiiDrvOsdRamI2cRead ( int osdWordAddr,  int osdWordCount, uint8_t *pByteData )
+    128          {
+    129              int             i, count;
+    130              uint8_t         *pData;
+    131          	int             outIndex;
+    132          	bool_t          success = false;
+    133          
+    134              for ( ;; )
+    135              {
+    136                  pData = pByteData;
+    137                  count = osdWordCount;
+    138          
+    139                  OsdRamEnableReadWrite();    // Force correct conditions to allow read/write
+    140          
+    141                  // Set up read address and word count
+    142                  SiiRegWrite( REG_OSD_RAM_ADDR_L, osdWordAddr & 0xFF);
+    143                  SiiRegWrite( REG_OSD_RAM_ADDR_H, (osdWordAddr >> 0x08) & 0x0F);
+    144                  SiiRegWrite( REG_OSD_RAM_WORD_COUNT_L, osdWordCount & 0xFF);
+    145                  SiiRegWrite( REG_OSD_RAM_WORD_COUNT_H, (osdWordCount >> 0x08) & 0x0F);
+    146          
+    147                  // Strobe to start read.
+    148                  SiiRegModify( REG_OSD_ACCESS_CTRL, REG_BIT_I2C_RAM_RD, SET_BITS);
+    149          
+    150                  // Read requested OSDRAM data.
+    151                  outIndex = 0;
+    152                  while ( count--  )
+    153                  {
+    154                      //Store the data to the output array
+    155                      for ( i=0; i < OSD_RAM_BURST_SIZE; i ++)
+    156                      {
+    157                          pData[ outIndex++] =  SiiRegRead( REG_OSD_RAM_RD_DATA0 + i );
+    158                      }
+    159                  }
+    160          
+    161                  // Report done flag state
+    162                  success = ((SiiRegRead(REG_INT_STATUS_OSD) & REG_BIT_RAM_I2C_RD_DONE) != 0);
+    163                  if ( success )
+    164                  {
+    165                      SiiRegWrite( REG_INT_STATUS_OSD, REG_BIT_RAM_I2C_RD_DONE ); // Clear the flag
+    166                      break;
+    167                  }
+    168                  else
+    169                  {
+    170                      // Are we in OSD_EN state or internal clock?
+    171                      if ( SiiRegRead( REG_OSD_WIN_CTRL ) & BIT_OSD_ENABLE )
+    172                      {
+    173                          // Force switch to XCLK.  The read will be tried again.
+    174                          DrvOsdDisableInternal();
+    175          
+    176                          // Attempt to flush any remaining read data
+    177                          count = osdWordCount;
+    178                          while ((count != 0 ) && ((SiiRegRead(REG_INT_STATUS_OSD) & REG_BIT_RAM_I2C_RD_DONE) == 0))
+    179                          {
+    180                              count--;
+    181                              // send the data to a bit bucket
+    182                              for ( i = 0; i < OSD_RAM_BURST_SIZE ; i++ )
+    183                              {
+    184                                  SiiRegRead( REG_OSD_RAM_RD_DATA0 + i );
+    185                              }
+    186                          }
+    187                          if ( ((SiiRegRead(REG_INT_STATUS_OSD) & REG_BIT_RAM_I2C_RD_DONE) != 0) )
+    188                          {
+    189                              SiiRegWrite( REG_INT_STATUS_OSD, REG_BIT_RAM_I2C_RD_DONE ); // Clear the flag
+    190                          }
+    191                      }
+    192                      else
+    193                      {
+    194                          // We are already using internal clock, so break off the attempt.
+    195                          break;
+    196                      }
+    197                  }
+    198              }
+    199          
+    200              pDrvOsd->lastResultCode = success ? SII_OSDDRV_SUCCESS : SII_OSDDRV_OSDRAM_ACCESS_ERR;
+    201          	return( success );
+    202          }
+    203          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        8  OsdRamEnableReadWrite
+              8 -> DrvOsdDisableInternal
+              8 -> SiiRegRead
+       16  OsdWaitForWriteIntDone
+             16 -> SiiPlatformTimerSysTicksGet
+             16 -> SiiRegRead
+             16 -> SiiRegWrite
+       32  SiiDrvOsdRamI2cRead
+             32 -> DrvOsdDisableInternal
+             32 -> OsdRamEnableReadWrite
+             32 -> SiiRegModify
+             32 -> SiiRegRead
+             32 -> SiiRegWrite
+       40  SiiDrvOsdRamI2cWrite
+             40 -> DrvOsdDisableInternal
+             40 -> OsdRamEnableReadWrite
+             40 -> SiiRegModify
+             40 -> SiiRegRead
+             40 -> SiiRegWrite
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+      14  ?Subroutine0
+       8  ?Subroutine1
+       8  ?Subroutine2
+      10  ?Subroutine3
+      10  ?Subroutine4
+      10  ?Subroutine5
+      48  OsdRamEnableReadWrite
+      54  OsdWaitForWriteIntDone
+     190  SiiDrvOsdRamI2cRead
+     146  SiiDrvOsdRamI2cWrite
+
+ 
+ 502 bytes in section .text
+ 
+ 502 bytes of CODE memory
+
+Errors: none
+Warnings: 1

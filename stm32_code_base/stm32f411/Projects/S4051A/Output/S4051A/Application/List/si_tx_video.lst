@@ -1,0 +1,715 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:23:52 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\tx\si_tx_vide #
+#                    o.c                                                      #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\tx\si_tx_vide #
+#                    o.c -D S4051A -D DEBUG -D FREE_RTOS -D STM32F40_41xxx    #
+#                    -D USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D          #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_tx_video.lst                                       #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_tx_video.o                                          #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\component\tx\si_tx_video.c
+      1          //************************************************************************************************
+      2          //! @file   si_tx_video.c
+      3          //! @brief  Video Conversion Control
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1060 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2002-2010, Silicon Image, Inc.  All rights reserved.
+     11          //************************************************************************************************/
+     12          
+     13          #include <string.h>
+     14          #include "si_tx_component_internal.h"
+     15          #include "si_drv_tpi_system.h"
+     16          #include "si_tx_video.h"
+     17          #include "si_tx_avi.h"
+     18          #include "si_tx_info_frm.h"
+     19          #include "si_tx_hdcp.h"
+     20          #include "si_edid_tx_component.h"
+     21          
+     22          #if (SI_TX_VIDEO_CONVERSION == ENABLE)
+     23          //-------------------------------------------------------------------------------------------------
+     24          // Module Instance Data
+     25          //-------------------------------------------------------------------------------------------------
+     26          
+     27          txVideoConversionInstanceRecord_t VideoConversionInstRec[SII_NUM_TX];
+     28          txVideoConversionInstanceRecord_t *pVideo = &VideoConversionInstRec[0];
+     29          
+     30          
+     31          //-------------------------------------------------------------------------------------------------
+     32          //  Local service functions
+     33          //-------------------------------------------------------------------------------------------------
+     34          
+     35          //-------------------------------------------------------------------------------------------------
+     36          //! @brief      Figure out the best color depth to provide on HDMI output based on the input video
+     37          //!             bus mode and video format.
+     38          //!
+     39          //! @param[in]  vbusColorDepth   - color bit depth of input video,
+     40          //! @param[in]  videoFormatIndex - input video format ID.
+     41          //!
+     42          //! @return     Color depth of output video after conversion.
+     43          //-------------------------------------------------------------------------------------------------
+     44          
+     45          static txVbusColDepth_t DetermineHdmiOutputColorDepth(txVbusColDepth_t vbusColorDepth, uint8_t videoFormatIndex)
+     46          {
+     47              txVbusColDepth_t outputColorDepth = SI_TX_VBUS_BITS_PER_COLOR_8;
+     48              uint8_t outputPixelFreqMHz;
+     49              bool_t doesDownstreamSupportColorDepth[SI_TX_VBUS_BITS_PER_COLOR_LENGTH] =
+     50              { 1, }; // 8bit color is always supported
+     51              uint16_t dsMaxTmdsClockMHz;
+     52          
+     53              // Determine pixel clock frequency of output video
+     54              switch (videoFormatIndex)
+     55              {
+     56                  case SI_VIDEO_MODE_NON_STD:
+     57                      // Suppose PC mode has no repetition and no MUX formats.
+     58                      outputPixelFreqMHz = TxPixelFreqMhzGet();
+     59                      break;
+     60                  default:
+     61                      outputPixelFreqMHz = VideoModeTable[videoFormatIndex].PixFreq;
+     62              }
+     63          
+     64              // check Deep Color restrictions
+     65              doesDownstreamSupportColorDepth[SI_TX_VBUS_BITS_PER_COLOR_16] = SiiEdidTxDoesDsSupport(SI_EDID_TX_SUPPORT_DEEP_COLOR_48_BIT);
+     66              doesDownstreamSupportColorDepth[SI_TX_VBUS_BITS_PER_COLOR_12] = SiiEdidTxDoesDsSupport(SI_EDID_TX_SUPPORT_DEEP_COLOR_36_BIT);
+     67              doesDownstreamSupportColorDepth[SI_TX_VBUS_BITS_PER_COLOR_10] = SiiEdidTxDoesDsSupport(SI_EDID_TX_SUPPORT_DEEP_COLOR_30_BIT);
+     68          
+     69              dsMaxTmdsClockMHz = SiiEdidTxDsMaxTmdsClkGet();
+     70          
+     71              if (dsMaxTmdsClockMHz == 0)
+     72              {
+     73                  dsMaxTmdsClockMHz = 165; // 165 MHz by default
+     74              }
+     75          
+     76              if (outputPixelFreqMHz > 0)
+     77              {
+     78                  // Set the desired output color depth to the maximum allowed by the DS TMDS clock
+     79                  if (outputPixelFreqMHz * 2 <= dsMaxTmdsClockMHz)
+     80                  {
+     81                      // TMDS_CLK = PIX_CLK * 2
+     82                      outputColorDepth = SI_TX_VBUS_BITS_PER_COLOR_16;
+     83                  }
+     84                  else if (outputPixelFreqMHz * 3 <= dsMaxTmdsClockMHz * 2)
+     85                  {
+     86                      // TMDS_CLK = PIX_CLK * 1.5
+     87                      outputColorDepth = SI_TX_VBUS_BITS_PER_COLOR_12;
+     88                  }
+     89                  else if (outputPixelFreqMHz * 5 <= dsMaxTmdsClockMHz * 4)
+     90                  {
+     91                      // TMDS_CLK = PIX_CLK * 1.25
+     92                      outputColorDepth = SI_TX_VBUS_BITS_PER_COLOR_10;
+     93                  }
+     94          
+     95                  // Limit output color depth by the input color depth
+     96                  if (outputColorDepth > vbusColorDepth)
+     97                  {
+     98                      outputColorDepth = vbusColorDepth;
+     99                  }
+    100          
+    101                  // Find the highest supported bit depth that is equal or lower the input depth
+    102                  while (!doesDownstreamSupportColorDepth[outputColorDepth])
+    103                  {
+    104                      // Gradually reduce the bit depth to find the first supported one.
+    105                      // The cycle will break in the worst case, when outputColorDepth = 0
+    106                      outputColorDepth--;
+    107                  }
+    108              }
+    109          
+    110              return outputColorDepth;
+    111          }
+    112          
+    113          
+    114          //-------------------------------------------------------------------------------------------------
+    115          //! @brief      Determine if input video range is limited and has to be expanded as required
+    116          //!             by the downstream device.
+    117          //!
+    118          //! @param[in]  isPcVideoFormat - true, if the video format belongs to PC group
+    119          //!
+    120          //! @retval     true  - expansion is needed
+    121          //! @retval     false - expansion is not required
+    122          //-------------------------------------------------------------------------------------------------
+    123          
+    124          static bool_t IsVideoRangeExpansionNeeded(bool_t isPcVideoFormat)
+    125          {
+    126              bool_t isExpansionNeeded = false;
+    127          
+    128              if (isPcVideoFormat)
+    129              {
+    130                  isExpansionNeeded = true;
+    131              }
+    132              else if (!SiiEdidTxDoesDsSupport(SI_EDID_TX_SUPPORT_HDMI)) // for DS DVI devices
+    133              {
+    134                  // If TX input is YCbCr (which is always in the Limited Range)
+    135                  // and output is DVI (which is always RGB)
+    136                  // and the DS device is known as expecting RGB Full Range
+    137                  // then enable Limited->Full range expansion.
+    138                  if (SiiEdidTxDsDeviceRemedyMaskGet() & SI_TX_EDID_REMEDY_DVI_PC_RANGE)
+    139                  {
+    140                      isExpansionNeeded = true;
+    141                  }
+    142              }
+    143          
+    144              return isExpansionNeeded;
+    145          }
+    146          
+    147          
+    148          
+    149          
+    150          //-------------------------------------------------------------------------------------------------
+    151          //  TX Video Path API functions
+    152          //-------------------------------------------------------------------------------------------------
+    153          
+    154          //-------------------------------------------------------------------------------------------------
+    155          //! @brief      Select Tx device instance in multi-transmitter system.
+    156          //!
+    157          //! @param[in]  device_idx - zero based index of an instance.
+    158          //-------------------------------------------------------------------------------------------------
+    159          
+    160          #if SII_NUM_TX > 1
+    161          void TxVideoConversionInstanceSet(uint8_t deviceIndex)
+    162          {
+    163              if(deviceIndex < SII_NUM_TX)
+    164              {
+    165                  pVideo = &VideoConversionInstRec[deviceIndex];
+    166              }
+    167          }
+    168          #endif // SII_NUM_TX > 1
+    169          
+    170          
+    171          //-------------------------------------------------------------------------------------------------
+    172          //! @brief      Reset Deep Color mode.
+    173          //-------------------------------------------------------------------------------------------------
+    174          
+    175          void TxVideoConversionReset(void)
+    176          {
+    177              if(pVideo->isDeepColorMode)
+    178              {
+    179                  pVideo->isDeepColorMode = false;
+    180                  DEBUG_PRINT(TX_MSG_DBG, "DC Off\n");
+    181              }
+    182          }
+    183          
+    184          //-------------------------------------------------------------------------------------------------
+    185          //! @brief      Initialization of video conversion module.
+    186          //-------------------------------------------------------------------------------------------------
+    187          
+    188          void TxVideoConversionInit(void)
+    189          {
+    190              pVideo->isDeepColorMode = false;
+    191              pVideo->outColorSpace = SI_TX_VBUS_COLOR_SPACE_RGB;
+    192          
+    193              pVideo->prevColorDepth = SI_TX_VBUS_BITS_PER_COLOR_8;
+    194              pVideo->isDcResetNeeded = false;
+    195              pVideo->isDitheringEnabled = false;
+    196              pVideo->isPrevColorSpaceYCbCr = false;
+    197              pVideo->isForceOutColorSpace = false;
+    198          
+    199              TxVideoBlankingLevelsSet(false, true);
+    200          }
+    201          
+    202          
+    203          //-------------------------------------------------------------------------------------------------
+    204          //! @brief      Enable LSB data dithering mode in order to smooth color gradients.
+    205          //-------------------------------------------------------------------------------------------------
+    206          
+    207          void TxVideoConversionDitheringEnable(bool_t isEnabled)
+    208          {
+    209              pVideo->isDitheringEnabled = isEnabled;
+    210          }
+    211          
+    212          //-------------------------------------------------------------------------------------------------
+    213          //! @brief      Set explicit output color space for video conversion.
+    214          //-------------------------------------------------------------------------------------------------
+    215          
+    216          void TxVideoConversionOutColorSpaceSet(txVbusColSpace_t colorSpace)
+    217          {
+    218              pVideo->outColorSpace = colorSpace;
+    219              pVideo->isForceOutColorSpace = true;
+    220          }
+    221          
+    222          //-------------------------------------------------------------------------------------------------
+    223          //! @brief      Set video conversion path parameters.
+    224          //!
+    225          //!             Note: this function may modify TX AVI information.
+    226          //!             The function will assert the pVideo->isDeepColorMode flag if switching to
+    227          //!             deep color mode is required. The flag will remain set even after switching back
+    228          //!             to 8-bit color mode. As required by HDMI specification, if used once, the deep color
+    229          //!             mode shall be maintained permanently.
+    230          //!
+    231          //! @param[in]  isTxOutInHdmiMode - indicates HDMI or DVI mode,
+    232          //! @param[in]  pBusMode          - input video bus mode,
+    233          //! @param[in]  isUpdateAvi       - true, if this function shall update AVI frame data before
+    234          //!                                 returning. This flag should be set to true except the case
+    235          //!                                 when TxAviPostAviPacket() function call follows this function
+    236          //!                                 right away. In latter case, setting the flag to false prevents
+    237          //!                                 duplication of the AVI update operation (harmless anyway).
+    238          //-------------------------------------------------------------------------------------------------
+    239          
+    240          void TxVideoConversionSet(bool_t isTxOutInHdmiMode, txVideoBusMode_t *pBusMode, bool_t isUpdateAvi)
+    241          {
+    242              txVbusColSpace_t outputColorSpace = SI_TX_VBUS_COLOR_SPACE_RGB;// RGB by default (for compatibility with DVI)
+    243              txVbusColDepth_t outputColorDepth = SI_TX_VBUS_BITS_PER_COLOR_8;
+    244              txDataRangeConversion_t dataRangeConversion = SI_TX_DATA_RANGE_NO_CHANGE;
+    245              bool_t isInputDataRangeFull = true;
+    246              bool_t isOutputDataRangeFull = true;
+    247              bool_t isPcFormat;
+    248              bool_t isOutputColorSpaceYCbCr = true;
+    249              uint8_t videoFormatIndex = TxVideoFormatIdGet();
+    250              uint8_t pixelRepetitionFactor;
+    251          
+    252              DEBUG_PRINT(TX_MSG_DBG, "TX: TxVideoConversionSet()\n");
+    253          
+    254              // Determine if video format is PC related
+    255              switch (videoFormatIndex)
+    256              {
+    257                  case SI_VIDEO_MODE_NON_STD:
+    258                  case vm1_640x480p:
+    259                      isPcFormat = true;
+    260                      isInputDataRangeFull = true; // PC mode is in full range
+    261                      break;
+    262                  default:
+    263                      isPcFormat = false;
+    264              }
+    265          
+    266              // Determine output color space and bit depth
+    267              if (isTxOutInHdmiMode)
+    268              {
+    269                  // Typically, the output color space is equal to the input one.
+    270                  // The only exception is when AVI info frame is set explicitly
+    271                  if(!pVideo->isForceOutColorSpace)
+    272                  {
+    273                      outputColorSpace = TxAviColorSpaceGet();
+    274                  }
+    275                  else
+    276                  {
+    277                      outputColorSpace = pVideo->outColorSpace;
+    278                  }
+    279          
+    280                  outputColorDepth = DetermineHdmiOutputColorDepth(pBusMode->bitsPerColor, videoFormatIndex);
+    281          
+    282                  // Deep Color mode entering condition, never turn DC off except by the TxVideoConversionReset()
+    283                  if (outputColorDepth > SI_TX_VBUS_BITS_PER_COLOR_8)
+    284                  {
+    285                      /*
+    286                       HDMI 1.3 p93:
+    287                       "Once a Source sends a GCP with non-zero CD to a sink, it shall continue sending GCPs with
+    288                       non-zero CD at least once per video field even if reverting to 24-bit color, as long as the Sink
+    289                       continues to support that color depth."
+    290                       */
+    291                      pVideo->isDeepColorMode = true;
+    292                  }
+    293          
+    294                  // Adjust output color space to RGB in Deep Color mode
+    295                  if (pVideo->isDeepColorMode)
+    296                  {
+    297                      switch (outputColorSpace)
+    298                      {
+    299                          case SI_TX_VBUS_COLOR_SPACE_RGB:
+    300                          case SI_TX_VBUS_COLOR_SPACE_YCBCR422:
+    301                              // YCbCr422 is not supported in deep color
+    302                              outputColorSpace = SI_TX_VBUS_COLOR_SPACE_RGB;
+    303                              break;
+    304                          case SI_TX_VBUS_COLOR_SPACE_YCBCR444:
+    305                              if (!SiiEdidTxDoesDsSupport(SI_EDID_TX_SUPPORT_DEEP_COLOR_YCbCr_444))
+    306                                  outputColorSpace = SI_TX_VBUS_COLOR_SPACE_RGB;
+    307                              break;
+    308                      }
+    309                  }
+    310          
+    311          #if (SI_TX_ALLOW_YCBCR422_12BIT == ENABLE)
+    312                  if((pBusMode->bitsPerColor > SI_TX_VBUS_BITS_PER_COLOR_8) && !(pVideo->isDeepColorMode))
+    313                  {
+    314                      // If TX input is in Deep Color, but TX cannot send it in deep color,
+    315                      // it can transcode it into YCbCr422 (if DS supports it)
+    316                      // and send it in analog of 36bit YCbCr.
+    317                      if(SiiEdidTxDoesDsSupport(SI_EDID_TX_SUPPORT_YCbCr))
+    318                      {
+    319                          outputColorSpace = SI_TX_VBUS_COLOR_SPACE_YCBCR422;
+    320                          // This color space could carry up to 12 bit per channel
+    321                      }
+    322                  }
+    323          #endif // SI_TX_ALLOW_YCBCR422_12BIT
+    324              }
+    325          
+    326              TxAviColorSpaceSet(outputColorSpace);
+    327          
+    328              isOutputColorSpaceYCbCr = (outputColorSpace != SI_TX_VBUS_COLOR_SPACE_RGB);
+    329          
+    330              // Determine if video range expansion or contraction is needed
+    331              switch (pBusMode->colorSpace)
+    332              {
+    333                  default: // RGB
+    334                      if (isPcFormat && isOutputColorSpaceYCbCr)
+    335                      {
+    336                          // Full to Limited range compression
+    337                          isInputDataRangeFull = true;
+    338                          dataRangeConversion = SI_TX_DATA_RANGE_CONTRACT;
+    339                      }
+    340                      break;
+    341          
+    342                  case SI_TX_VBUS_COLOR_SPACE_YCBCR444:
+    343                  case SI_TX_VBUS_COLOR_SPACE_YCBCR422:
+    344                      if (!isOutputColorSpaceYCbCr)
+    345                      {
+    346                          if (IsVideoRangeExpansionNeeded(isPcFormat))
+    347                          {
+    348                              isInputDataRangeFull = false;
+    349                              dataRangeConversion = SI_TX_DATA_RANGE_EXPAND;
+    350                          }
+    351                      }
+    352                      break;
+    353              }
+    354          
+    355              SiiDrvTpiInputVideoColorSet(pBusMode->colorSpace, pBusMode->bitsPerColor,
+    356                                     (dataRangeConversion == SI_TX_DATA_RANGE_EXPAND));
+    357          
+    358              SiiDrvTpiOutputVideoColorSet(outputColorSpace, outputColorDepth, TxAviColorimetryGet(),
+    359                                      (dataRangeConversion == SI_TX_DATA_RANGE_CONTRACT),
+    360                                      (pBusMode->bitsPerColor > outputColorDepth) && (pVideo->isDitheringEnabled));
+    361          
+    362              // MUX input requires doubled clock rate
+    363              // Demultiplexing must be applied, if video is muxed YCbCr422 and thus arrives at double clock rate
+    364              SiiDrvTpiYcDemuxEnable((pBusMode->colorSpace == SI_TX_VBUS_COLOR_SPACE_YCBCR422) &&
+    365                               (pBusMode->clockMode == SI_TX_VBUS_CLOCK_DOUBLE_RATE));
+    366          
+    367              // Set input video pixel capturing parameters
+    368              pixelRepetitionFactor = TxAviRepetitionGet(videoFormatIndex);
+    369          
+    370              // TPI chip specific for YCbCr422 MUX mode
+    371              if ((pBusMode->colorSpace == SI_TX_VBUS_COLOR_SPACE_YCBCR422) &&
+    372                  (pBusMode->clockMode == SI_TX_VBUS_CLOCK_DOUBLE_RATE))
+    373              {
+    374                  pixelRepetitionFactor /= 2;
+    375              }
+    376          
+    377              SiiDrvTpiPixelCapturingConfig(pBusMode->clockMode, pBusMode->isLatchOnRisingEdge, pixelRepetitionFactor,
+    378                                                     (pBusMode->pixelRepetition > SI_TX_VIDEO_SRC_PIXEL_REP_1));
+    379          
+    380              if (pVideo->prevColorDepth != outputColorDepth)
+    381              {
+    382                  TxHdcpRequestReauthentication();
+    383                  pVideo->prevColorDepth = outputColorDepth;
+    384          
+    385                  DEBUG_PRINT(TX_MSG_ALWAYS, "Color Depth: %s, %s Color Mode\n ",
+    386                          (outputColorDepth == SI_TX_VBUS_BITS_PER_COLOR_16) ? "16" :
+    387                          (outputColorDepth == SI_TX_VBUS_BITS_PER_COLOR_12) ? "12" :
+    388                          (outputColorDepth == SI_TX_VBUS_BITS_PER_COLOR_10) ? "10" : "8",
+    389                          (pVideo->isDeepColorMode) ? "Deep" : "Std");
+    390              }
+    391          
+    392              SiiDrvTpiDeepColorGcpEnable(pVideo->isDeepColorMode);
+    393          
+    394          
+    395              // Find out if blanking registers have to be set for full or limited range.
+    396              if (pVideo->isPrevColorSpaceYCbCr != isOutputColorSpaceYCbCr)
+    397              {
+    398                  switch (dataRangeConversion)
+    399                  {
+    400                      default:
+    401                      case SI_TX_DATA_RANGE_NO_CHANGE:
+    402                          isOutputDataRangeFull = isInputDataRangeFull;
+    403                          break;
+    404                      case SI_TX_DATA_RANGE_EXPAND:
+    405                          isOutputDataRangeFull = true;
+    406                          break;
+    407                      case SI_TX_DATA_RANGE_CONTRACT:
+    408                          isOutputDataRangeFull = false;
+    409                          break;
+    410                  }
+    411          
+    412                  TxVideoBlankingLevelsSet(isOutputColorSpaceYCbCr, isOutputDataRangeFull);
+    413                  pVideo->isPrevColorSpaceYCbCr = isOutputColorSpaceYCbCr;
+    414              }
+    415          
+    416              // Update AVI frame in the chip to expose new output color space information
+    417              if (isUpdateAvi)
+    418              {
+    419                  TxAviInfoFrameUpdate();
+    420              }
+    421          
+    422          }
+    423          
+    424          //-------------------------------------------------------------------------------------------------
+    425          //! @brief      Set blanking levels in 3 color channels [R,G,B] or [Y,Cb,Cr]
+    426          //!             depending on the video color space and color data range.
+    427          //!
+    428          //! @param[in]  isYCbCr     - true, if color space is YCbCr,
+    429          //!                           false, if color space is RGB
+    430          //! @param[in]  isFullRange - true, if full data range [0-255] is used for color data coding,
+    431          //!                           false, if limited rage [16-235] is used  for color data coding.
+    432          //-------------------------------------------------------------------------------------------------
+    433          
+    434          void TxVideoBlankingLevelsSet(bool_t isYCbCr, bool_t isFullRange)
+    435          {
+    436              uint8_t blanking[3];
+    437          
+    438              if(isFullRange)
+    439              {
+    440                  blanking[1] = 0;
+    441              }
+    442              else
+    443              {
+    444                  blanking[1] = 16;
+    445              }
+    446              if(isYCbCr)
+    447              {
+    448                  blanking[0] = blanking[2] = 128;
+    449              }
+    450              else
+    451              {
+    452                  blanking[0] = blanking[2] = blanking[1];
+    453              }
+    454          
+    455              SiiDrvTpiBlankingLevelsSet(blanking);
+    456          }
+    457          
+    458          #endif
+    459          
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: 1

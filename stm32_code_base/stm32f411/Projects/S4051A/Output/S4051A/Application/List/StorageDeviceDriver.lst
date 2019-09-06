@@ -1,0 +1,948 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:25:41 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Utilities\mainstream_v1\stm32f411\StorageDeviceDriver #
+#                    .c                                                       #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Utilities\mainstream_v1\stm32f411\StorageDeviceDriver #
+#                    .c -D S4051A -D DEBUG -D FREE_RTOS -D STM32F40_41xxx -D  #
+#                    USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D             #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\StorageDeviceDriver.lst                               #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\StorageDeviceDriver.o                                  #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Utilities\mainstream_v1\stm32f411\StorageDeviceDriver.c
+      1          #include "EepromDriver.h"
+      2          #include "StorageDeviceDriver.h"
+      3          #include "Debug.h"
+      4          #include "Config.h"
+      5          #include "device_config.h"
+      6          #include "api_typedef.h"
+      7          
+      8          //___________________________________________________________________________
+      9          #if ( configEEPROM_512 == 1 )
+     10          #define EEPROM_PAGE_SIZE 16 /*bytes*/
+     11          #else
+     12          #warning "EEPROM PAGE has not been defined !! "
+     13          #define EEPROM_PAGE_SIZE 0
+     14          #endif 
+     15          
+     16          #define DEBUG_STORAGE 0
+     17          
+     18          #define configSTORAGE_UPDATE_CHECKSUM 0
+     19          
+     20          #define USER_PARAMETER_SIZE (sizeof(xHMISystemParams)/sizeof(uint8))
+     21          #define PRG_REMOTE_SIZE ( sizeof(IR_PRG_REMOTE_USER_EVENT)/sizeof( uint8 ) )
+     22          
+     23          
+     24          
+     25          /************************* Private Members ************************************/
+     26          
+     27          /* This table holds the allocated partition's information for storage device*/
+     28          static storagePartitionType m_partitionSpaceAllocation[] =
+     29          {
+     30          	{ (EEPROM_PAGE_SIZE*2), 0, STORAGE_DISK_0 }, /*factory*/
+     31          	{ (EEPROM_PAGE_SIZE*2), 0, STORAGE_DISK_0 }, /*user paramter*/
+     32          	{ (EEPROM_PAGE_SIZE*1), 0, STORAGE_DISK_0 }, /*program remote */
+     33          	{ (EEPROM_PAGE_SIZE*1), 0, STORAGE_DISK_0 }, /*program remote */
+     34          	{ (EEPROM_PAGE_SIZE*1), 0, STORAGE_DISK_0 }, /*program remote */
+     35          };
+     36          
+     37          
+     38          /* This table holds the allocated cells' information for storage device*/
+     39          static storageCellType m_storageSpaceAllocation[] =
+     40          {
+     41              {15, STORAGE_PARTITION_0, STORAGE_DEVICE_CELL_PRODUCT_SERIAL_NUMBER},
+     42          
+     43              {USER_PARAMETER_SIZE, STORAGE_PARTITION_1, STORAGE_DEVICE_CELL_USER_PARAMETERS}, 
+     44          
+     45          	{PRG_REMOTE_SIZE, STORAGE_PARTITION_2, STORAGE_DEVICE_CELL_PROGRAM_KEY_VOLUME_UP },
+     46          
+     47          	{PRG_REMOTE_SIZE, STORAGE_PARTITION_3, STORAGE_DEVICE_CELL_PROGRAM_KEY_VOLUME_DN },
+     48          
+     49          	{PRG_REMOTE_SIZE, STORAGE_PARTITION_4, STORAGE_DEVICE_CELL_PROGRAM_KEY_VOLUME_MUTE }
+     50          };
+     51          
+     52          
+     53          /************************** Private Functions *********************************/
+     54          /*
+     55           * Calculates the cell's address from the begining of the storage disk
+     56           * @param   cell    A specific location and size in the storage device where
+     57           *                  the data is going to be read from.
+     58           *
+     59           * @param   device  the returned logical Eeprom device
+     60           *
+     61           * @param   size    the returned  cell's size
+     62           * @param   addr    the calculated cell's address
+     63           *
+     64           * @return          TRUE in case that address is valid.
+     65           *                  FALSE otherwise.
+     66           */
+     67          static bool StorageDevice_calcCellAddress(STORAGE_DEVICE_CELL cell,
+     68                  LOGICAL_EEPROM_DEVICE *device,
+     69                  uint16 *size,
+     70                  uint16 *addr);
+     71          
+     72          /*
+     73           * Update the checksum
+     74           *
+     75           * @param   cell    A specific location and size in the storage device.
+     76           *
+     77           * @param   buff    A pointer to the data.
+     78           *
+     79           * @return          TRUE in case of checksum updated.
+     80           *                  FALSE otherwise.
+     81           */
+     82          #if ( configSTORAGE_UPDATE_CHECKSUM == 1 ) 
+     83          static bool StorageDevice_updateChecksum(STORAGE_DEVICE_CELL cell, void *buff);
+     84          #endif 
+     85          
+     86          /*
+     87           * Initialize the partition.
+     88           *
+     89           * @param   partition    partition number.
+     90           *
+     91           * @return          TRUE in case of success
+     92           *                  FALSE otherwise.
+     93           */
+     94          static bool StorageDevice_initializePartition(STORAGE_PARTITION partition);
+     95          
+     96          /*
+     97           * Calculate the partition checksum
+     98           *
+     99           * @param   partition    partition number.
+    100           *
+    101           * @param   update       Calc and set new checksum.
+    102           * @return          TRUE in case on success
+    103           *                  FALSE otherwise.
+    104           */
+    105          static bool StorageDevice_checkPartitionChecksum(STORAGE_PARTITION partition,
+    106                  bool update);
+    107          
+    108          /*
+    109           * Checking the disk revision
+    110           *
+    111           * @return          TRUE in case of match revision.
+    112           *                  FALSE otherwise.
+    113           */
+    114          static bool StorageDevice_checkDiskRevision(STORAGE_DISK disk);
+    115          
+    116          /*
+    117           * Calculate the partition offset from the begining of the disk
+    118           *
+    119           * @param   partition    partition number.
+    120           *
+    121           * @return  the offset from the begining of the disk
+    122           */
+    123          static uint16 StorageDevice_calcPartitionAddress(STORAGE_PARTITION partition);
+    124          
+    125          
+    126          /************************* Implementation *************************************/
+    127          bool StorageDevice_initialize(void)
+    128          {
+    129              bool retVal = TRUE;
+    130              int i;
+    131              bool diskRevValid;
+    132              //bool partitionValid;
+    133          
+    134              /** Checking the disk revision on all disks */
+    135              for (i = 0; i < STORAGE_DISK_LAST; i++)
+    136              {
+    137                  diskRevValid = StorageDevice_checkDiskRevision((STORAGE_DISK)i);
+    138          
+    139                  if (diskRevValid == FALSE)
+    140                  {
+    141                      TRACE_ERROR((STR_ID_NULL, "Disk revision invalid"));
+    142          
+    143          			retVal &= diskRevValid;
+    144                  }
+    145              }
+    146          
+    147          #if 0 // smith mark
+    148              for (i = 0; i < STORAGE_PARTITION_LAST; i++)
+    149              {
+    150                  /** Checking the partition checksum */
+    151                  partitionValid = StorageDevice_checkPartitionChecksum(
+    152                                       (STORAGE_PARTITION)i,
+    153                                       FALSE);
+    154          
+    155                  if ( partitionValid == FALSE )
+    156                  {
+    157                      retVal &= StorageDevice_initializePartition((STORAGE_PARTITION)i);
+    158                      TRACE_ERROR((STR_ID_NULL, "Partition checksum invalid, reInit Partition: %d", i));
+    159                  }
+    160              }
+    161          #endif 
+    162          
+    163              return retVal;
+    164          }
+    165          
+    166          bool StorageDevice_read(STORAGE_DEVICE_CELL cell, void *buff)
+    167          {
+    168              uint16 addr;
+    169              uint16 size;
+    170              LOGICAL_EEPROM_DEVICE device;
+    171              bool retVal = TRUE;
+    172          
+    173              /** Calculate the real address in the logical Eeprom*/
+    174              retVal &= StorageDevice_calcCellAddress(cell, &device, &size, &addr);
+    175          
+    176          #if( DEBUG_STORAGE == 1 )
+    177          	TRACE_DEBUG((0, "read cell = %d, size = %d, addr = 0x%X", cell, size, addr ));
+    178          #endif 
+    179          	
+    180          
+    181              /* Reading the data from the EEPROM*/
+    182              retVal &= EepromDriver_read(device, addr, (uint8 *)buff, size);
+    183          
+    184          	ASSERT( retVal );
+    185          
+    186              return retVal;
+    187          }
+    188          
+    189          bool StorageDevice_write(STORAGE_DEVICE_CELL cell, void *buff)
+    190          {
+    191              uint16 addr;
+    192              uint16 size;
+    193              LOGICAL_EEPROM_DEVICE device;
+    194              bool retVal = TRUE;
+    195          
+    196              /** Calculate the real address in the logical Eeprom*/
+    197              retVal &= StorageDevice_calcCellAddress(cell, &device, &size, &addr);
+    198          
+    199             
+    200          #if 0	/*smith marks: we don't need to calc checksum in every modication*/
+    201          	/** Update the checksum accordingly */
+    202              retVal &= StorageDevice_updateChecksum(cell, buff);
+    203          #endif
+    204          
+    205          #if( DEBUG_STORAGE == 1 )
+    206          	TRACE_DEBUG((0, "write cell = %d, size = %d, addr = 0x%X", cell, size, addr ));
+    207          #endif 
+    208          
+    209          	
+    210          
+    211              /* Writing data to the EEPROM */
+    212              retVal &= EepromDriver_write(device, addr, (uint8 *)buff, size, FALSE);
+    213          
+    214          	ASSERT( retVal );
+    215          
+    216              return retVal;
+    217          }
+    218          
+    219          bool StorageDevice_eraseDeviceCell( STORAGE_DEVICE_CELL cell )
+    220          {
+    221              uint16 addr;
+    222              uint16 size;
+    223          	uint16 i;
+    224              LOGICAL_EEPROM_DEVICE device;
+    225          	uint8 eraseValue = EEPROM_DEVICE_ERASE_VALUE;
+    226              bool retVal = TRUE;
+    227          
+    228          	/** Calculate the real address in the logical Eeprom*/
+    229              retVal &= StorageDevice_calcCellAddress(cell, &device, &size, &addr);
+    230          
+    231              for (i = 0; i < size; i++)
+    232              {
+    233                  retVal &= EepromDriver_write(device, i, &eraseValue, 1, TRUE);
+    234          
+    235                  ASSERT(retVal == FALSE);
+    236              }
+    237          
+    238              return retVal;
+    239          
+    240          }
+    241          
+    242          bool StorageDevice_print(STORAGE_DISK disk)
+    243          {
+    244              bool retVal = TRUE;
+    245          #if 0
+    246              int i, j;
+    247              uint8 buf[24]; // max size=24 in m_storageSpaceAllocation, kaomin
+    248              bool retVal = TRUE;
+    249          
+    250              for (i = 0; i < STORAGE_DEVICE_CELL_END; i++)
+    251              {
+    252                  retVal = StorageDevice_read(i, (void *)buf);
+    253          
+    254                  if (1 == m_storageSpaceAllocation[i].size)
+    255                  {
+    256                      TRACE_DEBUG((0, "Cell-%d: 0x%X", i, buf[0]));
+    257                  }
+    258                  else if (2 == m_storageSpaceAllocation[i].size)
+    259                  {
+    260                      TRACE_DEBUG((0, "Cell-%d: 0x%X 0x%X", i, buf[0], buf[1]));
+    261                  }
+    262                  else if (5 == m_storageSpaceAllocation[i].size)
+    263                  {
+    264                      TRACE_DEBUG((0, "Cell-%d: 0x%X 0x%X 0x%X 0x%X 0x%X", i, buf[0], buf[1], buf[2], buf[3], buf[4]));
+    265                  }
+    266                  else
+    267                  {
+    268                      TRACE_DEBUG((0, "Cell-%d: ", i));
+    269                      for (j = 0; j < m_storageSpaceAllocation[i].size; j++)
+    270                      {
+    271                          TRACE_DEBUG((0, "        0x%X", buf[i]));
+    272                      }
+    273                  }
+    274              }
+    275          #endif
+    276          #if 0//def STORAGE_DEBUG_ENABLE
+    277              int i;
+    278              int j;
+    279              uint8 partitionID;
+    280              uint16 size;
+    281              uint8 diskID;
+    282              uint16 strID;
+    283              uint16 address;
+    284              uint8  data;
+    285              LOGICAL_EEPROM_DEVICE device;
+    286          
+    287              /* Holds the current Debug mask */
+    288              uint32 mask;
+    289          
+    290              /* Allow INFO traces in any case and keep the current mask */
+    291              mask = Debug_register(DEBUG_INFO);
+    292          
+    293              /** Print all cells  in the selected disk */
+    294              for (i = 0; i < STORAGE_DEVICE_CELL_END; i++)
+    295              {
+    296                  /** Saves the partition , disk ID ,string ID and size*/
+    297                  strID = m_storageSpaceAllocation[i].stringNameID;
+    298                  partitionID = m_storageSpaceAllocation[i].partition;
+    299                  diskID = m_partitionSpaceAllocation[partitionID].disk;
+    300          
+    301                  /** Checks if the cell belonging to the selcted disk */
+    302                  if (disk == diskID)
+    303                  {
+    304                      TRACE_INFO((strID, ""));
+    305                      TRACE_INFO((STR_ID_NULL, ""));
+    306          
+    307                      retVal &= StorageDevice_calcCellAddress((STORAGE_DEVICE_CELL)i,
+    308                                                              &device,
+    309                                                              &size,
+    310                                                              &address);
+    311          
+    312                      for (j = 0; j < size; j ++)
+    313                      {
+    314                          retVal &= EepromDriver_read(device,
+    315                                                      (address + j),
+    316                                                      &data,
+    317                                                      1);
+    318          
+    319                          TRACE_INFO((STR_ID_NULL, "%X ", data));
+    320                      }
+    321          
+    322                      TRACE_INFO((STR_ID_SEP_LINE, ""));
+    323                  }
+    324              }
+    325          
+    326              /* Restore the original Debug mask ststate */
+    327              Debug_unregister(DEBUG_INFO);
+    328              Debug_register(mask);
+    329          #endif
+    330          
+    331              return retVal;
+    332          }
+    333          
+    334          /*-----------------------------private----------------------------------------*/
+    335          static bool StorageDevice_calcCellAddress(STORAGE_DEVICE_CELL cell,
+    336                  LOGICAL_EEPROM_DEVICE *device,
+    337                  uint16 *size,
+    338                  uint16 *addr)
+    339          {
+    340              uint16 address = 0;
+    341              uint8 i;
+    342          
+    343              /* Calculate the offset of the cell from the beginning of the
+    344                 storage partition */
+    345              for (i = 0; i < cell; i++)
+    346              {
+    347                  /** Check whether the partitions are equal */
+    348                  if (m_storageSpaceAllocation[cell].partition ==
+    349                          m_storageSpaceAllocation[i].partition)
+    350                  {
+    351                      address += m_storageSpaceAllocation[i].size;
+    352                  }
+    353              }
+    354          
+    355              /** Calculate the ofset of the cell from the beginning of the storage disk*/
+    356              address += StorageDevice_calcPartitionAddress(
+    357                             (STORAGE_PARTITION)m_storageSpaceAllocation[cell].partition);
+    358          
+    359              /** Returns the calculated values*/
+    360              *addr = address;
+    361              *size = m_storageSpaceAllocation[cell].size;
+    362              *device = (LOGICAL_EEPROM_DEVICE)(LOGICAL_EEPROM_DEVICE_BLOCK0 +
+    363                                                m_partitionSpaceAllocation[m_storageSpaceAllocation[cell].partition].disk);
+    364          
+    365              return TRUE;
+    366          }
+    367          
+    368          
+    369          #if ( configSTORAGE_UPDATE_CHECKSUM == 1 ) 
+    370          static bool StorageDevice_updateChecksum(STORAGE_DEVICE_CELL cell, void *buff)
+    371          {
+    372              int i;
+    373              uint16 addr;
+    374              uint16 size;
+    375              uint16 checksumAddress;
+    376              uint8 checksum;
+    377              uint8 data;
+    378              LOGICAL_EEPROM_DEVICE device;
+    379              bool retVal = TRUE;
+    380          
+    381              /** Calculate the real address in the logical Eeprom*/
+    382              retVal &= StorageDevice_calcCellAddress(cell, &device, &size, &addr);
+    383          
+    384              /** Calculate the checksum address */
+    385              checksumAddress = StorageDevice_calcPartitionAddress(
+    386                                    (STORAGE_PARTITION)m_storageSpaceAllocation[cell].partition);
+    387          
+    388              checksumAddress += m_partitionSpaceAllocation[
+    389                                     m_storageSpaceAllocation[cell].partition].size - 1;
+    390          
+    391              /* Reading the checksum from the Eeprom */
+    392              retVal &= EepromDriver_read(device, checksumAddress, &checksum, 1);
+    393          
+    394              /* Invert the checksum */
+    395              checksum = -checksum;
+    396          
+    397              /** Runs over the data and calculate the new checksum */
+    398              for (i = 0; i < size; i++)
+    399              {
+    400                  /* Reading the on byte of data from the Eeprom */
+    401                  retVal &= EepromDriver_read(device, (addr + i), &data, 1);
+    402          
+    403                  /** Caculate the new checksum */
+    404                  checksum = checksum - data + *((uint8 *)buff + i);
+    405              }
+    406          
+    407              /* Invert the checksum */
+    408              checksum = -checksum;
+    409          
+    410              /* Writing the new checksum Eeprom */
+    411              retVal &= EepromDriver_write(device, checksumAddress, &checksum, 1, TRUE);
+    412          
+    413              return retVal;
+    414          }
+    415          #endif 
+    416          
+    417          static bool StorageDevice_initializePartition(STORAGE_PARTITION partition)
+    418          {
+    419              bool retVal = TRUE;
+    420              uint16 address;
+    421              int i;
+    422              uint8 data = PARTITION_ERASE_VALUE;
+    423          
+    424              /** Calculate the partition offset from the begining of the disk */
+    425              address = StorageDevice_calcPartitionAddress(partition);
+    426          
+    427              /** Writing the ERASE value to all partition */
+    428          
+    429              for (i = 0; i < (m_partitionSpaceAllocation[partition].size - 2); i++)
+    430              {
+    431                  /** Currently don't erase the data on the partition */
+    432                  /**
+    433                  retVal &= EepromDriver_write(
+    434                          (LOGICAL_EEPROM_DEVICE)(LOGICAL_EEPROM_DEVICE_BLOCK0 +
+    435                          (int)m_partitionSpaceAllocation[partition].disk),
+    436                          (address + i),
+    437                          &data,
+    438                          sizeof(data),
+    439                          TRUE);
+    440                          */
+    441              }
+    442          
+    443          
+    444              /** Writing the revision number */
+    445              data = m_partitionSpaceAllocation[partition].revision;
+    446              retVal &= EepromDriver_write(
+    447                            (LOGICAL_EEPROM_DEVICE)(LOGICAL_EEPROM_DEVICE_BLOCK0 +
+    448                                                    (int)m_partitionSpaceAllocation[partition].disk),
+    449                            (address + i),
+    450                            &data,
+    451                            sizeof(data),
+    452                            TRUE);
+    453          
+    454              /** Writing the new checksum */
+    455              retVal &= StorageDevice_checkPartitionChecksum(partition, TRUE);
+    456          
+    457              return retVal;
+    458          }
+    459          
+    460          static bool StorageDevice_checkDiskRevision(STORAGE_DISK disk)
+    461          {
+    462              bool retVal = TRUE;
+    463              int j;
+    464              uint16 address;
+    465              uint8  revision;
+    466              int diskRevisionFailed = 0;
+    467          
+    468              /** The disk revision placed in the last Eeprom byte */
+    469              address = EepromDriver_deviceCapacity(
+    470                            (LOGICAL_EEPROM_DEVICE)
+    471                            ((uint8)LOGICAL_EEPROM_DEVICE_BLOCK0 + (uint8)disk)) - 1;
+    472          
+    473              /** Retry a few times before initialize all Eeprom */
+    474              for (j = 0; j < DISK_REVISION_FAIL_RETRY; j++)
+    475              {
+    476                  retVal &= EepromDriver_read(
+    477                                (LOGICAL_EEPROM_DEVICE)
+    478                                ((uint8)LOGICAL_EEPROM_DEVICE_BLOCK0 + (uint8)disk),
+    479                                address,
+    480                                &revision,
+    481                                sizeof(revision));
+    482          
+    483                  /** Checks if the disk revision match */
+    484                  if ((revision != STORAGE_DEVICE_DISK_VERSION) && (retVal == TRUE))
+    485                  {
+    486                      diskRevisionFailed++;
+    487                  }
+    488              }
+    489          
+    490              /** Only in case of all retrys was failed initialize the Eeprom */
+    491              if (diskRevisionFailed == DISK_REVISION_FAIL_RETRY)
+    492              {
+    493                  /** Writing the new disk revision */
+    494                  revision = STORAGE_DEVICE_DISK_VERSION;
+    495                  retVal &= EepromDriver_write(
+    496                                (LOGICAL_EEPROM_DEVICE)
+    497                                ((uint8)LOGICAL_EEPROM_DEVICE_BLOCK0 + (uint8)disk),
+    498                                address,
+    499                                &revision,
+    500                                sizeof(revision),
+    501                                TRUE);
+    502          
+    503                  retVal &= FALSE;
+    504          
+    505                  /** initialize all disk partitions */
+    506                  for (j = 0; j < STORAGE_PARTITION_LAST; j++)
+    507                  {
+    508                      if (m_partitionSpaceAllocation[j].disk == disk)
+    509                      {
+    510                          retVal &= StorageDevice_initializePartition((STORAGE_PARTITION)j);
+    511                      }
+    512                  }
+    513              }
+    514          
+    515              return (retVal == TRUE);
+    516          }
+    517          
+    518          bool StorageDevice_checkPartitionReversion( STORAGE_PARTITION partition )
+    519          {
+    520          
+    521          	bool retVal = TRUE;
+    522              uint16 address;
+    523              int i;
+    524              uint8 data = PARTITION_ERASE_VALUE;
+    525          	LOGICAL_EEPROM_DEVICE device;
+    526          
+    527              /** Calculate the partition offset from the begining of the disk */
+    528              address = StorageDevice_calcPartitionAddress(partition);
+    529          	i = (m_partitionSpaceAllocation[partition].size - 3);
+    530          
+    531          	device = ( (LOGICAL_EEPROM_DEVICE)(LOGICAL_EEPROM_DEVICE_BLOCK0 + (int)m_partitionSpaceAllocation[partition].disk) );
+    532          
+    533          	retVal &= EepromDriver_read(device, (address + i), &data, 1 );
+    534          
+    535          	if ( data != m_partitionSpaceAllocation[partition].revision )
+    536          	{
+    537          		retVal &= FALSE;
+    538          	}
+    539          
+    540          	if ( retVal == FALSE )
+    541          	{
+    542          		/** Writing the revision number */
+    543          	    data = m_partitionSpaceAllocation[partition].revision;
+    544          	    retVal &= EepromDriver_write(
+    545          	                  device,
+    546          	                  (address + i),
+    547          	                  &data,
+    548          	                  sizeof(data),
+    549          	                  FALSE);
+    550          	}
+    551          
+    552          	retVal &= EepromDriver_read(device, (address + i), &data, 1 );
+    553          
+    554          	return retVal;
+    555          
+    556          }
+    557          
+    558          
+    559          static bool StorageDevice_checkPartitionChecksum(STORAGE_PARTITION partition,
+    560                  bool update)
+    561          {
+    562              bool retVal = TRUE;
+    563              uint8 i;
+    564              uint8 data;
+    565              LOGICAL_EEPROM_DEVICE device;
+    566              uint16 address;
+    567              uint8 checksum = 0;
+    568              uint16 partitionSize;
+    569          
+    570              partitionSize = m_partitionSpaceAllocation[partition].size;
+    571          
+    572              /** sets the logical eeprom device */
+    573              device = LOGICAL_EEPROM_DEVICE_BLOCK0;
+    574              device += (int)m_partitionSpaceAllocation[partition].disk;
+    575          
+    576              /** Calculate the partition offset from the begining of the disk */
+    577              address = StorageDevice_calcPartitionAddress(partition);
+    578          
+    579              /** Calculate the checksum */
+    580              for (i = 0 ; i < (partitionSize - (uint8)update); i++)
+    581              {
+    582                  /* Read data from the EEPROM */
+    583                  retVal &= EepromDriver_read(device, address + i, &data, sizeof(data));
+    584          
+    585                  /* Calc checksum */
+    586                  checksum += data;
+    587              }
+    588          
+    589              /** Checking if update is required */
+    590              if (update == TRUE)
+    591              {
+    592                  /** Calculate the new checksum in case of update required */
+    593                  checksum = -checksum;
+    594          
+    595                  /** Writing the new checksum */
+    596                  retVal &= EepromDriver_write(device, address + i, &checksum, sizeof(data), TRUE);
+    597              }
+    598              else
+    599              {
+    600                  /** Checks whether the checksum is valid, 0==VALID, Otherwise==FALSE*/
+    601                  retVal &= (checksum == 0) ? TRUE : FALSE;
+    602              }
+    603          
+    604              return retVal;
+    605          }
+    606          
+    607          
+    608          static uint16 StorageDevice_calcPartitionAddress(STORAGE_PARTITION partition)
+    609          {
+    610              int i;
+    611              uint16 address = 0;
+    612              uint8 disk;
+    613          
+    614              /** Svaes the partition's disk */
+    615              disk  = m_partitionSpaceAllocation[partition].disk;
+    616          
+    617              for (i = 0; i < partition; i++)
+    618              {
+    619                  if (m_partitionSpaceAllocation[i].disk == disk)
+    620                  {
+    621                      address += m_partitionSpaceAllocation[i].size;
+    622                  }
+    623              }
+    624          
+    625              return address;
+    626          }
+    627          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       32  StorageDevice_calcCellAddress
+             32 -> StorageDevice_calcPartitionAddress
+       12  StorageDevice_calcPartitionAddress
+       32  StorageDevice_checkDiskRevision
+             32 -> EepromDriver_deviceCapacity
+             32 -> EepromDriver_read
+             32 -> EepromDriver_write
+             32 -> StorageDevice_calcPartitionAddress
+             32 -> StorageDevice_checkPartitionChecksum
+       40  StorageDevice_checkPartitionChecksum
+             40 -> EepromDriver_read
+             40 -> EepromDriver_write
+             40 -> StorageDevice_calcPartitionAddress
+       32  StorageDevice_checkPartitionReversion
+             32 -> EepromDriver_read
+             32 -> EepromDriver_write
+             32 -> StorageDevice_calcPartitionAddress
+       32  StorageDevice_eraseDeviceCell
+             32 -> Debug_printError
+             32 -> EepromDriver_write
+             32 -> StorageDevice_calcCellAddress
+        8  StorageDevice_initialize
+              8 -> Debug_printError
+              8 -> StorageDevice_checkDiskRevision
+        0  StorageDevice_print
+       24  StorageDevice_read
+             24 -> Debug_printError
+             24 -> EepromDriver_read
+             24 -> StorageDevice_calcCellAddress
+       24  StorageDevice_write
+             24 -> Debug_printError
+             24 -> EepromDriver_write
+             24 -> StorageDevice_calcCellAddress
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      24  ?<Constant "Assert failed %s[%d]">
+     116  ?<Constant "C:\\Users\\tony.tsou\\De...">
+      24  ?<Constant "Disk revision invalid">
+       4  ??DataTable7
+       4  ??DataTable7_1
+      14  ?Subroutine0
+      10  ?Subroutine1
+      10  ?Subroutine2
+      92  StorageDevice_calcCellAddress
+      44  StorageDevice_calcPartitionAddress
+     176  StorageDevice_checkDiskRevision
+     132  StorageDevice_checkPartitionChecksum
+      94  StorageDevice_checkPartitionReversion
+      80  StorageDevice_eraseDeviceCell
+      26  StorageDevice_initialize
+       4  StorageDevice_print
+      56  StorageDevice_read
+      50  StorageDevice_write
+      20  m_partitionSpaceAllocation
+      16  m_storageSpaceAllocation
+
+ 
+  36 bytes in section .data
+ 960 bytes in section .text
+ 
+ 960 bytes of CODE memory
+  36 bytes of DATA memory
+
+Errors: none
+Warnings: 1

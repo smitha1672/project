@@ -1,0 +1,952 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:25:57 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\port. #
+#                    c                                                        #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\port. #
+#                    c -D S4051A -D DEBUG -D FREE_RTOS -D STM32F40_41xxx -D   #
+#                    USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D             #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\port.lst                                              #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\port.o                                                 #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\port.c
+      1          /*
+      2              FreeRTOS V8.0.1 - Copyright (C) 2014 Real Time Engineers Ltd.
+      3              All rights reserved
+      4          
+      5              VISIT http://www.FreeRTOS.org TO ENSURE YOU ARE USING THE LATEST VERSION.
+      6          
+      7              ***************************************************************************
+      8               *                                                                       *
+      9               *    FreeRTOS provides completely free yet professionally developed,    *
+     10               *    robust, strictly quality controlled, supported, and cross          *
+     11               *    platform software that has become a de facto standard.             *
+     12               *                                                                       *
+     13               *    Help yourself get started quickly and support the FreeRTOS         *
+     14               *    project by purchasing a FreeRTOS tutorial book, reference          *
+     15               *    manual, or both from: http://www.FreeRTOS.org/Documentation        *
+     16               *                                                                       *
+     17               *    Thank you!                                                         *
+     18               *                                                                       *
+     19              ***************************************************************************
+     20          
+     21              This file is part of the FreeRTOS distribution.
+     22          
+     23              FreeRTOS is free software; you can redistribute it and/or modify it under
+     24              the terms of the GNU General Public License (version 2) as published by the
+     25              Free Software Foundation >>!AND MODIFIED BY!<< the FreeRTOS exception.
+     26          
+     27              >>!   NOTE: The modification to the GPL is included to allow you to     !<<
+     28              >>!   distribute a combined work that includes FreeRTOS without being   !<<
+     29              >>!   obliged to provide the source code for proprietary components     !<<
+     30              >>!   outside of the FreeRTOS kernel.                                   !<<
+     31          
+     32              FreeRTOS is distributed in the hope that it will be useful, but WITHOUT ANY
+     33              WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+     34              FOR A PARTICULAR PURPOSE.  Full license text is available from the following
+     35              link: http://www.freertos.org/a00114.html
+     36          
+     37              1 tab == 4 spaces!
+     38          
+     39              ***************************************************************************
+     40               *                                                                       *
+     41               *    Having a problem?  Start by reading the FAQ "My application does   *
+     42               *    not run, what could be wrong?"                                     *
+     43               *                                                                       *
+     44               *    http://www.FreeRTOS.org/FAQHelp.html                               *
+     45               *                                                                       *
+     46              ***************************************************************************
+     47          
+     48              http://www.FreeRTOS.org - Documentation, books, training, latest versions,
+     49              license and Real Time Engineers Ltd. contact details.
+     50          
+     51              http://www.FreeRTOS.org/plus - A selection of FreeRTOS ecosystem products,
+     52              including FreeRTOS+Trace - an indispensable productivity tool, a DOS
+     53              compatible FAT file system, and our tiny thread aware UDP/IP stack.
+     54          
+     55              http://www.OpenRTOS.com - Real Time Engineers ltd license FreeRTOS to High
+     56              Integrity Systems to sell under the OpenRTOS brand.  Low cost OpenRTOS
+     57              licenses offer ticketed support, indemnification and middleware.
+     58          
+     59              http://www.SafeRTOS.com - High Integrity Systems also provide a safety
+     60              engineered and independently SIL3 certified version for use in safety and
+     61              mission critical applications that require provable dependability.
+     62          
+     63              1 tab == 4 spaces!
+     64          */
+     65          
+     66          /*-----------------------------------------------------------
+     67           * Implementation of functions defined in portable.h for the ARM CM4F port.
+     68           *----------------------------------------------------------*/
+     69          
+     70          /* Compiler includes. */
+     71          #include <intrinsics.h>
+     72          
+     73          /* Scheduler includes. */
+     74          #include "FreeRTOS.h"
+     75          #include "task.h"
+     76          
+     77          #ifndef __ARMVFP__
+     78          	#error This port can only be used when the project options are configured to enable hardware floating point support.
+     79          #endif
+     80          
+     81          #if configMAX_SYSCALL_INTERRUPT_PRIORITY == 0
+     82          	#error configMAX_SYSCALL_INTERRUPT_PRIORITY must not be set to 0.  See http://www.FreeRTOS.org/RTOS-Cortex-M3-M4.html
+     83          #endif
+     84          
+     85          #ifndef configSYSTICK_CLOCK_HZ
+     86          	#define configSYSTICK_CLOCK_HZ configCPU_CLOCK_HZ
+     87          	/* Ensure the SysTick is clocked at the same frequency as the core. */
+     88          	#define portNVIC_SYSTICK_CLK_BIT	( 1UL << 2UL )
+     89          #else
+     90          	/* The way the SysTick is clocked is not modified in case it is not the same
+     91          	as the core. */
+     92          	#define portNVIC_SYSTICK_CLK_BIT	( 0 )
+     93          #endif
+     94          
+     95          /* Constants required to manipulate the core.  Registers first... */
+     96          #define portNVIC_SYSTICK_CTRL_REG			( * ( ( volatile uint32_t * ) 0xe000e010 ) )
+     97          #define portNVIC_SYSTICK_LOAD_REG			( * ( ( volatile uint32_t * ) 0xe000e014 ) )
+     98          #define portNVIC_SYSTICK_CURRENT_VALUE_REG	( * ( ( volatile uint32_t * ) 0xe000e018 ) )
+     99          #define portNVIC_SYSPRI2_REG				( * ( ( volatile uint32_t * ) 0xe000ed20 ) )
+    100          /* ...then bits in the registers. */
+    101          #define portNVIC_SYSTICK_INT_BIT			( 1UL << 1UL )
+    102          #define portNVIC_SYSTICK_ENABLE_BIT			( 1UL << 0UL )
+    103          #define portNVIC_SYSTICK_COUNT_FLAG_BIT		( 1UL << 16UL )
+    104          #define portNVIC_PENDSVCLEAR_BIT 			( 1UL << 27UL )
+    105          #define portNVIC_PEND_SYSTICK_CLEAR_BIT		( 1UL << 25UL )
+    106          
+    107          #define portNVIC_PENDSV_PRI					( ( ( uint32_t ) configKERNEL_INTERRUPT_PRIORITY ) << 16UL )
+    108          #define portNVIC_SYSTICK_PRI				( ( ( uint32_t ) configKERNEL_INTERRUPT_PRIORITY ) << 24UL )
+    109          
+    110          /* Constants required to check the validity of an interrupt priority. */
+    111          #define portFIRST_USER_INTERRUPT_NUMBER		( 16 )
+    112          #define portNVIC_IP_REGISTERS_OFFSET_16 	( 0xE000E3F0 )
+    113          #define portAIRCR_REG						( * ( ( volatile uint32_t * ) 0xE000ED0C ) )
+    114          #define portMAX_8_BIT_VALUE					( ( uint8_t ) 0xff )
+    115          #define portTOP_BIT_OF_BYTE					( ( uint8_t ) 0x80 )
+    116          #define portMAX_PRIGROUP_BITS				( ( uint8_t ) 7 )
+    117          #define portPRIORITY_GROUP_MASK				( 0x07UL << 8UL )
+    118          #define portPRIGROUP_SHIFT					( 8UL )
+    119          
+    120          /* Constants required to manipulate the VFP. */
+    121          #define portFPCCR							( ( volatile uint32_t * ) 0xe000ef34 ) /* Floating point context control register. */
+    122          #define portASPEN_AND_LSPEN_BITS			( 0x3UL << 30UL )
+    123          
+    124          /* Constants required to set up the initial stack. */
+    125          #define portINITIAL_XPSR					( 0x01000000 )
+    126          #define portINITIAL_EXEC_RETURN				( 0xfffffffd )
+    127          
+    128          /* The systick is a 24-bit counter. */
+    129          #define portMAX_24_BIT_NUMBER				( 0xffffffUL )
+    130          
+    131          /* A fiddle factor to estimate the number of SysTick counts that would have
+    132          occurred while the SysTick counter is stopped during tickless idle
+    133          calculations. */
+    134          #define portMISSED_COUNTS_FACTOR			( 45UL )
+    135          
+    136          
+    137          /* Each task maintains its own interrupt status in the critical nesting
+    138          variable. */
+    139          static UBaseType_t uxCriticalNesting = 0xaaaaaaaa;
+    140          
+    141          /*
+    142           * Setup the timer to generate the tick interrupts.  The implementation in this
+    143           * file is weak to allow application writers to change the timer used to
+    144           * generate the tick interrupt.
+    145           */
+    146          void vPortSetupTimerInterrupt( void );
+    147          
+    148          /*
+    149           * Exception handlers.
+    150           */
+    151          void xPortSysTickHandler( void );
+    152          
+    153          /*
+    154           * Start first task is a separate function so it can be tested in isolation.
+    155           */
+    156          extern void vPortStartFirstTask( void );
+    157          
+    158          /*
+    159           * Turn the VFP on.
+    160           */
+    161          extern void vPortEnableVFP( void );
+    162          
+    163          /*
+    164           * Used to catch tasks that attempt to return from their implementing function.
+    165           */
+    166          static void prvTaskExitError( void );
+    167          
+    168          /*-----------------------------------------------------------*/
+    169          
+    170          /*
+    171           * The number of SysTick increments that make up one tick period.
+    172           */
+    173          #if configUSE_TICKLESS_IDLE == 1
+    174          	static uint32_t ulTimerCountsForOneTick = 0;
+    175          #endif /* configUSE_TICKLESS_IDLE */
+    176          
+    177          /*
+    178           * The maximum number of tick periods that can be suppressed is limited by the
+    179           * 24 bit resolution of the SysTick timer.
+    180           */
+    181          #if configUSE_TICKLESS_IDLE == 1
+    182          	static uint32_t xMaximumPossibleSuppressedTicks = 0;
+    183          #endif /* configUSE_TICKLESS_IDLE */
+    184          
+    185          /*
+    186           * Compensate for the CPU cycles that pass while the SysTick is stopped (low
+    187           * power functionality only.
+    188           */
+    189          #if configUSE_TICKLESS_IDLE == 1
+    190          	static uint32_t ulStoppedTimerCompensation = 0;
+    191          #endif /* configUSE_TICKLESS_IDLE */
+    192          
+    193          /*
+    194           * Used by the portASSERT_IF_INTERRUPT_PRIORITY_INVALID() macro to ensure
+    195           * FreeRTOS API functions are not called from interrupts that have been assigned
+    196           * a priority above configMAX_SYSCALL_INTERRUPT_PRIORITY.
+    197           */
+    198          #if ( configASSERT_DEFINED == 1 )
+    199          	 static uint8_t ucMaxSysCallPriority = 0;
+    200          	 static uint32_t ulMaxPRIGROUPValue = 0;
+    201          	 static const volatile uint8_t * const pcInterruptPriorityRegisters = ( const volatile uint8_t * const ) portNVIC_IP_REGISTERS_OFFSET_16;
+    202          #endif /* configASSERT_DEFINED */
+    203          
+    204          /*-----------------------------------------------------------*/
+    205          
+    206          /*
+    207           * See header file for description.
+    208           */
+    209          StackType_t *pxPortInitialiseStack( StackType_t *pxTopOfStack, TaskFunction_t pxCode, void *pvParameters )
+    210          {
+    211          	/* Simulate the stack frame as it would be created by a context switch
+    212          	interrupt. */
+    213          
+    214          	/* Offset added to account for the way the MCU uses the stack on entry/exit
+    215          	of interrupts, and to ensure alignment. */
+    216          	pxTopOfStack--;
+    217          
+    218          	*pxTopOfStack = portINITIAL_XPSR;	/* xPSR */
+    219          	pxTopOfStack--;
+    220          	*pxTopOfStack = ( StackType_t ) pxCode;	/* PC */
+    221          	pxTopOfStack--;
+    222          	*pxTopOfStack = ( StackType_t ) prvTaskExitError;	/* LR */
+    223          
+    224          	/* Save code space by skipping register initialisation. */
+    225          	pxTopOfStack -= 5;	/* R12, R3, R2 and R1. */
+    226          	*pxTopOfStack = ( StackType_t ) pvParameters;	/* R0 */
+    227          
+    228          	/* A save method is being used that requires each task to maintain its
+    229          	own exec return value. */
+    230          	pxTopOfStack--;
+    231          	*pxTopOfStack = portINITIAL_EXEC_RETURN;
+    232          
+    233          	pxTopOfStack -= 8;	/* R11, R10, R9, R8, R7, R6, R5 and R4. */
+    234          
+    235          	return pxTopOfStack;
+    236          }
+    237          /*-----------------------------------------------------------*/
+    238          
+    239          static void prvTaskExitError( void )
+    240          {
+    241          	/* A function that implements a task must not exit or attempt to return to
+    242          	its caller as there is nothing to return to.  If a task wants to exit it
+    243          	should instead call vTaskDelete( NULL ).
+    244          
+    245          	Artificially force an assert() to be triggered if configASSERT() is
+    246          	defined, then stop here so application writers can catch the error. */
+    247          	configASSERT( uxCriticalNesting == ~0UL );
+    248          	portDISABLE_INTERRUPTS();
+    249          	for( ;; );
+    250          }
+    251          /*-----------------------------------------------------------*/
+    252          
+    253          /*
+    254           * See header file for description.
+    255           */
+    256          BaseType_t xPortStartScheduler( void )
+    257          {
+    258          	#if( configASSERT_DEFINED == 1 )
+    259          	{
+    260          		volatile uint32_t ulOriginalPriority;
+    261          		volatile uint8_t * const pucFirstUserPriorityRegister = ( volatile uint8_t * const ) ( portNVIC_IP_REGISTERS_OFFSET_16 + portFIRST_USER_INTERRUPT_NUMBER );
+    262          		volatile uint8_t ucMaxPriorityValue;
+    263          
+    264          		/* Determine the maximum priority from which ISR safe FreeRTOS API
+    265          		functions can be called.  ISR safe functions are those that end in
+    266          		"FromISR".  FreeRTOS maintains separate thread and ISR API functions to
+    267          		ensure interrupt entry is as fast and simple as possible.
+    268          
+    269          		Save the interrupt priority value that is about to be clobbered. */
+    270          		ulOriginalPriority = *pucFirstUserPriorityRegister;
+    271          
+    272          		/* Determine the number of priority bits available.  First write to all
+    273          		possible bits. */
+    274          		*pucFirstUserPriorityRegister = portMAX_8_BIT_VALUE;
+    275          
+    276          		/* Read the value back to see how many bits stuck. */
+    277          		ucMaxPriorityValue = *pucFirstUserPriorityRegister;
+    278          
+    279          		/* Use the same mask on the maximum system call priority. */
+    280          		ucMaxSysCallPriority = configMAX_SYSCALL_INTERRUPT_PRIORITY & ucMaxPriorityValue;
+    281          
+    282          		/* Calculate the maximum acceptable priority group value for the number
+    283          		of bits read back. */
+    284          		ulMaxPRIGROUPValue = portMAX_PRIGROUP_BITS;
+    285          		while( ( ucMaxPriorityValue & portTOP_BIT_OF_BYTE ) == portTOP_BIT_OF_BYTE )
+    286          		{
+    287          			ulMaxPRIGROUPValue--;
+    288          			ucMaxPriorityValue <<= ( uint8_t ) 0x01;
+    289          		}
+    290          
+    291          		/* Shift the priority group value back to its position within the AIRCR
+    292          		register. */
+    293          		ulMaxPRIGROUPValue <<= portPRIGROUP_SHIFT;
+    294          		ulMaxPRIGROUPValue &= portPRIORITY_GROUP_MASK;
+    295          
+    296          		/* Restore the clobbered interrupt priority register to its original
+    297          		value. */
+    298          		*pucFirstUserPriorityRegister = ulOriginalPriority;
+    299          	}
+    300          	#endif /* conifgASSERT_DEFINED */
+    301          
+    302          	/* Make PendSV and SysTick the lowest priority interrupts. */
+    303          	portNVIC_SYSPRI2_REG |= portNVIC_PENDSV_PRI;
+    304          	portNVIC_SYSPRI2_REG |= portNVIC_SYSTICK_PRI;
+    305          
+    306          	/* Start the timer that generates the tick ISR.  Interrupts are disabled
+    307          	here already. */
+    308          	vPortSetupTimerInterrupt();
+    309          
+    310          	/* Initialise the critical nesting count ready for the first task. */
+    311          	uxCriticalNesting = 0;
+    312          
+    313          	/* Ensure the VFP is enabled - it should be anyway. */
+    314          	vPortEnableVFP();
+    315          
+    316          	/* Lazy save always. */
+    317          	*( portFPCCR ) |= portASPEN_AND_LSPEN_BITS;
+    318          
+    319          	/* Start the first task. */
+    320          	vPortStartFirstTask();
+    321          
+    322          	/* Should not get here! */
+    323          	return 0;
+    324          }
+    325          /*-----------------------------------------------------------*/
+    326          
+    327          void vPortEndScheduler( void )
+    328          {
+    329          	/* Not implemented in ports where there is nothing to return to.
+    330          	Artificially force an assert. */
+    331          	configASSERT( uxCriticalNesting == 1000UL );
+    332          }
+    333          /*-----------------------------------------------------------*/
+    334          
+    335          void vPortYield( void )
+    336          {
+    337          	/* Set a PendSV to request a context switch. */
+    338          	portNVIC_INT_CTRL_REG = portNVIC_PENDSVSET_BIT;
+    339          
+    340          	/* Barriers are normally not required but do ensure the code is completely
+    341          	within the specified behaviour for the architecture. */
+    342          	__DSB();
+    343          	__ISB();
+    344          }
+    345          /*-----------------------------------------------------------*/
+    346          
+    347          void vPortEnterCritical( void )
+    348          {
+    349          	portDISABLE_INTERRUPTS();
+    350          	uxCriticalNesting++;
+    351          	__DSB();
+    352          	__ISB();
+    353          }
+    354          /*-----------------------------------------------------------*/
+    355          
+    356          void vPortExitCritical( void )
+    357          {
+    358          	configASSERT( uxCriticalNesting );
+    359          	uxCriticalNesting--;
+    360          	if( uxCriticalNesting == 0 )
+    361          	{
+    362          		portENABLE_INTERRUPTS();
+    363          	}
+    364          }
+    365          /*-----------------------------------------------------------*/
+    366          
+    367          void xPortSysTickHandler( void )
+    368          {
+    369          	/* The SysTick runs at the lowest interrupt priority, so when this interrupt
+    370          	executes all interrupts must be unmasked.  There is therefore no need to
+    371          	save and then restore the interrupt mask value as its value is already
+    372          	known. */
+    373          	( void ) portSET_INTERRUPT_MASK_FROM_ISR();
+    374          	{
+    375          		/* Increment the RTOS tick. */
+    376          		if( xTaskIncrementTick() != pdFALSE )
+    377          		{
+    378          			/* A context switch is required.  Context switching is performed in
+    379          			the PendSV interrupt.  Pend the PendSV interrupt. */
+    380          			portNVIC_INT_CTRL_REG = portNVIC_PENDSVSET_BIT;
+    381          		}
+    382          	}
+    383          	portCLEAR_INTERRUPT_MASK_FROM_ISR( 0 );
+    384          }
+    385          /*-----------------------------------------------------------*/
+    386          
+    387          #if configUSE_TICKLESS_IDLE == 1
+    388          
+    389          	__weak void vPortSuppressTicksAndSleep( TickType_t xExpectedIdleTime )
+    390          	{
+    391          	uint32_t ulReloadValue, ulCompleteTickPeriods, ulCompletedSysTickDecrements, ulSysTickCTRL;
+    392          	TickType_t xModifiableIdleTime;
+    393          
+    394          		/* Make sure the SysTick reload value does not overflow the counter. */
+    395          		if( xExpectedIdleTime > xMaximumPossibleSuppressedTicks )
+    396          		{
+    397          			xExpectedIdleTime = xMaximumPossibleSuppressedTicks;
+    398          		}
+    399          
+    400          		/* Stop the SysTick momentarily.  The time the SysTick is stopped for
+    401          		is accounted for as best it can be, but using the tickless mode will
+    402          		inevitably result in some tiny drift of the time maintained by the
+    403          		kernel with respect to calendar time. */
+    404          		portNVIC_SYSTICK_CTRL_REG &= ~portNVIC_SYSTICK_ENABLE_BIT;
+    405          
+    406          		/* Calculate the reload value required to wait xExpectedIdleTime
+    407          		tick periods.  -1 is used because this code will execute part way
+    408          		through one of the tick periods. */
+    409          		ulReloadValue = portNVIC_SYSTICK_CURRENT_VALUE_REG + ( ulTimerCountsForOneTick * ( xExpectedIdleTime - 1UL ) );
+    410          		if( ulReloadValue > ulStoppedTimerCompensation )
+    411          		{
+    412          			ulReloadValue -= ulStoppedTimerCompensation;
+    413          		}
+    414          
+    415          		/* Enter a critical section but don't use the taskENTER_CRITICAL()
+    416          		method as that will mask interrupts that should exit sleep mode. */
+    417          		__disable_interrupt();
+    418          
+    419          		/* If a context switch is pending or a task is waiting for the scheduler
+    420          		to be unsuspended then abandon the low power entry. */
+    421          		if( eTaskConfirmSleepModeStatus() == eAbortSleep )
+    422          		{
+    423          			/* Restart from whatever is left in the count register to complete
+    424          			this tick period. */
+    425          			portNVIC_SYSTICK_LOAD_REG = portNVIC_SYSTICK_CURRENT_VALUE_REG;
+    426          
+    427          			/* Restart SysTick. */
+    428          			portNVIC_SYSTICK_CTRL_REG |= portNVIC_SYSTICK_ENABLE_BIT;
+    429          
+    430          			/* Reset the reload register to the value required for normal tick
+    431          			periods. */
+    432          			portNVIC_SYSTICK_LOAD_REG = ulTimerCountsForOneTick - 1UL;
+    433          
+    434          			/* Re-enable interrupts - see comments above __disable_interrupt()
+    435          			call above. */
+    436          			__enable_interrupt();
+    437          		}
+    438          		else
+    439          		{
+    440          			/* Set the new reload value. */
+    441          			portNVIC_SYSTICK_LOAD_REG = ulReloadValue;
+    442          
+    443          			/* Clear the SysTick count flag and set the count value back to
+    444          			zero. */
+    445          			portNVIC_SYSTICK_CURRENT_VALUE_REG = 0UL;
+    446          
+    447          			/* Restart SysTick. */
+    448          			portNVIC_SYSTICK_CTRL_REG |= portNVIC_SYSTICK_ENABLE_BIT;
+    449          
+    450          			/* Sleep until something happens.  configPRE_SLEEP_PROCESSING() can
+    451          			set its parameter to 0 to indicate that its implementation contains
+    452          			its own wait for interrupt or wait for event instruction, and so wfi
+    453          			should not be executed again.  However, the original expected idle
+    454          			time variable must remain unmodified, so a copy is taken. */
+    455          			xModifiableIdleTime = xExpectedIdleTime;
+    456          			configPRE_SLEEP_PROCESSING( xModifiableIdleTime );
+    457          			if( xModifiableIdleTime > 0 )
+    458          			{
+    459          				__DSB();
+    460          				__WFI();
+    461          				__ISB();
+    462          			}
+    463          			configPOST_SLEEP_PROCESSING( xExpectedIdleTime );
+    464          
+    465          			/* Stop SysTick.  Again, the time the SysTick is stopped for is
+    466          			accounted for as best it can be, but using the tickless mode will
+    467          			inevitably result in some tiny drift of the time maintained by the
+    468          			kernel with respect to calendar time. */
+    469          			ulSysTickCTRL = portNVIC_SYSTICK_CTRL_REG;
+    470          			portNVIC_SYSTICK_CTRL_REG = ( ulSysTickCTRL & ~portNVIC_SYSTICK_ENABLE_BIT );
+    471          
+    472          			/* Re-enable interrupts - see comments above __disable_interrupt()
+    473          			call above. */
+    474          			__enable_interrupt();
+    475          
+    476          			if( ( ulSysTickCTRL & portNVIC_SYSTICK_COUNT_FLAG_BIT ) != 0 )
+    477          			{
+    478          				uint32_t ulCalculatedLoadValue;
+    479          
+    480          				/* The tick interrupt has already executed, and the SysTick
+    481          				count reloaded with ulReloadValue.  Reset the
+    482          				portNVIC_SYSTICK_LOAD_REG with whatever remains of this tick
+    483          				period. */
+    484          				ulCalculatedLoadValue = ( ulTimerCountsForOneTick - 1UL ) - ( ulReloadValue - portNVIC_SYSTICK_CURRENT_VALUE_REG );
+    485          
+    486          				/* Don't allow a tiny value, or values that have somehow
+    487          				underflowed because the post sleep hook did something
+    488          				that took too long. */
+    489          				if( ( ulCalculatedLoadValue < ulStoppedTimerCompensation ) || ( ulCalculatedLoadValue > ulTimerCountsForOneTick ) )
+    490          				{
+    491          					ulCalculatedLoadValue = ( ulTimerCountsForOneTick - 1UL );
+    492          				}
+    493          
+    494          				portNVIC_SYSTICK_LOAD_REG = ulCalculatedLoadValue;
+    495          
+    496          				/* The tick interrupt handler will already have pended the tick
+    497          				processing in the kernel.  As the pending tick will be
+    498          				processed as soon as this function exits, the tick value
+    499          				maintained by the tick is stepped forward by one less than the
+    500          				time spent waiting. */
+    501          				ulCompleteTickPeriods = xExpectedIdleTime - 1UL;
+    502          			}
+    503          			else
+    504          			{
+    505          				/* Something other than the tick interrupt ended the sleep.
+    506          				Work out how long the sleep lasted rounded to complete tick
+    507          				periods (not the ulReload value which accounted for part
+    508          				ticks). */
+    509          				ulCompletedSysTickDecrements = ( xExpectedIdleTime * ulTimerCountsForOneTick ) - portNVIC_SYSTICK_CURRENT_VALUE_REG;
+    510          
+    511          				/* How many complete tick periods passed while the processor
+    512          				was waiting? */
+    513          				ulCompleteTickPeriods = ulCompletedSysTickDecrements / ulTimerCountsForOneTick;
+    514          
+    515          				/* The reload value is set to whatever fraction of a single tick
+    516          				period remains. */
+    517          				portNVIC_SYSTICK_LOAD_REG = ( ( ulCompleteTickPeriods + 1 ) * ulTimerCountsForOneTick ) - ulCompletedSysTickDecrements;
+    518          			}
+    519          
+    520          			/* Restart SysTick so it runs from portNVIC_SYSTICK_LOAD_REG
+    521          			again, then set portNVIC_SYSTICK_LOAD_REG back to its standard
+    522          			value.  The critical section is used to ensure the tick interrupt
+    523          			can only execute once in the case that the reload register is near
+    524          			zero. */
+    525          			portNVIC_SYSTICK_CURRENT_VALUE_REG = 0UL;
+    526          			portENTER_CRITICAL();
+    527          			{
+    528          				portNVIC_SYSTICK_CTRL_REG |= portNVIC_SYSTICK_ENABLE_BIT;
+    529          				vTaskStepTick( ulCompleteTickPeriods );
+    530          				portNVIC_SYSTICK_LOAD_REG = ulTimerCountsForOneTick - 1UL;
+    531          			}
+    532          			portEXIT_CRITICAL();
+    533          		}
+    534          	}
+    535          
+    536          #endif /* #if configUSE_TICKLESS_IDLE */
+    537          /*-----------------------------------------------------------*/
+    538          
+    539          /*
+    540           * Setup the systick timer to generate the tick interrupts at the required
+    541           * frequency.
+    542           */
+    543          __weak void vPortSetupTimerInterrupt( void )
+    544          {
+    545          	/* Calculate the constants required to configure the tick interrupt. */
+    546          	#if configUSE_TICKLESS_IDLE == 1
+    547          	{
+    548          		ulTimerCountsForOneTick = ( configSYSTICK_CLOCK_HZ / configTICK_RATE_HZ );
+    549          		xMaximumPossibleSuppressedTicks = portMAX_24_BIT_NUMBER / ulTimerCountsForOneTick;
+    550          		ulStoppedTimerCompensation = portMISSED_COUNTS_FACTOR / ( configCPU_CLOCK_HZ / configSYSTICK_CLOCK_HZ );
+    551          	}
+    552          	#endif /* configUSE_TICKLESS_IDLE */
+    553          
+    554          	/* Configure SysTick to interrupt at the requested rate. */
+    555          	portNVIC_SYSTICK_LOAD_REG = ( configSYSTICK_CLOCK_HZ / configTICK_RATE_HZ ) - 1UL;
+    556          	portNVIC_SYSTICK_CTRL_REG = ( portNVIC_SYSTICK_CLK_BIT | portNVIC_SYSTICK_INT_BIT | portNVIC_SYSTICK_ENABLE_BIT );
+    557          }
+    558          /*-----------------------------------------------------------*/
+    559          
+    560          #if( configASSERT_DEFINED == 1 )
+    561          
+    562          	void vPortValidateInterruptPriority( void )
+    563          	{
+    564          	uint32_t ulCurrentInterrupt;
+    565          	uint8_t ucCurrentPriority;
+    566          
+    567          		/* Obtain the number of the currently executing interrupt. */
+    568          		__asm volatile( "mrs %0, ipsr" : "=r"( ulCurrentInterrupt ) );
+    569          
+    570          		/* Is the interrupt number a user defined interrupt? */
+    571          		if( ulCurrentInterrupt >= portFIRST_USER_INTERRUPT_NUMBER )
+    572          		{
+    573          			/* Look up the interrupt's priority. */
+    574          			ucCurrentPriority = pcInterruptPriorityRegisters[ ulCurrentInterrupt ];
+    575          
+    576          			/* The following assertion will fail if a service routine (ISR) for
+    577          			an interrupt that has been assigned a priority above
+    578          			configMAX_SYSCALL_INTERRUPT_PRIORITY calls an ISR safe FreeRTOS API
+    579          			function.  ISR safe FreeRTOS API functions must *only* be called
+    580          			from interrupts that have been assigned a priority at or below
+    581          			configMAX_SYSCALL_INTERRUPT_PRIORITY.
+    582          
+    583          			Numerically low interrupt priority numbers represent logically high
+    584          			interrupt priorities, therefore the priority of the interrupt must
+    585          			be set to a value equal to or numerically *higher* than
+    586          			configMAX_SYSCALL_INTERRUPT_PRIORITY.
+    587          
+    588          			Interrupts that	use the FreeRTOS API must not be left at their
+    589          			default priority of	zero as that is the highest possible priority,
+    590          			which is guaranteed to be above configMAX_SYSCALL_INTERRUPT_PRIORITY,
+    591          			and	therefore also guaranteed to be invalid.
+    592          
+    593          			FreeRTOS maintains separate thread and ISR API functions to ensure
+    594          			interrupt entry is as fast and simple as possible.
+    595          
+    596          			The following links provide detailed information:
+    597          			http://www.freertos.org/RTOS-Cortex-M3-M4.html
+    598          			http://www.freertos.org/FAQHelp.html */
+    599          			configASSERT( ucCurrentPriority >= ucMaxSysCallPriority );
+    600          		}
+    601          
+    602          		/* Priority grouping:  The interrupt controller (NVIC) allows the bits
+    603          		that define each interrupt's priority to be split between bits that
+    604          		define the interrupt's pre-emption priority bits and bits that define
+    605          		the interrupt's sub-priority.  For simplicity all bits must be defined
+    606          		to be pre-emption priority bits.  The following assertion will fail if
+    607          		this is not the case (if some bits represent a sub-priority).
+    608          
+    609          		If the application only uses CMSIS libraries for interrupt
+    610          		configuration then the correct setting can be achieved on all Cortex-M
+    611          		devices by calling NVIC_SetPriorityGrouping( 0 ); before starting the
+    612          		scheduler.  Note however that some vendor specific peripheral libraries
+    613          		assume a non-zero priority group setting, in which cases using a value
+    614          		of zero will result in unpredicable behaviour. */
+    615          		configASSERT( ( portAIRCR_REG & portPRIORITY_GROUP_MASK ) <= ulMaxPRIGROUPValue );
+    616          	}
+    617          
+    618          #endif /* configASSERT_DEFINED */
+    619          
+    620          
+    621          
+    622          
+    623          
+    624          
+    625          
+    626          
+    627          
+    628          
+    629          
+    630          
+    631          
+    632          
+    633          
+    634          
+    635          
+    636          
+    637          
+    638          
+    639          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        8  SysTick_Handler
+              8 -> ulPortSetInterruptMask
+              0 -> vPortClearInterruptMask
+              8 -> xTaskIncrementTick
+        8  prvTaskExitError
+              8 -> ulPortSetInterruptMask
+        0  pxPortInitialiseStack
+        8  vPortEndScheduler
+              8 -> ulPortSetInterruptMask
+        8  vPortEnterCritical
+              8 -> ulPortSetInterruptMask
+        8  vPortExitCritical
+              8 -> ulPortSetInterruptMask
+              0 -> vPortClearInterruptMask
+        0  vPortSetupTimerInterrupt
+        8  vPortValidateInterruptPriority
+              8 -> ulPortSetInterruptMask
+        0  vPortYield
+       16  xPortStartScheduler
+             16 -> vPortEnableVFP
+             16 -> vPortSetupTimerInterrupt
+             16 -> vPortStartFirstTask
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable7
+       4  ??DataTable7_1
+       4  ??DataTable7_2
+       4  ??DataTable7_3
+       4  ??DataTable7_4
+       4  ??DataTable7_5
+       4  ??DataTable7_6
+       4  ??DataTable7_7
+       4  ??DataTable7_8
+      10  ?Subroutine0
+      20  SysTick_Handler
+      24  prvTaskExitError
+      36  pxPortInitialiseStack
+      12  ucMaxSysCallPriority
+          uxCriticalNesting
+          ulMaxPRIGROUPValue
+      22  vPortEndScheduler
+      24  vPortEnterCritical
+      24  vPortExitCritical
+      24  vPortSetupTimerInterrupt
+      52  vPortValidateInterruptPriority
+      18  vPortYield
+     114  xPortStartScheduler
+
+ 
+  12 bytes in section .data
+ 404 bytes in section .text
+ 
+ 404 bytes of CODE memory
+  12 bytes of DATA memory
+
+Errors: none
+Warnings: none

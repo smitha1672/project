@@ -1,0 +1,522 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:14 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\audio_rx\si_a #
+#                    udio_component.c                                         #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\audio_rx\si_a #
+#                    udio_component.c -D S4051A -D DEBUG -D FREE_RTOS -D      #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_audio_component.lst                                #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_audio_component.o                                   #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\component\audio_rx\si_audio_component.c
+      1          //***************************************************************************
+      2          //!file     si_audio_component.c
+      3          //!brief    Silicon Image AUDIO Component.
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2002-2012, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include "string.h"
+     14          #include "si_audio_component.h"
+     15          #include "si_debug.h"
+     16          #include "si_drv_audio_internal.h"
+     17          #include "si_timer.h"
+     18          
+     19          #if ( configSII_DEV_953x_PORTING == 1 )
+     20          #include "Debug.h"
+     21          #endif
+     22          
+     23          SiiRxAudioInstanceData_t RxAudInstance[SII_NUM_RX_AUDIO];
+     24          SiiRxAudioInstanceData_t *pAudExtraction = &RxAudInstance[0];
+     25          
+     26          
+     27          //-------------------------------------------------------------------------------------------------
+     28          //! @brief      Set the component global data pointer to the requested instance.
+     29          //! @param[in]  instanceIndex   Instance of RX Audio component.
+     30          //! @returns    true if legal index, false if index value is illegal.
+     31          //-------------------------------------------------------------------------------------------------
+     32          bool_t SiiRxAudioInstanceSet( int instanceIndex )
+     33          {
+     34              if ( instanceIndex < SII_NUM_RX_AUDIO )
+     35              {
+     36                  SiiDrvRxAudioInstanceSet( instanceIndex );
+     37                  pAudExtraction = &RxAudInstance[ instanceIndex ];
+     38                  return( true );
+     39              }
+     40          
+     41              return( false );
+     42          }
+     43          
+     44          //------------------------------------------------------------------------------
+     45          // Function:    SiiRxAudioInit
+     46          // Description:  Initialize the audio state machine and audio hardware start up
+     47          //              for both main and sub channel
+     48          // Parameters:  none
+     49          // Returns:     none
+     50          //------------------------------------------------------------------------------
+     51          void SiiRxAudioInit( void )
+     52          {
+     53              pAudExtraction->audState    = SII_AUD_STATE_OFF;
+     54              pAudExtraction->audMode     = SII_AUD_PCM_MODE;
+     55              pAudExtraction->audLayout   = SII_AUD_TWO_CHANNEL;
+     56          
+     57              SiiDrvRxAudioInit();
+     58              SiiDrvRxSpdifOutEnable(false); // SPDIF digital outputs are disabled by default
+     59          }
+     60          
+     61          //------------------------------------------------------------------------------
+     62          //! @brief  Place audio component in standby
+     63          //------------------------------------------------------------------------------
+     64          bool_t SiiRxAudioStandby( void )
+     65          {
+     66              int i;
+     67          
+     68              for ( i = 0; i < SII_NUM_RX_AUDIO; i++ )
+     69              {
+     70                  SiiRxAudioInstanceSet( i );
+     71                  SiiDrvRxSpdifOutEnable( false );
+     72              }
+     73          
+     74              return( SiiDrvRxAudioStandby() );
+     75          }
+     76          
+     77          //-------------------------------------------------------------------------------------------------
+     78          //! @brief
+     79          //! @return
+     80          //-------------------------------------------------------------------------------------------------
+     81          uint8_t SiiRxAudioHandler(SiiRxAudioInstanceData_t *pAudRx)
+     82          {
+     83              uint8_t IntrStatus[3];
+     84          	uint8_t intTrigger=false;
+     85          
+     86          	if (SiiDrvRxAudioIsInterruptAssert())
+     87          	{
+     88          	    //read all interrupt registers
+     89          	    SiiDrvRxAudioGetIntStatus(IntrStatus);
+     90          	    //SiiDrvRxAudioUnmuteReady(false);
+     91          	    if (IntrStatus[1] & SII_AUD_RX_AACDONE)    //if soft mute done
+     92          	    {
+     93          			//DEBUG_PRINT( MSG_ALWAYS, "=== AAC_DONE ===\n");
+     94          	        SiiDrvRxAudioInternalMute(true);
+     95          	        if( (SiiDrvRxAudioModeGet()== SII_AUD_DSD_MODE) ||(SiiDrvRxAudioHdmiModeGet()))  //Bug 31751 - Audio extraction is disabled and not resumed after receiving glitch in the audio
+     96          	        {
+     97          	        	DEBUG_PRINT( MSG_ALWAYS, "AAC_DONE: DSD mode, enable AAC_ALL\n");
+     98          	        	SiiDrvRxAudioEnableAAC();
+     99          	        }
+    100                      if( pAudExtraction->audState != SII_AUD_STATE_OFF ){ // from Audio ON condition.
+    101          		        pAudExtraction->audState = SII_AUD_STATE_OFF;
+    102                          //SiiDrvRxAudioEnableCHSTINT();
+    103          				SiiDrvRxAudioInitMclk();
+    104          
+    105          			}
+    106          	    }
+    107          	    else 
+    108          	    {
+    109          			//if( IntrStatus[2] & SII_AUD_RX_FSCHG){
+    110          	    	if((pAudExtraction->audState == SII_AUD_STATE_OFF)&&
+    111          	    			((IntrStatus[1] & SII_AUD_RX_FNCHG) ||
+    112          	    			(IntrStatus[2] & SII_AUD_RX_FSCHG))
+    113          	    			)
+    114          	    	{
+    115          			//	DEBUG_PRINT( MSG_ALWAYS, "=== FNCHG ===\n");
+    116          	    		//if audFs is unknown, don't clear FNCHG, then check again
+    117          				pAudExtraction->audMode = SiiDrvRxAudioModeGet();
+    118          				pAudExtraction->audFs = SiiDrvRxAudioCheckFsAndFix();
+    119          				if ( (pAudExtraction->audMode == SII_AUD_DSD_MODE) ||
+    120          					( ((pAudExtraction->audMode == SII_AUD_HBRA_MODE) || (pAudExtraction->audMode == SII_AUD_PCM_MODE) ) &&
+    121          					    (pAudExtraction->audFs != (SiiRxAudioFsValues_t)SII_AUD_CHST4_FS_UNKNOWN)	) )
+    122          
+    123          				{
+    124          					SiiDrvRxAudioSetMclk( pAudExtraction->audMode, pAudExtraction->audFs );
+    125          					SiiDrvRxAudioEnableAAC();
+    126          				}
+    127          
+    128          			}
+    129          			if (IntrStatus[0] & SII_AUD_RX_AUDIO_READY)    //audio ready
+    130          			{
+    131          				DEBUG_PRINT( MSG_ALWAYS, "=== UNMUTE ===\n");
+    132          				//clear all pending interrupts
+    133          				IntrStatus[0] = SII_AUD_RX_AUDIO_READY;
+    134          				IntrStatus[1] = 0;
+    135          				IntrStatus[2] = 0;
+    136          				SiiDrvRxAudioClearIntStatus(IntrStatus);
+    137          				pAudExtraction->audState = SII_AUD_STATE_ON;
+    138          				SiiDrvRxAudioUnmuteReady(true); //for ACP chk
+    139          				//SiiDrvRxAudioDisableCHSTINT();
+    140          				//SiiDrvRxAudioDisableAAC();  //Bug 31751 - Audio extraction is disabled and not resumed after receiving glitch in the audio
+    141          
+    142          			}
+    143          	    }
+    144          
+    145                  //check ACP packet
+    146          	    if (SiiDrvRxAudioGetNewAcpInt())    //new ACP change
+    147          	    {
+    148          	    	//DEBUG_PRINT( MSG_ALWAYS, "\n\n\nAudio:New Acp\n");
+    149          	    	SiiDrvRxAudioOnNewAcp(true);
+    150          	    	//if it is in No ACP check already, exit it
+    151          	    	if(pAudExtraction->audState == SII_AUD_NO_ACP_CHECK)
+    152          	    	{
+    153          	    		SiiDrvRxAudioNoAcpPacketcheckStart(OFF);
+    154          	    		pAudExtraction->audState = SII_AUD_STATE_IDLE;
+    155          	    	}
+    156          
+    157          	    }
+    158          	    // If audio is ready, and we were in ACP type 2 or above but
+    159          	    // have not received an ACP packet, start the 600ms to wait for one.
+    160          	    else if (SiiDrvRxAudioGetNoAcpInt())    //no ACP change
+    161          	    {
+    162          	    	pAudExtraction->audState = SII_AUD_NO_ACP_CHECK;
+    163          	    	SiiTimerSet( TIMER_4, SII_NOACP_TIMEOUT ); //start the timer
+    164          	    	SiiDrvRxAudioNoAcpPacketcheckStart(ON);
+    165          	    }
+    166          
+    167          		pAudExtraction->audMode = SiiDrvRxAudioModeGet();
+    168          		pAudExtraction->audLayout = SiiDrvRxAudioLayoutGet();
+    169          		pAudExtraction->audFs = SiiDrvRxAudioSampleRateGet();
+    170          		pAudExtraction->audMclk = SiiDrvRxAudioGetMclk();
+    171          		memcpy(pAudRx, pAudExtraction, sizeof(SiiRxAudioInstanceData_t));
+    172          		
+    173          		IntrStatus[0] = 0;
+    174          		IntrStatus[1] = SII_AUD_RX_AACDONE;
+    175          		IntrStatus[2] = 0;
+    176          	    //clear all pending interrupts
+    177          	    SiiDrvRxAudioClearIntStatus(IntrStatus);
+    178          
+    179          		SiiDrvRxAudioInterruptClearAssert();
+    180          		intTrigger = true;
+    181          	}
+    182          
+    183          	return intTrigger;
+    184          }
+    185          
+    186          
+    187          void SiiRxAudioNoAcpCheck(void)
+    188          {
+    189          	if ( SiiTimerExpired( TIMER_4 ))
+    190          	{
+    191          		pAudExtraction->audState = SII_AUD_STATE_ON;
+    192          		//time out,
+    193          		if(SiiDrvRxAudioNoAcpPacketcheckConfirm())
+    194          		{
+    195          			//revert to no ACP action
+    196          			DEBUG_PRINT( MSG_DBG, "No Acp Packet\n");
+    197          
+    198          			SiiDrvRxAudioOnNoAcp();
+    199          		}
+    200          		else
+    201          		{
+    202          			SiiDrvRxAudioOnNewAcp(ON);
+    203          		}
+    204          
+    205          		SiiDrvRxAudioNoAcpPacketcheckStart(OFF);
+    206          	}
+    207          }
+    208          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       24  SiiRxAudioHandler
+             24 -> SiiDrvRxAudioCheckFsAndFix
+             24 -> SiiDrvRxAudioClearIntStatus
+             24 -> SiiDrvRxAudioEnableAAC
+             24 -> SiiDrvRxAudioGetIntStatus
+             24 -> SiiDrvRxAudioGetMclk
+             24 -> SiiDrvRxAudioGetNewAcpInt
+             24 -> SiiDrvRxAudioGetNoAcpInt
+             24 -> SiiDrvRxAudioHdmiModeGet
+             24 -> SiiDrvRxAudioInitMclk
+             24 -> SiiDrvRxAudioInternalMute
+             24 -> SiiDrvRxAudioInterruptClearAssert
+             24 -> SiiDrvRxAudioIsInterruptAssert
+             24 -> SiiDrvRxAudioLayoutGet
+             24 -> SiiDrvRxAudioModeGet
+             24 -> SiiDrvRxAudioNoAcpPacketcheckStart
+             24 -> SiiDrvRxAudioOnNewAcp
+             24 -> SiiDrvRxAudioSampleRateGet
+             24 -> SiiDrvRxAudioSetMclk
+             24 -> SiiDrvRxAudioUnmuteReady
+             24 -> SiiTimerSet
+             24 -> __aeabi_memcpy
+        8  SiiRxAudioInit
+              8 -> SiiDrvRxAudioInit
+              0 -> SiiDrvRxSpdifOutEnable
+        8  SiiRxAudioInstanceSet
+              8 -> SiiDrvRxAudioInstanceSet
+        8  SiiRxAudioNoAcpCheck
+              8 -> SiiDrvRxAudioNoAcpPacketcheckConfirm
+              0 -> SiiDrvRxAudioNoAcpPacketcheckStart
+              8 -> SiiDrvRxAudioOnNewAcp
+              8 -> SiiDrvRxAudioOnNoAcp
+              8 -> SiiTimerExpired
+        8  SiiRxAudioStandby
+              0 -> SiiDrvRxAudioStandby
+              8 -> SiiDrvRxSpdifOutEnable
+              8 -> SiiRxAudioInstanceSet
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable3
+     304  SiiRxAudioHandler
+      32  SiiRxAudioInit
+      32  SiiRxAudioInstanceSet
+      48  SiiRxAudioNoAcpCheck
+      22  SiiRxAudioStandby
+      12  pAudExtraction
+          RxAudInstance
+
+ 
+  12 bytes in section .data
+ 442 bytes in section .text
+ 
+ 442 bytes of CODE memory
+  12 bytes of DATA memory
+
+Errors: none
+Warnings: 7

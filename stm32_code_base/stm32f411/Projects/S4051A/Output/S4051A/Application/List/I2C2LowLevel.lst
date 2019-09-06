@@ -1,0 +1,995 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:25:36 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Utilities\mainstream_v1\stm32f411\I2C2LowLevel.c      #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Utilities\mainstream_v1\stm32f411\I2C2LowLevel.c -D   #
+#                    S4051A -D DEBUG -D FREE_RTOS -D STM32F40_41xxx -D        #
+#                    USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D             #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\I2C2LowLevel.lst                                      #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\I2C2LowLevel.o                                         #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Utilities\mainstream_v1\stm32f411\I2C2LowLevel.c
+      1          #include "Debug.h"
+      2          #include "freertos_conf.h"
+      3          #include "freertos_task.h"
+      4          
+      5          #include "config.h"
+      6          #include "I2C2LowLevel.h"
+      7          
+      8          //_______________________________________________________________________________________________________________________
+      9          #define sEE_I2C2                          I2C3
+     10          #define sEE_I2C2_CLK                      RCC_APB1Periph_I2C3
+     11          #define sEE_I2C2_SCL_PIN                  GPIO_Pin_8                  /* PA.08 */
+     12          #define sEE_I2C2_SCL_GPIO_PORT            GPIOA                       /* GPIOA */
+     13          #define sEE_I2C2_SCL_GPIO_CLK             RCC_AHB1Periph_GPIOA
+     14          #define sEE_I2C2_SCL_SOURCE               GPIO_PinSource8
+     15          #define sEE_I2C2_SCL_AF                   GPIO_AF_I2C3
+     16          #define sEE_I2C2_SDA_PIN                  GPIO_Pin_9                  /* PC.09 */
+     17          #define sEE_I2C2_SDA_GPIO_PORT            GPIOC                       /* GPIOC */
+     18          #define sEE_I2C2_SDA_GPIO_CLK             RCC_AHB1Periph_GPIOC
+     19          #define sEE_I2C2_SDA_SOURCE               GPIO_PinSource9
+     20          #define sEE_I2C2_SDA_AF                   GPIO_AF_I2C3
+     21          
+     22          #define sEE_FLAG_TIMEOUT         ((uint32_t)0x1000)
+     23          #define sEE_LONG_TIMEOUT         ((uint32_t)(300 * sEE_FLAG_TIMEOUT))
+     24          
+     25          #define sEE_OK                    0
+     26          #define sEE_FAIL                  1
+     27          
+     28          #define I2C_SLAVE_ADDRESS7      0
+     29          #define I2C_SPEED               90000
+     30          
+     31          #define I2C_INTERVAL_TIME	5
+     32          
+     33          //_______________________________________________________________________________________________________________________
+     34          
+     35          typedef FlagStatus ( *i2c_get_flag_status )( I2C_TypeDef* I2Cx, uint32_t I2C_FLAG );
+     36          
+     37          typedef ErrorStatus ( *i2c_check_event ) ( I2C_TypeDef* I2Cx, uint32_t I2C_EVENT );
+     38          
+     39          //_______________________________________________________________________________________________________________________
+     40          static bool bIsI2C2_enable = FALSE;
+     41          //_______________________________________________________________________________________________________________________
+     42          static void sEE_Init2(void);
+     43          
+     44          //_______________________________________________________________________________________________________________________
+     45          
+     46          uint32_t sEE_TIMEOUT_UserCallback2(uint8_t	DevAddr)
+     47          {
+     48          	I2C_InitTypeDef  I2C_InitStructure;
+     49          
+     50          	TRACE_ERROR((0, "Device Address 0x%X I2C interface timeout !!", DevAddr));
+     51          	
+     52          	I2C_GenerateSTOP(sEE_I2C2, ENABLE);
+     53          	I2C_SoftwareResetCmd(sEE_I2C2,ENABLE); 
+     54          	I2C_SoftwareResetCmd(sEE_I2C2,DISABLE); 
+     55              //sEE_Init2();
+     56          	I2C_DeInit(sEE_I2C2);
+     57          
+     58          	/*!< I2C configuration */
+     59          	/* sEE_I2C2 configuration */
+     60          	I2C_InitStructure.I2C_Mode = I2C_Mode_I2C;
+     61          	I2C_InitStructure.I2C_DutyCycle = I2C_DutyCycle_2;
+     62          	I2C_InitStructure.I2C_OwnAddress1 = I2C_SLAVE_ADDRESS7;
+     63          	I2C_InitStructure.I2C_Ack = I2C_Ack_Enable;
+     64          	I2C_InitStructure.I2C_AcknowledgedAddress = I2C_AcknowledgedAddress_7bit;
+     65          	I2C_InitStructure.I2C_ClockSpeed = I2C_SPEED;
+     66          
+     67          	/* sEE_I2C2 Peripheral Enable */
+     68          	I2C_Cmd(sEE_I2C2, ENABLE);
+     69          
+     70          	/* Apply sEE_I2C2 configuration after enabling it */
+     71          	I2C_Init(sEE_I2C2, &I2C_InitStructure);
+     72          
+     73          	return sEE_FAIL;
+     74          }
+     75          
+     76          
+     77          void sEE_EnterCriticalSection_UserCallback2(void)
+     78          {
+     79            __disable_irq();  
+     80          }
+     81          
+     82          /**
+     83            * @brief  Start and End of critical section: these callbacks should be typically used
+     84            *         to re-enable interrupts when exiting a critical section of I2C communication
+     85            *         You may use default callbacks provided into this driver by uncommenting the 
+     86            *         define USE_DEFAULT_CRITICAL_CALLBACK.
+     87            *         Or you can comment that line and implement these callbacks into your 
+     88            *         application.
+     89            * @param  None.
+     90            * @retval None.
+     91            */
+     92          void sEE_ExitCriticalSection_UserCallback2(void)
+     93          {
+     94            __enable_irq();
+     95          }
+     96          
+     97          bool i2c2_flag_timeout_check( i2c_get_flag_status i2c_flag_status, I2C_TypeDef* I2Cx, uint32_t I2C_FLAG, uint32 time )
+     98          {
+     99          	uint32_t timeout = time;
+    100          	bool ret = FALSE;
+    101          
+    102          	while( i2c_flag_status( I2Cx, I2C_FLAG ) )
+    103          	{
+    104          		if ( (timeout--) == 0 )
+    105          		{
+    106          			ret = TRUE;
+    107          			break;
+    108          		}
+    109          	}
+    110          	return ret;
+    111          }
+    112          
+    113          bool i2c2_event_timeout_check( i2c_check_event i2c_event_status, I2C_TypeDef* I2Cx, uint32_t I2C_EVENT, uint32 time )
+    114          {
+    115          	uint32_t timeout = time;
+    116          	bool ret = FALSE;
+    117          
+    118          	while( !i2c_event_status( I2Cx, I2C_EVENT ) )
+    119          	{
+    120          		if ( (timeout--) == 0 )
+    121          		{
+    122          			ret = TRUE;
+    123          			break;
+    124          		}
+    125          	}
+    126          	return ret;
+    127          }
+    128          
+    129          static uint32_t __STM32_I2C2_readSlave(	uint8_t	DevAddr,
+    130          												uint16_t ReadAddr, 
+    131          												uint8_t *pBuffer, 
+    132          												uint16_t *NumByteToRead, 
+    133          												bool longAddr)
+    134          {
+    135          
+    136          	uint16_t NumByteToReadN = *NumByteToRead;
+    137          	bool IsTimeout = FALSE;
+    138          	uint8 state_mach = 0;
+    139          
+    140          	/* Disable the interrupts mechanism to prevent the I2C communication from corruption */
+    141          	//__disable_irq();
+    142          	for( state_mach = 0; state_mach <= 5; state_mach++ )
+    143          	{
+    144          
+    145          		switch( state_mach )
+    146          		{
+    147          			case 0:
+    148          			{
+    149          				IsTimeout = i2c2_flag_timeout_check( I2C_GetFlagStatus, sEE_I2C2, I2C_FLAG_BUSY, sEE_LONG_TIMEOUT );
+    150          			}
+    151          				break;
+    152          
+    153          			case 1:
+    154          			{
+    155          				/* Send STRAT condition */ 
+    156          				I2C_GenerateSTART(sEE_I2C2, ENABLE); 
+    157          				IsTimeout = i2c2_event_timeout_check( I2C_CheckEvent, sEE_I2C2, I2C_EVENT_MASTER_MODE_SELECT, sEE_LONG_TIMEOUT );
+    158          			}
+    159          				break;
+    160          
+    161          			case 2:
+    162          			{
+    163          				/* Send device address for read */ 
+    164          				I2C_Send7bitAddress(sEE_I2C2, DevAddr, I2C_Direction_Transmitter); 
+    165          				IsTimeout = i2c2_event_timeout_check( I2C_CheckEvent, sEE_I2C2, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED, sEE_LONG_TIMEOUT );
+    166          				if ( IsTimeout == FALSE )
+    167          				{
+    168          					/* Clear EV6 by setting again the PE bit */
+    169          					I2C_Cmd(sEE_I2C2, ENABLE);
+    170          				}
+    171          				else
+    172          				{
+    173          					TRACE_ERROR((0, "Assert failed %s[%d]", __FUNCTION__, __LINE__));
+    174          				}
+    175          			}
+    176          				break;
+    177          
+    178          			case 3:
+    179          			{
+    180          				if ( longAddr == TRUE )
+    181          				{
+    182          					/* Send the device's internal address to read to */
+    183          					I2C_SendData(sEE_I2C2, (uint8_t)((ReadAddr & 0xFF00) >> 8));
+    184          					IsTimeout = i2c2_event_timeout_check( I2C_CheckEvent, sEE_I2C2, I2C_EVENT_MASTER_BYTE_TRANSMITTED, sEE_FLAG_TIMEOUT );
+    185          					if ( IsTimeout == TRUE )
+    186          					{
+    187          						break;	
+    188          					}
+    189          
+    190          					/* Send the device's internal address to read to */
+    191          					I2C_SendData(sEE_I2C2, (uint8_t)(ReadAddr & 0x00FF));	
+    192          					IsTimeout = i2c2_event_timeout_check( I2C_CheckEvent, sEE_I2C2, I2C_EVENT_MASTER_BYTE_TRANSMITTED, sEE_FLAG_TIMEOUT );
+    193          					if ( IsTimeout == TRUE )
+    194          					{
+    195          						break;	
+    196          					}
+    197          
+    198          					/* Send STRAT condition a second time */  
+    199          					I2C_GenerateSTART(sEE_I2C2, ENABLE);
+    200          					IsTimeout = i2c2_event_timeout_check( I2C_CheckEvent, sEE_I2C2, I2C_EVENT_MASTER_MODE_SELECT, sEE_FLAG_TIMEOUT );
+    201          					if ( IsTimeout == TRUE )
+    202          					{
+    203          						break;	
+    204          					}
+    205          
+    206          					/* Send device address for read */
+    207          					I2C_Send7bitAddress(sEE_I2C2, DevAddr, I2C_Direction_Receiver);
+    208          					IsTimeout = i2c2_event_timeout_check( I2C_CheckEvent, sEE_I2C2, I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED, sEE_FLAG_TIMEOUT );
+    209          					if ( IsTimeout == TRUE )
+    210          					{
+    211          						break;	
+    212          					}
+    213          
+    214          				}
+    215          				else 
+    216          				{
+    217          					
+    218          					/* Send the device's internal address to read to */
+    219          					I2C_SendData(sEE_I2C2, (uint8_t)(ReadAddr & 0x00FF));
+    220          					IsTimeout = i2c2_event_timeout_check( I2C_CheckEvent, sEE_I2C2, I2C_EVENT_MASTER_BYTE_TRANSMITTED, sEE_LONG_TIMEOUT );
+    221          					if ( IsTimeout == TRUE )
+    222          					{
+    223          						break;	
+    224          					}
+    225          					
+    226          
+    227          					/* Send STRAT condition a second time */  
+    228          					I2C_GenerateSTART(sEE_I2C2, ENABLE);
+    229          					IsTimeout = i2c2_event_timeout_check( I2C_CheckEvent, sEE_I2C2, I2C_EVENT_MASTER_MODE_SELECT, sEE_LONG_TIMEOUT );
+    230          					if ( IsTimeout == TRUE )
+    231          					{
+    232          						break;	
+    233          					}
+    234          
+    235          					/* Send device address for read */
+    236          					I2C_Send7bitAddress(sEE_I2C2, DevAddr, I2C_Direction_Receiver);
+    237          					IsTimeout = i2c2_event_timeout_check( I2C_CheckEvent, sEE_I2C2, I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED, sEE_LONG_TIMEOUT );
+    238          					if ( IsTimeout == TRUE )
+    239          					{
+    240          						break;	
+    241          					}
+    242          
+    243          				}
+    244          
+    245          			}
+    246          				break;
+    247          
+    248          			case 4:
+    249          			{
+    250          				__disable_irq();	
+    251          				/* While there is data to be read */
+    252          				while( NumByteToReadN )  
+    253          				{
+    254          					if( NumByteToReadN == 1 )
+    255          					{
+    256          						// Disable Acknowledgement 
+    257          						I2C_AcknowledgeConfig(sEE_I2C2, DISABLE);
+    258          
+    259          						// Send STOP Condition 
+    260          						I2C_GenerateSTOP(sEE_I2C2, ENABLE);
+    261          					}
+    262          
+    263          					IsTimeout = i2c2_event_timeout_check( I2C_CheckEvent, sEE_I2C2, I2C_EVENT_MASTER_BYTE_RECEIVED, sEE_FLAG_TIMEOUT );
+    264          					if ( IsTimeout == FALSE )
+    265          					{
+    266          						// Read a byte from the HMC5843 
+    267          						*pBuffer = I2C_ReceiveData(sEE_I2C2);
+    268          
+    269          						// Point to the next location where the byte read will be saved 
+    270          						pBuffer++; 
+    271          
+    272          						// Decrement the read bytes counter 
+    273          						NumByteToReadN--;		 
+    274          
+    275          					}
+    276          					else
+    277          					{
+    278          						break;
+    279          					}
+    280          					
+    281          				}
+    282          				__enable_irq();
+    283          			}
+    284          				break;
+    285          
+    286          			case 5:
+    287          			{
+    288          				/* Enable Acknowledgement to be ready for another reception */
+    289          				I2C_AcknowledgeConfig(sEE_I2C2, ENABLE);
+    290          			}
+    291          				break;
+    292          
+    293          
+    294          		}
+    295          
+    296          		if ( IsTimeout == TRUE )
+    297          		{
+    298          			TRACE_ERROR((0, "__STM32_I2C2_readSlave state_mach = %d", state_mach ));
+    299          			break;
+    300          		}
+    301          	}
+    302          	
+    303          	 /* Re-enable the interrupt mechanism */
+    304          	//__enable_irq();
+    305          
+    306          	if ( IsTimeout == TRUE )
+    307          	{
+    308          		return (sEE_TIMEOUT_UserCallback2(DevAddr));
+    309          	}
+    310          
+    311          	
+    312          	return sEE_OK;
+    313          		
+    314          }
+    315          
+    316            
+    317          
+    318          static uint32_t __STM32_I2C2_writeSlave(	uint8_t DevAddr, 
+    319          												uint16_t WriteAddr, 
+    320          												const uint8_t *pBuffer, 
+    321          												uint8_t *NumByteToWrite, 
+    322          												bool longAddr)
+    323          { 
+    324          	uint8_t index = 0;
+    325          	uint16_t NumByteForWrite = *NumByteToWrite;
+    326          	bool IsTimeout = FALSE;
+    327          	uint8 state_mach = 0;
+    328          
+    329          
+    330          	/* Disable the interrupts mechanism to prevent the I2C communication from corruption */
+    331          	//__disable_irq();
+    332          
+    333          	for( state_mach = 0; state_mach <= 5; state_mach++ )
+    334          	{
+    335          		switch( state_mach )
+    336          		{
+    337          			case 0:
+    338          			{
+    339          				IsTimeout = i2c2_flag_timeout_check( I2C_GetFlagStatus, sEE_I2C2, I2C_FLAG_BUSY, sEE_FLAG_TIMEOUT );
+    340          			}
+    341          				break;
+    342          
+    343          			case 1:
+    344          			{
+    345          				/*!< Send START condition */
+    346          				I2C_GenerateSTART(sEE_I2C2, ENABLE);
+    347          				IsTimeout = i2c2_event_timeout_check( I2C_CheckEvent, sEE_I2C2, I2C_EVENT_MASTER_MODE_SELECT, sEE_FLAG_TIMEOUT );
+    348          			}
+    349          				break;
+    350          
+    351          			case 2:
+    352          			{
+    353          				I2C_Send7bitAddress(sEE_I2C2, DevAddr, I2C_Direction_Transmitter);
+    354          				IsTimeout = i2c2_event_timeout_check( I2C_CheckEvent, sEE_I2C2, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED, sEE_FLAG_TIMEOUT );
+    355          			}
+    356          				break;
+    357          
+    358          			case 3:
+    359          			{
+    360          				if ( longAddr == TRUE)
+    361          				{
+    362          					/*!< Send the EEPROM's internal address to write to : MSB of the address first */
+    363          					I2C_SendData(sEE_I2C2, (uint8_t)((WriteAddr & 0xFF00) >> 8));
+    364          					IsTimeout = i2c2_event_timeout_check( I2C_CheckEvent, sEE_I2C2, I2C_EVENT_MASTER_BYTE_TRANSMITTED, sEE_FLAG_TIMEOUT );
+    365          					if ( IsTimeout == TRUE )
+    366          					{
+    367          						break;
+    368          					}
+    369          
+    370          					/*!< Send the EEPROM's internal address to write to : LSB of the address */
+    371          					I2C_SendData(sEE_I2C2, (uint8_t)(WriteAddr & 0x00FF));
+    372          					IsTimeout = i2c2_event_timeout_check( I2C_CheckEvent, sEE_I2C2, I2C_EVENT_MASTER_BYTE_TRANSMITTED, sEE_FLAG_TIMEOUT );
+    373          					if ( IsTimeout == TRUE )
+    374          					{
+    375          						break;
+    376          					}
+    377          
+    378          				}
+    379          				else
+    380          				{
+    381          					/*!< Send the EEPROM's internal address to write to : only one byte Address */
+    382          					I2C_SendData(sEE_I2C2, (uint8_t)(WriteAddr & 0x00FF));
+    383          					IsTimeout = i2c2_event_timeout_check( I2C_CheckEvent, sEE_I2C2, I2C_EVENT_MASTER_BYTE_TRANSMITTED, sEE_FLAG_TIMEOUT );
+    384          					if ( IsTimeout == TRUE )
+    385          					{
+    386          						break;
+    387          					}
+    388          
+    389          				}	
+    390          			}
+    391          				break;
+    392          
+    393          			case 4:
+    394          			{
+    395          				for (index = 0; index < NumByteForWrite; index ++ )
+    396          				{  
+    397          					/* Prepare the register value to be sent */
+    398          					I2C_SendData(sEE_I2C2, *(pBuffer+index));
+    399          
+    400          					IsTimeout = i2c2_event_timeout_check( I2C_CheckEvent, sEE_I2C2, I2C_EVENT_MASTER_BYTE_TRANSMITTED, sEE_FLAG_TIMEOUT );
+    401          					if ( IsTimeout == TRUE )
+    402          					{
+    403          						break;
+    404          					}
+    405          
+    406          					/*!< Decrement the read bytes counter */
+    407          					(uint16_t)(*NumByteToWrite)--;
+    408          				}
+    409          			}
+    410          				break;
+    411          
+    412          			case 5:
+    413          			{
+    414          				/*!< Send STOP condition */ /*Smith 23 Sept.: if STOP condition is never to send that will make I2C flag busy */
+    415          				I2C_GenerateSTOP(sEE_I2C2, ENABLE);
+    416          
+    417          				/* Perform a read on SR1 and SR2 register to clear eventualaly pending flags */
+    418          				(void)sEE_I2C2->SR1;
+    419          				(void)sEE_I2C2->SR2;
+    420          			}
+    421          				break;
+    422          		}
+    423          
+    424          		if ( IsTimeout == TRUE )
+    425          		{
+    426          			TRACE_ERROR((0, "__STM32_I2C2_writeSlave state_mach = %d", state_mach ));
+    427          			break;
+    428          		}
+    429          
+    430          	}
+    431          
+    432          	/* Re-enable the interrupt mechanism */
+    433          	//__enable_irq();
+    434          
+    435          
+    436          	if ( IsTimeout == TRUE )
+    437          	{
+    438          		return (sEE_TIMEOUT_UserCallback2(DevAddr));
+    439          	}
+    440          	
+    441          
+    442          	/* If all operations OK, return sEE_OK (0) */
+    443          	return sEE_OK;
+    444          }
+    445          
+    446          static void sEE_LowLevel_Init2(void)
+    447          {
+    448          	GPIO_InitTypeDef  GPIO_InitStructure;
+    449          
+    450              /*!< sEE_I2C Periph clock enable */
+    451              RCC_APB1PeriphClockCmd(sEE_I2C2_CLK, ENABLE);
+    452          
+    453              /*!< sEE_I2C_SCL_GPIO_CLK and sEE_I2C_SDA_GPIO_CLK Periph clock enable */
+    454              RCC_AHB1PeriphClockCmd(sEE_I2C2_SCL_GPIO_CLK | sEE_I2C2_SDA_GPIO_CLK, ENABLE);
+    455          
+    456              RCC_APB2PeriphClockCmd(RCC_APB2Periph_SYSCFG, ENABLE);
+    457          
+    458              /* Reset sEE_I2C IP */
+    459              RCC_APB1PeriphResetCmd(sEE_I2C2_CLK, ENABLE);
+    460          
+    461              /* Release reset signal of sEE_I2C IP */
+    462              RCC_APB1PeriphResetCmd(sEE_I2C2_CLK, DISABLE);
+    463          
+    464              /*!< GPIO configuration */
+    465              /* Connect PXx to I2C_SCL*/
+    466              GPIO_PinAFConfig(sEE_I2C2_SCL_GPIO_PORT, sEE_I2C2_SCL_SOURCE, sEE_I2C2_SCL_AF);
+    467              /* Connect PXx to I2C_SDA*/
+    468              GPIO_PinAFConfig(sEE_I2C2_SDA_GPIO_PORT, sEE_I2C2_SDA_SOURCE, sEE_I2C2_SDA_AF);  
+    469          
+    470              /*!< Configure sEE_I2C pins: SCL */   
+    471              GPIO_InitStructure.GPIO_Pin = sEE_I2C2_SCL_PIN;
+    472              GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
+    473              GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    474              GPIO_InitStructure.GPIO_OType = GPIO_OType_OD;
+    475              GPIO_InitStructure.GPIO_PuPd  = GPIO_PuPd_NOPULL;
+    476              GPIO_Init(sEE_I2C2_SCL_GPIO_PORT, &GPIO_InitStructure);
+    477          
+    478              /*!< Configure sEE_I2C pins: SDA */
+    479              GPIO_InitStructure.GPIO_Pin = sEE_I2C2_SDA_PIN;
+    480              GPIO_Init(sEE_I2C2_SDA_GPIO_PORT, &GPIO_InitStructure);
+    481          
+    482          }
+    483          
+    484          void sEE_LowLevel_DeInit2(void)
+    485          {
+    486              GPIO_InitTypeDef  GPIO_InitStructure; 
+    487          
+    488              /* sEE_I2C Peripheral Disable */
+    489              I2C_Cmd(sEE_I2C2, DISABLE);
+    490          
+    491              /* sEE_I2C DeInit */
+    492              I2C_DeInit(sEE_I2C2);
+    493          
+    494              /*!< sEE_I2C Periph clock disable */
+    495              RCC_APB1PeriphClockCmd(sEE_I2C2_CLK, DISABLE);
+    496          
+    497              /*!< GPIO configuration */  
+    498              /*!< Configure sEE_I2C pins: SCL */
+    499              GPIO_InitStructure.GPIO_Pin = sEE_I2C2_SCL_PIN;
+    500              GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN;
+    501              GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
+    502              GPIO_Init(sEE_I2C2_SCL_GPIO_PORT, &GPIO_InitStructure);
+    503          
+    504              /*!< Configure sEE_I2C pins: SDA */
+    505              GPIO_InitStructure.GPIO_Pin = sEE_I2C2_SDA_PIN;
+    506              GPIO_Init(sEE_I2C2_SDA_GPIO_PORT, &GPIO_InitStructure);
+    507          
+    508          }
+    509          
+    510          static void sEE_Init2(void)
+    511          { 
+    512          	I2C_InitTypeDef  I2C_InitStructure;
+    513          
+    514          	sEE_LowLevel_Init2();
+    515          
+    516          	/*!< I2C configuration */
+    517          	/* sEE_I2C2 configuration */
+    518          	I2C_InitStructure.I2C_Mode = I2C_Mode_I2C;
+    519          	I2C_InitStructure.I2C_DutyCycle = I2C_DutyCycle_2;
+    520          	I2C_InitStructure.I2C_OwnAddress1 = I2C_SLAVE_ADDRESS7;
+    521          	I2C_InitStructure.I2C_Ack = I2C_Ack_Enable;
+    522          	I2C_InitStructure.I2C_AcknowledgedAddress = I2C_AcknowledgedAddress_7bit;
+    523          	I2C_InitStructure.I2C_ClockSpeed = I2C_SPEED;
+    524          
+    525          	/* sEE_I2C2 Peripheral Enable */
+    526          	I2C_Cmd(sEE_I2C2, ENABLE);
+    527          
+    528          	/* Apply sEE_I2C2 configuration after enabling it */
+    529          	I2C_Init(sEE_I2C2, &I2C_InitStructure);
+    530          
+    531          }
+    532          
+    533          void TWI2_initialize( void )
+    534          {
+    535                 sEE_Init2();
+    536                 bIsI2C2_enable = TRUE;
+    537          }
+    538          
+    539          void TWI2_Deinitialize( void )
+    540          {
+    541                 sEE_LowLevel_DeInit2( );
+    542                 bIsI2C2_enable = FALSE;
+    543          }
+    544          
+    545          
+    546          bool I2C2_writeSlave( byte control, uint16 address, const byte *data, uint16 length, bool longAddr ) 
+    547          {
+    548           	int status = I2C_SUCCESS;
+    549          	uint8 len = length;
+    550          	const uint8 *pbuff;
+    551          
+    552          	if ( bIsI2C2_enable != TRUE )
+    553          	{
+    554          		TRACE_ERROR((0, "I2C2 interface has not been enable !!"));
+    555          		return FALSE;
+    556          	}
+    557          	
+    558          	pbuff = data;
+    559          
+    560          	status = __STM32_I2C2_writeSlave(control, address, pbuff, &len, longAddr);
+    561          
+    562          	/*Don't remove.*/
+    563              vTaskDelay( TASK_MSEC2TICKS(I2C_INTERVAL_TIME) );
+    564          
+    565          	if ( status != sEE_OK)
+    566          	{
+    567          		return FALSE;
+    568          	}
+    569          	
+    570          	return TRUE;
+    571          }
+    572          
+    573          bool I2C2_writeSlave_NoSystemWait( byte control, uint16 address, const byte *data, uint16 length, bool longAddr ) 
+    574          {
+    575              int status = I2C_SUCCESS;
+    576              uint8 len = length;
+    577              const uint8 *pbuff;
+    578          
+    579              if ( bIsI2C2_enable != TRUE )
+    580              {
+    581                  TRACE_ERROR((0, "I2C2 interface has not been enable !!"));
+    582                  return FALSE;
+    583              }
+    584              
+    585              pbuff = data;
+    586          
+    587              status = __STM32_I2C2_writeSlave( control, address, pbuff, &len, longAddr );
+    588          
+    589              if ( status != sEE_OK)
+    590              {
+    591                  return FALSE;
+    592              }
+    593              
+    594              return TRUE;
+    595          }
+    596          
+    597          bool I2C2_readSlave( byte control, uint16 address, byte *data, uint16 length, bool longAddr ) 
+    598          {
+    599          	int status = I2C_SUCCESS;
+    600          	uint16 NumByteToRead = length;
+    601          	uint8 *pBuffer;
+    602          
+    603          	if ( bIsI2C2_enable != TRUE )
+    604          	{
+    605          		TRACE_ERROR((0, "I2C2 interface has not been enable !!"));
+    606          		return FALSE;
+    607          	}
+    608          
+    609          	pBuffer = data;
+    610          
+    611          	status = __STM32_I2C2_readSlave( control, address, pBuffer, &NumByteToRead, longAddr );
+    612          
+    613              vTaskDelay( TASK_MSEC2TICKS(5) );
+    614          
+    615          	if ( status != sEE_OK)
+    616          	{
+    617          		return FALSE;
+    618          	}
+    619          	
+    620          	return TRUE;
+    621          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       16  I2C2_readSlave
+             16 -> Debug_printError
+             16 -> __STM32_I2C2_readSlave
+             16 -> vTaskDelay
+       16  I2C2_writeSlave
+             16 -> Debug_printError
+             16 -> __STM32_I2C2_writeSlave
+             16 -> vTaskDelay
+       16  I2C2_writeSlave_NoSystemWait
+             16 -> Debug_printError
+             16 -> __STM32_I2C2_writeSlave
+        8  TWI2_Deinitialize
+              8 -> sEE_LowLevel_DeInit2
+        8  TWI2_initialize
+              8 -> sEE_Init2
+       40  __STM32_I2C2_readSlave
+             40 -> Debug_printError
+             40 -> I2C_AcknowledgeConfig
+             40 -> I2C_Cmd
+             40 -> I2C_GenerateSTART
+             40 -> I2C_GenerateSTOP
+             40 -> I2C_ReceiveData
+             40 -> I2C_Send7bitAddress
+             40 -> I2C_SendData
+             40 -> i2c2_event_timeout_check
+             40 -> i2c2_flag_timeout_check
+              0 -> sEE_TIMEOUT_UserCallback2
+       48  __STM32_I2C2_writeSlave
+             48 -> Debug_printError
+             48 -> I2C_GenerateSTART
+             48 -> I2C_GenerateSTOP
+             48 -> I2C_Send7bitAddress
+             48 -> I2C_SendData
+             48 -> i2c2_event_timeout_check
+             48 -> i2c2_flag_timeout_check
+              0 -> sEE_TIMEOUT_UserCallback2
+       24  i2c2_event_timeout_check
+             24 -- Indirect call
+       24  i2c2_flag_timeout_check
+             24 -- Indirect call
+        0  sEE_EnterCriticalSection_UserCallback2
+        0  sEE_ExitCriticalSection_UserCallback2
+       40  sEE_Init2
+             40 -> GPIO_Init
+             40 -> GPIO_PinAFConfig
+             40 -> I2C_Cmd
+             40 -> I2C_Init
+             40 -> RCC_AHB1PeriphClockCmd
+             40 -> RCC_APB1PeriphClockCmd
+             40 -> RCC_APB1PeriphResetCmd
+             40 -> RCC_APB2PeriphClockCmd
+       16  sEE_LowLevel_DeInit2
+             16 -> GPIO_Init
+             16 -> I2C_Cmd
+             16 -> I2C_DeInit
+             16 -> RCC_APB1PeriphClockCmd
+       24  sEE_TIMEOUT_UserCallback2
+             24 -> Debug_printError
+             24 -> I2C_Cmd
+             24 -> I2C_DeInit
+             24 -> I2C_GenerateSTOP
+             24 -> I2C_Init
+             24 -> I2C_SoftwareResetCmd
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      24  ?<Constant "Assert failed %s[%d]">
+      48  ?<Constant "Device Address 0x%X I...">
+      40  ?<Constant "I2C2 interface has no...">
+      40  ?<Constant "__STM32_I2C2_readSlav...">
+      40  ?<Constant "__STM32_I2C2_writeSla...">
+       4  ??DataTable13
+       4  ??DataTable13_1
+       4  ??DataTable13_10
+       4  ??DataTable13_11
+       4  ??DataTable13_2
+       4  ??DataTable13_3
+       4  ??DataTable13_4
+       4  ??DataTable13_5
+       4  ??DataTable13_6
+       4  ??DataTable13_7
+       4  ??DataTable13_8
+       4  ??DataTable13_9
+       6  ??Subroutine10_0
+       6  ?Subroutine0
+      10  ?Subroutine1
+      14  ?Subroutine2
+       8  ?Subroutine3
+      12  ?Subroutine4
+      12  ?Subroutine5
+      10  ?Subroutine6
+      12  ?Subroutine7
+      14  ?Subroutine8
+      12  ?Subroutine9
+      22  I2C2_readSlave
+      20  I2C2_writeSlave
+      22  I2C2_writeSlave_NoSystemWait
+      14  TWI2_Deinitialize
+      14  TWI2_initialize
+     352  __STM32_I2C2_readSlave
+     240  __STM32_I2C2_writeSlave
+       1  bIsI2C2_enable
+      26  i2c2_event_timeout_check
+      28  i2c2_flag_timeout_check
+       4  sEE_EnterCriticalSection_UserCallback2
+       4  sEE_ExitCriticalSection_UserCallback2
+     188  sEE_Init2
+      68  sEE_LowLevel_DeInit2
+     112  sEE_TIMEOUT_UserCallback2
+      24  -- Other
+
+ 
+     1 byte  in section .bss
+ 1 494 bytes in section .text
+ 
+ 1 494 bytes of CODE memory
+     1 byte  of DATA memory
+
+Errors: none
+Warnings: none

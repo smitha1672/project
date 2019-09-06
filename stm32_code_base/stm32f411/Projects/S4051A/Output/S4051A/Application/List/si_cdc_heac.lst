@@ -1,0 +1,2430 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:45 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\cdc\si_cdc_he #
+#                    ac.c                                                     #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\cdc\si_cdc_he #
+#                    ac.c -D S4051A -D DEBUG -D FREE_RTOS -D STM32F40_41xxx   #
+#                    -D USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D          #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_cdc_heac.lst                                       #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_cdc_heac.o                                          #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\component\cdc\si_cdc_heac.c
+      1          //***************************************************************************
+      2          //! @file     si_cdc_heac.c
+      3          //! @brief    Low level CDC API
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1060 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2002-2009, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include "si_drv_cpi.h"
+     14          #include "si_drv_arc.h"
+     15          #include "si_cec_component.h"
+     16          #include "si_cdc_component.h"
+     17          #include "si_cdc_internal.h"
+     18          
+     19          #ifndef CDC_PC_SIMULATION
+     20          #include <string.h>    
+     21          #else
+     22          #include "stdio.h"
+     23          #include "memory.h"
+     24          #include "debug_print.h"
+     25          #endif
+     26          
+     27          //------------------------------------------------------------------------------
+     28          // Service Functions
+     29          //------------------------------------------------------------------------------
+     30          
+     31          // Local function prototypes
+     32          static bool_t CdcPhysAddrToAliveListInsert(const uint16_t physAddr);
+     33          static bool_t CdcPhysAddrFromAliveListDelete(const uint16_t physAddrToDel, const uint8_t hecIdx);
+     34          static bool_t CdcIsLinkedDirectlyInPortGet(const uint16_t sinkPhysAddr, const uint16_t sourcePhysAddr, uint8_t *pinputPortIndex);
+     35          
+     36          
+     37          
+     38          //-------------------------------------------------------------------------------------------------
+     39          //! @brief      Pseudo-random numbers generator with uniform distribution
+     40          //!
+     41          //!             This implementation is based on George Marsaglia's MWC algorithm
+     42          //!
+     43          //! @param[in]  seed  - non-zero value is initial value that is expected to be
+     44          //!                     pure random or at least time dependent,
+     45          //!                     if seed == 0, Mrand generates next random output
+     46          //!
+     47          //! @return     pseudo-random, quasi-uniform number in the range [0;(2^32)-1]
+     48          //-------------------------------------------------------------------------------------------------
+     49          
+     50          uint32_t Mrand(uint32_t seed)
+     51          {
+     52              static uint32_t mz = 0x3F218942; // default initial values
+     53              static uint32_t mw = 0x19A46E81; 
+     54          
+     55              if (seed != 0)
+     56              {
+     57                  mz = seed >> 16 ;
+     58                  mw = seed & 0xFFFF;    
+     59              }
+     60              
+     61              mz = 0x9069 * (mz & 0xFFFF) + (mz >> 16);
+     62              mw = 0x4650 * (mw & 0xFFFF) + (mw >> 16);
+     63              
+     64              return (mz << 16) + mw;
+     65          }
+     66          
+     67          
+     68          //-------------------------------------------------------------------------------------------------
+     69          //! @brief      Initializes current Instance Record
+     70          //-------------------------------------------------------------------------------------------------
+     71          
+     72          void CdcHecInstanceRecordReset(void)
+     73          {    
+     74              memset(pCdc, 0, sizeof(CdcInstanceData_t)); // erase all data   
+     75          
+     76              // mark entire array as vacant
+     77              memset(&pCdc->aAliveDevice[0], 0xFF, sizeof(pCdc->aAliveDevice));
+     78          }
+     79          
+     80          //-------------------------------------------------------------------------------------------------
+     81          //! @brief      Creates new HEC record in the Instance Record
+     82          //!
+     83          //! @param[in]  isActivator - indicates if the device is going to be an activator for the HEC
+     84          //!
+     85          //! @return     index of newly created HEC
+     86          //! @retval     0xFF - error
+     87          //-------------------------------------------------------------------------------------------------
+     88          
+     89          uint8_t CdcHecDescriptorAdd(const bool_t isActivator)
+     90          {
+     91              uint8_t i = 0xFF;
+     92              bool_t isFound;
+     93              CdcHecDescriptor_t *pNewHec = NULL;
+     94              
+     95              if (pCdc->numberOfHecs < CDC_NUMBER_OF_HECS_MAX)
+     96              {
+     97                  // Find first vacant HEC record
+     98                  isFound = false;
+     99                  for (i = 0; i < CDC_NUMBER_OF_HECS_MAX; i++)
+    100                  {
+    101                      if (pCdc->aHec[i].status.isInUse == false)
+    102                      {
+    103                          pNewHec = &pCdc->aHec[i];
+    104                          pNewHec->status.isInUse = true;
+    105                          pNewHec->status.isActivator = isActivator;
+    106                          pCdc->numberOfHecs++;
+    107                          isFound = true;
+    108                          break;
+    109                      }
+    110                  }
+    111          
+    112                  if (isFound == false)
+    113                  {
+    114                      DEBUG_PRINT( CDC_MSG_ALWAYS, "ERROR in CdcHecDescriptorAdd(): All HEC records are in use\n" );
+    115                      return 0xFF;            
+    116                  }        
+    117              }
+    118              else
+    119              {
+    120                  DEBUG_PRINT( CDC_MSG_ALWAYS, "ERROR in CdcHecDescriptorAdd(): Maximum number of HECs is exceeded\n" );
+    121                  return 0xFF;
+    122              }
+    123          
+    124              return i;
+    125          }
+    126          
+    127          
+    128          //-------------------------------------------------------------------------------------------------
+    129          //! @brief      Deletes HEC record in the Instance Record and
+    130          //!             frees memory for activator's HEC path
+    131          //!
+    132          //! @param[in]  hecIdx - index of a HEC to dismiss
+    133          //!
+    134          //! @retval     false - success,
+    135          //! @retval     true - error
+    136          //-------------------------------------------------------------------------------------------------
+    137          
+    138          bool_t CdcHecDescriptorRemove(const uint8_t hecIdx)
+    139          {
+    140              if ((pCdc->numberOfHecs > 0) && (pCdc->aHec[hecIdx].status.isInUse == true))
+    141              {
+    142                  // Release the HEC descriptor
+    143                  pCdc->aHec[hecIdx].status.isInUse = false;
+    144                  pCdc->numberOfHecs--;
+    145          
+    146                  // Cleanup other fields
+    147                  pCdc->aHec[hecIdx].status.isActivator  = false;
+    148                  pCdc->aHec[hecIdx].status.isAdjacent   = false;
+    149                  pCdc->aHec[hecIdx].status.channelState = CDC_PHEC;
+    150                  pCdc->aHec[hecIdx].activatorPhysAddr   = 0;
+    151                  pCdc->aHec[hecIdx].firstDevPhysAddr    = 0;
+    152                  pCdc->aHec[hecIdx].lastDevPhysAddr     = 0;
+    153              }
+    154              else
+    155              {
+    156                  DEBUG_PRINT( CDC_MSG_ALWAYS, "ERROR in CdcHecDescriptorRemove(): The HEC descriptor is not in use\n" );
+    157                  return true;
+    158              }
+    159              
+    160              return false;    
+    161          }
+    162          
+    163          
+    164          //-------------------------------------------------------------------------------------------------
+    165          //! @brief      Searches HEC records in order to find an index of a HEC
+    166          //!             having given first and last physical addresses
+    167          //!
+    168          //! @param[in]  actPhysAddr   - physical address of HEC's activator
+    169          //! @param[in]  firstPhysAddr - first physical address of a HEC
+    170          //! @param[in]  lastPhysAddr  - last physical address of a HEC
+    171          //!
+    172          //! @return     index of found HEC,
+    173          //! @retval     0xFF - if search was unsuccessful
+    174          //-------------------------------------------------------------------------------------------------
+    175          
+    176          uint8_t CdcHecIndexGet(const uint16_t actPhysAddr, const uint16_t firstPhysAddr, const uint16_t lastPhysAddr)
+    177          {
+    178              uint8_t i;
+    179              uint8_t hecIdx = 0xFF; // error code by default
+    180          
+    181              for (i = 0; i < CDC_NUMBER_OF_HECS_MAX; i++)
+    182              {
+    183                  if (pCdc->aHec[i].status.isInUse == true)
+    184                  {
+    185                      // First and Last physical address order makes no difference
+    186                      if ((pCdc->aHec[i].activatorPhysAddr == actPhysAddr) &&
+    187                          (((pCdc->aHec[i].firstDevPhysAddr == firstPhysAddr) && 
+    188                          (pCdc->aHec[i].lastDevPhysAddr == lastPhysAddr)) ||
+    189                          ((pCdc->aHec[i].firstDevPhysAddr == lastPhysAddr) && 
+    190                          (pCdc->aHec[i].lastDevPhysAddr == firstPhysAddr))))
+    191                      {
+    192                          hecIdx = i;
+    193                          break; // quit here because the HEC entry must be unique
+    194                      }
+    195                      
+    196                  }
+    197              }
+    198          
+    199            if (hecIdx == 0xFF) 
+    200            {
+    201                  DEBUG_PRINT( CDC_MSG_ALWAYS, "CdcHecIndexGet(): HEC not found in existing records\n" );
+    202            }
+    203          
+    204            return hecIdx;
+    205          }
+    206          
+    207          
+    208          //-------------------------------------------------------------------------------------------------
+    209          //! @brief      Adds new devices from HEC to aAliveDevice device list
+    210          //!
+    211          //!             This function shall be called after CdcHecDescriptorAdd() and
+    212          //!             initialization of a HEC
+    213          //!
+    214          //! @param[in]  hecIdx - index of a new HEC
+    215          //!
+    216          //! @retval     false - success,
+    217          //! @retval     true - error
+    218          //-------------------------------------------------------------------------------------------------
+    219          
+    220          bool_t CdcAliveDeviceListAdd(const uint8_t hecIdx)
+    221          {
+    222              uint16_t    physAddr;
+    223              uint16_t    firstPhysAddr;
+    224              uint16_t    lastPhysAddr;
+    225              bool_t      restart = true;
+    226              bool_t      errStatus = false;
+    227          
+    228              
+    229              if (pCdc->aHec[hecIdx].status.isInUse == true)
+    230              {
+    231                  if (pCdc->aHec[hecIdx].status.isActivator == true)
+    232                  {
+    233                      firstPhysAddr = pCdc->aHec[hecIdx].firstDevPhysAddr;
+    234                      lastPhysAddr  = pCdc->aHec[hecIdx].lastDevPhysAddr;
+    235                      // add all members of a HEC except the Activator (this device)
+    236                      do
+    237                      {
+    238                          physAddr = CdcHecNextDeviceGet(firstPhysAddr, lastPhysAddr, restart); 
+    239                          restart = false; // restart == true for the first cycle only
+    240                          errStatus = CdcPhysAddrToAliveListInsert(physAddr);
+    241                      }
+    242                      while ((physAddr != lastPhysAddr) && (errStatus == false));
+    243                  }
+    244                  else // passive devices
+    245                  {
+    246                      // add only activator to the list
+    247                      physAddr = pCdc->aHec[hecIdx].activatorPhysAddr;
+    248                      errStatus = CdcPhysAddrToAliveListInsert(physAddr);
+    249                  }
+    250              }
+    251                  
+    252              return errStatus;
+    253          }
+    254          
+    255          
+    256          //-------------------------------------------------------------------------------------------------
+    257          //! @brief      Auxiliary function for CdcAliveDeviceListAdd()
+    258          //!
+    259          //!             This function is to be called from within CdcAliveDeviceListAdd()
+    260          //!
+    261          //! @param      physAddr - physical address of the device to insert
+    262          //!
+    263          //! @retval     false - success,
+    264          //! @retval     true - error
+    265          //-------------------------------------------------------------------------------------------------
+    266          
+    267          static bool_t CdcPhysAddrToAliveListInsert(const uint16_t physAddr)
+    268          {
+    269              uint16_t    listIdx;
+    270              uint16_t    vacantCellIdx = 0;
+    271              bool_t      isMatchFound;
+    272              bool_t      isVacantCellFound;
+    273              bool_t      errStatus = false;
+    274              
+    275              isMatchFound = false;
+    276              isVacantCellFound = false;
+    277              for (listIdx = 0; listIdx < CDC_NUMBER_OF_DEVICES_MAX; listIdx++)
+    278              {
+    279                  if (pCdc->aAliveDevice[listIdx].physAddr == physAddr)
+    280                  {
+    281                      isMatchFound = true;
+    282                      break;  // all aAliveDevice[] members are unique, so there is no reason to continue
+    283                  }
+    284                  // simultaneous search for a first empty cell
+    285                  else if (!isVacantCellFound && (pCdc->aAliveDevice[listIdx].physAddr == 0xFFFF)) 
+    286                  {
+    287                      vacantCellIdx = listIdx;
+    288                      isVacantCellFound = true;
+    289                  }
+    290              }
+    291              // add every device of a HEC except this device
+    292              if ((isMatchFound == false) && (physAddr != pCdc->physAddr))
+    293              {
+    294                  if (isVacantCellFound == true) 
+    295                  {
+    296                      pCdc->aAliveDevice[vacantCellIdx].physAddr = physAddr; // add new device for alive monitoring
+    297                      CdcTimeCounterSet(CDC_TIME_SEC2TCK(CDC_MAX_NTF_ALIVE_TIME_SEC), &pCdc->aAliveDevice[vacantCellIdx].TimeCount);
+    298                      pCdc->numberOfAliveDev++;
+    299                  }
+    300                  else
+    301                  {
+    302                      DEBUG_PRINT( CDC_MSG_DBG, "ERROR in CdcPhysAddrToAliveListInsert(): aAliveDevice[] list is full\n" );
+    303                      errStatus = true;
+    304                  }
+    305              }
+    306          
+    307              return errStatus;
+    308          }
+    309          
+    310          
+    311          //-------------------------------------------------------------------------------------------------
+    312          //! @brief      Removes devices that should not be monitored anymore
+    313          //!             from aAliveDevice device list
+    314          //!
+    315          //!             This function shall be called before CdcHecDescriptorRemove()
+    316          //!
+    317          //! @param[in]  hecIdx - index of the dismissed HEC
+    318          //!
+    319          //! @retval     false - success,
+    320          //! @retval     true - error
+    321          //-------------------------------------------------------------------------------------------------
+    322          
+    323          bool_t CdcAliveDeviceListRemove(const uint8_t hecIdx)
+    324          {
+    325              uint16_t    physAddr;
+    326              uint16_t    firstPhysAddr;
+    327              uint16_t    lastPhysAddr;
+    328              bool_t      restart = true;
+    329              bool_t      errStatus = false;
+    330          
+    331              
+    332              if (pCdc->aHec[hecIdx].status.isInUse == true)
+    333              {
+    334                  if (pCdc->aHec[hecIdx].status.isActivator == true)
+    335                  {
+    336                      firstPhysAddr = pCdc->aHec[hecIdx].firstDevPhysAddr;
+    337                      lastPhysAddr  = pCdc->aHec[hecIdx].lastDevPhysAddr;
+    338                      // remove all members of a HEC except the Activator (this device)
+    339                      do
+    340                      {
+    341                          physAddr = CdcHecNextDeviceGet(firstPhysAddr, lastPhysAddr, restart); 
+    342                          restart = false; // restart == true for the first cycle only
+    343                          // only delete a physical address from the list
+    344                          // if it isn't a subject of alive monitoring in the other active HECs
+    345                          errStatus = CdcPhysAddrFromAliveListDelete(physAddr, hecIdx);
+    346                      }
+    347                      while ((physAddr != lastPhysAddr) && (errStatus == false));
+    348                  }
+    349                  else // passive devices
+    350                  {
+    351                      // remove only activator from the list
+    352                      // if it isn't monitored as a member of other AHECs
+    353                      physAddr = pCdc->aHec[hecIdx].activatorPhysAddr;
+    354                      errStatus = CdcPhysAddrFromAliveListDelete(physAddr, hecIdx);
+    355                  }
+    356              }
+    357                  
+    358              return errStatus;
+    359          }
+    360          
+    361          
+    362          //-------------------------------------------------------------------------------------------------
+    363          //! @brief      Auxiliary function for CdcAliveDeviceListRemove()
+    364          //!
+    365          //!             This function is to be called from within CdcAliveDeviceListRemove()
+    366          //!
+    367          //! @param[in]  physAddrToDel - physical address of the device to delete
+    368          //! @param[in]  hecIdx        - index of a HEC that is to be closed
+    369          //!
+    370          //! @retval     false - success,
+    371          //! @retval     true - error
+    372          //-------------------------------------------------------------------------------------------------
+    373          
+    374          static bool_t CdcPhysAddrFromAliveListDelete(const uint16_t physAddrToDel, const uint8_t hecIdx)
+    375          {
+    376              uint16_t    listIdx;
+    377              uint8_t     i;
+    378              bool_t      isGoodToDelete = true;
+    379              bool_t      errStatus = false;
+    380          
+    381              if (physAddrToDel != pCdc->physAddr) // this device should never be in the self AliveDevice List
+    382              {
+    383                  // Check if the device doesn't belong to other AHECs that need to be monitored hereafter
+    384                  for (i = 0; i < CDC_NUMBER_OF_HECS_MAX; i++)
+    385                  {
+    386                      if ((i != hecIdx) && (pCdc->aHec[i].status.isInUse == true) && (pCdc->aHec[i].status.channelState == CDC_AHEC))
+    387                      {
+    388                          if (pCdc->aHec[i].status.isActivator)
+    389                          {
+    390                              if (CdcIsDeviceBelongsToHec(pCdc->aHec[i].firstDevPhysAddr, pCdc->aHec[i].lastDevPhysAddr, physAddrToDel))
+    391                              {
+    392                                  isGoodToDelete = false;
+    393                                  break; // stop immediately, if the device shall stay in the Alive list
+    394                              }
+    395                          }
+    396                          else // passive device
+    397                          {
+    398                              if (pCdc->aHec[i].activatorPhysAddr == physAddrToDel)
+    399                              {
+    400                                  isGoodToDelete = false;
+    401                                  break; // stop immediately, if the device shall stay in the Alive list                        
+    402                              }
+    403                          }
+    404                      }
+    405                  }
+    406          
+    407                  if (isGoodToDelete)
+    408                  {
+    409                      // Delete a record in AliveDevice List
+    410                      for (listIdx = 0; listIdx < CDC_NUMBER_OF_DEVICES_MAX; listIdx++)
+    411                      {
+    412                          if (pCdc->aAliveDevice[listIdx].physAddr == physAddrToDel)
+    413                          {
+    414                              pCdc->aAliveDevice[listIdx].physAddr = 0xFFFF; // mark as vacant
+    415                              
+    416                              // reset time counter
+    417                              CdcTimeCounterSet(CDC_TIME_SEC2TCK(CDC_MAX_NTF_ALIVE_TIME_SEC), &pCdc->aAliveDevice[listIdx].TimeCount);
+    418                              
+    419                              pCdc->numberOfAliveDev--;
+    420                              break;  // all aAliveDevice[] members are unique, so there is no reason to continue
+    421                          }
+    422                      }
+    423                  }
+    424              }
+    425          
+    426              return errStatus;
+    427          }
+    428          
+    429          
+    430          //-------------------------------------------------------------------------------------------------
+    431          //! @brief      Sets the time counter to given time in the future relatively
+    432          //!             to provided system timer reading
+    433          //!
+    434          //!             CAUTION: this function shall never be followed by the
+    435          //!             CdcTimeCounterUpdate() for the same timer in one
+    436          //!             TaskProcess invocation
+    437          //!
+    438          //! @param[in]  delayTimeTck   - the delay time to set (in ticks)
+    439          //! @param[in]  pTimeCounter   - pointer to the time counter to set
+    440          //-------------------------------------------------------------------------------------------------
+    441          
+    442          void CdcTimeCounterSet(const uint16_t delayTimeTck, CdcTimeCounter_t *pTimeCounter)
+    443          {
+    444              uint32_t totalTimeMs;
+    445          
+    446              totalTimeMs = (uint32_t) pCdc->sysTimerCountCurMs + CDC_TIME_TCK_MS * ((uint32_t) delayTimeTck);
+    447              pTimeCounter->tRov = (uint16_t)((totalTimeMs / 0x10000) & 0x3);  // 0x10000 = 2^16
+    448              pTimeCounter->tRes = (uint16_t)((totalTimeMs / CDC_TIME_TCK_MS) & 0x3FFF); // mod (2^16) 
+    449          }
+    450          
+    451          
+    452          //-------------------------------------------------------------------------------------------------
+    453          //! @brief      Checks if the time counter has expired and updates the timer counter
+    454          //!
+    455          //!             Resets the time counter if it is expired
+    456          //!             CAUTION: this function shall never be called more than once per
+    457          //!             TaskProcess invocation for the same timer
+    458          //!
+    459          //! @param[in]  pTimeCounter   - pointer to the time counter to check
+    460          //!
+    461          //! @retval     true - if timer is expired,
+    462          //! @retval     false - otherwise
+    463          //-------------------------------------------------------------------------------------------------
+    464          
+    465          bool_t CdcTimeCounterUpdate(CdcTimeCounter_t *pTimeCounter)
+    466          {
+    467              bool_t isExpired = false;
+    468          
+    469              if ((pTimeCounter->tRov != 0) || (pTimeCounter->tRes != 0)) // if not expired already
+    470              {    
+    471                  if (pCdc->sysTimerCountPrvMs > pCdc->sysTimerCountCurMs) // if timer overflow detected
+    472                  {
+    473                      if (pTimeCounter->tRov > 0)
+    474                      {
+    475                          pTimeCounter->tRov--;
+    476                      }
+    477                  }
+    478          
+    479                  if ((pTimeCounter->tRov == 0) && (pCdc->sysTimerCountCurMs > (CDC_TIME_TCK_MS * pTimeCounter->tRes)))
+    480                  {
+    481                      isExpired = true;
+    482          
+    483                      // reset the counter
+    484                      pTimeCounter->tRov = 0;
+    485                      pTimeCounter->tRes = 0;            
+    486                  }      
+    487              }
+    488              else
+    489              {
+    490                  isExpired = true;
+    491              }
+    492          
+    493              // Update minimum time counter
+    494              if (CdcTimeCounterCompare(pTimeCounter, &pCdc->cdcRecallTimeCount) == 0)
+    495              {   // if (*pTimeCounter < cdcRecallTimeCount)
+    496                  pCdc->cdcRecallTimeCount = *pTimeCounter;
+    497              }
+    498          
+    499              return isExpired;
+    500          }
+    501          
+    502          
+    503          //-------------------------------------------------------------------------------------------------
+    504          //! @brief      Checks if the time counter has expired
+    505          //!
+    506          //! @param[in]  pTimeCounter - pointer to the time counter to check
+    507          //!
+    508          //! @retval     true - if timer is expired,
+    509          //! @retval     false - otherwise
+    510          //-------------------------------------------------------------------------------------------------
+    511          
+    512          bool_t CdcIsTimeCounterExpired(CdcTimeCounter_t *pTimeCounter)
+    513          {
+    514              return ((pTimeCounter->tRov == 0) && (pTimeCounter->tRes == 0));   
+    515          }
+    516          
+    517          
+    518          //-------------------------------------------------------------------------------------------------
+    519          //! @brief      Resets the time counter to zero
+    520          //!
+    521          //! @param[in]  pTimeCounter - pointer to the time counter to check
+    522          //-------------------------------------------------------------------------------------------------
+    523          
+    524          void CdcTimeCounterReset(CdcTimeCounter_t *pTimeCounter)
+    525          {
+    526              pTimeCounter->tRov = 0;
+    527              pTimeCounter->tRes = 0;
+    528          }
+    529          
+    530          
+    531          //-------------------------------------------------------------------------------------------------
+    532          //! @brief      Compares two time counters
+    533          //!
+    534          //!             CAUTION: time counters shall be updated before comparison
+    535          //!
+    536          //! @param[in]  pTimeCounterA - pointer to the time counter A to compare
+    537          //! @param[in]  pTimeCounterB - pointer to the time counter B to compare
+    538          //!
+    539          //! @retval     0 - if time A < B,
+    540          //! @retval     1 - if time A == B
+    541          //! @retval     2 - if time A > B
+    542          //-------------------------------------------------------------------------------------------------
+    543          
+    544          uint8_t CdcTimeCounterCompare(CdcTimeCounter_t *pTimeCounterA, CdcTimeCounter_t *pTimeCounterB)
+    545          {
+    546              uint8_t cmpRet;
+    547          
+    548              if (pTimeCounterA->tRov > pTimeCounterB->tRov)
+    549              {
+    550                  cmpRet = 2;
+    551              }
+    552              else if (pTimeCounterA->tRov < pTimeCounterB->tRov)
+    553              {
+    554                  cmpRet = 0;
+    555              }
+    556              else if (pTimeCounterA->tRes > pTimeCounterB->tRes)
+    557              {
+    558                  cmpRet = 2;
+    559              }
+    560              else if (pTimeCounterA->tRes < pTimeCounterB->tRes)
+    561              {
+    562                  cmpRet = 0;
+    563              }
+    564              else
+    565              {
+    566                  cmpRet = 1;
+    567              }
+    568          
+    569              return cmpRet;
+    570          
+    571          }
+    572          
+    573          
+    574          //-------------------------------------------------------------------------------------------------
+    575          //! @brief      Returns time left until counter expires in seconds
+    576          //!
+    577          //! @param[in]  pTimeCounter   - pointer to the time counter
+    578          //!
+    579          //! @return     time in seconds
+    580          //-------------------------------------------------------------------------------------------------
+    581          
+    582          uint16_t CdcTimeCounterLeftSecGet(CdcTimeCounter_t *pTimeCounter)
+    583          {
+    584              return ((pTimeCounter->tRov * (0x10000 / CDC_TIME_TCK_MS) + pTimeCounter->tRes - 
+    585                      (pCdc->sysTimerCountCurMs / CDC_TIME_TCK_MS)) / (1000 / CDC_TIME_TCK_MS));
+    586          }
+    587          
+    588          
+    589          //-------------------------------------------------------------------------------------------------
+    590          //! @brief      Resets the watchdog's timer for the device that responded
+    591          //!             with NotifyAlive message
+    592          //!
+    593          //! @param[in]  physAddr - physical address of alive device
+    594          //!
+    595          //! @retval     false    - success,
+    596          //! @retval     true - error (device not found)
+    597          //-------------------------------------------------------------------------------------------------
+    598          
+    599          bool_t CdcAliveDeviceListTimeReset(const uint16_t physAddr)
+    600          {  
+    601              uint16_t    listIdx;
+    602              bool_t      isFound = false;
+    603          
+    604              for (listIdx = 0; listIdx < CDC_NUMBER_OF_DEVICES_MAX; listIdx++)
+    605              {
+    606                   if (pCdc->aAliveDevice[listIdx].physAddr == physAddr)
+    607                   {
+    608                      isFound = true;
+    609                      CdcTimeCounterSet(CDC_TIME_SEC2TCK(CDC_MAX_NTF_ALIVE_TIME_SEC), &pCdc->aAliveDevice[listIdx].TimeCount);
+    610                      break; // because physAddr must be present uniquely
+    611                   }
+    612              }
+    613              
+    614              return isFound;
+    615          }
+    616          
+    617          
+    618          //-------------------------------------------------------------------------------------------------
+    619          //! @brief      Set AliveDevice List times up-to-date
+    620          //!
+    621          //! @retval     0xFFFF            - no timeouts have been detected,
+    622          //! @retval     other numbers     - index of a device failed to notify it's
+    623          //!                                 alive status. If more than one failed device
+    624          //!                                 is detected, the fuction reports the last
+    625          //!                                 one in the list. Other timeouts will be
+    626          //!                                 pending and reported in subsequent calls of
+    627          //!                                 the function
+    628          //-------------------------------------------------------------------------------------------------
+    629          
+    630          uint16_t CdcAliveDeviceListTimeUpdate(void)
+    631          {    
+    632              uint16_t    listIdx;    
+    633              uint16_t    timeoutedDeviceDetected = 0xFFFF;
+    634          
+    635              
+    636              for (listIdx = 0; listIdx < CDC_NUMBER_OF_DEVICES_MAX; listIdx++)
+    637              {
+    638                  if (pCdc->aAliveDevice[listIdx].physAddr != 0xFFFF) // for all nonempty records
+    639                  {
+    640                      if (CdcTimeCounterUpdate(&pCdc->aAliveDevice[listIdx].TimeCount) == true)            
+    641                      {   // if counter has expired
+    642                          timeoutedDeviceDetected = listIdx;
+    643                          DEBUG_PRINT( CDC_MSG_DBG, "CdcAliveDeviceListTimeUpdate(): Timeout detected for PA = %04x\n", pCdc->aAliveDevice[listIdx].physAddr );
+    644                      }
+    645                      
+    646                  }
+    647              }
+    648          
+    649              return timeoutedDeviceDetected;
+    650          }
+    651          
+    652          
+    653          //-------------------------------------------------------------------------------------------------
+    654          //! @brief      Figures out whether a device is in the path of the eHDMI channel
+    655          //!
+    656          //! @param[in]  firstPhysAddr - PA of the HEC's beginning device,
+    657          //! @param[in]  lastPhysAddr  - PA of the HEC's end device,
+    658          //! @param[in]  testPhysAddr  - PA of the device to examine
+    659          //!
+    660          //! @retval     true, if the device with testPhysAddr belongs to the HEC,
+    661          //! @retval     false - otherwise
+    662          //-------------------------------------------------------------------------------------------------
+    663          
+    664          bool_t CdcIsDeviceBelongsToHec(const uint16_t firstPhysAddr, const uint16_t lastPhysAddr, const uint16_t testPhysAddr)
+    665          {
+    666              uint16_t mask = 0xF000;
+    667          
+    668              if (firstPhysAddr == lastPhysAddr) // prohibited combination that should never happen. This "if" prevents deadlock
+    669              {
+    670                  return (firstPhysAddr == testPhysAddr);
+    671              }
+    672              
+    673              while ((firstPhysAddr & mask) == (lastPhysAddr & mask)) // Find root level of the HEC tree
+    674              {
+    675                  mask = (mask >> 4) | 0xF000;
+    676              }
+    677              
+    678              mask <<= 4;
+    679              if (testPhysAddr == (firstPhysAddr & mask)) // check if there is a match with the HEC tree root
+    680              {
+    681                  return true;
+    682              }
+    683          
+    684              // step down the tree (left and right from root) and see if there is a match
+    685              while(mask != 0xFFFF)
+    686              {
+    687                  mask = (mask >> 4) | 0xF000;
+    688          
+    689                  if ((testPhysAddr == (firstPhysAddr & mask)) || (testPhysAddr == (lastPhysAddr & mask)))
+    690                  {
+    691                      return true;
+    692                  }
+    693              }
+    694          
+    695              return false;
+    696          }
+    697          
+    698          
+    699          
+    700          //-------------------------------------------------------------------------------------------------
+    701          //! @brief      Consecutively calculates physical addresses of HEC devices
+    702          //!             starting from firstPhysAddr and ending with lastPhysAddr
+    703          //!
+    704          //!             Calling the function after reaching the lastPhysAddr without
+    705          //!             the parameter "restart" set to true will result in starting over
+    706          //!             again from the firstPhysAddr.
+    707          //!
+    708          //! @param[in]  firstPhysAddr - PA of the HEC's beginning device,
+    709          //! @param[in]  lastPhysAddr  - PA of the HEC's end device,
+    710          //! @param[in]  restart       - forces the function to start over from the beginning
+    711          //!
+    712          //! @return     physical address of the next device in the HEC's path
+    713          //-------------------------------------------------------------------------------------------------
+    714          
+    715          uint16_t CdcHecNextDeviceGet(const uint16_t firstPhysAddr, const uint16_t lastPhysAddr, const bool_t restart)
+    716          {
+    717              static uint16_t mask = 0xFFF0;
+    718              static bool_t   reverse = false;
+    719              uint16_t physAddr;
+    720              uint16_t pa;
+    721          
+    722              if (restart)
+    723              {
+    724                  mask = 0x0000; 
+    725                  reverse = false;
+    726                  // skip absent levels (right zeros)
+    727                  pa = firstPhysAddr;
+    728                  while (pa != 0)
+    729                  {
+    730                      pa <<= 4;
+    731                      mask = (mask >> 4) | 0xF000;
+    732                  }
+    733              }
+    734          
+    735              if (reverse == false)  // go up from first PA to the top of HEC's tree
+    736              {
+    737                  physAddr = firstPhysAddr & mask;
+    738                  if (physAddr == (lastPhysAddr & mask)) 
+    739                  {
+    740                      reverse = true;
+    741                      mask = (mask >> 4) | 0xF000;
+    742                  }
+    743                  else
+    744                  {
+    745                      mask <<= 4;
+    746                  }
+    747              }
+    748              else    // go down from the HEC's tree top to the last PA
+    749              { 
+    750                  physAddr = lastPhysAddr & mask;
+    751                  if ((lastPhysAddr & mask) == lastPhysAddr) // start over when the end of HEC is reached
+    752                  {
+    753                      reverse = false;
+    754                      mask = 0x0000;
+    755                      // skip absent levels (right zeros)
+    756                      pa = firstPhysAddr;
+    757                      while (pa != 0)
+    758                      {
+    759                          pa <<= 4;
+    760                          mask = (mask >> 4) | 0xF000;
+    761                      }
+    762                  }
+    763                  else
+    764                  {
+    765                      mask = (mask >> 4) | 0xF000;
+    766                  }
+    767              }
+    768              
+    769              return physAddr;
+    770          }
+    771          
+    772          
+    773          //-------------------------------------------------------------------------------------------------
+    774          //! @brief      Calculates length (number of devices) of a HEC
+    775          //!
+    776          //! @param[in]  firstPhysAddr - PA of the HEC's beginning device,
+    777          //! @param[in]  lastPhysAddr  - PA of the HEC's end device,
+    778          //!
+    779          //! @return     number of devices in the HEC
+    780          //-------------------------------------------------------------------------------------------------
+    781          
+    782          uint8_t CdcHecLengthGet(const uint16_t firstPhysAddr, const uint16_t lastPhysAddr)
+    783          {
+    784              uint8_t     deviceCount = 1; // minimal length is 2 (fist & last devices only)
+    785              uint16_t    physAddr;
+    786          
+    787              physAddr = CdcHecNextDeviceGet(firstPhysAddr, lastPhysAddr, true);
+    788              while (physAddr != lastPhysAddr)
+    789              {
+    790                  physAddr = CdcHecNextDeviceGet(firstPhysAddr, lastPhysAddr, false);
+    791                  deviceCount++;
+    792              }
+    793              return deviceCount;
+    794          }
+    795          
+    796          
+    797          //-------------------------------------------------------------------------------------------------
+    798          //! @brief      Figures out whether two devices have relationship
+    799          //!             of a Sink and a Source.
+    800          //!
+    801          //!             This function is used in HPD signaling protocol implementation
+    802          //!
+    803          //! @param[in]  sinkPhysAddr    - PA of the possible Sink device,
+    804          //! @param[in]  sourcePhysAddr  - PA of the possible Source device,
+    805          //! @param[in]  inputPortIndex  - index of an input port of the Sink
+    806          //!
+    807          //! @retval     true, if devices are linked over the given input port
+    808          //! @retval     false - otherwise
+    809          //-------------------------------------------------------------------------------------------------
+    810          
+    811          bool_t CdcIsLinkedDirectly(const uint16_t sinkPhysAddr, const uint16_t sourcePhysAddr, const uint8_t inputPortIndex)
+    812          {
+    813              uint8_t     actualInputPortIndex;
+    814              bool_t      isLinked;
+    815          
+    816              isLinked = CdcIsLinkedDirectlyInPortGet(sinkPhysAddr, sourcePhysAddr, &actualInputPortIndex);
+    817          
+    818              if (actualInputPortIndex != inputPortIndex)
+    819              {
+    820                  isLinked = false;
+    821              }
+    822          
+    823              return isLinked;
+    824          }
+    825          
+    826          
+    827          //-------------------------------------------------------------------------------------------------
+    828          //! @brief      Calculates physical address of a device, potential or real, that
+    829          //!             is adjacent to the reference device.
+    830          //!
+    831          //! @param[in]  basePhysAddr   - PA of the reference device,
+    832          //! @param[in]  isAtOutput     - if true, returns a device's PA adjacent to output port,
+    833          //!                              if false, returns a device's PA adjacent PA to
+    834          //!                              specified input port
+    835          //! @param[in]  inputPortIndex - zero-based index of the input port of the adjacent device
+    836          //!                             (ignored, if isAtOutput == true)
+    837          //!
+    838          //! @return     Physical Address of the Adjacent device,
+    839          //! @retval     0xFFFF - if the Adjacent device PA doesn't exist
+    840          //!                       (sink of a root or source of 5th level)
+    841          //-------------------------------------------------------------------------------------------------
+    842          
+    843          uint16_t CdcAdjacentPhysAddrGet(const uint16_t basePhysAddr, const bool_t isAtOutput, const uint8_t inputPortIndex)
+    844          {
+    845              uint16_t mask = 0xFFF0; 
+    846              uint16_t adjPhysAddr = 0xFFFF;
+    847              uint8_t  n = 0;
+    848          
+    849              if (inputPortIndex >= 0xF) // illegal port index
+    850              {
+    851                  return 0xFFFF;
+    852              }
+    853          
+    854              // find the last non-zero digit in basePhysAddr
+    855              while ((n < 4) && ((basePhysAddr & mask) == basePhysAddr))
+    856              {
+    857                  n++;
+    858                  mask <<= 4;
+    859              }
+    860           
+    861              if (isAtOutput)
+    862              {
+    863                  if (basePhysAddr != 0x0000)
+    864                  {
+    865                      adjPhysAddr = basePhysAddr & mask;
+    866                  }
+    867              }
+    868              else // adjacent to input
+    869              {
+    870                  if (n != 0) // if last digit is 0
+    871                  {
+    872                     adjPhysAddr = basePhysAddr | ((inputPortIndex + 1) << (4 * (n - 1)));
+    873                  }
+    874              }
+    875          
+    876              return adjPhysAddr;
+    877          }
+    878          
+    879          
+    880          //-------------------------------------------------------------------------------------------------
+    881          //! @brief      Figures out whether two devices have relationship
+    882          //!             of Sink and Source (i.e. they are adjacent) and the adjacent
+    883          //!             device has HEC capable input or output port that connects
+    884          //!             it to the initiator
+    885          //!
+    886          //!             This function is used in control for Adjacent devices.
+    887          //!
+    888          //! @param[in]  initiatorPhysAddr - PA of the initiating device,
+    889          //! @param[in]  adjacentPhysAddr  - PA of the adjacent device,
+    890          //! @param[in]  isAdjacent        - (return value) pointer to adjacent flag
+    891          //!                                 that is true, if 2 devices are adjacent
+    892          //!
+    893          //! @retval     1, if devices are linked over HEC capable port
+    894          //! @retval     0 - otherwise
+    895          //-------------------------------------------------------------------------------------------------
+    896          
+    897          bool_t CdcIsCapableToAdjacent(const uint16_t initiatorPhysAddr, const uint16_t adjacentPhysAddr, bool_t *isAdjacent)
+    898          {
+    899              uint8_t inputPortIndex;
+    900              bool_t  isLinkedToSink = false;
+    901              bool_t  isLinkedToSource = false;
+    902          
+    903              isLinkedToSink = CdcIsLinkedDirectlyInPortGet(initiatorPhysAddr, adjacentPhysAddr, &inputPortIndex);
+    904              isLinkedToSource = CdcIsLinkedDirectlyInPortGet(adjacentPhysAddr, initiatorPhysAddr, &inputPortIndex);
+    905              *isAdjacent = isLinkedToSink || isLinkedToSource;
+    906          
+    907              if (/* if initiator is a Sink, need capable output to establish a connection */
+    908                  ( isLinkedToSink && 
+    909                   (pCdc->ports.numberOfOutputs > 0) && (pCdc->ports.output.hecSupport == CDC_HEC_SUPPORTED)) || 
+    910                  /* if initiator is a Source, need capable input to establish a connection */
+    911                  ( isLinkedToSource && 
+    912                   (pCdc->ports.numberOfInputs > inputPortIndex) && (pCdc->ports.input[inputPortIndex].hecSupport == CDC_HEC_SUPPORTED)))
+    913              {
+    914                  return true;
+    915              }
+    916              else
+    917              {
+    918                  return false;
+    919              }
+    920          }
+    921          
+    922          
+    923          //-------------------------------------------------------------------------------------------------
+    924          //! @brief      Figures out whether two devices have relationship
+    925          //!             of a Sink and a Source. If so, returns index of the Sink's
+    926          //!             input port that is connected to the Source output port
+    927          //!
+    928          //! @param[in]  sinkPhysAddr      - PA of the possible Sink device,
+    929          //! @param[in]  sourcePhysAddr    - PA of the possible Source device,
+    930          //! @param[out] pInputPortIndex   - (return value) pointer to an index of an input
+    931          //!                                 port of the Sink that must be used for the HEC
+    932          //!                                 connection.
+    933          //!                                 0xFF - in the case when Sink-Source relationship
+    934          //!                                 hasn't been verified
+    935          //!
+    936          //! @retval     true, if devices are linked directly over some of the Sink's inputs
+    937          //! @retval     false - otherwise
+    938          //-------------------------------------------------------------------------------------------------
+    939          
+    940          static bool_t CdcIsLinkedDirectlyInPortGet(const uint16_t sinkPhysAddr, const uint16_t sourcePhysAddr, uint8_t *pInputPortIndex)
+    941          {
+    942              // criteria: 1. Sink must be one level above the Source
+    943              //           2. The input port number (= inputPortIdx+1) must be equal to 
+    944              //              the Source's physical address last nonzero digit (p. 8.7.2. of HDMI 1.4 spec)  
+    945              uint8_t     i;
+    946              uint8_t     n = 0;    
+    947              uint16_t    mask = 0x000F;
+    948              uint16_t    sourceMasked;
+    949              uint16_t    sinkMasked;
+    950              bool_t      isLinked = false;
+    951          
+    952              // crit.1 meets if and only if sink and source have one of the following patterns: 
+    953              // {0000, n000}, {x000, xn00}, {xy00, xyn0}, {xyz0, xyzn}
+    954              for (i = 0; i < 4; i++)
+    955              {
+    956                  sourceMasked = sourcePhysAddr & mask;
+    957                  sinkMasked   = sinkPhysAddr & mask;
+    958          
+    959                  if (n == 0) // n point not found yet
+    960                  {
+    961                       // skip zero-zero pairs
+    962                       if ((sinkMasked == 0) && (sourceMasked !=0)) // first zero-nonzero pair found 
+    963                       {
+    964                           n = sourceMasked >> (4 * i); // input port number (nonzero)
+    965                           *pInputPortIndex = n - 1;      // input port index to return
+    966                           isLinked = true;             // potential detection
+    967                       }
+    968                       else if ((sinkMasked != 0) && (sourceMasked !=0))
+    969                       {
+    970                          break;
+    971                       }
+    972                       else if ((sinkMasked != 0) && (sourceMasked ==0))
+    973                       {
+    974                          break;
+    975                       }      
+    976                  }
+    977                  else // all other digit pairs must be non-zero & equal
+    978                  {
+    979                      if ((sinkMasked == 0) || (sinkMasked != sourceMasked))
+    980                      {
+    981                          isLinked = false; // reset linked flag if wrong MSB pattern found 
+    982                          *pInputPortIndex = 0xFF;
+    983                          break;
+    984                      }
+    985                  }
+    986          
+    987                  mask <<= 4; // scan all 4 digits        
+    988              }
+    989          
+    990          
+    991              return isLinked;
+    992          }
+    993          
+    994          
+    995          //-------------------------------------------------------------------------------------------------
+    996          //! @brief      Finds out what input and/or output ports are utilized
+    997          //!             for a HEC that includes this device
+    998          //!
+    999          //!             Verifies if those ports are capable to maintain the HEC. This function shall be called
+   1000          //!             after verifying that the HEC includes this device
+   1001          //!
+   1002          //! @param[in]  firstPhysAddr   - first device PA of the HEC,
+   1003          //! @param[in]  lastPhysAddr    - last device PA of the HEC,
+   1004          //! @param[out] aInPortIdx      - pointer to input port index array (return value),
+   1005          //!                               containing 2 elements: ports of the HEC
+   1006          //!                               coming-in and coming-out.
+   1007          //!                               0xFF value indicates that the HEC route
+   1008          //!                               doesn't come through the input
+   1009          //! @param[out] pOutPortFlg     - pointer to output port flag (return value)
+   1010          //!                               0 - indicates that the HEC route
+   1011          //!                               doesn't come through the output
+   1012          //!                               1 - indicates that the HEC route
+   1013          //!                               come through the output
+   1014          //!
+   1015          //! @retval     true, if routing is verified for the HEC
+   1016          //! @retval     false - otherwise
+   1017          //-------------------------------------------------------------------------------------------------
+   1018          
+   1019          bool_t  CdcCapablePortGet(const uint16_t firstPhysAddr, const uint16_t lastPhysAddr, 
+   1020                                     uint8_t aInPortIdx[2], uint8_t *pOutPortFlg)
+   1021          {
+   1022              uint8_t  i;
+   1023              uint8_t  inpCnt = 0;
+   1024              bool_t   restart = true;
+   1025              uint16_t physAddr;
+   1026              uint8_t  isVerified = true;
+   1027              
+   1028          
+   1029              *pOutPortFlg    = false;    // output port isn't in use by default
+   1030              aInPortIdx[0]   = 0xFF;     // no input port is in use by default
+   1031              aInPortIdx[1]   = 0xFF;      
+   1032          
+   1033              do // for all devices in the HEC
+   1034              {
+   1035                  physAddr = CdcHecNextDeviceGet(firstPhysAddr, lastPhysAddr, restart);        
+   1036                  restart = false; // restart == true for the first cycle only
+   1037          
+   1038                  // check if a device from the HEC is a Sink for this device, so the output shall be in use
+   1039                  if (*pOutPortFlg == false) // do it only if output usage has not been determined yet
+   1040                  {
+   1041                      *pOutPortFlg = CdcIsLinkedDirectlyInPortGet(physAddr, pCdc->physAddr, &i); 
+   1042                  }
+   1043          
+   1044                  // check if a device from the HEC is a Source for this device 
+   1045                  // and find out the input ports that are connected to the Source (maximum 2)
+   1046                  if ((inpCnt == 0) || ((inpCnt == 1) && (!*pOutPortFlg))) // do it only if input usage has not been determined yet
+   1047                  {
+   1048                      if (CdcIsLinkedDirectlyInPortGet(pCdc->physAddr, physAddr, &i))
+   1049                      {
+   1050                          aInPortIdx[inpCnt++] = i;
+   1051                      }
+   1052                      
+   1053                  }
+   1054              } 
+   1055              while ((physAddr != lastPhysAddr) && ((*pOutPortFlg == false) || (inpCnt == 0)));
+   1056              
+   1057              // verify HEC capability of the affected ports
+   1058              if (*pOutPortFlg == true) // output 
+   1059              {
+   1060                  if ((pCdc->ports.numberOfOutputs == 0) || (!pCdc->ports.output.hecSupport))
+   1061                  {
+   1062                      isVerified = false;
+   1063                  }
+   1064              }
+   1065          
+   1066              for (i = 0; i < inpCnt; i++) // inputs (up to 2)
+   1067              {
+   1068          
+   1069                  if ((pCdc->ports.numberOfInputs <= aInPortIdx[i]) || (!pCdc->ports.input[aInPortIdx[i]].hecSupport))
+   1070                  {
+   1071                      isVerified = false;
+   1072                      break;
+   1073                  }
+   1074                  
+   1075              }
+   1076          
+   1077              if ((inpCnt == 0) && (*pOutPortFlg == false)) // not verified, if no ports participate in the HEC
+   1078              {
+   1079                  isVerified = false;
+   1080              }
+   1081              
+   1082              return isVerified;
+   1083          }
+   1084          
+   1085          
+   1086          //-------------------------------------------------------------------------------------------------
+   1087          //! @brief      Figures out if this device has all capabilities to become a part of a HEC
+   1088          //!
+   1089          //!             I.e. the device is HEC capable and all ports
+   1090          //!             that must be activated to create the HEC are HEC capable too.
+   1091          //!
+   1092          //! @param[in]  firstPhysAddr   - first device PA of the HEC,
+   1093          //! @param[in]  lastPhysAddr    - last device PA of the HEC,
+   1094          //! @param[in]  isStrict        - false will allow to verify this device
+   1095          //!                               positively, if it's outside of the HEC
+   1096          //!
+   1097          //!
+   1098          //! @retval     true, if routing is verified for the HEC
+   1099          //! @retval     false - otherwise
+   1100          //-------------------------------------------------------------------------------------------------
+   1101          
+   1102          bool_t  CdcIsCapableForHec(const uint16_t firstPhysAddr, const uint16_t lastPhysAddr, const bool_t isStrict)
+   1103          {
+   1104              uint8_t aInPortIdx[2];
+   1105              uint8_t outPortFlg;
+   1106              bool_t  isVerified;
+   1107          
+   1108              if (firstPhysAddr != lastPhysAddr)
+   1109              {
+   1110                  if (CdcIsDeviceBelongsToHec(firstPhysAddr, lastPhysAddr, pCdc->physAddr))
+   1111                  { 
+   1112                      isVerified = CdcCapablePortGet(firstPhysAddr, lastPhysAddr, aInPortIdx, &outPortFlg);
+   1113                  }
+   1114                  else
+   1115                  {
+   1116                      isVerified = !isStrict;
+   1117                  }
+   1118              }
+   1119              else
+   1120              {
+   1121                  isVerified = false; // Situation when (firstPhysAddr == lastPhysAddr) is prohibited 
+   1122              }
+   1123          
+   1124              return isVerified;
+   1125          }
+   1126          
+   1127          //-------------------------------------------------------------------------------------------------
+   1128          //! @brief      Activates I/O ports of this device when new AHEC is created
+   1129          //!
+   1130          //!             This service function shall be called after calling of
+   1131          //!             CdcIsDeviceBelongsToHec() and CdcCapablePortGet(), both
+   1132          //!             has to return true, as it lacks a few condition checks
+   1133          //!             in order to improve performance
+   1134          //!
+   1135          //! @param[in]  aInPortIdx   - pointer to input port index array,
+   1136          //!                            containing 2 elements: ports of the HEC
+   1137          //!                            coming-in and coming-out.
+   1138          //!                            0xFF value indicates that the HEC route
+   1139          //!                            doesn't come through the input
+   1140          //! @param[in]  outPortFlg  - pointer to output port flag
+   1141          //!                            0 - indicates that the HEC route
+   1142          //!                            doesn't come through the output
+   1143          //!                            1 - indicates thar the HEC route
+   1144          //!                            come through the output
+   1145          //-------------------------------------------------------------------------------------------------
+   1146          
+   1147          void CdcIoPortsActivate(const uint8_t aInPortIdx[2], const bool_t outPortFlg)
+   1148          {
+   1149              uint8_t i;
+   1150              
+   1151              // update output port status
+   1152              if (outPortFlg && (pCdc->ports.output.hecActive == CDC_HEC_INACTIVE))
+   1153              {
+   1154                  // Activate output's hardware
+   1155                  if (CdcEhdmiIoPortHwEnable(true, 0, true))
+   1156                  {
+   1157                      pCdc->ports.output.hecActive = CDC_HEC_ACTIVE;
+   1158                  }
+   1159              }
+   1160              // update input ports status
+   1161              for (i = 0; i < 2; i++)
+   1162              {
+   1163                  if ((aInPortIdx[i] != 0xFF) && (pCdc->ports.input[aInPortIdx[i]].hecActive == CDC_HEC_INACTIVE))
+   1164                  {
+   1165                      // Activate input's hardware
+   1166                      if (CdcEhdmiIoPortHwEnable(false, aInPortIdx[i], true))
+   1167                      {            
+   1168                          pCdc->ports.input[aInPortIdx[i]].hecActive = CDC_HEC_ACTIVE;
+   1169                      }
+   1170                  }
+   1171              }
+   1172          
+   1173          }
+   1174          
+   1175          
+   1176          //-------------------------------------------------------------------------------------------------
+   1177          //! @brief      Updates I/O ports status of this device to reflect current state
+   1178          //!             and participation in active HECs
+   1179          //!
+   1180          //!             This function shall be called
+   1181          //!             whenever HECs are activated or deactivated
+   1182          //-------------------------------------------------------------------------------------------------
+   1183          
+   1184          void CdcIoPortsStatusUpdate(void)
+   1185          {
+   1186              uint8_t isInputInUse[CDC_EHDMI_INPUTS_MAX];
+   1187              bool_t  isOutputInUse = false;
+   1188              uint8_t aInPortIdx[2];
+   1189              uint8_t outPortFlg;
+   1190              uint8_t i;
+   1191          
+   1192              // initialize isInputInUse[] flags
+   1193              for (i = 0; i < pCdc->ports.numberOfInputs; i++)
+   1194              {
+   1195                  isInputInUse[i] = false;
+   1196              }
+   1197          
+   1198              // set flags for ports that support at least one AHEC
+   1199              for (i = 0; i < CDC_NUMBER_OF_HECS_MAX; i++)
+   1200              {
+   1201                  if ((pCdc->aHec[i].status.isInUse == true) && (pCdc->aHec[i].status.channelState == CDC_AHEC))
+   1202                  {
+   1203                      if (CdcCapablePortGet(pCdc->aHec[i].firstDevPhysAddr, 
+   1204                                            pCdc->aHec[i].lastDevPhysAddr, aInPortIdx, &outPortFlg))
+   1205                      {
+   1206                          if (aInPortIdx[0] != 0xFF)
+   1207                          {
+   1208                              isInputInUse[aInPortIdx[0]] = true;
+   1209                          }
+   1210                          if (aInPortIdx[1] != 0xFF)
+   1211                          {
+   1212                              isInputInUse[aInPortIdx[1]] = true;
+   1213                          }
+   1214                          if (outPortFlg)
+   1215                          {
+   1216                              isOutputInUse = true;
+   1217                          }
+   1218                          
+   1219                      }
+   1220                  }
+   1221              }
+   1222          
+   1223              // set input ports status
+   1224              for (i = 0; i < pCdc->ports.numberOfInputs; i++)
+   1225              {
+   1226                  if (pCdc->ports.input[i].hecSupport == CDC_HEC_SUPPORTED)
+   1227                  {
+   1228                      if (isInputInUse[i])
+   1229                      {
+   1230                          // Activate input's hardware
+   1231                          if (CdcEhdmiIoPortHwEnable(false, i, true))
+   1232                          {
+   1233                              pCdc->ports.input[i].hecActive = CDC_HEC_ACTIVE;
+   1234                          }
+   1235                      }
+   1236                      else
+   1237                      {
+   1238                          // Deactivate input's hardware
+   1239                          if (CdcEhdmiIoPortHwEnable(false, i, false))
+   1240                          {            
+   1241                              pCdc->ports.input[i].hecActive = CDC_HEC_INACTIVE;
+   1242                          }
+   1243                          
+   1244                      }
+   1245                  }
+   1246              }
+   1247          
+   1248              // set output port status
+   1249              if (pCdc->ports.numberOfOutputs > 0)
+   1250              {
+   1251                  if (pCdc->ports.output.hecSupport == CDC_HEC_SUPPORTED)
+   1252                  {
+   1253                      if (isOutputInUse)
+   1254                      {
+   1255                          // Activate output's hardware
+   1256                          if (CdcEhdmiIoPortHwEnable(true, 0, true))
+   1257                          {            
+   1258                              pCdc->ports.output.hecActive = CDC_HEC_ACTIVE;
+   1259                          }
+   1260                      }
+   1261                      else
+   1262                      {
+   1263                          // deactivate output's hardware
+   1264                          if (CdcEhdmiIoPortHwEnable(true, 0, false))
+   1265                          {                        
+   1266                              pCdc->ports.output.hecActive = CDC_HEC_INACTIVE;
+   1267                          }
+   1268                          
+   1269                      }
+   1270                  }
+   1271              }
+   1272              
+   1273          }
+   1274          
+   1275          
+   1276          //-------------------------------------------------------------------------------------------------
+   1277          //! @brief      Finds out if a HEC is enabled or possible in the given Device
+   1278          //!
+   1279          //!             This function should be used when analyzing the Device ReportState
+   1280          //!             extended message, including the bit field stating the ports status
+   1281          //!
+   1282          //! @param[in]  hecIdx          - Index of existing HEC to check,
+   1283          //! @param[in]  devPhysAddr     - the Device (an initiator of ReportState msg) physical address,
+   1284          //! @param[in]  portBitField    - bit field indicating the I/O ports status (see CdcHecReportStateSend())
+   1285          //!
+   1286          //! @retval     true, if support/activation is verified for the HEC
+   1287          //! @retval     false - otherwise
+   1288          //-------------------------------------------------------------------------------------------------
+   1289          
+   1290          bool_t  CdcIsHecEnabledInDev(const uint8_t hecIdx, const uint16_t devPhysAddr, const uint16_t portBitField) 
+   1291          {
+   1292              uint8_t  i;
+   1293              uint8_t  inpCnt = 0;
+   1294              bool_t   outPortFlg;
+   1295              uint8_t  aInPortIdx[2];
+   1296              bool_t   restart = true;
+   1297              uint16_t physAddr;
+   1298              bool_t   isVerified = false;
+   1299              
+   1300          
+   1301              outPortFlg      = false;    // output port isn't in use by default
+   1302              aInPortIdx[0]   = 0xFF;     // no input port is in use by default
+   1303              aInPortIdx[1]   = 0xFF;      
+   1304          
+   1305              do // for all devices in the HEC
+   1306              {
+   1307                  physAddr = CdcHecNextDeviceGet(pCdc->aHec[hecIdx].firstDevPhysAddr, 
+   1308                                                 pCdc->aHec[hecIdx].lastDevPhysAddr, restart);        
+   1309                  restart = false; // restart == true for the first cycle only
+   1310          
+   1311                  // check if a device from the HEC is a Sink for this device, so the output shall be in use
+   1312                  if (outPortFlg == false) // do it only if output usage has not been determined yet
+   1313                  {
+   1314                      outPortFlg = CdcIsLinkedDirectlyInPortGet(physAddr, devPhysAddr, &i); 
+   1315                  }
+   1316          
+   1317                  // check if a device from the HEC is a Source for this device 
+   1318                  // and find out the input ports that are connected to the Source (maximum 2)
+   1319                  if ((inpCnt == 0) || ((inpCnt == 1) && (!outPortFlg))) // do it only if input usage has not been determined yet
+   1320                  {
+   1321                      if (CdcIsLinkedDirectlyInPortGet(devPhysAddr, physAddr, &i))
+   1322                      {
+   1323                          aInPortIdx[inpCnt++] = i;
+   1324                      }
+   1325                      
+   1326                  }
+   1327              } 
+   1328              while ((physAddr != pCdc->aHec[hecIdx].lastDevPhysAddr) && ((outPortFlg == false) || (inpCnt == 0)));
+   1329          
+   1330              // Verify that required ports for this HEC are HEC-capable or active 
+   1331              // (unused connections can have any state)
+   1332              if ((!outPortFlg || (((portBitField >> 14) & 0x01) == 1)) &&
+   1333                  ((aInPortIdx[0] == 0xFF) || (((portBitField >> (13 - aInPortIdx[0])) & 0x01) == 1)) &&
+   1334                  ((aInPortIdx[1] == 0xFF) || (((portBitField >> (13 - aInPortIdx[1])) & 0x01) == 1)))
+   1335              {
+   1336                  isVerified = true;
+   1337              }
+   1338                  
+   1339              return isVerified;
+   1340          }
+   1341          
+   1342          
+   1343          //-------------------------------------------------------------------------------------------------
+   1344          //! @brief      Identifies all found HOST or ENC capable devices that aren't
+   1345          //!             reachable from this device, and then cleans up and rearranges
+   1346          //!             the cdcFoundHostsList to leave only capable & reachable devices
+   1347          //!
+   1348          //!             This function shall be used after collection of all responses
+   1349          //!             in the Discovery process
+   1350          //-------------------------------------------------------------------------------------------------
+   1351          
+   1352          void CdcDiscoveryDataArrange(void)
+   1353          {
+   1354              uint8_t  i;
+   1355              uint8_t  j;
+   1356              uint8_t  inpIdx;
+   1357              bool_t   isVerified;
+   1358              uint16_t prevPhysAddr;
+   1359              uint16_t curPhysAddr;
+   1360              uint8_t  prevIdx = 0; // index of the prevPhysAddr in cdcFoundHostsList[]
+   1361              uint8_t  curIdx = 0;  // index of the curPhysAddr in cdcFoundHostsList[]
+   1362              bool_t   isPrevPortCapable;
+   1363              bool_t   outPortFlg;    
+   1364              CdcFoundListEntry_t tempListEntry;
+   1365          
+   1366              // remove unreachable devices 
+   1367              for (i = 0; i < pCdc->numberOfAllHosts; i++)
+   1368              {
+   1369                  if ( ((pCdc->cdcFoundHostsList[i].devStat.hecFuncState != CDC_HOST_NOT_SUPPORTED) ||
+   1370                        (pCdc->cdcFoundHostsList[i].devStat.encFuncState != CDC_ENC_NOT_SUPPORTED)) &&
+   1371                       (pCdc->cdcFoundHostsList[i].devStat.cdcErrorState == CDC_ERRCODE_NO_ERROR) )
+   1372                  {
+   1373                       pCdc->cdcFoundHostsList[i].hostInfo.isSelected = true; // select all potential connections 
+   1374                      // check that all HEC@port capable devices in the PHEC are present
+   1375                      // in the cdcFoundHostsList
+   1376                      prevPhysAddr = CdcHecNextDeviceGet(pCdc->physAddr, pCdc->cdcFoundHostsList[i].physAddr, 1); // skip this device       
+   1377                      
+   1378                      do // for the rest of the device chain in the tested HEC
+   1379                      {
+   1380                          curPhysAddr = CdcHecNextDeviceGet(pCdc->physAddr, pCdc->cdcFoundHostsList[i].physAddr, 0);   
+   1381          
+   1382                          // find curPhysAddr in the cdcFoundHostsList[], it must be present to allow the HEC possibility
+   1383                          isVerified = false; // initial value; it will be true if HEC is verified to be possible                 
+   1384                          for (j = 0; j < pCdc->numberOfAllHosts; j++)
+   1385                          {
+   1386                              if (pCdc->cdcFoundHostsList[j].physAddr == curPhysAddr)
+   1387                              {
+   1388                                  isVerified = true;
+   1389                                  curIdx = j;
+   1390                                  break; // quit this search cycle, if the match has been found
+   1391                              }
+   1392                          }
+   1393          
+   1394                          if (isVerified)
+   1395                          { // Verify that connecting ports of the prevPhysAddr & curPhysAddr devices are HEC capable 
+   1396          	
+   1397                              // check if the curPhysAddr is a Sink for prevPhysAddr, so the output of prevPhysAddr shall be in use
+   1398                              outPortFlg = CdcIsLinkedDirectlyInPortGet(curPhysAddr, prevPhysAddr, &inpIdx);
+   1399          
+   1400                              if (outPortFlg) // curPhysAddr is a Sink for prevPhysAddr
+   1401                              {
+   1402                                  // verify that connected output and input are HEC capable
+   1403                                  if (prevPhysAddr != pCdc->physAddr) // for devices from list
+   1404                                  {
+   1405                                      isPrevPortCapable = (pCdc->cdcFoundHostsList[prevIdx].hostInfo.portHecCapBits & 0x4000) != 0;
+   1406                                  }
+   1407                                  else if (pCdc->ports.numberOfOutputs != 0) // for this device, that isn't in list (by definition)
+   1408                                  {
+   1409                                      isPrevPortCapable = pCdc->ports.output.hecSupport;                            
+   1410                                  }
+   1411                                  else // this device is incapable
+   1412                                  {
+   1413                                      isVerified = false;
+   1414                                      isPrevPortCapable = false;
+   1415                                  }
+   1416                                  
+   1417                                  if (!((pCdc->cdcFoundHostsList[curIdx].hostInfo.portHecCapBits & (0x2000 >> inpIdx)) && isPrevPortCapable))
+   1418                                  {
+   1419                                      isVerified = false;
+   1420                                  }
+   1421          
+   1422                              }
+   1423                              else // If not, the opposite has to be true: curPhysAddr is a Source for prevPhysAddr
+   1424                              {
+   1425                                  outPortFlg = CdcIsLinkedDirectlyInPortGet(prevPhysAddr, curPhysAddr, &inpIdx);
+   1426          
+   1427                                  if (outPortFlg) //curPhysAddr is a Source for prevPhysAddr
+   1428                                  {
+   1429                                      // verify that connected output and input are HEC capable
+   1430                                      if (prevPhysAddr != pCdc->physAddr) // for devices from list
+   1431                                      {
+   1432                                          isPrevPortCapable = (pCdc->cdcFoundHostsList[prevIdx].hostInfo.portHecCapBits & (0x2000 >> inpIdx)) != 0;
+   1433                                      }
+   1434                                      else if (pCdc->ports.numberOfInputs > inpIdx) // for this device, that isn't in list (by definition)
+   1435                                      {
+   1436                                          isPrevPortCapable = pCdc->ports.input[inpIdx].hecSupport;                            
+   1437                                      }
+   1438                                      else // this device is incapable
+   1439                                      {
+   1440                                          isVerified = false;
+   1441                                          isPrevPortCapable = false;
+   1442                                      }                            
+   1443                                      
+   1444                                      if (!(((pCdc->cdcFoundHostsList[curIdx].hostInfo.portHecCapBits & 0x4000) != 0) && isPrevPortCapable))
+   1445                                      {
+   1446                                          isVerified = false;
+   1447                                      }
+   1448                                      
+   1449                                  }
+   1450                                  else // curPhysAddr and prevPhysAddr aren't connected directly (should be logically impossible)
+   1451                                  {
+   1452                                      DEBUG_PRINT( CDC_MSG_DBG, "(IMPROBABLE) ERROR in CdcDiscoveryDataArrange(): devices must be connected directly\n" );
+   1453                                  }
+   1454                              }
+   1455              	
+   1456                              prevPhysAddr = curPhysAddr;
+   1457                              prevIdx = curIdx;
+   1458                          }
+   1459                      }
+   1460                      while (isVerified && (curPhysAddr != pCdc->cdcFoundHostsList[i].physAddr)); 
+   1461          	
+   1462          	    
+   1463                      // clear "Host or Enc" flag, if the device is unreachable
+   1464                      if (!isVerified)
+   1465                      {
+   1466                          pCdc->cdcFoundHostsList[i].hostInfo.isSelected = 0; 
+   1467                          DEBUG_PRINT( CDC_MSG_DBG, "CdcDiscoveryDataArrange(): unreachable device (PA = %04x) found. Omitted from list.\n",
+   1468                                  pCdc->cdcFoundHostsList[i].physAddr );
+   1469                      }
+   1470                      
+   1471                  }
+   1472              }
+   1473          
+   1474              // rearrange the verified list of found Host/ENC capable devices: 
+   1475              // put all "intermediate" devices not labeled as Host or EN capable after all labeled ones
+   1476              j = 0; // counts a number of "intermediate" devices
+   1477              for (i = 0; i < pCdc->numberOfAllHosts; i++)
+   1478              {
+   1479                  if (pCdc->cdcFoundHostsList[i].hostInfo.isSelected)
+   1480                  {   
+   1481                      // swap entries
+   1482                      tempListEntry = pCdc->cdcFoundHostsList[i - j];
+   1483                      pCdc->cdcFoundHostsList[i - j] = pCdc->cdcFoundHostsList[i];
+   1484                      pCdc->cdcFoundHostsList[i] = tempListEntry;
+   1485                  }
+   1486                  else
+   1487                  {
+   1488                      j++;
+   1489                  }
+   1490              }
+   1491          
+   1492              pCdc->numberOfFoundHosts = pCdc->numberOfAllHosts - j; // shorten the list length to the number of Host/ENC capable devices
+   1493              
+   1494          }
+   1495          
+   1496          
+   1497          //-------------------------------------------------------------------------------------------------
+   1498          //! @brief      Turns on or off the eHDMI hardware function when it is required by CDC protocol
+   1499          //!
+   1500          //! @note       This function must return success if HW already was in the requested state
+   1501          //!
+   1502          //! @param[in]  isEnabled  - true,  if eHDMI should be turned on,
+   1503          //!                          false, if eHDMI should be turned off
+   1504          //!
+   1505          //! @retval     true, if eHDMI hardware enabled or disabled successfully
+   1506          //! @retval     false - otherwise
+   1507          //-------------------------------------------------------------------------------------------------
+   1508          
+   1509          bool_t CdcEhdmiHwEnable(const bool_t isEnabled)
+   1510          {
+   1511              bool_t isSuccess = isEnabled || true; // Suppress compiler warning
+   1512          
+   1513              /* For the SiI9489, eHDMI hardware is enabled on a port-by-port */
+   1514              /* basis, so we just return success.                            */
+   1515          
+   1516              if (!isSuccess)
+   1517              {
+   1518                  DEBUG_PRINT( CDC_MSG_ALWAYS, "ERROR in CdcEhdmiHwEnable(): Could not access HEC hardware.\n" );
+   1519                  pCdc->deviceStatus.cdcErrorState = CDC_ERRCODE_OTHER_ERROR;
+   1520              }        
+   1521          
+   1522              return isSuccess;
+   1523          }
+   1524          
+   1525          //-------------------------------------------------------------------------------------------------
+   1526          //! @brief      Turns on or off the eHDMI I/O ports hardware, if it has to be
+   1527          //!             done independently from enabling the eHDMI function as a whole
+   1528          //!
+   1529          //! @note       This function must return success if HW already was in the requested state
+   1530          //!
+   1531          //! @param[in]  isOutput   - true, if output state has to be changed
+   1532          //!                          false,if input state has to be changed
+   1533          //! @param[in]  portIndex  - 0-based index of input port, if (isOutput == false)
+   1534          //! @param[in]  isEnabled  - true,  if eHDMI should be turned on,
+   1535          //!                          false, if eHDMI should be turned off
+   1536          //! @retval     true, if eHDMI I/O hardware enabled or disabled successfully
+   1537          //! @retval     false - otherwise
+   1538          //-------------------------------------------------------------------------------------------------
+   1539          
+   1540          bool_t CdcEhdmiIoPortHwEnable( const bool_t isOutput, const uint8_t portIndex, const bool_t isEnabled)
+   1541          {
+   1542              bool_t isSuccess = isOutput || portIndex || true;
+   1543                  
+   1544              /* The SiI9489 is input only, so we can ignore the isOutput flag.   */
+   1545              /* This should be changed if the CDC code is used in a system that  */
+   1546              /* incorporates both input and out HEC ports.                       */
+   1547          
+   1548              if (isOutput) 
+   1549              {
+   1550                  isSuccess = false;  // HEC function at output isn't available
+   1551              }
+   1552              else
+   1553              {
+   1554          #if ( errSII_DEV_953x_PORTING_BUILD_ERROR  == 1 )
+   1555                  isSuccess = SiiDrvHeacHecEnable( portIndex, isEnabled );
+   1556          #else
+   1557          		isSuccess = false;
+   1558          #endif
+   1559              }
+   1560          
+   1561              if (!isSuccess)
+   1562              {
+   1563                 // DEBUG_PRINT( CDC_MSG_ALWAYS, "ERROR in CdcEhdmiHwEnable(): couldn't %s HEC function of %s port [%d].\n",
+   1564                   //       isEnabled ? "enable" : "disable", isOutput ? "output" : "input", (int) portIndex ); RX: HPD
+   1565                  pCdc->deviceStatus.cdcErrorState = CDC_ERRCODE_NOT_SUPPORTED_CAPABILITY;
+   1566              }        
+   1567              
+   1568              return( isSuccess );
+   1569          }
+   1570          
+   1571          //-------------------------------------------------------------------------------------------------
+   1572          //! @brief      Sends a CDC message over the CEC bus using CPI
+   1573          //!
+   1574          //! @param[in]  opCode      - CDC operation code
+   1575          //! @param[in]  argCount    - number of byte-size arguments in the CDC message
+   1576          //! @param[in]  pCdcMsg     - pointer to the CDC message frame (structure)
+   1577          //-------------------------------------------------------------------------------------------------
+   1578          
+   1579          static void CdcCpiWrite (uint8_t opCode, uint8_t argCount, SiiCpiData_t *cdcMsg)
+   1580          {
+   1581              uint16_t physAddr = pCdc->physAddr;
+   1582          
+   1583              /* Add standard CDC stuff to CEC message */
+   1584          
+   1585          #if (IS_CEC == ENABLE)
+   1586              cdcMsg->srcDestAddr =  MAKE_SRCDEST( SiiCecGetDeviceLA(), 0x0F); // if CEC & CDC coexist
+   1587          #else
+   1588              cdcMsg->srcDestAddr     = CDC_CEC_SRCDEST_ADDR_DEFAULT;          // CDC only implementation
+   1589          #endif    
+   1590              cdcMsg->opcode          = CDC_CEC_OPCODE;
+   1591              cdcMsg->args[0]         = (physAddr >> 8) & 0xFF;   // Initiator Physical Address (MSB)
+   1592              cdcMsg->args[1]         = physAddr & 0xFF;          // Initiator Physical Address (LSB)
+   1593              cdcMsg->args[2]         = opCode;
+   1594              cdcMsg->argCount        = argCount;
+   1595              SiiDrvCpiWrite(cdcMsg);                            // Send CDC message over CPI
+   1596          }
+   1597          
+   1598          //------------------------------------------------------------------------------
+   1599          // Low level API Functions
+   1600          //------------------------------------------------------------------------------
+   1601          
+   1602          //-------------------------------------------------------------------------------------------------
+   1603          //! @brief      Sends "CDC HEC Discover" in order to collect HEC capability of
+   1604          //!             all devices in the network
+   1605          //!
+   1606          //!             This function is to be used by Activator.
+   1607          //-------------------------------------------------------------------------------------------------
+   1608          
+   1609          void CdcHecDiscoverSend(void)
+   1610          {
+   1611              SiiCpiData_t cdcDiscoveryMsg;
+   1612              
+   1613              //Send CDC message over CPI
+   1614              CdcCpiWrite(CDCOP_HEC_DISCOVER, 3, &cdcDiscoveryMsg);
+   1615              
+   1616          }
+   1617          
+   1618          
+   1619          
+   1620          //-------------------------------------------------------------------------------------------------
+   1621          //! @brief      Sends "CDC HEC InquireState" in order to inquire HEC capability of
+   1622          //!             all devices in the potential channel
+   1623          //!
+   1624          //!             This function is to be used by Activator.
+   1625          //! @param[in]  hecIdx - index of a HEC in the Instance Record
+   1626          //-------------------------------------------------------------------------------------------------
+   1627          
+   1628          void CdcHecInquireStateSend(const uint8_t hecIdx)
+   1629          {
+   1630              SiiCpiData_t cdcInquireStateMsg;
+   1631              uint16_t firstPhysAddr, lastPhysAddr;
+   1632          
+   1633              // Check for necessary conditions required to carry out this operation
+   1634              if (pCdc->aHec[hecIdx].status.isActivator == false)
+   1635              {
+   1636                  DEBUG_PRINT( CDC_MSG_ALWAYS, "ERROR in CdcHecInquireStateSend(): device must be an Activator\n" );
+   1637                  return;
+   1638              }
+   1639          
+   1640              firstPhysAddr = pCdc->aHec[hecIdx].firstDevPhysAddr;
+   1641              lastPhysAddr  = pCdc->aHec[hecIdx].lastDevPhysAddr;
+   1642              
+   1643              cdcInquireStateMsg.args[3]      = (firstPhysAddr >> 8) & 0xFF;
+   1644              cdcInquireStateMsg.args[4]      = firstPhysAddr & 0xFF;
+   1645              cdcInquireStateMsg.args[5]      = (lastPhysAddr >> 8) & 0xFF;
+   1646              cdcInquireStateMsg.args[6]      = lastPhysAddr & 0xFF;
+   1647          
+   1648              //Send CDC message over CPI
+   1649              CdcCpiWrite(CDCOP_HEC_INQUIRE_STATE, 7, &cdcInquireStateMsg);     
+   1650              
+   1651          }
+   1652          
+   1653          
+   1654          //-------------------------------------------------------------------------------------------------
+   1655          //! @brief      Description: Sends "CDC HEC InquireState" in order to inquire HEC capability of
+   1656          //!             an adjacent device
+   1657          //!
+   1658          //!             This function is useful for HPD capability verification
+   1659          //!
+   1660          //! @param[in]  isAtOutput   - if true, the message is sent to a device
+   1661          //!                            adjacent to output port;
+   1662          //!                            if false, the message is sent to a device adjacent
+   1663          //!                            to the specified input port
+   1664          //!
+   1665          //! @param[in]  inputPortIndex - zero-based index of the input port of the adjacent device
+   1666          //!                             (ignored, if isAtOutput == true)
+   1667          //!
+   1668          //! @retval     true  - if the adjacent device doesn't exist,
+   1669          //! @retval     false - otherwise
+   1670          //-------------------------------------------------------------------------------------------------
+   1671          
+   1672          bool_t CdcHecInquireStateOfAdjacentSend(const bool_t isAtOutput, const uint8_t inputPortIndex)
+   1673          {
+   1674              SiiCpiData_t cdcInquireStateMsg;
+   1675              uint16_t firstPhysAddr, lastPhysAddr;
+   1676          
+   1677              firstPhysAddr = pCdc->physAddr;
+   1678              lastPhysAddr  = CdcAdjacentPhysAddrGet(pCdc->physAddr, isAtOutput, inputPortIndex);
+   1679          
+   1680              if (lastPhysAddr == 0xFFFF)
+   1681              {
+   1682                  DEBUG_PRINT( CDC_MSG_ALWAYS, "ERROR in CdcHecInquireStateOfAdjacentSend(): adjacent device doesn't exist\n" );
+   1683                  return true; // error
+   1684              }
+   1685              
+   1686              cdcInquireStateMsg.args[3]      = (firstPhysAddr >> 8) & 0xFF;
+   1687              cdcInquireStateMsg.args[4]      = firstPhysAddr & 0xFF;
+   1688              cdcInquireStateMsg.args[5]      = (lastPhysAddr >> 8) & 0xFF;
+   1689              cdcInquireStateMsg.args[6]      = lastPhysAddr & 0xFF;
+   1690          
+   1691              //Send CDC message over CPI
+   1692              CdcCpiWrite(CDCOP_HEC_INQUIRE_STATE, 7, &cdcInquireStateMsg);     
+   1693              
+   1694              return false; // no error
+   1695          
+   1696          }
+   1697          
+   1698          
+   1699          //-------------------------------------------------------------------------------------------------
+   1700          //! @brief      Sends "CDC HEC Report State" in response for Discover,
+   1701          //!             IquireState or SetState message
+   1702          //!
+   1703          //!             This function is to be used by all devices
+   1704          //!
+   1705          //! @param[in]  targetPhysAddr  - physical address of the device to report.
+   1706          //!                               If the physical address is 0xFFFF, the message
+   1707          //!                               will be send out as broadcast notification
+   1708          //!                               with "HEC State" and "HEC Support Field included"
+   1709          //! @param[in]  reportStateMode - selection of short, discover or multiVHEC report
+   1710          //-------------------------------------------------------------------------------------------------
+   1711          
+   1712          void CdcHecReportStateSend(const uint16_t targetPhysAddr, const CdcReportStateMode_t reportStateMode)
+   1713          {
+   1714              uint8_t  i;
+   1715              SiiCpiData_t cdcReportStateMsg;
+   1716              uint8_t  hecState;
+   1717              uint8_t  argCount;
+   1718              uint16_t hecExtraField;
+   1719          
+   1720              if (pCdc->physAddr != 0xFFFF) // don't report if own physical address is invalid
+   1721              {
+   1722                  cdcReportStateMsg.args[3]      = (targetPhysAddr >> 8) & 0xFF;
+   1723                  cdcReportStateMsg.args[4]      = targetPhysAddr & 0xFF;
+   1724              
+   1725                  if (reportStateMode == CDC_REPORT_STATE_DISCOVER_MODE || targetPhysAddr == 0xFFFF) // HEC support field
+   1726                  {
+   1727                      hecExtraField = 0;
+   1728                      if (pCdc->ports.numberOfOutputs > 0)
+   1729                      {
+   1730                          hecExtraField = pCdc->ports.output.hecSupport << 14; // HEC (eHDMI) support for the output
+   1731                      }
+   1732          
+   1733                      for (i = 0; i < pCdc->ports.numberOfInputs; i++)
+   1734                      {
+   1735                          hecExtraField |= pCdc->ports.input[i].hecSupport << (13 - i); // HEC support bits for inputs
+   1736                      }
+   1737          
+   1738                      cdcReportStateMsg.args[6] = (hecExtraField >> 8) & 0xFF;
+   1739                      cdcReportStateMsg.args[7] = hecExtraField & 0xFF;
+   1740                      argCount = 8;
+   1741          
+   1742                  }
+   1743                  else if (reportStateMode == CDC_REPORT_STATE_MULTIVHEC_MODE) // HEC activation field
+   1744                  {
+   1745                      pCdc->deviceStatus.hecFuncState = CDC_HEC_ACTIVATION_FLD;
+   1746          
+   1747                      hecExtraField = 0;
+   1748                      if (pCdc->ports.numberOfOutputs > 0)
+   1749                      {
+   1750                          hecExtraField = pCdc->ports.output.hecActive << 14; // HEC activation bit for the output
+   1751                      }
+   1752          
+   1753                      for (i = 0; i < pCdc->ports.numberOfInputs; i++)
+   1754                      {
+   1755                          hecExtraField |= pCdc->ports.input[i].hecActive << (13 - i); // HEC activation bit for inputs
+   1756                      }
+   1757          
+   1758                      cdcReportStateMsg.args[6] = (hecExtraField >> 8) & 0xFF;
+   1759                      cdcReportStateMsg.args[7] = hecExtraField & 0xFF;
+   1760                      argCount = 8;
+   1761                  }
+   1762                  else // short mode
+   1763                  {
+   1764                      argCount = 6;
+   1765                  }
+   1766              
+   1767                  hecState = (pCdc->deviceStatus.hecFuncState  << 6) |
+   1768                             (pCdc->deviceStatus.hostFuncState << 4) |
+   1769                             (pCdc->deviceStatus.encFuncState  << 2) |
+   1770                              pCdc->deviceStatus.cdcErrorState;
+   1771          
+   1772                  cdcReportStateMsg.args[5]      = hecState;
+   1773          
+   1774                  pCdc->deviceStatus.cdcErrorState = CDC_ERRCODE_NO_ERROR; // clear error status after report
+   1775          
+   1776                  //Send CDC message over CPI
+   1777                  CdcCpiWrite(CDCOP_HEC_REPORT_STATE, argCount, &cdcReportStateMsg);
+   1778              }
+   1779          }
+   1780          
+   1781          
+   1782          //-------------------------------------------------------------------------------------------------
+   1783          //! @brief      Sends "CDC HEC SetState" in order to activate from 1 up to 4 VHECs
+   1784          //!             or deactivate 1 AHEC
+   1785          //!
+   1786          //!             This function is to be used by Activator
+   1787          //!
+   1788          //! @param[in]  hecActivState - type of a state to set (Activate or Deactivate),
+   1789          //! @param[in]  numberOfHecs  - minimum 1 and maximum 4 HECs to activate,
+   1790          //!                             it must be 1 for deactivation,
+   1791          //! @param[in]  aHecIdx       - array of indexes of HECs in the Instance Record
+   1792          //-------------------------------------------------------------------------------------------------
+   1793          
+   1794          void CdcHecSetStateSend(const CdcHecActivation_t hecActivState, 
+   1795                                  const uint8_t numberOfHecs,
+   1796                                  const uint8_t aHecIdx[])
+   1797          {
+   1798              uint8_t i,j;
+   1799              SiiCpiData_t cdcSetStateMsg;
+   1800              uint16_t firstPhysAddr, lastPhysAddr;
+   1801              bool_t errFlag = false;
+   1802          
+   1803              // Check for necessary conditions required to carry out this operation
+   1804              
+   1805              if (numberOfHecs < 1 || numberOfHecs > 4 || (numberOfHecs > 1 && hecActivState != CDC_HEC_ACTIVE))
+   1806              {
+   1807                  DEBUG_PRINT( CDC_MSG_ALWAYS, "ERROR in CdcHecSetStateSend(): invalid number of HECs\n" );
+   1808                  return;
+   1809              }
+   1810          
+   1811              // Check appropriateness of HEC channel state for the operation
+   1812              if (hecActivState == CDC_HEC_ACTIVE) 
+   1813              {
+   1814                  for (i = 0; i < numberOfHecs; i++) 
+   1815                  {
+   1816                      if (pCdc->aHec[aHecIdx[i]].status.channelState != CDC_VHEC) // activation is only allowed for VHEC
+   1817                      {
+   1818                          errFlag = true;
+   1819                          break;
+   1820                      }
+   1821                  }
+   1822              }
+   1823              else
+   1824              {
+   1825                  for (i = 0; i < numberOfHecs; i++) 
+   1826                  {
+   1827                      if (pCdc->aHec[aHecIdx[i]].status.channelState == CDC_PHEC) // deactivation is allowed for AHEC & VHEC
+   1828                      {
+   1829                          errFlag = true;
+   1830                          break;
+   1831                      }
+   1832                  }        
+   1833              }
+   1834              
+   1835              if (errFlag)
+   1836              {
+   1837                  DEBUG_PRINT( CDC_MSG_ALWAYS, "ERROR in CdcHecSetStateSend(): invalid HEC channel state\n" );
+   1838                  return;
+   1839              }
+   1840          
+   1841              
+   1842              firstPhysAddr = pCdc->aHec[aHecIdx[0]].firstDevPhysAddr;
+   1843              lastPhysAddr  = pCdc->aHec[aHecIdx[0]].lastDevPhysAddr;
+   1844          
+   1845              cdcSetStateMsg.args[3] = (firstPhysAddr >> 8) & 0xFF;
+   1846              cdcSetStateMsg.args[4] = firstPhysAddr & 0xFF;
+   1847              cdcSetStateMsg.args[5] = (lastPhysAddr >> 8) & 0xFF;
+   1848              cdcSetStateMsg.args[6] = lastPhysAddr & 0xFF;    
+   1849          
+   1850              cdcSetStateMsg.args[7] = hecActivState; // HEC set state
+   1851          
+   1852              j = 7;
+   1853              for (i = 1; i < numberOfHecs; i++)  // Physical Addresses of additional terminators of the HECs
+   1854              {
+   1855                  lastPhysAddr  = pCdc->aHec[aHecIdx[i]].lastDevPhysAddr;
+   1856          
+   1857                  cdcSetStateMsg.args[++j] = (lastPhysAddr >> 8) & 0xFF;
+   1858                  cdcSetStateMsg.args[++j] = lastPhysAddr & 0xFF;        
+   1859              }
+   1860          
+   1861              //Send CDC message over CPI
+   1862              CdcCpiWrite(CDCOP_HEC_SET_STATE, j + 1, &cdcSetStateMsg);     
+   1863              
+   1864          }
+   1865          
+   1866          
+   1867          
+   1868          //-------------------------------------------------------------------------------------------------
+   1869          //! @brief      Sends "CDC HEC SetState Adjacent" in order to activate HEC to adjacent device
+   1870          //!
+   1871          //!             This function is to be used by Activator
+   1872          //!
+   1873          //! @param[in]  hecActivState - type of a state to set (Activate or Deactivate),
+   1874          //! @param[in]  adjHecIdx     - index of a HEC to be activated or deactivated
+   1875          //-------------------------------------------------------------------------------------------------
+   1876          
+   1877          void CdcHecSetStateAdjacentSend(const CdcHecActivation_t hecActivState, const uint8_t adjHecIdx)
+   1878          {
+   1879              SiiCpiData_t cdcSetStateAdjacentMsg;
+   1880              uint16_t lastPhysAddr;
+   1881          
+   1882              lastPhysAddr  = pCdc->aHec[adjHecIdx].lastDevPhysAddr;
+   1883          
+   1884              cdcSetStateAdjacentMsg.args[3] = (lastPhysAddr >> 8) & 0xFF;
+   1885              cdcSetStateAdjacentMsg.args[4] = lastPhysAddr & 0xFF;    
+   1886              cdcSetStateAdjacentMsg.args[5] = hecActivState; // HEC set state
+   1887          
+   1888              //Send CDC message over CPI
+   1889              CdcCpiWrite(CDCOP_HEC_SET_STATE_ADJACENT, 6, &cdcSetStateAdjacentMsg);     
+   1890              
+   1891          }
+   1892          
+   1893          
+   1894          
+   1895          //-------------------------------------------------------------------------------------------------
+   1896          //! @brief      Sends "CDC HEC RequestDeactivation" to ask Activator of an AHEC
+   1897          //!             to deactivate it
+   1898          //!
+   1899          //!             This function is to be used by an AHEC member addressing to
+   1900          //!             the HEC's Activator
+   1901          //!
+   1902          //! @param[in]  hecIdx - index of an AHEC to be deactivated
+   1903          //-------------------------------------------------------------------------------------------------
+   1904          
+   1905          void CdcHecDeactivationRequestSend(const uint8_t hecIdx)
+   1906          {
+   1907              SiiCpiData_t cdcRequestDeactivationMsg;
+   1908              uint16_t actPhysAddr;
+   1909              uint16_t firstPhysAddr;
+   1910              uint16_t lastPhysAddr;
+   1911          
+   1912              // Check for necessary conditions required to carry out this operation
+   1913              
+   1914              if (pCdc->aHec[hecIdx].status.channelState != CDC_AHEC) // Channel must be in active state 
+   1915              {
+   1916                  DEBUG_PRINT( CDC_MSG_ALWAYS, "ERROR in CdcHecDeactivationRequestSend(): state of HEC must be active\n" );
+   1917                  return;
+   1918              }
+   1919          
+   1920              if (pCdc->aHec[hecIdx].status.isActivator == true)
+   1921              {
+   1922                  DEBUG_PRINT( CDC_MSG_ALWAYS, "ERROR in CdcHecDeactivationRequestSend(): device must not be an Activator\n" );
+   1923                  return;
+   1924              }
+   1925          
+   1926              actPhysAddr    = pCdc->aHec[hecIdx].activatorPhysAddr;
+   1927              firstPhysAddr  = pCdc->aHec[hecIdx].firstDevPhysAddr;
+   1928              lastPhysAddr   = pCdc->aHec[hecIdx].lastDevPhysAddr;
+   1929          
+   1930              cdcRequestDeactivationMsg.args[3] = (actPhysAddr >> 8) & 0xFF;   // PA of Activator
+   1931              cdcRequestDeactivationMsg.args[4] =  actPhysAddr & 0xFF;    
+   1932              cdcRequestDeactivationMsg.args[5] = (firstPhysAddr >> 8) & 0xFF; // PA of first terminator
+   1933              cdcRequestDeactivationMsg.args[6] =  firstPhysAddr & 0xFF;    
+   1934              cdcRequestDeactivationMsg.args[7] = (lastPhysAddr >> 8) & 0xFF;  // PA of last terminator in the HEC
+   1935              cdcRequestDeactivationMsg.args[8] =  lastPhysAddr & 0xFF;    
+   1936          
+   1937              //Send CDC message over CPI
+   1938              CdcCpiWrite(CDCOP_HEC_REQUEST_DEACTIVATION, 9, &cdcRequestDeactivationMsg);     
+   1939              
+   1940          }
+   1941          
+   1942          
+   1943          
+   1944          //-------------------------------------------------------------------------------------------------
+   1945          //! @brief      Sends "CDC HEC NotifyAlive" to keep AHECs active
+   1946          //!
+   1947          //!             This function is to be used by an AHEC members
+   1948          //-------------------------------------------------------------------------------------------------
+   1949          
+   1950          void CdcHecNotifyAliveSend(void)
+   1951          {
+   1952              SiiCpiData_t cdcNotifyAliveMsg;        
+   1953              
+   1954              //Send CDC message over CPI
+   1955              CdcCpiWrite(CDCOP_HEC_NOTIFY_ALIVE, 3, &cdcNotifyAliveMsg);     
+   1956              
+   1957          }
+   1958          
+   1959          
+   1960          
+   1961          //-------------------------------------------------------------------------------------------------
+   1962          //! @brief:     Sends "CDC HPD SetState" over input of a sink device
+   1963          //!             This function substitutes physical HPD pin signaling
+   1964          //!
+   1965          //!             To be used by a Sink device
+   1966          //! @param[in]  inputPortIndex  - zero based index of an input port that state will be sent
+   1967          //-------------------------------------------------------------------------------------------------
+   1968          
+   1969          void CdcHpdSetStateSend(const uint8_t inputPortIndex)
+   1970          {
+   1971              SiiCpiData_t cdcHpdSetStateMsg;
+   1972              CdcHpdState_t hpdState;
+   1973          
+   1974              // Check for necessary conditions required to carry out this operation
+   1975              
+   1976              if (inputPortIndex >= pCdc->ports.numberOfInputs)
+   1977              {
+   1978                  DEBUG_PRINT( CDC_MSG_ALWAYS, "ERROR in CdcHpdSetStateSend(): invalid input port index\n" );
+   1979                  return;
+   1980              }
+   1981          
+   1982              hpdState = pCdc->ports.input[inputPortIndex].hpdState;
+   1983              cdcHpdSetStateMsg.args[3] = ((inputPortIndex << 4) & 0xF0) | (hpdState & 0x0F);
+   1984          
+   1985              //Send CDC message over CPI
+   1986              CdcCpiWrite(CDCOP_HPD_SET_STATE, 4, &cdcHpdSetStateMsg);     
+   1987              
+   1988          }
+   1989          
+   1990          
+   1991          
+   1992          //-------------------------------------------------------------------------------------------------
+   1993          //! @brief      Sends "CDC HPD ReportState" over input of a sink device
+   1994          //!
+   1995          //!             This function substitutes physical HPD pin signaling.
+   1996          //!             To be used by a Source device.
+   1997          //-------------------------------------------------------------------------------------------------
+   1998          
+   1999          void CdcHpdReportStateSend(void)
+   2000          {
+   2001              SiiCpiData_t cdcHpdReportStateMsg;
+   2002              CdcHpdState_t hpdState;
+   2003              CdcHpdErrCode_t hpdErrCode;
+   2004          
+   2005              // Check for necessary conditions required to carry out this operation
+   2006          
+   2007              if (pCdc->ports.numberOfOutputs == 0)
+   2008              {
+   2009                  DEBUG_PRINT( CDC_MSG_ALWAYS, "ERROR in CdcHpdReportStateSend(): root device can't report HPD state\n" );
+   2010                  return;
+   2011              }
+   2012          
+   2013              hpdState = pCdc->ports.output.hpdState;
+   2014              hpdErrCode = pCdc->ports.output.hpdErrorState;
+   2015          
+   2016              pCdc->ports.output.hpdErrorState = CDC_HPD_ERRCODE_NO_ERROR; // clear error status after report
+   2017          
+   2018              cdcHpdReportStateMsg.args[3] = ((hpdState << 4) & 0xF0) | (hpdErrCode & 0x0F);
+   2019          
+   2020              //Send CDC message over CPI
+   2021              CdcCpiWrite(CDCOP_HPD_REPORT_STATE, 4, &cdcHpdReportStateMsg);
+   2022          
+   2023          }
+   2024          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       16  CdcAdjacentPhysAddrGet
+       24  CdcAliveDeviceListAdd
+             24 -> CdcHecNextDeviceGet
+              0 -> CdcPhysAddrToAliveListInsert
+             24 -> CdcPhysAddrToAliveListInsert
+       24  CdcAliveDeviceListRemove
+             24 -> CdcHecNextDeviceGet
+              0 -> CdcPhysAddrFromAliveListDelete
+             24 -> CdcPhysAddrFromAliveListDelete
+        8  CdcAliveDeviceListTimeReset
+              8 -> CdcTimeCounterSet
+       16  CdcAliveDeviceListTimeUpdate
+             16 -> CdcTimeCounterUpdate
+       48  CdcCapablePortGet
+             48 -> CdcHecNextDeviceGet
+             48 -> CdcIsLinkedDirectlyInPortGet
+        8  CdcCpiWrite
+              0 -> SiiDrvCpiWrite
+       56  CdcDiscoveryDataArrange
+             56 -> CdcHecNextDeviceGet
+             56 -> CdcIsLinkedDirectlyInPortGet
+        0  CdcEhdmiHwEnable
+        0  CdcEhdmiIoPortHwEnable
+       32  CdcHecDeactivationRequestSend
+             32 -> CdcCpiWrite
+        8  CdcHecDescriptorAdd
+        8  CdcHecDescriptorRemove
+       32  CdcHecDiscoverSend
+             32 -> CdcCpiWrite
+       20  CdcHecIndexGet
+       32  CdcHecInquireStateOfAdjacentSend
+             32 -> CdcAdjacentPhysAddrGet
+             32 -> CdcCpiWrite
+       32  CdcHecInquireStateSend
+             32 -> CdcCpiWrite
+        8  CdcHecInstanceRecordReset
+              8 -> __aeabi_memclr4
+              0 -> __aeabi_memset4
+       16  CdcHecLengthGet
+             16 -> CdcHecNextDeviceGet
+       12  CdcHecNextDeviceGet
+       32  CdcHecNotifyAliveSend
+             32 -> CdcCpiWrite
+       40  CdcHecReportStateSend
+             40 -> CdcCpiWrite
+       32  CdcHecSetStateAdjacentSend
+             32 -> CdcCpiWrite
+       48  CdcHecSetStateSend
+             48 -> CdcCpiWrite
+       32  CdcHpdReportStateSend
+             32 -> CdcCpiWrite
+       32  CdcHpdSetStateSend
+             32 -> CdcCpiWrite
+       16  CdcIoPortsActivate
+             16 -> CdcEhdmiIoPortHwEnable
+       32  CdcIoPortsStatusUpdate
+             32 -> CdcCapablePortGet
+             32 -> CdcEhdmiIoPortHwEnable
+       24  CdcIsCapableForHec
+             24 -> CdcCapablePortGet
+             24 -> CdcIsDeviceBelongsToHec
+       24  CdcIsCapableToAdjacent
+             24 -> CdcIsLinkedDirectlyInPortGet
+       12  CdcIsDeviceBelongsToHec
+       48  CdcIsHecEnabledInDev
+             48 -> CdcHecNextDeviceGet
+             48 -> CdcIsLinkedDirectlyInPortGet
+       16  CdcIsLinkedDirectly
+             16 -> CdcIsLinkedDirectlyInPortGet
+       20  CdcIsLinkedDirectlyInPortGet
+        0  CdcIsTimeCounterExpired
+       24  CdcPhysAddrFromAliveListDelete
+             24 -> CdcIsDeviceBelongsToHec
+             24 -> CdcTimeCounterSet
+       24  CdcPhysAddrToAliveListInsert
+             24 -> CdcTimeCounterSet
+        0  CdcTimeCounterCompare
+        0  CdcTimeCounterLeftSecGet
+        0  CdcTimeCounterReset
+        0  CdcTimeCounterSet
+       16  CdcTimeCounterUpdate
+             16 -> CdcTimeCounterCompare
+        8  Mrand
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable24
+       4  ??DataTable24_1
+       4  ??DataTable29
+       4  ??DataTable29_1
+       6  ?Subroutine0
+       8  ?Subroutine1
+      14  ?Subroutine2
+       8  ?Subroutine3
+      68  CdcAdjacentPhysAddrGet
+      72  CdcAliveDeviceListAdd
+      80  CdcAliveDeviceListRemove
+      52  CdcAliveDeviceListTimeReset
+      52  CdcAliveDeviceListTimeUpdate
+     194  CdcCapablePortGet
+      36  CdcCpiWrite
+     474  CdcDiscoveryDataArrange
+       4  CdcEhdmiHwEnable
+      24  CdcEhdmiIoPortHwEnable
+      72  CdcHecDeactivationRequestSend
+      82  CdcHecDescriptorAdd
+      86  CdcHecDescriptorRemove
+      12  CdcHecDiscoverSend
+      68  CdcHecIndexGet
+      68  CdcHecInquireStateOfAdjacentSend
+      54  CdcHecInquireStateSend
+      34  CdcHecInstanceRecordReset
+      36  CdcHecLengthGet
+     114  CdcHecNextDeviceGet
+      12  CdcHecNotifyAliveSend
+     220  CdcHecReportStateSend
+      38  CdcHecSetStateAdjacentSend
+     184  CdcHecSetStateSend
+      48  CdcHpdReportStateSend
+      42  CdcHpdSetStateSend
+      90  CdcIoPortsActivate
+     238  CdcIoPortsStatusUpdate
+      58  CdcIsCapableForHec
+      90  CdcIsCapableToAdjacent
+      88  CdcIsDeviceBelongsToHec
+     182  CdcIsHecEnabledInDev
+      24  CdcIsLinkedDirectly
+      80  CdcIsLinkedDirectlyInPortGet
+      12  CdcIsTimeCounterExpired
+     120  CdcPhysAddrFromAliveListDelete
+      86  CdcPhysAddrToAliveListInsert
+      58  CdcTimeCounterCompare
+      38  CdcTimeCounterLeftSecGet
+      10  CdcTimeCounterReset
+      42  CdcTimeCounterSet
+     100  CdcTimeCounterUpdate
+      54  Mrand
+       8  mz
+          mw
+       4  reverse
+          mask
+
+ 
+    12 bytes in section .data
+ 3 648 bytes in section .text
+ 
+ 3 648 bytes of CODE memory
+    12 bytes of DATA memory
+
+Errors: none
+Warnings: 5

@@ -1,0 +1,2720 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     05/Nov/2014  19:11:20 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\cs4953x\cs4953x.c               #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\cs4953x\cs4953x.c -D S4051A -D  #
+#                    DEBUG -D FREE_RTOS -D STM32F40_41xxx -D                  #
+#                    USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D             #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\CS4953x\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS8422\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\OTI3368\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\HT68F30\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\sii953x\application\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\cs4953x.lst                                           #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\cs4953x.o                                              #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\cs4953x\cs4953x.c
+      1          #include "Defs.h"
+      2          #include "Debug.h"
+      3          #include "freertos_conf.h"
+      4          #include "freertos_task.h"
+      5          #include "freertos_typedef.h"
+      6          #include "api_typedef.h"
+      7          #include "AudioDeviceManager.h"
+      8          
+      9          #include "audio_dsp_uld.h"
+     10          #include "audio_gain_parameters.h"
+     11          
+     12          #include "GPIOMiddleLevel.h"
+     13          #include "cs4953x_spi.h"
+     14          #include "cs4953x.h"
+     15          #include "UIDeviceManager.h"
+     16          #include "ext_flash_driver.h"
+     17          
+     18          //___________________________________________________________________________________
+     19          extern AUDIO_LOWLEVEL_DRIVER_OBJECT *pAudLowLevel_ObjCtrl;
+     20          
+     21          //___________________________________________________________________________________
+     22          typedef enum
+     23          {
+     24              LOADER_IDLE = 0,
+     25              LOADER_HANDLE_Q,
+     26              LOADER_RESET_DSP,
+     27              LOADER_BOOT_ASSIST,
+     28              LOADER_SOFT_RESET_DSP_A,
+     29              LOADER_SLAVE_BOOT,  
+     30              LOADER_DECODER_ULD,
+     31              LOADER_CROSSBAR_ULD,
+     32              LOADER_GAIN_ULD,
+     33              LOADER_SOFTBOOT,
+     34              LOADER_SOFT_RESET,
+     35              LOADER_CONIGURATION,
+     36              LOADER_KICK_START,
+     37              LOADER_CONFIG_USER_SETTING,
+     38              LOADER_ERROR
+     39          }CS4953x_LoaderState;
+     40          
+     41          typedef struct CS495x_LOADER_PARAMETERS
+     42          {
+     43              xTaskHandle loaderTaskHandle;
+     44              xTaskHandle fmtTaskHandle;
+     45              xTaskHandle lowlevelTaskHandle;
+     46              xOS_TaskErrIndicator xOS_ErrId;
+     47              TaskHandleState fch_detecter_state;
+     48              TaskHandleState lowlevel_state;
+     49              xSemaphoreParameters spi_sema;
+     50              xQueueParameters loaderQueue;
+     51          } xOS_CS495xParams;
+     52          
+     53          typedef struct _CS4953x_AUTODETECT_RESPONSE
+     54          {
+     55              uint8 non_iec61937;
+     56              uint8 stream_descriptor;
+     57          }CS4953x_ADECT_MSG;
+     58          
+     59          typedef enum{
+     60              OS_ULD = 0,
+     61              DECODER_ULD,    
+     62              CROSSBAR_ULD,
+     63              GAIN_ULD,
+     64          }cs495x_ULD_Type;
+     65          
+     66          //___________________________________________________________________________
+     67          /*DAO channel remap parameters; AN288 pg.24 */
+     68          #define DAO_CHAN_0_REMAP  0x83000012 
+     69          #define DAO_CHAN_1_REMAP  0x83000013
+     70          #define DAO_CHAN_2_REMAP  0x83000014
+     71          #define DAO_CHAN_3_REMAP  0x83000015
+     72          #define DAO_CHAN_4_REMAP  0x83000016
+     73          #define DAO_CHAN_5_REMAP  0x83000017
+     74          #define DAO_CHAN_6_REMAP  0x83000018
+     75          #define DAO_CHAN_7_REMAP  0x83000019
+     76          
+     77          #define DAO_LEFT    0x00000000
+     78          #define DAO_RIGHT   0x00000002
+     79          #define DAO_LEFT_SURROUND   0x00000003
+     80          #define DAO_RIGHT_SURROUND  0x00000004
+     81          #define DAO_CENTER  0x00000001
+     82          #define DAO_LFE0 0x00000007
+     83          #define DAO_RESERVED 0x0000000b
+     84          
+     85          /*BOOT READ MESSAGE */
+     86          #define BOOT_START              0x00000001
+     87          #define BOOT_SUCCESS            0x00000002
+     88          #define APP_START               0x00000004
+     89          #define BOOT_ERROR_CHECKSUM     0x000000FF
+     90          #define INVAILD_BOOOT_TYPE      0x000000FE
+     91          #define BOOT_FAILURE            0x000000F8
+     92          
+     93          /*SOFT RESET MESSAGE*/
+     94          #define SOFT_RESET              0x40000000
+     95          #define SOFT_RESET_DSP_A        0x50000000
+     96          
+     97          /*SLAVE BOOT MESSAGE*/
+     98          #define SLAVE_BOOT              0x80000000
+     99          #define CMD_SOFT_BOOT		0x81000009
+    100          #define SOFTBOOT_ACK            0x00000005
+    101          
+    102          #define CS4953x_CMD_BASE 0xf0000000
+    103          
+    104          //! gain_multi_channel_friendly_plus24 (Ls-Rs Gain2) @{
+    105          #define RS_G2 	( CS4953x_CMD_BASE + _g_0_Ls_Rs_Gain2151 )
+    106          #define LS_G2	( CS4953x_CMD_BASE + _g_1_Ls_Rs_Gain2151 )
+    107          
+    108          // gain_multi_channel_plus24 (Center Gain 1)
+    109          #define CENTER_G1  ( CS4953x_CMD_BASE +  _g_0_Center_Gain_1118 )
+    110          
+    111          // gain_multi_channel_plus24 (Center Gain 2) 
+    112          #define CENTER_G2  ( CS4953x_CMD_BASE + _g_0_Center_Gain_2152 )
+    113          
+    114          // gain_multi_channel_friendly_plus24 (Subwoofer Gain 1)
+    115          #define SUBWOOFER_G1 ( CS4953x_CMD_BASE + _g_0_Subwoofer_Gain_1120 )  
+    116          
+    117          // gain_multi_channel_friendly_plus24 (Subwoofer Gain 2)
+    118          #define SUBWOOFER_G2 ( CS4953x_CMD_BASE + _g_0_Subwoofer_Gain_2132 )
+    119          
+    120          // gain_multi_channel_plus24 (Master Volume)
+    121          // g_1 : signed : 5.27 format
+    122          #define MASTER_GAIN1  ( CS4953x_CMD_BASE + _g_0_Master_Volume131 ) 
+    123          // g_2 : signed : 5.27 format
+    124          #define MASTER_GAIN2  ( CS4953x_CMD_BASE + _g_1_Master_Volume131 )
+    125          // g_3 : signed : 5.27 format
+    126          #define MASTER_GAIN3  ( CS4953x_CMD_BASE + _g_2_Master_Volume131 )
+    127          // g_4 : signed : 5.27 format
+    128          #define MASTER_GAIN4  ( CS4953x_CMD_BASE + _g_3_Master_Volume131 )
+    129          // g_5 : signed : 5.27 format
+    130          #define MASTER_GAIN5  ( CS4953x_CMD_BASE + _g_4_Master_Volume131 )
+    131          // g_6 : signed : 5.27 format
+    132          #define MASTER_GAIN6  ( CS4953x_CMD_BASE + _g_5_Master_Volume131 )
+    133          
+    134          #if defined ( S4051A )
+    135          //gain_multi_channel_friendly_plus24 (Ls-Rs Gain 1)
+    136          // g_1 : signed : 5.27 format
+    137          #define BALANCE_LS  ( CS4953x_CMD_BASE + _g_0_Ls_Rs_Gain_1_1160 )
+    138          // g_2 : signed : 5.27 format
+    139          #define BALANCE_RS  ( CS4953x_CMD_BASE + _g_1_Ls_Rs_Gain_1_1160 )
+    140          
+    141          #else
+    142          //gain_multi_channel_friendly_plus24 (Ls-Rs Gain 1)
+    143          // g_1 : signed : 5.27 format
+    144          #define BALANCE_LS  ( CS4953x_CMD_BASE + _g_0_Ls_Rs_Gain_1119 )
+    145          // g_2 : signed : 5.27 format
+    146          #define BALANCE_RS  ( CS4953x_CMD_BASE + _g_1_Ls_Rs_Gain_1119 )
+    147          #endif
+    148          
+    149          // tone_control_proc (Tone Control)
+    150          #define _treble_level_left 0xd4000001 
+    151          #define _treble_level_center   0xd4000002 
+    152          #define _treble_level_right 0xd4000003 
+    153          #define _treble_level_ls   0xd4000004
+    154          #define _treble_level_rs 0xd4000005 
+    155          
+    156          #define _bass_level_left   0xd4000008
+    157          #define _bass_level_center   0xd4000009
+    158          #define _bass_level_right   0xd400000a
+    159          #define _bass_level_ls   0xd400000b
+    160          #define _bass_level_rs   0xd400000c
+    161          // _bass_level_left : signed : 32.0 format
+    162          #define BASS_LEFT  0xd4000008 
+    163          // _bass_level_right : signed : 32.0 format
+    164          #define BASS_RIGHT  0xd400000a 
+    165          
+    166          #define DELAY_VALUE_LEFT   0xd9000002
+    167          #define DELAY_VALUE_CENTER 0xd9000003
+    168          #define DELAY_VALUE_RIGHT  0xd9000004
+    169          #define DELAY_VALUE_LS     0xd9000005
+    170          #define DELAY_VALUE_RS     0xd9000006
+    171          #define DELAY_VALUE_LFE    0xd9000009
+    172          
+    173          #define DELAY_TIME_LEFT   0x00333333
+    174          #define DELAY_TIME_CENTER 0x00339999
+    175          #define DELAY_TIME_RIGHT  0x00333333
+    176          #define DELAY_TIME_LS     0x00146666
+    177          #define DELAY_TIME_RS     0x00146666
+    178          #define DELAY_TIME_LFE    0x00000000
+    179          
+    180          #define CS49XXXX_READ_BASE 0xf0C00000
+    181          #define CS49XXXX_CMD_READ_PRESENCE_LEFT	( CS49XXXX_READ_BASE + _presence_Presence122 )
+    182          #define CS49XXXX_CMD_READ_PRESENCE_RIGHT ( CS49XXXX_READ_BASE + _presence_Presence73 )	
+    183          
+    184          #define CS49XXXX_RESPONSE_BASE 0x70C00000
+    185          #define PRESENCE_RESPONSE_LEFT ( CS49XXXX_RESPONSE_BASE + _presence_Presence122 )
+    186          #define PRESENCE_RESPONSE_RIGHT	( CS49XXXX_RESPONSE_BASE + _presence_Presence73 )
+    187          
+    188          #define READ_RESPONSE_MESSAGE 0x6fc00000
+    189          #define DSP_CFG_STREAM_TYPE READ_RESPONSE_MESSAGE+0x00000002
+    190          //___________________________________________________________________________
+    191          #define LOADER_QUEUE_LENGTH 2
+    192          #define AUTO_DETECTION_RESPONSE (0x81000000)
+    193          #define FCH_DETECTOR_TIME_TICK  TASK_MSEC2TICKS(10)
+    194          #define LOADER_TIME_TICK TASK_MSEC2TICKS(10)
+    195          #define LOWLEVEL_TIME_TICK TASK_MSEC2TICKS(500)
+    196          #define SOFTRESET_TIMEOUT TASK_MSEC2TICKS(1000)
+    197          //___________________________________________________________________________
+    198          CS4953x_ADECT_MSG mAdtectMsg;
+    199          
+    200          //___________________________________________________________________________
+    201          static CS4953x_LoaderState mLoaderState = LOADER_IDLE;
+    202          static xOS_CS495xParams xOS_CS4953x;  
+    203          static CS4953xLoadAudioStreamType gCurDSP_ULD_type = CS4953x_LOAD_PCM;
+    204          static const CS4953xLoadAudioStreamType *pCurtDSP_ULD_TYPE = &gCurDSP_ULD_type;
+    205          static uint8 signal_overthreshold = 1;
+    206          static xSemaphoreHandle _IRQ_SEMA = NULL;
+    207          
+    208          /* PCM load procedure: OS -> tv_cs-> pcm_black_b */
+    209          #if ( configAPP_SPI_FLASH_DSP_ULD == 1 )
+    210          unsigned int PCM_ULD_LOCATION[4][2] = 
+    211          {
+    212              {PCM_INIT_ULD_START_LOCATION,PCM_INIT_ULD_LENGTH}, /* OS */
+    213              {0,0}, /* PCM don't need decoder*/
+    214              {PCM_CROSSBAR_ULD_START_LOCATION,PCM_CROSSBAR_ULD_LENGTH},    
+    215              {PCM_GAIN_ULD_START_LOCATION,PCM_GAIN_ULD_LENGTH},
+    216          };
+    217          
+    218          /* AC3 load procedure: OS-> AC3 -> Crossbar-> ac3_black_b */
+    219          unsigned int AC3_ULD_LOCATION[4][2] = 
+    220          {
+    221              {PCM_INIT_ULD_START_LOCATION,PCM_INIT_ULD_LENGTH}, /* OS */
+    222              {AC3_INIT_ULD_START_LOCATION,AC3_INIT_ULD_LENGTH}, /* Decoder */     
+    223              {AC3_CROSSBAR_ULD_START_LOCATION,AC3_CROSSBAR_ULD_LENGTH},    
+    224              {AC3_GAIN_ULD_START_LOCATION,AC3_GAIN_ULD_LENGTH},
+    225          };
+    226          /* DTS load procedure: OS-> DTS -> Crossbar-> dts_black_b */
+    227          unsigned int DTS_ULD_LOCATION[4][2] = 
+    228          {
+    229              {PCM_INIT_ULD_START_LOCATION,PCM_INIT_ULD_LENGTH}, /* OS */   
+    230              {DTS_INIT_ULD_START_LOCATION,DTS_INIT_ULD_LENGTH}, /* Decoder */      
+    231              {DTS_CROSSBAR_ULD_START_LOCATION,DTS_CROSSBAR_ULD_LENGTH},
+    232              {DTS_GAIN_ULD_START_LOCATION,DTS_GAIN_ULD_LENGTH},
+    233          };
+    234          
+    235          static unsigned char* ULDLoaderbuf = NULL;
+    236          #endif 
+    237          
+    238          //___________________________________________________________________________
+    239          static void cs495x_RowDataLoader_CreateTask( void );
+    240          
+    241          static bool cs495x_RowDataLoader_InstrReceiver( CS4953x_QUEUE_TYPE *pType ) ;
+    242          
+    243          static uint8 cs495x_RowDataLoader_GetQueueNumber( void );
+    244          
+    245          static void cs4953x_HardReset( void );
+    246          
+    247          static void cs4953x_FchDetector_CreateTask( void );
+    248          
+    249          static void cs495x_FchDetector_TaskCtrl( xOS_TaskCtrl val );
+    250          
+    251          static void cs495x_RowDataLoader_TaskCtrl( xOS_TaskCtrl val );
+    252          
+    253          static bool cs495x_RowDataLoader_InstrSender( void *parms ) ;
+    254          
+    255          static void cs495x_LowLevelDetector_CreateTask( void );
+    256          
+    257          static void cs495x_LowLevelDetector_TaskCtrl( xOS_TaskCtrl val );
+    258          
+    259          static void cs4953x_setMute( bool val );
+    260          
+    261          static bool cs4953x_spi_mutex_take( void );
+    262          
+    263          static bool cs4953x_spi_mutex_give( void );
+    264          
+    265          static bool cs4953x_irq_mutex_take( void );
+    266          
+    267          static bool cs4953x_irq_mutex_give( void );
+    268          
+    269          static void cs4953x_setMasterGain( uint32 value );
+    270          
+    271          static void cs4953x_setBassGain( uint32 value );
+    272          
+    273          static void cs4953x_setTrebleGain( uint32 value );
+    274          
+    275          static void cs4953x_setSubGain( uint32 value );
+    276          
+    277          static void cs4953x_setCenterGain( uint32 value );
+    278          
+    279          static void cs4953x_setLsRsGain( uint32 value );
+    280          
+    281          static void cs4953x_setBalanceLs( uint32 value );
+    282          
+    283          static void cs4953x_setBalanceRs( uint32 value );
+    284          
+    285          static void cs4953x_SetTVHDMC_Ctrl( byte* data, uint16 length );
+    286          
+    287          static void cs4953x_setNightMode( uint32 value );
+    288          
+    289          static void cs4953x_setAVDelay( uint32 value );
+    290          
+    291          static void cs4953x_setAudioRoute(CS4953xAudioRoute val);
+    292          
+    293          static void cs4953x_setSilenceThreshold( bool value );
+    294          
+    295          static CS4953xLoadAudioStreamType cs4953x_GetAudioStreamType( void );
+    296          
+    297          static uint8 cs4953x_GetLoadrState( void );
+    298          
+    299          #if ( configAPP_SPI_FLASH_DSP_ULD == 1 )
+    300          static int cs495x_LoadDSP_ULD(unsigned char* buf,CS4953xLoadAudioStreamType Stype ,cs495x_ULD_Type Utype );
+    301          #endif 
+    302          
+    303          uint8 cs4953x_getSignalLevel( void );
+    304          
+    305          static void cs4953x_lowlevel_task_setState( TaskHandleState set_state );
+    306          
+    307          #if (configAPP_INTERNAL_DSP_ULD == 1 )
+    308          static int8 cs4953x_Load_DSP_ULD_InternalFlash( CS4953xLoadAudioStreamType type, cs495x_ULD_Type module );
+    309          #endif 
+    310          
+    311          const DSP_CTRL_OBJECT DSP_ObjCtrl = 
+    312          {
+    313              cs495x_RowDataLoader_CreateTask,
+    314              cs495x_RowDataLoader_TaskCtrl,
+    315              cs4953x_FchDetector_CreateTask,
+    316              cs495x_FchDetector_TaskCtrl,
+    317              cs495x_RowDataLoader_InstrSender,
+    318              cs495x_LowLevelDetector_CreateTask,
+    319              cs495x_LowLevelDetector_TaskCtrl,
+    320              cs4953x_lowlevel_task_setState,
+    321              cs4953x_setMute,
+    322              cs4953x_setMasterGain,
+    323              cs4953x_setBassGain,
+    324              cs4953x_setTrebleGain,
+    325              cs4953x_setSubGain,
+    326              cs4953x_setCenterGain,
+    327              cs4953x_setLsRsGain,
+    328              cs4953x_setBalanceLs,
+    329              cs4953x_setBalanceRs,
+    330              cs4953x_SetTVHDMC_Ctrl,
+    331              cs4953x_setNightMode,
+    332              cs4953x_setAVDelay,
+    333              cs4953x_setAudioRoute,
+    334              cs4953x_setSilenceThreshold,
+    335              cs4953x_GetAudioStreamType,
+    336              cs4953x_GetLoadrState,
+    337              cs4953x_getSignalLevel,
+    338              cs4953x_spi_mutex_take,
+    339              cs4953x_spi_mutex_give
+    340          };
+    341          
+    342          const DSP_CTRL_OBJECT *pDSP_ObjCtrl = &DSP_ObjCtrl;
+    343          
+    344          //___________________________________________________________________________
+    345          static void cs4953x_setMute( bool val )
+    346          {
+    347              if (cs4953x_spi_mutex_take() == TRUE )
+    348              {
+    349                  if ( val == TRUE ) /*mute*/
+    350                  {
+    351                      CS49xxxxSPI_CommandWrite( 0x83000001, 0x00000001 );
+    352                      //TRACE_DEBUG((0, "cs4953x_setMute CS49xxxxSPI_CommandWrite mute"));
+    353                  }
+    354                  else
+    355                  {
+    356                      CS49xxxxSPI_CommandWrite( 0x83000001, 0x00000000 );
+    357                      //TRACE_DEBUG((0, "cs4953x_setMute CS49xxxxSPI_CommandWrite unmute"));
+    358                  }
+    359          
+    360                  cs4953x_spi_mutex_give();
+    361              }
+    362          }
+    363          
+    364          static void cs4953x_setMasterGain( uint32 value )
+    365          {
+    366              if ( value > 0x08000000 )
+    367                  return;        
+    368              
+    369              if (cs4953x_spi_mutex_take() == TRUE )
+    370              {
+    371                  CS49xxxxSPI_CommandWrite(MASTER_GAIN1, value );
+    372                  CS49xxxxSPI_CommandWrite(MASTER_GAIN2, value );
+    373                  CS49xxxxSPI_CommandWrite(MASTER_GAIN3, value );
+    374                  CS49xxxxSPI_CommandWrite(MASTER_GAIN4, value );
+    375                  CS49xxxxSPI_CommandWrite(MASTER_GAIN5, value );
+    376                  CS49xxxxSPI_CommandWrite(MASTER_GAIN6, value );
+    377          
+    378                  cs4953x_spi_mutex_give();
+    379              }
+    380          }
+    381          
+    382          static void cs4953x_setBassGain( uint32 value )
+    383          {
+    384              if (cs4953x_spi_mutex_take() == TRUE )
+    385              {
+    386                  CS49xxxxSPI_CommandWrite(_bass_level_left, value);
+    387                  CS49xxxxSPI_CommandWrite(_bass_level_center, value);
+    388                  CS49xxxxSPI_CommandWrite(_bass_level_right, value);
+    389                  CS49xxxxSPI_CommandWrite(_bass_level_ls, value);
+    390                  CS49xxxxSPI_CommandWrite(_bass_level_rs, value); 
+    391          
+    392                  cs4953x_spi_mutex_give();
+    393              }
+    394          }
+    395          
+    396          static void cs4953x_setTrebleGain( uint32 value )
+    397          {
+    398              if (cs4953x_spi_mutex_take() == TRUE )
+    399              {
+    400                  CS49xxxxSPI_CommandWrite(_treble_level_left, value);
+    401                  CS49xxxxSPI_CommandWrite(_treble_level_center, value);
+    402                  CS49xxxxSPI_CommandWrite(_treble_level_right, value);
+    403                  CS49xxxxSPI_CommandWrite(_treble_level_ls, value);
+    404                  CS49xxxxSPI_CommandWrite(_treble_level_rs, value); 
+    405          
+    406                  cs4953x_spi_mutex_give();
+    407              }
+    408          }
+    409          
+    410          static void cs4953x_setSubGain( uint32 value )
+    411          {
+    412              if (cs4953x_spi_mutex_take() == TRUE )
+    413              {
+    414                  CS49xxxxSPI_CommandWrite(SUBWOOFER_G2, value );
+    415          
+    416                  cs4953x_spi_mutex_give();
+    417              }
+    418          }
+    419          
+    420          static void cs4953x_setCenterGain( uint32 value )
+    421          {
+    422              if (cs4953x_spi_mutex_take() == TRUE )
+    423              {
+    424                  CS49xxxxSPI_CommandWrite(CENTER_G2, value);  
+    425          
+    426                  cs4953x_spi_mutex_give();
+    427              }
+    428          }
+    429          
+    430          static void cs4953x_setLsRsGain( uint32 value )
+    431          {
+    432              if (cs4953x_spi_mutex_take() == TRUE )
+    433              {
+    434                  CS49xxxxSPI_CommandWrite(RS_G2, value);  
+    435                  CS49xxxxSPI_CommandWrite(LS_G2, value);  
+    436          
+    437                  cs4953x_spi_mutex_give();
+    438              }
+    439          }
+    440          
+    441          static void cs4953x_setBalanceLs( uint32 value )
+    442          {
+    443              if (cs4953x_spi_mutex_take() == TRUE )
+    444              {
+    445                  CS49xxxxSPI_CommandWrite(BALANCE_LS, value);     
+    446          
+    447                  cs4953x_spi_mutex_give();
+    448              }
+    449          }
+    450          
+    451          static void cs4953x_setBalanceRs( uint32 value )
+    452          {
+    453              if (cs4953x_spi_mutex_take() == TRUE )
+    454              {
+    455                  CS49xxxxSPI_CommandWrite(BALANCE_RS, value);     
+    456          
+    457                  cs4953x_spi_mutex_give();
+    458              }
+    459          }
+    460          
+    461          static void cs4953x_SetTVHDMC_Ctrl( byte* data, uint16 length )
+    462          {
+    463              if ( mLoaderState == LOADER_IDLE )
+    464              {
+    465                  if (cs4953x_spi_mutex_take() == TRUE )
+    466                  {
+    467                      CS4953xSPI_write_buffer(data, length);
+    468                  
+    469                      cs4953x_spi_mutex_give();
+    470                  }
+    471              }
+    472          }
+    473          
+    474          static void cs4953x_setNightMode( uint32 value )
+    475          {
+    476              if (cs4953x_spi_mutex_take() == TRUE )
+    477              {
+    478                  CS49xxxxSPI_CommandWrite(SUBWOOFER_G1, value );
+    479              
+    480                  cs4953x_spi_mutex_give();
+    481              }
+    482          }
+    483          
+    484          static void cs4953x_setAVDelay( uint32 value )
+    485          {
+    486              if (cs4953x_spi_mutex_take() == TRUE )
+    487              {
+    488                  CS49xxxxSPI_CommandWrite(DELAY_VALUE_LEFT, DELAY_TIME_LEFT + 0x140000 * value );
+    489                  CS49xxxxSPI_CommandWrite(DELAY_VALUE_CENTER, DELAY_TIME_CENTER +  0x140000 * value );
+    490                  CS49xxxxSPI_CommandWrite(DELAY_VALUE_RIGHT, DELAY_TIME_RIGHT +  0x140000 * value ); 
+    491                  CS49xxxxSPI_CommandWrite(DELAY_VALUE_LS, DELAY_TIME_LS +  0x140000 * value );
+    492                  CS49xxxxSPI_CommandWrite(DELAY_VALUE_RS, DELAY_TIME_RS +  0x140000 * value );
+    493                  CS49xxxxSPI_CommandWrite(DELAY_VALUE_LFE, DELAY_TIME_LFE +  0x140000 * value );
+    494              
+    495                  cs4953x_spi_mutex_give();
+    496              }
+    497          }
+    498          
+    499          static void cs4953x_setAudioRoute(CS4953xAudioRoute val)
+    500          {
+    501              if (cs4953x_spi_mutex_take() == TRUE )
+    502              {
+    503                  if ( val == ROUTE_INITIAL )
+    504                  {
+    505                      CS4953xSPI_write_buffer((byte*)&DSP_DAO_ROUTER_INITIAL, (sizeof(DSP_DAO_ROUTER_INITIAL)/sizeof(uint8)));
+    506                  }
+    507          
+    508                  /*Clean internal channel map*/
+    509                  CS49xxxxSPI_CommandWrite(DAO_CHAN_0_REMAP, DAO_RESERVED );
+    510                  CS49xxxxSPI_CommandWrite(DAO_CHAN_1_REMAP, DAO_RESERVED );
+    511                  CS49xxxxSPI_CommandWrite(DAO_CHAN_2_REMAP, DAO_RESERVED );
+    512                  CS49xxxxSPI_CommandWrite(DAO_CHAN_3_REMAP, DAO_RESERVED );
+    513                  CS49xxxxSPI_CommandWrite(DAO_CHAN_4_REMAP, DAO_RESERVED );
+    514                  CS49xxxxSPI_CommandWrite(DAO_CHAN_5_REMAP, DAO_RESERVED );
+    515                  CS49xxxxSPI_CommandWrite(DAO_CHAN_6_REMAP, DAO_RESERVED );
+    516                  CS49xxxxSPI_CommandWrite(DAO_CHAN_7_REMAP, DAO_RESERVED );
+    517             
+    518                  
+    519                  switch( val )
+    520                  {
+    521                      case ROUTE_FL_FR:
+    522                      {
+    523                          CS49xxxxSPI_CommandWrite( DAO_CHAN_0_REMAP, DAO_LEFT ); /*FL*/
+    524                          CS49xxxxSPI_CommandWrite( DAO_CHAN_1_REMAP, DAO_RIGHT ); /*FR*/
+    525                      }
+    526                          break;
+    527                  
+    528                      case ROUTE_RR_RL:
+    529                      {
+    530                          CS49xxxxSPI_CommandWrite( DAO_CHAN_6_REMAP, DAO_LEFT ); /*RL*/
+    531                          CS49xxxxSPI_CommandWrite( DAO_CHAN_7_REMAP, DAO_RIGHT ); /*RR*/
+    532                      }
+    533                          break;
+    534                      
+    535                      case ROUTE_FL:
+    536                      {
+    537                          /*channel 0 outputs left sound*/
+    538                          CS49xxxxSPI_CommandWrite( DAO_CHAN_0_REMAP, DAO_LEFT ); /*FL*/           
+    539                      }
+    540                          break;
+    541                  
+    542                      case ROUTE_FR:
+    543                      {
+    544                          CS49xxxxSPI_CommandWrite( DAO_CHAN_1_REMAP, DAO_RIGHT ); /*FR*/
+    545                      }
+    546                          break;
+    547                  
+    548                      case ROUTE_RL:
+    549                      {
+    550                          CS49xxxxSPI_CommandWrite( DAO_CHAN_6_REMAP, DAO_LEFT ); /*RL*/
+    551                      }
+    552                          break;
+    553                  
+    554                      case ROUTE_RR:
+    555                      {
+    556                          CS49xxxxSPI_CommandWrite( DAO_CHAN_7_REMAP, DAO_RIGHT ); /*RR*/
+    557                      }
+    558                          break;
+    559                  
+    560                      case ROUTE_CENTER:
+    561                      {
+    562                          /*Smith: Fix center outputs too huge, when mode was in factory mode */
+    563                          CS49xxxxSPI_CommandWrite( DAO_CHAN_3_REMAP, DAO_CENTER );
+    564                          CS49xxxxSPI_CommandWrite( DAO_CHAN_2_REMAP, DAO_CENTER ); /*CENTER*/        
+    565                      }
+    566                          break;
+    567                  
+    568                      case ROUTE_LFE0:
+    569                      {
+    570                          CS49xxxxSPI_CommandWrite( DAO_CHAN_4_REMAP, DAO_RIGHT ); /*LFE0*/  
+    571                          CS49xxxxSPI_CommandWrite( DAO_CHAN_5_REMAP, DAO_LEFT ); /*LFE0*/                
+    572                      }
+    573                          break;
+    574                  
+    575                      case ROUTE_FL_FR_CENTER:
+    576                      {
+    577                          CS49xxxxSPI_CommandWrite( DAO_CHAN_0_REMAP, DAO_LEFT ); /*FL*/   
+    578                          CS49xxxxSPI_CommandWrite( DAO_CHAN_1_REMAP, DAO_RIGHT ); /*FR*/
+    579                          
+    580                          /*Smith: Fix center outputs too huge, when mode was in factory mode */  
+    581                          CS49xxxxSPI_CommandWrite( DAO_CHAN_3_REMAP, DAO_CENTER );
+    582                          CS49xxxxSPI_CommandWrite( DAO_CHAN_2_REMAP, DAO_CENTER ); /*CENTER*/
+    583                      }
+    584                      break;
+    585                      
+    586                      case ROUTE_RR_RL_WOOFER:
+    587                      {
+    588                          CS49xxxxSPI_CommandWrite( DAO_CHAN_6_REMAP, DAO_LEFT ); /*RL*/
+    589                          CS49xxxxSPI_CommandWrite( DAO_CHAN_7_REMAP, DAO_RIGHT ); /*RR*/
+    590                          
+    591                          CS49xxxxSPI_CommandWrite( DAO_CHAN_4_REMAP, DAO_RIGHT ); /*LFE0*/  
+    592                          CS49xxxxSPI_CommandWrite( DAO_CHAN_5_REMAP, DAO_LEFT ); /*LFE0*/ 
+    593                      }
+    594                      break;
+    595          
+    596          			case ROUTE_DISABLE:
+    597                      default:
+    598                      {
+    599                          CS4953xSPI_write_buffer((byte*)&DSP_DAO_ROUTER_INITIAL, (sizeof(DSP_DAO_ROUTER_INITIAL)/sizeof(uint8)));
+    600                      }
+    601                          break;
+    602                  }
+    603          
+    604                  cs4953x_spi_mutex_give();
+    605              }
+    606          }
+    607          
+    608          static void cs4953x_setSilenceThreshold( bool value )
+    609          {
+    610              if (cs4953x_spi_mutex_take() == TRUE )
+    611              {
+    612                  if (value)
+    613                  {
+    614                      CS49xxxxSPI_CommandWrite(0x81000008, 0x0083d600);/* Silence threshold 90s */
+    615                  }
+    616                  else
+    617                  {
+    618                      CS49xxxxSPI_CommandWrite(0x81000008, 0x00005dc0);/* Silence_threshold 0.25 second */
+    619                  }
+    620          
+    621                  cs4953x_spi_mutex_give();
+    622              }
+    623          }
+    624          
+    625          static CS4953xLoadAudioStreamType cs4953x_GetAudioStreamType( void )
+    626          {
+    627              return gCurDSP_ULD_type;
+    628          }
+    629          
+    630          static uint8 cs4953x_GetLoadrState( void )
+    631          {
+    632              return mLoaderState;
+    633          }
+    634          
+    635          static int CS4953x_readPresence( uint8 *pValue )
+    636          {
+    637              int8 spi_rError1 = 0;
+    638              int8 spi_rError2 = 0;
+    639              int ret = 0;
+    640              uint32 LeftChannelSignal;
+    641              uint32 RightChannelSignal;
+    642              uint32 command = 0;
+    643              uint32 value;
+    644              uint8 cnt;
+    645              if ( pValue == NULL )
+    646                  return -1;
+    647          
+    648              if (cs4953x_spi_mutex_take() == TRUE )
+    649              {
+    650                  /*AN288 2.1.2 Solicited Read*/
+    651                  cnt = 0;
+    652                  do 
+    653                  {
+    654                      /*Read Command Word(left)*/
+    655                      command = CS49XXXX_CMD_READ_PRESENCE_LEFT;
+    656                      if (CS4953xSPI_write_buffer((byte*)&command,(sizeof(command)/sizeof(uint8))) != SCP1_PASS )
+    657                      {
+    658                          ret = -2;
+    659                      }
+    660                      /*Read response command word*/
+    661                      spi_rError1 = CS4953xSPI_read_buffer((byte*)&value,(sizeof(command)/sizeof(uint8))); 
+    662          
+    663                      /*Read response Data word*/ 
+    664                      spi_rError2 = CS4953xSPI_read_buffer((byte*)&value, (sizeof(command)/sizeof(uint8)));
+    665                      
+    666                      if ( spi_rError1 == SCP1_PASS && spi_rError2== SCP1_PASS)
+    667                      {   
+    668                          LeftChannelSignal = value;
+    669                          break;
+    670                      }
+    671                      
+    672                      cnt++;
+    673                      if (cnt>2)
+    674                      {
+    675                          ret = -3;
+    676                          break;
+    677                      }
+    678                  }while((spi_rError1!= SCP1_PASS)||(spi_rError2!= SCP1_PASS));        
+    679                  cnt=0;
+    680                  do 
+    681                  {
+    682                      /*Read Command Word(right)*/
+    683                      command = CS49XXXX_CMD_READ_PRESENCE_RIGHT;
+    684                      if (CS4953xSPI_write_buffer((byte*)&command,(sizeof(command)/sizeof(uint8))) != SCP1_PASS )
+    685                      {
+    686                          ret = -4;
+    687                      }
+    688                            
+    689                      /*Read response command word*/
+    690                      spi_rError1 = CS4953xSPI_read_buffer((byte*)&value, (sizeof(command)/sizeof(uint8)));
+    691          
+    692                      /*Read response Data word*/ 
+    693                      spi_rError2 = CS4953xSPI_read_buffer((byte*)&value, (sizeof(command)/sizeof(uint8)));
+    694          
+    695                      if ( spi_rError1 == SCP1_PASS && spi_rError2 == SCP1_PASS)
+    696                      {   
+    697                          RightChannelSignal = value;
+    698                          break;
+    699                      }
+    700          
+    701                      cnt++;
+    702                      if (cnt>2)
+    703                      {
+    704                          ret = -5;
+    705                          break;
+    706                      }
+    707                  }while((spi_rError1!= SCP1_PASS)||(spi_rError2!= SCP1_PASS));
+    708                  
+    709                  if ( ret == 0 )
+    710                  {
+    711                      if( ( LeftChannelSignal | RightChannelSignal ) )
+    712                      {
+    713                          *pValue = 1;
+    714                      }
+    715                      else
+    716                      {
+    717                          *pValue = 0;
+    718                      }
+    719                  }
+    720                  else
+    721                  {
+    722                      *pValue = 1;
+    723                  }
+    724          
+    725                  cs4953x_spi_mutex_give();
+    726              }
+    727              return ret;
+    728          }
+    729          
+    730          uint8 cs4953x_getSignalLevel( void )
+    731          {
+    732              return signal_overthreshold;
+    733          }
+    734          
+    735          static bool cs4953x_spi_mutex_take( void )
+    736          {
+    737              if ( SPILowLevel_isEnable() != TRUE )
+    738              {
+    739                  //TRACE_DEBUG((0, "SPI TAKE BUSY 1111 !! "));
+    740                  return FALSE;
+    741              }   
+    742          
+    743              if ( xOS_CS4953x.spi_sema.xSemaphore == NULL )
+    744              {
+    745                  //TRACE_DEBUG((0, "SPI TAKE BUSY 2222 !! "));
+    746                  return FALSE;
+    747              }
+    748          
+    749              xOS_CS4953x.spi_sema.xBlockTime = portMAX_DELAY;
+    750              if ( xSemaphoreTake( xOS_CS4953x.spi_sema.xSemaphore, xOS_CS4953x.spi_sema.xBlockTime ) != pdTRUE )
+    751              {
+    752                  //TRACE_DEBUG((0, "SPI TAKE BUSY 3333 !! "));
+    753                  return FALSE;
+    754              }
+    755          
+    756              return TRUE;
+    757          }
+    758          
+    759          static bool cs4953x_spi_mutex_give( void )
+    760          {
+    761              if ( SPILowLevel_isEnable() != TRUE )
+    762                  return FALSE;
+    763          
+    764              if ( xOS_CS4953x.spi_sema.xSemaphore == NULL )
+    765                  return FALSE;
+    766          
+    767              if ( xSemaphoreGive( xOS_CS4953x.spi_sema.xSemaphore ) != pdTRUE )
+    768              {
+    769                  //TRACE_DEBUG((0, "SPI GIVE BUSY !! "));
+    770                  return FALSE;	
+    771              }
+    772          
+    773              return TRUE;
+    774          }
+    775          
+    776          static bool cs4953x_irq_mutex_take( void )
+    777          {
+    778              if ( _IRQ_SEMA == NULL )
+    779              {
+    780                  //TRACE_DEBUG((0, "IRQ TAKE BUSY 2222 !! "));
+    781                  return FALSE;
+    782              }
+    783          
+    784              if ( xSemaphoreTake( _IRQ_SEMA, 0 ) != pdTRUE )
+    785              //if ( xSemaphoreTake( xOS_CS4953x.spi_sema.xSemaphore, 0xff ) != pdTRUE )
+    786              {
+    787                  //TRACE_DEBUG((0, "IRQ TAKE BUSY 3333 !! "));
+    788                  return FALSE;
+    789              }
+    790          
+    791              return TRUE;    
+    792          }
+    793          
+    794          static bool cs4953x_irq_mutex_give( void )
+    795          {
+    796          #if 1
+    797              if ( _IRQ_SEMA == NULL )
+    798                  return FALSE;
+    799          
+    800              if ( xSemaphoreGive( _IRQ_SEMA ) != pdTRUE )
+    801              {
+    802                  //TRACE_DEBUG((0, "IRQ GIVE BUSY 111 !! "));
+    803                  return FALSE;   
+    804              }
+    805          
+    806              //TRACE_DEBUG((0, "IRQ GIVE OK !! "));
+    807          #endif    
+    808              return TRUE;
+    809          }
+    810          
+    811          static void cs4953x_lowlevel_task_setState( TaskHandleState set_state )
+    812          {
+    813              if ( set_state == TASK_SUSPENDED )
+    814              {
+    815                  if ( xOS_CS4953x.lowlevel_state == TASK_RUNING )
+    816                  {
+    817                      xOS_CS4953x.lowlevel_state = TASK_SUSPENDED;
+    818                  }
+    819              }
+    820              else if ( set_state == TASK_RUNING )
+    821              {
+    822                  if ( xOS_CS4953x.lowlevel_state == TASK_SUSPENDED )
+    823                  {
+    824                      xOS_CS4953x.lowlevel_state = TASK_RUNING;
+    825                  }
+    826              }
+    827          }
+    828          
+    829          void cs4953x_lowlevel_task( void *pvParameters )
+    830          {
+    831              int ret = 0;
+    832          
+    833              for( ;; )
+    834              {
+    835                  switch( xOS_CS4953x.lowlevel_state )
+    836                  {
+    837                      case TASK_SUSPENDED:
+    838                      {
+    839                      }
+    840                          break;
+    841          
+    842                      case TASK_RUNING:
+    843                      {
+    844                          if( (*pCurtDSP_ULD_TYPE == CS4953x_LOAD_PCM ) && ( mLoaderState == LOADER_IDLE ) )
+    845                          {
+    846                              ret = CS4953x_readPresence( &signal_overthreshold );
+    847                              if ( ret != 0 )
+    848                              {
+    849                                  TRACE_ERROR((0, "presence error =%X signal_overthreshold=%X",ret,signal_overthreshold));
+    850                              }
+    851                          }
+    852                      }
+    853                          break;
+    854          
+    855                  }
+    856          
+    857                  vTaskDelay(LOWLEVEL_TIME_TICK);
+    858              }
+    859          }
+    860          
+    861          static void cs495x_LowLevelDetector_TaskCtrl( xOS_TaskCtrl val )
+    862          {
+    863              signal_overthreshold = 1;
+    864          
+    865              if ( val == xOS_setTASK_SUSPENDED )
+    866              {
+    867                  cs4953x_lowlevel_task_setState( TASK_SUSPENDED );
+    868                  if ( xTaskIsTaskSuspended( xOS_CS4953x.lowlevelTaskHandle ) != pdPASS ) /*task is working*/
+    869                  {
+    870                      vTaskSuspend( xOS_CS4953x.lowlevelTaskHandle );
+    871                  }
+    872              }
+    873              else if ( val == xOS_setTASK_RESUME )
+    874              {
+    875                  cs4953x_lowlevel_task_setState( TASK_RUNING );
+    876                  if ( xTaskIsTaskSuspended( xOS_CS4953x.lowlevelTaskHandle ) == pdPASS ) /*task is not working*/
+    877                  {
+    878                      vTaskResume( xOS_CS4953x.lowlevelTaskHandle );
+    879                      //TRACE_DEBUG((0, "RESUME: CS4953x_lowlevel"));
+    880                  }
+    881              }
+    882          }
+    883          
+    884          static void cs495x_LowLevelDetector_CreateTask( void )
+    885          {
+    886              signal_overthreshold = 0;
+    887              if ( xTaskCreate( 
+    888                      cs4953x_lowlevel_task, 
+    889                      ( portCHAR * ) "CS4953x_lowlevel", 
+    890                      (STACK_SIZE), 
+    891                      NULL, 
+    892                      tskCS4953x_LowLevelDetection_PRIORITY, 
+    893                      &xOS_CS4953x.lowlevelTaskHandle ) != pdPASS )
+    894              {
+    895                  vTaskDelete( xOS_CS4953x.lowlevelTaskHandle );
+    896              }
+    897              else
+    898              {
+    899                  vTaskSuspend( xOS_CS4953x.lowlevelTaskHandle );
+    900              }
+    901          }   
+    902          
+    903          static CS4953x_ADECT_MSG cs4953x_getAutoDectMsg( uint32 data )
+    904          {
+    905              CS4953x_ADECT_MSG msg;
+    906          
+    907              if ( NON_IEC61937_STREAM_FLAG(data) > 0 ) 
+    908              {
+    909                  msg.non_iec61937 = 0x01;
+    910              }
+    911              else if ( NON_IEC61937_STREAM_FLAG(data) == 0 )
+    912              {
+    913                  msg.non_iec61937 = 0x00;
+    914              }
+    915          
+    916              msg.stream_descriptor = (uint8)NON_IEC61937_STREAM_DESCRIPTOR(data);
+    917          
+    918              return msg;
+    919          }
+    920          
+    921          static void cs4953x_parseAudioFMT(CS4953x_QUEUE_TYPE *tmp_queue_data, CS4953x_ADECT_MSG msg)
+    922          {
+    923              tmp_queue_data->audio_type = CS4953x_LOAD_NULL;
+    924              
+    925              if ( msg.non_iec61937 == 0x01)/*PCM*/
+    926              {
+    927                  switch( msg.stream_descriptor)
+    928                  {
+    929                      case NON_IEC61937_DTS_FORMAT_16:
+    930                      case NON_IEC61937_DTS_FORMAT_14:
+    931                      {
+    932                          tmp_queue_data->audio_type = CS4953x_LOAD_DTS;
+    933                      }
+    934                          break;
+    935          
+    936                      case NON_IEC61937_SILENT_INPUT_DATA:{}break;
+    937                      
+    938                      default:
+    939                      {
+    940                          tmp_queue_data->audio_type = CS4953x_LOAD_PCM;
+    941                          TRACE_DEBUG((0, "tmp_queue_data->audio_type = CS4953x_LOAD_PCM !! "));
+    942                      }
+    943                          break;
+    944                  }
+    945              }
+    946              else /*NON PCM*/
+    947              {
+    948                  switch( msg.stream_descriptor)
+    949                  {
+    950                      case IEC61937_STREAM_AC3:
+    951                      {
+    952                          tmp_queue_data->audio_type = CS4953x_LOAD_AC3;
+    953                      }
+    954                          break;
+    955          
+    956                      case IEC61937_STREAM_DTS_1:
+    957                      case IEC61937_STREAM_DTS_2:
+    958                      case IEC61937_STREAM_DTS_3:
+    959                      {
+    960                          tmp_queue_data->audio_type = CS4953x_LOAD_DTS;
+    961                      }
+    962                          break;
+    963                      
+    964                      default:
+    965                      {
+    966                          tmp_queue_data->audio_type = CS4953x_LOAD_PCM;
+    967                      }
+    968                          break;
+    969                  }
+    970              }
+    971          }
+    972          
+    973          static void cs4953x_SendEventToLoader( CS4953x_ADECT_MSG msg )
+    974          {
+    975              CS4953x_QUEUE_TYPE QUEUE_TYPE;
+    976          
+    977              cs4953x_parseAudioFMT(&QUEUE_TYPE, msg);
+    978                      
+    979              if (QUEUE_TYPE.audio_type != CS4953x_LOAD_NULL)
+    980              {
+    981          #if 1
+    982                  //TRACE_DEBUG((0, "cs4953x_SendEventToLoader !! "));
+    983          
+    984                  if (cs4953x_spi_mutex_take( ) == TRUE)
+    985                  //if ( cs4953x_irq_mutex_take() == TRUE )
+    986                  {
+    987                      //TRACE_ERROR((0, "send message to data loader ----- !! "));
+    988                      QUEUE_TYPE.source_ctrl = CS4953x_SOURCE_DSP;
+    989                      cs495x_RowDataLoader_InstrSender(&QUEUE_TYPE);
+    990                  }
+    991                  else
+    992                  {
+    993                      //TRACE_ERROR((0, "Can't send message to data loader ----- !! "));
+    994                      cs4953x_irq_mutex_give();
+    995          
+    996                  }    
+    997          #else
+    998                  //TRACE_ERROR((0, "send message to data loader ----- !! "));
+    999                  cs495x_RowDataLoader_InstrSender(&QUEUE_TYPE);
+   1000          #endif
+   1001              }
+   1002              else
+   1003              {
+   1004                  cs4953x_irq_mutex_give();
+   1005                  //TRACE_ERROR((0, "send message CS4953x_LOAD_NULL ----- !! "));
+   1006              }
+   1007          }
+   1008          
+   1009          void cs4953x_FchDetector( void *pvParameters )
+   1010          {
+   1011              uint32 u32ReadCommand = 0;
+   1012              uint32 u32ReadData;    // 4-byte Unsolicited Read Data
+   1013              
+   1014              for( ;; )
+   1015              {
+   1016                  switch (xOS_CS4953x.fch_detecter_state )
+   1017                  {
+   1018                      case TASK_SUSPENDED:
+   1019                      {
+   1020                          xOS_CS4953x.fch_detecter_state = TASK_RUNING;
+   1021                      }
+   1022                          break;
+   1023                    
+   1024                      case TASK_RUNING:
+   1025                      {
+   1026                          if( GPIOMiddleLevel_Read_InBit( __I_SCP1_IRQ ) == 0 )
+   1027                          {
+   1028                              //if ( cs4953x_spi_mutex_give() == TRUE )
+   1029                              //TRACE_DEBUG((0, "cs4953x_FchDetector IRQ enter !! "));
+   1030                              if (cs4953x_irq_mutex_take() == TRUE)
+   1031                              {
+   1032                                  if ( cs4953x_spi_mutex_take() == TRUE )
+   1033                                  //if ( cs4953x_irq_mutex_take() == TRUE )
+   1034                                  {
+   1035                                      //TRACE_DEBUG((0, "take spi mutex------- !! "));
+   1036                                      if (CS4953xSPI_nIrq_read_buffer((byte *)&u32ReadCommand, (sizeof(u32ReadCommand) / sizeof(uint8))) != SCP1_PASS)
+   1037                                      {
+   1038                                          //pAudLowLevel_ObjCtrl->RstSRC();
+   1039                                          //TRACE_DEBUG((0, "break out------- !! "));
+   1040                                          cs4953x_spi_mutex_give();
+   1041                                          cs4953x_irq_mutex_give();
+   1042                                          
+   1043                                          break;
+   1044                                      }
+   1045                                      
+   1046                                      if (u32ReadCommand == AUTO_DETECTION_RESPONSE)
+   1047                                      {
+   1048                                          //TRACE_DEBUG((0, "audio type change------- !! "));
+   1049                                          CS4953xSPI_nIrq_read_buffer((byte *)&u32ReadData, (sizeof(u32ReadData) / sizeof(uint8)));
+   1050                                          mAdtectMsg = cs4953x_getAutoDectMsg( u32ReadData );
+   1051                                          //TRACE_DEBUG((0, "-Audio stream changes = 0x%X, 0x%X", mAdtectMsg.non_iec61937, mAdtectMsg.stream_descriptor ));
+   1052                                          cs4953x_spi_mutex_give();
+   1053                                          //TRACE_DEBUG((0,"cs4953x_FchDetector SPI enter"));
+   1054                                          cs4953x_SendEventToLoader( mAdtectMsg );
+   1055                                      }
+   1056                                      else
+   1057                                      {
+   1058                                          //TRACE_DEBUG((0,"cs4953x_FchDetector no change----------------"));
+   1059                                          cs4953x_spi_mutex_give();
+   1060                                          cs4953x_irq_mutex_give();
+   1061                                      }
+   1062                                      //TRACE_DEBUG((0, "111111111111break out------- !! "));
+   1063                                  }
+   1064                              }
+   1065                          }
+   1066                      }
+   1067                          break;
+   1068                  }
+   1069          
+   1070                  vTaskDelay( FCH_DETECTOR_TIME_TICK );
+   1071              }
+   1072          
+   1073          }
+   1074          
+   1075          static void cs4953x_HardReset( void )
+   1076          {
+   1077              GPIOMiddleLevel_Set(__O_DSP_RES);
+   1078              vTaskDelay(TASK_MSEC2TICKS(1));
+   1079              GPIOMiddleLevel_Clr(__O_DSP_RES);
+   1080              vTaskDelay(TASK_MSEC2TICKS(1));
+   1081              GPIOMiddleLevel_Set(__O_DSP_RES);
+   1082              vTaskDelay(TASK_MSEC2TICKS(1));
+   1083          
+   1084              //TRACE_DEBUG((0, "DSP HARDWARE RESET !! "));
+   1085          }
+   1086          
+   1087          static uint8 cs495x_RowDataLoader_GetQueueNumber( void )
+   1088          {
+   1089              uint8 i_qnumber = (uint8)uxQueueMessagesWaiting( xOS_CS4953x.loaderQueue.xQueue );
+   1090              //TRACE_DEBUG((0, "Q total size -----------%d !! ",i_qnumber));
+   1091              return i_qnumber;
+   1092          }
+   1093          
+   1094          static bool cs495x_RowDataLoader_InstrReceiver( CS4953x_QUEUE_TYPE *pType ) 
+   1095          {
+   1096              if ( pType == NULL )
+   1097              {
+   1098                  return FALSE;
+   1099              }
+   1100              
+   1101              if ( xOS_CS4953x.loaderQueue.xQueue == NULL )
+   1102              {
+   1103                  xOS_CS4953x.xOS_ErrId = xOS_TASK_QUEUE_IS_NULL;
+   1104                  return FALSE;
+   1105              }
+   1106          
+   1107              if ( xQueueReceive( xOS_CS4953x.loaderQueue.xQueue, pType, xOS_CS4953x.loaderQueue.xBlockTime ) != pdPASS )
+   1108              {
+   1109                  xOS_CS4953x.xOS_ErrId = xOS_TASK_QUEUE_GET_FAIL;
+   1110                  return FALSE;
+   1111              }
+   1112          
+   1113              return TRUE;
+   1114          }
+   1115          
+   1116          bool cs495x_RowDataLoader_InstrSender( void *parms ) 
+   1117          {
+   1118              const CS4953x_QUEUE_TYPE* pQueueType = ( CS4953x_QUEUE_TYPE *)parms;
+   1119          
+   1120              if ( pQueueType == NULL )
+   1121              {
+   1122                  return FALSE;
+   1123              }
+   1124              
+   1125              if ( xOS_CS4953x.loaderQueue.xQueue == NULL )
+   1126              {
+   1127                  return FALSE;
+   1128              }
+   1129          
+   1130              //if( pQueueType->audio_type == CS4953x_LOAD_NULL || pQueueType->source_ctrl == CS4953x_SOURCE_NONE)
+   1131              if( pQueueType->audio_type == CS4953x_LOAD_NULL)
+   1132              {
+   1133                  return FALSE;
+   1134              }
+   1135          
+   1136              if ( SPILowLevel_isEnable () == FALSE )
+   1137              {
+   1138                  return FALSE;
+   1139              }
+   1140          
+   1141          #if 0 //repeat type handle 
+   1142              if ( gCurDSP_ULD_type == *pType )
+   1143                  return FALSE;
+   1144          #endif
+   1145          
+   1146              xQueueReset(xOS_CS4953x.loaderQueue.xQueue);
+   1147              if ( xQueueSend( xOS_CS4953x.loaderQueue.xQueue, pQueueType, xOS_CS4953x.loaderQueue.xBlockTime ) != pdPASS )
+   1148              {
+   1149                  xOS_CS4953x.xOS_ErrId = xOS_TASK_QUEUE_SET_FAIL;
+   1150                  return FALSE;
+   1151              }
+   1152          
+   1153              return TRUE;
+   1154          
+   1155          }
+   1156          
+   1157          void cs4953x_RowDataLoader_Task( void *pvParameters )
+   1158          {
+   1159              static CS4953x_QUEUE_TYPE QueueType;
+   1160              uint32 value = SLAVE_BOOT;
+   1161              CS4953x_QUEUE_TYPE tmp_QueueType;
+   1162              
+   1163              for( ;; )
+   1164              {
+   1165                  switch( mLoaderState )
+   1166                  {
+   1167                      case LOADER_IDLE:
+   1168                      {
+   1169                          if( cs495x_RowDataLoader_GetQueueNumber( ) > 0 ) 
+   1170                          {
+   1171                              mLoaderState = LOADER_HANDLE_Q;
+   1172                          }
+   1173                          else
+   1174                          {
+   1175                              //pADM_ObjCtrl->SetBackCtrlStatus(BACKCTRL_FCH_NOCHANGE);
+   1176                              cs4953x_spi_mutex_give( );
+   1177                              cs4953x_irq_mutex_give();
+   1178                          }
+   1179                      }
+   1180                          break;
+   1181          
+   1182                      case LOADER_HANDLE_Q:
+   1183                      {
+   1184                          if ( cs495x_RowDataLoader_GetQueueNumber( ) > 0 )
+   1185                          {
+   1186                              cs495x_RowDataLoader_InstrReceiver( &QueueType );
+   1187                          }
+   1188          
+   1189                          if ( gCurDSP_ULD_type == QueueType.audio_type)
+   1190                          {
+   1191                              mLoaderState = LOADER_IDLE;
+   1192                              tmp_QueueType.audio_type = QueueType.audio_type;
+   1193                              tmp_QueueType.source_ctrl = QueueType.source_ctrl;
+   1194                              
+   1195                              pAudLowLevel_ObjCtrl->BackCtrlSender(&tmp_QueueType);
+   1196                              cs4953x_spi_mutex_give( );
+   1197                              if (QueueType.source_ctrl == CS4953x_SOURCE_DSP)
+   1198                              {
+   1199                                  cs4953x_irq_mutex_give( );
+   1200                              }
+   1201                          }
+   1202                          /*If user change the source, detect format first*/
+   1203                          else if (QueueType.audio_type == CS4953x_LOAD_USER_CTRL)
+   1204                          {
+   1205                              uint32 u32ReadData;    // 4-byte Unsolicited Read Data
+   1206                              CS4953x_ADECT_MSG mUserCtrlMsg;
+   1207          
+   1208                              if(QueueType.source_ctrl==CS4953x_SOURCE_USER)
+   1209                              {
+   1210                                  /*Read format*/
+   1211                                  CS49xxxxSPI_ReadSolicited(DSP_CFG_STREAM_TYPE,&u32ReadData);
+   1212                                  mUserCtrlMsg = cs4953x_getAutoDectMsg( u32ReadData );
+   1213                                  cs4953x_parseAudioFMT(&QueueType, mUserCtrlMsg);
+   1214          
+   1215                                  if ( (gCurDSP_ULD_type == QueueType.audio_type) || (QueueType.audio_type == CS4953x_LOAD_NULL))
+   1216                                  {
+   1217                                      mLoaderState = LOADER_IDLE;
+   1218                                      tmp_QueueType.audio_type = QueueType.audio_type;
+   1219                                      tmp_QueueType.source_ctrl = QueueType.source_ctrl;
+   1220          
+   1221                                      pAudLowLevel_ObjCtrl->BackCtrlSender(&tmp_QueueType);
+   1222                                      cs4953x_spi_mutex_give( );                        
+   1223                                  }
+   1224                                  else
+   1225                                  {
+   1226          #if ( configAPP_INTERNAL_DSP_ULD == 0 )                
+   1227                                      if (ULDLoaderbuf == NULL)
+   1228                                      {
+   1229                                          ULDLoaderbuf = (unsigned char*)pvPortMalloc( DSPLoadSize);
+   1230                                      }
+   1231                                                      
+   1232                                      if(ULDLoaderbuf == NULL)
+   1233                                      {
+   1234                                          TRACE_ERROR(( 0, "It isn't enough memory size %d", xPortGetFreeHeapSize() ));
+   1235                                          mLoaderState = LOADER_IDLE;
+   1236                                          cs4953x_spi_mutex_give( );
+   1237                                      }
+   1238                                      else
+   1239                                      {
+   1240                                          mLoaderState = LOADER_RESET_DSP;
+   1241                                      }
+   1242          #else
+   1243                                      pAudLowLevel_ObjCtrl->SetVolRampEvent(AUD_VOL_EVENT_SET_MUTE);
+   1244                                      mLoaderState = LOADER_RESET_DSP;
+   1245          #endif
+   1246                                  }
+   1247                              }    
+   1248                              else if (QueueType.source_ctrl==CS4953x_SOURCE_PROCESS_MODE)
+   1249                              {
+   1250                                  mLoaderState = LOADER_SOFTBOOT; 
+   1251                                  QueueType.audio_type = gCurDSP_ULD_type;
+   1252                              }
+   1253                          }
+   1254                          else
+   1255                          {
+   1256          #if ( configAPP_INTERNAL_DSP_ULD == 0 )                
+   1257                              if (ULDLoaderbuf == NULL)
+   1258                              {
+   1259                                  ULDLoaderbuf = (unsigned char*)pvPortMalloc( DSPLoadSize);
+   1260                              }
+   1261                                              
+   1262                              if(ULDLoaderbuf == NULL)
+   1263                              {
+   1264                                  TRACE_ERROR(( 0, "It isn't enough memory size %d", xPortGetFreeHeapSize() ));
+   1265                                  mLoaderState = LOADER_IDLE;
+   1266                                  cs4953x_spi_mutex_give( );
+   1267                                  cs4953x_irq_mutex_give( );
+   1268                              }
+   1269                              else
+   1270                              {
+   1271                                  mLoaderState = LOADER_RESET_DSP;
+   1272                              }
+   1273          #else
+   1274                              pAudLowLevel_ObjCtrl->SetVolRampEvent(AUD_VOL_EVENT_SET_MUTE);
+   1275                              mLoaderState = LOADER_RESET_DSP;
+   1276          #endif
+   1277                          }
+   1278                      }
+   1279                          break;
+   1280          
+   1281                      /*CS4953xx Hardware User's Manual p2-8*/
+   1282                      case LOADER_RESET_DSP:
+   1283                      {
+   1284                          cs4953x_HardReset( );
+   1285                          mLoaderState = LOADER_BOOT_ASSIST;
+   1286                      }
+   1287                          break;
+   1288          
+   1289                      case LOADER_BOOT_ASSIST:
+   1290                      {
+   1291                          //! write slave boot @{
+   1292                          value = SLAVE_BOOT;
+   1293                          if (CS4953xSPI_write_buffer((byte*)&value, (sizeof(value)/sizeof(uint8))) == SCP1_BSY_TIMEOUT )
+   1294                          {
+   1295                              mLoaderState = LOADER_ERROR;
+   1296                              break;
+   1297                          } //@}
+   1298                          
+   1299                          vTaskDelay(TASK_MSEC2TICKS(1));
+   1300                          if ( CS4953xSPI_MsgNote1((byte*)&value,sizeof(value)) != SCP1_PASS )
+   1301                          {
+   1302                              mLoaderState = LOADER_ERROR;
+   1303                              break;
+   1304                          }
+   1305          
+   1306                          if ( value != BOOT_START )
+   1307                          {
+   1308                              mLoaderState = LOADER_ERROR;
+   1309                              break;
+   1310                          }
+   1311                          
+   1312          #if ( configAPP_INTERNAL_DSP_ULD == 0 )                
+   1313                          /* load DSP Init ULD */
+   1314                          if(cs495x_LoadDSP_ULD(ULDLoaderbuf,QueueType.audio_type, OS_ULD) == 0)
+   1315                          {
+   1316                              mLoaderState = LOADER_ERROR;
+   1317                              break;
+   1318                          }
+   1319          #else
+   1320                          if (cs4953x_Load_DSP_ULD_InternalFlash(QueueType.audio_type,OS_ULD) == -1 )
+   1321                          {
+   1322                              mLoaderState = LOADER_ERROR;
+   1323                              break;
+   1324                          }
+   1325          #endif
+   1326                          
+   1327                          vTaskDelay(TASK_MSEC2TICKS(1));
+   1328                          if ( CS4953xSPI_MsgNote1((byte*)&value,sizeof(value)) != SCP1_PASS )
+   1329                          {
+   1330                              mLoaderState = LOADER_ERROR;
+   1331                              break;
+   1332                          }
+   1333                         
+   1334                          if ( value != BOOT_SUCCESS)
+   1335                          {
+   1336                              mLoaderState = LOADER_ERROR;
+   1337                              break;
+   1338                          }
+   1339          
+   1340                          //TRACE_DEBUG((0, "DSP BOOT_ASSIST BOOT SUCCESS !! "));
+   1341                          mLoaderState = LOADER_SOFT_RESET_DSP_A;
+   1342                      }
+   1343                          break;
+   1344          
+   1345                      case LOADER_SOFT_RESET_DSP_A:
+   1346                      {
+   1347                          value = SLAVE_BOOT;
+   1348                          if (CS4953xSPI_write_buffer((byte*)&value, (sizeof(value)/sizeof(uint8))) == SCP1_BSY_TIMEOUT)
+   1349                          {
+   1350                              mLoaderState = LOADER_ERROR;
+   1351                              break;
+   1352                          }
+   1353                                          
+   1354                          if ( CS4953xSPI_read_buffer((byte*)&value, sizeof(value)) == SCP1_IRQ_TIMEOUT )
+   1355                          {
+   1356                              mLoaderState = LOADER_ERROR;
+   1357                              break;
+   1358                          }
+   1359                          
+   1360                          if ( value != BOOT_START)
+   1361                          {
+   1362                              mLoaderState = LOADER_ERROR;
+   1363                              break;
+   1364                          }
+   1365          
+   1366                          if (QueueType.audio_type == CS4953x_LOAD_PCM)
+   1367                          {
+   1368                              mLoaderState = LOADER_CROSSBAR_ULD;
+   1369                              break;
+   1370                          }
+   1371                          else
+   1372                          {
+   1373                              mLoaderState = LOADER_DECODER_ULD; 
+   1374                              break;
+   1375                          }
+   1376                      }
+   1377                          break;
+   1378                      
+   1379                      case LOADER_DECODER_ULD:
+   1380                      {                  
+   1381                          /* load DSP Decoder ULD */
+   1382          #if ( configAPP_INTERNAL_DSP_ULD == 0 )                
+   1383                          if(cs495x_LoadDSP_ULD(ULDLoaderbuf,QueueType.audio_type,DECODER_ULD) == 0)
+   1384                          {
+   1385                              TRACE_DEBUG((0,"cs495x_LoadDSP_ULD LOADER_ERROR"));
+   1386                              mLoaderState = LOADER_ERROR;
+   1387                              break;
+   1388                          }
+   1389          #else
+   1390                          if (cs4953x_Load_DSP_ULD_InternalFlash(QueueType.audio_type, DECODER_ULD) == -1 )
+   1391                          {
+   1392                              mLoaderState = LOADER_ERROR;
+   1393                              break;
+   1394                          }
+   1395          #endif 
+   1396                          vTaskDelay(TASK_MSEC2TICKS(1));
+   1397                          /*BOOT_SUCCESS*/
+   1398                          if ( CS4953xSPI_read_buffer((byte*)&value,sizeof(value)) == SCP1_IRQ_TIMEOUT )
+   1399                          {
+   1400                              
+   1401                              mLoaderState = LOADER_ERROR;
+   1402                              break;
+   1403                          }
+   1404                          
+   1405                          if ( value != BOOT_SUCCESS)
+   1406                          {
+   1407                              mLoaderState = LOADER_ERROR;
+   1408                              break;
+   1409                          }
+   1410                          /* BOOT_START */
+   1411                          value = SLAVE_BOOT;
+   1412                          if (CS4953xSPI_write_buffer((byte*)&value, (sizeof(value)/sizeof(uint8))) == SCP1_BSY_TIMEOUT )
+   1413                          {
+   1414                              mLoaderState = LOADER_ERROR;
+   1415                              break;
+   1416                          }
+   1417          
+   1418                          if ( CS4953xSPI_read_buffer((byte*)&value,sizeof(value)) == SCP1_IRQ_TIMEOUT )
+   1419                          {
+   1420                              mLoaderState = LOADER_ERROR;
+   1421                              break;
+   1422                          }
+   1423                          
+   1424                          if ( value != BOOT_START)
+   1425                          {
+   1426                              mLoaderState = LOADER_ERROR;
+   1427                              break;
+   1428                          }
+   1429                          mLoaderState = LOADER_CROSSBAR_ULD;
+   1430                      }
+   1431                          break;
+   1432          
+   1433                      case LOADER_CROSSBAR_ULD:
+   1434                      {
+   1435                          /* load DSP CrossBar ULD */
+   1436          #if ( configAPP_INTERNAL_DSP_ULD == 0 )                
+   1437                          if(cs495x_LoadDSP_ULD(ULDLoaderbuf,QueueType.audio_type,CROSSBAR_ULD) == 0)
+   1438                          {
+   1439                              TRACE_DEBUG((0,"CrossBar ULD LOADER_ERROR"));
+   1440                              mLoaderState = LOADER_ERROR;
+   1441                              break;
+   1442                          }
+   1443          #else
+   1444                          if (cs4953x_Load_DSP_ULD_InternalFlash(QueueType.audio_type, CROSSBAR_ULD) == -1 )
+   1445                          {
+   1446                              mLoaderState = LOADER_ERROR;
+   1447                              break;
+   1448                          }
+   1449          #endif 
+   1450                          vTaskDelay(TASK_MSEC2TICKS(1));
+   1451                          /*BOOT_SUCCESS*/
+   1452                          if ( CS4953xSPI_read_buffer((byte*)&value,sizeof(value)) == SCP1_IRQ_TIMEOUT )
+   1453                          {
+   1454                              mLoaderState = LOADER_ERROR;
+   1455                              break;
+   1456                          }
+   1457                          
+   1458                          if ( value != BOOT_SUCCESS)
+   1459                          {
+   1460                              mLoaderState = LOADER_ERROR;
+   1461                              break;
+   1462                          }
+   1463                          /* BOOT_START */
+   1464                          value = SLAVE_BOOT;
+   1465                          if (CS4953xSPI_write_buffer((byte*)&value, (sizeof(value)/sizeof(uint8))) == SCP1_BSY_TIMEOUT )
+   1466                          {
+   1467                              mLoaderState = LOADER_ERROR;
+   1468                              break;
+   1469                          }
+   1470          
+   1471                          if ( CS4953xSPI_read_buffer((byte*)&value,sizeof(value)) == SCP1_IRQ_TIMEOUT )
+   1472                          {
+   1473                              mLoaderState = LOADER_ERROR;
+   1474                              break;
+   1475                          }
+   1476                          
+   1477                          if ( value != BOOT_START)
+   1478                          {
+   1479                              mLoaderState = LOADER_ERROR;
+   1480                              break;
+   1481                          }
+   1482                          mLoaderState = LOADER_GAIN_ULD;
+   1483                      }   
+   1484                          break;
+   1485          
+   1486                      case LOADER_GAIN_ULD:
+   1487                      {
+   1488          #if ( configAPP_INTERNAL_DSP_ULD == 0 )            
+   1489                          if(cs495x_LoadDSP_ULD(ULDLoaderbuf,QueueType.audio_type,GAIN_ULD) == 0)
+   1490                          {
+   1491                              mLoaderState = LOADER_ERROR;
+   1492                              break;
+   1493                          }
+   1494          #else
+   1495                          if (cs4953x_Load_DSP_ULD_InternalFlash(QueueType.audio_type, GAIN_ULD) == -1 )
+   1496                          {
+   1497                              mLoaderState = LOADER_ERROR;
+   1498                              break;
+   1499                          }
+   1500          #endif 
+   1501                          vTaskDelay(TASK_MSEC2TICKS(1));
+   1502                          /* BOOT_SUCCESS */
+   1503                          if ( CS4953xSPI_read_buffer((byte*)&value,sizeof(value)) == SCP1_IRQ_TIMEOUT )
+   1504                          {
+   1505                               mLoaderState = LOADER_ERROR;
+   1506                               break;
+   1507                          }
+   1508                                          
+   1509                          if ( value != BOOT_SUCCESS)
+   1510                          {
+   1511                              mLoaderState = LOADER_ERROR;
+   1512                              break;
+   1513                          }
+   1514                          mLoaderState = LOADER_SOFT_RESET;
+   1515                      }
+   1516                          break;
+   1517          
+   1518                      case LOADER_SOFTBOOT:
+   1519                      {
+   1520                          uint32 value = 0;
+   1521                          uint32 soft_timeout = 0;
+   1522                          value = SOFT_RESET;
+   1523          
+   1524                          CS49xxxxSPI_CommandWrite(CMD_SOFT_BOOT, 0x00000001);
+   1525                          soft_timeout = xTaskGetTickCount( );
+   1526                          while( GPIOMiddleLevel_Read_InBit( __I_SCP1_IRQ ) == 1 )
+   1527                          {
+   1528                              if ( ((xTaskGetTickCount() - soft_timeout)/portTICK_RATE_MS) > TASK_MSEC2TICKS(100) )
+   1529                              {
+   1530                                  soft_timeout = 0;
+   1531                                  mLoaderState = LOADER_ERROR;
+   1532                                  break;
+   1533                              }
+   1534                          }
+   1535          
+   1536                          soft_timeout = xTaskGetTickCount( );
+   1537                          do
+   1538                          {
+   1539                              while( GPIOMiddleLevel_Read_InBit( __I_SCP1_IRQ ) == 0 )
+   1540                              {
+   1541                                  CS4953xSPI_read_buffer((byte*)&value,sizeof(value)) == SCP1_IRQ_TIMEOUT;
+   1542                              }
+   1543                              if ( ((xTaskGetTickCount() - soft_timeout)/portTICK_RATE_MS) > TASK_MSEC2TICKS(1000) )
+   1544                              {
+   1545                                  soft_timeout = 0;
+   1546                                  mLoaderState = LOADER_ERROR;
+   1547                                  break;
+   1548                              }
+   1549          
+   1550                          }while (value != SOFTBOOT_ACK);
+   1551                          mLoaderState = LOADER_SOFT_RESET;                
+   1552                      }
+   1553                          break;
+   1554                          
+   1555                      case LOADER_SOFT_RESET:
+   1556                      {
+   1557                          value = SOFT_RESET;
+   1558                          if (CS4953xSPI_write_buffer((byte*)&value, (sizeof(value)/sizeof(uint8))) == SCP1_BSY_TIMEOUT )
+   1559                          {
+   1560                              mLoaderState = LOADER_ERROR;
+   1561                              break;    
+   1562                          }
+   1563                          /* DSP APP START */
+   1564                          if ( CS4953xSPI_read_buffer((byte*)&value,sizeof(value)) == SCP1_IRQ_TIMEOUT )
+   1565                          {
+   1566                              mLoaderState = LOADER_ERROR;
+   1567                              break; 
+   1568                          }
+   1569          
+   1570                          if ( value != APP_START)
+   1571                          {
+   1572                              mLoaderState = LOADER_ERROR;
+   1573                              break; 
+   1574                          }
+   1575          
+   1576                          //TRACE_DEBUG((0, "DSP APP START  !!"));
+   1577                          mLoaderState = LOADER_CONIGURATION;
+   1578                      }
+   1579                          break;
+   1580          
+   1581                      case LOADER_CONIGURATION:
+   1582                      {
+   1583                          if (CS4953xSPI_write_buffer((byte*)&PREKICKSTART_CFG, (sizeof(PREKICKSTART_CFG)/sizeof(uint8))) == SCP1_BSY_TIMEOUT )
+   1584                          {
+   1585                              mLoaderState = LOADER_ERROR;
+   1586                              break;    
+   1587                          }
+   1588          
+   1589                          //TRACE_DEBUG((0, "PRE KICK START !"));
+   1590          
+   1591                          if(QueueType.audio_type == CS4953x_LOAD_AC3)
+   1592                          {
+   1593                              if (CS4953xSPI_write_buffer((byte*)&AC3_INITIAL_CFG, (sizeof(AC3_INITIAL_CFG)/sizeof(uint8)) ) == SCP1_BSY_TIMEOUT )
+   1594                              {
+   1595                                  mLoaderState = LOADER_ERROR;
+   1596                                  break; 
+   1597                              }
+   1598                          }
+   1599                          else if( QueueType.audio_type == CS4953x_LOAD_DTS )
+   1600                          {
+   1601                              if (CS4953xSPI_write_buffer((byte*)&DTS_INITIAL_CFG, (sizeof(DTS_INITIAL_CFG)/sizeof(uint8)) ) == SCP1_BSY_TIMEOUT )
+   1602                              {
+   1603                                  mLoaderState = LOADER_ERROR;
+   1604                                  break; 
+   1605                              }
+   1606                          }
+   1607                          else
+   1608                          {
+   1609                              if (CS4953xSPI_write_buffer((byte*)&PCM_INITIAL, (sizeof(PCM_INITIAL)/sizeof(uint8)) ) == SCP1_BSY_TIMEOUT )
+   1610                              {
+   1611                                  mLoaderState = LOADER_ERROR;
+   1612                                  break; 
+   1613                              }
+   1614                          }
+   1615                          mLoaderState = LOADER_KICK_START;
+   1616          
+   1617                      }
+   1618                      break;
+   1619          
+   1620                      case LOADER_KICK_START:
+   1621                      {
+   1622                          if (CS4953xSPI_write_buffer((byte*)&KICKSTART_CFG, (sizeof(KICKSTART_CFG)/sizeof(uint8)) ) == SCP1_BSY_TIMEOUT )
+   1623                          {
+   1624                              mLoaderState = LOADER_ERROR;
+   1625                              break;
+   1626                          }
+   1627                          //TRACE_DEBUG((0, "DSP KICK_START !! "));
+   1628          
+   1629          #if ( configAPP_INTERNAL_DSP_ULD == 0 )            
+   1630                          if(ULDLoaderbuf != NULL)
+   1631                          {
+   1632                              vPortFree(ULDLoaderbuf);
+   1633                                          ULDLoaderbuf = NULL;
+   1634                              //TRACE_DEBUG((0, "Free ULD Loader Buffer memory space !!"));
+   1635                          }
+   1636          #endif                 
+   1637          
+   1638                          gCurDSP_ULD_type = QueueType.audio_type; /*update ULD type*/
+   1639                          mLoaderState = LOADER_CONFIG_USER_SETTING;               
+   1640                      }
+   1641                          break;
+   1642          
+   1643                      case LOADER_CONFIG_USER_SETTING:
+   1644                      {
+   1645                          mLoaderState = LOADER_IDLE;                           
+   1646                          if( cs495x_RowDataLoader_GetQueueNumber( ) == 0 ) 
+   1647                          {
+   1648                              //TRACE_ERROR((0, "Q size ----->>>>>> 00000 !! "));
+   1649                              cs4953x_spi_mutex_give( );
+   1650                              pAudLowLevel_ObjCtrl->AudParmsConf( NULL );
+   1651                              tmp_QueueType.audio_type = QueueType.audio_type;
+   1652                              tmp_QueueType.source_ctrl = QueueType.source_ctrl;
+   1653                              
+   1654                              pAudLowLevel_ObjCtrl->BackCtrlSender(&tmp_QueueType);
+   1655                              if (QueueType.source_ctrl == CS4953x_SOURCE_DSP)
+   1656                              {
+   1657                                  cs4953x_irq_mutex_give( );
+   1658                              }
+   1659                          }
+   1660                      }
+   1661                          break;
+   1662          
+   1663                      case LOADER_ERROR:
+   1664                      {
+   1665                          TRACE_ERROR((0, "DSP is not working, Reset DSP !! "));
+   1666          
+   1667          #if ( configAPP_INTERNAL_DSP_ULD == 0 )            
+   1668                          if( ULDLoaderbuf != NULL )
+   1669                          {
+   1670                              vPortFree( ULDLoaderbuf );
+   1671                              ULDLoaderbuf = NULL;
+   1672                          }
+   1673          #endif                 
+   1674                          mLoaderState = LOADER_HANDLE_Q;
+   1675          
+   1676                          cs4953x_spi_mutex_give( );
+   1677                          if (QueueType.source_ctrl == CS4953x_SOURCE_DSP)
+   1678                          {
+   1679                              cs4953x_irq_mutex_give( );
+   1680                          }
+   1681          
+   1682                          tmp_QueueType.source_ctrl = CS4953x_SOURCE_ERROR;
+   1683                          pAudLowLevel_ObjCtrl->BackCtrlSender(&tmp_QueueType);
+   1684                      }
+   1685                          break;
+   1686                  }
+   1687                  vTaskDelay(LOADER_TIME_TICK);
+   1688              }
+   1689          }
+   1690          
+   1691          static void cs495x_FchDetector_TaskCtrl( xOS_TaskCtrl val )
+   1692          {
+   1693              if ( val == xOS_setTASK_SUSPENDED )
+   1694              {
+   1695                  if ( xTaskIsTaskSuspended( xOS_CS4953x.fmtTaskHandle ) != pdPASS ) /*task is working*/
+   1696                  {
+   1697                      vTaskSuspend( xOS_CS4953x.fmtTaskHandle );
+   1698                      //TRACE_DEBUG((0, "SUSPEND: cs495x_FchDetector"));
+   1699                  }
+   1700              }
+   1701              else if( val == xOS_setTASK_RESUME) 
+   1702              {
+   1703                  if ( xTaskIsTaskSuspended( xOS_CS4953x.fmtTaskHandle ) == pdPASS ) /*task is not working*/
+   1704                  {
+   1705                      vTaskResume( xOS_CS4953x.fmtTaskHandle );
+   1706                      //TRACE_DEBUG((0, "RESUME: cs495x_FchDetector"));
+   1707                  }
+   1708              }
+   1709          
+   1710          }
+   1711          
+   1712          static void cs4953x_FchDetector_CreateTask( void )
+   1713          {
+   1714              if ( xTaskCreate( 
+   1715                      cs4953x_FchDetector, 
+   1716                      ( portCHAR * ) "CS4953x_FCH", 
+   1717                      (STACK_SIZE), 
+   1718                      NULL, 
+   1719                      tskCS4953x_FCH_HANDLER_PRIORITY, 
+   1720                      &xOS_CS4953x.fmtTaskHandle ) != pdPASS )
+   1721              {
+   1722                  vTaskDelete( xOS_CS4953x.fmtTaskHandle );
+   1723                  xOS_CS4953x.xOS_ErrId = xOS_TASK_CREATE_FAIL;
+   1724              }
+   1725              else
+   1726              {
+   1727                  vTaskSuspend( xOS_CS4953x.fmtTaskHandle );
+   1728              }
+   1729          }
+   1730          
+   1731          static void cs495x_RowDataLoader_TaskCtrl( xOS_TaskCtrl val )
+   1732          {
+   1733              xQueueReset( xOS_CS4953x.loaderQueue.xQueue );
+   1734              
+   1735              mLoaderState = LOADER_IDLE;
+   1736              gCurDSP_ULD_type = CS4953x_LOAD_NULL;
+   1737              mAdtectMsg.non_iec61937 = 0;
+   1738              mAdtectMsg.stream_descriptor = 0 ;
+   1739              
+   1740              if ( val == xOS_setTASK_SUSPENDED )
+   1741              {
+   1742                  if ( xTaskIsTaskSuspended( xOS_CS4953x.loaderTaskHandle ) != pdPASS ) /*task is working*/
+   1743                  {
+   1744                      vTaskSuspend( xOS_CS4953x.loaderTaskHandle );
+   1745                      TRACE_DEBUG((0, "SUSPEND: cs495x_RowDataLoader"));
+   1746                  }
+   1747              }
+   1748              else if ( val == xOS_setTASK_RESUME )
+   1749              {
+   1750                  if ( xTaskIsTaskSuspended( xOS_CS4953x.loaderTaskHandle ) == pdPASS ) /*task is not working*/
+   1751                  {
+   1752                      vTaskResume( xOS_CS4953x.loaderTaskHandle );
+   1753                      TRACE_DEBUG((0, "RESUME cs495x_RowDataLoader"));
+   1754                  }
+   1755              }
+   1756          }
+   1757          
+   1758          static void cs495x_RowDataLoader_CreateTask( void )
+   1759          {
+   1760              
+   1761              if ( xTaskCreate( 
+   1762                      cs4953x_RowDataLoader_Task, 
+   1763                      ( portCHAR * ) "CS4953x_LOADER", 
+   1764                      (STACK_SIZE), 
+   1765                      NULL, 
+   1766                      tskCS4953x_Loader_PRIORITY, 
+   1767                      &xOS_CS4953x.loaderTaskHandle ) != pdPASS )
+   1768              {
+   1769                  vTaskDelete( xOS_CS4953x.loaderTaskHandle );
+   1770                  xOS_CS4953x.xOS_ErrId = xOS_TASK_CREATE_FAIL;
+   1771              }
+   1772              else
+   1773              {
+   1774                  vTaskSuspend( xOS_CS4953x.loaderTaskHandle );
+   1775              }
+   1776          
+   1777              xOS_CS4953x.loaderQueue.xQueue = xQueueCreate( LOADER_QUEUE_LENGTH, FRTOS_SIZE(CS4953x_QUEUE_TYPE) );
+   1778              xOS_CS4953x.loaderQueue.xBlockTime = BLOCK_TIME(0);
+   1779              if( xOS_CS4953x.loaderQueue.xQueue == NULL )
+   1780              {
+   1781                 xOS_CS4953x.xOS_ErrId = xOS_TASK_QUEUE_CREATE_FAIL;
+   1782              }
+   1783          
+   1784              xOS_CS4953x.spi_sema.xSemaphore = xSemaphoreCreateMutex();
+   1785              if ( xOS_CS4953x.spi_sema.xSemaphore != NULL )
+   1786              {
+   1787          #if 0
+   1788                  if ( cs4953x_spi_mutex_take( ) == TRUE )
+   1789                  {
+   1790                      xOS_CS4953x.xOS_ErrId = xOS_TASK_ERR_NULL;
+   1791                  }
+   1792          #endif        
+   1793              }
+   1794             
+   1795              xOS_CS4953x.spi_sema.xBlockTime = 0x0;
+   1796              
+   1797              if ( _IRQ_SEMA == NULL )
+   1798              {
+   1799                  _IRQ_SEMA = xSemaphoreCreateMutex();
+   1800              }   
+   1801          }   
+   1802          
+   1803          #if ( configAPP_SPI_FLASH_DSP_ULD == 1 )
+   1804          /********* For Load DSP ULD from External Flash *********/
+   1805          static unsigned int cs495x_Get_DSP_ULD_StartLocation(CS4953xLoadAudioStreamType Stype ,cs495x_ULD_Type Utype)
+   1806          {
+   1807              unsigned int sLocation = 0;
+   1808              
+   1809              if(Stype == CS4953x_LOAD_PCM)
+   1810              {
+   1811                  sLocation = PCM_ULD_LOCATION[Utype][0];
+   1812              }
+   1813              else if(Stype == CS4953x_LOAD_AC3)
+   1814              {
+   1815                  sLocation = AC3_ULD_LOCATION[Utype][0];
+   1816              }
+   1817              else if(Stype == CS4953x_LOAD_DTS)
+   1818              {
+   1819                  sLocation = DTS_ULD_LOCATION[Utype][0];
+   1820              }
+   1821              return sLocation;
+   1822          }
+   1823          #endif 
+   1824          
+   1825          #if ( configAPP_SPI_FLASH_DSP_ULD == 1 )
+   1826          static unsigned int cs495x_Get_DSP_ULD_Length(CS4953xLoadAudioStreamType Stype ,cs495x_ULD_Type Utype)
+   1827          {
+   1828              unsigned int sLocation = 0;
+   1829              
+   1830              if(Stype == CS4953x_LOAD_PCM)
+   1831              {
+   1832                  sLocation = PCM_ULD_LOCATION[Utype][1];
+   1833              }
+   1834              else if(Stype == CS4953x_LOAD_AC3)
+   1835              {
+   1836                  sLocation = AC3_ULD_LOCATION[Utype][1];
+   1837              }
+   1838              else if(Stype == CS4953x_LOAD_DTS)
+   1839              {
+   1840                  sLocation = DTS_ULD_LOCATION[Utype][1];
+   1841              }
+   1842              return sLocation;
+   1843          }
+   1844          #endif 
+   1845          
+   1846          #if ( configAPP_SPI_FLASH_DSP_ULD == 1 )
+   1847          static int cs495x_LoadDSP_ULD(unsigned char* buf,CS4953xLoadAudioStreamType Stype ,cs495x_ULD_Type Utype )
+   1848          {
+   1849              int i;
+   1850              int8 dsp_spi_ret;
+   1851              unsigned int sLocation,ULDLength;  
+   1852              unsigned int NumOfDSPLoad,NumOfSingle,Addr;
+   1853              int8 ret_val = 1;
+   1854          
+   1855              sLocation = cs495x_Get_DSP_ULD_StartLocation(Stype,Utype);
+   1856              ULDLength = cs495x_Get_DSP_ULD_Length(Stype,Utype);
+   1857          
+   1858              Addr = sLocation;
+   1859              NumOfDSPLoad = ULDLength/DSPLoadSize;
+   1860              NumOfSingle = ULDLength%DSPLoadSize;
+   1861          
+   1862              if( NumOfDSPLoad == 0 )
+   1863              {
+   1864                  sFLASH_ReadBuffer(ULDLoaderbuf, Addr, NumOfSingle);
+   1865                  vTaskDelay(TASK_MSEC2TICKS(1));
+   1866          
+   1867                  dsp_spi_ret = CS4953xSPI_write_ULD_buffer(ULDLoaderbuf, NumOfSingle);
+   1868                  if( dsp_spi_ret != SCP1_PASS )
+   1869                  {
+   1870                      TRACE_DEBUG((0, "Step 1. Write DSP ULD have ERROR !!!\n"));
+   1871                      ret_val = 0;
+   1872                  }
+   1873              }
+   1874              else
+   1875              {
+   1876                  for( i=0; i < NumOfDSPLoad; i++)
+   1877                  {
+   1878                      sFLASH_ReadBuffer(ULDLoaderbuf, Addr, DSPLoadSize);
+   1879                      vTaskDelay(TASK_MSEC2TICKS(1));
+   1880          
+   1881                      dsp_spi_ret = CS4953xSPI_write_ULD_buffer(ULDLoaderbuf, DSPLoadSize);
+   1882                      if ( dsp_spi_ret != SCP1_PASS )
+   1883                      {
+   1884                          TRACE_DEBUG((0, "Step 2. Write DSP ULD have ERROR !!!\n"));
+   1885                          ret_val = 0;
+   1886                          break;
+   1887                      }
+   1888          
+   1889                       Addr += DSPLoadSize;
+   1890                  }
+   1891          
+   1892                  if (ret_val != 0)
+   1893                  {
+   1894                      sFLASH_ReadBuffer(ULDLoaderbuf, Addr, NumOfSingle);
+   1895                      vTaskDelay(TASK_MSEC2TICKS(1));
+   1896          
+   1897                      dsp_spi_ret = CS4953xSPI_write_ULD_buffer(ULDLoaderbuf, NumOfSingle);
+   1898                      if ( dsp_spi_ret != SCP1_PASS )
+   1899                      {
+   1900                          TRACE_DEBUG((0, "Step 3. Write DSP ULD have ERROR !!!\n"));
+   1901                          ret_val = 0;
+   1902                      }
+   1903                  }
+   1904              }
+   1905              
+   1906          
+   1907              if (ret_val != 0)
+   1908              {
+   1909                  if(Stype == CS4953x_LOAD_PCM)
+   1910                  {
+   1911                      if(Utype == GAIN_ULD)
+   1912                          TRACE_DEBUG((0, "Load DSP  \"PCM \"  Finished !!!\n"));
+   1913                      //else if(Utype == OS_ULD)
+   1914                          //TRACE_DEBUG((0, "Load DSP  \"PCM OS_ULD\"  Finished !!!\n"));
+   1915                      //else if(Utype == CROSSBAR_ULD)
+   1916                          //TRACE_DEBUG((0, "Load DSP  \"PCM CROSSBAR_ULD\"  Finished !!!\n"));
+   1917                  }
+   1918                  else if(Stype == CS4953x_LOAD_AC3)
+   1919                  {
+   1920                      if(Utype == GAIN_ULD)
+   1921                          TRACE_DEBUG((0, "Load DSP  \"AC3 \"  Finished !!!\n"));
+   1922                      //else if(Utype == OS_ULD)
+   1923                          //TRACE_DEBUG((0, "Load DSP  \"AC3 OS_ULD\"  Finished !!!\n"));
+   1924                      //else if(Utype == CROSSBAR_ULD)
+   1925                          //TRACE_DEBUG((0, "Load DSP  \"AC3 CROSSBAR_ULD\"  Finished !!!\n"));
+   1926                      //else if(Utype == DECODER_ULD)   
+   1927                          //TRACE_DEBUG((0, "Load DSP  \"AC3 DECODER_ULD\"  Finished !!!\n"));
+   1928                  }
+   1929                  else if(Stype == CS4953x_LOAD_DTS)
+   1930                  {
+   1931                      if(Utype == GAIN_ULD)
+   1932                          TRACE_DEBUG((0, "Load DSP  \"DTS \"  Finished !!!\n"));
+   1933                      //else if(Utype == OS_ULD)
+   1934                          //TRACE_DEBUG((0, "Load DSP  \"DTS OS_ULD\"  Finished !!!\n"));
+   1935                      //else if(Utype == CROSSBAR_ULD)
+   1936                          //TRACE_DEBUG((0, "Load DSP  \"DTS CROSSBAR_ULD\"  Finished !!!\n"));
+   1937                      //else if(Utype == DECODER_ULD)   
+   1938                          //TRACE_DEBUG((0, "Load DSP  \"DTS DECODER_ULD\"  Finished !!!\n"));
+   1939                  }
+   1940              }
+   1941              
+   1942              return ret_val;
+   1943          }
+   1944          #endif 
+   1945          
+   1946          #if (configAPP_INTERNAL_DSP_ULD == 1 )
+   1947          static int8 cs4953x_Load_DSP_AC3_ULD_InternalFlash( cs495x_ULD_Type module )
+   1948          {
+   1949              int8 ret = 0;
+   1950          
+   1951              switch( module )
+   1952              {
+   1953                  case GAIN_ULD:
+   1954                  {
+   1955                      if ( cs4953x_spi_mutex_take() == TRUE )
+   1956                      {
+   1957                          if( CS4953xSPI_write_buffer((byte*)&AC3_IN_GAIN_ULD, (sizeof(DTS_IN_GAIN_ULD)/sizeof(uint8))) == SCP1_BSY_TIMEOUT )
+   1958                          {
+   1959                              ret = -1;
+   1960                          }
+   1961                  
+   1962                          cs4953x_spi_mutex_give();
+   1963                      }
+   1964                  }
+   1965                      break;
+   1966          
+   1967                  case OS_ULD:
+   1968                  {
+   1969                      if ( cs4953x_spi_mutex_take() == TRUE )
+   1970                      {
+   1971                          if (CS4953xSPI_write_buffer((byte*)&OS_HD2_RC94_ULD, (sizeof(OS_HD2_RC94_ULD)/sizeof(uint8)) ) == SCP1_BSY_TIMEOUT )
+   1972                          {
+   1973                              ret = -1;                   
+   1974                          }
+   1975          
+   1976                          cs4953x_spi_mutex_give();
+   1977                      }
+   1978                  }
+   1979                      break;
+   1980          
+   1981                  case CROSSBAR_ULD:
+   1982                  {
+   1983                      if ( cs4953x_spi_mutex_take() == TRUE )
+   1984                      {
+   1985                          if (CS4953xSPI_write_buffer((byte*)&AC3_RC23_ULD, (sizeof(AC3_RC23_ULD)/sizeof(uint8))) == SCP1_BSY_TIMEOUT )
+   1986                          {
+   1987                              ret = -1;
+   1988                          }
+   1989          
+   1990                          cs4953x_spi_mutex_give();
+   1991                      }
+   1992                  }
+   1993                      break;
+   1994          
+   1995              }
+   1996          
+   1997               return ret;
+   1998          }
+   1999          #endif 
+   2000          
+   2001          #if (configAPP_INTERNAL_DSP_ULD == 1 )
+   2002          static int8 cs4953x_Load_DSP_DTS_ULD_InternalFlash( cs495x_ULD_Type module )
+   2003          {
+   2004              int8 ret = 0;
+   2005          
+   2006              switch( module )
+   2007              {
+   2008                  case GAIN_ULD:
+   2009                  {
+   2010                      if ( cs4953x_spi_mutex_take() == TRUE )
+   2011                      {
+   2012                          if( CS4953xSPI_write_buffer((byte*)&DTS_IN_GAIN_ULD, (sizeof(DTS_IN_GAIN_ULD)/sizeof(uint8))) == SCP1_BSY_TIMEOUT )
+   2013                          {
+   2014                              ret = -1;
+   2015                          }
+   2016                  
+   2017                          cs4953x_spi_mutex_give();
+   2018                      }
+   2019                  }
+   2020                      break;
+   2021          
+   2022                  case OS_ULD:
+   2023                  {
+   2024                      if ( cs4953x_spi_mutex_take() == TRUE )
+   2025                      {
+   2026                          if (CS4953xSPI_write_buffer((byte*)&OS_HD2_RC94_ULD, (sizeof(OS_HD2_RC94_ULD)/sizeof(uint8)) ) == SCP1_BSY_TIMEOUT )
+   2027                          {
+   2028                              ret = -1;                   
+   2029                          }
+   2030          
+   2031                          cs4953x_spi_mutex_give();
+   2032                      }
+   2033                  }
+   2034                      break;
+   2035          
+   2036                  case CROSSBAR_ULD:
+   2037                  {
+   2038                      if ( cs4953x_spi_mutex_take() == TRUE )
+   2039                      {
+   2040                          if (CS4953xSPI_write_buffer((byte*)&DTS_RC25_ULD, (sizeof(DTS_RC25_ULD)/sizeof(uint8))) == SCP1_BSY_TIMEOUT )
+   2041                          {
+   2042                              ret = -1;
+   2043                          }
+   2044          
+   2045                          cs4953x_spi_mutex_give();
+   2046                      }
+   2047                  }
+   2048                      break;
+   2049              }
+   2050          
+   2051              return ret;
+   2052          
+   2053          }
+   2054          #endif 
+   2055          
+   2056          #if (configAPP_INTERNAL_DSP_ULD == 1 )
+   2057          static int8 cs4953x_Load_DSP_PCM_ULD_InternalFlash( cs495x_ULD_Type module )
+   2058          {
+   2059              int8 ret = 0; 
+   2060          
+   2061              switch( module )
+   2062              {
+   2063                  case GAIN_ULD:
+   2064                  {
+   2065                      if ( cs4953x_spi_mutex_take() == TRUE )
+   2066                      {
+   2067                          if( CS4953xSPI_write_buffer((byte*)&PCM_IN_GAIN_ULD, (sizeof(PCM_IN_GAIN_ULD)/sizeof(uint8))) == SCP1_BSY_TIMEOUT )
+   2068                          {
+   2069                              ret = -1;
+   2070                          }
+   2071                  
+   2072                          cs4953x_spi_mutex_give();
+   2073                      }
+   2074                  }
+   2075                      break;
+   2076          
+   2077                  case OS_ULD:
+   2078                  {
+   2079                      if ( cs4953x_spi_mutex_take() == TRUE )
+   2080                      {
+   2081                          if (CS4953xSPI_write_buffer((byte*)&OS_HD2_RC94_ULD, (sizeof(OS_HD2_RC94_ULD)/sizeof(uint8)) ) == SCP1_BSY_TIMEOUT )
+   2082                          {
+   2083                              ret = -1;                   
+   2084                          }
+   2085          
+   2086                          cs4953x_spi_mutex_give();
+   2087                      }
+   2088                  }
+   2089                      break;
+   2090          
+   2091                  case CROSSBAR_ULD:
+   2092                  {
+   2093                      if ( cs4953x_spi_mutex_take() == TRUE )
+   2094                      {
+   2095                          if (CS4953xSPI_write_buffer((byte*)&PCM_TVCSII_ULD, (sizeof(PCM_TVCSII_ULD)/sizeof(uint8))) == SCP1_BSY_TIMEOUT )
+   2096                          {
+   2097                              ret = -1;
+   2098                          }
+   2099          
+   2100                          cs4953x_spi_mutex_give();
+   2101                      }
+   2102                  }
+   2103                      break;
+   2104          
+   2105              }
+   2106          
+   2107              return ret;
+   2108          }
+   2109          #endif 
+   2110          
+   2111          #if (configAPP_INTERNAL_DSP_ULD == 1 )
+   2112          static int8 cs4953x_Load_DSP_ULD_InternalFlash( CS4953xLoadAudioStreamType type, cs495x_ULD_Type module )
+   2113          {
+   2114              int8 ret = 0;
+   2115          
+   2116              switch( type )
+   2117              {
+   2118                  case CS4953x_LOAD_PCM:
+   2119                  {
+   2120                      ret = cs4953x_Load_DSP_PCM_ULD_InternalFlash( module );
+   2121                  }
+   2122                      break;
+   2123          
+   2124                  case CS4953x_LOAD_AC3:
+   2125                  {
+   2126                       ret = cs4953x_Load_DSP_AC3_ULD_InternalFlash( module );
+   2127                  }
+   2128                      break;
+   2129          
+   2130                  case CS4953x_LOAD_DTS:
+   2131                  {
+   2132                       ret = cs4953x_Load_DSP_DTS_ULD_InternalFlash( module );
+   2133                  }
+   2134                      break;
+   2135              }
+   2136          
+   2137              return ret;
+   2138          }
+   2139          #endif 
+   2140          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       32  CS4953x_readPresence
+             32 -> CS4953xSPI_read_buffer
+             32 -> CS4953xSPI_write_buffer
+             32 -> cs4953x_spi_mutex_give
+             32 -> cs4953x_spi_mutex_take
+       32  cs4953x_FchDetector
+             32 -> CS4953xSPI_nIrq_read_buffer
+             32 -> GPIOMiddleLevel_Read_InBit
+             32 -> cs4953x_getAutoDectMsg
+             32 -> cs4953x_irq_mutex_give
+             32 -> cs4953x_parseAudioFMT
+             32 -> cs4953x_spi_mutex_give
+             32 -> cs4953x_spi_mutex_take
+             32 -> cs495x_RowDataLoader_InstrSender
+             32 -> vTaskDelay
+             32 -> xQueueGenericReceive
+       24  cs4953x_FchDetector_CreateTask
+             24 -> vTaskDelete
+              0 -> vTaskSuspend
+             24 -> xTaskGenericCreate
+        0  cs4953x_GetAudioStreamType
+        0  cs4953x_GetLoadrState
+       56  cs4953x_RowDataLoader_Task
+             56 -- Indirect call
+             56 -> CS4953xSPI_MsgNote1
+             56 -> CS4953xSPI_read_buffer
+             56 -> CS4953xSPI_write_buffer
+             56 -> CS49xxxxSPI_CommandWrite
+             56 -> CS49xxxxSPI_ReadSolicited
+             56 -> Debug_printDebug
+             56 -> Debug_printError
+             56 -> GPIOMiddleLevel_Clr
+             56 -> GPIOMiddleLevel_Read_InBit
+             56 -> GPIOMiddleLevel_Set
+             56 -> cs4953x_getAutoDectMsg
+             56 -> cs4953x_irq_mutex_give
+             56 -> cs4953x_parseAudioFMT
+             56 -> cs4953x_spi_mutex_give
+             56 -> cs495x_LoadDSP_ULD
+             56 -> cs495x_RowDataLoader_GetQueueNumber
+             56 -> pvPortMalloc
+             56 -> vPortFree
+             56 -> vTaskDelay
+             56 -> xPortGetFreeHeapSize
+             56 -> xQueueGenericReceive
+             56 -> xTaskGetTickCount
+       16  cs4953x_SetTVHDMC_Ctrl
+             16 -> CS4953xSPI_write_buffer
+              0 -> cs4953x_spi_mutex_give
+             16 -> cs4953x_spi_mutex_take
+        4  cs4953x_getAutoDectMsg
+        0  cs4953x_getSignalLevel
+        8  cs4953x_irq_mutex_give
+              8 -> xQueueGenericSend
+       16  cs4953x_lowlevel_task
+             16 -> CS4953x_readPresence
+             16 -> Debug_printError
+             16 -> vTaskDelay
+        0  cs4953x_lowlevel_task_setState
+        8  cs4953x_parseAudioFMT
+              0 -> Debug_printDebug
+       16  cs4953x_setAVDelay
+             16 -> CS49xxxxSPI_CommandWrite
+              0 -> cs4953x_spi_mutex_give
+             16 -> cs4953x_spi_mutex_take
+       40  cs4953x_setAudioRoute
+             40 -> CS4953xSPI_write_buffer
+             40 -> CS49xxxxSPI_CommandWrite
+              0 -> cs4953x_spi_mutex_give
+             40 -> cs4953x_spi_mutex_take
+        8  cs4953x_setBalanceLs
+              8 -> CS49xxxxSPI_CommandWrite
+              0 -> cs4953x_spi_mutex_give
+              8 -> cs4953x_spi_mutex_take
+        8  cs4953x_setBalanceRs
+              8 -> CS49xxxxSPI_CommandWrite
+              0 -> cs4953x_spi_mutex_give
+              8 -> cs4953x_spi_mutex_take
+        8  cs4953x_setBassGain
+              8 -> CS49xxxxSPI_CommandWrite
+              0 -> cs4953x_spi_mutex_give
+              8 -> cs4953x_spi_mutex_take
+        8  cs4953x_setCenterGain
+              8 -> CS49xxxxSPI_CommandWrite
+              0 -> cs4953x_spi_mutex_give
+              8 -> cs4953x_spi_mutex_take
+        8  cs4953x_setLsRsGain
+              8 -> CS49xxxxSPI_CommandWrite
+              0 -> cs4953x_spi_mutex_give
+              8 -> cs4953x_spi_mutex_take
+        8  cs4953x_setMasterGain
+              8 -> CS49xxxxSPI_CommandWrite
+              0 -> cs4953x_spi_mutex_give
+              8 -> cs4953x_spi_mutex_take
+        8  cs4953x_setMute
+              8 -> CS49xxxxSPI_CommandWrite
+              0 -> cs4953x_spi_mutex_give
+              8 -> cs4953x_spi_mutex_take
+        8  cs4953x_setNightMode
+              8 -> CS49xxxxSPI_CommandWrite
+              0 -> cs4953x_spi_mutex_give
+              8 -> cs4953x_spi_mutex_take
+        8  cs4953x_setSilenceThreshold
+              8 -> CS49xxxxSPI_CommandWrite
+              0 -> cs4953x_spi_mutex_give
+              8 -> cs4953x_spi_mutex_take
+        8  cs4953x_setSubGain
+              8 -> CS49xxxxSPI_CommandWrite
+              0 -> cs4953x_spi_mutex_give
+              8 -> cs4953x_spi_mutex_take
+        8  cs4953x_setTrebleGain
+              8 -> CS49xxxxSPI_CommandWrite
+              0 -> cs4953x_spi_mutex_give
+              8 -> cs4953x_spi_mutex_take
+        8  cs4953x_spi_mutex_give
+              8 -> SPILowLevel_isEnable
+              8 -> xQueueGenericSend
+        8  cs4953x_spi_mutex_take
+              8 -> SPILowLevel_isEnable
+              8 -> xQueueGenericReceive
+        8  cs495x_FchDetector_TaskCtrl
+              0 -> vTaskResume
+              0 -> vTaskSuspend
+              8 -> xTaskIsTaskSuspended
+       32  cs495x_LoadDSP_ULD
+             32 -> CS4953xSPI_write_ULD_buffer
+             32 -> Debug_printDebug
+             32 -> sFLASH_ReadBuffer
+             32 -> vTaskDelay
+       24  cs495x_LowLevelDetector_CreateTask
+              0 -> vTaskDelete
+              0 -> vTaskSuspend
+             24 -> xTaskGenericCreate
+        8  cs495x_LowLevelDetector_TaskCtrl
+              8 -> cs4953x_lowlevel_task_setState
+              0 -> vTaskResume
+              0 -> vTaskSuspend
+              8 -> xTaskIsTaskSuspended
+       24  cs495x_RowDataLoader_CreateTask
+             24 -> vTaskDelete
+             24 -> vTaskSuspend
+             24 -> xQueueCreateMutex
+             24 -> xQueueGenericCreate
+             24 -> xTaskGenericCreate
+        8  cs495x_RowDataLoader_GetQueueNumber
+              8 -> uxQueueMessagesWaiting
+       16  cs495x_RowDataLoader_InstrSender
+             16 -> SPILowLevel_isEnable
+             16 -> xQueueGenericReset
+             16 -> xQueueGenericSend
+       16  cs495x_RowDataLoader_TaskCtrl
+              0 -> Debug_printDebug
+             16 -> vTaskResume
+             16 -> vTaskSuspend
+             16 -> xQueueGenericReset
+             16 -> xTaskIsTaskSuspended
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      12  ?<Constant "CS4953x_FCH">
+      16  ?<Constant "CS4953x_LOADER">
+      20  ?<Constant "CS4953x_lowlevel">
+      28  ?<Constant "CrossBar ULD LOADER_E...">
+      36  ?<Constant "DSP is not working, R...">
+      32  ?<Constant "It isn\'t enough memor...">
+      32  ?<Constant "Load DSP  \"AC3 \"  Fin...">
+      32  ?<Constant "Load DSP  \"DTS \"  Fin...">
+      32  ?<Constant "Load DSP  \"PCM \"  Fin...">
+      28  ?<Constant "RESUME cs495x_RowData...">
+      32  ?<Constant "SUSPEND: cs495x_RowDa...">
+      40  ?<Constant "Step 1. Write DSP ULD...">
+      40  ?<Constant "Step 2. Write DSP ULD...">
+      40  ?<Constant "Step 3. Write DSP ULD...">
+      32  ?<Constant "cs495x_LoadDSP_ULD LO...">
+      44  ?<Constant "presence error =%X si...">
+      52  ?<Constant "tmp_queue_data->audio...">
+       4  ??DataTable53
+       4  ??DataTable53_1
+       4  ??DataTable53_10
+       4  ??DataTable53_11
+       4  ??DataTable53_12
+       4  ??DataTable53_13
+       4  ??DataTable53_14
+       4  ??DataTable53_15
+       4  ??DataTable53_16
+       4  ??DataTable53_17
+       4  ??DataTable53_18
+       4  ??DataTable53_19
+       4  ??DataTable53_2
+       4  ??DataTable53_20
+       4  ??DataTable53_21
+       4  ??DataTable53_22
+       4  ??DataTable53_23
+       4  ??DataTable53_24
+       4  ??DataTable53_25
+       4  ??DataTable53_26
+       4  ??DataTable53_27
+       4  ??DataTable53_28
+       4  ??DataTable53_29
+       4  ??DataTable53_3
+       4  ??DataTable53_30
+       4  ??DataTable53_31
+       4  ??DataTable53_32
+       4  ??DataTable53_33
+       4  ??DataTable53_34
+       4  ??DataTable53_35
+       4  ??DataTable53_36
+       4  ??DataTable53_37
+       4  ??DataTable53_38
+       4  ??DataTable53_39
+       4  ??DataTable53_4
+       4  ??DataTable53_40
+       4  ??DataTable53_41
+       4  ??DataTable53_42
+       4  ??DataTable53_43
+       4  ??DataTable53_44
+       4  ??DataTable53_45
+       4  ??DataTable53_46
+       4  ??DataTable53_47
+       4  ??DataTable53_48
+       4  ??DataTable53_49
+       4  ??DataTable53_5
+       4  ??DataTable53_50
+       4  ??DataTable53_51
+       4  ??DataTable53_52
+       4  ??DataTable53_53
+       4  ??DataTable53_54
+       4  ??DataTable53_55
+       4  ??DataTable53_56
+       4  ??DataTable53_57
+       4  ??DataTable53_58
+       4  ??DataTable53_59
+       4  ??DataTable53_6
+       4  ??DataTable53_60
+       4  ??DataTable53_7
+       4  ??DataTable53_8
+       4  ??DataTable53_9
+       4  ??DataTable57
+       4  ??DataTable57_1
+       4  ??DataTable57_2
+       4  ??DataTable57_3
+      10  ?Subroutine0
+       6  ?Subroutine1
+      10  ?Subroutine10
+      10  ?Subroutine11
+      10  ?Subroutine12
+       6  ?Subroutine13
+      10  ?Subroutine14
+      10  ?Subroutine15
+      12  ?Subroutine16
+       8  ?Subroutine17
+       8  ?Subroutine2
+      10  ?Subroutine3
+       4  ?Subroutine4
+       8  ?Subroutine5
+       8  ?Subroutine6
+      22  ?Subroutine7
+      10  ?Subroutine8
+      10  ?Subroutine9
+    5248  AC3_INITIAL_CFG
+     138  CS4953x_readPresence
+      64  DSP_DAO_ROUTER_INITIAL
+     108  DSP_ObjCtrl
+    5064  DTS_INITIAL_CFG
+      32  KICKSTART_CFG
+    4112  PCM_INITIAL
+     528  PREKICKSTART_CFG
+     178  cs4953x_FchDetector
+      50  cs4953x_FchDetector_CreateTask
+       8  cs4953x_GetAudioStreamType
+       8  cs4953x_GetLoadrState
+    1046  cs4953x_RowDataLoader_Task
+      34  cs4953x_SetTVHDMC_Ctrl
+      28  cs4953x_getAutoDectMsg
+       8  cs4953x_getSignalLevel
+      24  cs4953x_irq_mutex_give
+      62  cs4953x_lowlevel_task
+      32  cs4953x_lowlevel_task_setState
+      72  cs4953x_parseAudioFMT
+      98  cs4953x_setAVDelay
+     244  cs4953x_setAudioRoute
+      20  cs4953x_setBalanceLs
+      20  cs4953x_setBalanceRs
+      60  cs4953x_setBassGain
+      20  cs4953x_setCenterGain
+      30  cs4953x_setLsRsGain
+      78  cs4953x_setMasterGain
+      26  cs4953x_setMute
+      20  cs4953x_setNightMode
+      30  cs4953x_setSilenceThreshold
+      20  cs4953x_setSubGain
+      60  cs4953x_setTrebleGain
+      30  cs4953x_spi_mutex_give
+      40  cs4953x_spi_mutex_take
+      42  cs495x_FchDetector_TaskCtrl
+     210  cs495x_LoadDSP_ULD
+      62  cs495x_LowLevelDetector_CreateTask
+      66  cs495x_LowLevelDetector_TaskCtrl
+     102  cs495x_RowDataLoader_CreateTask
+      16  cs495x_RowDataLoader_GetQueueNumber
+      62  cs495x_RowDataLoader_InstrSender
+      84  cs495x_RowDataLoader_TaskCtrl
+     116  mAdtectMsg
+          QueueType
+          mLoaderState
+          gCurDSP_ULD_type
+          signal_overthreshold
+          PCM_ULD_LOCATION
+          AC3_ULD_LOCATION
+          DTS_ULD_LOCATION
+          ULDLoaderbuf
+       4  pCurtDSP_ULD_TYPE
+       4  pDSP_ObjCtrl
+      44  xOS_CS4953x
+          _IRQ_SEMA
+
+ 
+     44 bytes in section .bss
+    124 bytes in section .data
+ 10 272 bytes in section .rodata
+  8 992 bytes in section .text
+ 
+  8 992 bytes of CODE  memory
+ 10 272 bytes of CONST memory
+    168 bytes of DATA  memory
+
+Errors: none
+Warnings: 1

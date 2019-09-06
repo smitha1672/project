@@ -1,0 +1,413 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     10/Nov/2014  15:19:29 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\STM32_IAP\src\flash_layer.c                  #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\STM32_IAP\src\flash_layer.c -D               #
+#                    __ARM_CORTEX_MX__ -D DEBUG -D FREE_RTOS -D               #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D HOST_MODE_ENABLED -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -D STM32_IAP -D S4051A    #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Bootloade #
+#                    r\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Boo #
+#                    tloader\Obj\ --debug --endian=little --cpu=Cortex-M4 -e  #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Projects\STM32_IAP\inc #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\I #
+#                    nclude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\C #
+#                    MSIS\Device\ST\STM32F4xx\Include\ -I                     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_HO #
+#                    ST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\HT68F30\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Utilities\Third_Party\efsl\inc\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    fat_fs\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Project #
+#                    s\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utiliti #
+#                    es\mainstream_v1\stm32f411\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\it\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\APP_SRC\I #
+#                    nclude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\APP_SRC\ -Ohz -I  #
+#                    "C:\Program Files (x86)\IAR Systems\Embedded Workbench   #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Bootloader\Lis #
+#                    t\flash_layer.lst                                        #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Bootloader\Obj #
+#                    \flash_layer.o                                           #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Projects\STM32_IAP\src\flash_layer.c
+      1          /**
+      2            ******************************************************************************
+      3            * @file    flash_layer.c
+      4            * @author  MCD Application Team
+      5            * @version V1.0.0
+      6            * @date    22/07/2011
+      7            * @brief   This file provides all the flash_layer functions.
+      8            ******************************************************************************
+      9            * @attention
+     10            *
+     11            * THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
+     12            * WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE
+     13            * TIME. AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY
+     14            * DIRECT, INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING
+     15            * FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE
+     16            * CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
+     17            *
+     18            * <h2><center>&copy; COPYRIGHT 2011 STMicroelectronics</center></h2>
+     19            ******************************************************************************
+     20            */
+     21          
+     22          /* Includes ------------------------------------------------------------------*/
+     23          #include "flash_layer.h"
+     24          
+     25          uint32_t mdebugdata = 0;
+     26          uint32_t mdebugaddr = 0;
+     27          
+     28          #if defined ( STM32F40_41xxx )
+     29          uint32_t FLASH_LAYER_GetSector(uint32_t Address)
+     30          {
+     31            uint32_t sector = 0;
+     32            
+     33            if((Address < ADDR_FLASH_SECTOR_1) && (Address >= ADDR_FLASH_SECTOR_0))
+     34            {
+     35              sector = FLASH_Sector_0;  
+     36            }
+     37            else if((Address < ADDR_FLASH_SECTOR_2) && (Address >= ADDR_FLASH_SECTOR_1))
+     38            {
+     39              sector = FLASH_Sector_1;  
+     40            }
+     41            else if((Address < ADDR_FLASH_SECTOR_3) && (Address >= ADDR_FLASH_SECTOR_2))
+     42            {
+     43              sector = FLASH_Sector_2;  
+     44            }
+     45            else if((Address < ADDR_FLASH_SECTOR_4) && (Address >= ADDR_FLASH_SECTOR_3))
+     46            {
+     47              sector = FLASH_Sector_3;  
+     48            }
+     49            else if((Address < ADDR_FLASH_SECTOR_5) && (Address >= ADDR_FLASH_SECTOR_4))
+     50            {
+     51              sector = FLASH_Sector_4;  
+     52            }
+     53            else if((Address < ADDR_FLASH_SECTOR_6) && (Address >= ADDR_FLASH_SECTOR_5))
+     54            {
+     55              sector = FLASH_Sector_5;  
+     56            }
+     57            else if((Address < ADDR_FLASH_SECTOR_7) && (Address >= ADDR_FLASH_SECTOR_6))
+     58            {
+     59              sector = FLASH_Sector_6;  
+     60            }
+     61            else if((Address < ADDR_FLASH_SECTOR_8) && (Address >= ADDR_FLASH_SECTOR_7))
+     62            {
+     63              sector = FLASH_Sector_7;  
+     64            }
+     65            else if((Address < ADDR_FLASH_SECTOR_9) && (Address >= ADDR_FLASH_SECTOR_8))
+     66            {
+     67              sector = FLASH_Sector_8;  
+     68            }
+     69            else if((Address < ADDR_FLASH_SECTOR_10) && (Address >= ADDR_FLASH_SECTOR_9))
+     70            {
+     71              sector = FLASH_Sector_9;  
+     72            }
+     73            else if((Address < ADDR_FLASH_SECTOR_11) && (Address >= ADDR_FLASH_SECTOR_10))
+     74            {
+     75              sector = FLASH_Sector_10;  
+     76            }
+     77            
+     78          #if defined (USE_STM324xG_EVAL)
+     79            else/*(Address < FLASH_END_ADDR) && (Address >= ADDR_FLASH_SECTOR_11))*/
+     80            {
+     81              sector = FLASH_Sector_11;  
+     82            }
+     83          
+     84          #else /* USE_STM324x7I_EVAL or USE_STM324x9I_EVAL */  
+     85            else if((Address < ADDR_FLASH_SECTOR_12) && (Address >= ADDR_FLASH_SECTOR_11))
+     86            {
+     87              sector = FLASH_Sector_11;  
+     88            }
+     89          
+     90            else if((Address < ADDR_FLASH_SECTOR_13) && (Address >= ADDR_FLASH_SECTOR_12))
+     91            {
+     92              sector = FLASH_Sector_12;  
+     93            }
+     94            else if((Address < ADDR_FLASH_SECTOR_14) && (Address >= ADDR_FLASH_SECTOR_13))
+     95            {
+     96              sector = FLASH_Sector_13;  
+     97            }
+     98            else if((Address < ADDR_FLASH_SECTOR_15) && (Address >= ADDR_FLASH_SECTOR_14))
+     99            {
+    100              sector = FLASH_Sector_14;  
+    101            }
+    102            else if((Address < ADDR_FLASH_SECTOR_16) && (Address >= ADDR_FLASH_SECTOR_15))
+    103            {
+    104              sector = FLASH_Sector_15;  
+    105            }
+    106            else if((Address < ADDR_FLASH_SECTOR_17) && (Address >= ADDR_FLASH_SECTOR_16))
+    107            {
+    108              sector = FLASH_Sector_16;  
+    109            }
+    110            else if((Address < ADDR_FLASH_SECTOR_18) && (Address >= ADDR_FLASH_SECTOR_17))
+    111            {
+    112              sector = FLASH_Sector_17;  
+    113            }
+    114            else if((Address < ADDR_FLASH_SECTOR_19) && (Address >= ADDR_FLASH_SECTOR_18))
+    115            {
+    116              sector = FLASH_Sector_18;  
+    117            }
+    118            else if((Address < ADDR_FLASH_SECTOR_20) && (Address >= ADDR_FLASH_SECTOR_19))
+    119            {
+    120              sector = FLASH_Sector_19;  
+    121            }
+    122            else if((Address < ADDR_FLASH_SECTOR_21) && (Address >= ADDR_FLASH_SECTOR_20))
+    123            {
+    124              sector = FLASH_Sector_20;  
+    125            } 
+    126            else if((Address < ADDR_FLASH_SECTOR_22) && (Address >= ADDR_FLASH_SECTOR_21))
+    127            {
+    128              sector = FLASH_Sector_21;  
+    129            }
+    130            else if((Address < ADDR_FLASH_SECTOR_23) && (Address >= ADDR_FLASH_SECTOR_22))
+    131            {
+    132              sector = FLASH_Sector_22;  
+    133            }
+    134            else/*(Address < FLASH_END_ADDR) && (Address >= ADDR_FLASH_SECTOR_23))*/
+    135            {
+    136              sector = FLASH_Sector_23;  
+    137            }
+    138          #endif /* USE_STM324x7I_EVAL or USE_STM324x9I_EVAL */
+    139            return sector;
+    140          }
+    141          #endif
+    142          
+    143          void FLASH_LAYER_FlashUnlock(void)
+    144          {
+    145              FLASH_Unlock();
+    146          }
+    147          
+    148          void FLASH_LAYER_Flashlock(void)
+    149          {
+    150              FLASH_Lock( );
+    151          }
+    152          
+    153          FlagStatus FLASH_LAYER_ReadOutProtectionStatus(void)
+    154          {
+    155            FlagStatus readoutstatus = RESET;
+    156          
+    157          #if defined ( STM32F10X_CL )  
+    158            if (FLASH_GetReadOutProtectionStatus() == SET)
+    159            {
+    160              readoutstatus = SET;
+    161            }
+    162            else
+    163            {
+    164              readoutstatus = RESET;
+    165            }
+    166          #endif
+    167            
+    168            return readoutstatus;
+    169          }
+    170          
+    171          FLASH_Status FLASH_LAYER_ErasePage(uint32_t Page_Address)
+    172          {
+    173            FLASH_Status status = FLASH_COMPLETE;
+    174          
+    175          #if defined ( STM32F10X_CL )
+    176            status = FLASH_ErasePage(Page_Address);
+    177          #endif 
+    178          
+    179            return status;
+    180          }
+    181          
+    182          FLASH_Status FLASH_LAYER_EraseSector( uint32_t FlashSector )
+    183          {
+    184              FLASH_Status status = FLASH_COMPLETE;
+    185          
+    186          #if defined ( STM32F40_41xxx )
+    187              status = FLASH_EraseSector(FlashSector, VoltageRange_3);
+    188          #endif    
+    189          
+    190              return status;
+    191          }
+    192          
+    193          /**
+    194            * @brief  Programs a word at a specified address.
+    195            * @param  Address: specifies the address to be programmed.
+    196            * @param  Data: specifies the data to be programmed.
+    197            * @retval FLASH Status: The returned value can be: FLASH_ERROR_PG,
+    198            *   FLASH_ERROR_WRP, FLASH_COMPLETE or FLASH_TIMEOUT.
+    199            */
+    200          FLASH_Status FLASH_LAYER_ProgramWord(uint32_t Address, uint32_t Data)
+    201          {
+    202            FLASH_Status status = FLASH_COMPLETE;
+    203          
+    204            status = FLASH_ProgramWord(Address, Data);
+    205            return status;
+    206          }
+    207          
+    208          FLASH_Status FLASH_LAYER_write_n_word( uint32_t *pflash_addr, uint8_t *pByte, uint32_t len )
+    209          {
+    210          	uint32_t *pWord;
+    211          	FLASH_Status status = FLASH_COMPLETE;
+    212          	uint32_t block_num = 0;
+    213          	uint32_t insufficient_block = 0;
+    214          	uint32_t addr = *pflash_addr;
+    215          	uint32_t i = 0;
+    216          
+    217          	pWord = (uint32_t*)pByte;
+    218          
+    219          	if ( *pflash_addr > FLASH_APPLICATION_ENDADDRESS )
+    220          		return FLASH_ERROR_WRP;
+    221          
+    222          	block_num = len/4;
+    223          	if ( block_num != 0)
+    224          	{
+    225          		for ( i=0; i<block_num; i++ )
+    226          		{
+    227          			mdebugaddr = addr;
+    228          			mdebugdata = *(pWord+i);
+    229          
+    230          			if ( addr > FLASH_APPLICATION_ENDADDRESS )
+    231          				return FLASH_ERROR_WRP;
+    232          
+    233          			status = FLASH_ProgramWord(addr, *(pWord+i));
+    234          			
+    235          			*pflash_addr = (*pflash_addr + 4);
+    236          			addr = *pflash_addr;
+    237          			if ( status != FLASH_COMPLETE )
+    238          			{
+    239          				mdebugaddr = addr;
+    240          				return status;
+    241          			}
+    242          
+    243          			
+    244          		}
+    245          		
+    246          	}
+    247          
+    248          	insufficient_block = len%4; /*If data length is insufficient a 4 bytes, */
+    249          	if ( insufficient_block != 0 )		
+    250          	{
+    251          		if ( block_num != 0 )
+    252          		{
+    253          			*pflash_addr = (*pflash_addr+4);
+    254          		}
+    255          		
+    256          		addr = *pflash_addr;
+    257          
+    258          		mdebugaddr = addr;
+    259          		mdebugdata = *(pWord+i);
+    260          
+    261          		if ( addr > FLASH_APPLICATION_ENDADDRESS )
+    262          				return FLASH_ERROR_WRP;
+    263          
+    264          		status = FLASH_ProgramWord(addr, *(pWord+i));
+    265          		if ( status != FLASH_COMPLETE )
+    266          		{
+    267          			mdebugaddr = addr;
+    268          			return status;
+    269          		}
+    270          	}
+    271          	
+    272          	return status;
+    273          }
+    274          
+    275          
+    276          /*******************(C)COPYRIGHT 2011 STMicroelectronics *****END OF FILE******/
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        0  FLASH_LAYER_ErasePage
+        0  FLASH_LAYER_EraseSector
+              0 -> FLASH_EraseSector
+        0  FLASH_LAYER_FlashUnlock
+              0 -> FLASH_Unlock
+        0  FLASH_LAYER_Flashlock
+              0 -> FLASH_Lock
+        0  FLASH_LAYER_GetSector
+        0  FLASH_LAYER_ProgramWord
+              0 -> FLASH_ProgramWord
+        0  FLASH_LAYER_ReadOutProtectionStatus
+       40  FLASH_LAYER_write_n_word
+             40 -> FLASH_ProgramWord
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+       4  ??DataTable1_1
+       4  ??DataTable1_10
+       4  ??DataTable1_11
+       4  ??DataTable1_2
+       4  ??DataTable1_3
+       4  ??DataTable1_4
+       4  ??DataTable1_5
+       4  ??DataTable1_6
+       4  ??DataTable1_7
+       4  ??DataTable1_8
+       4  ??DataTable1_9
+      10  ?Subroutine0
+       4  FLASH_LAYER_ErasePage
+       6  FLASH_LAYER_EraseSector
+       4  FLASH_LAYER_FlashUnlock
+       4  FLASH_LAYER_Flashlock
+     156  FLASH_LAYER_GetSector
+       4  FLASH_LAYER_ProgramWord
+       4  FLASH_LAYER_ReadOutProtectionStatus
+     114  FLASH_LAYER_write_n_word
+       8  mdebugdata
+          mdebugaddr
+
+ 
+   8 bytes in section .bss
+ 354 bytes in section .text
+ 
+ 354 bytes of CODE memory
+   8 bytes of DATA memory
+
+Errors: none
+Warnings: none

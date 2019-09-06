@@ -1,0 +1,544 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:55 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\tpi_drv\si_drv_t #
+#                    pi_access.c                                              #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\tpi_drv\si_drv_t #
+#                    pi_access.c -D S4051A -D DEBUG -D FREE_RTOS -D           #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_drv_tpi_access.lst                                 #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_drv_tpi_access.o                                    #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\driver\tpi_drv\si_drv_tpi_access.c
+      1          //***************************************************************************
+      2          //! @file     si_drv_tpi_access.c
+      3          //! @brief    TPI and Legacy registers access
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1060 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2002-2010, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include "si_tx_component_internal.h"
+     14          #include "si_drv_tpi_access.h"
+     15          
+     16          //-------------------------------------------------------------------------------------------------
+     17          //  Module Instance Data
+     18          //-------------------------------------------------------------------------------------------------
+     19          
+     20          txAccessInstanceRecord_t txAccessInstRec[SII_NUM_TX];
+     21          txAccessInstanceRecord_t *pTxRegAccess = &txAccessInstRec[0];
+     22          
+     23          //-------------------------------------------------------------------------------------------------
+     24          //  Local Service Functions
+     25          //-------------------------------------------------------------------------------------------------
+     26          
+     27          //-------------------------------------------------------------------------------------------------
+     28          //! @brief      Set a page to access legacy registers through an indirect access mechanism.
+     29          //-------------------------------------------------------------------------------------------------
+     30          
+     31          static void SetIndirectLegacyPage(uint8_t currentPage)
+     32          {
+     33              if (pTxRegAccess->previouslyAccessedLegacyPage != currentPage)
+     34              {
+     35                  SiiRegWrite(REG_TPI__REG_SEL, currentPage & MSK_TPI__REG_SEL__PAGE);
+     36                  pTxRegAccess->previouslyAccessedLegacyPage = currentPage;
+     37              }
+     38          }
+     39          
+     40          
+     41          //-------------------------------------------------------------------------------------------------
+     42          //! @brief      Set an offset to access legacy registers through an indirect access mechanism.
+     43          //-------------------------------------------------------------------------------------------------
+     44          
+     45          static void SetIndirectLegacyOffset(uint8_t offset)
+     46          {
+     47              if (pTxRegAccess->previouslyAccessedLegacyOffset != offset)
+     48              {
+     49                  SiiRegWrite(REG_TPI__REG_OFFSET, offset);
+     50                  pTxRegAccess->previouslyAccessedLegacyOffset = offset;
+     51              }
+     52          }
+     53          
+     54          
+     55          //-------------------------------------------------------------------------------------------------
+     56          //! @brief      Extract legacy page local address to be used for indirect accessing.
+     57          //!
+     58          //! @param[in]  fullAddr - 16-bit full address containing a page code and offset.
+     59          //-------------------------------------------------------------------------------------------------
+     60          
+     61          static uint8_t ExtractLegacyPage(uint16_t fullAddr)
+     62          {
+     63              uint8_t page;
+     64          
+     65              switch ( fullAddr & 0xFF00 )
+     66              {
+     67                  default:
+     68                  case TX_PAGE_L0:
+     69                      page = VAL_TPI__REG_SEL__PAGE_L0;
+     70                      break;
+     71          
+     72                  case TX_PAGE_L1:
+     73                      page = VAL_TPI__REG_SEL__PAGE_L1;
+     74                      break;
+     75          
+     76                  case TX_PAGE_2:
+     77                      page = VAL_TPI__REG_SEL__PAGE_L2;
+     78                      break;
+     79              }
+     80          
+     81              return page;
+     82          }
+     83          
+     84          //-------------------------------------------------------------------------------------------------
+     85          //  Module API Functions
+     86          //-------------------------------------------------------------------------------------------------
+     87          
+     88          //-------------------------------------------------------------------------------------------------
+     89          //! @brief      Select Tx device instance in multi-transmitter system.
+     90          //!
+     91          //! @param[in]  device_idx - zero based index of an instance.
+     92          //-------------------------------------------------------------------------------------------------
+     93          
+     94          #if SII_NUM_TX > 1
+     95          void SiiDrvTpiAccessInstanceSet(uint8_t device_idx)
+     96          {
+     97              if(device_idx < SII_NUM_TX)
+     98              {
+     99                  pTxRegAccess = &txAccessInstRec[device_idx];
+    100              }
+    101          }
+    102          #endif // SII_NUM_TX > 1
+    103          
+    104          
+    105          //-------------------------------------------------------------------------------------------------
+    106          //! @brief      Bring TPI access to transmitter into initial operational state.
+    107          //!
+    108          //!             All initial settings, including the software workarounds
+    109          //!             that must be implemented through the legacy registers,
+    110          //!             shall be done in this function.
+    111          //-------------------------------------------------------------------------------------------------
+    112          
+    113          void SiiDrvTpiAccessInit(void)
+    114          {
+    115              // Set non-existing offset and page to never miss the very first setting
+    116              pTxRegAccess->previouslyAccessedLegacyOffset = 0xFFFF;
+    117              pTxRegAccess->previouslyAccessedLegacyPage   = 0xFF;
+    118              // Legacy TPI mode is set by power on
+    119              pTxRegAccess->isTpiMode = false;
+    120          
+    121              // Enable TPI access mode for normal operation
+    122              SiiDrvTpiAccessEnable(true);
+    123          }
+    124          
+    125          
+    126          //-------------------------------------------------------------------------------------------------
+    127          //! @brief      Switch between TPI and Legacy access modes.
+    128          //!
+    129          //!             Underlying the TPI register set is a broader and more complex internal
+    130          //!             register set that is normally hidden from direct access.  This register set
+    131          //!             includes the “legacy” registers that are available for implementation
+    132          //!             of software workarounds and debugging.
+    133          //!
+    134          //! @param[in]  isTpi - true, if TPI mode is selected.
+    135          //-------------------------------------------------------------------------------------------------
+    136          
+    137          void SiiDrvTpiAccessEnable(bool_t isTpi)
+    138          {
+    139              if (isTpi)
+    140              {
+    141                  if (!pTxRegAccess->isTpiMode)
+    142                  {
+    143                      SiiRegWrite(REG_TX_TPI__ENABLE, BIT_TX_TPI__ENABLE);
+    144                      pTxRegAccess->isTpiMode = true;
+    145                  }
+    146              }
+    147              else
+    148              {
+    149                  if (pTxRegAccess->isTpiMode)
+    150                  {
+    151                      SiiRegWrite(REG_TPI__REG_SEL, BIT_TPI__REG_SEL__LEGACY_ENABLE);
+    152                      pTxRegAccess->isTpiMode = false;
+    153                  }
+    154              }
+    155          }
+    156          
+    157          
+    158          //-------------------------------------------------------------------------------------------------
+    159          //! @brief      Write byte to the Legacy registers through a window in TPI page.
+    160          //!
+    161          //!             Uses indirect access method to write a byte to the Legacy registers
+    162          //!             without disabling the TPI mode.
+    163          //!
+    164          //! @param[in]  regAddr     - Legacy register full address including page and offset,
+    165          //! @param[in]  data        - byte to write,
+    166          //-------------------------------------------------------------------------------------------------
+    167          
+    168          void SiiDrvTpiIndirectWrite(uint16_t regAddr, uint8_t data)
+    169          {
+    170              SiiDrvTpiIndirectBlockWrite(regAddr, &data, 1);
+    171          }
+    172          
+    173          //-------------------------------------------------------------------------------------------------
+    174          //! @brief      Read byte from the Legacy registers through a window in TPI page.
+    175          //!
+    176          //!             Uses indirect access method to read a byte to the Legacy registers
+    177          //!             without disabling the TPI mode.
+    178          //!
+    179          //! @param[in]  regAddr     - Legacy register full address including page and offset,
+    180          //! @return     content of the register
+    181          //-------------------------------------------------------------------------------------------------
+    182          
+    183          uint8_t SiiDrvTpiIndirectRead(uint16_t regAddr)
+    184          {
+    185              uint8_t data;
+    186          
+    187              SiiDrvTpiIndirectBlockRead(regAddr, &data, 1);
+    188              return data;
+    189          }
+    190          
+    191          //-------------------------------------------------------------------------------------------------
+    192          //! @brief      Write a block of data to the Legacy registers through a window in TPI page.
+    193          //!
+    194          //!             Uses indirect access method to write data array to the Legacy registers
+    195          //!             without disabling the TPI mode.
+    196          //!
+    197          //! @param[in]  regAddr     - Legacy register full address including page and offset,
+    198          //! @param[in]  pData       - Pointer to an input buffer of bytes,
+    199          //! @param[in]  length      - Length of the input buffer
+    200          //-------------------------------------------------------------------------------------------------
+    201          
+    202          void SiiDrvTpiIndirectBlockWrite(uint16_t regAddr, uint8_t *pData, uint8_t length)
+    203          {
+    204              uint8_t page    = ExtractLegacyPage(regAddr);
+    205              uint8_t offset  = regAddr & 0xFF;
+    206          
+    207              SetIndirectLegacyPage(page);
+    208              for (; length; length--)
+    209              {
+    210                  SetIndirectLegacyOffset(offset);
+    211                  SiiRegWrite(REG_TPI__REG_DATA, *pData);
+    212                  pData++;
+    213                  offset++;
+    214              }
+    215          }
+    216          
+    217          //-------------------------------------------------------------------------------------------------
+    218          //! @brief      Read a block of data to the Legacy registers through a window in TPI page.
+    219          //!
+    220          //!             Uses indirect access method to read data array from the Legacy registers
+    221          //!             without disabling the TPI mode.
+    222          //!
+    223          //! @param[in]  regAddr     - Legacy register full address including page and offset,
+    224          //! @param[in]  pData       - Pointer to an input buffer of bytes,
+    225          //! @param[in]  length      - Length of the input buffer
+    226          //-------------------------------------------------------------------------------------------------
+    227          
+    228          void SiiDrvTpiIndirectBlockRead(uint16_t regAddr, uint8_t *pData, uint8_t length)
+    229          {
+    230              uint8_t page    = ExtractLegacyPage(regAddr);
+    231              uint8_t offset  = regAddr & 0xFF;
+    232          
+    233              SetIndirectLegacyPage(page);
+    234              for (; length; length--)
+    235              {
+    236                  SetIndirectLegacyOffset(offset);
+    237                  *pData = SiiRegRead(REG_TPI__REG_DATA);
+    238                  pData++;
+    239                  regAddr++;
+    240              }
+    241          }
+    242          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       16  SetIndirectLegacyOffset
+             16 -> SiiRegWrite
+       16  SetIndirectLegacyPage
+             16 -> SiiRegWrite
+        8  SiiDrvTpiAccessEnable
+              8 -> SiiRegWrite
+        0  SiiDrvTpiAccessInit
+              0 -> SiiDrvTpiAccessEnable
+       16  SiiDrvTpiIndirectBlockRead
+             16 -> SetIndirectLegacyOffset
+             16 -> SetIndirectLegacyPage
+             16 -> SiiRegRead
+       16  SiiDrvTpiIndirectBlockWrite
+             16 -> SetIndirectLegacyOffset
+             16 -> SetIndirectLegacyPage
+             16 -> SiiRegWrite
+        8  SiiDrvTpiIndirectRead
+              8 -> SiiDrvTpiIndirectBlockRead
+        8  SiiDrvTpiIndirectWrite
+              8 -> SiiDrvTpiIndirectBlockWrite
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable2
+      16  ?Subroutine0
+      30  SetIndirectLegacyOffset
+      32  SetIndirectLegacyPage
+      46  SiiDrvTpiAccessEnable
+      22  SiiDrvTpiAccessInit
+      56  SiiDrvTpiIndirectBlockRead
+      58  SiiDrvTpiIndirectBlockWrite
+      16  SiiDrvTpiIndirectRead
+      12  SiiDrvTpiIndirectWrite
+       4  pTxRegAccess
+       4  txAccessInstRec
+
+ 
+   4 bytes in section .bss
+   4 bytes in section .data
+ 292 bytes in section .text
+ 
+ 292 bytes of CODE memory
+   8 bytes of DATA memory
+
+Errors: none
+Warnings: 1

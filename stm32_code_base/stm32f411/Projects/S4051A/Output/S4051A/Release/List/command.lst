@@ -1,0 +1,1286 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     10/Nov/2014  15:08:52 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\STM32_IAP\src\command.c                      #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\STM32_IAP\src\command.c -D                   #
+#                    __ARM_CORTEX_MX__ -D DEBUG -D FREE_RTOS -D               #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D HOST_MODE_ENABLED -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -D STM32_IAP -D S4051A    #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Release\L #
+#                    ist\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Releas #
+#                    e\Obj\ --debug --endian=little --cpu=Cortex-M4 -e        #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Projects\STM32_IAP\inc #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\I #
+#                    nclude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\C #
+#                    MSIS\Device\ST\STM32F4xx\Include\ -I                     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_HO #
+#                    ST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\HT68F30\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Utilities\Third_Party\efsl\inc\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    fat_fs\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Project #
+#                    s\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utiliti #
+#                    es\mainstream_v1\stm32f411\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\it\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\APP_SRC\I #
+#                    nclude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\APP_SRC\ -Ohz -I  #
+#                    "C:\Program Files (x86)\IAR Systems\Embedded Workbench   #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Release\List\c #
+#                    ommand.lst                                               #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Release\Obj\co #
+#                    mmand.o                                                  #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Projects\STM32_IAP\src\command.c
+      1          /**
+      2            ******************************************************************************
+      3            * @file    command.c
+      4            * @author  MCD Application Team
+      5            * @version V1.0.0
+      6            * @date    22/07/2011
+      7            * @brief   This file provides all the IAP command functions.
+      8            ******************************************************************************
+      9            * @attention
+     10            *
+     11            * THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
+     12            * WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE
+     13            * TIME. AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY
+     14            * DIRECT, INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING
+     15            * FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE
+     16            * CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
+     17            *
+     18            * <h2><center>&copy; COPYRIGHT 2011 STMicroelectronics</center></h2>
+     19            ******************************************************************************
+     20            */
+     21          
+     22          /* Includes ------------------------------------------------------------------*/
+     23          #include "command.h"
+     24          #include "flash_layer.h"
+     25          #include "usbh_core.h"
+     26          #include "ff.h"       /* FATFS */
+     27          
+     28          //! Smith implemets @{
+     29          #include "HT68F30.h"
+     30          #include "ext_flash_driver.h"
+     31          #include "SYSTEM_DEFAULT_PARMS.h"
+     32          //@}
+     33          
+     34          #define UPGRAGE_FILE "0:fwupdate.bin"
+     35          
+     36          #if defined ( S3851A )
+     37          const uint8_t PID[PES_PID_LEN] = "S3851A";
+     38          #elif defined ( S4051A )
+     39          const uint8_t PID[PES_PID_LEN] = "S4051A";
+     40          #elif defined ( S3851C )
+     41          const uint8_t PID[PES_PID_LEN] = "S3851C";
+     42          #elif defined ( S4551A )
+     43          const uint8_t PID[PES_PID_LEN] = "S4551A";
+     44          #endif
+     45          
+     46          #define BOOT_LOADER_VERSION "1.0.0" 
+     47          
+     48          typedef enum {
+     49          	IAP_STATE_PROJECT_ID_IDENTIFY = 0, 
+     50          	IAP_STATE_FLASH_PROGRAM,
+     51          	IAP_STATE_EXT_FLASH_PROGRAM,
+     52          	IAP_STATE_PROGRAM_FAIL, 
+     53          	IAP_STATE_PROGRAM_COMPLETE,
+     54          }IAP_State;  
+     55          
+     56          extern FATFS fatfs;
+     57          extern USB_OTG_CORE_HANDLE          USB_OTG_Core;   //Jerry add
+     58          extern uint8_t CMD_index;
+     59          extern uint8_t joystick_use;
+     60          static uint8_t RAM_Buf[PAGE_SIZE] = {0xFF};
+     61          
+     62          FIL filefatfs;
+     63          PES *pPES;
+     64          
+     65          uint8_t mPES[20] = {0};
+     66          uint32_t mSeekPointer = 0;
+     67          uint32 mPayloadSize = 0;
+     68          uint8_t mCheckSum = 0;
+     69          uint8_t calCheckSum=0;
+     70          uint32_t mDebugTrace = 0;
+     71          uint8_t mGroupID = 0xFF;
+     72          uint8_t mModelIndex = 0xFF;
+     73          
+     74          //static uint32_t tmp_program_counter = 0x00, tmp_read_size = 0x00 , ram_address = 0x00;
+     75          static uint32_t Last_PGAddress = APPLICATIONADDRESS;
+     76          uint8_t  bUpdateExtFlash = FALSE;
+     77          static uint32_t mReadBinSize = 0;
+     78          
+     79          
+     80          /* Private functions ---------------------------------------------------------*/
+     81          FRESULT COMMAND_isCorrectPES(void);
+     82          FRESULT COMMAND_checkProjectID(void);
+     83          FRESULT COMMAND_ProgramFlash(void);
+     84          
+     85          //________________________________________________________________________________________
+     86          /**
+     87            * @brief IAP Read all flash memory
+     88            * @param  None
+     89            * @retval None
+     90            */
+     91          void COMMAND_UPLOAD(void)
+     92          {
+     93          	
+     94          	//! The feature is unnecessary	Smith mark@{
+     95          #if 0
+     96            __IO uint32_t address = FLASH_STARTADDRESS;
+     97            __IO uint32_t counter_read = 0x00;
+     98            uint32_t tmp_counter = 0x00, index_offset = 0x00;
+     99            FlagStatus readoutstatus = SET;
+    100          
+    101            /* Get the read out protection status */
+    102            readoutstatus = FLASH_LAYER_ReadOutProtectionStatus();
+    103          
+    104            if (readoutstatus == RESET)
+    105            {
+    106              /* Remove UPLOAD file if exist on flash disk */
+    107              rmfile(&efs.myFs, "UPLOAD.BIN");
+    108          
+    109              /* Init written byte counter */
+    110              index_offset = 0x00;
+    111          
+    112              /* Open binary file to write on it */
+    113              if ((HCD_IsDeviceConnected(&USB_OTG_FS_dev) == 1) && (file_fopen(&file, &efs.myFs, "UPLOAD.BIN", 'w') == 0))
+    114              {
+    115                /* Clear LCD msg */
+    116                USBH_USR_LCDClearPart(90, 90);
+    117          
+    118                /* Display LCD message */
+    119                LCD_DisplayStringLine(80, (uint8_t *)MSG_UPLOAD_GOING);
+    120          
+    121                /* Read flash memory */
+    122                while ((index_offset != FLASH_SIZE) && (HCD_IsDeviceConnected(&USB_OTG_FS_dev) == 1))
+    123                {
+    124                  for (counter_read = 0; counter_read < BUFFER_SIZE; counter_read++)
+    125                  {
+    126                    /* Check the read bytes versus the end of flash */
+    127                    if (index_offset + counter_read != FLASH_SIZE)
+    128                    {
+    129                      tmp_counter = counter_read;
+    130                      RAM_Buf[tmp_counter] = (*(uint8_t*)(address++));
+    131                    }
+    132                    /* In this case all flash was read */
+    133                    else
+    134                    {
+    135                      break;
+    136                    }
+    137                  }
+    138          
+    139                  /* Write buffer to file */
+    140                  file_write(&file, counter_read, RAM_Buf);
+    141          
+    142                  /* Number of byte written  */
+    143                  index_offset = index_offset + counter_read;
+    144                }
+    145          
+    146                /* Display LCD message */
+    147                LCD_DisplayStringLine(80, (uint8_t *)MSG_UPLOAD_DONE);
+    148          
+    149                /* Close file and filesystem */
+    150                file_fclose(&file);
+    151                fs_umount(&efs.myFs);
+    152              }
+    153            }
+    154            else
+    155            {
+    156              /* Display LCD message ROP active */
+    157              LCD_DisplayStringLine(80, (uint8_t *)MSG_ROP1);
+    158              LCD_DisplayStringLine(90, (uint8_t *)MSG_ROP2);
+    159            }
+    160          #endif
+    161          	//!	@}
+    162            
+    163          }
+    164          
+    165          /**
+    166            * @brief  IAP write memory
+    167            * @param  None
+    168            * @retval None
+    169            */
+    170          void COMMAND_DOWNLOAD(void)
+    171          {
+    172          #if 0/*Smith mark for firmware upgrading identify 2013/3/22  
+    173          	__IO uint8_t index_struct = 0x00, status = NEXT_MENU;
+    174          	__IO uint32_t erase_address = 0x00;
+    175           
+    176          	uint8_t BlinkingCnt = 0;
+    177          	bool bInvert = FALSE;
+    178              
+    179              FRESULT res;
+    180              FILINFO fno;
+    181              DIR dir;
+    182          	
+    183          	res = f_opendir(&dir, "0:/");
+    184          	if (res == FR_OK) 
+    185          	{
+    186          	    while(HCD_IsDeviceConnected(&USB_OTG_Core)) 
+    187          	    {
+    188          			res = f_readdir(&dir, &fno);
+    189          			if (res != FR_OK || fno.fname[0] == 0) 
+    190          			{
+    191          				//Can not open directory
+    192          				while ( BlinkingCnt <= 20)
+    193          				{
+    194          					bInvert = ! bInvert;
+    195           
+    196          					HT68F30_LightBar_USB_StateError( bInvert );
+    197           
+    198          					/* 0.1 seconds delay */
+    199          					USB_OTG_BSP_mDelay(100);
+    200          
+    201          					BlinkingCnt ++;
+    202          				}
+    203          				HT68F30_LightBar_USB_StateError( TRUE );
+    204          				BlinkingCnt = 0;
+    205          				break;
+    206          			}
+    207          	    }
+    208          	}
+    209          
+    210                /* Register work area for logical drives */
+    211              f_mount(0, &fatfs); /*The api has been call on last layer*/
+    212              if(f_open(&filefatfs, "0:upgrade.bin",FA_OPEN_EXISTING | FA_READ) == FR_OK)
+    213              { 
+    214          		HT68F30_LightBar_USB_StateError( FALSE );	/*Upgrade.bin has been */
+    215          
+    216          		//if (fileR.FileSize > FLASH_SIZE - IAP_SIZE)
+    217          		if (filefatfs.fsize > FLASH_SIZE - IAP_SIZE)
+    218          		{
+    219          			/*Flash size error !!*/
+    220          
+    221          		}
+    222          		else
+    223                  {
+    224          			//! MCU is upgrading @{
+    225          			HT68F30_LightBar_USB_isUpgrading( );
+    226          			//! @}
+    227          
+    228                      /* Erase necessary page to download image */
+    229                      for ((erase_address = APPLICATIONADDRESS); ((erase_address < (APPLICATIONADDRESS + filefatfs.fsize)) && (erase_address < FLASH_ENDADDRESS));(erase_address = erase_address + PAGE_SIZE))
+    230                      {
+    231                          if (FLASH_LAYER_ErasePage (erase_address) != FLASH_COMPLETE)
+    232                          {
+    233                              while ( BlinkingCnt <= 20)
+    234                              {
+    235                                  bInvert = ! bInvert;
+    236          
+    237                                  HT68F30_LightBar_USB_StateError( bInvert );
+    238          
+    239                                  /* 0.1 seconds delay */
+    240                                  USB_OTG_BSP_mDelay(10);
+    241          
+    242                                  BlinkingCnt ++;
+    243                              }
+    244          
+    245                              HT68F30_LightBar_USB_StateError( FALSE );
+    246                              BlinkingCnt = 0;
+    247          
+    248                              while (1);
+    249                          }
+    250                      }
+    251          
+    252                      /* Program flash memory */
+    253                      COMMAND_ProgramFlashMemory();
+    254          
+    255                      //! MCU upgrading has finished @{
+    256                      HT68F30_LightBar_USB_UpgradingDone( );
+    257                      USB_OTG_BSP_mDelay(100);
+    258                      //! @}
+    259          
+    260                      /* Close file and filesystem */
+    261                      //file_fclose(&fileR);
+    262                      f_close(&filefatfs);
+    263                      f_mount(0, NULL); 
+    264          
+    265                      /*Application upgrading has been done; Sof treset*/
+    266                      COMMAND_JUMP();
+    267          
+    268                }
+    269          
+    270              }
+    271              else
+    272              {
+    273          			/* if upgrade.bin cannot be found, here is running; Smith*/
+    274          			while ( BlinkingCnt <= 20)
+    275          			{
+    276          				bInvert = ! bInvert;
+    277          			
+    278          				HT68F30_LightBar_USB_StateError( bInvert );
+    279          			
+    280          				/* 0.1 seconds delay */
+    281          				USB_OTG_BSP_mDelay(100);
+    282          
+    283          				BlinkingCnt ++;
+    284          			}
+    285          
+    286          			HT68F30_LightBar_USB_StateError( FALSE );
+    287          			BlinkingCnt = 0;
+    288          			if (Check_PowerKey_status() == 1)
+    289          			{
+    290          				//JUMP_APP();	//This is Old FW upgrade behavior nothing to do.
+    291          			}
+    292          			else
+    293          			{
+    294          				COMMAND_JUMP();
+    295          			}
+    296          			
+    297              }
+    298          #endif 
+    299          
+    300          #if 0
+    301          	/* Get the read out protection status */
+    302          	if (ls_openDir(&list, &(efs.myFs), "/") != 0)
+    303          	{
+    304          		//Can not open directory
+    305          		while ( BlinkingCnt <= 20)
+    306          		{
+    307          			bInvert = ! bInvert;
+    308          		
+    309          			HT68F30_LightBar_USB_StateError( bInvert );
+    310          		
+    311          			/* 0.1 seconds delay */
+    312          			USB_OTG_BSP_mDelay(100);
+    313          
+    314          			BlinkingCnt ++;
+    315          		}
+    316          		HT68F30_LightBar_USB_StateError( TRUE );
+    317          		BlinkingCnt = 0;
+    318          	}
+    319          	else
+    320          	{
+    321          		//!	Program flash	by Smith@{
+    322          		/* Open the binary file to be downloaded */
+    323                  if (file_fopen(&fileR, &efs.myFs, (char*)&FileName[0], 'r') == 0)
+    324                  {
+    325          			HT68F30_LightBar_USB_StateError( FALSE );	/*Upgrade.bin has been */
+    326          
+    327          		
+    328          			if (fileR.FileSize > FLASH_SIZE - IAP_SIZE)
+    329          			{
+    330          				/*Flash size error !!*/
+    331          			
+    332          			}
+    333          			else
+    334          			{
+    335          				//! MCU is upgrading @{
+    336          				HT68F30_LightBar_USB_isUpgrading( );
+    337          				//! @}
+    338          			
+    339          	            /* Erase necessary page to download image */
+    340          	            for (erase_address = APPLICATIONADDRESS; (erase_address < (APPLICATIONADDRESS + fileR.FileSize)) && (erase_address < FLASH_ENDADDRESS); \
+    341          	                 erase_address = erase_address + PAGE_SIZE)
+    342          	            {
+    343          					if (FLASH_LAYER_ErasePage (erase_address) != FLASH_COMPLETE)
+    344          					{
+    345          						while ( BlinkingCnt <= 20)
+    346          						{
+    347          							bInvert = ! bInvert;
+    348          
+    349          							HT68F30_LightBar_USB_StateError( bInvert );
+    350          
+    351          							/* 0.1 seconds delay */
+    352          							USB_OTG_BSP_mDelay(100);
+    353          
+    354          							BlinkingCnt ++;
+    355          						}
+    356          
+    357          						HT68F30_LightBar_USB_StateError( FALSE );
+    358          						BlinkingCnt = 0;
+    359          						
+    360          						while (1);
+    361          					}
+    362          	            }
+    363          
+    364          	            /* Program flash memory */
+    365          	            COMMAND_ProgramFlashMemory();
+    366          
+    367          				//! MCU upgrading has finished @{
+    368          				HT68F30_LightBar_USB_UpgradingDone( );
+    369          				USB_OTG_BSP_mDelay(1000);
+    370          				//! @}
+    371          
+    372          	            /* Close file and filesystem */
+    373          	            file_fclose(&fileR);
+    374          
+    375          				/*Application upgrading has been done; Sof treset*/
+    376          				COMMAND_JUMP();
+    377                    }
+    378          			
+    379          		  
+    380                  }
+    381          		else
+    382          		{
+    383          			/* if upgrade.bin cannot be found, here is running; Smith*/
+    384          			while ( BlinkingCnt <= 20)
+    385          			{
+    386          				bInvert = ! bInvert;
+    387          			
+    388          				HT68F30_LightBar_USB_StateError( bInvert );
+    389          			
+    390          				/* 0.1 seconds delay */
+    391          				USB_OTG_BSP_mDelay(100);
+    392          
+    393          				BlinkingCnt ++;
+    394          			}
+    395          
+    396          			HT68F30_LightBar_USB_StateError( FALSE );
+    397          			BlinkingCnt = 0;
+    398          		}
+    399          		//!	@}
+    400          	}
+    401              #endif
+    402          }
+    403          
+    404          #if defined ( EXT_FLASH )
+    405          FRESULT COMMAND_ProgramExtFlashMemory( void )
+    406          {
+    407              uint32_t address = 0;
+    408              uint32_t read_size = 0x00;
+    409              uint32_t page_num = 0;
+    410             	uint32_t insufficient_page = 0;
+    411          	uint32_t i = 0;
+    412              FRESULT res;
+    413              uint32_t extflashPaySize = 0;
+    414              
+    415              
+    416              if ( ( mPayloadSize - (FLASH_SIZE-IAP_SIZE) ) > EXT_FLASH_ENDADDRESS )
+    417              {
+    418                  return FR_INVALID_OBJECT; 
+    419              }
+    420          
+    421              res = f_open(&filefatfs, UPGRAGE_FILE, FA_OPEN_EXISTING | FA_READ);
+    422          	if ( res != FR_OK )
+    423          		return FR_DISK_ERR;
+    424              
+    425          
+    426              extflashPaySize = mPayloadSize - (FLASH_SIZE-IAP_SIZE);
+    427          
+    428               /*chip earse*/
+    429              sFLASH_EraseChip( );
+    430              HT68F30_LightBar_EraseExtFlash( );
+    431          
+    432              mSeekPointer = (mSeekPointer+(FLASH_SIZE-IAP_SIZE));
+    433              mDebugTrace = mSeekPointer;
+    434          
+    435              res = f_lseek(&filefatfs, mSeekPointer);
+    436              if ( res != FR_OK )
+    437              {
+    438                  return FR_DISK_ERR; 
+    439              }
+    440          
+    441          
+    442          	page_num = (extflashPaySize/PAGE_SIZE);
+    443          	mDebugTrace = page_num;
+    444          	if ( page_num != 0 )
+    445          	{
+    446          		for ( i = 0; i < page_num; i++ )
+    447          		{
+    448          			res = f_read(&filefatfs, RAM_Buf, PAGE_SIZE, (void *)&read_size);
+    449          			if((read_size != 0) && (res == FR_OK)) 
+    450          			{
+    451                          sFLASH_WriteBuffer(RAM_Buf, &address, read_size );
+    452          			}
+    453                     
+    454          		}
+    455          
+    456          	}
+    457          
+    458          	insufficient_page = (extflashPaySize%PAGE_SIZE);
+    459          	mDebugTrace = insufficient_page;
+    460          	if ( insufficient_page != 0 )
+    461          	{
+    462          		res = f_read(&filefatfs, RAM_Buf, insufficient_page, (void *)&read_size);
+    463          		mDebugTrace = read_size;
+    464          		if((read_size != 0) && (res == FR_OK)) 
+    465          		{
+    466                      sFLASH_WriteBuffer(RAM_Buf, &address, read_size );
+    467          		}
+    468          	}
+    469          
+    470              HT68F30_LightBar_ProgramExtFlash( );
+    471          
+    472          	return FR_OK; 
+    473          
+    474          }
+    475          #endif
+    476          
+    477          
+    478          /**
+    479            * @brief  IAP jump to user program
+    480            * @param  None
+    481            * @retval None
+    482            */
+    483          void COMMAND_JUMP(void)
+    484          {
+    485          	/* Software reset */
+    486          	NVIC_SystemReset();
+    487          }
+    488          
+    489          /**
+    490            * @brief  COMMAND_ProgramFlashMemory
+    491            * @param  None
+    492            * @retval None
+    493            */
+    494          FRESULT COMMAND_ProgramFlashMemory(void)
+    495          {
+    496          
+    497          #if 0 /*debug*/
+    498          	uint32_t read_size = 0x00;
+    499          	uint32_t page_num = 0;
+    500          	uint32_t insufficient_page = 0;
+    501          	uint32_t i = 0;
+    502          
+    503          	FRESULT res;
+    504          	FLASH_Status flash_status = FLASH_COMPLETE;
+    505          
+    506          	res = f_lseek(&filefatfs, mSeekPointer);
+    507          
+    508          	if ( res != FR_OK )
+    509          		return FR_DISK_ERR; 
+    510          
+    511            
+    512          	/* Erase address init */
+    513          	Last_PGAddress = APPLICATIONADDRESS;
+    514          
+    515          
+    516          	page_num = mPayloadSize/PAGE_SIZE;
+    517          	mDebugTrace = page_num;
+    518          	if ( page_num != 0 )
+    519          	{
+    520          		for ( i = 0; i < page_num; i++ )
+    521          		{
+    522          			res = f_read(&filefatfs, RAM_Buf, PAGE_SIZE, (void *)&read_size);
+    523          			if((read_size != 0) && (res == FR_OK)) 
+    524          			{
+    525          				flash_status = FLASH_LAYER_write_n_word(&Last_PGAddress, RAM_Buf, read_size);
+    526          				if ( flash_status != FLASH_COMPLETE )
+    527          				{
+    528          					while (1);
+    529          					return FR_DISK_ERR;
+    530          				}
+    531          			}
+    532          		}
+    533          
+    534          	}
+    535          
+    536          	insufficient_page = mPayloadSize%PAGE_SIZE;
+    537          
+    538          	mDebugTrace = insufficient_page;
+    539          	if ( insufficient_page != 0 )
+    540          	{
+    541          		res = f_read(&filefatfs, RAM_Buf, insufficient_page, (void *)&read_size);
+    542          
+    543          		mDebugTrace = read_size;
+    544          		if((read_size != 0) && (res == FR_OK)) 
+    545          		{
+    546          			flash_status = FLASH_LAYER_write_n_word(&Last_PGAddress, RAM_Buf, read_size);
+    547          		
+    548          			if ( flash_status != FLASH_COMPLETE )
+    549          			{
+    550          				while(1);
+    551          				return FR_DISK_ERR;
+    552          			}
+    553          		}
+    554          	}
+    555          #endif 
+    556          	return FR_OK; 
+    557          	
+    558          }
+    559          
+    560          FRESULT COMMAND_isCorrectPES(void)
+    561          {
+    562          	FRESULT res = FR_OK;
+    563          	bool isMatchedPID = FALSE;
+    564          	FRESULT flseekTag = FR_OK;
+    565          	uint8 i = 0;
+    566          
+    567          	mSeekPointer = 0; /*Initiate seek pointer*/
+    568          	mReadBinSize = 0;
+    569          
+    570          	while( flseekTag == FR_OK )
+    571          	{
+    572          		flseekTag = f_lseek(&filefatfs, mSeekPointer);
+    573          	
+    574          		if (f_read(&filefatfs, (byte *)&mPES, 20, (void *)&mReadBinSize ) == FR_OK )
+    575          		{
+    576          			pPES = (PES*)&mPES;
+    577          			mPayloadSize = ((pPES->payload_size[0]<<16)|(pPES->payload_size[1]<<8)|(pPES->payload_size[2]));
+    578          		}
+    579          		else
+    580          		{
+    581          			return FR_INVALID_NAME;
+    582          		}
+    583          
+    584          		if( ( pPES->start_code[0] != 0x24 ) || ( pPES->start_code[1] != 0x89 ) )
+    585          		{
+    586          			mSeekPointer = (mSeekPointer + PES_HEADER_LEN + mPayloadSize); /*search next start code*/
+    587          
+    588          			if ( mSeekPointer > filefatfs.fsize ) /*If seeker is greater than file size, return*/
+    589          			{
+    590          				return FR_NO_FILE;
+    591          			}
+    592          		}
+    593          
+    594          		/*check PID*/
+    595          		for( i = 0; i < PES_PID_LEN; i++ )
+    596          		{
+    597          			 if (pPES->pid[i] != PID[i] )
+    598          			 {
+    599          				isMatchedPID = FALSE;
+    600          				break;
+    601          			 }
+    602          
+    603          			 isMatchedPID = TRUE;
+    604          		}
+    605          
+    606          		if ( isMatchedPID == FALSE )
+    607          		{
+    608          			mSeekPointer = (mSeekPointer + PES_HEADER_LEN + mPayloadSize) ; /*search next PID*/
+    609          		}
+    610          		else if ( isMatchedPID == TRUE )
+    611          		{
+    612          			mSeekPointer = (mSeekPointer + PES_HEADER_LEN);
+    613          
+    614          			/*check payload size*/
+    615          			if ( mPayloadSize > filefatfs.fsize )
+    616          				return FR_NO_FILE;
+    617          
+    618          			if ( mPayloadSize == 0 )
+    619          				return FR_NO_FILE;
+    620          
+    621                      if ( mPayloadSize > ( FLASH_SIZE - IAP_SIZE) )
+    622                      {
+    623                          bUpdateExtFlash = TRUE;
+    624                      }
+    625          			
+    626          			
+    627                      /*TBD Verify Checksum*/
+    628                      mCheckSum =  pPES->payload_checksum;
+    629                      if( COMMAND_isCorrectCheckSum(mCheckSum) != TRUE)
+    630                      {
+    631                          return FR_NO_FILE;  //The bin file has been detected.
+    632                      }
+    633                      else
+    634                      {
+    635                          return res;
+    636                      }
+    637          		}
+    638          	}
+    639          
+    640          	return res;
+    641          	
+    642          }
+    643          
+    644          bool COMMAND_isCorrectCheckSum(uint8_t CheckSum)
+    645          {
+    646                 uint32_t read_size = 0x00,page_num = 0,insufficient_page = 0;
+    647                 uint32_t i ,j;
+    648                 FRESULT res;
+    649          
+    650          
+    651             /********************************************************
+    652                          	Calcuation CheckSum
+    653              *********************************************************/
+    654          	page_num = mPayloadSize/PAGE_SIZE;
+    655          	if ( page_num != 0 )
+    656          	{
+    657          		for ( i = 0; i < page_num; i++ )
+    658          		{
+    659          			res = f_read(&filefatfs, RAM_Buf, PAGE_SIZE, (void *)&read_size);
+    660                               if(res != FR_OK)
+    661                                      return FALSE;
+    662                                  
+    663                              for(j=0 ; j<PAGE_SIZE ;j++){
+    664                                  calCheckSum = calCheckSum ^ RAM_Buf[j];
+    665                              }
+    666          
+    667                          }
+    668          
+    669          	}
+    670          
+    671          	insufficient_page = mPayloadSize%PAGE_SIZE;
+    672          	if ( insufficient_page != 0 )
+    673          	{
+    674                  res = f_read(&filefatfs, RAM_Buf, insufficient_page, (void *)&read_size);
+    675                  if(res != FR_OK)
+    676                      return FALSE;
+    677          
+    678                  for(j=0 ; j<insufficient_page ;j++){
+    679                      calCheckSum = calCheckSum ^ RAM_Buf[j];
+    680                  }
+    681              }
+    682              
+    683              /********************************************************
+    684                               	Compare CheckSum
+    685               *********************************************************/
+    686              if(CheckSum == calCheckSum)
+    687                  return TRUE;
+    688          
+    689              return FALSE;
+    690          }
+    691          
+    692          
+    693          FRESULT COMMAND_checkProjectID(void)
+    694          {
+    695              FRESULT res = FR_OK;
+    696              FILINFO fno;
+    697              DIR dir;
+    698          
+    699          	uint8_t BlinkingCnt = 0;
+    700          	bool bInvert = FALSE;
+    701          	
+    702          	res = f_opendir(&dir, "0:/");
+    703          	if (res == FR_OK) 
+    704          	{
+    705          	    while(HCD_IsDeviceConnected(&USB_OTG_Core)) 
+    706          	    {
+    707          			res = f_readdir(&dir, &fno);
+    708          			if (res != FR_OK || fno.fname[0] == 0) 
+    709          			{
+    710          				//Can not open directory
+    711          				while ( BlinkingCnt <= 20)
+    712          				{
+    713          					bInvert = ! bInvert;
+    714          
+    715          #if 0 /*Smith debug*/
+    716          					HT68F30_LightBar_USB_StateError( bInvert );
+    717          #endif 					
+    718          
+    719          					/* 0.1 seconds delay */
+    720          					USB_OTG_BSP_mDelay(100);
+    721          
+    722          					BlinkingCnt ++;
+    723          				}
+    724          
+    725          #if 0   /*Smith debug*/				
+    726          				HT68F30_LightBar_USB_StateError( TRUE );
+    727          #endif				
+    728          				BlinkingCnt = 0;
+    729          			
+    730          				break;
+    731          			}
+    732          	    }
+    733          	}
+    734          	else
+    735          	{
+    736          		return res;
+    737          	}
+    738          
+    739          	res = f_open(&filefatfs, UPGRAGE_FILE, FA_OPEN_EXISTING | FA_READ);
+    740              if( res == FR_OK)
+    741              { 
+    742          		if( COMMAND_isCorrectPES() != FR_OK )
+    743          		{
+    744          			f_close(&filefatfs);
+    745          			f_mount(0, NULL); 
+    746          
+    747          			return FR_INVALID_NAME; 
+    748          		}
+    749              }
+    750          
+    751          	return res;
+    752          }
+    753          
+    754          #if defined ( STM32F10X_CL )
+    755          FRESULT COMMAND_EraseInternalFlash(void)
+    756          {
+    757              __IO uint32_t erase_address = 0x00;
+    758              uint8_t BlinkingCnt = 0;
+    759          	bool bInvert = FALSE;
+    760          	FRESULT res;
+    761          
+    762              /* Erase necessary page to download image */
+    763              for ((erase_address = APPLICATIONADDRESS); erase_address < FLASH_ENDADDRESS;(erase_address += PAGE_SIZE))
+    764              {
+    765                  if (FLASH_LAYER_ErasePage (erase_address) != FLASH_COMPLETE)
+    766                  {
+    767                      while ( BlinkingCnt <= 20)
+    768                      {
+    769                          bInvert = ! bInvert;
+    770          
+    771          #if 0   /*Smith debug*/				
+    772                          HT68F30_LightBar_USB_StateError( bInvert );
+    773          #endif                
+    774          
+    775                          /* 0.1 seconds delay */
+    776                          USB_OTG_BSP_mDelay(10);
+    777          
+    778                          BlinkingCnt ++;
+    779                      }
+    780          
+    781          #if 0   /*Smith debug*/				
+    782                      HT68F30_LightBar_USB_StateError( FALSE );
+    783          #endif
+    784          
+    785                      BlinkingCnt = 0;
+    786          		
+    787                  	return FR_DISK_ERR;    
+    788                  }
+    789              }
+    790          
+    791          #if 0 /*Smith debug*/
+    792              HT68F30_LightBar_EraseInternalFlash();
+    793          #endif    
+    794          
+    795              return FR_OK;
+    796          
+    797          }
+    798          #endif
+    799          
+    800          #if defined ( STM32F40_41xxx )
+    801          FRESULT COMMAND_EraseInternalFlash(void)
+    802          {
+    803              __IO uint32_t erase_address = 0x00;
+    804          
+    805              uint32_t uwStartSector = 0;
+    806              uint32_t uwEndSector = 0;
+    807              uint32_t uwSectorCounter = 0;
+    808          
+    809              uint8_t BlinkingCnt = 0;
+    810              bool bInvert = FALSE;
+    811          
+    812              /* Get the number of the start and end sectors */
+    813              uwStartSector = FLASH_LAYER_GetSector(APPLICATIONADDRESS);
+    814              uwEndSector = FLASH_LAYER_GetSector(FLASH_ENDADDRESS);
+    815          
+    816              /* Strat the erase operation */
+    817              uwSectorCounter = uwStartSector;
+    818          
+    819              while (uwSectorCounter <= uwEndSector) 
+    820              {
+    821                  /* Device voltage range supposed to be [2.7V to 3.6V], the operation will
+    822                     be done by word */ 
+    823                  if (FLASH_EraseSector(uwSectorCounter, VoltageRange_3) != FLASH_COMPLETE)
+    824                  { 
+    825                      /* Error occurred while sector erase. User can add here some code to deal with this error  */
+    826                      while ( BlinkingCnt <= 20)
+    827                      {
+    828                          bInvert = ! bInvert;
+    829          
+    830          #if 0   /*Smith debug*/				
+    831                          HT68F30_LightBar_USB_StateError( bInvert );
+    832          #endif                
+    833          
+    834                          /* 0.1 seconds delay */
+    835                          USB_OTG_BSP_mDelay(10);
+    836          
+    837                          BlinkingCnt ++;
+    838                      }
+    839          
+    840          #if 0   /*Smith debug*/				
+    841                      HT68F30_LightBar_USB_StateError( FALSE );
+    842          #endif
+    843                      BlinkingCnt = 0;
+    844                  
+    845                      return FR_DISK_ERR;    
+    846                  }
+    847                  
+    848                  /* jump to the next sector */
+    849                  if (uwSectorCounter == FLASH_Sector_11)
+    850                  {
+    851                    uwSectorCounter += 40;
+    852                  } 
+    853                  else 
+    854                  {
+    855                    uwSectorCounter += 8;
+    856                  }
+    857              }
+    858          
+    859          
+    860          #if 0 /*Smith debug*/
+    861              HT68F30_LightBar_EraseInternalFlash();
+    862          #endif    
+    863          
+    864              return FR_OK;
+    865          
+    866          }
+    867          #endif
+    868          
+    869          FRESULT COMMAND_ProgramFlash(void)
+    870          {
+    871              uint32_t read_size = 0x00;
+    872              uint32_t page_num = 0;
+    873              uint32_t insufficient_page = 0;
+    874              uint32_t i = 0;
+    875          
+    876              FRESULT res;
+    877              FLASH_Status flash_status = FLASH_COMPLETE;
+    878              uint8_t BlinkingCnt = 0;
+    879          	bool bInvert = FALSE;
+    880          
+    881          
+    882          	res = f_open(&filefatfs, UPGRAGE_FILE, FA_OPEN_EXISTING | FA_READ);
+    883          	if ( res != FR_OK )
+    884          		return FR_DISK_ERR;
+    885          
+    886          
+    887          #if 0
+    888          	if ( (mPayloadSize + APPLICATIONADDRESS) > FLASH_ENDADDRESS )
+    889          		return FR_INVALID_OBJECT;
+    890          #endif 
+    891          
+    892              COMMAND_EraseInternalFlash();
+    893          
+    894              res = f_lseek(&filefatfs, mSeekPointer);
+    895              if ( res != FR_OK )
+    896                  return FR_DISK_ERR; 
+    897              
+    898              /* Erase address init */
+    899              Last_PGAddress = APPLICATIONADDRESS;
+    900          
+    901              /*
+    902                  1. ((FLASH_SIZE-IAP_SIZE)/PAGE_SIZE)
+    903                  2. (mPayloadSize)/PAGE_SIZE;
+    904          
+    905              */
+    906              
+    907              page_num = (FLASH_SIZE-IAP_SIZE)/PAGE_SIZE;
+    908              mDebugTrace = page_num;
+    909              if ( page_num != 0 )
+    910              {
+    911                  for ( i = 0; i < page_num; i++ )
+    912                  {
+    913                      res = f_read(&filefatfs, RAM_Buf, PAGE_SIZE, (void *)&read_size);
+    914                      if((read_size != 0) && (res == FR_OK)) 
+    915                      {
+    916                          flash_status = FLASH_LAYER_write_n_word(&Last_PGAddress, RAM_Buf, read_size);
+    917                          if ( flash_status != FLASH_COMPLETE )
+    918                          {
+    919                              f_close(&filefatfs);
+    920                              f_mount(0, NULL); 
+    921                              
+    922                              while (1)
+    923                              {
+    924                                  while ( BlinkingCnt <= 20)
+    925                                  {
+    926                                      bInvert = ! bInvert;
+    927          
+    928          #if 0
+    929                                      HT68F30_LightBar_USB_StateError( bInvert );
+    930          #endif                            
+    931          
+    932                                      /* 0.1 seconds delay */
+    933                                      USB_OTG_BSP_mDelay(100);
+    934          
+    935                                      BlinkingCnt ++;
+    936                                  }
+    937                                  BlinkingCnt = 0;
+    938                              }
+    939          
+    940                          }
+    941                      }
+    942                  }
+    943          
+    944              }
+    945          
+    946              /*
+    947                  1. ((FLASH_SIZE-IAP_SIZE)%PAGE_SIZE)
+    948                  2. mPayloadSize%PAGE_SIZE;
+    949          
+    950              */
+    951              
+    952              insufficient_page =  ((FLASH_SIZE-IAP_SIZE)%PAGE_SIZE);
+    953          
+    954              mDebugTrace = insufficient_page;
+    955              if ( insufficient_page != 0 )
+    956              {
+    957                  res = f_read(&filefatfs, RAM_Buf, insufficient_page, (void *)&read_size);
+    958          
+    959                  mDebugTrace = read_size;
+    960                  if((read_size != 0) && (res == FR_OK)) 
+    961                  {
+    962                      flash_status = FLASH_LAYER_write_n_word(&Last_PGAddress, RAM_Buf, read_size);
+    963                  
+    964                      if ( flash_status != FLASH_COMPLETE )
+    965                      {
+    966                          f_close(&filefatfs);
+    967                          f_mount(0, NULL); 
+    968                          
+    969                          while ( BlinkingCnt <= 20)
+    970                          {
+    971                              bInvert = ! bInvert;
+    972          
+    973          #if 0   /*Smith debug*/				
+    974                              HT68F30_LightBar_USB_StateError( bInvert );
+    975          #endif                    
+    976          
+    977                              /* 0.1 seconds delay */
+    978                              USB_OTG_BSP_mDelay(100);
+    979          
+    980                              BlinkingCnt ++;
+    981                          }
+    982                          BlinkingCnt = 0;
+    983                      }
+    984                  }
+    985              }
+    986          
+    987          #if 0   /*Smith debug*/
+    988               HT68F30_LightBar_USB_isUpgrading();
+    989          #endif     
+    990          
+    991          	return res;
+    992              
+    993          }
+    994          
+    995          /**
+    996            * @brief  COMMAND_IAPExecuteApplication
+    997            * @param  None
+    998            * @retval None
+    999            */
+   1000          
+   1001          int COMMAND_IAPExecuteApplication(void)
+   1002          {
+   1003          	/*Smith implemented for firmware upgrading identify 2013/3/22  */
+   1004          	static IAP_State iap_state = IAP_STATE_PROJECT_ID_IDENTIFY;
+   1005          
+   1006          	switch( iap_state )
+   1007          	{
+   1008          		case IAP_STATE_PROJECT_ID_IDENTIFY:
+   1009          		{
+   1010          			if (COMMAND_checkProjectID( ) == FR_OK )
+   1011          			{
+   1012          				iap_state = IAP_STATE_FLASH_PROGRAM;
+   1013          			}
+   1014          			else
+   1015          			{
+   1016          				iap_state = IAP_STATE_PROGRAM_FAIL;
+   1017          			}
+   1018          			
+   1019          		}
+   1020          			break;
+   1021          	
+   1022          		case IAP_STATE_FLASH_PROGRAM:
+   1023          		{
+   1024          			if (COMMAND_ProgramFlash( ) != FR_OK )
+   1025          			{
+   1026          				iap_state = IAP_STATE_PROGRAM_FAIL;
+   1027          
+   1028                          return -1;
+   1029          			}
+   1030          			else
+   1031          			{
+   1032                         
+   1033                          
+   1034          #if defined ( EXT_FLASH )             
+   1035                          if ( bUpdateExtFlash == TRUE )
+   1036                          {
+   1037                              iap_state = IAP_STATE_EXT_FLASH_PROGRAM;
+   1038                          }
+   1039                          else
+   1040                          {
+   1041                               iap_state = IAP_STATE_PROGRAM_COMPLETE;
+   1042                          }
+   1043          #else
+   1044                          iap_state = IAP_STATE_PROGRAM_COMPLETE;
+   1045          #endif 
+   1046          			}
+   1047                     
+   1048          		}
+   1049          			break;
+   1050          
+   1051                  case IAP_STATE_EXT_FLASH_PROGRAM:
+   1052                  {
+   1053          #if defined ( EXT_FLASH )     
+   1054                      uint32_t addr = 0;
+   1055          
+   1056                      bUpdateExtFlash = FALSE;
+   1057          
+   1058                      COMMAND_ProgramExtFlashMemory();
+   1059          
+   1060          #if 0
+   1061                      memSet(RAM_Buf, PAGE_SIZE, 0xff );
+   1062                      sFLASH_ReadBuffer(RAM_Buf, addr, PAGE_SIZE);
+   1063          #endif            
+   1064          
+   1065                      iap_state = IAP_STATE_PROGRAM_COMPLETE;
+   1066          #endif 
+   1067          
+   1068                  }
+   1069                      break;
+   1070          
+   1071          		case IAP_STATE_PROGRAM_FAIL:
+   1072          		{
+   1073                      f_close(&filefatfs);
+   1074          			f_mount(0, NULL); 
+   1075                      
+   1076          			USB_OTG_BSP_mDelay(500);
+   1077          			iap_state = IAP_STATE_PROJECT_ID_IDENTIFY;
+   1078          			COMMAND_JUMP();
+   1079          		}
+   1080          			break;
+   1081          
+   1082          		case IAP_STATE_PROGRAM_COMPLETE:
+   1083          		{
+   1084                      f_close(&filefatfs);
+   1085          			f_mount(0, NULL); 
+   1086          
+   1087          #if 0   /*smith debug*/            
+   1088                      HT68F30_LightBar_USB_UpgradingDone( );
+   1089          #endif            
+   1090                      USB_OTG_BSP_mDelay(500);
+   1091          
+   1092                      iap_state = IAP_STATE_PROJECT_ID_IDENTIFY;
+   1093                      COMMAND_JUMP();
+   1094                      
+   1095          		}
+   1096          			break;
+   1097          
+   1098          	}
+   1099          
+   1100          	return 0;
+   1101          //!@}
+   1102          
+   1103          }
+   1104          
+   1105          /*******************(C)COPYRIGHT 2011 STMicroelectronics *****END OF FILE******/
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        0  COMMAND_DOWNLOAD
+       24  COMMAND_EraseInternalFlash
+             24 -> FLASH_EraseSector
+             24 -> FLASH_LAYER_GetSector
+             24 -> USB_OTG_BSP_mDelay
+        8  COMMAND_IAPExecuteApplication
+              8 -> COMMAND_JUMP
+              8 -> COMMAND_ProgramFlash
+              8 -> COMMAND_checkProjectID
+              8 -> USB_OTG_BSP_mDelay
+              8 -> f_close
+              8 -> f_mount
+        0  COMMAND_JUMP
+       32  COMMAND_ProgramFlash
+             32 -> COMMAND_EraseInternalFlash
+             32 -> FLASH_LAYER_write_n_word
+             32 -> USB_OTG_BSP_mDelay
+             32 -> f_close
+             32 -> f_lseek
+             32 -> f_mount
+             32 -> f_open
+             32 -> f_read
+        0  COMMAND_ProgramFlashMemory
+        0  COMMAND_UPLOAD
+       64  COMMAND_checkProjectID
+             64 -> COMMAND_isCorrectPES
+             64 -> HCD_IsDeviceConnected
+             64 -> USB_OTG_BSP_mDelay
+             64 -> f_close
+             64 -> f_mount
+             64 -> f_open
+             64 -> f_opendir
+             64 -> f_readdir
+       32  COMMAND_isCorrectCheckSum
+             32 -> f_read
+       24  COMMAND_isCorrectPES
+             24 -> COMMAND_isCorrectCheckSum
+             24 -> f_lseek
+             24 -> f_read
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ?<Constant "0:/">
+      16  ?<Constant "0:fwupdate.bin">
+       4  ??DataTable9
+       4  ??DataTable9_1
+       4  ??DataTable9_2
+       4  ??DataTable9_3
+       4  ??DataTable9_4
+       4  ??DataTable9_5
+       4  ??DataTable9_6
+       4  ??DataTable9_7
+       4  ??DataTable9_8
+       4  ??DataTable9_9
+       2  COMMAND_DOWNLOAD
+      72  COMMAND_EraseInternalFlash
+      90  COMMAND_IAPExecuteApplication
+      24  COMMAND_JUMP
+     144  COMMAND_ProgramFlash
+       4  COMMAND_ProgramFlashMemory
+       2  COMMAND_UPLOAD
+     104  COMMAND_checkProjectID
+     116  COMMAND_isCorrectCheckSum
+     176  COMMAND_isCorrectPES
+       8  PID
+    2048  RAM_Buf
+    1060  filefatfs
+       1  iap_state
+       1  mGroupID
+       1  mModelIndex
+      48  mPES
+          mCheckSum
+          calCheckSum
+          bUpdateExtFlash
+          pPES
+          mSeekPointer
+          mPayloadSize
+          mDebugTrace
+          Last_PGAddress
+          mReadBinSize
+
+ 
+ 1 061 bytes in section .bss
+ 2 098 bytes in section .data
+     4 bytes in section .rodata
+   798 bytes in section .text
+ 
+   798 bytes of CODE  memory
+     4 bytes of CONST memory
+ 3 159 bytes of DATA  memory
+
+Errors: none
+Warnings: 3

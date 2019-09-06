@@ -1,0 +1,687 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:25:10 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\osd\si_osd_ha #
+#                    ndler.c                                                  #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\osd\si_osd_ha #
+#                    ndler.c -D S4051A -D DEBUG -D FREE_RTOS -D               #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_osd_handler.lst                                    #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_osd_handler.o                                       #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\component\osd\si_osd_handler.c
+      1          //***************************************************************************
+      2          //!file     si_osd_handler.c
+      3          //!brief    Silicon Image OSD Component optional window management.
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2011-2012, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include "string.h"
+     14          #include "si_debug.h"
+     15          #include "si_osd_internal.h"
+     16          #if INC_OSD_BASE_HANDLER
+     17          //-------------------------------------------------------------------------------------------------
+     18          //! @brief      Move cursor one active row position up or down. Skips disabled rows.  If OPT_WRAP
+     19          //!             is set for the window, wraps from top to bottom and vice-versa. OPT_SHOW must be
+     20          //!             specified or cursor will be hidden, not moved.
+     21          //! @param[in]  winRef      Return value from the SiiOsdCreateListBox function.
+     22          //! @param[in]  moveDown    true: Move cursor down, false: move cursor up.
+     23          //! @param[in]  options     OPT_HIDE, OPT_SHOW
+     24          //! @retval                 New row location
+     25          //-------------------------------------------------------------------------------------------------
+     26          int SiiOsdMoveCursor( int winRef, bool_t moveDown, SiiOsdOptions_t options )
+     27          {
+     28              SiiOsdWindow_t  *pWin;
+     29              int             row, newRow, startRow, moveIncrement;
+     30          
+     31              pOsd->lastResultCode = SII_OSD_SUCCESS;
+     32              pWin = &pOsd->winData[ winRef];
+     33          
+     34              row = SiiDrvOsdGetCursor( winRef );
+     35              if (( options & OPT_SHOW ) == 0 )
+     36              {
+     37                  SiiDrvOsdSetCursor( winRef, row, OPT_HIDE );
+     38                  return( row );
+     39              }
+     40          
+     41              startRow = row;
+     42              moveIncrement = (moveDown) ? 1 : -1;
+     43              for (;;)
+     44              {
+     45                  // Determine new row (with optional wrap)
+     46                  newRow = ( row + moveIncrement );
+     47                  if ( newRow >= pWin->rowCount )
+     48                  {
+     49                      if ( pWin->options & OPTW_WRAPCURSOR  )
+     50                      {
+     51                          newRow = 0;     // Wrap to first.
+     52                      }
+     53                      else
+     54                      {
+     55                          // We have reached the end of the list.  If it is a disabled row,
+     56                          // we can't go any further than we started, so return the start row.
+     57                          newRow = pWin->rowCount - 1;
+     58                          if ( !SiiDrvOsdRowIsEnabled( winRef, newRow ))
+     59                          {
+     60                              newRow = startRow;
+     61                              break;
+     62                          }
+     63                      }
+     64                  }
+     65                  else if ( newRow < 0 )
+     66                  {
+     67                      if ( pWin->options & OPTW_WRAPCURSOR  )
+     68                      {
+     69                          newRow = pWin->rowCount - 1; // Wrap to last
+     70                      }
+     71                      else
+     72                      {
+     73                          // We have reached the beginning of the list.  If it is a disabled row,
+     74                          // we can't go any further than we started, so return the start row.
+     75                          newRow = 0;
+     76                          if ( !SiiDrvOsdRowIsEnabled( winRef, newRow ))
+     77                          {
+     78                              newRow = startRow;
+     79                              break;
+     80                          }
+     81                      }
+     82                  }
+     83          
+     84                  // If we haven't landed on a disabled row, we're done.
+     85                  if ( SiiDrvOsdRowIsEnabled( winRef, newRow ))
+     86                  {
+     87                      SiiDrvOsdSetCursor( winRef, newRow, OPT_SHOW );
+     88                      break;
+     89                  }
+     90                  else
+     91                  {
+     92                      row = newRow;
+     93          
+     94                      // If we have wrapped around to our starting position
+     95                      // there are no other enabled rows, so get out.
+     96                      if ( newRow == startRow )
+     97                      {
+     98                          break;
+     99                      }
+    100                  }
+    101              }
+    102              pWin->highlightRow = newRow;
+    103              return( newRow );
+    104          }
+    105          
+    106          //-------------------------------------------------------------------------------------------------
+    107          //! @brief      Execute a window callback function
+    108          //! @param[in]  winRef      Return value from a CreateWindow function.
+    109          //! @return     function result; depends upon action.  See documentation.
+    110          //-------------------------------------------------------------------------------------------------
+    111          bool_t OsdExecuteUserFunction ( int winRef, int action, int key )
+    112          {
+    113              bool_t                  result = true;  // Assume success if no function ID
+    114              SiiFuncArgs_t           winInfo;
+    115              SiiOsdWindow_t          *pWin;
+    116              SiiOsdUserFunction_t    pUserFunc = NULL;
+    117          
+    118              pWin = &pOsd->winData[ winRef];
+    119          
+    120              // Could be function index or attached function pointer.
+    121              if ((pWin->windowFunctionId != 0) && ( pWin->windowFunctionId < pOsd->functionCount ))
+    122              {
+    123                  pUserFunc = pOsd->pUserFuncs[ pWin->windowFunctionId];
+    124              }
+    125              else if ( pWin->pFunction)
+    126              {
+    127                  pUserFunc = pWin->pFunction;
+    128              }
+    129          
+    130              // If either exists, do it.
+    131              if ( pUserFunc != NULL)
+    132              {
+    133                  winInfo.childWinRef     = pWin->childWinRef;
+    134                  winInfo.parentWinRef    = pWin->parentWinRef;
+    135                  winInfo.resourceId      = pWin->resourceId;
+    136                  winInfo.options         = pWin->options;
+    137                  winInfo.selectedRow     = pWin->highlightRow;
+    138                  winInfo.rowChildWinId   = pWin->rowChildWindowId[ pWin->highlightRow];
+    139                  winInfo.actionKey       = key;
+    140                  winInfo.param1          = pWin->param1;
+    141                  winInfo.param2          = pWin->param2;
+    142                  winInfo.param3          = pWin->param3;
+    143                  winInfo.param4          = pWin->param4;
+    144                  winInfo.editMode        = pWin->editMode;
+    145                  winInfo.pExternalData   = pWin->pExternalData;
+    146          
+    147                  result = pUserFunc( winRef, action, (void *)&winInfo );
+    148              }
+    149          
+    150              return( result );
+    151          }
+    152          
+    153          //-------------------------------------------------------------------------------------------------
+    154          //! @brief      Send a message to the specified window
+    155          //! @param[in]  winRef      Return value from a CreateWindow function.
+    156          //! @return     function result; depends upon action.  See documentation.
+    157          //-------------------------------------------------------------------------------------------------
+    158          bool_t SiiOsdSendMessage ( int winRef, SiiOsdUserFunctionAction_t action, int key )
+    159          {
+    160              // Error if window not enabled.
+    161              if ((winRef == -1) || ( pOsd->winData[ winRef].windowStatus & OSD_WSTAT_ENABLED ) == 0 )
+    162              {
+    163                  pOsd->lastResultCode = SII_OSDDRV_ERR_NOT_ACTIVE;
+    164                  return( false );
+    165              }
+    166              pOsd->lastResultCode = SII_OSD_SUCCESS;
+    167          
+    168              return( OsdExecuteUserFunction( winRef, action, key ));
+    169          }
+    170          
+    171          //-------------------------------------------------------------------------------------------------
+    172          //! @brief      Set or clear Edit Mode flag.  The flag is used by cursor edit modes (shows < and >
+    173          //!             on either end of a choice set.
+    174          //! @param[in]  winRef      Return value from a CreateWindow function.
+    175          //! @param[in]  key         SIIKEY_SELECT, SIIKEY_CANCEL.
+    176          //! @param[in]  options     OPT_HIDE, OPT_SHOW
+    177          //! @return                 Result of the Window User function call, if any, otherwise false..
+    178          //-------------------------------------------------------------------------------------------------
+    179          void SiiOsdSetEditMode( int winRef, bool_t isEditMode )
+    180          {
+    181              if ((winRef == -1) || ( winRef >= SII_OSD_WIN_COUNT ))
+    182              {
+    183                  return;
+    184              }
+    185              pOsd->winData[ winRef].editMode = isEditMode;
+    186          }
+    187          
+    188          int SiiOsdIsEditMode( int winRef )
+    189          {
+    190              if ((winRef == -1) || ( winRef >= SII_OSD_WIN_COUNT ))
+    191              {
+    192                  return( 0 );
+    193              }
+    194          
+    195              return( pOsd->winData[ winRef].editMode );
+    196          }
+    197          
+    198          //-------------------------------------------------------------------------------------------------
+    199          //! @brief      Manage the basic window functions
+    200          //! @param[in]  winRef      Return value from a CreateWindow function.
+    201          //! @param[in]  key         SIIKEY_SELECT, SIIKEY_CANCEL.
+    202          //! @param[in]  options     OPT_HIDE, OPT_SHOW
+    203          //! @return                 Result of the Window User function call, if any, otherwise false..
+    204          //-------------------------------------------------------------------------------------------------
+    205          bool_t SiiOsdBaseWindowHandler( int winRef, int key, SiiOsdOptions_t options )
+    206          {
+    207              int             activeRow, row;
+    208              bool_t          result = false;
+    209              bool_t          performedAction = false;
+    210              SiiOsdWindow_t  *pWin;
+    211          
+    212              // Ignore window if not enabled.
+    213              if (( winRef == -1) || ( pOsd->winData[ winRef].windowStatus & OSD_WSTAT_ENABLED ) == 0 )
+    214              {
+    215                  pOsd->lastResultCode = SII_OSD_ERR_NOT_ENABLED;
+    216                  return( false );
+    217              }
+    218              pOsd->lastResultCode = SII_OSD_SUCCESS;
+    219              pWin = &pOsd->winData[ winRef];
+    220          
+    221              if ( winRef == SiiOsdGetFocus())
+    222              {
+    223                  activeRow   = pWin->highlightRow;
+    224          
+    225                  switch ( key )
+    226                  {
+    227                      case SIIKEY_CURSOR_UP:
+    228                      case SIIKEY_CURSOR_DOWN:
+    229                          // Move the cursor.
+    230                          row = SiiOsdMoveCursor( winRef, ( key == SIIKEY_CURSOR_DOWN) ? true : false, OPT_SHOW );
+    231                          if (( row != -1 ) && ( row != activeRow ))
+    232                          {
+    233                              // Execute user function with ROW_ENTER action
+    234                              result = OsdExecuteUserFunction( winRef, UFA_ROW_ENTER, key );
+    235                              pWin->editMode = 0;   //extendCol
+    236                          }
+    237                          performedAction = true;
+    238                          break;
+    239          
+    240                      case SIIKEY_CURSOR_LEFT:
+    241                          // Change window focus to parent window if present and not in
+    242                          // edit mode, otherwise send event to current window function
+    243                          if (( pWin->parentWinRef != -1 ) && ( pWin->editMode == 0 ))  //extendCol
+    244                          {
+    245                              SiiOsdSetFocus( pWin->parentWinRef, OPT_TOP );
+    246          
+    247                              // Send a UFA_FOCUS to the parent.
+    248                              result = OsdExecuteUserFunction( pWin->parentWinRef, UFA_FOCUS, key );
+    249                          }
+    250                          else
+    251                          {
+    252                              // Pass the UFA_BACK message to the current window to indicate CURSOR_LEFT key received.
+    253                              result = OsdExecuteUserFunction( winRef, UFA_BACK, key );
+    254                          }
+    255                          performedAction = true;
+    256                          break;
+    257          
+    258                      case SIIKEY_CURSOR_RIGHT:
+    259                          // Change window focus to child window if present and not in edit mode, otherwise
+    260                          // pass cursor key to user function.
+    261                          if (( pWin->childWinRef != -1 ) && !pWin->editMode)
+    262                          {
+    263                              pOsd->winData[ pWin->childWinRef].parentWinRef = winRef;  // Remember our parent
+    264                              SiiOsdSetFocus( pWin->childWinRef, OPT_TOP );
+    265          
+    266                              // Send a UFA_FOCUS to the child.
+    267                              result = OsdExecuteUserFunction( pWin->childWinRef, UFA_FOCUS, key );
+    268                          }
+    269                          else
+    270                          {
+    271                              // Pass the UFA_FOCUS message to the current window to indicate CURSOR_RIGHT key received.
+    272                              result = OsdExecuteUserFunction( winRef, UFA_FOCUS, key );
+    273                          }
+    274                          performedAction = true;
+    275                          break;
+    276          
+    277                      case SIIKEY_CANCEL:
+    278                      case SIIKEY_SELECT:
+    279          
+    280                          // Execute user function with SELECT action
+    281                          result = OsdExecuteUserFunction( winRef, (key == SIIKEY_SELECT) ? UFA_SELECT : UFA_CANCEL, key );
+    282                          if ( result )
+    283                          {
+    284                              // If this is a child window, the Select and Cancel actions both
+    285                              // close this window and set focus to the parent window, if any.
+    286                              SiiOsdSetFocus( pWin->parentWinRef, OPT_TOP );
+    287                              SiiOsdCloseWindow( winRef, (key == SIIKEY_SELECT) ? false : true );
+    288                          }
+    289                          break;
+    290          
+    291                      default:
+    292                          break;
+    293                  }
+    294              }
+    295          
+    296              // If window has a timer and a key was used, restart the timer now..
+    297              if ( performedAction && pWin->msTimeout )
+    298              {
+    299                  if (( key != SIIKEY_CANCEL ) && ( key != SIIKEY_SELECT ))
+    300                  {
+    301                      SiiOsTimerSet( &pWin->winTimer, pWin->msTimeout  );
+    302                  }
+    303              }
+    304              return( result );
+    305          }
+    306          
+    307          //-------------------------------------------------------------------------------------------------
+    308          //! @brief      Manage all windows created using the SiiOsdCreate window functions.
+    309          //! @param[in]  key         Key to send to the window that currently has focus, or -1 if only check timers.
+    310          //! @param[in]  options     none
+    311          //! @retval                 Window action value if successful
+    312          //! @return     true if key was used, false if not.
+    313          //-------------------------------------------------------------------------------------------------
+    314          bool_t SiiOsdWindowManager( int key, SiiOsdOptions_t options )
+    315          {
+    316              SiiOsdWindow_t  *pWin;
+    317              bool_t          keyUsed = false;
+    318              int             winRef;
+    319          
+    320          #if INC_OSD_BASE_HANDLER
+    321              // Manage window timers
+    322              for ( winRef = 0; winRef < SII_OSD_WIN_COUNT; winRef++ )
+    323              {
+    324                  pWin = &pOsd->winData[ winRef];
+    325                  if (( pWin->windowStatus & OSD_WSTAT_ENABLED ) && ( pWin->msTimeout ))
+    326                  {
+    327                      // Close window if timer expired.
+    328                      if ( SiiOsTimerExpired( pWin->winTimer ))
+    329                      {
+    330                          // Close the window, but don't save any changes.
+    331                          SiiOsdCloseWindow( winRef, OPT_CANCEL );
+    332          
+    333                          // If this is a child window and it had focus, set focus to the parent window.
+    334                          if (( pWin->parentWinRef != -1 ) && ( pOsd->focusWinRef == winRef ))
+    335                          {
+    336                              SiiOsdSetFocus( pWin->parentWinRef, OPT_TOP );
+    337                          }
+    338                      }
+    339                  }
+    340              }
+    341          
+    342              if ( pOsd->focusWinRef != -1 )
+    343              {
+    344                  // If key event, pass the key to the window with focus.
+    345                  pWin = &pOsd->winData[ pOsd->focusWinRef];
+    346                  if (( pWin->windowStatus & OSD_WSTAT_ENABLED ) && ( key != -1 ))
+    347                  {
+    348                      switch ( pWin->windowType )
+    349                      {
+    350                          case OSD_WINTYPE_BASIC:
+    351                          case OSD_WINTYPE_STATUS:
+    352                          default:
+    353                              SiiOsdBaseWindowHandler( pOsd->focusWinRef, key, options );
+    354                              keyUsed = true;
+    355                              break;
+    356          
+    357          #if INC_OSD_SLIDER
+    358                          case OSD_WINTYPE_SLIDER:
+    359                              keyUsed = SiiOsdSliderHandler( pOsd->focusWinRef, key, options );
+    360                              break;
+    361          #endif // INC_OSD_SLIDER
+    362          #if INC_OSD_LISTBOX
+    363                          case OSD_WINTYPE_LISTBOX:
+    364                              keyUsed = SiiOsdListBoxHandler( pOsd->focusWinRef, key, options );
+    365                              break;
+    366          #endif // INC_OSD_LISTBOX
+    367          #if INC_OSD_SLIDER
+    368                          case OSD_WINTYPE_MENU:
+    369                              keyUsed = SiiOsdMenuHandler( pOsd->focusWinRef, key, options );
+    370                              break;
+    371          #endif // INC_OSD_LISTBOX
+    372          #if INC_OSD_EDITBOX
+    373                          case OSD_WINTYPE_EDITBOX:
+    374                              keyUsed = SiiOsdEditBoxHandler( pOsd->focusWinRef, key, options );
+    375                              break;
+    376          #endif // INC_OSD_EDITBOX
+    377                      }
+    378                  }
+    379          #endif // INC_OSD_BASE_HANDLER
+    380              }
+    381          
+    382              return( keyUsed );
+    383          }
+    384          
+    385          #endif // INC_OSD_BASE_HANDLER
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       72  OsdExecuteUserFunction
+             72 -- Indirect call
+       32  SiiOsdBaseWindowHandler
+             32 -> OsdExecuteUserFunction
+             32 -> SiiOsTimerSet
+             32 -> SiiOsdCloseWindow
+             32 -> SiiOsdGetFocus
+             32 -> SiiOsdMoveCursor
+             32 -> SiiOsdSetFocus
+        0  SiiOsdIsEditMode
+       24  SiiOsdMoveCursor
+             24 -> SiiDrvOsdGetCursor
+             24 -> SiiDrvOsdRowIsEnabled
+             24 -> SiiDrvOsdSetCursor
+        8  SiiOsdSendMessage
+              0 -> OsdExecuteUserFunction
+        0  SiiOsdSetEditMode
+       32  SiiOsdWindowManager
+             32 -> SiiOsTimerExpired
+             32 -> SiiOsdBaseWindowHandler
+             32 -> SiiOsdCloseWindow
+             32 -> SiiOsdEditBoxHandler
+             32 -> SiiOsdListBoxHandler
+             32 -> SiiOsdMenuHandler
+             32 -> SiiOsdSetFocus
+             32 -> SiiOsdSliderHandler
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable6
+       8  ?Subroutine0
+     124  OsdExecuteUserFunction
+     288  SiiOsdBaseWindowHandler
+      30  SiiOsdIsEditMode
+     154  SiiOsdMoveCursor
+      42  SiiOsdSendMessage
+      26  SiiOsdSetEditMode
+     192  SiiOsdWindowManager
+
+ 
+ 868 bytes in section .text
+ 
+ 868 bytes of CODE memory
+
+Errors: none
+Warnings: 4

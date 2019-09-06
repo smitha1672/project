@@ -1,0 +1,982 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:25:50 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\CS8422\cs8422.c                 #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\CS8422\cs8422.c -D S4051A -D    #
+#                    DEBUG -D FREE_RTOS -D STM32F40_41xxx -D                  #
+#                    USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D             #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\cs8422.lst                                            #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\cs8422.o                                               #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\CS8422\cs8422.c
+      1          #include "Debug.h"
+      2          #include "freertos_conf.h"
+      3          #include "freertos_task.h"
+      4          #include "freertos_typedef.h"
+      5          #include "GPIOMiddleLevel.h"
+      6          
+      7          #include "AudioDeviceManager.h"
+      8          
+      9          #include "CS8422.h"
+     10          
+     11          //! < Definition_________________________________________________________
+     12          
+     13          //#define CS8422_CHIP_ID        0x01
+     14          #define CS8422_CLOCK_CONTROL            0x02 //0x22->0x20
+     15          #define CS8422_RECEIVER_INPUT_CONTROL   0x03 //0x80
+     16          #define CS8422_RECEIVER_DATA_CONTROL    0x04 //0x0
+     17          #define CS8422_GPIO_CONTROL1            0x05 //0x03
+     18          #define CS8422_GPIO_CONTROL2            0x06 //0x0
+     19          #define CS8422_SAI_CLOCK_CONTROL        0x07 //0x48    
+     20          #define CS8422_SRC_SAO_CLOCK_CONTROL    0x08 //0x4a
+     21          #define CS8422_RMCK_CNTL_MISC           0x09 //0x40
+     22          #define CS8422_DATA_ROUNTING_CONTROL    0x0A //0x52 ->0x40
+     23          #define CS8422_SAI_DATA_FORMAT          0x0B //0x88
+     24          #define CS8422_SAO1_DATA_FORMAT_TDM     0x0C //0x84
+     25          #define CS8422_SAO2_DATA_FORMAT         0x0D //x084
+     26          #define CS8422_PERR_UNMASKING           0x0E
+     27          #define CS8422_INTERRUPT_UNMASKING      0x0F
+     28          #define CS8422_INTERRUPT_MODE           0x10
+     29          #define CS8422_RECEIVER_CHANNEL_STATUS  0x11
+     30          #define CS8422_FORMAT_DETECT_STATUS     0x12
+     31          #define CS8422_RECEIVER_ERROR           0x13
+     32          #define CS8422_INTERRUP_STATUS          0x14
+     33          #define CS8422_PLL_STATUS               0x15
+     34          #define CS8422_RECEIVER_STATUS          0x16
+     35          //#define CS8422_FS_XTI_RATIO1          0x17
+     36          //#define CS8422_FS_XTI_RATIO2          0x18
+     37          #define CS8422_IEC61937_BURST_PREAMBLE  0x2D
+     38          
+     39          #define PCM_96KHZ_DETECTION_IO    __I_CS8422_GPO_0
+     40          #define RECEIVER_ERROR_IO    __I_CS8422_GPO_1
+     41          
+     42          //_____________________________________________________________________________________
+     43          extern void CS8422_ISR_Control( bool bIsrEnable );
+     44          
+     45          static void CS8422_SRC_Initialize(void);
+     46          
+     47          static void CS8422_SRC_setPath_Rx( uint8 rx_path, uint8 src_ctrl );
+     48          
+     49          static void CS8422_SRC_setPath_SerialAudioInput(void);
+     50          
+     51          static bool CS8422_IsPLL_Lock( void );
+     52          
+     53          static bool CS8422_getISCLK_ACTIVE(void);
+     54          
+     55          static bool CS8422_Format_IsPCM( void );
+     56          
+     57          static bool CS8422_is_96Khz192Khz_AES3( void );
+     58          
+     59          static uint8 CS8422_getForcesClockControl( void );
+     60          
+     61          static void CS8422_ForcesClockControl( uint8 index );
+     62          
+     63          static uint8 CS8422_read_SDOUT1_DataSource( void );
+     64          
+     65          static void CS8422_SerialAudioOutput( uint8 index );
+     66          
+     67          const SRC_CTRL_OBJECT SRCLowLevel_ObjCtrl = 
+     68          {
+     69              CS8422_SRC_Initialize,
+     70              CS8422_ISR_Control,
+     71              CS8422_SRC_setPath_Rx,
+     72              CS8422_SRC_setPath_SerialAudioInput,
+     73              CS8422_IsPLL_Lock,
+     74              CS8422_getISCLK_ACTIVE,
+     75              CS8422_Format_IsPCM,
+     76              CS8422_is_96Khz192Khz_AES3,
+     77              CS8422_getForcesClockControl, 
+     78              CS8422_ForcesClockControl,
+     79              CS8422_read_SDOUT1_DataSource,
+     80              CS8422_SerialAudioOutput,
+     81          };
+     82          
+     83          const SRC_CTRL_OBJECT *pSRC_ObjCtrl = &SRCLowLevel_ObjCtrl;
+     84          
+     85          
+     86          //____________________________________________________________________________________________
+     87          static void CS8422_SerialAudioInput_SAI_MCLK_Control( uint8 index )
+     88          {
+     89              uint8 ret = 0;
+     90          
+     91              ret = CS8422_ReadI2C_Byte(CS8422_SAI_CLOCK_CONTROL);
+     92          
+     93              switch( index )
+     94              {
+     95                  case 0: /*XTI - XTO*/
+     96                  {
+     97                      ret &= 0xF0;
+     98          
+     99                      ret |= 0x00;
+    100                      CS8422_WriteI2C_Byte(CS8422_SAI_CLOCK_CONTROL, ret);
+    101                      
+    102                  }
+    103                      break;
+    104                      
+    105                  case 1:    /*RMCK*/
+    106                  {
+    107                      ret &= 0xF0;
+    108          
+    109                      ret |= 0x08;
+    110                      CS8422_WriteI2C_Byte(CS8422_SAI_CLOCK_CONTROL, ret);
+    111                  }
+    112                      break;
+    113              }
+    114          }
+    115          
+    116          static void CS8422_ForcesClockControl( uint8 index )
+    117          {
+    118              uint8 ret = 0;
+    119          
+    120              switch( index )
+    121              {
+    122                  case 0: /*Clock signal on XTI is output on RMCK according to the SWCLK bit functionality. */
+    123                  {
+    124                      ret = CS8422_ReadI2C_Byte(CS8422_CLOCK_CONTROL);
+    125                      ret &= 0xBF; 
+    126          
+    127                      ret |=0x00;
+    128                      CS8422_WriteI2C_Byte( CS8422_CLOCK_CONTROL, ret );
+    129                      
+    130                  }
+    131                      break;
+    132          
+    133                  case 1:    /*Forces the clock signal on XTI to be output on RMCK regardless of the SWCLK bit functionality.*/
+    134                  {
+    135                      ret = CS8422_ReadI2C_Byte(CS8422_CLOCK_CONTROL);
+    136                      ret &= 0xBF; 
+    137          
+    138                      ret |=0x40;
+    139                      CS8422_WriteI2C_Byte( CS8422_CLOCK_CONTROL, ret );
+    140                  }
+    141                      break;
+    142              }
+    143          }
+    144          
+    145          static void CS8422_SerialAudioOutput( uint8 index )
+    146          {
+    147              uint8 ret = 0;
+    148          
+    149              switch( index )
+    150              {
+    151                  case 0:    /*SDOUT 1: Sample Rate Convert*/
+    152                  {
+    153                      ret = CS8422_ReadI2C_Byte(CS8422_DATA_ROUNTING_CONTROL);
+    154                      ret &= 0x3D;
+    155          
+    156                      ret |=0x02;
+    157                      
+    158                      CS8422_WriteI2C_Byte( CS8422_DATA_ROUNTING_CONTROL, ret );
+    159                  }
+    160                      break;
+    161              
+    162                  case 1:    /*SDOUT 1: AES3 Receiver Output*/
+    163                  {
+    164                      ret = CS8422_ReadI2C_Byte(CS8422_DATA_ROUNTING_CONTROL);
+    165                      ret &= 0x3D;
+    166          
+    167                      ret |= 0x40;
+    168                      CS8422_WriteI2C_Byte( CS8422_DATA_ROUNTING_CONTROL, ret );
+    169                  }
+    170                      break;
+    171          
+    172                  case 2:    /*SDOUT 1: SDIN Output*/
+    173                  {
+    174                      ret = CS8422_ReadI2C_Byte(CS8422_DATA_ROUNTING_CONTROL);
+    175                      ret &= 0x3D;
+    176          
+    177                      ret |= 0x80;
+    178                      CS8422_WriteI2C_Byte( CS8422_DATA_ROUNTING_CONTROL, ret );
+    179                      
+    180                  }
+    181                      break;
+    182              }
+    183          }
+    184          
+    185          static void CS8422_ClockControl_RMCK( uint8 index )
+    186          {
+    187              uint8 ret = 0;
+    188          
+    189              ret = CS8422_ReadI2C_Byte(CS8422_CLOCK_CONTROL);
+    190          
+    191              switch( index )
+    192              {
+    193                  /*00 - RMCK is an output and is derived from the frame rate of incoming AES3 data.*/
+    194                  case 0:
+    195                  {
+    196                      ret &= 0xE7; 
+    197          
+    198                      ret |= 0x00;
+    199                      CS8422_WriteI2C_Byte( CS8422_CLOCK_CONTROL, ret );
+    200                  }
+    201                      break;
+    202          
+    203                  /*
+    204                      01 - RMCK is an output and is derived from the ISCLK input frequency divided by 64. Only valid if serial
+    205                      audio input port is in slave mode (SIMS = 0 in ¡§Serial Audio Input Data Format (0Bh)¡¨ on page 53).
+    206                  */
+    207                  case 1:
+    208                  {
+    209                      ret &= 0xE7; 
+    210          
+    211                      ret |= 0x08;
+    212                      CS8422_WriteI2C_Byte( CS8422_CLOCK_CONTROL, ret );
+    213                  }
+    214                      break;
+    215          
+    216                  /*10 - RMCK is high-impedance.*/
+    217                  case 2:
+    218                  {
+    219                      /*TBD*/
+    220                  }
+    221                      break;
+    222              }
+    223          }
+    224          
+    225          static void CS8422_ReceiverInputControl( uint8 index )
+    226          {
+    227              uint8 ret = 0;
+    228          
+    229              switch( index )
+    230              {
+    231                  case 0:    /*RX0*/
+    232                  {    
+    233                      ret = CS8422_ReadI2C_Byte(CS8422_RECEIVER_INPUT_CONTROL);
+    234                      ret &= 0x9F;
+    235          
+    236                      ret |= 0x00;    
+    237                      CS8422_WriteI2C_Byte( CS8422_RECEIVER_INPUT_CONTROL, ret );
+    238                  }
+    239                      break;
+    240                      
+    241                  case 1: /*RX1*/
+    242                  {    
+    243                      //! Set Receiver Input Control@{
+    244                      ret = CS8422_ReadI2C_Byte(CS8422_RECEIVER_INPUT_CONTROL);
+    245                      ret &= 0x9F;
+    246          
+    247                      ret |= 0x20;
+    248                      CS8422_WriteI2C_Byte( CS8422_RECEIVER_INPUT_CONTROL, ret );
+    249                      //!@}
+    250          
+    251                  }
+    252                      break;
+    253                      
+    254                  case 2: /*RX2*/
+    255                  {
+    256                      ret = CS8422_ReadI2C_Byte(CS8422_RECEIVER_INPUT_CONTROL);
+    257                      ret &= 0x9F;
+    258          
+    259                      ret |=0x40;
+    260                      CS8422_WriteI2C_Byte( CS8422_RECEIVER_INPUT_CONTROL, ret );
+    261                  }
+    262                      break;
+    263                      
+    264                  case 3: /*RX3*/
+    265                  {
+    266                      ret = CS8422_ReadI2C_Byte(CS8422_RECEIVER_INPUT_CONTROL);
+    267                      ret &= 0x9F;
+    268          
+    269                      ret |=0x60;
+    270                      CS8422_WriteI2C_Byte( CS8422_RECEIVER_INPUT_CONTROL, ret );
+    271                  }
+    272                      break;
+    273          
+    274              }
+    275          }
+    276          
+    277          static bool CS8422_getISCLK_ACTIVE(void)
+    278          {
+    279              int8 val =0;
+    280              
+    281              val = CS8422_ReadI2C_Byte(CS8422_PLL_STATUS);
+    282              val &= 0x40;
+    283              if (val)
+    284                  return TRUE;
+    285              return FALSE;
+    286          }
+    287          
+    288          uint8 CS8422_getReceiverError( void )
+    289          {
+    290              uint8 ret = 0;
+    291              
+    292              ret = CS8422_ReadI2C_Byte( CS8422_RECEIVER_ERROR );
+    293              return ret;
+    294          }
+    295          
+    296          static bool CS8422_Format_IsPCM( void )
+    297          {
+    298              uint8 val = 0;
+    299              
+    300              val = CS8422_ReadI2C_Byte( CS8422_FORMAT_DETECT_STATUS );
+    301              
+    302              val &= 0x80;
+    303              if ( val )
+    304                  return TRUE;
+    305          
+    306              return FALSE;
+    307          }
+    308          
+    309          bool CS8422_Format_IsIE61937( void )
+    310          {
+    311              uint8 val = 0;
+    312              
+    313              val = CS8422_ReadI2C_Byte( CS8422_FORMAT_DETECT_STATUS );
+    314              val &= 0x40;
+    315          
+    316              if ( val )
+    317                  return TRUE;
+    318          
+    319              return FALSE;
+    320          }
+    321          
+    322          bool CS8422_Format_IsAC3( void )
+    323          {
+    324              uint8 val = 0;
+    325              
+    326              val = CS8422_ReadI2C_Byte( CS8422_IEC61937_BURST_PREAMBLE );
+    327              val &= 0x0F;
+    328              
+    329              if ( val == 0x01 )
+    330                  return TRUE;
+    331          
+    332              return FALSE;
+    333          }
+    334          
+    335          bool CS8422_Format_IsDTS( void )
+    336          {
+    337              uint8 val = 0;
+    338              
+    339              val = CS8422_ReadI2C_Byte( CS8422_IEC61937_BURST_PREAMBLE );
+    340              val &= 0xFF;
+    341          
+    342              if ((val == 0x0B )||(val==0x0C)||(val==0x0D)||(val==0x11))
+    343                  return TRUE;
+    344          
+    345              return FALSE;
+    346          }
+    347          
+    348          static bool CS8422_IsPLL_Lock( void )
+    349          {
+    350              uint8 val = 0;
+    351          
+    352              val = CS8422_ReadI2C_Byte(CS8422_PLL_STATUS);
+    353          
+    354              if (val == 0xFF)
+    355              {
+    356                  return FALSE;
+    357              }
+    358              else
+    359              {
+    360                  val &= 0x20;
+    361          
+    362                  if ( val )
+    363                  {
+    364                      return TRUE;
+    365                  }
+    366              
+    367              return FALSE;
+    368              }    
+    369          }
+    370          
+    371          
+    372          byte CS8422_Read_Receiver_Status(void)
+    373          {
+    374              uint8 val;
+    375             
+    376              val=CS8422_ReadI2C_Byte(CS8422_RECEIVER_STATUS);
+    377              val &=0x60;
+    378              
+    379              return val;
+    380              
+    381          }
+    382          
+    383          byte CS8422_Read_Input_Status(void)
+    384          {
+    385              uint8 val;
+    386             
+    387              val=CS8422_ReadI2C_Byte(CS8422_DATA_ROUNTING_CONTROL);
+    388              val &=0xC0;
+    389              
+    390              return val;
+    391              
+    392          }
+    393          
+    394          byte CS8422_Format_Detect_Status(void)
+    395          {
+    396              uint8 val;
+    397             
+    398              val=CS8422_ReadI2C_Byte(CS8422_FORMAT_DETECT_STATUS);
+    399              val &=0xFF;
+    400              
+    401              return val;
+    402          }
+    403          
+    404          static void CS8422_SRC_setPath_Rx( uint8 rx_path, uint8 src_ctrl )
+    405          {
+    406              if ( rx_path > 3 )
+    407                  return;
+    408          
+    409              if ( src_ctrl > 1 )
+    410                  return;
+    411          
+    412              CS8422_ClockControl_RMCK( 0 );
+    413              CS8422_ReceiverInputControl( rx_path );
+    414              CS8422_SerialAudioInput_SAI_MCLK_Control( 1 );
+    415          
+    416              if ( src_ctrl == 1 ) /* SRC enable */
+    417              {
+    418                  CS8422_ForcesClockControl( 1 );
+    419                  CS8422_SerialAudioOutput( 0 );
+    420              }
+    421              else
+    422              {   
+    423                  CS8422_ForcesClockControl( 0 );
+    424                  CS8422_SerialAudioOutput( 1 );
+    425              }
+    426          }
+    427          
+    428          static void CS8422_SRC_setPath_SerialAudioInput(void)
+    429          {
+    430              CS8422_ClockControl_RMCK( 1 ); /*fix analog source outputs "PO PO" noise*/
+    431              CS8422_SerialAudioInput_SAI_MCLK_Control( 0 );    /*fix If optical doesn't connect to DVD player, analog source will lose audio.*/
+    432              CS8422_SerialAudioOutput( 2 );    /*Set serial data output */
+    433          }
+    434          
+    435          void CS8422_init(void)
+    436          {
+    437               // Here is for crystal 12.288 Mhz @{
+    438              CS8422_WriteI2C_Byte(0x00,0x00);
+    439              CS8422_WriteI2C_Byte(0x01,0x10);
+    440          
+    441          /*    Smith comment: 2013/3/15
+    442              Clock Control (02h)
+    443              FSWCLK[6] ¡V Forces the clock signal on XTI to be output on RMCK regardless of the SWCLK bit functionality or PLL lock.
+    444                  0 ¡V Clock signal on XTI is output on RMCK according to the SWCLK bit functionality.
+    445                  1 ¡V Forces the clock signal on XTI to be output on RMCK regardless of the SWCLK bit functionality.
+    446                  
+    447              SWCLK[5] - Outputs XTI clock signal on RMCK pin when PLL loses lock. Any OSCLK or OLRCK derived from RMCK under normal conditions will be derived from XTI in this case. 
+    448                  0 - Disable automatic clock switching. 
+    449                  1 - Enable automatic clock switching on PLL unlock. Clock signal selected on XTI is automatically output on RMCK on PLL Unlock.
+    450          
+    451                 INT[1:0] - Interrupt output pin (INT) control
+    452                 10 - Open drain, active low. Requires an external pull-up resistor on the INT pin.    
+    453          */    
+    454              //CS8422_WriteI2C_Byte(0x02,0x64); 
+    455              CS8422_WriteI2C_Byte(0x02,0x62); 
+    456          
+    457              /*Receiver Input Control*/
+    458              CS8422_WriteI2C_Byte(0x03,0x80);
+    459              CS8422_WriteI2C_Byte(0x04,0x04); 
+    460          
+    461              /*CS8422 GPO0 is 96KHZ indicator; GPO1 is receiver error indicator*/
+    462              //CS8422_WriteI2C_Byte(0x05,0x96);    
+    463              CS8422_WriteI2C_Byte(0x05,0x90);    
+    464          
+    465              /*GPO2 is for interrupt pin*/
+    466              //CS8422_WriteI2C_Byte(0x06,0x3E);
+    467              CS8422_WriteI2C_Byte(0x06,0x30);
+    468          
+    469              
+    470              /* Serial Audio Input Clock Control*/
+    471              CS8422_WriteI2C_Byte(0x07,0x48);
+    472          
+    473              /*SAO_MCLK[3] Selects the MCLK as XTI/O*/
+    474              CS8422_WriteI2C_Byte(0x08,0x40);
+    475          
+    476              /* Recevered MasterClock Ration Control */
+    477              CS8422_WriteI2C_Byte(0x09,0x48);
+    478          
+    479              /*Data Routing Control: SRCD[1] 0- Serial Audio Input port(SDIN); 1-AES3 Receiver Output*/
+    480              CS8422_WriteI2C_Byte(0x0A,0x52);    
+    481          
+    482              /*Serial Audio Input Data Format as 48Khz*/
+    483              CS8422_WriteI2C_Byte(0x0B,0x88);
+    484          
+    485              /*SDOUT1 - Master mode; I2S output*/
+    486              CS8422_WriteI2C_Byte(0x0C,0x84);
+    487          
+    488              /*SDOUT2*/
+    489              CS8422_WriteI2C_Byte(0x0D,0x80);
+    490          
+    491              /*Receiver Error Unmasking*/
+    492              CS8422_WriteI2C_Byte(0x0E,0xFF);
+    493          
+    494              /*INTERRUPT UNMASK*/
+    495              CS8422_WriteI2C_Byte(0x0F, 0x0A);
+    496          
+    497              /*Set ERROR is Falling edge*/
+    498              CS8422_WriteI2C_Byte(0x10,0x05);
+    499              
+    500              CS8422_WriteI2C_Byte(0x16,0x10);
+    501          }
+    502          
+    503          static void CS8422_SRC_Initialize( void )
+    504          {
+    505              CS8422_init();  
+    506          }
+    507          
+    508          void CS8422_SoftReboot(void)
+    509          {
+    510              uint8 ret = 0;
+    511              uint8 ret1 = 0;
+    512              uint8 ret2 = 0;
+    513              uint8 ret3 = 0;
+    514          
+    515              //Load current settings
+    516              ret1 = CS8422_ReadI2C_Byte(CS8422_RECEIVER_INPUT_CONTROL);
+    517              ret2 = CS8422_ReadI2C_Byte(CS8422_DATA_ROUNTING_CONTROL);
+    518              ret3 = CS8422_ReadI2C_Byte(CS8422_SAI_CLOCK_CONTROL);
+    519          
+    520              //CS8422 Off
+    521              ret = CS8422_ReadI2C_Byte(CS8422_CLOCK_CONTROL);
+    522              ret &=0x7f;
+    523              CS8422_WriteI2C_Byte( CS8422_CLOCK_CONTROL, ret );
+    524          
+    525          #if defined ( FREE_RTOS )    
+    526              vTaskDelay(TASK_MSEC2TICKS(2));
+    527          #else
+    528              VirtualTimer_sleep(2);
+    529          #endif 
+    530          
+    531          
+    532              //CS8422 On
+    533              ret = CS8422_ReadI2C_Byte(CS8422_CLOCK_CONTROL);
+    534              ret |=0x80;
+    535              CS8422_WriteI2C_Byte( CS8422_CLOCK_CONTROL, ret );
+    536              
+    537          #if defined ( FREE_RTOS )    
+    538              vTaskDelay(TASK_MSEC2TICKS(2));
+    539          #else
+    540              VirtualTimer_sleep(2);
+    541          #endif 
+    542              
+    543              CS8422_init(); 
+    544          
+    545              //Set the preloaded settings
+    546              CS8422_WriteI2C_Byte(CS8422_RECEIVER_INPUT_CONTROL, ret1 );
+    547              CS8422_WriteI2C_Byte(CS8422_DATA_ROUNTING_CONTROL, ret2 );
+    548              CS8422_WriteI2C_Byte(CS8422_SAI_CLOCK_CONTROL, ret3);
+    549          
+    550              TRACE_DEBUG((0, "CS8422 initial!! CS8422_SPDIF_In_To_SPDIF_And_PCM_Out"));
+    551          }
+    552          
+    553          //________________________________________________________________________________________________
+    554          static uint8 CS8422_getForcesClockControl( void )
+    555          {
+    556              uint8 ret = 0;
+    557          
+    558              ret = CS8422_ReadI2C_Byte(CS8422_CLOCK_CONTROL);
+    559              ret &= 0x40;
+    560          
+    561              ret >>= 6;
+    562          
+    563              return ret;
+    564          }
+    565          
+    566          /*Smith implemented: 2013/3/18*/
+    567          static uint8 CS8422_read_SDOUT1_DataSource( void )    
+    568          {
+    569              uint8 ret = 0;
+    570          
+    571              ret = CS8422_ReadI2C_Byte(CS8422_DATA_ROUNTING_CONTROL);
+    572          
+    573              ret &= 0xC0; 
+    574          
+    575              ret >>= 6;
+    576              
+    577              /*
+    578                  SDOUT1[1:0] - Controls the data source for SDOUT1
+    579                  00 - Sample Rate Converter
+    580                  01 - AES3 Receiver Output
+    581                  10 - SDIN (SDIN and SDOUT should be synchronous)
+    582                  11 - Reserved
+    583              */
+    584          
+    585              return ret;
+    586          }
+    587          
+    588          bool CS8422_is_96Khz( void )
+    589          {
+    590              if ( GPIOMiddleLevel_Read_InBit(PCM_96KHZ_DETECTION_IO) )
+    591                  return TRUE;
+    592          
+    593              return FALSE;
+    594          }
+    595          
+    596          bool CS8422_is_ReceiverError( void )
+    597          {
+    598              if ( GPIOMiddleLevel_Read_InBit( RECEIVER_ERROR_IO ) )
+    599                  return TRUE;
+    600          
+    601              return FALSE;
+    602          }
+    603          
+    604          static bool CS8422_is_96Khz192Khz_AES3( void )
+    605          {
+    606              uint8 val = 0;
+    607          
+    608              val = CS8422_ReadI2C_Byte(CS8422_PLL_STATUS);
+    609              val &= 0x18; /*Get 96Khz and 192Khz from 15h*/
+    610          
+    611              if ( val )
+    612              {
+    613                  return TRUE;
+    614              }
+    615              
+    616              return FALSE;
+    617          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        8  CS8422_ClockControl_RMCK
+              8 -> CS8422_ReadI2C_Byte
+              0 -> CS8422_WriteI2C_Byte
+        8  CS8422_ForcesClockControl
+              8 -> CS8422_ReadI2C_Byte
+              0 -> CS8422_WriteI2C_Byte
+        0  CS8422_Format_Detect_Status
+              0 -> CS8422_ReadI2C_Byte
+        8  CS8422_Format_IsAC3
+              8 -> CS8422_ReadI2C_Byte
+        8  CS8422_Format_IsDTS
+              8 -> CS8422_ReadI2C_Byte
+        8  CS8422_Format_IsIE61937
+              8 -> CS8422_ReadI2C_Byte
+        8  CS8422_Format_IsPCM
+              8 -> CS8422_ReadI2C_Byte
+        8  CS8422_IsPLL_Lock
+              8 -> CS8422_ReadI2C_Byte
+        8  CS8422_Read_Input_Status
+              8 -> CS8422_ReadI2C_Byte
+        8  CS8422_Read_Receiver_Status
+              8 -> CS8422_ReadI2C_Byte
+        0  CS8422_SRC_Initialize
+              0 -> CS8422_init
+       16  CS8422_SRC_setPath_Rx
+             16 -> CS8422_ClockControl_RMCK
+             16 -> CS8422_ForcesClockControl
+             16 -> CS8422_ReadI2C_Byte
+             16 -> CS8422_SerialAudioInput_SAI_MCLK_Control
+              0 -> CS8422_SerialAudioOutput
+             16 -> CS8422_WriteI2C_Byte
+        8  CS8422_SRC_setPath_SerialAudioInput
+              8 -> CS8422_ClockControl_RMCK
+              8 -> CS8422_SerialAudioInput_SAI_MCLK_Control
+              0 -> CS8422_SerialAudioOutput
+        8  CS8422_SerialAudioInput_SAI_MCLK_Control
+              8 -> CS8422_ReadI2C_Byte
+              0 -> CS8422_WriteI2C_Byte
+        8  CS8422_SerialAudioOutput
+              8 -> CS8422_ReadI2C_Byte
+              0 -> CS8422_WriteI2C_Byte
+       16  CS8422_SoftReboot
+             16 -> CS8422_ReadI2C_Byte
+             16 -> CS8422_WriteI2C_Byte
+             16 -> CS8422_init
+              0 -> Debug_printDebug
+             16 -> vTaskDelay
+        8  CS8422_getForcesClockControl
+              8 -> CS8422_ReadI2C_Byte
+        8  CS8422_getISCLK_ACTIVE
+              8 -> CS8422_ReadI2C_Byte
+        0  CS8422_getReceiverError
+              0 -> CS8422_ReadI2C_Byte
+        8  CS8422_init
+              0 -> CS8422_WriteI2C_Byte
+              8 -> CS8422_WriteI2C_Byte
+        8  CS8422_is_96Khz
+              8 -> GPIOMiddleLevel_Read_InBit
+        8  CS8422_is_96Khz192Khz_AES3
+              8 -> CS8422_ReadI2C_Byte
+        8  CS8422_is_ReceiverError
+              8 -> GPIOMiddleLevel_Read_InBit
+        8  CS8422_read_SDOUT1_DataSource
+              8 -> CS8422_ReadI2C_Byte
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      56  ?<Constant "CS8422 initial!! CS84...">
+       6  ?Subroutine0
+      10  ?Subroutine1
+       6  ?Subroutine2
+       6  ?Subroutine3
+       6  ?Subroutine4
+      30  CS8422_ClockControl_RMCK
+      32  CS8422_ForcesClockControl
+       6  CS8422_Format_Detect_Status
+      20  CS8422_Format_IsAC3
+      32  CS8422_Format_IsDTS
+      18  CS8422_Format_IsIE61937
+      18  CS8422_Format_IsPCM
+      26  CS8422_IsPLL_Lock
+      12  CS8422_Read_Input_Status
+      14  CS8422_Read_Receiver_Status
+       2  CS8422_SRC_Initialize
+     120  CS8422_SRC_setPath_Rx
+      22  CS8422_SRC_setPath_SerialAudioInput
+      36  CS8422_SerialAudioInput_SAI_MCLK_Control
+      62  CS8422_SerialAudioOutput
+     104  CS8422_SoftReboot
+      12  CS8422_getForcesClockControl
+      18  CS8422_getISCLK_ACTIVE
+       6  CS8422_getReceiverError
+     150  CS8422_init
+       6  CS8422_is_96Khz
+      18  CS8422_is_96Khz192Khz_AES3
+       4  CS8422_is_ReceiverError
+      10  CS8422_read_SDOUT1_DataSource
+      48  SRCLowLevel_ObjCtrl
+       4  pSRC_ObjCtrl
+
+ 
+   4 bytes in section .data
+  48 bytes in section .rodata
+ 868 bytes in section .text
+ 
+ 868 bytes of CODE  memory
+  48 bytes of CONST memory
+   4 bytes of DATA  memory
+
+Errors: none
+Warnings: 1

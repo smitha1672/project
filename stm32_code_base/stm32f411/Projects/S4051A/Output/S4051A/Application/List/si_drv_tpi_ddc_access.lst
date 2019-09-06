@@ -1,0 +1,753 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:23 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\tpi_drv\si_drv_t #
+#                    pi_ddc_access.c                                          #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\tpi_drv\si_drv_t #
+#                    pi_ddc_access.c -D S4051A -D DEBUG -D FREE_RTOS -D       #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_drv_tpi_ddc_access.lst                             #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_drv_tpi_ddc_access.o                                #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\driver\tpi_drv\si_drv_tpi_ddc_access.c
+      1          //************************************************************************************************
+      2          //! @file   si_drv_tpi_ddc_access.c
+      3          //! @brief  Access to downstream device over DDC line
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1060 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2002-2010, Silicon Image, Inc.  All rights reserved.
+     11          //************************************************************************************************/
+     12          
+     13          #include "si_drv_tpi_ddc_access.h"
+     14          #include "si_drv_tpi_access.h"
+     15          
+     16          #define WAIT_FOR_BUS_GRANT      ENABLE
+     17          
+     18          #define SI_DDC_DIRECT_LINK      0
+     19          #define SI_DDC_MASTER_TPI       1
+     20          
+     21          #define SI_DDC_CTRL_MODE        SI_DDC_MASTER_TPI
+     22          
+     23          
+     24          static ddcComErr_t dsDdcError = SI_TX_DDC_ERROR_CODE_NO_ERROR;
+     25          
+     26          //-------------------------------------------------------------------------------------------------
+     27          //! @defgroup MDDC_ADDR Downstream DDC device addresses
+     28          //! @brief DDC device addresses
+     29          //!
+     30          //! DDC device addresses to use in
+     31          //! SiiDrvTpiDdcReadBlock() and SiiDrvTpiDdcWriteBlock()
+     32          //! functions.
+     33          //!
+     34          //! @see SI_TxDdcReadExtendedBlock(), SI_TxDdcWriteBlock()
+     35          //!------------------------------------------------------------------------------------------------
+     36          //! @{
+     37          #define DDC_PAGE__EDID_DATA       (0x13 << 8)  //!< main EDID DDC page
+     38          #define DDC_PAGE__EDID_SEGMENT    (0x14 << 8)  //!< EDID segment DDC page
+     39          //
+     40          //! @}
+     41          
+     42          
+     43          //-------------------------------------------------------------------------------------------------
+     44          //  Local service functions
+     45          //-------------------------------------------------------------------------------------------------
+     46          
+     47          static uint8_t sys_ctrl_reg_shadow = 0;
+     48          
+     49          //-------------------------------------------------------------------------------------------------
+     50          //! @brief      Request and accept grant for DDC bus I2C direct access.
+     51          //!
+     52          //!             Limitation: If WAIT_FOR_BUS_GRANT is not defined,
+     53          //!             this function works only with HDCP turned off.
+     54          //!
+     55          //! @param[in]  isI2cBypassEnable - true:  if local I2C bus must be directly connected to the
+     56          //!                                        DDC bus after receiving the grant.
+     57          //!                                 false: avoid I2C direct access.
+     58          //! @return     true for successfully obtained DDC bus grant.
+     59          //-------------------------------------------------------------------------------------------------
+     60          
+     61          static bool_t GrabDsDdcLine(bool_t isI2cBypassEnable)
+     62          {
+     63              bool_t isSuccess = true;
+     64              uint8_t sys_ctrl_reg = SiiRegRead(REG_TPI__SYSTEM_CONTROL);
+     65              sys_ctrl_reg_shadow = sys_ctrl_reg;
+     66              sys_ctrl_reg |= BIT_TPI__SYSTEM_CONTROL__DDC_REQUEST;
+     67          
+     68          #if (WAIT_FOR_BUS_GRANT == ENABLE)
+     69              SiiRegWrite (REG_TPI__SYSTEM_CONTROL, sys_ctrl_reg);
+     70              isSuccess = false;
+     71          
+     72              {
+     73                  int i;
+     74                  sys_ctrl_reg |= BIT_TPI__SYSTEM_CONTROL__DDC_GRANT;
+     75                  for(i=0; i<300; i++)
+     76                  {
+     77                      uint8_t reg_val = SiiRegRead(REG_TPI__SYSTEM_CONTROL);
+     78                      if(reg_val & BIT_TPI__SYSTEM_CONTROL__DDC_GRANT)
+     79                      {
+     80                          if (isI2cBypassEnable)
+     81                          {
+     82                              SiiRegWrite(REG_TPI__SYSTEM_CONTROL, sys_ctrl_reg);
+     83                          }
+     84                          isSuccess = true;
+     85                          break;
+     86                      }
+     87                  }
+     88              }
+     89          
+     90          #else // WAIT_FOR_BUS_GRANT
+     91          
+     92              if (isI2cBypassEnable)
+     93              {
+     94                  SiiRegWrite(REG_TPI__SYSTEM_CONTROL, sys_ctrl_reg);
+     95                  SiiRegRead(REG_TPI__SYSTEM_CONTROL);
+     96          
+     97                  sys_ctrl_reg |= BIT_TPI__SYSTEM_CONTROL__DDC_GRANT;
+     98                  SiiRegWrite(REG_TPI__SYSTEM_CONTROL, sys_ctrl_reg);
+     99              }
+    100          #endif // WAIT_FOR_BUS_GRANT
+    101          
+    102              return isSuccess;
+    103          }
+    104          
+    105          
+    106          //-------------------------------------------------------------------------------------------------
+    107          //! @brief      Release previously received DDC bus grant.
+    108          //-------------------------------------------------------------------------------------------------
+    109          
+    110          static void ReleaseDsDdcLine(void)
+    111          {
+    112              uint8_t i;
+    113              uint8_t regVal = 0;
+    114          
+    115              sys_ctrl_reg_shadow &=
+    116                  ~(BIT_TPI__SYSTEM_CONTROL__DDC_REQUEST | BIT_TPI__SYSTEM_CONTROL__DDC_GRANT);
+    117          
+    118              // Do up to 4 tries to clear bus grant and bus request bits
+    119              for (i = 0; i < 4; ++i)
+    120              {
+    121                  SiiRegWrite(REG_TPI__SYSTEM_CONTROL, sys_ctrl_reg_shadow);
+    122          
+    123                  // Read TPI System Control Register to make sure bus request and bus grant
+    124                  // bits are cleared. It also triggers I2C access to switch back to TPI.
+    125                  regVal = SiiRegRead(REG_TPI__SYSTEM_CONTROL);
+    126                  regVal &= BIT_TPI__SYSTEM_CONTROL__DDC_REQUEST | BIT_TPI__SYSTEM_CONTROL__DDC_GRANT;
+    127          
+    128                  if (!regVal)
+    129                  {
+    130                      // Quit if the bits have been cleared
+    131                      break;
+    132                  }
+    133              }
+    134          }
+    135          
+    136          #if (SI_DDC_CTRL_MODE == SI_DDC_MASTER_TPI)
+    137          //-------------------------------------------------------------------------------------------------
+    138          //! @brief      Wait for DS DDC operation to finish.
+    139          //-------------------------------------------------------------------------------------------------
+    140          
+    141          static bool_t WaitForDdcBus(void)
+    142          {
+    143              uint8_t time_out = LEN_TPI__DDC_FIFO_SIZE + 1;
+    144              // time_out is time in ms, which is proportional to the FIFO size.
+    145              // Since the time required to transmit one byte is 100 uS, the time_out
+    146              // is as much as 10 times longer. +1 is additional time due to SI_Sleep() function precision
+    147              // allows error +0-1 ms.
+    148              do
+    149                  if(0 == (SiiRegRead(REG_TPI__DDC_STATUS) & MSK_TPI__DDC_STATUS__DDC_I2C_IN_PROG))
+    150                      return true;
+    151                  else
+    152                      SiiOsTimerWait(1);
+    153              while(--time_out);
+    154          
+    155              return false;
+    156          }
+    157          #endif
+    158          
+    159          //-------------------------------------------------------------------------------------------------
+    160          //  TX DDC Access API functions
+    161          //-------------------------------------------------------------------------------------------------
+    162          
+    163          //-------------------------------------------------------------------------------------------------
+    164          //! @brief      Initialization of DDC access module.
+    165          //-------------------------------------------------------------------------------------------------
+    166          
+    167          void SiiDrvTpiDdcInit(void)
+    168          {
+    169              dsDdcError = SI_TX_DDC_ERROR_CODE_NO_ERROR;
+    170          
+    171          #if (FPGA_BUILD == ENABLE)
+    172              {
+    173                  // Fixes an issue when enabled the DDC stalled on every clock (in FPGA).
+    174                  SiiDrvTpiIndirectWrite(REG_TPI__DDC_DOUT_CNT, 0);
+    175              }
+    176          #endif
+    177          
+    178          #if (SI_DDC_CTRL_MODE == SI_DDC_MASTER_TPI)
+    179              // DDC speed formula: F_ddc = 1/(200ns * (4 * (delay count + 1)  + 6))
+    180              SiiRegWrite(REG_TPI__DDC_DELAY_CNT, 0x0E); // Set DDC Speed ~ 76 kHz
+    181          #endif
+    182          }
+    183          
+    184          
+    185          //-------------------------------------------------------------------------------------------------
+    186          //! @brief      Reset DDC master if it got stuck (SWWA:18705).
+    187          //-------------------------------------------------------------------------------------------------
+    188          
+    189          void SiiDrvTpiDdcMasterReset(void)
+    190          {
+    191              SiiOsTimerWait(1); //SWWA:20334
+    192              GrabDsDdcLine(true);
+    193              ReleaseDsDdcLine();
+    194          }
+    195          
+    196          
+    197          //-------------------------------------------------------------------------------------------------
+    198          //! @brief      Return last error code.
+    199          //-------------------------------------------------------------------------------------------------
+    200          
+    201          ddcComErr_t SiiDrvTpiDdcGetLastError(void)
+    202          {
+    203              return dsDdcError;
+    204          }
+    205          
+    206          
+    207          //-------------------------------------------------------------------------------------------------
+    208          //! @brief      Print last DDC access error info.
+    209          //-------------------------------------------------------------------------------------------------
+    210          
+    211          void SiiDrvTpiDdcErrorsPrint(void)
+    212          {
+    213              if (dsDdcError)
+    214              {
+    215                  DEBUG_PRINT(MSG_ERR, "DS DDC Errors: ");
+    216          
+    217                  switch (dsDdcError)
+    218                  {
+    219                      case SI_TX_DDC_ERROR_CODE_TIMEOUT:
+    220                          DEBUG_PRINT(MSG_ERR, "TIMEOUT\n");
+    221                          break;
+    222                      case SI_TX_DDC_ERROR_CODE_NO_ACK:
+    223                          DEBUG_PRINT(MSG_ERR, "NO ACK\n");
+    224                          break;
+    225                      default:
+    226                          break;
+    227                  }
+    228              }
+    229          }
+    230          
+    231          
+    232          //-------------------------------------------------------------------------------------------------
+    233          //! @brief      Read from downstream DDC device.
+    234          //!
+    235          //!             The function can be used for downstream EDID or HDCP DDC reading.
+    236          //!
+    237          //! @param[in]  segmentIndex - EDID segment number; 0 for HDCP DDC
+    238          //! @param[in]  regAddr      - HDCP register offset or EDID data offset
+    239          //! @param[out] pBuf         - pointer to the buffer
+    240          //! @param[in]  length       - number of bytes to read
+    241          //!
+    242          //! @return     Error code, @see ddcComErr_t
+    243          //-------------------------------------------------------------------------------------------------
+    244          
+    245          ddcComErr_t SiiDrvTpiDdcReadBlock(uint8_t segmentIndex, uint8_t regAddr, uint8_t *pBuf, uint16_t length)
+    246          {
+    247          #if (SI_DDC_CTRL_MODE == SI_DDC_DIRECT_LINK)
+    248              uint8_t hdcpReg = SiiRegRead(REG_TPI__HDCP_CTRL);
+    249          
+    250              dsDdcError = SI_TX_DDC_ERROR_CODE_NO_ERROR;
+    251          
+    252              // temporary disable HDCP if it was on
+    253              if((hdcpReg & BIT_TPI__HDCP_CTRL__ENCRYPT_DISABLE) == 0)
+    254              {
+    255                  SiiRegWrite(REG_TPI__HDCP_CTRL, hdcpReg | BIT_TPI__HDCP_CTRL__ENCRYPT_DISABLE);
+    256              }
+    257          
+    258              // If speed < 100k is necessary for stable DDC communication (e.g., due to long cables),
+    259              // switch to slower i2c data rate
+    260              //I2cSetSlowSpeed(true);
+    261          
+    262              if(GrabDsDdcLine(true))
+    263              {
+    264                  if (length != 0)
+    265                  {
+    266                      SiiRegEdidReadBlock(TX_PAGE_DDC_SEGM | segmentIndex,
+    267                                          TX_PAGE_DDC_EDID | regAddr,
+    268                                          pBuf, length );
+    269          
+    270                      if ( SiiCraGetLastResult() != SII_SUCCESS)
+    271                      {
+    272                          dsDdcError = SI_TX_DDC_ERROR_CODE_NO_ACK;
+    273                      }
+    274                  }
+    275              }
+    276              else
+    277              {
+    278                  dsDdcError = SI_TX_DDC_ERROR_CODE_TIMEOUT;
+    279              }
+    280          
+    281              ReleaseDsDdcLine();
+    282          
+    283          
+    284              // Switch back to full speed i2c communication
+    285              //I2cSetSlowSpeed(false);
+    286          
+    287          
+    288              // recover HDCP state that was before this function execution
+    289              if((hdcpReg & BIT_TPI__HDCP_CTRL__ENCRYPT_DISABLE) == 0)
+    290              {
+    291                  SiiRegWrite(REG_TPI__HDCP_CTRL, hdcpReg);
+    292              }
+    293          
+    294          #else //   SI_DDC_CTRL_MODE == SI_DDC_MASTER_TPI
+    295              uint16_t fifoSize;
+    296              time_ms_t timeOutMs;
+    297          
+    298              dsDdcError = SI_TX_DDC_ERROR_CODE_NO_ERROR;
+    299          
+    300              if (GrabDsDdcLine(false))
+    301              {
+    302                  BEGIN_TEST
+    303                          {
+    304          
+    305                              FAIL_IF(length == 0);
+    306                              FAIL_IF(!pBuf);
+    307          
+    308                              if (!WaitForDdcBus())
+    309                              {
+    310                                  dsDdcError = SI_TX_DDC_ERROR_CODE_BUSY;
+    311                                  FAIL_IF(true);
+    312                              }
+    313          
+    314                              SiiRegWrite(REG_TPI__DDC_ADDR, 0xA0);
+    315                              SiiRegWrite(REG_TPI__DDC_SEGM, segmentIndex);
+    316                              SiiRegWrite(REG_TPI__DDC_OFFSET, regAddr);
+    317                              SiiRegWrite(REG_TPI__DDC_DIN_CNT2, 0);
+    318                              SiiRegWrite(REG_TPI__DDC_DIN_CNT1, length);
+    319                              SiiRegWrite(REG_TPI__DDC_CMD, CMD_TPI__DDC_CLEAR_FIFO | MSK_TPI__DDC_CMD__ENABLE);
+    320                              SiiRegWrite(REG_TPI__DDC_CMD, (segmentIndex ?
+    321                                      CMD_TPI__DDC_ENHANCED_DDC_READ_WITH_NO_ACK_ON_LAST_BYTE :
+    322                                      CMD_TPI__DDC_SEQUENTIAL_READ_WITH_NO_ACK_ON_LAST_BYTE) |
+    323                                      MSK_TPI__DDC_CMD__ENABLE);
+    324          
+    325                              timeOutMs = length + 3; // timeout is proportional to length
+    326          
+    327                              // wait until the FIFO is filled with several bytes
+    328                              SiiOsTimerWait(2); // also makes time aligning
+    329          
+    330                              do
+    331                              {
+    332                                  fifoSize = SiiRegRead(REG_TPI__DDC_DOUT_CNT) & 0x1F;
+    333                                  //          test_status = SiiRegRead(REG_TPI__DDC_STATUS);
+    334                                  if (fifoSize)
+    335                                  {
+    336                                      // if the FIFO has some bytes
+    337                                      if (fifoSize > length)
+    338                                      {
+    339                                          dsDdcError = SI_TX_DDC_ERROR_CODE_TX_HW;
+    340                                          FAIL_IF(true);
+    341                                      }
+    342                                      else if (fifoSize > LEN_TPI__DDC_FIFO_SIZE)
+    343                                      {
+    344                                          dsDdcError = SI_TX_DDC_ERROR_CODE_LIM_EXCEED;
+    345                                          FAIL_IF(true);
+    346                                      }
+    347                                      else
+    348                                      {
+    349                                          // read fifo_size bytes
+    350                                          SiiRegReadBlock(REG_TPI__DDC_DATA, pBuf, fifoSize);
+    351                                          length -= fifoSize;
+    352                                          pBuf += fifoSize;
+    353                                      }
+    354                                  }
+    355                                  else
+    356                                  {
+    357                                      SiiOsTimerWait(1); // note, the time is aligned
+    358                                      timeOutMs--;
+    359                                  }
+    360                              } while (length && timeOutMs);
+    361          
+    362                              FAIL_IF(dsDdcError);
+    363          
+    364                              if (0 == timeOutMs)
+    365                              {
+    366                                  dsDdcError = SI_TX_DDC_ERROR_CODE_TIMEOUT;
+    367                              }
+    368          
+    369                          }END_TEST
+    370          
+    371                  if (dsDdcError)
+    372                  {
+    373                      SiiRegWrite(REG_TPI__DDC_CMD, CMD_TPI__DDC_ABORT_TRANSACTION | MSK_TPI__DDC_CMD__ENABLE);
+    374                  }
+    375          
+    376              }
+    377              else
+    378              {
+    379                  dsDdcError = SI_TX_DDC_ERROR_CODE_TIMEOUT;
+    380              }
+    381          
+    382              ReleaseDsDdcLine();
+    383          
+    384              // Disable DDC Master
+    385              SiiRegWrite(REG_TPI__DDC_CMD, 0);
+    386          
+    387          
+    388          #endif
+    389              return dsDdcError;
+    390          }
+    391          
+    392          
+    393          //-------------------------------------------------------------------------------------------------
+    394          //! @brief      Write into the downstream DDC device.
+    395          //!
+    396          //!             The function can be used for HDCP DDC writing.
+    397          //!
+    398          //! @param[in]  regAddr - HDCP register offset,
+    399          //! @param[in]  pBuf    - pointer to the buffer,
+    400          //! @param[in]  length  - number of bytes to write,
+    401          //!
+    402          //! @return     Error code, @see ddcComErr_t
+    403          //-------------------------------------------------------------------------------------------------
+    404          
+    405          ddcComErr_t SiiDrvTpiDdcWriteBlock(uint8_t regAddr, const uint8_t *pBuf, uint16_t length)
+    406          {
+    407              uint8_t hdcpReg = SiiRegRead(REG_TPI__HDCP_CTRL);
+    408          
+    409              dsDdcError = SI_TX_DDC_ERROR_CODE_NO_ERROR;
+    410          
+    411              // temporary disable HDCP if it was on
+    412              if((hdcpReg & BIT_TPI__HDCP_CTRL__ENCRYPT_DISABLE) == 0)
+    413              {
+    414                  SiiRegWrite(REG_TPI__HDCP_CTRL, hdcpReg | BIT_TPI__HDCP_CTRL__ENCRYPT_DISABLE);
+    415              }
+    416          
+    417          
+    418              // I2cSetSlowSpeed(true);
+    419          
+    420          
+    421              if(GrabDsDdcLine(true))
+    422              {
+    423                  SiiRegWriteBlock(DDC_PAGE__EDID_DATA | regAddr, pBuf, length);
+    424              }
+    425              else
+    426              {
+    427                  dsDdcError = SI_TX_DDC_ERROR_CODE_TIMEOUT;
+    428              }
+    429          
+    430              ReleaseDsDdcLine();
+    431          
+    432          
+    433              //I2cSetSlowSpeed(false);
+    434          
+    435          
+    436              // recover HDCP state that was before this function execution
+    437              if((hdcpReg & BIT_TPI__HDCP_CTRL__ENCRYPT_DISABLE) == 0)
+    438              {
+    439                  SiiRegWrite(REG_TPI__HDCP_CTRL, hdcpReg);
+    440              }
+    441          
+    442              return dsDdcError;
+    443          }
+    444          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       24  GrabDsDdcLine
+             24 -> SiiRegRead
+             24 -> SiiRegWrite
+       16  ReleaseDsDdcLine
+             16 -> SiiRegRead
+             16 -> SiiRegWrite
+        0  SiiDrvTpiDdcErrorsPrint
+        0  SiiDrvTpiDdcGetLastError
+        0  SiiDrvTpiDdcInit
+              0 -> SiiRegWrite
+        8  SiiDrvTpiDdcMasterReset
+              8 -> GrabDsDdcLine
+              0 -> ReleaseDsDdcLine
+              8 -> SiiOsTimerWait
+       32  SiiDrvTpiDdcReadBlock
+             32 -> GrabDsDdcLine
+             32 -> ReleaseDsDdcLine
+             32 -> SiiOsTimerWait
+             32 -> SiiRegRead
+             32 -> SiiRegReadBlock
+             32 -> SiiRegWrite
+       32  SiiDrvTpiDdcWriteBlock
+             32 -> GrabDsDdcLine
+             32 -> ReleaseDsDdcLine
+             32 -> SiiRegRead
+             32 -> SiiRegWrite
+             32 -> SiiRegWriteBlock
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable5
+       4  ??DataTable5_1
+       6  ?Subroutine0
+      76  GrabDsDdcLine
+      44  ReleaseDsDdcLine
+       2  SiiDrvTpiDdcErrorsPrint
+       6  SiiDrvTpiDdcGetLastError
+      16  SiiDrvTpiDdcInit
+      20  SiiDrvTpiDdcMasterReset
+     266  SiiDrvTpiDdcReadBlock
+      94  SiiDrvTpiDdcWriteBlock
+       1  dsDdcError
+       1  sys_ctrl_reg_shadow
+
+ 
+   2 bytes in section .bss
+ 538 bytes in section .text
+ 
+ 538 bytes of CODE memory
+   2 bytes of DATA memory
+
+Errors: none
+Warnings: 1

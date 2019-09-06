@@ -1,0 +1,657 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:50 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\edid_tx\si_ed #
+#                    id_tx_decode_h.c                                         #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\edid_tx\si_ed #
+#                    id_tx_decode_h.c -D S4051A -D DEBUG -D FREE_RTOS -D      #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_edid_tx_decode_h.lst                               #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_edid_tx_decode_h.o                                  #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\component\edid_tx\si_edid_tx_decode_h.c
+      1          //************************************************************************************************
+      2          //! @file   si_edid_tx_decode_h.c
+      3          //! @brief  EDID parsing and decoding. High-level API
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1060 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2002-2010, Silicon Image, Inc.  All rights reserved.
+     11          //***********************************************************************************************/
+     12          
+     13          
+     14          #include <string.h>
+     15          #include <stdio.h>
+     16          #include "si_edid_tx_component.h"
+     17          #include "si_edid_tx_internal.h"
+     18          #include "si_edid_black_list.h"
+     19          #include "si_drv_tpi_ddc_access.h"
+     20          #include "si_drv_nvram_sram.h"
+     21          
+     22          //-------------------------------------------------------------------------------------------------
+     23          //! @brief      Check correctness of the block 0 header.
+     24          //!
+     25          //! @param[in]  aBlock - pointer to EDID block 0 array
+     26          //!
+     27          //! @retval     true  - success
+     28          //! @retval     false - header is broken
+     29          //-------------------------------------------------------------------------------------------------
+     30          
+     31          static bool_t CheckEdidBlock0Header(uint8_t aBlock[EDID_BLOCK_SIZE])
+     32          {
+     33              // Check EDID header
+     34              if ( 0 != memcmp(&aBlock[EDID_BL0_ADR__HEADER], &defaultDsEdid[EDID_BL0_ADR__HEADER], EDID_BL0_LEN__HEADER) )
+     35                  return false;
+     36              return true;
+     37          }
+     38          
+     39          
+     40          //-------------------------------------------------------------------------------------------------
+     41          //! @brief      Check correctness of the block 0 version field.
+     42          //!
+     43          //! @param[in]  aBlock - pointer to EDID block 0 array
+     44          //!
+     45          //! @retval     true  - success
+     46          //! @retval     false - header is broken
+     47          //-------------------------------------------------------------------------------------------------
+     48          
+     49          static bool_t CheckEdidBlock0Version(uint8_t aBlock[EDID_BLOCK_SIZE])
+     50          {
+     51              // Check EDID version
+     52              if (aBlock[EDID_BL0_ADR__VERSION] != 1) // only 1.x versions are allowed (not 2.0)
+     53                  return false;
+     54              return true;
+     55          }
+     56          
+     57          
+     58          //-------------------------------------------------------------------------------------------------
+     59          //! @brief      Decode the passed EDID block 0.
+     60          //!
+     61          //! @param[in]  aBlock - pointer to EDID block 0 array
+     62          //-------------------------------------------------------------------------------------------------
+     63          
+     64          void EdidTxParseBlock0 ( uint8_t aBlock[EDID_BLOCK_SIZE] )
+     65          {
+     66          
+     67          #ifdef COLLECT_EXCESSIVE_INFO
+     68              pEdidTx->pEdidDecodData->Revision = aBlock[EDID_BL0_ADR__REVISION];
+     69          #else // COLLECT_EXCESSIVE_INFO
+     70              pEdidTx->pEdidDecodData->Revision = aBlock[EDID_BL0_ADR__REVISION];
+     71          #endif // COLLECT_EXCESSIVE_INFO
+     72          
+     73              pEdidTx->pEdidDecodData->edidInfo.ManufacturerId =
+     74                  (aBlock[EDID_BL0_ADR__MANUFACTURER_ID] << 8) |
+     75                  aBlock[EDID_BL0_ADR__MANUFACTURER_ID+1];
+     76              pEdidTx->pEdidDecodData->edidInfo.ProductId =
+     77                  aBlock[EDID_BL0_ADR__PRODUCT_ID] |
+     78                  (aBlock[EDID_BL0_ADR__PRODUCT_ID+1] << 8);
+     79          
+     80          #ifdef COLLECT_EXCESSIVE_INFO
+     81              pEdidTx->pEdidDecodData->edidInfo.ShortSerialNumber =
+     82                  aBlock[EDID_BL0_ADR__SHORT_SERIAL_NUMBER] |
+     83                  (aBlock[EDID_BL0_ADR__SHORT_SERIAL_NUMBER+1] << 8) |
+     84                  (aBlock[EDID_BL0_ADR__SHORT_SERIAL_NUMBER+2] << 16) |
+     85                  (aBlock[EDID_BL0_ADR__SHORT_SERIAL_NUMBER+3] << 24);
+     86          #endif // COLLECT_EXCESSIVE_INFO
+     87          
+     88              pEdidTx->pEdidDecodData->edidInfo.ManufactureWeek = aBlock[EDID_BL0_ADR__MANUFACTURE_WEEK];
+     89              pEdidTx->pEdidDecodData->edidInfo.ManufactureYear = aBlock[EDID_BL0_ADR__MANUFACTURE_YEAR];
+     90              pEdidTx->pEdidDecodData->edidInfo.EstablishedTiming1 = aBlock[EDID_BL0_ADR__ESTABLISHED_TIMING_1];
+     91              pEdidTx->pEdidDecodData->edidInfo.EstablishedTiming2 = aBlock[EDID_BL0_ADR__ESTABLISHED_TIMING_2];
+     92              pEdidTx->pEdidDecodData->edidInfo.ManufacturerReservedTiming = aBlock[EDID_BL0_ADR__MANUFACTURER_RESERVED_TIMING];
+     93          
+     94              memcpy( pEdidTx->pEdidDecodData->edidInfo.BasicDispayParameters,
+     95                  &aBlock[EDID_BL0_ADR__BASIC_DISPLAY_PARAMS],
+     96                  EDID_BL0_LEN__BASIC_DISPLAY_PARAMS );
+     97              memcpy( pEdidTx->pEdidDecodData->edidInfo.Chromaticity,
+     98                  &aBlock[EDID_BL0_ADR__CHROMATICITY],
+     99                  EDID_BL0_LEN__CHROMATICITY );
+    100              memcpy( pEdidTx->pEdidDecodData->edidInfo.StandardTiming,
+    101                  &aBlock[EDID_BL0_ADR__STANDARD_TIMING],
+    102                  EDID_BL0_LEN__STANDARD_TIMING );
+    103          
+    104              if ( 0 == ( pEdidTx->pEdidDecodData->edidInfo.BasicDispayParameters[0] & 0x80) )
+    105              {
+    106                  // EDID is marked as for analog TV
+    107                  // (some of DVI TVs have this bug)
+    108                  pEdidTx->pEdidDecodData->edidInfo.BasicDispayParameters[0] = 0x80;
+    109                  pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__BLOCK_0_VIOLATION;
+    110              }
+    111          
+    112              EdidTxDecodeDtd(&aBlock[EDID_BL0_ADR__DTD1]);
+    113              EdidTxDecodeDtd(&aBlock[EDID_BL0_ADR__DTD2]);
+    114              EdidTxDecodeDtd(&aBlock[EDID_BL0_ADR__DTD3]);
+    115              EdidTxDecodeDtd(&aBlock[EDID_BL0_ADR__DTD4]);
+    116          }
+    117          
+    118          
+    119          //-------------------------------------------------------------------------------------------------
+    120          //! @brief      Load block 0 of the selected EDID and verify that it is at least
+    121          //!             nominally a valid block 0 EDID.  If not, replace it with the
+    122          //!             default.  Decode the result.
+    123          //!
+    124          //! @param[in]  pEdid - pointer to EDID block 0.
+    125          //-------------------------------------------------------------------------------------------------
+    126          
+    127          static void EdidDecodeBlock0 ( uint8_t *pEdid )
+    128          {
+    129          //    bool_t replaceEdidwithDefault = false;
+    130          
+    131              for ( ;; )
+    132              {
+    133                  // Read the EDID. Give it two chances.
+    134          
+    135                  if ( !EdidTxReadBlock( 0, pEdid ))
+    136                  {
+    137                      if ( !EdidTxReadBlock( 0, pEdid))
+    138                      {
+    139                          pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__CANNOT_READ_BL0 | EDID_ERROR__DEFAULT_EDID_USED;
+    140                          break;
+    141                      }
+    142                  }
+    143          
+    144                  /* Verify that block 0 of the EDID is nominally a real block 0 EDID.    */
+    145          
+    146                  if ( pEdidTx->pEdidDecodData->edidInfo.ErrorCode & EDID_ERROR__CHECK_SUM_MISMATCH )
+    147                  {
+    148                      if ( !pEdidTx->parseOptions.AllowCheckSumMismatchForBlock0)
+    149                      {
+    150                          pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__DEFAULT_EDID_USED;
+    151                          break;
+    152                      }
+    153                  }
+    154                  if ( !CheckEdidBlock0Header(pEdid))
+    155                  {
+    156                      pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__INCORRECT_HEADER | EDID_ERROR__DEFAULT_EDID_USED;
+    157                  }
+    158                  if ( !CheckEdidBlock0Version(pEdid))
+    159                  {
+    160                      pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__INCORRECT_VERSION | EDID_ERROR__DEFAULT_EDID_USED;
+    161                  }
+    162                  break;
+    163              }
+    164          
+    165              // If a checksum error occurred but is not fatal (parseOptions.AllowCheckSumMismatchForBlock0 == true),
+    166              // AND the EDID has more than one block, we can ignore the checksum if the checksum for block 1 is OK.
+    167              // This chunk of code reads in the second block and verifies the checksum.  If it cannot read the second
+    168              // block, or the second block checksum is bad, force use of the default block 0 EDID.
+    169          
+    170              if (( pEdidTx->pEdidDecodData->edidInfo.ErrorCode & EDID_ERROR__CHECK_SUM_MISMATCH ) &&
+    171                 !( pEdidTx->pEdidDecodData->edidInfo.ErrorCode & EDID_ERROR__DEFAULT_EDID_USED ))
+    172              {
+    173                  // Multiple extensions were specified.
+    174          
+    175                  if ( 0 != pEdid[EDID_BL0_ADR__EXTENSION_NMB]) 
+    176                  {
+    177                      // If block 0 had mismatched CS, ensure that at least one other block has correct CS
+    178                      if ( !EdidTxReadBlock( 1, pEdid ))
+    179                      {
+    180                          pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__CANNOT_READ_EXT | EDID_ERROR__DEFAULT_EDID_USED;
+    181                      } 
+    182          
+    183                      // If there was a checksum error this time, it's fatal.
+    184          
+    185                      else if ( pEdidTx->pEdidDecodData->edidInfo.ErrorCode & EDID_ERROR__CHECK_SUM_MISMATCH )
+    186                      {
+    187                          pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__DEFAULT_EDID_USED;
+    188                      }
+    189                      else
+    190                      {
+    191                          EdidTxReadBlock( 0, pEdid );     // No problems with block 1, re-read block 0 into edid array.
+    192                      }
+    193                  }
+    194          
+    195                  // No extensions, use basic DVI default EDID.
+    196          
+    197                  else
+    198                  {
+    199                      pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__DEFAULT_EDID_USED;
+    200                  }
+    201              }
+    202          
+    203              // Replace read EDID with default one if suggested.  We assume the default has none
+    204              // of the problems listed above.
+    205          
+    206              if ( pEdidTx->pEdidDecodData->edidInfo.ErrorCode & EDID_ERROR__DEFAULT_EDID_USED )
+    207              {
+    208                  memcpy( pEdid, defaultDsEdid, EDID_BLOCK_SIZE);
+    209              }
+    210          
+    211              // Decode the resulting block 0 EDID
+    212          
+    213              EdidTxParseBlock0( pEdid );
+    214          }
+    215          
+    216          
+    217          //-------------------------------------------------------------------------------------------------
+    218          //! @brief      Load and decode an extension EDID block.
+    219          //!
+    220          //! @param[in]  blockIdx - EDID block index,
+    221          //! @param[in]  pEdid    - pointer to EDID block
+    222          //-------------------------------------------------------------------------------------------------
+    223          
+    224          static void EdidDecodeBlockExtension ( uint8_t blockIdx, uint8_t *pEdid )
+    225          {
+    226              if ( !EdidTxReadBlock( blockIdx, pEdid))
+    227              {
+    228                  pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__CANNOT_READ_EXT;
+    229                  DEBUG_PRINT( MSG_ERR, "\nCannot read EDID Block %d", (int)blockIdx);
+    230              }
+    231              else
+    232              {
+    233                  EdidTxParseBlock( pEdid, blockIdx );
+    234              }
+    235          }
+    236          
+    237          
+    238          //-------------------------------------------------------------------------------------------------
+    239          //! @brief      Parse downstream EDID into an internal structure.
+    240          //!             Also performs some basic error checking on the EDID.
+    241          //-------------------------------------------------------------------------------------------------
+    242          //extern const uint8_t gEdidFlashEdidTable [ EDID_TABLE_LEN ];
+    243          
+    244          void EdidTxDecodeEdid ( void )
+    245          {
+    246              uint8_t edid[EDID_BLOCK_SIZE];
+    247          	int    extensionCount = 0;
+    248          
+    249              //memcpy(edid, gEdidFlashEdidTable, EDID_BLOCK_SIZE);
+    250          
+    251              // Configuration may force the DVI mode in the output
+    252              pEdidTx->pEdidDecodData->edidInfo.isHdmiMode = !pEdidTx->parseOptions.DviInput;
+    253          
+    254              // In Sound Bar mode, we take the basic properties, including video, from
+    255              // the local RX EDID and the Audio properties from the downstream (Sound Bar) EDID
+    256          	// when we would normally take everything from the downstream EDID
+    257          
+    258              pEdidTx->isDecodeAudio        = true;
+    259              pEdidTx->isDecodeNonAudio     = true;
+    260              if ( pEdidTx->isSoundBarMode )
+    261              {
+    262                  pEdidTx->isDecodeAudio = false;
+    263              }
+    264          
+    265              EdidDecodeBlock0( edid );
+    266              extensionCount = edid[EDID_BL0_ADR__EXTENSION_NMB];
+    267          
+    268              DEBUG_PRINT( EDID_TX_MSG_DBG, "DS blocks read: %d \n", extensionCount + 1 );
+    269          
+    270              //memcpy(edid, &gEdidFlashEdidTable[EDID_BLOCK_SIZE], EDID_BLOCK_SIZE);
+    271          
+    272              if ( pEdidTx->isSoundBarMode )
+    273              {
+    274                  // If there is at least 1 extension block, decode NON-audio from NVRAM EDID block 1
+    275          
+    276                  if ( extensionCount > 0 )
+    277                  {
+    278                      EdidDecodeBlockExtension( 1, edid );
+    279                  }
+    280          
+    281                  // The rest of the decoding is audio only, from the DS EDID
+    282                  pEdidTx->isDecodeAudio        = true;
+    283                  pEdidTx->isDecodeNonAudio     = false;
+    284              }
+    285          
+    286              // One extension is simple, just decode it.
+    287          
+    288              if ( extensionCount == 1)
+    289              {
+    290                  EdidDecodeBlockExtension( 1, edid );
+    291              }
+    292          
+    293              // If more than 1 extension, the first extension must be a map block,
+    294              // so read it first, then decode the rest of the extensions.
+    295          
+    296              else if ( extensionCount > 1 )
+    297              {
+    298                  uint8_t map[EDID_BLOCK_SIZE];
+    299                  if ( !EdidTxReadBlock( 1, map ))
+    300                  {
+    301                      pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__CANNOT_READ_EXT;
+    302                  }
+    303                  else
+    304                  {
+    305                      if ( EDID_EXT_TAG__BLOCK_MAP != map[0])
+    306                      {
+    307                          pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__INCORRECT_MAP_TAG;
+    308                      }
+    309                      else
+    310                      {
+    311                          int blockIndex;
+    312                          if (extensionCount > 127) // 126 timings extensions + one map extension
+    313                          {
+    314                              extensionCount = 127;
+    315                              pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__TOO_MANY_EXTENSIONS;
+    316                          }
+    317                          // block 0 is the main block
+    318                          // block 1 is a map
+    319                          // block 2 ... nmb_of_extension+1  are timings extensions
+    320                          for (blockIndex = 2; blockIndex <= extensionCount; blockIndex++)
+    321                          {
+    322                              if (EDID_EXT_TAG__ADDITIONAL_TIMINGS == map[blockIndex-1])
+    323                              {
+    324                                  EdidDecodeBlockExtension( blockIndex, edid );
+    325                              }
+    326                          }
+    327                      }
+    328                  }
+    329              }
+    330          
+    331              // if no extension, it must be a DVI EDID
+    332          
+    333              else 
+    334              {
+    335                  // DVI monitor case.
+    336                  // Very often DVI monitors support more modes then declared in their EDIDs.
+    337                  // Probably it is due to they use just one EDID block and there is not enough
+    338                  // room to list all the modes.
+    339                  // Many existing players know that and allow playing
+    340                  // some additional modes even though they are not indicated by the monitor EDID.
+    341          
+    342                  DEBUG_PRINT( EDID_TX_MSG_DBG, ( "DS DVI EDID Detected, adding DVI video modes\n" ));
+    343          
+    344                  pEdidTx->pEdidDecodData->edidInfo.isHdmiMode = false;
+    345          
+    346                  EdidTxAddDviVideoModes();
+    347              }
+    348          
+    349              EdidTxPostDecode();
+    350          
+    351              // Check for remedies
+    352              if ( pEdidTx->parseOptions.enableRemedies)
+    353              {
+    354                  pEdidTx->pEdidDecodData->edidInfo.RemedyMask = EdidTxRemedyMaskBuild( &pEdidTx->pEdidDecodData->edidInfo );
+    355              }
+    356          
+    357              // make a correction if required
+    358              if ( pEdidTx->pEdidDecodData->edidInfo.RemedyMask & SI_TX_EDID_REMEDY_DO_NOT_USE_YCBCR)
+    359              {
+    360                  pEdidTx->pEdidDecodData->edidInfo.SupportYCbCr = false;
+    361              }
+    362          
+    363          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       16  EdidDecodeBlock0
+               0 -> EdidTxParseBlock0
+              16 -> EdidTxReadBlock
+              16 -> __aeabi_memcpy
+              16 -> memcmp
+       16  EdidDecodeBlockExtension
+               0 -> EdidTxParseBlock
+              16 -> EdidTxReadBlock
+      272  EdidTxDecodeEdid
+             272 -> EdidDecodeBlock0
+             272 -> EdidDecodeBlockExtension
+             272 -> EdidTxAddDviVideoModes
+             272 -> EdidTxPostDecode
+             272 -> EdidTxReadBlock
+             272 -> EdidTxRemedyMaskBuild
+       16  EdidTxParseBlock0
+               0 -> EdidTxDecodeDtd
+              16 -> EdidTxDecodeDtd
+              16 -> __aeabi_memcpy
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable3
+       4  ??DataTable3_1
+       8  ?Subroutine0
+      22  ?Subroutine1
+     188  EdidDecodeBlock0
+      40  EdidDecodeBlockExtension
+     292  EdidTxDecodeEdid
+     208  EdidTxParseBlock0
+
+ 
+ 766 bytes in section .text
+ 
+ 766 bytes of CODE memory
+
+Errors: none
+Warnings: 1

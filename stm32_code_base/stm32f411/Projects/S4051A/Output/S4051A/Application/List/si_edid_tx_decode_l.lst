@@ -1,0 +1,1948 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:53 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\edid_tx\si_ed #
+#                    id_tx_decode_l.c                                         #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\edid_tx\si_ed #
+#                    id_tx_decode_l.c -D S4051A -D DEBUG -D FREE_RTOS -D      #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_edid_tx_decode_l.lst                               #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_edid_tx_decode_l.o                                  #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\component\edid_tx\si_edid_tx_decode_l.c
+      1          //************************************************************************************************
+      2          //! @file   si_edid_tx_decode_l.c
+      3          //! @brief  EDID parsing and decoding. Low-level API
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1060 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2002-2010, Silicon Image, Inc.  All rights reserved.
+     11          //***********************************************************************************************/
+     12          
+     13          
+     14          #include <string.h>
+     15          #include "si_common.h"
+     16          #include "si_drv_tpi_ddc_access.h"
+     17          #include "si_edid_tx_component.h"
+     18          #include "si_edid_tx_internal.h"
+     19          #include "si_debug.h"
+     20          
+     21          #define CHECK_POLARITY_IN_DTD
+     22          #define FIX_INCORRECT_ASPECT_RATIOS
+     23          
+     24          //-------------------------------------------------------------------------------------------------
+     25          //! @brief      Verify EDID block checksum.
+     26          //!
+     27          //! @retval     true  - checksum is correct,
+     28          //! @retval     false - checksum mismatch
+     29          //-------------------------------------------------------------------------------------------------
+     30          
+     31          
+     32          bool_t EdidTxCheckBlockCheckSum(uint8_t aBlock[EDID_BLOCK_SIZE])
+     33          {
+     34              uint8_t check_sum = 0;
+     35              int i;
+     36              for (i = 0; i < (EDID_BLOCK_SIZE-1); i++)
+     37              {
+     38                  check_sum += aBlock[i];
+     39              }
+     40              check_sum = 0x100 - check_sum;
+     41          
+     42              if ( aBlock[EDID_BLOCK_SIZE-1] != check_sum )
+     43              {
+     44                  return false;
+     45              }
+     46              return true;
+     47          }
+     48          
+     49          
+     50          //-------------------------------------------------------------------------------------------------
+     51          //! @brief      Return video mode ID corresponding to provided DTD timings.
+     52          //!
+     53          //-------------------------------------------------------------------------------------------------
+     54          
+     55          static int GetVideoModeIndex (dtd_t *pTiming)
+     56          {
+     57              int i;
+     58              for ( i=0; VideoModeTable[i].Vic4x3 || VideoModeTable[i].Vic16x9 ; i++)
+     59              {
+     60                  uint8_t interlaced = (VideoModeTable[i].Interlaced == INTL) ? 1 : 0;
+     61                  //if ( (VideoModeTable[i].Interlaced == INTL) !=
+     62                  if ( interlaced != (pTiming->Interlaced) )
+     63                      continue;
+     64                  if ( ABS_DIFF(VideoModeTable[i].PixFreq, (pTiming->PixClk_10kHz/100)) > 1 ) // +-1MHz
+     65                      continue;
+     66                  if ( VideoModeTable[i].Active.H != pTiming->HAct_Pix )
+     67                      continue;
+     68                  if ( VideoModeTable[i].Active.V != (pTiming->VAct_Pix << interlaced) )
+     69                      continue;
+     70                  if ( VideoModeTable[i].Blank.H != pTiming->HBlank_Pix )
+     71                      continue;
+     72                  if ( VideoModeTable[i].Blank.V != pTiming->VBlank_Pix )
+     73                      continue;
+     74                  if ( VideoModeTable[i].SyncOffset.H != pTiming->HSyncOffset )
+     75                      continue;
+     76                  if ( VideoModeTable[i].SyncOffset.V != pTiming->VSyncOffset )
+     77                      continue;
+     78                  if ( VideoModeTable[i].SyncWidth.H != pTiming->HSyncPulseWith )
+     79                      continue;
+     80                  if ( VideoModeTable[i].SyncWidth.V != pTiming->VSyncPulseWith )
+     81                      continue;
+     82          #ifdef CHECK_POLARITY_IN_DTD
+     83                  {
+     84                      uint8_t interf = pTiming->InterfaceType;
+     85                      if ((interf & 0x0C) == 0x0C)
+     86                      {
+     87                          // digital interface
+     88                          if ( (VideoModeTable[i].HPol == POS) != ((pTiming->InterfaceType & 0x01) != 0) )
+     89                              continue;
+     90                          if ( (VideoModeTable[i].VPol == POS) != ((pTiming->InterfaceType & 0x02) != 0) )
+     91                              continue;
+     92                      }
+     93                      else
+     94                      {
+     95                          // analog interface
+     96                          pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__DTD_VIOLATION;
+     97          #define FORBID_ANALOG_TVS
+     98          #ifdef FORBID_ANALOG_TVS
+     99                          continue;
+    100          #endif
+    101                      }
+    102                  }
+    103          #endif // CHECK_POLARITY_IN_DTD
+    104          
+    105                  // border must be 0 according to the HDMI standard
+    106                  if ( (0 != pTiming->HBorder) || (0 != pTiming->VBorder) )
+    107                  {
+    108                      // Let's allow using DTD with Border field which does not match
+    109                      // the HDMI spec., but at least mark that there is a violation.
+    110                      pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__DTD_VIOLATION;
+    111                      //continue; // uncomment it to forbid using such DTDs
+    112                  }
+    113          
+    114                  // all tests passed
+    115                  return i; // return found index
+    116              }
+    117              return -1; // not found
+    118          }
+    119          
+    120          
+    121          
+    122          //-------------------------------------------------------------------------------------------------
+    123          //! @brief      Parse and decode DTD block.
+    124          //!
+    125          //-------------------------------------------------------------------------------------------------
+    126          
+    127          void EdidTxDecodeDtd (uint8_t *pDtd)
+    128          {
+    129              if ( (0 == pDtd[EDID_DTD_ADR__PIX_CLK_LOW]) &&
+    130                  (0 == pDtd[EDID_DTD_ADR__PIX_CLK_HIGH]) )
+    131              {
+    132                  // Alternative using of DTD block
+    133                  switch( pDtd[EDID_DTD_ADR__DATA_TYPE_TAG] )
+    134                  {
+    135                  case EDID_DTD_TAG__STRING:          // ASCII String
+    136          #ifdef COLLECT_EXCESSIVE_INFO
+    137                      if (pEdidTx->pEdidDecodData->edidInfo.DescriptorValid.String)
+    138                          pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__NOT_ENOUGH_ROOM;
+    139                      else
+    140                      {
+    141                          pEdidTx->pEdidDecodData->edidInfo.DescriptorValid.String = true;
+    142                          memcpy(pEdidTx->pEdidDecodData->edidInfo.AsciiString,
+    143                              &pDtd[DTD_DESCRIPTOR_DATA_START], DTD_DESCRIPTOR_DATA_LENGTH);
+    144                      }
+    145          #endif // COLLECT_EXCESSIVE_INFO
+    146                      break;
+    147                  case EDID_DTD_TAG__SN:              // Serial Number
+    148          #ifdef COLLECT_EXCESSIVE_INFO
+    149                      // must be only one
+    150                      if (pEdidTx->pEdidDecodData->edidInfo.DescriptorValid.SerialNumber)
+    151                          pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__DTD_VIOLATION;
+    152                      else
+    153                      {
+    154                          pEdidTx->pEdidDecodData->edidInfo.DescriptorValid.SerialNumber = true;
+    155                          memcpy(pEdidTx->pEdidDecodData->edidInfo.AsciiSerialNumber,
+    156                              &pDtd[DTD_DESCRIPTOR_DATA_START], DTD_DESCRIPTOR_DATA_LENGTH);
+    157                      }
+    158          #endif // COLLECT_EXCESSIVE_INFO
+    159                      break;
+    160                  case EDID_DTD_TAG__RANGE_LIMITS:    // Range Limits
+    161                      // must be only one
+    162                      if (pEdidTx->pEdidDecodData->edidInfo.DescriptorValid.RangeLimits)
+    163                          pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__DTD_VIOLATION;
+    164                      else
+    165                      {
+    166                          pEdidTx->pEdidDecodData->edidInfo.DescriptorValid.RangeLimits = true;
+    167                          pEdidTx->pEdidDecodData->edidInfo.RangeLimits.MinV_Hz = pDtd[5];
+    168                          pEdidTx->pEdidDecodData->edidInfo.RangeLimits.MaxV_Hz = pDtd[6];
+    169                          pEdidTx->pEdidDecodData->edidInfo.RangeLimits.MinH_kHz = pDtd[7];
+    170                          pEdidTx->pEdidDecodData->edidInfo.RangeLimits.MaxH_kHz = pDtd[8];
+    171                          pEdidTx->pEdidDecodData->edidInfo.RangeLimits.MaxPixClk_10MHz = pDtd[9];
+    172                          memcpy(pEdidTx->pEdidDecodData->edidInfo.RangeLimits.SecondaryTimingFormula,
+    173                              &pDtd[10], sizeof(pEdidTx->pEdidDecodData->edidInfo.RangeLimits.SecondaryTimingFormula)); // 8 bytes
+    174                      }
+    175                      break;
+    176                  case EDID_DTD_TAG__NAME:            // Name
+    177          #ifdef COLLECT_EXCESSIVE_INFO
+    178                      // must be only one
+    179                      if (pEdidTx->pEdidDecodData->edidInfo.DescriptorValid.Name)
+    180                          pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__DTD_VIOLATION;
+    181                      else
+    182                      {
+    183                          pEdidTx->pEdidDecodData->edidInfo.DescriptorValid.Name = true;
+    184                          memcpy(pEdidTx->pEdidDecodData->edidInfo.AsciiName,
+    185                              &pDtd[DTD_DESCRIPTOR_DATA_START], DTD_DESCRIPTOR_DATA_LENGTH);
+    186                      }
+    187          #endif // COLLECT_EXCESSIVE_INFO
+    188                      break;
+    189                  case EDID_DTD_TAG__COLOR_POINT:     // Color Point
+    190          #ifdef COLLECT_EXCESSIVE_INFO
+    191                      // must be only one (???)
+    192                      if (pEdidTx->pEdidDecodData->edidInfo.DescriptorValid.ColorPoint)
+    193                          pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__DTD_VIOLATION;
+    194                      else
+    195                      {
+    196                          pEdidTx->pEdidDecodData->edidInfo.DescriptorValid.ColorPoint = true;
+    197                          memcpy(pEdidTx->pEdidDecodData->edidInfo.ColorPoint,
+    198                              &pDtd[DTD_DESCRIPTOR_DATA_START], DTD_DESCRIPTOR_DATA_LENGTH);
+    199                      }
+    200          #endif // COLLECT_EXCESSIVE_INFO
+    201                      break;
+    202                  case EDID_DTD_TAG__STI:             // Standard Timing Identifiers
+    203          #ifdef COLLECT_EXCESSIVE_INFO
+    204                      if (pEdidTx->pEdidDecodData->edidInfo.DescriptorValid.StandardTiming)
+    205                          pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__NOT_ENOUGH_ROOM;
+    206                      else
+    207                      {
+    208                          pEdidTx->pEdidDecodData->edidInfo.DescriptorValid.StandardTiming = true;
+    209                          memcpy(pEdidTx->pEdidDecodData->edidInfo.StandardTimingInDtd,
+    210                              &pDtd[DTD_DESCRIPTOR_DATA_START], DTD_DESCRIPTOR_DATA_LENGTH);
+    211                      }
+    212          #endif // COLLECT_EXCESSIVE_INFO
+    213                      break;
+    214                  case 0:
+    215                      // it seems like padding area, not like a DTD
+    216                      break;
+    217                  default:
+    218                      // if we came here, it could means that came accross
+    219                      // some unsupported code (newer than described in EDID 1.3)
+    220                      // or EDID sructure is inconsistent.
+    221          #ifdef COLLECT_EXCESSIVE_INFO
+    222                      if (pEdidTx->pEdidDecodData->edidInfo.Revision <= 3)
+    223          #else // COLLECT_EXCESSIVE_INFO
+    224                      if (pEdidTx->pEdidDecodData->Revision <= 3)
+    225          #endif // COLLECT_EXCESSIVE_INFO
+    226                          pEdidTx->pEdidDecodData->edidInfo.ErrorCode = EDID_ERROR__DTD_VIOLATION;
+    227                      else
+    228                          pEdidTx->pEdidDecodData->edidInfo.ErrorCode = EDID_ERROR__FOUND_UNSUPPORTED_DTD;
+    229                      break;
+    230                  }
+    231              }
+    232              else
+    233              {
+    234                  // DTD is used as the Detail Timing structure
+    235                  int video_idx = -1; // index in VideoModeTable, -1 means "not found"
+    236                  dtd_t timing;
+    237                  timing.PixClk_10kHz = pDtd[EDID_DTD_ADR__PIX_CLK_LOW] |
+    238                                  (pDtd[EDID_DTD_ADR__PIX_CLK_HIGH] << 8);
+    239                  timing.HAct_Pix     = pDtd[EDID_DTD_ADR__H_ACTIVE_LOW] |
+    240                                  ((pDtd[EDID_DTD_ADR__H_HIGH] & 0xF0) << 4);
+    241                  timing.HBlank_Pix   = pDtd[EDID_DTD_ADR__H_BLANK_LOW] |
+    242                                  ((pDtd[EDID_DTD_ADR__H_HIGH] & 0x0F) << 8);
+    243                  timing.VAct_Pix     = pDtd[EDID_DTD_ADR__V_ACTIVE_LOW] |
+    244                                  ((pDtd[EDID_DTD_ADR__V_HIGH] & 0xF0) << 4);
+    245                  timing.VBlank_Pix   = pDtd[EDID_DTD_ADR__V_BLANK_LOW] |
+    246                                  ((pDtd[EDID_DTD_ADR__V_HIGH] & 0x0F) << 8);
+    247                  timing.HSyncOffset  = pDtd[EDID_DTD_ADR__H_SYNC_OFFSET_LOW] |
+    248                                  ((pDtd[EDID_DTD_ADR__H_V_SYNC_HIGH] & 0xC0) << 2);
+    249                  timing.HSyncPulseWith= pDtd[EDID_DTD_ADR__H_SYNC_WIDTH_LOW] |
+    250                                  ((pDtd[EDID_DTD_ADR__H_V_SYNC_HIGH] & 0x30) << 4);
+    251                  timing.VSyncOffset  = ((pDtd[EDID_DTD_ADR__V_SYNC_LOW] & 0xF0) >> 4) |
+    252                                  ((pDtd[EDID_DTD_ADR__H_V_SYNC_HIGH] & 0x0C) << 2);
+    253                  timing.VSyncPulseWith= (pDtd[EDID_DTD_ADR__V_SYNC_LOW] & 0x0F) |
+    254                                  ((pDtd[EDID_DTD_ADR__H_V_SYNC_HIGH] & 0x03) << 4);
+    255                  timing.HImageSize   = pDtd[EDID_DTD_ADR__H_SIZE_LOW] |
+    256                                  ((pDtd[EDID_DTD_ADR__H_V_SIZE_HIGH] & 0xF0) << 4);
+    257                  timing.VImageSize   = pDtd[EDID_DTD_ADR__V_SIZE_LOW] |
+    258                                  ((pDtd[EDID_DTD_ADR__H_V_SIZE_HIGH] & 0x0F) << 8);
+    259                  timing.HBorder      = pDtd[EDID_DTD_ADR__H_BORDER];
+    260                  timing.VBorder      = pDtd[EDID_DTD_ADR__V_BORDER];
+    261          
+    262                  // Flag's bit 7
+    263                  timing.Interlaced   = (pDtd[EDID_DTD_ADR__FLAGS] & 0x80) >> 7;
+    264                  // Flag's bits 0, 5, 6
+    265                  timing.DisplayType  = (pDtd[EDID_DTD_ADR__FLAGS] & 0x01) |
+    266                                  ((pDtd[EDID_DTD_ADR__FLAGS] & 0x60) >> 4);
+    267                  // Flag's bits 1, 2, 3, 4
+    268                  timing.InterfaceType    = (pDtd[EDID_DTD_ADR__FLAGS] & 0x1E) >> 1;
+    269          
+    270                  video_idx = GetVideoModeIndex(&timing);
+    271                  if (-1 != video_idx)
+    272                  {
+    273                      // video mode found
+    274          
+    275                      // 4/3=12/9=1.(3), 16/9= 1.(7)
+    276                      // 14/9=1.(5) (the middle)
+    277                      uint32_t aspect_ratio = ((timing.HImageSize * 9) / timing.VImageSize);
+    278                      bool_t ar16x9 = ( aspect_ratio > 14);
+    279                      // aspect ratio ar16x9: 4:3 if false, 16:9 if true
+    280          
+    281          /*
+    282          CTSpec 1.3:
+    283          If DTD matches any 861-D format, search SVDs for that same video format at
+    284          same aspect ratio.
+    285          - If no matching SVD -> FAIL
+    286          */
+    287                      uint8_t vic = 0; // CEA video code
+    288                      uint8_t hdmi_vic = VideoModeTable[video_idx].HdmiVic; // HDMI VIC
+    289          
+    290          #ifdef FIX_INCORRECT_ASPECT_RATIOS
+    291                      if (ar16x9)
+    292                      {
+    293                          vic = VideoModeTable[video_idx].Vic16x9; // according to CEA-861B/C/D
+    294                          if (0 == vic) // attempt to correct wrong aspect ratio
+    295                          {
+    296                              ar16x9 = false;
+    297                              pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__INCORRECT_AR_IN_DTD_FIX;
+    298                          }
+    299                      }
+    300                      else
+    301                      {
+    302                          vic = VideoModeTable[video_idx].Vic4x3; // according to CEA-861B/C/D
+    303                          if (0 == vic) // attempt to correct wrong aspect ratio
+    304                          {
+    305                              ar16x9 = true;
+    306                              pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__INCORRECT_AR_IN_DTD_FIX;
+    307                          }
+    308                      }
+    309          
+    310                      if (0 == vic)
+    311                      {
+    312                          // first attempt was unsuccessful
+    313                          if (ar16x9)
+    314                              vic = VideoModeTable[video_idx].Vic16x9; // preferred
+    315                          else
+    316                              vic = VideoModeTable[video_idx].Vic4x3; // preferred
+    317                      }
+    318                      else
+    319                      {
+    320                          // the DTD is fully compliant to CEA-861C
+    321                          if (ar16x9)
+    322                          {
+    323                              if (0 == pEdidTx->pEdidDecodData->edidInfo.VSize16x9)
+    324                                  pEdidTx->pEdidDecodData->edidInfo.VSize16x9 = timing.VImageSize;
+    325                              pEdidTx->pEdidDecodData->edidInfo.SupportAspect16_9 = true;
+    326                          }
+    327                          else
+    328                          {
+    329                              if (0 == pEdidTx->pEdidDecodData->edidInfo.VSize4x3)
+    330                                  pEdidTx->pEdidDecodData->edidInfo.VSize4x3 = timing.VImageSize;
+    331                              pEdidTx->pEdidDecodData->edidInfo.SupportAspect4_3 = true;
+    332                          }
+    333                      }
+    334          #else // FIX_INCORRECT_ASPECT_RATIOS
+    335                      if (ar16x9)
+    336                      {
+    337                          vic = VideoModeTable[video_idx].Vic16x9; // preferred
+    338                          if (0 == vic)
+    339                              vic = VideoModeTable[video_idx].Vic4x3;
+    340                          if (0 == pEdidTx->pEdidDecodData->edidInfo.VSize16x9)
+    341                              pEdidTx->pEdidDecodData->edidInfo.VSize16x9 = timing.VImageSize;
+    342                          pEdidTx->pEdidDecodData->edidInfo.SupportAspect16_9 = true;
+    343                      }
+    344                      else
+    345                      {
+    346                          vic = VideoModeTable[video_idx].Vic4x3; // preferred
+    347                          if (0 == vic)
+    348                              vic = VideoModeTable[video_idx].Vic16x9;
+    349                          if (0 == pEdidTx->pEdidDecodData->edidInfo.VSize4x3)
+    350                              pEdidTx->pEdidDecodData->edidInfo.VSize4x3 = timing.VImageSize;
+    351                          pEdidTx->pEdidDecodData->edidInfo.SupportAspect4_3 = true;
+    352                      }
+    353          #endif // FIX_INCORRECT_ASPECT_RATIOS
+    354          
+    355                      if (VideoModeTable[video_idx].NtscPal == PAL)
+    356                          pEdidTx->pEdidDecodData->edidInfo.SupportPal = true;
+    357                      if (VideoModeTable[video_idx].NtscPal == NTSC)
+    358                          pEdidTx->pEdidDecodData->edidInfo.SupportNtsc = true;
+    359          
+    360                      // Even video mode is known, there could be some variations.
+    361                      // To avoid such an ambiguous situation, several
+    362                      // parameters are to be stored.
+    363                      {
+    364                          int i;
+    365                          for (i=0; i<MAX_NMB_OF_KNOWN_DTDS; i++)
+    366                          {
+    367                              if (!pEdidTx->pEdidDecodData->edidInfo.SDTD[i].Valid) // if the slot is empty
+    368                              {
+    369                                  pEdidTx->pEdidDecodData->edidInfo.SDTD[i].Valid = true; // mark the slot as occupied
+    370                                  pEdidTx->pEdidDecodData->edidInfo.SDTD[i].VideoIdx = video_idx;
+    371                                  pEdidTx->pEdidDecodData->edidInfo.SDTD[i].Vic = vic;
+    372          #if (SI_HDMI_1_4_EDID_PROCESSING == ENABLE)
+    373                                  pEdidTx->pEdidDecodData->edidInfo.SDTD[i].HdmiVic = hdmi_vic;
+    374          #endif // SI_HDMI_1_4_EDID_PROCESSING
+    375                                  pEdidTx->pEdidDecodData->edidInfo.SDTD[i].Ar16x9 = ar16x9;
+    376                                  pEdidTx->pEdidDecodData->edidInfo.SDTD[i].DisplayType = timing.DisplayType;
+    377                                  pEdidTx->pEdidDecodData->edidInfo.SDTD[i].PreferredTiming = false;
+    378                                  if (pEdidTx->pEdidDecodData->edidInfo.BasicDispayParameters[4] & 0x02) // Preferred Timing
+    379                                      if (!pEdidTx->pEdidDecodData->isNotFirstDtd)
+    380                                          pEdidTx->pEdidDecodData->edidInfo.SDTD[i].PreferredTiming = true;
+    381                                  break;
+    382                              }
+    383                          } // for ()
+    384                          if (MAX_NMB_OF_KNOWN_DTDS == i) // no empty slots case
+    385                              pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__NOT_ENOUGH_ROOM;
+    386                      }
+    387                  }
+    388                  else
+    389                  {
+    390                      // Video mode is not found, the DTD is for PC mode, store it as is
+    391                      int i;
+    392                      for (i=0; i<MAX_NMB_OF_UNKNOWN_DTDS; i++)
+    393                      {
+    394                          // search for an empty slot
+    395                          if (!pEdidTx->pEdidDecodData->edidInfo.DTD[i].Valid)
+    396                          {
+    397                              timing.Valid = true; // mark the slot as occupied
+    398          
+    399                              timing.PreferredTiming = false;
+    400                              if (pEdidTx->pEdidDecodData->edidInfo.BasicDispayParameters[4] & 0x02) // Preferred Timing
+    401                                  if (!pEdidTx->pEdidDecodData->isNotFirstDtd)
+    402                                      timing.PreferredTiming = true;
+    403          
+    404                              // copy to the output (resulting) structure
+    405                              memcpy(&pEdidTx->pEdidDecodData->edidInfo.DTD[i], &timing, sizeof(dtd_t));
+    406                              break;
+    407                          }
+    408                      } // for ()
+    409                      if (MAX_NMB_OF_UNKNOWN_DTDS == i) // no empty slots case
+    410                          pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__NOT_ENOUGH_ROOM;
+    411                  } // if (video_mode)
+    412              } // if (descriptor) else timing
+    413              pEdidTx->pEdidDecodData->isNotFirstDtd = true; // first DTD is already processed
+    414          }
+    415          
+    416          
+    417          //-------------------------------------------------------------------------------------------------
+    418          //! @brief      Decode the DTD_OPT field in the first extension block.
+    419          //!
+    420          //!             @note: For an extension block version 1 EDID_EXT_ADR__DTD_OPT byte is not
+    421          //!                    defined, but anyhow it must be equal 0 for any of the extension blocks.
+    422          //!
+    423          //! @param[in]  aBlock - pointer to EDID block array
+    424          //-------------------------------------------------------------------------------------------------
+    425          
+    426          
+    427          static void EdidDecodeDtdOpt ( uint8_t aBlock[EDID_BLOCK_SIZE] )
+    428          {
+    429          
+    430              // It is NOT the first decoded extension block
+    431          
+    432              if ( pEdidTx->pEdidDecodData->nmbOfDecodedExtBlocks)
+    433              {
+    434                  if ( pEdidTx->pEdidDecodData->dtdOpt != aBlock[EDID_EXT_ADR__DTD_OPT])
+    435                  {
+    436                      pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__EXT_BLOCK_VIOLATION;
+    437                  }
+    438              }
+    439          
+    440              // It IS the first decoded extension block
+    441              else
+    442              {
+    443                  uint8_t dtd_opt = aBlock[EDID_EXT_ADR__DTD_OPT];
+    444          
+    445                  // if it is the first decoding extension block,
+    446                  // store it for future comparing
+    447          
+    448                  pEdidTx->pEdidDecodData->dtdOpt = dtd_opt;
+    449          
+    450                  if ( aBlock[EDID_EXT_ADR__REVISION] >= 2)
+    451                  {
+    452                      pEdidTx->pEdidDecodData->edidInfo.NativeFormatsNumber = dtd_opt & 0x0F;
+    453                      pEdidTx->pEdidDecodData->edidInfo.SupportYCbCr = false;
+    454                      if ( dtd_opt & 0x30) // if YCbCr444 or YCbCr422 is indicated
+    455                      {
+    456                          if (( dtd_opt & 0x30) == 0x30) // if both of them are indicated
+    457                          {
+    458                              pEdidTx->pEdidDecodData->edidInfo.SupportYCbCr = true;
+    459                          }
+    460                          else
+    461                          {
+    462                              pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__EXT_BLOCK_VIOLATION;
+    463                          }
+    464                              // 861Cv22 (see page 81) allows to use just one of the bits,
+    465                              // but it is said on pages 77 & 78 of 861Cv22 that both
+    466                              // of the bits must be the same
+    467                      }
+    468                      pEdidTx->pEdidDecodData->edidInfo.SupportAudio = (0 != (dtd_opt & 0x40));
+    469                      pEdidTx->pEdidDecodData->edidInfo.SupportUnderscan = (0 != (dtd_opt & 0x80));
+    470                  }
+    471                  else
+    472                  {
+    473                      pEdidTx->pEdidDecodData->edidInfo.NativeFormatsNumber = 1;
+    474                      pEdidTx->pEdidDecodData->edidInfo.SupportYCbCr = false;
+    475                      pEdidTx->pEdidDecodData->edidInfo.SupportAudio = false;
+    476                      pEdidTx->pEdidDecodData->edidInfo.SupportUnderscan = false;
+    477                  }
+    478              }
+    479          }
+    480          
+    481          
+    482          //-------------------------------------------------------------------------------------------------
+    483          //! @brief      If passed data block belongs to HDMI, LLC., parse it.  Otherwise
+    484          //!             it is ignored.
+    485          //!
+    486          //! @param[in]  pData  - pointer to data block
+    487          //! @param[in]  length - length of data block
+    488          //-------------------------------------------------------------------------------------------------
+    489          
+    490          static void ParseHdmiLlcDataBlock ( uint8_t *pData, uint8_t length )
+    491          {
+    492              bool_t hdmi_video_present = false;
+    493              uint8_t *p_current_position = &pData[8]; // pointer to default HDMI video address
+    494              uint8_t k;
+    495          
+    496              hdmiVsdb_t *p_vsdb = &pEdidTx->pEdidDecodData->edidInfo.HDMI_VSDB;
+    497          
+    498              // From all vendor specific data blocks (VSDB) we are interested only
+    499              // in HDMI one. Others will not be stored or copied to US EDID.
+    500          
+    501              // If HDMI VSDB has already found, no reason for checking others,
+    502              // especially because only one block of this type is allowed by HDMI spec.
+    503              if ( pEdidTx->pEdidDecodData->edidInfo.HDMI_VSDB.HdmiMode)
+    504              {
+    505                  return;
+    506              }
+    507          
+    508              //DEBUG_PRINT( MSG_DBG, "ParseHdmiLlcDataBlock: Length1 = %d  \n", length);
+    509          
+    510              // filter out VSDB which length is less then minimum allowed for HDMI VSDB
+    511              if (length < EDID_VSB_LEN__MIN_HDMI_VSDB)
+    512              {
+    513                  return;
+    514              }
+    515          
+    516              // limit the length in order to not consider bytes not supported by current spec.
+    517              if (length > EDID_VSB_LEN__MAX_HDMI_VSDB)
+    518                  length = EDID_VSB_LEN__MAX_HDMI_VSDB;
+    519          
+    520              // check for the signature
+    521              {
+    522                  ROM const uint8_t signature_reference[EDID_VSB_LEN__HDMI_SIGNATURE] = EDID_VSB_DAT__HDMI_SIGNATURE;
+    523                  if ( memcmp(signature_reference, pData, EDID_VSB_LEN__HDMI_SIGNATURE) )
+    524                  {
+    525                      return; // signature was not found
+    526                  }
+    527              }
+    528          
+    529              p_vsdb->HdmiMode = true;
+    530          
+    531          #if ( configSII_DEV_953x_PORTING == 0 )
+    532              // get CEC address
+    533              p_vsdb->CEC.a = pData[3] >> 4;
+    534              p_vsdb->CEC.b = pData[3] & 0x0F;
+    535              p_vsdb->CEC.c = pData[4] >> 4;
+    536              p_vsdb->CEC.d = pData[4] & 0x0F;
+    537          #else
+    538          	// get CEC address
+    539              p_vsdb->cec.a = pData[3] >> 4;
+    540              p_vsdb->cec.b = pData[3] & 0x0F;
+    541              p_vsdb->cec.c = pData[4] >> 4;
+    542              p_vsdb->cec.d = pData[4] & 0x0F;
+    543          #endif 
+    544          
+    545              // reusing VSDB length as VSDB_extras length
+    546              length -= EDID_VSB_LEN__MIN_HDMI_VSDB;
+    547          
+    548              //clear out the HDMI VICs so that the composer doesn't see any old data
+    549              for (k = 0; k < MAX_NMB_OF_HDMI_VIC_FORMATS; k++)
+    550              {
+    551                  pEdidTx->pEdidDecodData->hdmi_vic[k] = 0;
+    552              }
+    553          
+    554              // Save HDMI 1.3a VSDB extras if they are present,
+    555              // otherwise 0s will be used as defaults
+    556              if (length >= 3)
+    557              {
+    558                  uint8_t extras_length = 3; // minimum HDMI 1.3a extra field length
+    559                  length -= 3;
+    560          
+    561                  if (pData[7] & 0x20) // HDMI_Video_present
+    562                  {
+    563                      // HDMI_Video_present is detected.
+    564                      hdmi_video_present = true;
+    565                  }
+    566                  if ((pData[7] & 0x80) && (length >= 2)) // Latency_Fields_Present
+    567                  {
+    568                      extras_length += 2;
+    569                      p_current_position += 2;
+    570                      length -= 2;
+    571                  }
+    572                  if ((pData[7] & 0x40) && (length >= 2)) // I_Latency_Fields_Present
+    573                  {
+    574                      extras_length += 2;
+    575                      p_current_position += 2;
+    576                      length -= 2;
+    577                  }
+    578          
+    579                  if (extras_length > EDID_VSB_LEN__MAX_EXTRAS)
+    580                  {
+    581                      extras_length = EDID_VSB_LEN__MAX_EXTRAS;
+    582                  }
+    583                  if (extras_length)
+    584                  {
+    585                      memcpy(p_vsdb->Extras, &pData[5], extras_length);
+    586                  }
+    587              }
+    588              else
+    589              {
+    590                  memcpy(p_vsdb->Extras, &pData[5], length);
+    591                  length = 0;
+    592              }
+    593              //DEBUG_PRINT( MSG_DBG, "ParseHdmiLlcDataBlock: Length2 = %d : \n", length);
+    594          
+    595          #if (SI_HDMI_1_4_EDID_PROCESSING == ENABLE)
+    596              if (length && hdmi_video_present)
+    597              {
+    598                  bool_t hdmi_3d_present = false;
+    599                  uint8_t hdmi_3d_multi_present = 0;
+    600          
+    601                  // p_current_position points to the beginning of HDMI Video area
+    602          
+    603                  uint8_t hdmi_video_flags = *p_current_position;
+    604          
+    605                  //DEBUG_PRINT( MSG_DBG, "ParseHdmiLlcDataBlock: Length3 = %d hdmi_video_flags: %02X \n", length, hdmi_video_flags);
+    606          
+    607                  pEdidTx->pEdidDecodData->edidInfo.HDMI_VSDB.image_size = (hdmi_video_flags >> 3) & 0x03;
+    608          
+    609                  // 3D_present
+    610                  hdmi_3d_present =
+    611                      (0 != (hdmi_video_flags & 0x80));
+    612          
+    613                  pEdidTx->pEdidDecodData->edidInfo.HDMI_VSDB.hdmi_3d_present = hdmi_3d_present;
+    614          
+    615                  // 3D_Multi_present
+    616                  hdmi_3d_multi_present =
+    617                      (hdmi_video_flags & 0x60) >> 5;
+    618          
+    619                  p_current_position++;
+    620                  length--;
+    621          
+    622                  //DEBUG_PRINT( MSG_DBG, "ParseHdmiLlcDataBlock: Length4 = %d hdmi_3d_present: %d  hdmi_3d_multi_present: %d\n", length, hdmi_3d_present, hdmi_3d_multi_present);
+    623          
+    624                  if (length)
+    625                  {
+    626                      uint8_t i;
+    627                      uint8_t hdmi_vic_len = ((*p_current_position) >> 5) & 0x7; // HDMI_VIC_LEN field
+    628                      uint8_t hdmi_3d_len = (*p_current_position) & 0x1F; // HDMI_3D_LEN field
+    629          
+    630                      p_current_position++;
+    631                      length--;
+    632          
+    633                      //DEBUG_PRINT( MSG_DBG, "ParseHdmiLlcDataBlock: Length5 = %d hdmi_vic_len: %d  hdmi_3d_len: %d\n", length, hdmi_vic_len, hdmi_3d_len);
+    634          
+    635                      // store HDMI_VIC fields
+    636                      for (i = 0; i < hdmi_vic_len; i++)
+    637                      {
+    638                          if (length)
+    639                          {
+    640                              pEdidTx->pEdidDecodData->hdmi_vic[i] = (*p_current_position);
+    641                              //DEBUG_PRINT( MSG_DBG, "ParseHdmiLlcDataBlock: Length6 = %d hdmi_vic[%d]: %d  hdmi_3d_len: %d\n", i, pEdidTx->pEdidDecodData->hdmi_vic[i]);
+    642                              length--;
+    643                              p_current_position++;
+    644                          }
+    645                      }
+    646          
+    647          
+    648                      if (length && hdmi_3d_present)
+    649                      {
+    650                          // p_current_position points to the beginning of 3D area
+    651          
+    652                          if (length < hdmi_3d_len)
+    653                          {
+    654                              hdmi_3d_len = length;
+    655                              length = 0;
+    656                          }
+    657                          else
+    658                          {
+    659                              length -= hdmi_3d_len;
+    660                          }
+    661          
+    662                          if (1 == hdmi_3d_multi_present)
+    663                          {
+    664                              pEdidTx->pEdidDecodData->isAll3dFormats = true;
+    665                          }
+    666          
+    667                          if ((1 == hdmi_3d_multi_present) || (2 == hdmi_3d_multi_present))
+    668                          {
+    669                              if (hdmi_3d_len >= 2)
+    670                              {
+    671                                  // 3D_Structure_ALL present
+    672                                  p_vsdb->hdmi_3d_structure_all = (*p_current_position) << 8;
+    673                                  p_current_position++;
+    674                                  p_vsdb->hdmi_3d_structure_all |= (*p_current_position);
+    675                                  p_current_position++;
+    676                                  hdmi_3d_len -= 2;
+    677                              }
+    678                              else
+    679                              {
+    680                                  hdmi_3d_len = 0;
+    681                              }
+    682                              //DEBUG_PRINT( MSG_DBG, "ParseHdmiLlcDataBlock: Length5 = %d hdmi_3d_structure_all: %x  \n", length, p_vsdb->hdmi_3d_structure_all);
+    683          
+    684                          }
+    685          
+    686                          if (2 == hdmi_3d_multi_present)
+    687                          {
+    688                              if (hdmi_3d_len >= 2)
+    689                              {
+    690                                  // 3D_MASK present
+    691                                  pEdidTx->pEdidDecodData->hdmi3dMask = (*p_current_position) << 8;
+    692                                  p_current_position++;
+    693                                  pEdidTx->pEdidDecodData->hdmi3dMask |= (*p_current_position);
+    694                                  p_current_position++;
+    695                                  hdmi_3d_len -= 2;
+    696                              }
+    697                              else
+    698                              {
+    699                                  hdmi_3d_len = 0;
+    700                              }
+    701                              //DEBUG_PRINT( MSG_DBG, "ParseHdmiLlcDataBlock: Length5 = %d hdmi3dMask: %x  \n", length, pEdidTx->pEdidDecodData->hdmi3dMask);
+    702                          }
+    703          
+    704                          for (i=0; (hdmi_3d_len) && (i < HDMI_3D_SVD_STRUCTURE_LENGTH); i++)
+    705                          {
+    706                              pEdidTx->pEdidDecodData->hdmi3dSvdStructure[i].vic_order = (*p_current_position) >> 4; // 2D_VIC_order
+    707                              pEdidTx->pEdidDecodData->hdmi3dSvdStructure[i].struct_3d = (*p_current_position) & 0x0F; // 3D_Structure
+    708                              pEdidTx->pEdidDecodData->hdmi3dSvdStructure[i].valid = true;
+    709                              //DEBUG_PRINT( MSG_DBG, "ParseHdmiLlcDataBlock: Length7 = %d vic_order: %d struct_3d: %02X valid: %d \n", length, pEdidTx->pEdidDecodData->hdmi3dSvdStructure[i].vic_order,pEdidTx->pEdidDecodData->hdmi3dSvdStructure[i].struct_3d, pEdidTx->pEdidDecodData->hdmi3dSvdStructure[i].valid);
+    710                              p_current_position++;
+    711                              hdmi_3d_len--;
+    712                              if (0 == hdmi_3d_len)
+    713                              {
+    714                                  break;
+    715                              }
+    716          
+    717                              if ( pEdidTx->pEdidDecodData->hdmi3dSvdStructure[i].struct_3d >= 8)
+    718                              {
+    719                                  pEdidTx->pEdidDecodData->hdmi3dSvdStructure[i].detail_3d = (*p_current_position) >> 4; // 3D_Detail
+    720                                  //DEBUG_PRINT( MSG_DBG, "ParseHdmiLlcDataBlock: Length7 = %d detail_3d: %x \n", length, pEdidTx->pEdidDecodData->hdmi3dSvdStructure[i].detail_3d);
+    721                                  p_current_position++;
+    722                                  hdmi_3d_len--;
+    723                              }
+    724          
+    725                          }
+    726                      }
+    727                  }
+    728              }
+    729          #endif // SI_HDMI_1_4_EDID_PROCESSING
+    730          }
+    731          
+    732          
+    733          //-------------------------------------------------------------------------------------------------
+    734          //! @brief      Decode data from the data block collection.
+    735          //!
+    736          //! @param[in]  pDataBlock       - pointer to data block collection
+    737          //! @param[in]  collectionLength - length of data block collection
+    738          //-------------------------------------------------------------------------------------------------
+    739          
+    740          static void DecodeDataBlockCollection (uint8_t *pDataBlock, int collectionLength)
+    741          {
+    742              while(collectionLength > 0)
+    743              {
+    744                  uint8_t tag = pDataBlock[0] >> 5;
+    745                  int dataBlockLength = pDataBlock[0] & 0x1F;
+    746                  pDataBlock++; // move to the data area
+    747                  collectionLength -= dataBlockLength + 1; // +1 is for tag
+    748                  if (collectionLength < 0) // protection
+    749                  {
+    750                      pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__DATA_COLLECT_VIOLATION;
+    751                      return; // too serious error
+    752                  }
+    753          
+    754                  // Decode the current data block.  We may want ONLY the audio information,
+    755                  // or we may want ONLY the non-audio information, or we may want everything.
+    756          
+    757                  if (( pEdidTx->isDecodeAudio      &&  pEdidTx->isDecodeNonAudio  ) ||
+    758                      ( pEdidTx->isDecodeAudio      &&  (( tag == EDID_DBC_TAG__AUDIO ) || ( tag == EDID_DBC_TAG__SPEAKER_ALLOCATION)))  ||
+    759                      ( pEdidTx->isDecodeNonAudio   && !(( tag == EDID_DBC_TAG__AUDIO ) || ( tag == EDID_DBC_TAG__SPEAKER_ALLOCATION)))
+    760                      )
+    761                  {
+    762                      switch(tag)
+    763                      {
+    764                      case 0:
+    765                          pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__DATA_COLLECT_VIOLATION;
+    766                          return; // serious error
+    767                      case EDID_DBC_TAG__AUDIO:
+    768                          if (dataBlockLength % EDID_SAD__LENGTH) // check length
+    769                          {
+    770                              pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__DATA_COLLECT_VIOLATION;
+    771                              return; // serious error
+    772                          }
+    773                          while(dataBlockLength)
+    774                          {
+    775                              if ( pEdidTx->pEdidDecodData->edidInfo.SadCount < MAX_NMB_OF_SADS )
+    776                              {
+    777                                  pEdidTx->pEdidDecodData->edidInfo.SAD[ pEdidTx->pEdidDecodData->edidInfo.SadCount].ByteData.Byte1 = *(pDataBlock++);
+    778                                  pEdidTx->pEdidDecodData->edidInfo.SAD[ pEdidTx->pEdidDecodData->edidInfo.SadCount].ByteData.Byte2 = *(pDataBlock++);
+    779                                  pEdidTx->pEdidDecodData->edidInfo.SAD[ pEdidTx->pEdidDecodData->edidInfo.SadCount].ByteData.Byte3 = *(pDataBlock++);
+    780                                  pEdidTx->pEdidDecodData->edidInfo.SadCount++;
+    781                              }
+    782                              else
+    783                              {
+    784                                  pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__NOT_ENOUGH_ROOM;
+    785                              }
+    786                              dataBlockLength -= EDID_SAD__LENGTH;
+    787                          }
+    788                          break;
+    789                      case EDID_DBC_TAG__VIDEO:
+    790                          {
+    791                              int i;
+    792                              for (i=0; i<dataBlockLength; i++) // copy all descriptors (while space exsists)
+    793                              {
+    794                                  if ( pEdidTx->pEdidDecodData->SVD_idx < MAX_NMB_OF_SVDS )
+    795                                  {
+    796                                      uint8_t vic_f = pDataBlock[i]; // video code with a flag
+    797                                      uint8_t vic = vic_f & 0x7F;
+    798                                      if (vic <= LAST_KNOWN_CEA_VIC)
+    799                                      {
+    800                                          uint8_t idx = ceaVicToVideoTableIndex[vic];
+    801                                          pEdidTx->pEdidDecodData->edidInfo.SupportPal = (VideoModeTable[idx].NtscPal == PAL);
+    802                                          pEdidTx->pEdidDecodData->edidInfo.SupportNtsc = (VideoModeTable[idx].NtscPal == NTSC);
+    803                                      }
+    804                                      pEdidTx->pEdidDecodData->SVD[pEdidTx->pEdidDecodData->SVD_idx++].Data = vic_f;
+    805                                  }
+    806                                  else
+    807                                  {
+    808                                      pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__NOT_ENOUGH_ROOM;
+    809                                      break;
+    810                                  }
+    811                              }
+    812                          }
+    813                          break;
+    814                      case EDID_DBC_TAG__VENDOR_SPECIFIC:
+    815                          ParseHdmiLlcDataBlock( pDataBlock, dataBlockLength );   // Looking for HDMI LLC.
+    816                          break;
+    817                      case EDID_DBC_TAG__SPEAKER_ALLOCATION:
+    818                          if ( 0 == pEdidTx->pEdidDecodData->edidInfo.SPK.Data)
+    819                          {
+    820                              // If SPK block is not filled yet, fill it if it has correct length.
+    821                              if ( EDID_SPK__LENGTH == dataBlockLength)
+    822                              {
+    823                                  pEdidTx->pEdidDecodData->edidInfo.SPK.Data = pDataBlock[0];
+    824                              }
+    825                              else
+    826                              {
+    827                                  pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__DATA_COLLECT_VIOLATION;
+    828                                  return;
+    829                              }
+    830                          }
+    831                          else
+    832                          {
+    833                              // Otherwise do not replace it, but mark as an error.
+    834                              pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__DATA_COLLECT_VIOLATION;
+    835                              //return;
+    836                          }
+    837                          break;
+    838                      case EDID_DBC_TAG__VESA_DTC:
+    839                          // I did not find any description of this field
+    840                          // as well as requirement to use it or copy to
+    841                          // US EDID.
+    842                          break;
+    843                      case EDID_DBC_TAG__USE_EXTENDED_TAG: // first byte of data area is an another tag
+    844                          // 861C requires these field to be copied to US EDID under following
+    845                          // conditions:
+    846                          // -Video related fields must be copied from DS EDID to US EDID
+    847                          // if repeater does not modify video.
+    848                          // -Audio related fields must be copied from DS EDID to US EDID
+    849                          // if repeater does not modify audio.
+    850                          // -If repeater modifies audio or video, corresponded fields should
+    851                          // be copied only in case if it is known that they will be correct
+    852                          // for US device. The fields could be modified accordingly or at least
+    853                          // skipped from coping.
+    854                          // Since the exact meaning of them is unknown, what we can do is
+    855                          // to copy video related fields if video is not modified and not to copy
+    856                          // if there is any video processing. The same thing is for audio:
+    857                          // copy audio related fields in case if no audio is altered,
+    858                          // otherwise skip copying.
+    859          
+    860                          if ( 0x05 == pDataBlock[0])
+    861                          {
+    862                              // extended code 0x05- Colorimetry Data Block
+    863          
+    864                              // 0xE3 // tag (7) + length (3)
+    865                              // 0x05 // extended tag code
+    866                              // 0x01 for xvYCC601 or 0x02 xvYCC709 or 0x03 for both
+    867                              // 0x01 // profile 0
+    868          
+    869                              if ( pDataBlock[2] & 0x01)
+    870                              {
+    871                                  // if profile P0 is supported
+    872                                  pEdidTx->pEdidDecodData->edidInfo.xv601 = (0 != (pDataBlock[1] & 0x01));
+    873                                  pEdidTx->pEdidDecodData->edidInfo.xv709 = (0 != (pDataBlock[1] & 0x02));
+    874                              }
+    875                          }
+    876              #ifdef COLLECT_EXTENDED_DATA_BLOCKS
+    877                          else // !!!
+    878                          {
+    879                              if ( pDataBlock[0] < 16)
+    880                              {
+    881                                  // video blocks
+    882                                  if ((pEdidTx->pEdidDecodData->edidInfo.UnknownVideoExt_Idx + dataBlockLength + 1)
+    883                                      < SIZE_OF_UNKNOWN_VIDEO_EXTENDED_BLOCKS_BUFFER)
+    884                                  {
+    885                                      // save the length
+    886                                      pEdidTx->pEdidDecodData->edidInfo.UnknownVideoExtBlocks[pEdidTx->pEdidDecodData->edidInfo.UnknownVideoExt_Idx++] =
+    887                                          dataBlockLength;
+    888                                      memcpy(&pEdidTx->pEdidDecodData->edidInfo.UnknownVideoExtBlocks[pEdidTx->pEdidDecodData->edidInfo.UnknownVideoExt_Idx],
+    889                                          pDataBlock, dataBlockLength);
+    890                                      pEdidTx->pEdidDecodData->edidInfo.UnknownVideoExt_Idx += dataBlockLength;
+    891                                  }
+    892                                  else
+    893                                  {
+    894                                      pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__NOT_ENOUGH_ROOM;
+    895                                  }
+    896                              }
+    897                              else if ( pDataBlock[0] < 32)
+    898                              {
+    899                                  // audio blocks
+    900                                  if ((pEdidTx->pEdidDecodData->edidInfo.UnknownAudioExt_Idx + dataBlockLength + 1)
+    901                                      < SIZE_OF_UNKNOWN_AUDIO_EXTENDED_BLOCKS_BUFFER)
+    902                                  {
+    903                                      // save the length
+    904                                      pEdidTx->pEdidDecodData->edidInfo.UnknownAudioExtBlocks[pEdidTx->pEdidDecodData->edidInfo.UnknownAudioExt_Idx++] =
+    905                                          dataBlockLength;
+    906                                      memcpy(&pEdidTx->pEdidDecodData->edidInfo.UnknownAudioExtBlocks[pEdidTx->pEdidDecodData->edidInfo.UnknownAudioExt_Idx],
+    907                                          pDataBlock, dataBlockLength);
+    908                                      pEdidTx->pEdidDecodData->edidInfo.UnknownAudioExt_Idx += dataBlockLength;
+    909                                  }
+    910                                  else
+    911                                  {
+    912                                      pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__NOT_ENOUGH_ROOM;
+    913                                  }
+    914                              }
+    915                              else
+    916                              {
+    917                                  // skip, i.e. do not copy others
+    918                              }
+    919                          }
+    920              #endif // COLLECT_EXTENDED_DATA_BLOCKS
+    921                          break;
+    922                      default:
+    923                          // do nothing with the reserved tag
+    924                          break;
+    925                      }
+    926                  } //End 'if decodeAudioOnly...'
+    927          
+    928                  pDataBlock += dataBlockLength;
+    929              }
+    930          }
+    931          
+    932          
+    933          
+    934          #ifdef CHECK_AND_CORRECT_RANGE_LIMITS
+    935          
+    936          //-------------------------------------------------------------------------------------------------
+    937          //! @brief      This function is to check and recover Range Limits structure (if required).
+    938          //!             It works by looking through the DTD and the SDTD arrays for the minimum
+    939          //!             and maximum values.
+    940          //-------------------------------------------------------------------------------------------------
+    941          
+    942          static void CheckAndCorrectRangeLimits(void)
+    943          {
+    944              int i;
+    945              uint8_t min_v_hz = DEFAULT__MIN_V_HZ; // Min. Vertical rate (for interlace this refers to field rate), in Hz.
+    946              uint8_t max_v_hz = DEFAULT__MAX_V_HZ; // Max. Vertical rate (for interlace this refers to field rate), in Hz.
+    947              uint8_t min_h_khz = DEFAULT__MIN_H_KHZ; // Min. Horizontal in kHz
+    948              uint8_t max_h_khz = DEFAULT__MAX_H_KHZ; // Max. Horizontal in kHz,
+    949              uint8_t max_pix_clk_10mhz = DEFAULT__MAX_PIX_CLK_10MHZ; // Max. Supported Pixel Clock, in MHz/10, rounded
+    950          
+    951              if (pEdidTx->pEdidDecodData->edidInfo.DescriptorValid.RangeLimits)
+    952              {
+    953                  // if the Range Limits structure exists
+    954                  min_v_hz = pEdidTx->pEdidDecodData->edidInfo.RangeLimits.MinV_Hz;
+    955                  max_v_hz = pEdidTx->pEdidDecodData->edidInfo.RangeLimits.MaxV_Hz;
+    956                  min_h_khz = pEdidTx->pEdidDecodData->edidInfo.RangeLimits.MinH_kHz;
+    957                  max_h_khz = pEdidTx->pEdidDecodData->edidInfo.RangeLimits.MaxH_kHz;
+    958                  max_pix_clk_10mhz = pEdidTx->pEdidDecodData->edidInfo.RangeLimits.MaxPixClk_10MHz;
+    959              }
+    960          
+    961              // Look through SDTDs
+    962              for (i=0; i<MAX_NMB_OF_KNOWN_DTDS; i++)
+    963              {
+    964                  if (pEdidTx->pEdidDecodData->edidInfo.SDTD[i].Valid)
+    965                  {
+    966                      uint8_t idx = pEdidTx->pEdidDecodData->edidInfo.SDTD[i].VideoIdx;
+    967                      if (VideoModeTable[idx].PixFreq > ((uint16_t) max_pix_clk_10mhz * 10))
+    968                      {
+    969                          max_pix_clk_10mhz = (VideoModeTable[idx].PixFreq + 9) / 10;
+    970                          pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__RANGE_LIMITS_CORRECTED;
+    971                      }
+    972                      if (VideoModeTable[idx].VFreq > max_v_hz)
+    973                      {
+    974                          max_v_hz = VideoModeTable[idx].VFreq;
+    975                          pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__RANGE_LIMITS_CORRECTED;
+    976                      }
+    977                      if (VideoModeTable[idx].VFreq < min_v_hz)
+    978                      {
+    979                          min_v_hz = VideoModeTable[idx].VFreq;
+    980                          pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__RANGE_LIMITS_CORRECTED;
+    981                      }
+    982                      if (VideoModeTable[idx].HFreq > max_h_khz)
+    983                      {
+    984                          max_h_khz = VideoModeTable[idx].HFreq;
+    985                          pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__RANGE_LIMITS_CORRECTED;
+    986                      }
+    987                      if (VideoModeTable[idx].HFreq < min_h_khz)
+    988                      {
+    989                          min_h_khz = VideoModeTable[idx].HFreq;
+    990                          pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__RANGE_LIMITS_CORRECTED;
+    991                      }
+    992                  }
+    993              } // for () SDTDs
+    994          
+    995              // Look through DTDs
+    996              for (i=0; i<MAX_NMB_OF_UNKNOWN_DTDS; i++)
+    997              {
+    998                  dtd_t *p_dtd = &pEdidTx->pEdidDecodData->edidInfo.DTD[i];
+    999                  if (p_dtd->Valid)
+   1000                  {
+   1001                      if (p_dtd->PixClk_10kHz > ((uint16_t) max_pix_clk_10mhz * 1000))
+   1002                      {
+   1003                          max_pix_clk_10mhz = (p_dtd->PixClk_10kHz + 999) / 1000;
+   1004                          pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__RANGE_LIMITS_CORRECTED;
+   1005                      }
+   1006                      {
+   1007                          uint16_t total_h_pix = p_dtd->HAct_Pix + p_dtd->HBlank_Pix;
+   1008                          uint16_t total_v_pix = p_dtd->VAct_Pix + p_dtd->VBlank_Pix;
+   1009                          // check the variable width carefully when porting to small micros!
+   1010                          uint8_t h_khz = (uint8_t) (((uint32_t) p_dtd->PixClk_10kHz) * 10 / total_h_pix);
+   1011                          uint8_t v_hz = (uint8_t) (((uint32_t) h_khz) * 1000 / total_v_pix);
+   1012                          //if (p_dtd->Interlaced)
+   1013                          //  v_hz *= 2;
+   1014                          if (v_hz > max_v_hz)
+   1015                          {
+   1016                              max_v_hz = v_hz;
+   1017                              pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__RANGE_LIMITS_CORRECTED;
+   1018                          }
+   1019                          if (v_hz < min_v_hz)
+   1020                          {
+   1021                              min_v_hz = v_hz;
+   1022                              pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__RANGE_LIMITS_CORRECTED;
+   1023                          }
+   1024                          if (h_khz > max_h_khz)
+   1025                          {
+   1026                              max_h_khz = h_khz;
+   1027                              pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__RANGE_LIMITS_CORRECTED;
+   1028                          }
+   1029                          if (h_khz < min_h_khz)
+   1030                          {
+   1031                              min_h_khz = h_khz;
+   1032                              pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__RANGE_LIMITS_CORRECTED;
+   1033                          }
+   1034                      }
+   1035                  }
+   1036              } // for () DTDs
+   1037          
+   1038              {
+   1039                  // store recovered data
+   1040                  pEdidTx->pEdidDecodData->edidInfo.RangeLimits.MinV_Hz = min_v_hz;
+   1041                  pEdidTx->pEdidDecodData->edidInfo.RangeLimits.MaxV_Hz = max_v_hz;
+   1042                  pEdidTx->pEdidDecodData->edidInfo.RangeLimits.MinH_kHz = min_h_khz;
+   1043                  pEdidTx->pEdidDecodData->edidInfo.RangeLimits.MaxH_kHz = max_h_khz;
+   1044                  pEdidTx->pEdidDecodData->edidInfo.RangeLimits.MaxPixClk_10MHz = max_pix_clk_10mhz;
+   1045                  pEdidTx->pEdidDecodData->edidInfo.DescriptorValid.RangeLimits = true;
+   1046              }
+   1047          }
+   1048          #endif // CHECK_AND_CORRECT_RANGE_LIMITS
+   1049          
+   1050          
+   1051          //-------------------------------------------------------------------------------------------------
+   1052          //! @brief      Add video mode.
+   1053          //-------------------------------------------------------------------------------------------------
+   1054          
+   1055          static void AddVideoMode(uint8_t vic)
+   1056          {
+   1057              // Note: there are no SVDs in DVI monitor case
+   1058              // (even no EDID extension blocks (almost in 100% cases))
+   1059              if ( pEdidTx->pEdidDecodData->SVD_idx < MAX_NMB_OF_SVDS)
+   1060              {
+   1061                  // no need to set "native" flag
+   1062                  pEdidTx->pEdidDecodData->SVD[pEdidTx->pEdidDecodData->SVD_idx++].Data = vic;
+   1063              }
+   1064          }
+   1065          
+   1066          
+   1067          #ifdef TRUST_RANGE_LIMITS
+   1068          
+   1069          //-------------------------------------------------------------------------------------------------
+   1070          //! @brief      This function is to filter out any "out of range" timing
+   1071          //!             (in the DTD and the SDTD arrays).
+   1072          //-------------------------------------------------------------------------------------------------
+   1073          
+   1074          static void FilterOutOfRangeVideo (void)
+   1075          {
+   1076              int i;
+   1077              uint8_t min_v_hz = DEFAULT__MIN_V_HZ; // Min. Vertical rate (for interlace this refers to field rate), in Hz.
+   1078              uint8_t max_v_hz = DEFAULT__MAX_V_HZ; // Max. Vertical rate (for interlace this refers to field rate), in Hz.
+   1079              uint8_t min_h_khz = DEFAULT__MIN_H_KHZ; // Min. Horizontal in kHz
+   1080              uint8_t max_h_khz = DEFAULT__MAX_H_KHZ; // Max. Horizontal in kHz,
+   1081              uint8_t max_pix_clk_10mhz = DEFAULT__MAX_PIX_CLK_10MHZ; // Max. Supported Pixel Clock, in MHz/10, rounded
+   1082          
+   1083              if (pEdidTx->pEdidDecodData->edidInfo.DescriptorValid.RangeLimits)
+   1084              {
+   1085                  // if the Range Limits structure exists
+   1086                  min_v_hz = pEdidTx->pEdidDecodData->edidInfo.RangeLimits.MinV_Hz;
+   1087                  max_v_hz = pEdidTx->pEdidDecodData->edidInfo.RangeLimits.MaxV_Hz;
+   1088                  min_h_khz = pEdidTx->pEdidDecodData->edidInfo.RangeLimits.MinH_kHz;
+   1089                  max_h_khz = pEdidTx->pEdidDecodData->edidInfo.RangeLimits.MaxH_kHz;
+   1090                  max_pix_clk_10mhz = pEdidTx->pEdidDecodData->edidInfo.RangeLimits.MaxPixClk_10MHz;
+   1091              }
+   1092              else
+   1093              {
+   1094                  // if the Range Limits structure was not declared in the EDID,
+   1095                  // store the default values
+   1096              //  pEdidTx->pEdidDecodData->edidInfo.RangeLimits.MinV_Hz = min_v_hz;
+   1097              //  pEdidTx->pEdidDecodData->edidInfo.RangeLimits.MaxV_Hz = max_v_hz;
+   1098              //  pEdidTx->pEdidDecodData->edidInfo.RangeLimits.MinH_kHz = min_h_khz;
+   1099              //  pEdidTx->pEdidDecodData->edidInfo.RangeLimits.MaxH_kHz = max_h_khz;
+   1100              //  pEdidTx->pEdidDecodData->edidInfo.RangeLimits.MaxPixClk_10MHz = max_pix_clk_10mhz;
+   1101              //  // ??? pEdidTx->pEdidDecodData->edidInfo.DescriptorValid.RangeLimits = true; ???
+   1102              }
+   1103          
+   1104              // Look through SDTDs
+   1105              for (i=0; i<MAX_NMB_OF_KNOWN_DTDS; i++)
+   1106              {
+   1107                  if (pEdidTx->pEdidDecodData->edidInfo.SDTD[i].Valid)
+   1108                  {
+   1109                      uint8_t idx = pEdidTx->pEdidDecodData->edidInfo.SDTD[i].VideoIdx;
+   1110                      if (VideoModeTable[idx].PixFreq > ((uint16_t) max_pix_clk_10mhz * 10))
+   1111                      {
+   1112                          pEdidTx->pEdidDecodData->edidInfo.SDTD[i].Valid = false;
+   1113                          pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__RANGE_LIMITATION;
+   1114                          continue;
+   1115                      }
+   1116                      if ( (VideoModeTable[idx].VFreq > max_v_hz) ||
+   1117                          (VideoModeTable[idx].VFreq < min_v_hz) )
+   1118                      {
+   1119                          pEdidTx->pEdidDecodData->edidInfo.SDTD[i].Valid = false;
+   1120                          pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__RANGE_LIMITATION;
+   1121                          continue;
+   1122                      }
+   1123                      if ( (VideoModeTable[idx].HFreq > max_h_khz) ||
+   1124                          (VideoModeTable[idx].HFreq < min_h_khz) )
+   1125                      {
+   1126                          pEdidTx->pEdidDecodData->edidInfo.SDTD[i].Valid = false;
+   1127                          pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__RANGE_LIMITATION;
+   1128                          continue;
+   1129                      }
+   1130                  }
+   1131              } // for () SDTDs
+   1132          
+   1133              // Look through DTDs
+   1134              for (i=0; i<MAX_NMB_OF_UNKNOWN_DTDS; i++)
+   1135              {
+   1136                  dtd_t *p_dtd = &pEdidTx->pEdidDecodData->edidInfo.DTD[i];
+   1137                  if (p_dtd->Valid)
+   1138                  {
+   1139                      if (p_dtd->PixClk_10kHz > ((uint16_t) max_pix_clk_10mhz * 1000))
+   1140                      {
+   1141                          p_dtd->Valid = false;
+   1142                          pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__RANGE_LIMITATION;
+   1143                          continue;
+   1144                      }
+   1145                      {
+   1146                          uint16_t total_h_pix = p_dtd->HAct_Pix + p_dtd->HBlank_Pix;
+   1147                          uint16_t total_v_pix = p_dtd->VAct_Pix + p_dtd->VBlank_Pix;
+   1148                          // check the variable width carefully when porting to small micros!
+   1149                          uint8_t h_khz = ((uint32_t) p_dtd->PixClk_10kHz) * 10 / total_h_pix;
+   1150                          uint8_t v_hz = ((uint32_t) h_khz) * 1000 / total_v_pix;
+   1151                          //if (p_dtd->Interlaced)
+   1152                          //  v_hz *= 2;
+   1153                          if ( (v_hz > max_v_hz) ||
+   1154                              (v_hz < min_v_hz) )
+   1155                          {
+   1156                              p_dtd->Valid = false;
+   1157                              pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__RANGE_LIMITATION;
+   1158                              continue;
+   1159                          }
+   1160                          if ( (h_khz > max_h_khz) ||
+   1161                              (h_khz < min_h_khz) )
+   1162                          {
+   1163                              p_dtd->Valid = false;
+   1164                              pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__RANGE_LIMITATION;
+   1165                              continue;
+   1166                          }
+   1167                      }
+   1168                  }
+   1169              } // for () DTDs
+   1170          }
+   1171          #endif // TRUST_RANGE_LIMITS
+   1172          
+   1173          
+   1174          //-------------------------------------------------------------------------------------------------
+   1175          //! @brief      Add DVI video modes.
+   1176          //!
+   1177          //!             This function is called in 1 block EDID case.
+   1178          //!             It means that it is a DVI monitor which does not have
+   1179          //!             enough room in its EDID and therefore some video modes
+   1180          //!             are not declared.
+   1181          //!             This function tries to discover skipped modes.
+   1182          //-------------------------------------------------------------------------------------------------
+   1183          
+   1184          void EdidTxAddDviVideoModes(void)
+   1185          {
+   1186              bool_t add_ntsc_modes = false;
+   1187              bool_t add_pal_modes = false;
+   1188              bool_t ar4_3 = pEdidTx->pEdidDecodData->edidInfo.SupportAspect4_3; // true if aspect ratio 4:3 is supported
+   1189              bool_t ar16_9 = pEdidTx->pEdidDecodData->edidInfo.SupportAspect16_9; // true if aspect ratio 16:9 is supported
+   1190          
+   1191              if ( pEdidTx->pEdidDecodData->edidInfo.SupportNtsc)
+   1192              {
+   1193                  add_ntsc_modes = true;
+   1194              }
+   1195              if ( pEdidTx->pEdidDecodData->edidInfo.SupportPal )
+   1196              {
+   1197                  add_pal_modes = true;
+   1198              }
+   1199              if (( pEdidTx->pEdidDecodData->edidInfo.SupportNtsc) && ( !pEdidTx->pEdidDecodData->edidInfo.SupportPal))
+   1200              {
+   1201                  // if support neither for NTSC neither for PAL was found
+   1202          #ifdef DEFAULT_SYSTEM__PAL
+   1203                  add_pal_modes = true;
+   1204          #else // DEFAULT_SYSTEM__PAL
+   1205                  add_ntsc_modes = true;
+   1206          #endif // DEFAULT_SYSTEM__PAL
+   1207              }
+   1208          
+   1209              if (add_pal_modes)
+   1210              {
+   1211                  if (ar4_3 || ((!ar4_3) && (!ar16_9))) // if 4:3 is supported or no information about the aspect ratio
+   1212                  {
+   1213                      //add_video_mode(21); // 576i @ 50Hz
+   1214                      AddVideoMode(17); // 576p @ 50Hz
+   1215                  }
+   1216                  if (ar16_9)
+   1217                  {
+   1218                      //add_video_mode(22); // 576i @ 50Hz
+   1219                      AddVideoMode(18); // 576p @ 50Hz
+   1220                  }
+   1221                  AddVideoMode(19); // 720p @ 50Hz
+   1222                  AddVideoMode(20); // 1080i @ 50Hz
+   1223              }
+   1224              if (add_ntsc_modes)
+   1225              {
+   1226                  if (ar4_3 || ((!ar4_3) && (!ar16_9))) // if 4:3 is supported or no information about the aspect ratio
+   1227                  {
+   1228                      //add_video_mode(6); // 480i @ 60Hz
+   1229                      AddVideoMode(2); // 480p @ 60Hz
+   1230                  }
+   1231                  if (ar16_9)
+   1232                  {
+   1233                      //add_video_mode(7); // 480i @ 60Hz
+   1234                      AddVideoMode(3); // 480p @ 60Hz
+   1235                  }
+   1236                  AddVideoMode(4); // 720p @ 60Hz
+   1237                  AddVideoMode(5); // 1080i @ 60Hz
+   1238              }
+   1239              pEdidTx->pEdidDecodData->edidInfo.ExtraVicAdded = true;
+   1240          }
+   1241          
+   1242          
+   1243          //-------------------------------------------------------------------------------------------------
+   1244          //! @brief      Actions after decoding.
+   1245          //!
+   1246          //-------------------------------------------------------------------------------------------------
+   1247          
+   1248          void EdidTxPostDecode(void)
+   1249          {
+   1250              int i, j;
+   1251          
+   1252              if (pEdidTx->pEdidDecodData->edidInfo.EstablishedTiming1 & 0x20) // 640 x 480 @ 60Hz
+   1253              {
+   1254                  // be sure that VGA mode does exist
+   1255                  // (it can be skipped in DVI EDIDs or incompliant HDMI ones)
+   1256                  bool_t found = false;
+   1257                  uint8_t vic = 1; // VGA 460x480 (vm1_640x480p)
+   1258          
+   1259                  // be sure that an SVD with the same VIC does not exist
+   1260                  for (i=0; i<pEdidTx->pEdidDecodData->SVD_idx; i++)
+   1261                  {
+   1262                      // no need to set "native" flag
+   1263                      if (vic == pEdidTx->pEdidDecodData->SVD[i].Fields.Vic)
+   1264                      {
+   1265                          found = true;
+   1266                          break;
+   1267                      }
+   1268                  }
+   1269                  // Actually, the searching for existed VIC is not necessary-
+   1270                  // doubled VICs could be filtered out at the stage when
+   1271                  // SDTDs are formed from SVDs.
+   1272          
+   1273                  if (!found)
+   1274                      AddVideoMode(vic);
+   1275              }
+   1276          
+   1277          
+   1278          ////////////////////////////////////////////////////////////
+   1279              // Delete duplicated video modes in SDTD[]
+   1280              // (Some TVs have a problem: dublicated DTDs, i.e. 2 identical
+   1281              // DTD detail timings are present in one EDID)
+   1282              for (i=0; i<MAX_NMB_OF_KNOWN_DTDS; i++)
+   1283              {
+   1284                  uint8_t vic = pEdidTx->pEdidDecodData->edidInfo.SDTD[i].Vic;
+   1285                  for (j=i+1; j<MAX_NMB_OF_KNOWN_DTDS; j++)
+   1286                  {
+   1287                      if (pEdidTx->pEdidDecodData->edidInfo.SDTD[j].Valid)
+   1288                      {
+   1289                          // Check for the same VIC in SDTDs
+   1290                          if (vic == pEdidTx->pEdidDecodData->edidInfo.SDTD[j].Vic)
+   1291                          {
+   1292                              pEdidTx->pEdidDecodData->edidInfo.SDTD[j].Valid = false;
+   1293                              break;
+   1294                          }
+   1295                      }
+   1296                  } // for (i) SDTDs
+   1297              } // for (j) SDTDs
+   1298          ////////////////////////////////////////////////////////////
+   1299          
+   1300          
+   1301          //#define COMPOSE_ABSENT_SVDS
+   1302          #ifdef COMPOSE_ABSENT_SVDS
+   1303              // Compose SVDs if corresponded DTDs are not present.
+   1304          
+   1305              // Look through SDTDs
+   1306              for (i=0; i<MAX_NMB_OF_KNOWN_DTDS; i++)
+   1307              {
+   1308                  if (pEdidTx->pEdidDecodData->edidInfo.SDTD[i].Valid)
+   1309                  {
+   1310                      // Check for the same VIC in SVDs
+   1311                      uint8_t vic = pEdidTx->pEdidDecodData->edidInfo.SDTD[i].Vic;
+   1312                      uint8_t j_max = pEdidTx->pEdidDecodData->edidInfo.SVD_idx;
+   1313                      if (j_max > MAX_NMB_OF_SVDS)
+   1314                      {
+   1315                          pEdidTx->pEdidDecodData->edidInfo.ErrorCode = EDID_ERROR__INTERNAL_ERROR;
+   1316                          j_max = pEdidTx->pEdidDecodData->edidInfo.SVD_idx = MAX_NMB_OF_SVDS;
+   1317                      }
+   1318                      for (j=0; j<j_max; j++)
+   1319                      {
+   1320                          if (vic == pEdidTx->pEdidDecodData->edidInfo.SVD[j].Fields.Vic)
+   1321                              break;
+   1322                      } // for () SVDs
+   1323                      if (j_max == j)
+   1324                      {
+   1325                          // found a DTD Detail Timing described in CEA861C which does not have
+   1326                          // corresponded SVD (HDMI spec violation)
+   1327                          if (pEdidTx->pEdidDecodData->edidInfo.HDMI_VSDB.HdmiMode)
+   1328                              pEdidTx->pEdidDecodData->edidInfo.ErrorCode = EDID_ERROR__DATA_COLLECT_VIOLATION;
+   1329                          //else
+   1330                          //  pEdidTx->pEdidDecodData->edidInfo.ExtraVicAdded = true;
+   1331                          AddVideoMode(vic); // correct the mistake
+   1332                      }
+   1333                  }
+   1334              } // for () SDTDs
+   1335          #endif // COMPOSE_ABSENT_SVDS
+   1336          
+   1337          #define COMPOSE_ABSENT_DTDS
+   1338          #ifdef COMPOSE_ABSENT_DTDS
+   1339              // Recover the DTDs which have corresponding SVDs
+   1340              // (i.e. which were not placed into the EDID because of the limited size of it)
+   1341          
+   1342              // Look through SVDs
+   1343              {
+   1344                  uint8_t j_max = pEdidTx->pEdidDecodData->SVD_idx;
+   1345                  if (j_max > MAX_NMB_OF_SVDS)
+   1346                  {
+   1347                      pEdidTx->pEdidDecodData->edidInfo.ErrorCode = EDID_ERROR__INTERNAL_ERROR;
+   1348                      j_max = pEdidTx->pEdidDecodData->SVD_idx = MAX_NMB_OF_SVDS;
+   1349                  }
+   1350                  for (j=0; j<j_max; j++)
+   1351                  {
+   1352                      uint8_t vic = pEdidTx->pEdidDecodData->SVD[j].Fields.Vic;
+   1353                      bool_t native = pEdidTx->pEdidDecodData->SVD[j].Fields.Native;
+   1354          
+   1355                      if (vic > LAST_KNOWN_CEA_VIC)
+   1356                          vic = 0;
+   1357                      for (i=0; i<MAX_NMB_OF_KNOWN_DTDS; i++)
+   1358                      {
+   1359                          if (pEdidTx->pEdidDecodData->edidInfo.SDTD[i].Valid)
+   1360                          {
+   1361                              // Check for the same VIC in SDTDs
+   1362                              if (vic == pEdidTx->pEdidDecodData->edidInfo.SDTD[i].Vic)
+   1363                              {
+   1364                                  pEdidTx->pEdidDecodData->edidInfo.SDTD[i].Native = native;
+   1365                                  break;
+   1366                              }
+   1367                          }
+   1368                      } // for () SDTDs
+   1369                      if (MAX_NMB_OF_KNOWN_DTDS == i)
+   1370                      {
+   1371                          // No Short DTD was found
+   1372                          // Compose it
+   1373          ////////////////////////////////////////////////////////////////////////////////////
+   1374          
+   1375                          uint8_t video_idx = ceaVicToVideoTableIndex[vic];
+   1376                          //090615 int i;
+   1377                          for (i=0; i<MAX_NMB_OF_KNOWN_DTDS; i++)
+   1378                          {
+   1379                              if (!pEdidTx->pEdidDecodData->edidInfo.SDTD[i].Valid) // if the slot is empty
+   1380                              {
+   1381                          //      uint16_t v, h; // V and H picture sizes in mm
+   1382                                  // determine picture aspect ratio
+   1383                                  bool_t ar16x9 = (vic == VideoModeTable[video_idx].Vic16x9);
+   1384          
+   1385                          //      // get V size and calculate H size
+   1386                          //      v = ar16x9 ? pEdidTx->pEdidDecodData->edidInfo.VSize16x9 :
+   1387                          //          pEdidTx->pEdidDecodData->edidInfo.VSize4x3;
+   1388                          //      if (0 == v) // if the size for given aspect ratio is not saved, try the size for another aspect ratio
+   1389                          //          v = ar16x9 ? pEdidTx->pEdidDecodData->edidInfo.VSize4x3 :
+   1390                          //              pEdidTx->pEdidDecodData->edidInfo.VSize16x9;
+   1391                          //      if (0 == v) // if the size is stil unknown, make it
+   1392                          //          v = 90; // because it is easily divided by 9
+   1393                          //      h = v * (ar16x9 ? 16 : 12) / 9;
+   1394          
+   1395                                  pEdidTx->pEdidDecodData->edidInfo.SDTD[i].Valid = true; // mark the slot as occupied
+   1396                                  pEdidTx->pEdidDecodData->edidInfo.SDTD[i].VideoIdx = video_idx;
+   1397                                  pEdidTx->pEdidDecodData->edidInfo.SDTD[i].Vic = vic;
+   1398                          //      pEdidTx->pEdidDecodData->edidInfo.SDTD[i].HImageSize = h;
+   1399                          //      pEdidTx->pEdidDecodData->edidInfo.SDTD[i].VImageSize = v;
+   1400                                  pEdidTx->pEdidDecodData->edidInfo.SDTD[i].Ar16x9 = ar16x9;
+   1401                                  pEdidTx->pEdidDecodData->edidInfo.SDTD[i].DisplayType = 0; // Normal, Not Stereo
+   1402                                  pEdidTx->pEdidDecodData->edidInfo.SDTD[i].PreferredTiming = false;
+   1403                                  pEdidTx->pEdidDecodData->edidInfo.SDTD[i].Native = native;
+   1404          
+   1405                                  if (ar16x9)
+   1406                                      pEdidTx->pEdidDecodData->edidInfo.SupportAspect16_9 = true;
+   1407                                  else
+   1408                                      pEdidTx->pEdidDecodData->edidInfo.SupportAspect4_3 = true;
+   1409                                  break;
+   1410                              }
+   1411                          } // for ()
+   1412                          if (MAX_NMB_OF_KNOWN_DTDS == i) // no empty slots case
+   1413                              pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__NOT_ENOUGH_ROOM;
+   1414          
+   1415          ////////////////////////////////////////////////////////////////////////////////////
+   1416                      }
+   1417                  } // for () SVDs
+   1418              }
+   1419          #endif // COMPOSE_ABSENT_DTDS
+   1420          
+   1421          #ifdef CHECK_AND_CORRECT_RANGE_LIMITS
+   1422              CheckAndCorrectRangeLimits();
+   1423          #endif // CHECK_AND_CORRECT_RANGE_LIMITS
+   1424          
+   1425          #ifdef TRUST_RANGE_LIMITS
+   1426              FilterOutOfRangeVideo();
+   1427          #endif // TRUST_RANGE_LIMITS
+   1428          
+   1429              // Check H and V sizes precision.
+   1430              // If the precision is not enough, replace the values with the default ones.
+   1431              {
+   1432                  uint16_t v, h;
+   1433                  uint16_t ar;
+   1434          
+   1435                  // Check 4:3 sizes
+   1436                  EdidTxImageSizeGet(&(pEdidTx->pEdidDecodData->edidInfo), false, &v, &h);
+   1437                  ar = (uint16_t) (((uint32_t) h) * 1000 / ((uint32_t) v));
+   1438                  // should be within (1.333 * 1000) +- 5%
+   1439                  if ((ar < 1270) || (ar > 1390))
+   1440                  {
+   1441                      pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__INCORRECT_PICTURE_SIZE;
+   1442                      pEdidTx->pEdidDecodData->edidInfo.VSize4x3 = DEFAULT__V_SIZE;
+   1443                  }
+   1444          
+   1445                  // Check 16:9 sizes
+   1446                  EdidTxImageSizeGet(&(pEdidTx->pEdidDecodData->edidInfo), true, &v, &h);
+   1447                  ar = (uint16_t) (((uint32_t) h) * 1000 / ((uint32_t) v));
+   1448                  // should be within (1.778 * 1000) +- 5%
+   1449                  if ((ar < 1690) || (ar > 1860))
+   1450                  {
+   1451                      pEdidTx->pEdidDecodData->edidInfo.ErrorCode |= EDID_ERROR__INCORRECT_PICTURE_SIZE;
+   1452                      pEdidTx->pEdidDecodData->edidInfo.VSize16x9 = DEFAULT__V_SIZE;
+   1453                  }
+   1454              }
+   1455          
+   1456          
+   1457          #if (SI_HDMI_1_4_EDID_PROCESSING == ENABLE)
+   1458              if (pEdidTx->pEdidDecodData->isAll3dFormats)
+   1459              {
+   1460                  // Mark all SDTDs as 3D capable.
+   1461                  // Look through all SDTDs
+   1462                  for (i=0; i<MAX_NMB_OF_KNOWN_DTDS; i++)
+   1463                  {
+   1464                      // If SDTD is filled with valid data
+   1465                      if (pEdidTx->pEdidDecodData->edidInfo.SDTD[i].Valid)
+   1466                      {
+   1467                          // If VIC from SVD matches SDTD's VIC
+   1468                          pEdidTx->pEdidDecodData->edidInfo.SDTD[i].masked_3d = true;
+   1469                      }
+   1470                  } // for () SDTDs
+   1471              }
+   1472          
+   1473          
+   1474              // Look through SVDs and mark those that support 3D
+   1475              // Limitation: Only 1 uncommon 3D mode per resolution is currently supported
+   1476          
+   1477              // First 16 SVDs can be marked with 3D capabilities,
+   1478              // look through them then:
+   1479              // a) Find SDTD structure using found VIC.
+   1480              // b) If found, mark it as 3D capable and copy the 3D format info.
+   1481          #if MAX_NMB_OF_SVDS < 16
+   1482          #  error incorrect MAX_NMB_OF_SVDS
+   1483          #endif // MAX_NMB_OF_SVDS
+   1484              for (j=0; j<16; j++) // "j" is a vic index as it appears in the EDID
+   1485              {
+   1486                  uint8_t vic = pEdidTx->pEdidDecodData->SVD[j].Fields.Vic;
+   1487          
+   1488                  // Look through all SDTDs
+   1489                  for (i=0; i<MAX_NMB_OF_KNOWN_DTDS; i++) // "i" is SDTD index
+   1490                  {
+   1491                  	shortDtd_t *pSdtd = &pEdidTx->pEdidDecodData->edidInfo.SDTD[i];
+   1492                      // Check if SDTD is filled with valid data
+   1493                      if (pEdidTx->pEdidDecodData->edidInfo.SDTD[i].Valid)
+   1494                      {
+   1495                          // Check if VIC from SVD matches SDTD's VIC
+   1496                          if (vic == pEdidTx->pEdidDecodData->edidInfo.SDTD[i].Vic)
+   1497                          {
+   1498                              // Found SDTD with VIC that appears in EDID at "j" index
+   1499                              uint8_t k;
+   1500                              // If the 3D Common Mode is supported for this VIC
+   1501                              if (pEdidTx->pEdidDecodData->hdmi3dMask & (1 << j))
+   1502                              {
+   1503                                  pEdidTx->pEdidDecodData->edidInfo.SDTD[i].masked_3d = true;
+   1504                              }
+   1505          
+   1506                              // Search if there is any 3D_Structure format
+   1507                              // Referring to the VIC.
+   1508                              for (k=0; k < HDMI_3D_SVD_STRUCTURE_LENGTH; k++)
+   1509                              {
+   1510                                  if (pEdidTx->pEdidDecodData->hdmi3dSvdStructure[k].valid)
+   1511                                  {
+   1512                                      if (j == pEdidTx->pEdidDecodData->hdmi3dSvdStructure[k].vic_order)
+   1513                                      {
+   1514                                      	uint8_t indiv3Dindex = pSdtd->indiv3dModeLength;
+   1515                                      	if(indiv3Dindex < MAX_INDIVIDUAL_3D_MODES_PER_VIC)
+   1516                                      	{
+   1517                                              uint8_t struct_3d =
+   1518                                                  pEdidTx->pEdidDecodData->hdmi3dSvdStructure[k].struct_3d;
+   1519                                              // mark that 3D is present
+   1520                                              pSdtd->indiv3dModes[indiv3Dindex].struct_3d_present = true;
+   1521                                              pSdtd->indiv3dModes[indiv3Dindex].struct_3d = struct_3d;
+   1522                                              if (struct_3d >= 8)
+   1523                                              {
+   1524                                              	pSdtd->indiv3dModes[indiv3Dindex].detail_3d =
+   1525                                                      pEdidTx->pEdidDecodData->hdmi3dSvdStructure[k].detail_3d;
+   1526                                              }
+   1527          
+   1528                                              pSdtd->indiv3dModeLength++;
+   1529                                      	}
+   1530                                      }
+   1531                                  }
+   1532                              }
+   1533                          }
+   1534                      }
+   1535                  } // for () SDTDs
+   1536              } // for () SVDs
+   1537          #endif // SI_HDMI_1_4_EDID_PROCESSING
+   1538          
+   1539          }
+   1540          
+   1541          
+   1542          //-------------------------------------------------------------------------------------------------
+   1543          //! @brief      Decode "additional timings" blocks.  Ignore all others.
+   1544          //!
+   1545          //! @param[in]  aBlock     - pointer to EDID block array,
+   1546          //! @param[in]  blockIndex - zero based EDID block number
+   1547          //-------------------------------------------------------------------------------------------------
+   1548          
+   1549          void EdidTxParseBlock ( uint8_t aBlock[EDID_BLOCK_SIZE], int blockIndex )
+   1550          {
+   1551              // Blocks greater than 0 that are Additional Timing blocks are all
+   1552              // treated the same.  All other block types are ignored.
+   1553          
+   1554              if ( EDID_EXT_TAG__ADDITIONAL_TIMINGS != aBlock[EDID_EXT_ADR__TAG] )
+   1555              {
+   1556                  return;
+   1557              }
+   1558          
+   1559              // collect DTDs
+   1560              if ( pEdidTx->isDecodeNonAudio )
+   1561              {
+   1562                  uint8_t dtd_offset = aBlock[EDID_EXT_ADR__D];
+   1563                  uint8_t last_dtd_offset = EDID_ADR__CHECK_SUM - EDID_LEN__DTD;
+   1564          
+   1565                  EdidDecodeDtdOpt( aBlock );     // If first extension, decode the DTD_OPT
+   1566          
+   1567                  for ( ; dtd_offset <= last_dtd_offset; dtd_offset += EDID_LEN__DTD)
+   1568                  {
+   1569                      if ((aBlock[dtd_offset+0])  | (aBlock[dtd_offset+1]) |
+   1570                          (aBlock[dtd_offset+2])  | (aBlock[dtd_offset+3]) )
+   1571                      {
+   1572                          // if at least one byte in the header differs from 0
+   1573                          EdidTxDecodeDtd(&aBlock[dtd_offset]);
+   1574                      }
+   1575                      else
+   1576                          break; // stop DTD decoding after meeting zero header
+   1577                  }
+   1578              }
+   1579          
+   1580              if ( aBlock[EDID_EXT_ADR__REVISION] >= 3)   // this feature is supported starting from version 3
+   1581              {
+   1582                  // process data from the data block collection
+   1583                  uint8_t data_block_collection_length = aBlock[EDID_EXT_ADR__D] - EDID_EXT_ADR__DBC;
+   1584                  DecodeDataBlockCollection( &aBlock[EDID_EXT_ADR__DBC], data_block_collection_length);
+   1585              }
+   1586          
+   1587              pEdidTx->pEdidDecodData->nmbOfDecodedExtBlocks++;
+   1588          }
+   1589          
+   1590          
+   1591          //---------------------------------------------------------------------
+   1592          // NOTES
+   1593          /*
+   1594          CEA-861C page 70
+   1595          If, for some reason, an indication is received that conflicts with the video format being received (e.g., the
+   1596          source device indicates 4:3 but sends the 1920x1080i format), then the DTV Monitor shall use the picture
+   1597          aspect ratio that is associated with the format being sent.
+   1598          
+   1599          BUT! on page 75
+   1600          Data Byte 4 contains a Video Identification Code. In most cases, the video format can be uniquely
+   1601          determined from the video format timing itself. However, if the source box is sending one of the video
+   1602          formats defined in this document, then it shall set this field to the proper code. If this field is used and if it
+   1603          is inconsistent with the video format being received, then it shall be ignored by the DTV Monitor. If the
+   1604          picture aspect ratio implied by this field does not agree with the picture aspect ratio communicated in
+   1605          Data Byte 2, then Data Byte 2 shall take precedence.
+   1606          
+   1607          HDMI CTS 1.1 Final page 129:
+   1608          [AVI M1, M0 bits (picture aspect ratio) must match transmitted video format.]
+   1609          If AVI M0-M1 fields indicates an aspect ratio not permitted for the transmitted video
+   1610          format timing -> FAIL
+   1611          If AVI M1, M0 fields are 0, 1 (4:3) or 1, 0 (16:9) and do not match aspect ratio
+   1612          corresponding to transmitted VIC field -> FAIL
+   1613          page 184:
+   1614          If DTD matches any 861B format, search SVDs for that same video format at same
+   1615          aspect ratio.
+   1616          If no matching SVD -> FAIL
+   1617          */
+   1618          
+   1619          /*
+   1620          HDMI CTS 1.1 Final page 185:
+   1621          ["The required 861/861A formats shall be advertised using the EDID 18-byte Detailed
+   1622          Timing Descriptors (for backward compatibility)."]
+   1623          For each SVD in EDID:
+   1624          - If SVD matches one of the following
+   1625           720x480p @ 59.94/60Hz
+   1626           1280x720p @ 59.94/60Hz
+   1627           1920x1080i @ 59.94/60Hz
+   1628           720x576p @ 50Hz
+   1629           1280x720p @ 50Hz
+   1630           1920x1080i @ 50Hz
+   1631          - then search for DTD matching (per algorithm above) the format at the same aspect
+   1632          ratio.
+   1633          - If no corresponding DTD found -> FAIL
+   1634          */
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        0  AddVideoMode
+       36  CheckAndCorrectRangeLimits
+       24  DecodeDataBlockCollection
+             24 -> ParseHdmiLlcDataBlock
+        8  EdidDecodeDtdOpt
+       24  EdidTxAddDviVideoModes
+             24 -> AddVideoMode
+        0  EdidTxCheckBlockCheckSum
+       48  EdidTxDecodeDtd
+             48 -> GetVideoModeIndex
+             48 -> __aeabi_memcpy
+       16  EdidTxParseBlock
+             16 -> DecodeDataBlockCollection
+             16 -> EdidDecodeDtdOpt
+             16 -> EdidTxDecodeDtd
+       40  EdidTxPostDecode
+             40 -> AddVideoMode
+             40 -> CheckAndCorrectRangeLimits
+             40 -> EdidTxImageSizeGet
+       20  GetVideoModeIndex
+       32  ParseHdmiLlcDataBlock
+             32 -> __aeabi_memcpy
+             32 -> memcmp
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ?<Constant {3, 12, 0}>
+       4  ??DataTable10
+       4  ??DataTable10_1
+       4  ??DataTable10_2
+       4  ??DataTable10_3
+       4  ??DataTable10_4
+       4  ??DataTable8
+       4  ??DataTable9
+      10  ?Subroutine0
+      10  ?Subroutine1
+      10  ?Subroutine2
+      16  ?Subroutine3
+      12  ?Subroutine4
+      28  AddVideoMode
+     418  CheckAndCorrectRangeLimits
+     464  DecodeDataBlockCollection
+     206  EdidDecodeDtdOpt
+     146  EdidTxAddDviVideoModes
+      36  EdidTxCheckBlockCheckSum
+     854  EdidTxDecodeDtd
+      90  EdidTxParseBlock
+     758  EdidTxPostDecode
+     234  GetVideoModeIndex
+     558  ParseHdmiLlcDataBlock
+
+ 
+ 3 882 bytes in section .text
+ 
+ 3 882 bytes of CODE memory
+
+Errors: none
+Warnings: 1

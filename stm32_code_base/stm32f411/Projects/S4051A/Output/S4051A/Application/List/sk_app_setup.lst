@@ -1,0 +1,957 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:01 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\application\sk_app_setu #
+#                    p.c                                                      #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\application\sk_app_setu #
+#                    p.c -D S4051A -D DEBUG -D FREE_RTOS -D STM32F40_41xxx    #
+#                    -D USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D          #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\sk_app_setup.lst                                      #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\sk_app_setup.o                                         #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\application\sk_app_setup.c
+      1          //***************************************************************************
+      2          //!file     sk_app_setup.c
+      3          //!brief    Built-in Setup manager
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2009-2012, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          #include "device_config.h"
+     13          #include "si_device_config.h"
+     14          
+     15          #if INC_SETUP
+     16          #include "si_eeprom.h"
+     17          #include "sk_application.h"
+     18          #if INC_CEC
+     19          #include "si_cec_component.h"
+     20          #endif
+     21          #include "si_edid_tx_component.h"
+     22          
+     23          // Included here only because this is a 'special' app layer module
+     24          #include "si_drv_device.h"
+     25          #include "si_drv_internal.h"
+     26          #include "si_drv_tpi_ddc_access.h"
+     27          #include "si_drv_tpi_system.h"
+     28          #include "si_edid_tx_analyzer.h"
+     29          #include "si_edid_tx_parsing.h"
+     30          
+     31          uint8_t  dispData[ EDID_TABLE_LEN];
+     32          
+     33          
+     34          #if 0
+     35          //------------------------------------------------------------------------------
+     36          // Function:    SetupLevelTwo
+     37          // Description: Handles commands on the third level of command options
+     38          // Returns:     TRUE if exit from setup, false if return to previous level
+     39          //------------------------------------------------------------------------------
+     40          static char *pLevelTwoMenu0 [] =
+     41          {
+     42              "\nSetup Menu Three",
+     43              tenDashes,
+     44              ccDisplayThisMenuMsg,
+     45              returnToSetupMenuMsg,
+     46              NULL
+     47          };
+     48          static bool_t SetupLevelTwo( RC5Commands_t key )
+     49          {
+     50              uint16_t    markerOptionFlagsMp, markerOptionFlagsRp;
+     51              uint8_t     marker3dGpioEnableMp, marker3dGpioEnableRp;
+     52              bool_t      changeConfigure, isRp;
+     53          
+     54              markerOptionFlagsMp     = app.markerOptionFlagsMp;
+     55              markerOptionFlagsRp     = app.markerOptionFlagsRp;
+     56              marker3dGpioEnableMp    = app.marker3dGpioEnableMp ? 1 : 0;
+     57              marker3dGpioEnableRp    = app.marker3dGpioEnableRp ? 1 : 0;
+     58              changeConfigure         = false;
+     59              isRp                    = false;
+     60          
+     61              switch ( key )
+     62              {
+     63          #if (PHILIPS_REMOTE == 1)
+     64                  case RC5_CC_SUBTITLE:
+     65          #else
+     66                  case RC5_HELP:
+     67          #endif
+     68                      PrintMenu( pLevelTwoMenu0 );
+     69                      DEBUG_PRINT( MSG_ALWAYS, "1 - Toggle MP 3D Marker Support (%s)\n", (markerOptionFlagsMp & ENABLE_3D_MARKER_SUPPORT) ? "enabled" : "disabled ");
+     70                      DEBUG_PRINT( MSG_ALWAYS, "2 - Toggle MP 3D VS insertion (%s)\n", (markerOptionFlagsMp & INSERT_3D_VS) ? "enabled" : "disabled");
+     71                      DEBUG_PRINT( MSG_ALWAYS, "3 - Toggle MP 3D GPIO(s) (%s)\n", marker3dGpioEnableMp ? "enabled" : "disabled " );
+     72                      DEBUG_PRINT( MSG_ALWAYS, "4 - Toggle RP 3D Marker Support (%s)\n", (markerOptionFlagsRp & ENABLE_3D_MARKER_SUPPORT) ? "enabled" : "disabled ");
+     73                      DEBUG_PRINT( MSG_ALWAYS, "5 - Toggle RP 3D VS insertion (%s)\n", (markerOptionFlagsRp & INSERT_3D_VS) ? "enabled" : "disabled");
+     74                      DEBUG_PRINT( MSG_ALWAYS, "6 - Toggle RP 3D GPIO(s) (%s)\n", marker3dGpioEnableRp ? "enabled" : "disabled " );
+     75                      DEBUG_PRINT( MSG_ALWAYS, "7 - Set 3D Marker 720p delay (%d lines)\n", app.markerDelay720p );
+     76                      DEBUG_PRINT( MSG_ALWAYS, "8 - Set 3D Marker 1080p delay (%d lines)\n", app.markerDelay1080p );
+     77                      break;
+     78          
+     79                  case RC5_0:
+     80                      app.setupMenuLevel = 0;
+     81                      PrintAlways( setupSelectMenu );
+     82                      break;
+     83          
+     84                  case RC5_1:
+     85                      markerOptionFlagsMp ^= ENABLE_3D_MARKER_SUPPORT;
+     86                      DEBUG_PRINT(
+     87                          MSG_ALWAYS,
+     88                          "\nMP 3D Marker Support (%s)\n", (markerOptionFlagsMp & ENABLE_3D_MARKER_SUPPORT) ? "enabled" : "disabled" );
+     89                      changeConfigure = true;
+     90                      break;
+     91                  case RC5_2:
+     92                      markerOptionFlagsMp ^= INSERT_3D_VS;
+     93                      DEBUG_PRINT(
+     94                          MSG_ALWAYS,
+     95                          "\nMP 3D VS insertion (%s)\n", (markerOptionFlagsMp & INSERT_3D_VS) ? "enabled" : "disabled" );
+     96                      changeConfigure = true;
+     97                      break;
+     98                  case RC5_3:
+     99                      marker3dGpioEnableMp = marker3dGpioEnableMp  ? 0 : 1;
+    100                      DEBUG_PRINT( MSG_ALWAYS, "MP 3D GPIO(s) %s\n", marker3dGpioEnableMp ? "enabled" : "disabled " );
+    101                      break;
+    102                  case RC5_4:
+    103                      markerOptionFlagsRp ^= ENABLE_3D_MARKER_SUPPORT;
+    104                      DEBUG_PRINT(
+    105                          MSG_ALWAYS, "\nRP 3D Marker Support (%s)\n",
+    106                          (markerOptionFlagsRp & ENABLE_3D_MARKER_SUPPORT) ? "enabled" : "disabled" );
+    107                      changeConfigure = true;
+    108                      isRp = true;
+    109                      break;
+    110                  case RC5_5:
+    111                      markerOptionFlagsRp ^= INSERT_3D_VS;
+    112                      DEBUG_PRINT(
+    113                          MSG_ALWAYS,
+    114                          "\nRP 3D VS insertion (%s)\n", (markerOptionFlagsRp & INSERT_3D_VS) ? "enabled" : "disabled" );
+    115                      changeConfigure = true;
+    116                      isRp = true;
+    117                      break;
+    118                  case RC5_6:
+    119                      marker3dGpioEnableRp = marker3dGpioEnableRp ? 0 : 1;
+    120                      DEBUG_PRINT( MSG_ALWAYS, "RP 3D GPIO(s) %s\n", marker3dGpioEnableRp ? "enabled" : "disabled " );
+    121                      isRp = true;
+    122                      break;
+    123                  case RC5_7:
+    124                      {
+    125                          uint16_t delayValue;
+    126                          DEBUG_PRINT( MSG_ALWAYS, "\n Enter 4 decimal digits (0000-4095): " );
+    127                          delayValue = SkAppIrGetSingleDigit( 4 );
+    128                          delayValue = (delayValue * 10) + SkAppIrGetSingleDigit( 9 );
+    129                          delayValue = (delayValue * 10) + SkAppIrGetSingleDigit( 9 );
+    130                          delayValue = (delayValue * 10) + SkAppIrGetSingleDigit( 9 );
+    131                          if ( delayValue < 4096 )
+    132                          {
+    133                              app.markerDelay720p = delayValue;
+    134                              changeConfigure = true;
+    135                          }
+    136                          else
+    137                          {
+    138                              DEBUG_PRINT( MSG_ALWAYS, "\nMust be 4 decimal digits in the range of 0000-4095\n" );
+    139                          }
+    140                      }
+    141                      break;
+    142                  case RC5_8:
+    143                      {
+    144                          uint16_t delayValue;
+    145                          DEBUG_PRINT( MSG_ALWAYS, "\n Enter 4 decimal digits (0000-4095): " );
+    146                          delayValue = SkAppIrGetSingleDigit( 4 );
+    147                          delayValue = (delayValue * 10) + SkAppIrGetSingleDigit( 9 );
+    148                          delayValue = (delayValue * 10) + SkAppIrGetSingleDigit( 9 );
+    149                          delayValue = (delayValue * 10) + SkAppIrGetSingleDigit( 9 );
+    150                          if ( delayValue < 4096 )
+    151                          {
+    152                              app.markerDelay1080p = delayValue;
+    153                              changeConfigure = true;
+    154                          }
+    155                          else
+    156                          {
+    157                              DEBUG_PRINT( MSG_ALWAYS, "\nMust be 4 decimal digits in the range of 0000-4095\n" );
+    158                          }
+    159                      }
+    160                      break;
+    161                  default:
+    162                      break;
+    163              }
+    164          
+    165              if ( changeConfigure )
+    166              {
+    167                  SiiDrvDevice3dMarkerConfigure(
+    168                      isRp ? (markerOptionFlagsRp | SET_SUBPIPE_OPTIONS) : markerOptionFlagsMp,
+    169                      app.markerDelay720p, app.markerDelay1080p );
+    170                  app.markerOptionFlagsMp = markerOptionFlagsMp;
+    171                  app.markerOptionFlagsRp = markerOptionFlagsRp;
+    172              }
+    173              app.marker3dGpioEnableMp = (marker3dGpioEnableMp != 0);
+    174              SiiDrvDevice3dMarkerGpioEnable( marker3dGpioEnableMp );
+    175              app.marker3dGpioEnableRp = (marker3dGpioEnableRp != 0);
+    176              SiiDrvDevice3dMarkerGpioEnable( marker3dGpioEnableRp | SET_SUBPIPE_OPTIONS );
+    177          
+    178              return( false );
+    179          }
+    180          #endif
+    181          //------------------------------------------------------------------------------
+    182          // Function:    SetupLevelOne
+    183          // Description: Handles commands on the second level of command options
+    184          // Returns:     TRUE if exit from setup, false if return to previous level
+    185          //------------------------------------------------------------------------------
+    186          static char *pPixelClockRangeMenu [] =
+    187          {
+    188              "\n Select Pixel Clock Range:",
+    189              "\t 0 - Auto",
+    190              "\t 1 - 0-165 MHz",
+    191              "\t 2 - 165-225 MHz",
+    192              "\t 3 - 225-300 MHz",
+    193              NULL
+    194          };
+    195          
+    196          static char *pLevelOneMenu0 [] =
+    197          {
+    198              "\nSetup Menu Two",
+    199              tenDashes,
+    200              ccDisplayThisMenuMsg,
+    201              returnToSetupMenuMsg,
+    202              "1 - Show video modes supported by DS",
+    203              NULL
+    204          };
+    205          
+    206          static char *pLevelOneMenu1 [] =
+    207          {
+    208              "2 - Display EEPROM EDID #",
+    209              "3 - Display Port EDID SRAM",
+    210              "4 - Set TX TMDS operation frequency range",
+    211              //"5 - Set SP audio extraction output type (I2S/SPDIF)",
+    212              NULL
+    213          };
+    214          
+    215          static bool_t SetupLevelOne ( RC5Commands_t key )
+    216          {
+    217              uint8_t     i;
+    218          
+    219              switch ( key )
+    220              {
+    221          #if (PHILIPS_REMOTE == 1)
+    222                  case RC5_CC_SUBTITLE:
+    223          #else
+    224                  case RC5_HELP:
+    225          #endif
+    226                      PrintMenu( pLevelOneMenu0 );
+    227                     // PrintStringOnOff( "2 - Toggle CEC debug message print mode", app.cecPrint );
+    228                      PrintMenu( pLevelOneMenu1 );
+    229                      break;
+    230          
+    231                  case RC5_0:
+    232                      app.setupMenuLevel = 0;
+    233                      PrintAlways( setupSelectMenu );
+    234                      break;
+    235          
+    236                  case RC5_1:
+    237          
+    238                      PrintAlways( "4x3:\n" );
+    239                      PrintAlways( tenDashes );
+    240                      for ( i = 0; i < NMB_OF_VIDEO_MODES; i++ )
+    241                      {
+    242                          if ( VideoModeTable[i].Vic4x3 )
+    243                          {
+    244                              if ( SiiEdidTxOutVideoModeRankGet( i, SI_EDID_TX_ASPECT_RATIO_4x3 ) > 0 )
+    245                              {
+    246                                  DEBUG_PRINT(
+    247                                      MSG_ALWAYS, "  %dx%d%c\n",
+    248                                      VideoModeTable[i].Active.H,
+    249                                      VideoModeTable[i].Active.V,
+    250                                      VideoModeTable[i].Interlaced ? 'i' : 'p' );
+    251                              }
+    252                          }
+    253                      }
+    254                      PrintAlways( "16x9:\n" );
+    255                      PrintAlways( tenDashes );
+    256                      for ( i = 0; i < NMB_OF_VIDEO_MODES; i++ )
+    257                      {
+    258                          if ( VideoModeTable[i].Vic16x9 )
+    259                          {
+    260                              if ( SiiEdidTxOutVideoModeRankGet( i, SI_EDID_TX_ASPECT_RATIO_UNKNOWN_16x9 ) > 0 )
+    261                              {
+    262                                  DEBUG_PRINT(
+    263                                      MSG_ALWAYS, "  %dx%d%c\n",
+    264                                      VideoModeTable[i].Active.H,
+    265                                      VideoModeTable[i].Active.V,
+    266                                      VideoModeTable[i].Interlaced ? 'i' : 'p' );
+    267                              }
+    268                          }
+    269                      }
+    270                      break;
+    271          
+    272          //        case RC5_2:
+    273          //
+    274          //            app.cecPrint = !app.cecPrint;
+    275          //            flags = SiiPlatformEepromReadByte( EE_FW_CONTROL );
+    276          //            flags &= ~EEFLAG_CEC_PRINT;
+    277          //            flags |= app.cecPrint ? EEFLAG_CEC_PRINT : 0;
+    278          //            SiiPlatformEepromWriteByte( EE_FW_CONTROL, flags );
+    279          //            break;
+    280          
+    281                  case RC5_2:
+    282                      //DEBUG_PRINT( MSG_ALWAYS, "\n EEPROM EDID (0-%d): ", SII_INPUT_PORT_COUNT - 1 );
+    283                      i = 0; //SkAppIrGetSingleDigit( SII_INPUT_PORT_COUNT - 1 );
+    284                      if ( SkAppEdidRead( EDID0_EEPROM + i, dispData ))
+    285                      {
+    286                          SkAppDisplayData( MSG_ALWAYS, dispData, EDID_TABLE_LEN );
+    287                      }
+    288                      else
+    289                      {
+    290                          DEBUG_PRINT( MSG_ERR, "Error reading EEPROM\n" );
+    291                      }
+    292                      break;
+    293          
+    294                  case RC5_3:
+    295                      {
+    296                          uint8_t portIndex;
+    297          
+    298          #if ( configSII_DEV_9535 == 1 )
+    299                          PrintAlways( "\n Display SRAM for Port 0 (0-3): " );
+    300          #else
+    301                          PrintAlways( "\n Display SRAM for Port 0 (0-2): " );
+    302          #endif
+    303                          portIndex = SkAppIrGetSingleDigit( 3 );
+    304                          if ( SiiDrvNvramSramRead( SRAM_P0 + portIndex, dispData, 0, EDID_TABLE_LEN ))
+    305                          {
+    306                              SkAppDisplayData( MSG_ALWAYS, dispData, EDID_TABLE_LEN );
+    307                          }
+    308                          else
+    309                          {
+    310                              DEBUG_PRINT( MSG_ERR, "Error reading SRAM for port %d\n", portIndex );
+    311                          }
+    312                      }
+    313                      break;
+    314          
+    315                  case RC5_4:
+    316                          {
+    317                              int_t txSel = 0;
+    318                              int_t rangeSel = 0;
+    319          
+    320                              //PrintAlways( "\n Select TX (0-Tx0): " );
+    321                              //txSel = SkAppIrGetSingleDigit( 0 );
+    322                              PrintMenu( pPixelClockRangeMenu );
+    323                              rangeSel = SkAppIrGetSingleDigit( 3 );
+    324          
+    325                              app.txTmdsFreqRange[txSel] = rangeSel;
+    326                              if (rangeSel != 0)
+    327                              {
+    328                                  SkAppTxAdjustAnalogSettings(txSel, 0);
+    329                              }
+    330                              PrintAlways( "\nDone.\n" );
+    331                          }
+    332                      break;
+    333          
+    334          //        case RC5_5:
+    335          //            {
+    336          //                PrintAlways( "\n 0 - I2S, 1 - SPDIF: " );
+    337          //                app.isSubPipeAudioExtSpdif = SkAppIrGetSingleDigit( 1 );
+    338          //            }
+    339          
+    340                  default:
+    341                      break;
+    342              }
+    343          
+    344              return( false );
+    345          }
+    346          
+    347          //------------------------------------------------------------------------------
+    348          // Function:    SetupLevelZero
+    349          // Description: Command Mode processor
+    350          //------------------------------------------------------------------------------
+    351          
+    352          static char *pLevel0Menu0 [] =
+    353          {
+    354              "\nSetup Menu One",
+    355              tenDashes,
+    356              ccDisplayThisMenuMsg,
+    357              returnToSetupMenuMsg,
+    358              NULL
+    359          };
+    360          static char *pLevel0Menu1 [] =
+    361          {
+    362              "2 - Display NVRAM EDID",
+    363              "3 - Display NVRAM Boot Data",
+    364              "4 - Reset NVRAM to default",
+    365              "5 - Firmware version",
+    366              "6 - Reset EEPROM to default",
+    367              NULL
+    368          };
+    369          
+    370          static void SetupLevelZero ( RC5Commands_t key )
+    371          {
+    372              uint16_t    rcKey;
+    373              bool_t      done = false;
+    374          
+    375              switch ( key )
+    376              {
+    377          #if (PHILIPS_REMOTE == 1)
+    378                  case RC5_CC_SUBTITLE:
+    379          #else
+    380                  case RC5_HELP:
+    381          #endif
+    382                      PrintMenu( pLevel0Menu0 );
+    383                      ///PrintStringOnOff( "1 - Toggle CEC enable", app.cecEnable );
+    384                      DEBUG_PRINT( MSG_ALWAYS, "1 - Set message level (0x%02X)\n", app.dbgMsgLevel );
+    385                      //DEBUG_PRINT( MSG_ALWAYS, "3 - Enable message coloring (0x%02X)\n", app.dbgMsgColoring );
+    386                      PrintMenu( pLevel0Menu1 );
+    387                      break;
+    388          
+    389                  case RC5_0:
+    390                      app.setupMenuLevel = 0;
+    391                      PrintAlways( setupSelectMenu );
+    392                      break;
+    393          //        case RC5_1:
+    394          //            app.cecEnable = !app.cecEnable;
+    395          //            flags = SiiPlatformEepromReadByte( EE_FW_CONTROL );
+    396          //            flags &= ~EEFLAG_CEC_ENABLE;
+    397          //            flags |= app.cecEnable ? EEFLAG_CEC_ENABLE : 0;
+    398          //            SiiPlatformEepromWriteByte( EE_FW_CONTROL, flags );
+    399          //#if INC_CEC
+    400          //            SkAppCecConfigure( app.cecEnable );
+    401          //#endif
+    402          //            break;
+    403                  case RC5_1:
+    404                      PrintAlways( " (0-4): " );
+    405                      app.dbgMsgLevel = SkAppIrGetSingleDigit( 4 );
+    406                      if ( app.dbgMsgLevel == 4 )
+    407                      {
+    408                          app.dbgMsgLevel = MSG_PRINT_ALL;
+    409                      }
+    410                      SiiPlatformEepromWriteByte( EE_UART_MSG_LEVEL, app.dbgMsgLevel );
+    411                      SiiPlatformLoggerMessageLevelSet( app.dbgMsgLevel );
+    412                      break;
+    413          //        case RC5_3:
+    414          //            PrintAlways( " (0-1): " );
+    415          //            app.dbgMsgColoring = SkAppIrGetSingleDigit( 1 );
+    416          //            flags = SiiPlatformEepromReadByte( EE_FW_CONTROL );
+    417          //            flags &= ~EEFLAG_DBG_MSG_COLORING;
+    418          //            flags |= app.dbgMsgColoring ? EEFLAG_DBG_MSG_COLORING : 0;
+    419          //            SiiPlatformEepromWriteByte( EE_FW_CONTROL, flags );
+    420          //            SiiPlatformLoggerColorEnable( app.dbgMsgColoring );
+    421          //            break;
+    422                  case RC5_2:
+    423                      if ( SkAppEdidRead( EDID_NVRAM, dispData ))
+    424                      {
+    425                          uint8_t chksum;
+    426          
+    427                          SkAppDisplayData( MSG_ALWAYS, dispData, EDID_TABLE_LEN );
+    428                          chksum = SiiDrvNvramEdidBlockChecksumCalc( dispData );
+    429                          DEBUG_PRINT( MSG_ALWAYS, " Checksum block 0: %02X (%02X)\n", chksum, (dispData[EDID_BLOCK_LEN - 1] - chksum) & 0xFF );
+    430                          chksum = SiiDrvNvramEdidBlockChecksumCalc( &dispData[ EDID_BLOCK_LEN] );
+    431                          DEBUG_PRINT( MSG_ALWAYS, " Checksum block 1: %02X (%02X)\n", chksum, (dispData[2 * EDID_BLOCK_LEN - 1] - chksum) & 0xFF );
+    432                      }
+    433                      else
+    434                      {
+    435                          DEBUG_PRINT( MSG_ERR, "Error reading NVRAM\n" );
+    436                      }
+    437                      break;
+    438                  case RC5_3:
+    439                      if ( SkAppEdidRead( EDID_NVRAM_BOOT, dispData ))
+    440                      {
+    441                          SkAppDisplayData( MSG_ALWAYS, dispData, EDID_DEVBOOT_LEN );
+    442                      }
+    443                      else
+    444                      {
+    445                          DEBUG_PRINT( MSG_ERR, "Error reading NVRAM BOOT DATA\n" );
+    446                      }
+    447                      break;
+    448                  case RC5_4:
+    449                      PrintAlways( " Press Power to confirm NVRAM restore: \n" );
+    450                      done = false;
+    451                      while ( !done )
+    452                      {
+    453                          rcKey = SiiPlatformInfraRedGetKey();
+    454                          switch ( rcKey )
+    455                          {
+    456                              case RC5_STANDBY:
+    457                                  PrintAlways( "\n" );
+    458                                  if ( !SiiDrvDeviceNonVolatileInitialize( true ))
+    459                                  {
+    460                                      DEBUG_PRINT( MSG_ERR, "---ERROR IN NVRAM UPDATE\n" );
+    461                                  }
+    462                                  else
+    463                                  {
+    464                                      PrintAlways( "---NVRAM restore complete\n" );
+    465                                  }
+    466                                  done = true;
+    467                                  break;
+    468                              case RC5_BUFFER_EMPTY:
+    469                                  break;
+    470                              default:
+    471                                  PrintAlways( "---Canceled\n" );
+    472                                  done = true;
+    473                                  break;
+    474                          }
+    475                      }
+    476                      break;
+    477                  case RC5_5:
+    478                      SkAppSignon();
+    479                      break;
+    480                  case RC5_6:
+    481                      PrintAlways( " Press Power to confirm EEPROM restore: " );
+    482                      done = false;
+    483                      while ( !done )
+    484                      {
+    485                          rcKey = SiiPlatformInfraRedGetKey();
+    486                          switch ( rcKey )
+    487                          {
+    488                              case RC5_STANDBY:
+    489                                  SkAppEepromInitialize( true, true );
+    490                                  PrintAlways( "---EEPROM restore complete\n" );
+    491                                  done = true;
+    492                                  break;
+    493                              case RC5_BUFFER_EMPTY:
+    494                                  break;
+    495                              default:
+    496                                  PrintAlways( "---Canceled\n" );
+    497                                  done = true;
+    498                                  break;
+    499                          }
+    500                      }
+    501                      break;
+    502                  case RC5_9:
+    503                      break;
+    504          
+    505                  default:
+    506                      break;
+    507              }
+    508          }
+    509          
+    510          static char *pSetupIrRemoteMenu [] =
+    511          {
+    512              "\n Setup Menu",
+    513                " -----------",
+    514              "0 - Return to TV Mode",
+    515              "1 - Setup Menu One",
+    516              "2 - Setup Menu Two",
+    517              "3 - Diagnostics Menu",
+    518             // "4 - Setup Menu Three",
+    519              NULL
+    520          };
+    521          
+    522          //------------------------------------------------------------------------------
+    523          // Function:    SkAppSetupIrRemote
+    524          // Description: Parse remote control keys for the setup application
+    525          //------------------------------------------------------------------------------
+    526          
+    527          bool_t SkAppSetupIrRemote ( RC5Commands_t key, bool_t fullAccess )
+    528          {
+    529              bool_t  usedKey = false;
+    530          
+    531          #if (PHILIPS_REMOTE == 1)
+    532              if ( key == RC5_TOGGLE )
+    533          #else
+    534                  if ( key == RC5_GUIDE )
+    535          #endif
+    536              {
+    537                 PrintMenu( pSetupIrRemoteMenu );
+    538                 DEBUG_PRINT( MSG_ALWAYS, "\n Select Setup Menu (0-3):" );
+    539          
+    540                 app.setupMenuLevel = SkAppIrGetSingleDigit( 4 ) + 1;
+    541          #if (PHILIPS_REMOTE == 1)
+    542                 key = RC5_CC_SUBTITLE;    // Cause new level menu to be displayed
+    543          #else
+    544                 key = RC5_HELP;    // Cause new level menu to be displayed
+    545          #endif
+    546                 }
+    547              switch ( app.setupMenuLevel )
+    548              {
+    549                  case 0:         // Menu idle mode
+    550                      break;
+    551                  case 1:
+    552                      SkAppIrRemoteReturnToTV();
+    553                      break;
+    554                  case 2:
+    555                      SetupLevelZero( key );
+    556                      break;
+    557                  case 3:
+    558                      SetupLevelOne( key );
+    559                      break;
+    560          #if INC_DIAG
+    561                  case 4:
+    562                      SkAppDiagLevelZero( key );
+    563                      break;
+    564          #endif
+    565          //        case 5:
+    566          //            SetupLevelTwo( key );
+    567          //            break;
+    568                  default:
+    569                      break;
+    570              }
+    571          
+    572              return( usedKey );
+    573          }
+    574          
+    575          //------------------------------------------------------------------------------
+    576          // Function:    SkAppSetup
+    577          // Description: Setup handler
+    578          //------------------------------------------------------------------------------
+    579          
+    580          void SkAppSetup ( void )
+    581          {
+    582              if ( !SiiPlatformTimerExpired( TIMER_1 ))
+    583              {
+    584                  return;
+    585              }
+    586              SiiPlatformTimerSet( TIMER_1, DEM_POLLING_DELAY );     // Reset poll timer
+    587          
+    588              // Check the UI here rather than in the main loop because we don't need
+    589              // to check it at such a high rate, and besides, if the user changed the
+    590              // rotary switch in-between polling delays, the next time it was checked
+    591              // it would report unchanged - you have only one chance to get the changed value.
+    592          
+    593              SkAppUiUpdate();
+    594          
+    595          }
+    596          
+    597          #endif // #if INC_DIAG
+    598          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       24  SetupLevelOne
+             24 -> PrintAlways
+             24 -> PrintMenu
+             24 -> SiiDrvNvramSramRead
+             24 -> SiiEdidTxOutVideoModeRankGet
+             24 -> SkAppDisplayData
+             24 -> SkAppEdidRead
+             24 -> SkAppIrGetSingleDigit
+             24 -> SkAppTxAdjustAnalogSettings
+       16  SetupLevelZero
+              0 -> PrintAlways
+             16 -> PrintAlways
+              0 -> PrintMenu
+             16 -> PrintMenu
+             16 -> SiiDrvDeviceNonVolatileInitialize
+              0 -> SiiDrvNvramEdidBlockChecksumCalc
+             16 -> SiiDrvNvramEdidBlockChecksumCalc
+             16 -> SiiPlatformEepromWriteByte
+             16 -> SiiPlatformInfraRedGetKey
+              0 -> SiiPlatformLoggerMessageLevelSet
+              0 -> SkAppDisplayData
+             16 -> SkAppDisplayData
+             16 -> SkAppEdidRead
+             16 -> SkAppEepromInitialize
+             16 -> SkAppIrGetSingleDigit
+              0 -> SkAppSignon
+        8  SkAppSetup
+              8 -> SiiPlatformTimerExpired
+              8 -> SiiPlatformTimerSet
+              0 -> SkAppUiUpdate
+        8  SkAppSetupIrRemote
+              8 -> PrintMenu
+              8 -> SetupLevelOne
+              8 -> SetupLevelZero
+              8 -> SkAppDiagLevelZero
+              8 -> SkAppIrGetSingleDigit
+              8 -> SkAppIrRemoteReturnToTV
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      12  ?<Constant " (0-4): ">
+      16  ?<Constant " -----------">
+      44  ?<Constant " Press Power to confi...">
+      44  ?<Constant " Press Power to confi...">_1
+      16  ?<Constant "---Canceled\n">
+      28  ?<Constant "---EEPROM restore com...">
+      28  ?<Constant "---NVRAM restore comp...">
+      24  ?<Constant "0 - Return to TV Mode">
+      20  ?<Constant "1 - Setup Menu One">
+      40  ?<Constant "1 - Show video modes ...">
+       8  ?<Constant "16x9:\n">
+      28  ?<Constant "2 - Display EEPROM ED...">
+      24  ?<Constant "2 - Display NVRAM EDID">
+      20  ?<Constant "2 - Setup Menu Two">
+      24  ?<Constant "3 - Diagnostics Menu">
+      28  ?<Constant "3 - Display NVRAM Boo...">
+      28  ?<Constant "3 - Display Port EDID...">
+      28  ?<Constant "4 - Reset NVRAM to de...">
+      44  ?<Constant "4 - Set TX TMDS opera...">
+       8  ?<Constant "4x3:\n">
+      24  ?<Constant "5 - Firmware version">
+      28  ?<Constant "6 - Reset EEPROM to d...">
+      36  ?<Constant "\n Display SRAM for Po...">
+      28  ?<Constant "\n Select Pixel Clock ...">
+      16  ?<Constant "\n Setup Menu">
+       2  ?<Constant "\n">
+       8  ?<Constant "\nDone.\n">
+      16  ?<Constant "\nSetup Menu One">
+      16  ?<Constant "\nSetup Menu Two">
+      12  ?<Constant "\t 0 - Auto">
+      16  ?<Constant "\t 1 - 0-165 MHz">
+      20  ?<Constant "\t 2 - 165-225 MHz">
+      20  ?<Constant "\t 3 - 225-300 MHz">
+       4  ??DataTable35
+       4  ??DataTable35_1
+       4  ??DataTable35_2
+       4  ??DataTable35_3
+       4  ??DataTable35_4
+       4  ??DataTable35_5
+       4  ??DataTable35_6
+      12  ?Subroutine0
+     220  SetupLevelOne
+     278  SetupLevelZero
+      30  SkAppSetup
+      74  SkAppSetupIrRemote
+     364  dispData
+          pPixelClockRangeMenu
+          pLevelOneMenu0
+          pLevelOneMenu1
+          pLevel0Menu0
+          pLevel0Menu1
+      28  pSetupIrRemoteMenu
+
+ 
+ 392 bytes in section .data
+ 522 bytes in section .rodata
+ 874 bytes in section .text
+ 
+ 874 bytes of CODE  memory
+ 522 bytes of CONST memory
+ 392 bytes of DATA  memory
+
+Errors: none
+Warnings: 6

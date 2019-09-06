@@ -1,0 +1,650 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:25:40 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\APP_SRC\Managers\RFHandler.c          #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\APP_SRC\Managers\RFHandler.c -D       #
+#                    S4051A -D DEBUG -D FREE_RTOS -D STM32F40_41xxx -D        #
+#                    USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D             #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\RFHandler.lst                                         #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\RFHandler.o                                            #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Projects\S4051A\APP_SRC\Managers\RFHandler.c
+      1          #include "Defs.h"
+      2          #include "Debug.h"
+      3          #include "freertos_conf.h"
+      4          #include "freertos_task.h"
+      5          #include "freertos_typedef.h"
+      6          
+      7          #include "GPIOMiddleLevel.h"
+      8          
+      9          #include "RFHandler.h"
+     10          
+     11          #include "PowerHandler.h"
+     12          #include "UIDeviceManager.h"
+     13          
+     14          #define RF_QUEUE_LENGTH 1
+     15          
+     16          //____________________________________________________________________________________________________________
+     17          /* extern variable */
+     18          extern POWER_HANDLE_OBJECT *pPowerHandle_ObjCtrl;
+     19          extern UI_DEV_MANAGER_OBJECT *pUDM_ObjCtrl; 
+     20          //____________________________________________________________________________________________________________
+     21          //static api header
+     22          static void RFHandler_CreateTask(void);
+     23          static bool RFHandler_InstrSender(void * cmds);
+     24          static void RFHandler_ServiceHandle( void *pvParameters );
+     25          uint8 RFHandler_Paired_Status(void);
+     26          //____________________________________________________________________________________________________________
+     27          const RF_HANDLE_OBJECT   RFHandle =
+     28          {
+     29              RFHandler_CreateTask,
+     30              RFHandler_InstrSender,
+     31          };
+     32          const RF_HANDLE_OBJECT *pRFHandle_ObjCtrl = &RFHandle;
+     33          
+     34          typedef struct RF_HANDLE_PARAMETERS
+     35          {
+     36              xTaskHandle TaskHandle;
+     37              uint8 power_handle;
+     38              TaskHandleState taskState;
+     39              xSemaphoreParameters SParams;
+     40              xQueueParameters QParams;
+     41          } xRFHandleParams;
+     42          
+     43          //____________________________________________________________________________________________________________
+     44          /*static variable*/
+     45          static bool mRF_isPairing = FALSE;
+     46          static bool mRF_PairingProcess = FALSE;
+     47          static bool mRF_CheckPaired = FALSE;
+     48          static bool mRF_isPaired = TRUE;
+     49          static xRFHandleParams mRFHandleParams;
+     50          static uint16 RFConnectionFail_counter = 0;
+     51          
+     52          //____________________________________________________________________________________________________________
+     53          static void RFHandler_CreateTask(void)
+     54          {
+     55              if ( xTaskCreate( 
+     56                       RFHandler_ServiceHandle, 
+     57                       ( portCHAR * ) "RF_Handle", 
+     58                       (STACK_SIZE), 
+     59                       NULL, 
+     60                       tskRF_HANDLER_PRIORITY, 
+     61                       &mRFHandleParams.TaskHandle ) != pdPASS )
+     62               {
+     63                   TRACE_ERROR((0, "RF_Handle task create failure " ));
+     64               }
+     65          
+     66              mRFHandleParams.QParams.xQueue = xQueueCreate( RF_QUEUE_LENGTH, FRTOS_SIZE(xRFHandleCommand) );
+     67              mRFHandleParams.QParams.xBlockTime = BLOCK_TIME(0);
+     68          
+     69              if(mRFHandleParams.QParams.xQueue == NULL)
+     70              {
+     71                  TRACE_ERROR((0, "Create RFHandle queue creates failure " ));
+     72              }
+     73          
+     74              xQueueReset(mRFHandleParams.QParams.xQueue);
+     75          
+     76              //mRFHandleParams.power_handle = pPowerHandle_ObjCtrl->register_handle();
+     77          }
+     78          
+     79          
+     80          static bool RFHandler_InstrSender(void * cmds) 
+     81          {
+     82              xRFHandleCommand* pCmd = ( xRFHandleCommand *)cmds;
+     83              
+     84              if(mRFHandleParams.QParams.xQueue == NULL)
+     85              {
+     86                  TRACE_ERROR((0, "RFHandler_InstrSender error !! "));
+     87                  return FALSE;
+     88              }
+     89              else if(xQueueSend(mRFHandleParams.QParams.xQueue,pCmd,mRFHandleParams.QParams.xBlockTime) != pdPASS)
+     90              {
+     91                  TRACE_ERROR((0, " RFHandler_InstrSender send queue is failure "));
+     92                  return FALSE;
+     93              }
+     94              
+     95              return TRUE;
+     96          }
+     97          
+     98          static bool RFHandler_InstrReceiver( xRFHandleCommand *pCmd ) 
+     99          {
+    100              if(pCmd == NULL)
+    101              {
+    102                  TRACE_ERROR((0, " RFHandler_InstrReceiver recevier error !! "));
+    103                  return FALSE;
+    104              } 
+    105              else if(mRFHandleParams.QParams.xQueue == NULL)
+    106              {
+    107                  TRACE_ERROR((0, "RFHandler_InstrReceiver error !! "));
+    108                  return FALSE;
+    109              }    
+    110              else if(xQueueReceive(mRFHandleParams.QParams.xQueue,pCmd,mRFHandleParams.QParams.xBlockTime) != pdPASS)
+    111              {
+    112                  TRACE_ERROR((0, " RFHandler_InstrReceiver receiver queue is failure "));
+    113                  return FALSE;
+    114              }
+    115          
+    116              return TRUE;   
+    117          }
+    118          
+    119          static uint8 RFHandler_GetQueueNumber( void )
+    120          {
+    121              return (uint8)uxQueueMessagesWaiting(mRFHandleParams.QParams.xQueue);
+    122          }
+    123          
+    124          uint8 RFHandler_Paired_Status(void)
+    125          {
+    126          #if 0
+    127              if (mRF_isPaired == TRUE)
+    128              {   
+    129                  return 1;
+    130              }
+    131              return 0;
+    132          #else
+    133              if ( GPIOMiddleLevel_Read_InBit(__O_PAIRING_LED) )
+    134              {
+    135                  return 1;
+    136              }
+    137              else
+    138              {
+    139                  //pUDM_ObjCtrl->ExceptionSendEvent(UI_EVENT_NORMAL);
+    140                  TRACE_DEBUG((0,"RF Module Pairing Fail connection."));
+    141          
+    142                  return 0;
+    143              }
+    144          #endif
+    145          }
+    146          
+    147          static void RFHandler_handleCommand(void *cmds)
+    148          {
+    149              xRFHandleCommand* RFHandleCmd = (xRFHandleCommand*)cmds;
+    150          
+    151              switch(*RFHandleCmd)
+    152              {        
+    153                  case RF_HANDLE_PAIRING_PHASE1:
+    154                  {
+    155                      TRACE_DEBUG((0, " RFHandler_handleCommand :  RF_HANDLE_PAIRING_PHASE1 !! "));
+    156                      GPIOMiddleLevel_Clr(__O_RF_PAIRING);
+    157                      mRF_isPairing = TRUE;
+    158                      mRF_isPaired = FALSE;
+    159          
+    160                      mRF_PairingProcess = TRUE;
+    161                      mRF_CheckPaired = FALSE;
+    162                      RFConnectionFail_counter = 0;
+    163                  }
+    164                  break;
+    165          
+    166                  case RF_HANDLE_PAIRING_PHASE2:
+    167                  {
+    168                      TRACE_DEBUG((0, " RFHandler_handleCommand :  RF_HANDLE_PAIRING_PHASE2 !! "));
+    169          
+    170                      GPIOMiddleLevel_Set(__O_RF_PAIRING);
+    171                      mRF_PairingProcess = FALSE;
+    172                  }
+    173                  break;
+    174          
+    175                  case RF_HANDLE_CHECK:
+    176                  {
+    177                      //TRACE_DEBUG((0, " RFHandler_handleCommand :  RF_HANDLE_CHECK !! "));
+    178                      
+    179                      if ( GPIOMiddleLevel_Read_InBit(__O_PAIRING_LED) )
+    180                      {
+    181                          //TRACE_DEBUG((0,"RF Module RX is connection."));
+    182                          if (mRF_isPaired == FALSE)
+    183                          {
+    184                              pUDM_ObjCtrl->ExceptionSendEvent(UI_EVENT_RF_PAIRED);
+    185                              mRF_isPaired = TRUE;
+    186                          }
+    187                          RFConnectionFail_counter = 0;
+    188          
+    189                          mRF_isPairing = FALSE;
+    190                          mRF_CheckPaired = FALSE;
+    191                      }
+    192                      else
+    193                      {
+    194                          RFConnectionFail_counter++;
+    195                          
+    196                          //TRACE_DEBUG((0,"RF Module Pairing waiting."));
+    197                          
+    198                          if (RFConnectionFail_counter >= 300 )  //60s
+    199                          {
+    200                              pUDM_ObjCtrl->ExceptionSendEvent(UI_EVENT_NORMAL);
+    201                              RFConnectionFail_counter = 0;
+    202          
+    203                              mRF_isPairing = FALSE;
+    204                              mRF_CheckPaired = FALSE;
+    205                              TRACE_DEBUG((0,"RF Module Pairing Fail connection."));
+    206                          }
+    207                      }
+    208                  }
+    209                  break;
+    210              }
+    211              
+    212              mRFHandleParams.taskState =  TASK_SUSPENDED;                
+    213          }
+    214          
+    215          
+    216          static void RFHandler_ServiceHandle( void *pvParameters )
+    217          {
+    218              xRFHandleCommand RFHandleCmd;
+    219              uint32 RFCheckingCounter = 0;
+    220              uint32 RFPairingCounter = 0;
+    221              xRFHandleCommand mRFHandleCommand;
+    222              
+    223              for(;;)
+    224              {
+    225                  switch(mRFHandleParams.taskState)
+    226                  {
+    227                      case TASK_SUSPENDED:
+    228                      {
+    229                          if( mRF_isPairing == TRUE )
+    230                          {
+    231                              if(mRF_CheckPaired == TRUE )
+    232                              {  
+    233                                  RFCheckingCounter++;
+    234                                  
+    235                                  if ( RFCheckingCounter >= 20 )    /*every 220 msec: Suspended 200ms, Ready 10ms and Running 10ms */
+    236                                  {
+    237                                      mRFHandleCommand = RF_HANDLE_CHECK;
+    238                                      pRFHandle_ObjCtrl->rf_instr_sender(&mRFHandleCommand);
+    239                                  
+    240                                      RFCheckingCounter = 0;
+    241                                  }
+    242                              }
+    243                              else
+    244                              {
+    245                                  RFPairingCounter++;             
+    246                                  if ( RFPairingCounter >= 100 )
+    247                                  {
+    248                                      mRFHandleCommand = RF_HANDLE_PAIRING_PHASE2;
+    249                                      pRFHandle_ObjCtrl->rf_instr_sender(&mRFHandleCommand);
+    250          
+    251                                      RFPairingCounter = 0;
+    252                                      RFCheckingCounter = 0;
+    253                                      mRF_CheckPaired = TRUE;
+    254                                  }
+    255                              }
+    256                          }
+    257                           
+    258                          if( RFHandler_GetQueueNumber() != 0 )
+    259                          {
+    260                              mRFHandleParams.taskState = TASK_READY;
+    261                          } 
+    262                      }
+    263                      break;
+    264          
+    265                      case TASK_READY:
+    266                      {
+    267                          if( xTaskIsTaskSuspended( mRFHandleParams.TaskHandle ) == pdPASS ) /*task is not working*/
+    268                          {
+    269                              mRFHandleParams.taskState =  TASK_SUSPENDED;                
+    270                          }
+    271                          else
+    272                          {
+    273                              if( RFHandler_GetQueueNumber() != 0 )
+    274                              {
+    275                                  if ( RFHandler_InstrReceiver( &RFHandleCmd ) == TRUE )
+    276                                  {
+    277                                      /* Ignore all event if system is NOT in power on stage or RF pairing process does NOT complete. */
+    278                                      if(pPowerHandle_ObjCtrl->get_power_state() == POWER_ON)
+    279                                      {
+    280                                          if(mRF_PairingProcess)
+    281                                          {
+    282                                              if(RFHandleCmd == RF_HANDLE_PAIRING_PHASE2)
+    283                                              {
+    284                                                  mRFHandleParams.taskState = TASK_RUNING;
+    285                                              }
+    286                                              else
+    287                                              {
+    288                                                  mRFHandleParams.taskState = TASK_SUSPENDED;
+    289                                              }             
+    290                                          }
+    291                                          else
+    292                                          {
+    293                                              mRFHandleParams.taskState = TASK_RUNING;
+    294                                          }
+    295                                      }
+    296                                      else
+    297                                      {
+    298                                          mRFHandleParams.taskState = TASK_SUSPENDED;
+    299                                          //TRACE_DEBUG((0, "RFHandler: Back to SUSPENDEDS. Cause system are not be powered up or RF pairing is still processing."));
+    300                                      }
+    301                                  }
+    302                                  else
+    303                                  {
+    304                                      mRFHandleParams.taskState = TASK_SUSPENDED;
+    305                                  }
+    306                              }
+    307                              else
+    308                              {
+    309                                  mRFHandleParams.taskState =  TASK_SUSPENDED;      
+    310                              }
+    311                          }
+    312                      }
+    313                      break;
+    314          
+    315                      case TASK_RUNING:
+    316                      {
+    317                          if( xTaskIsTaskSuspended( mRFHandleParams.TaskHandle ) == pdPASS ) /*task is not working*/
+    318                          {
+    319                              mRFHandleParams.taskState =  TASK_SUSPENDED;                
+    320                          }
+    321                          else
+    322                          {
+    323                              RFHandler_handleCommand((xRFHandleCommand*)&RFHandleCmd);
+    324                          }
+    325                      }
+    326                      break;
+    327                  }
+    328                  vTaskDelay( TASK_MSEC2TICKS(10) );
+    329              }
+    330          }
+    331          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       24  RFHandler_CreateTask
+             24 -> Debug_printError
+             24 -> xQueueGenericCreate
+              0 -> xQueueGenericReset
+             24 -> xTaskGenericCreate
+        8  RFHandler_InstrSender
+              8 -> Debug_printError
+              8 -> xQueueGenericSend
+        8  RFHandler_Paired_Status
+              8 -> Debug_printDebug
+              8 -> GPIOMiddleLevel_Read_InBit
+       40  RFHandler_ServiceHandle
+             40 -- Indirect call
+             40 -> Debug_printDebug
+             40 -> Debug_printError
+             40 -> GPIOMiddleLevel_Clr
+             40 -> GPIOMiddleLevel_Read_InBit
+             40 -> GPIOMiddleLevel_Set
+             40 -> uxQueueMessagesWaiting
+             40 -> vTaskDelay
+             40 -> xQueueGenericReceive
+             40 -> xTaskIsTaskSuspended
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      52  ?<Constant " RFHandler_InstrRecei...">
+      48  ?<Constant " RFHandler_InstrSende...">
+      60  ?<Constant " RFHandler_handleComm...">
+      60  ?<Constant " RFHandler_handleComm...">_1
+      40  ?<Constant "Create RFHandle queue...">
+      36  ?<Constant "RF Module Pairing Fai...">
+      36  ?<Constant "RFHandler_InstrReceiv...">
+      32  ?<Constant "RFHandler_InstrSender...">
+      32  ?<Constant "RF_Handle task create...">
+      12  ?<Constant "RF_Handle">
+       4  ??DataTable13
+       4  ??DataTable13_1
+       4  ??DataTable13_2
+       4  ??DataTable13_3
+      10  ?Subroutine0
+       8  RFHandle
+      86  RFHandler_CreateTask
+      44  RFHandler_InstrSender
+      26  RFHandler_Paired_Status
+     360  RFHandler_ServiceHandle
+      32  mRFHandleParams
+      12  mRF_isPairing
+          mRF_PairingProcess
+          mRF_CheckPaired
+          mRF_isPaired
+          RFConnectionFail_counter
+          pRFHandle_ObjCtrl
+
+ 
+  32 bytes in section .bss
+  12 bytes in section .data
+   8 bytes in section .rodata
+ 950 bytes in section .text
+ 
+ 950 bytes of CODE  memory
+   8 bytes of CONST memory
+  44 bytes of DATA  memory
+
+Errors: none
+Warnings: 1

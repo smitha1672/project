@@ -1,0 +1,893 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:14 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\application\sk_app_tv.c #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\application\sk_app_tv.c #
+#                     -D S4051A -D DEBUG -D FREE_RTOS -D STM32F40_41xxx -D    #
+#                    USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D             #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\sk_app_tv.lst                                         #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\sk_app_tv.o                                            #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\application\sk_app_tv.c
+      1          //***************************************************************************
+      2          //!file     sk_app_tv.c
+      3          //!brief    SK 9535 Starter Kit firmware TV emulation
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2010-2012, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include "sk_application.h"
+     14          #include "si_platform.h"
+     15          #include "si_gpio.h"
+     16          
+     17          #include "si_drv_device.h"
+     18          #include "si_tx_component.h"  // Bug 33568 - On Remote Control, press audioi mute button, mutes both audio and video.
+     19          
+     20          #if INC_CEC
+     21          #include "si_cec_component.h"
+     22          #endif
+     23          
+     24          #if INC_CBUS
+     25          #include "sk_app_cbus.h"
+     26          #endif
+     27          
+     28          #if INC_IPV
+     29          #include "si_ipv_component.h"
+     30          #endif
+     31          
+     32          extern SiiTimer_t testTimer;       	// used in wake-up detection by switching between instances
+     33          
+     34          //------------------------------------------------------------------------------
+     35          // Module data
+     36          //------------------------------------------------------------------------------
+     37          
+     38          static uint16_t l_autoSwitchDelaysMs [8] =
+     39          {
+     40              5000, 10000, 15000, 20000, 30000, 45000, 60000, 3000
+     41          };
+     42          
+     43          static char *pCcHelp [] =
+     44          {
+     45              tenDashes,
+     46          #if ( configSII_DEV_9535 == 1 )
+     47              "1-4   - Select HDMI/MHL Input 1 - 4",
+     48          #else
+     49              "1-3   - Select HDMI/MHL Input 1 - 3",
+     50          #endif
+     51              "8     - Select Internal Video Source / Change pattern",
+     52              "MUTE  - Blank Video and Audio",
+     53              "GUIDE - Open Text based Menu",
+     54              "MENU   - Open / Close OSD menu",
+     55              "QUIT   - Cancel mode",
+     56              "INPUT  - Select Input via InstaPrevue menu",
+     57              "ENTER  - Change to selected Input",
+     58              "PIP    - PIP with selected source ON/OFF",
+     59              "CHAN+  - InstaPrevue ALL/ACTIVE",
+     60              "CHAN-  - InstaPrevue layout change",
+     61              "LT/RT  - Change Zone source / InstaPrevue selection / PIP source",
+     62              "UP/DWN - Change Zone source / InstaPrevue selection / PIP source",
+     63              NULL
+     64          };
+     65          
+     66          #if 0
+     67          //------------------------------------------------------------------------------
+     68          //! @brief      Handles Remote Control keys for System Audio Control
+     69          //! @param[in]  key - RC5 key code
+     70          //! @return     true if key was consumed
+     71          //------------------------------------------------------------------------------
+     72          static bool_t AvrRcSacKeyHandler ( RC5Commands_t key )
+     73          {
+     74              uint8_t ceaKey;
+     75              bool_t  keyUsed = false;
+     76          
+     77              switch ( key )
+     78              {
+     79                  case RC5_MUTE:
+     80                  case RC5_VOL_UP:
+     81                  case RC5_VOL_DOWN:
+     82                      ceaKey = SkAppIrConvertToCea931( key );
+     83          
+     84                      // Convert the key to CEA931 and process it locally.
+     85          #if INC_CEC_SAC
+     86                      if ( SkAppAudioProcessSacCommand( ceaKey ))
+     87                      {
+     88          #if INC_OSD
+     89                          // Display the results locally
+     90                          SkAppOsdVolumeControl( key );
+     91          #endif
+     92                      }
+     93                      else
+     94          #endif
+     95                      {
+     96          #if INC_CEC
+     97                          // Send to the DTV
+     98                          SkAppCecInstanceSet( CEC_INSTANCE_AVR );
+     99                          SiiCecSendUserControlPressed( ceaKey, SiiCecGetDeviceLA(), CEC_LOGADDR_TV );
+    100          #endif
+    101                      }
+    102                      keyUsed = true;
+    103                      break;
+    104                  default:
+    105                      break;
+    106              }
+    107          
+    108              return( keyUsed );
+    109          }
+    110          #endif
+    111          //------------------------------------------------------------------------------
+    112          // Function:    SkAppTvIrRemote
+    113          // Description: Parse remote control keys for the TV application.
+    114          // Parameters:  fullAccess - true if allowed to respond to all normal keys
+    115          //                           false if only allowed to respond to power keys
+    116          // Returns:     none
+    117          //------------------------------------------------------------------------------
+    118          void SkAppTvIrRemote ( RC5Commands_t key, bool_t fullAccess )
+    119          {
+    120              bool_t  isForward = true;
+    121              bool_t  isZoneTrackingEnabled = false;
+    122          #if INC_OSD
+    123              char    tempMsg[40];
+    124          #endif
+    125          
+    126              while ( fullAccess )
+    127              {
+    128                  // Handle System Audio Control keys
+    129          //        if ( AvrRcSacKeyHandler( key ))
+    130          //        {
+    131          //            break;
+    132          //        }
+    133          
+    134          #if INC_OSD
+    135                  // If the OSD uses the key, we're done
+    136                  if ( SkAppOsdIrRemote( key, fullAccess ))
+    137                  {
+    138                      break;
+    139                  }
+    140          #endif
+    141          
+    142                  // Now handle TV action keys
+    143                  switch ( key )
+    144                  {
+    145                      case RC5_0:
+    146                          app.currentZone = 0;//(app.currentZone == 0) ? 1 : 0;
+    147                          //SiiSprintf( tempMsg, "Select Zone %d\n", app.currentZone + 1 );
+    148                          //DEBUG_PRINT( MSG_ALWAYS, tempMsg );
+    149          #if INC_OSD
+    150                          //SkAppOsdmessage( "Info", tempMsg, 3000 );
+    151          #endif
+    152                          break;
+    153          
+    154                      case RC5_1:
+    155                      case RC5_2:
+    156                      case RC5_3:
+    157          #if ( configSII_DEV_9535 == 1 )
+    158                      case RC5_4:
+    159          #endif
+    160          #if INC_IPV
+    161                          if ( !app.ipvEnabled && !app.ipvPipEnabled )
+    162          #endif
+    163                          {
+    164                              app.newSource[app.currentZone] = key - RC5_1;
+    165                              app.newAudioSource[app.currentZone] = SiiSwitchAudioSourceDefault;
+    166                              SiiOsTimerSet( &testTimer, 10000);
+    167                          }
+    168                          break;
+    169          //            case RC5_7:
+    170          //                // Toggle Zone 1 Enable status
+    171          //                app.newZoneEnabled[0] = !app.zoneEnabled[0];
+    172          //#if INC_OSD
+    173          //                SiiSprintf( tempMsg, "Zone 1 %s", app.newZoneEnabled[0] ? "Enabled" : "Disabled ");
+    174          //                SkAppOsdmessage( "Info", tempMsg, 3000 );
+    175          //#endif
+    176          //                break;
+    177          
+    178                      case RC5_8:
+    179                          // Select internal video source
+    180                          if (app.currentSource[app.currentZone] != SiiSwitchSourceInternalVideo)
+    181                          {
+    182                              //app.currentZone = 1;
+    183                              app.newSource[app.currentZone] = SiiSwitchSourceInternalVideo;
+    184                              app.newAudioSource[app.currentZone] = SiiSwitchAudioSourceDefault;
+    185                              app.currentAudioType[app.currentZone] = SI_TX_AUDIO_SRC_SPDIF;
+    186                              app.tpgVideoPattern = SI_ETPG_PATTERN_COLORBAR;
+    187                              app.tpgVideoFormat = SI_TPG_FMT_VID_480_60;
+    188                              app.tpgClockSrc = SI_TPG_CLK_XCLK;
+    189                              app.isExtTpg=true;
+    190          
+    191          #if INC_IPV
+    192                              app.ipvPipEnabled = false;
+    193                              SkAppIpvDisableInstaPrevue();
+    194          #endif
+    195                              PrintAlways( "IV On\n" );
+    196                          }
+    197                          else
+    198                          {
+    199                              // Repeated TPG selection results in pattern change
+    200                              if (app.tpgVideoPattern < SI_ETPG_PATTERN_COLORBAR)
+    201                              {
+    202                                  app.tpgVideoPattern++;
+    203                              }
+    204                              else
+    205                              {
+    206                                  app.tpgVideoPattern = SI_ETPG_PATTERN_RED;
+    207                              }
+    208                              SiiDrvExtTpgPatternSet(app.tpgVideoPattern);
+    209                              PrintAlways( "IV Pattern changed.\n" );
+    210                          }
+    211                          break;
+    212          
+    213                      case RC5_GUIDE:
+    214                          // Toggle zone tracking mode
+    215                         // SiiDrvSwitchZoneTrackingSet(isZoneTrackingEnabled = !SiiDrvSwitchZoneTrackingGet());
+    216                       //   SiiSprintf( tempMsg, "Zone Source: %s\n", isZoneTrackingEnabled ? "SINGLE" : "DUAL");
+    217                          //DEBUG_PRINT( MSG_ALWAYS, "\n\nGUIDE PRESSED\n" );
+    218          #if INC_OSD
+    219                          strcpy(tempMsg, "GUIDE Key Pressed");
+    220                          SkAppOsdmessage( "Info", tempMsg, 3000 );
+    221          #endif
+    222                          break;
+    223          
+    224                      case RC5_STOP:
+    225          #if INC_IPV
+    226                          if (!app.ipvPipEnabled && !app.ipvEnabled)
+    227          #endif
+    228                          {
+    229                              // Cancel everything
+    230                              app.currentZone = 0;
+    231                              // Switch to input 0 or any available, if port 0 is not connected
+    232                              app.newSource[0] = app.newSource[1] = SkAppSwitchGetNextPort( 1, false );
+    233                              app.newAudioSource[1] = app.newAudioSource[0] = SiiSwitchAudioSourceDefault;
+    234                              SiiDrvSwitchZoneTrackingSet(isZoneTrackingEnabled = true);
+    235                              PrintAlways( "Reset UI\n" );
+    236          #if INC_OSD
+    237                              SkAppOsdmessage( "Info", "Reset UI", 3000 );
+    238          #endif
+    239                          }
+    240                          break;
+    241          
+    242                      case RC5_INFO:
+    243          #if INC_OSD
+    244                          SkAppOsdShowInfo();
+    245          #endif
+    246                          break;
+    247          
+    248                      case RC5_QUIT:
+    249          #if INC_IPV
+    250                          if (app.ipvPipEnabled)
+    251                          {
+    252                              SkAppIpvEnable(false);
+    253                              app.ipvPipEnabled = false;
+    254                          }
+    255          
+    256                          if (app.ipvEnabled)
+    257                          {
+    258                              SkAppIpvDisableInstaPrevue();
+    259                          }
+    260          #endif
+    261                          break;
+    262          
+    263                      case RC5_CURSOR_LEFT:
+    264                          isForward = false;
+    265                      case RC5_CURSOR_RIGHT:
+    266          #if INC_IPV
+    267                          if ( app.ipvEnabled )
+    268                          {
+    269                              // Change selection
+    270                              SkAppIpvCycleInstaPrevueWindows(isForward);
+    271                          }
+    272                          else if (app.ipvPipEnabled)
+    273                          {
+    274                              // Switch to PIP source
+    275                              app.newSource[0] = app.pipSource;
+    276                              SkAppIpvDisableInstaPrevue();
+    277                          }
+    278                          else
+    279          #endif
+    280                          {
+    281                              app.newSource[0] = SkAppSwitchGetNextPort( app.currentSource[0], isForward );
+    282                              app.newAudioSource[0] = SiiSwitchAudioSourceDefault;
+    283                              DEBUG_PRINT( MSG_ALWAYS, "ZONE SRC: %d\n", app.newSource[0]);
+    284                              SiiOsTimerSet( &testTimer, 10000);
+    285                          }
+    286                          break;
+    287          
+    288                      case RC5_CURSOR_DOWN:
+    289                          isForward = false;
+    290                      case RC5_CURSOR_UP:
+    291          #if INC_IPV
+    292                          if ( app.ipvEnabled )
+    293                          {
+    294                              // Change selection
+    295                              SkAppIpvCycleInstaPrevueWindows(!isForward);
+    296                          }
+    297                          else if (app.ipvPipEnabled)
+    298                          {
+    299                              // Change PIP source
+    300                              app.pipSource = SkAppSwitchGetNextPort( app.pipSource, isForward );
+    301                              // PIP source cannot be the same as main pipe.
+    302                              if ( app.pipSource == app.currentSource[0] )
+    303                              {
+    304                                  app.pipSource = SkAppSwitchGetNextPort( app.pipSource, isForward );
+    305                              }
+    306                              //SkAppIpvEnable( false );
+    307                              SkAppIpvPipModeEnable( app.pipSource );
+    308                          }
+    309                          else
+    310          #endif
+    311                          {
+    312                              app.newSource[0] = SkAppSwitchGetNextPort( app.currentSource[0], isForward );
+    313                              app.newAudioSource[0] = SiiSwitchAudioSourceDefault;
+    314                              DEBUG_PRINT( MSG_ALWAYS, "ZONE SRC: %d\n", app.newSource[0]);
+    315                              SiiOsTimerSet( &testTimer, 10000);
+    316                          }
+    317                          break;
+    318          
+    319                      case RC5_PIP:
+    320          #if INC_IPV
+    321                          if ( app.ipvPipEnabled )
+    322                          {
+    323                              SkAppIpvEnable( false );
+    324                              app.ipvPipEnabled = false;
+    325                              app.ipvEnabled = false;
+    326                          }
+    327                          else
+    328                          {
+    329                              if ( app.ipvEnabled )
+    330                              {
+    331                                  // Switch to port highlighted in InstaPrevue
+    332                                  app.pipSource = SiiIpvHighlightPortGet( app.currentSource[0], app.ipvHighlightWindow );
+    333                              }
+    334                              else
+    335                              {
+    336                              	app.pipSource = SkAppSwitchGetNextPort( SiiDrvSwitchStateGet(SiiSwitch_SELECTED_PORT), true );
+    337                              }
+    338          
+    339                              //SkAppIpvEnable( false );
+    340          
+    341                              if ( SkAppIpvPipModeEnable( app.pipSource ))
+    342                              {
+    343                                  app.ipvPipEnabled = true;
+    344                                  app.ipvEnabled = false;
+    345                              }
+    346                          }
+    347                          break;
+    348          
+    349                      case RC5_CH_PLUS:
+    350                          if ( app.ipvEnabled && !app.ipvPipEnabled )
+    351                          {
+    352                              app.ipvMode = (app.ipvMode == SiiIpvModeACTIVE) ? SiiIpvModeALL : SiiIpvModeACTIVE;
+    353                              if ( SkAppIpvEnable( false ))
+    354                              {
+    355                                  SiiIpvModeSet( app.ipvMode );
+    356                                  SkAppIpvEnable( true );
+    357                              }
+    358                          }
+    359                          break;
+    360          
+    361                      case RC5_CH_MINUS:
+    362                          if ( app.ipvEnabled && !app.ipvPipEnabled )
+    363                          {
+    364                              if ( SkAppIpvEnable( false ))
+    365                              {
+    366                                  app.ipvTheme++;
+    367                                  if ( app.ipvTheme >= SiiIpvPIP )
+    368                                  {
+    369                                      app.ipvTheme = 0;
+    370                                  }
+    371                                  SiiIpvThemeSet( app.ipvTheme );
+    372                                  SkAppIpvEnable( true );
+    373                                  app.ipvHighlightWindow = SiiIpvHighlightWindow( app.ipvHighlightWindow, true );
+    374                              }
+    375                          }
+    376                          break;
+    377          #endif//#if INC_IPV
+    378          
+    379                      case RC5_INPUT:
+    380                          // When we allow InstaPrevue AND we are displaying an HDMI source,
+    381                          // the INPUT key shows the preview windows
+    382          #if INC_IPV
+    383                          if ((app.ipvAllowed) && ( app.currentSource[0] < SiiSwitchSourceInternalVideo))
+    384                          {
+    385          
+    386                              SkAppIpvCycleInstaPrevueWindows(true);
+    387                          }
+    388                          // Otherwise, use OSD
+    389                          else
+    390          #endif
+    391                          {
+    392          #if INC_OSD
+    393                              SkAppOsdPortSelect();
+    394          #endif
+    395                          }
+    396                          break;
+    397          
+    398          #if INC_IPV
+    399                      case RC5_ENTER:
+    400                          if ( app.ipvPipEnabled )
+    401                          {
+    402                              app.newSource[app.currentZone] = app.pipSource;
+    403                              app.pipSource = app.currentSource[app.currentZone];
+    404                              app.newAudioSource[app.currentZone] = SiiSwitchAudioSourceDefault;
+    405          
+    406                              SkAppIpvEnable( false );
+    407                              app.ipvPipEnabled = false;
+    408                              app.ipvEnabled = false;
+    409                          }
+    410                          else if ( app.ipvEnabled )
+    411                          {
+    412                              // Switch to port highlighted in InstaPrevue.  If no port highlighted,
+    413                              // ignore the request.  The user will have to move to an active window
+    414                              // or cancel (quit).
+    415                              if ( app.ipvHighlightWindow != -1 )
+    416                              {
+    417                                  app.newSource[0] = app.newSource[1] = SiiIpvHighlightPortGet(app.currentSource[0], app.ipvHighlightWindow );
+    418                                  app.newAudioSource[0] = app.newAudioSource[1] = SiiSwitchAudioSourceDefault;
+    419                                  SkAppIpvDisableInstaPrevue();
+    420                              }
+    421                          }
+    422                          break;
+    423          #endif//#if INC_IPV
+    424                      case RC5_MUTE:
+    425                          // Bug 33568 - On Remote Control, press audioi mute button, mutes both audio and video.
+    426                      	if(app.muteON)
+    427                      	{
+    428                      		app.muteON=false;
+    429                      		//DemoTpgModeEnable( false );
+    430                      		SiiTxInputAudioUnmute();
+    431                              app.newAudioSource[app.currentZone] = SiiSwitchAudioSourceDefault;
+    432                      	}
+    433                      	else
+    434                      	{
+    435                      		app.muteON=true;
+    436                              SiiTxInputAudioMute();
+    437                              app.newAudioSource[app.currentZone] = SiiSwitchAudioSourceCount;
+    438                              //app.isExtTpg=true;
+    439                              //app.tpgVideoPattern= SI_ETPG_PATTERN_BLACK;
+    440          
+    441                              //DemoTpgModeEnable( true );
+    442                      	}
+    443                          // Select Internal video source
+    444                          //app.newSource[app.currentZone] = SiiSwitchSourceInternalVideo;
+    445                          //app.newAudioSource[app.currentZone] = SiiSwitchAudioSourceDefault;
+    446                          DEBUG_PRINT( MSG_ALWAYS, "Audio  %s\n", (app.muteON ? "Muted":"Unmuted"));
+    447                          break;
+    448          
+    449          #if (PHILIPS_REMOTE == 1)
+    450                  case RC5_CC_SUBTITLE:
+    451          #else
+    452                  case RC5_HELP:
+    453          #endif
+    454                          SkAppIrRemoteReturnToTV();
+    455                          PrintMenu( pCcHelp );
+    456                          break;
+    457          
+    458                      default:
+    459                      {
+    460          #if INC_CEC
+    461                          uint8_t ceaKey = SkAppIrConvertToCea931( key );
+    462                          if ( ceaKey != 0xFF )
+    463                          {
+    464                              // If the specified port is HDMI, send the CEC key to it
+    465                              if ( app.currentSource[app.currentZone] < SiiSwitchSourceInternalVideo)
+    466                              {
+    467                                  SkAppCecInstanceSet( CEC_INSTANCE_AVR );
+    468                                  SiiCecSendUserControlPressed( ceaKey, SiiCecGetDeviceLA(), CEC_LOGADDR_TV );
+    469                              }
+    470                          }
+    471          #endif
+    472          
+    473          #if INC_CEC && INC_CBUS
+    474                          SkAppCbusSendRcKey( key );
+    475          #endif
+    476                          break;
+    477                      }
+    478                  }
+    479                  break;  // Always break;
+    480              }
+    481          }
+    482          
+    483          //------------------------------------------------------------------------------
+    484          // Function:    SkAppTv
+    485          // Description: CP 953x TV emulation control
+    486          //------------------------------------------------------------------------------
+    487          void SkAppTv ( void )
+    488          {
+    489              uint16_t counter = 0;
+    490          
+    491              if (!SiiOsTimerExpired(app.appTimer))
+    492              {
+    493                  return;
+    494              }
+    495              SiiOsTimerSet(&app.appTimer, DEM_POLLING_DELAY); // Reset poll timer
+    496              counter++;
+    497          
+    498              // Check the UI here rather than in the main loop because we don't need
+    499              // to check it at such a high rate, and besides, if the user changed the
+    500              // rotary switch between polling delays, the next time it was checked
+    501              // it would report unchanged - you have only one chance to get the changed value.
+    502              SkAppUiUpdate();
+    503          
+    504          #if ( configSII_DEV_953x_PORTING == 0 )
+    505              /****************************************************************************************/
+    506              /* Display Port Processor State                                                         */
+    507              /****************************************************************************************/
+    508              SkAppInstaPortLedUpdate(SiiDrvDeviceInfo(SiiDEV_SELECTED_PORT_BITFIELD));
+    509          #endif
+    510          
+    511              /****************************************************************************************/
+    512              /* Rotary Switch handling                                                               */
+    513              /****************************************************************************************/
+    514          
+    515              if ( app.autoSwitch )
+    516              {
+    517                  uint8_t tempPort = SiiPlatformReadRotary(true);
+    518          
+    519                  if (SiiOsTimerExpired(app.autoSwitchTimer))
+    520                  {
+    521                      SiiOsTimerSet(&app.autoSwitchTimer, l_autoSwitchDelaysMs[tempPort]);
+    522          
+    523                      // Auto-switch zone 1 only
+    524                      app.newSource[0] = SkAppSwitchGetNextPort(app.newSource[0], true);
+    525                  }
+    526              }
+    527              else if ((app.rotarySwitch != RSW_NO_CHANGE) && !app.rotaryDisabled )
+    528              {
+    529                  app.lastRotarySwitch = app.rotarySwitch;
+    530                  //  Switch positions 0-3, select new active port on SiI9535
+    531          
+    532                  if (app.rotarySwitch < SII_INPUT_PORT_COUNT)
+    533                  {
+    534          #if INC_IPV
+    535                      if ( app.ipvEnabled )
+    536                      {
+    537                          // Change selection
+    538                          SkAppIpvCycleInstaPrevueWindows(true);
+    539                      }
+    540                      else
+    541          #endif
+    542                      {
+    543                          // The rotary switch always controls zone 2 only in matrix mode
+    544                          // RC controls zone 1 by default
+    545                          app.newSource[SiiDrvSwitchZoneTrackingGet() ? 0 : 1] = app.rotarySwitch;
+    546                      }
+    547                  }
+    548              }
+    549          }
+    550          
+    551          //___________________________AMTRAN IMPLEMENTED__________________________________________
+    552          void SkAppTv_AMT_RxPortSelect( uint8_t input_path )
+    553          {
+    554          #if ( configSII_DEV_953x_PORTING == 1 )
+    555          	if ( input_path < SII_INPUT_PORT_COUNT )
+    556          	{
+    557          		app.rotarySwitch = input_path;
+    558          	}
+    559          #endif 	
+    560          }
+    561          
+    562          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       16  SkAppTv
+             16 -> SiiDrvSwitchZoneTrackingGet
+             16 -> SiiOsTimerExpired
+             16 -> SiiOsTimerSet
+             16 -> SiiPlatformReadRotary
+              0 -> SkAppIpvCycleInstaPrevueWindows
+             16 -> SkAppSwitchGetNextPort
+             16 -> SkAppUiUpdate
+       32  SkAppTvIrRemote
+              0 -> PrintAlways
+              0 -> PrintMenu
+             32 -> SiiCecGetDeviceLA
+             32 -> SiiCecSendUserControlPressed
+             32 -> SiiDrvExtTpgPatternSet
+             32 -> SiiDrvSwitchStateGet
+             32 -> SiiDrvSwitchZoneTrackingSet
+             32 -> SiiIpvHighlightPortGet
+             32 -> SiiIpvHighlightWindow
+             32 -> SiiIpvModeSet
+             32 -> SiiIpvThemeSet
+              0 -> SiiOsTimerSet
+             32 -> SiiTxInputAudioMute
+             32 -> SiiTxInputAudioUnmute
+              0 -> SkAppCbusSendRcKey
+             32 -> SkAppCecInstanceSet
+              0 -> SkAppIpvCycleInstaPrevueWindows
+              0 -> SkAppIpvDisableInstaPrevue
+             32 -> SkAppIpvDisableInstaPrevue
+              0 -> SkAppIpvEnable
+             32 -> SkAppIpvEnable
+              0 -> SkAppIpvPipModeEnable
+             32 -> SkAppIpvPipModeEnable
+             32 -> SkAppIrConvertToCea931
+             32 -> SkAppIrRemoteReturnToTV
+             32 -> SkAppSwitchGetNextPort
+        0  SkAppTv_AMT_RxPortSelect
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      36  ?<Constant "1-3   - Select HDMI/M...">
+      56  ?<Constant "8     - Select Intern...">
+      32  ?<Constant "CHAN+  - InstaPrevue ...">
+      36  ?<Constant "CHAN-  - InstaPrevue ...">
+      36  ?<Constant "ENTER  - Change to se...">
+      32  ?<Constant "GUIDE - Open Text bas...">
+      44  ?<Constant "INPUT  - Select Input...">
+       8  ?<Constant "IV On\n">
+      24  ?<Constant "IV Pattern changed.\n">
+      68  ?<Constant "LT/RT  - Change Zone ...">
+      32  ?<Constant "MENU   - Open / Close...">
+      32  ?<Constant "MUTE  - Blank Video a...">
+      44  ?<Constant "PIP    - PIP with sel...">
+      24  ?<Constant "QUIT   - Cancel mode">
+      12  ?<Constant "Reset UI\n">
+      68  ?<Constant "UP/DWN - Change Zone ...">
+       4  ??DataTable18
+       4  ??DataTable18_1
+       4  ??DataTable18_2
+       4  ??DataTable18_3
+      16  ?Subroutine0
+     142  SkAppTv
+     826  SkAppTvIrRemote
+      12  SkAppTv_AMT_RxPortSelect
+      16  l_autoSwitchDelaysMs
+      60  pCcHelp
+
+ 
+    76 bytes in section .data
+   540 bytes in section .rodata
+ 1 056 bytes in section .text
+ 
+ 1 056 bytes of CODE  memory
+   540 bytes of CONST memory
+    76 bytes of DATA  memory
+
+Errors: none
+Warnings: 16

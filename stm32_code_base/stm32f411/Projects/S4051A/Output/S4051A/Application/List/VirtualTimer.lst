@@ -1,0 +1,694 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:25:47 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\APP_SRC\SERVICES\VirtualTimer.c       #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\APP_SRC\SERVICES\VirtualTimer.c -D    #
+#                    S4051A -D DEBUG -D FREE_RTOS -D STM32F40_41xxx -D        #
+#                    USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D             #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\VirtualTimer.lst                                      #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\VirtualTimer.o                                         #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Projects\S4051A\APP_SRC\SERVICES\VirtualTimer.c
+      1          #include "FreeRTOSConfig.h"
+      2          #include "freertos_conf.h"
+      3          #include "VirtualTimer.h"
+      4          //_________________________________________________________________________
+      5          #define TIME_BASE	TIM3
+      6          #define TIME_BASE_IRQ	TIM3_IRQn
+      7          #define TIME_BASE_CLK	RCC_APB1Periph_TIM3
+      8          #define VirtualTimer_ISP	TIM3_IRQHandler
+      9          #define configTACE_VIRTUAL_TIMER 0
+     10          
+     11          
+     12          /*----------------------- Private Member Definitions ------------------------ */
+     13          
+     14          #if ( configRTOS_DEBUG == 1 )
+     15          xTaskHandle current_task;
+     16          char taskname[100];
+     17          #endif 
+     18          
+     19          
+     20          /*@{*/
+     21          
+     22          
+     23          
+     24          #if defined( VIRTUAL_TIMER_PROC )
+     25          /**
+     26           *  timer event queue
+     27           */
+     28          static struct
+     29          {
+     30              uint32                  deadline; /**< timer value event is called at */
+     31              uint32                  period;   /**< period at which the event will */
+     32              /**< be repeated                    */
+     33              VirtualTimer_callback   callback; /**< pointer to callback function   */
+     34              void                   *data;     /**< pointer to data to pass        */
+     35              /**< callback                       */
+     36              VirtualTimer_flags      flags;    /**< flags                          */
+     37          
+     38          } m_eventQueue[VIRTUAL_TIMER_MAX_EVENTS];
+     39          #endif 
+     40          
+     41          /**
+     42           *  the system timer variable
+     43           */
+     44          static volatile uint32 m_now = 0;
+     45          
+     46          /**
+     47           *  sleep timer counter
+     48           */
+     49          static volatile uint32 m_sleep = 0;
+     50          
+     51          
+     52          /**
+     53           *  sleep timer counter
+     54           */
+     55          static volatile uint32 m_virtual_sec = 0;
+     56          
+     57          /*@}*/
+     58          
+     59          /*------------------------ Private Member Definitions ---------------------- */
+     60          
+     61          /**
+     62           *  timer ISP that gets called each tick and scans the event list for checking
+     63           *  events to execute
+     64           */
+     65          void VirtualTimer_ISP(void)
+     66          {
+     67          
+     68          #if defined ( VIRTUAL_TIMER_PROC )
+     69          	uint8 i;
+     70          #endif 
+     71          
+     72          #if ( configRTOS_DEBUG == 1 )
+     73          	current_task = xTaskGetCurrentTaskHandle();
+     74          	sprintf( taskname, "%s", pcTaskGetTaskName( current_task ));
+     75          #endif 	
+     76          
+     77          
+     78          	if (TIM_GetITStatus(TIME_BASE, TIM_IT_Update) != RESET)
+     79          	{
+     80          		/* Increment time */
+     81          		m_now++;
+     82          
+     83          		/*Increment time for one second */
+     84          		if ( (m_now % VIRTUAL_TIMER_MSEC2TICKS(1000)) == 0 )
+     85          		{
+     86          			m_virtual_sec++;
+     87          		}
+     88          
+     89          		/* Decrement sleep counter if required */
+     90          		if (m_sleep)
+     91          		{
+     92          			m_sleep--;
+     93          		}
+     94          
+     95          #if defined ( VIRTUAL_TIMER_PROC )
+     96          	    /* Scan timer event queue to check which events need to be serviced */
+     97          	    for (i = 0; i < VIRTUAL_TIMER_MAX_EVENTS; i++)
+     98          	    {
+     99          	        if (m_eventQueue[i].flags.bits.valid &&
+    100          	                m_eventQueue[i].flags.bits.active &&
+    101          	                m_eventQueue[i].deadline == m_now)
+    102          	        {
+    103          	            /* if callback is available... */
+    104          	            if (m_eventQueue[i].callback)
+    105          	            {
+    106          	                if (m_eventQueue[i].flags.bits.realtime)
+    107          	                {
+    108          	                    /* if it's realtime call it and pass its data */
+    109          	                    m_eventQueue[i].callback(m_eventQueue[i].data);
+    110          	                }
+    111          	                else
+    112          	                {
+    113          	                    /* otherwise flag it for execution */
+    114          	                    m_eventQueue[i].flags.bits.execute = 1;
+    115          	                }
+    116          	            }
+    117          	            if (m_eventQueue[i].flags.bits.periodic == 0)
+    118          	            {
+    119          	                /* if event is not periodic cancel it */
+    120          	                m_eventQueue[i].flags.bits.active = 0;
+    121          	            }
+    122          	            else
+    123          	            {
+    124          	                /* if event is periodic update deadline */
+    125          	                m_eventQueue[i].deadline = m_now + m_eventQueue[i].period;
+    126          	            }
+    127          	        }
+    128          	    }
+    129          #endif 
+    130          
+    131          #if( configTACE_VIRTUAL_TIMER == 1 )
+    132          		/* Pin PD.15 toggling with frequency = 10K Hz */
+    133          		GPIO_ToggleBits(GPIOD,GPIO_Pin_15);
+    134          #endif		
+    135          
+    136          		TIM_ClearITPendingBit(TIME_BASE, TIM_IT_Update);
+    137          	}
+    138          
+    139          }
+    140          
+    141          /*------------------------ Public Member Definitions ------------------------ */
+    142          
+    143          void VirtualTimer_init(void)
+    144          {
+    145          #if defined ( VIRTUAL_TIMER_PROC )
+    146              /* initialize event queue so that everything is clear                     */
+    147              MEMSET(((char *)m_eventQueue), 0, sizeof(m_eventQueue));
+    148          #endif 
+    149          
+    150              /*Enable TIM3 interrupt in every 50us*/
+    151          	NVIC_InitTypeDef NVIC_InitStructure;
+    152          	TIM_TimeBaseInitTypeDef	TIM_TimeBaseStructure;
+    153          	uint16_t PrescalerValue = 0;
+    154          
+    155          	/* TIM2 clock enable */
+    156          	RCC_APB1PeriphClockCmd(TIME_BASE_CLK, ENABLE);
+    157          	
+    158          	NVIC_InitStructure.NVIC_IRQChannel = TIME_BASE_IRQ;
+    159          
+    160          	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = configLIB_VIRUTAL_TIMER_INTERRUPT_PRIORITY;
+    161              NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
+    162          	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+    163          
+    164          	NVIC_Init(&NVIC_InitStructure);
+    165          	//!	@}
+    166          
+    167          	/* ---------------------------------------------------------------
+    168          	TIME_BASE Configuration(Timer 3 is for basic timer):
+    169          	--------------------------------------------------------------- */
+    170          	/* Compute the prescaler value; Setup time base as 10Khz; Timer interrupt is in every 50us */
+    171          	PrescalerValue = (SystemCoreClock /20000 ) - 1;
+    172          	/* Time Base configuration */
+    173          	TIM_TimeBaseStructure.TIM_Prescaler = 0;
+    174          	TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
+    175          	TIM_TimeBaseStructure.TIM_Period = PrescalerValue;
+    176          	TIM_TimeBaseStructure.TIM_ClockDivision = 0;
+    177          	TIM_TimeBaseStructure.TIM_RepetitionCounter = 0;
+    178          
+    179          	TIM_TimeBaseInit(TIME_BASE, &TIM_TimeBaseStructure);
+    180          
+    181          	/* TIM IT enable */
+    182          	TIM_ITConfig(TIME_BASE, TIM_IT_Update, ENABLE);
+    183          
+    184          	/* TIME_BASE enable counter */
+    185          	TIM_Cmd(TIME_BASE, ENABLE);
+    186          }
+    187          
+    188          void VirtualTimer_poll(void)
+    189          {
+    190          #if defined (VIRTUAL_TIMER_PROC)
+    191              uint8 i;
+    192          
+    193              /* traverse timer event list */
+    194              for (i = 0; i < VIRTUAL_TIMER_MAX_EVENTS; i++)
+    195              {
+    196                  if (m_eventQueue[i].flags.bits.execute)
+    197                  {
+    198                      /* clear execution flag  */
+    199                      m_eventQueue[i].flags.bits.execute = 0;
+    200          
+    201                      /* if callback is available execute it */
+    202                      if (m_eventQueue[i].callback)
+    203                      {
+    204                          /* execute callback */
+    205                          m_eventQueue[i].callback(m_eventQueue[i].data);
+    206                      }
+    207                  }
+    208              }
+    209          #endif 
+    210          	
+    211          }
+    212          
+    213          int VirtualTimer_register(
+    214              uint32 time,
+    215              VirtualTimer_callback callback,
+    216              void *data,
+    217              uint8 flags
+    218          )
+    219          {
+    220              int i = 0;
+    221          
+    222          #if defined ( VIRTUAL_TIMER_PROC )	
+    223              /* Look for an empty entry */
+    224              for (i = 0; i < VIRTUAL_TIMER_MAX_EVENTS; i++)
+    225              {
+    226                  if (!m_eventQueue[i].flags.bits.valid)
+    227                  {
+    228                      break;
+    229                  }
+    230              }
+    231          
+    232              if (i < VIRTUAL_TIMER_MAX_EVENTS)
+    233              {
+    234                  /* if we found an empty entry to use let's fill it with event data  */
+    235                  m_eventQueue[i].callback          = callback;
+    236                  m_eventQueue[i].data              = data;
+    237                  m_eventQueue[i].period            = time;
+    238                  m_eventQueue[i].deadline          = m_now + time;
+    239                  m_eventQueue[i].flags.data        = flags;
+    240                  m_eventQueue[i].flags.bits.valid  = 1;
+    241              }
+    242              else
+    243              {
+    244                  /* otherwise return -1 to flag no entry was available */
+    245                  i = -1;
+    246              }
+    247          #endif 
+    248          
+    249              return i;
+    250          }
+    251          
+    252          bool VirtualTimer_cancel(uint8 event)
+    253          {
+    254              bool ret = FALSE;
+    255          
+    256          #if defined ( VIRTUAL_TIMER_PROC )
+    257              /* if event valid and was active */
+    258              if ((event < VIRTUAL_TIMER_MAX_EVENTS) &&
+    259                      m_eventQueue[event].flags.bits.valid)
+    260              {
+    261                  /* disable it */
+    262                  m_eventQueue[event].flags.bits.active = 0;
+    263          
+    264                  /* and return TRUE */
+    265                  ret = TRUE;
+    266              }
+    267          #endif 
+    268          
+    269              return ret;
+    270          }
+    271          
+    272          bool VirtualTimer_remove(uint8 event)
+    273          {
+    274              bool ret = FALSE;
+    275          
+    276          #if defined ( VIRTUAL_TIMER_PROC )
+    277              /* if event valid and was active */
+    278              if (event < VIRTUAL_TIMER_MAX_EVENTS      &&
+    279                      m_eventQueue[event].flags.bits.valid)
+    280              {
+    281                  /* disable and invalidate it */
+    282                  m_eventQueue[event].flags.bits.active = 0;
+    283                  m_eventQueue[event].flags.bits.valid  = 0;
+    284          
+    285                  /* and return TRUE */
+    286                  ret = TRUE;
+    287              }
+    288          #endif 	
+    289          
+    290              return ret;
+    291          }
+    292          
+    293          bool VirtualTimer_reschedule(uint8 event, uint32 timeMsec)
+    294          {
+    295              bool ret = FALSE;
+    296          
+    297          #if defined ( VIRTUAL_TIMER_PROC )
+    298              /* If event valid and was active */
+    299              if (event < VIRTUAL_TIMER_MAX_EVENTS      &&
+    300                      m_eventQueue[event].flags.bits.valid)
+    301              {
+    302                  /* Update deadline to new value and activate */
+    303                  m_eventQueue[event].deadline =
+    304                      m_now + VIRTUAL_TIMER_MSEC2TICKS(timeMsec);
+    305                  m_eventQueue[event].flags.bits.active = 1;
+    306          
+    307                  /* and return TRUE */
+    308                  ret = TRUE;
+    309              }
+    310          #endif 
+    311          
+    312              return ret;
+    313          }
+    314          
+    315          uint32 VirtualTimer_now(void)
+    316          {
+    317              return m_now;
+    318          }
+    319          
+    320          uint32 VirtualTimer_nowMs(void)
+    321          {
+    322              /* Returns the time in MS */
+    323              return VIRTUAL_TIMER_TICKS2MSEC(m_now);
+    324          }
+    325          
+    326          void VirtualTimer_sleep(uint32 timeMsec)
+    327          {
+    328          #if defined ( VIRTUAL_TIMER_PROC )
+    329          
+    330              m_sleep = VIRTUAL_TIMER_MSEC2TICKS(timeMsec);
+    331          
+    332              while (m_sleep)
+    333              {
+    334                  /* VirtualTimer_poll(); */
+    335              };
+    336          #endif 
+    337          	
+    338          }
+    339          
+    340          void VirtualTimer_minisleep(uint32 time50usec)
+    341          {
+    342          #if defined ( VIRTUAL_TIMER_PROC )
+    343              m_sleep = VIRTUAL_TIMER_50USEC2TICKS(time50usec);
+    344          
+    345              while (m_sleep)
+    346              {
+    347                  /* VirtualTimer_poll(); */
+    348              };
+    349          #endif 	
+    350          }
+    351          
+    352          bool VirtualTimer_isActive(uint8 event)
+    353          {
+    354          #if defined ( VIRTUAL_TIMER_PROC )
+    355          
+    356              if (event < VIRTUAL_TIMER_MAX_EVENTS)
+    357              {
+    358                  return m_eventQueue[event].flags.bits.valid &&
+    359                         m_eventQueue[event].flags.bits.active;
+    360              }
+    361          #endif 
+    362          
+    363              return FALSE;
+    364          }
+    365          
+    366          bool VirtualTimer_isTimeout(uint32 *pTimeStamp, uint32 time)
+    367          {
+    368              if ((VirtualTimer_now() - (*pTimeStamp)) <= time)
+    369              {
+    370                  return TRUE;
+    371              }
+    372          
+    373              *pTimeStamp = VirtualTimer_now();
+    374          
+    375              return FALSE;
+    376          }
+    377          
+    378          /**
+    379           * Get current system time in second. The function converts system tick count
+    380           * to ms.
+    381           */
+    382          uint32 VirtualTimer_getCurrentTime()
+    383          {
+    384              return ( m_virtual_sec );
+    385          }
+    386          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        8  TIM3_IRQHandler
+              0 -> TIM_ClearITPendingBit
+              8 -> TIM_GetITStatus
+        0  VirtualTimer_cancel
+        0  VirtualTimer_getCurrentTime
+       24  VirtualTimer_init
+             24 -> NVIC_Init
+             24 -> RCC_APB1PeriphClockCmd
+             24 -> TIM_Cmd
+             24 -> TIM_ITConfig
+             24 -> TIM_TimeBaseInit
+        0  VirtualTimer_isActive
+        8  VirtualTimer_isTimeout
+        0  VirtualTimer_minisleep
+        0  VirtualTimer_now
+        0  VirtualTimer_nowMs
+        0  VirtualTimer_poll
+        0  VirtualTimer_register
+        0  VirtualTimer_remove
+        0  VirtualTimer_reschedule
+        0  VirtualTimer_sleep
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable5
+       4  ??DataTable5_1
+       4  ??DataTable5_2
+      68  TIM3_IRQHandler
+       4  VirtualTimer_cancel
+       6  VirtualTimer_getCurrentTime
+     102  VirtualTimer_init
+       4  VirtualTimer_isActive
+      26  VirtualTimer_isTimeout
+       2  VirtualTimer_minisleep
+       6  VirtualTimer_now
+      18  VirtualTimer_nowMs
+       2  VirtualTimer_poll
+       4  VirtualTimer_register
+       4  VirtualTimer_remove
+       4  VirtualTimer_reschedule
+       2  VirtualTimer_sleep
+      12  m_now
+          m_sleep
+          m_virtual_sec
+
+ 
+  12 bytes in section .bss
+ 264 bytes in section .text
+ 
+ 264 bytes of CODE memory
+  12 bytes of DATA memory
+
+Errors: none
+Warnings: none

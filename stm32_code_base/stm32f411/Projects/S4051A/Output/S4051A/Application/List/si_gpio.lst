@@ -1,0 +1,999 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:25:09 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\platform\board\si_gpio. #
+#                    c                                                        #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\platform\board\si_gpio. #
+#                    c -D S4051A -D DEBUG -D FREE_RTOS -D STM32F40_41xxx -D   #
+#                    USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D             #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_gpio.lst                                           #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_gpio.o                                              #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\platform\board\si_gpio.c
+      1          //***************************************************************************
+      2          //!file     si_gpio.c
+      3          //!brief    Platform GPIO driver, ARM (Stellaris) version.
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2011-2012, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #if defined ( SII_DEV_953x_PORTING_PLATFORM_LM3S5956 )
+     14          #include "inc/hw_gpio.h"
+     15          #include "si_arm.h"
+     16          #endif 
+     17          
+     18          #undef GPIO_LOCK_KEY
+     19          #include "si_platform.h"
+     20          #include "si_i2c.h"
+     21          #include "si_gpio.h"
+     22          #include "si_timer.h"
+     23          
+     24          //*****************************************************************************
+     25          //
+     26          // The base addresses of all the GPIO modules.  Both the APB and AHB apertures
+     27          // are provided.
+     28          //
+     29          //*****************************************************************************
+     30          
+     31          #if defined ( SII_DEV_953x_PORTING_PLATFORM_LM3S5956 )
+     32          static const unsigned long g_pulGPIOBaseAddrs[] =
+     33          {
+     34              GPIO_PORTA_BASE, GPIO_PORTA_AHB_BASE,
+     35              GPIO_PORTB_BASE, GPIO_PORTB_AHB_BASE,
+     36              GPIO_PORTC_BASE, GPIO_PORTC_AHB_BASE,
+     37              GPIO_PORTD_BASE, GPIO_PORTD_AHB_BASE,
+     38              GPIO_PORTE_BASE, GPIO_PORTE_AHB_BASE,
+     39              GPIO_PORTF_BASE, GPIO_PORTF_AHB_BASE,
+     40              GPIO_PORTG_BASE, GPIO_PORTG_AHB_BASE,
+     41              GPIO_PORTH_BASE, GPIO_PORTH_AHB_BASE,
+     42              GPIO_PORTJ_BASE, GPIO_PORTJ_AHB_BASE,
+     43          };
+     44          #endif 
+     45          
+     46          //*****************************************************************************
+     47          //
+     48          //! Configures the alternate function of a GPIO pin.
+     49          //!
+     50          //! \param ulPinConfig is the pin configuration value, specified as one of the
+     51          //! \b GPIO_P??_??? values.
+     52          //!
+     53          //! This function configures the pin mux that selects the peripheral function
+     54          //! associated with a particular GPIO pin.  Only one peripheral function at a
+     55          //! time can be associated with a GPIO pin, and each peripheral function should
+     56          //! only be associated with a single GPIO pin at a time (despite the fact that
+     57          //! many of them can be associated with more than one GPIO pin).
+     58          //!
+     59          //! \note This function is only valid on Tempest-class devices.
+     60          //!
+     61          //! \return None.
+     62          //
+     63          //*****************************************************************************
+     64          
+     65          void SiiPlatformGPIOPinConfigure ( unsigned long ulPinConfig )
+     66          {
+     67          #if defined ( SII_DEV_953x_PORTING_PLATFORM_LM3S5956 )
+     68          
+     69              unsigned long ulBase, ulShift;
+     70          
+     71              // Extract the base address index from the input value.
+     72          
+     73              ulBase = (ulPinConfig >> 16) & 0xff;
+     74          
+     75              // Get the base address of the GPIO module, selecting either the APB or the
+     76              // AHB aperture as appropriate.
+     77          
+     78              if (HWREG(SYSCTL_GPIOHSCTL) & (1 << ulBase))
+     79              {
+     80                  ulBase = g_pulGPIOBaseAddrs[(ulBase << 1) + 1];
+     81              }
+     82              else
+     83              {
+     84                  ulBase = g_pulGPIOBaseAddrs[ulBase << 1];
+     85              }
+     86          
+     87              // Extract the shift from the input value.
+     88          
+     89              ulShift = (ulPinConfig >> 8) & 0xff;
+     90          
+     91              // Write the requested pin muxing value for this GPIO pin.
+     92          
+     93              HWREG(ulBase + GPIO_O_PCTL) = ((HWREG(ulBase + GPIO_O_PCTL) &
+     94                                              ~(0xfUL << ulShift)) |
+     95                                             ((ulPinConfig & 0xf) << ulShift));
+     96          #endif                                    
+     97          
+     98          }
+     99          
+    100          //*****************************************************************************
+    101          //
+    102          //! Configures pin(s) for use as GPIO inputs.
+    103          //!
+    104          //! \param ulPort is the base address of the GPIO port.
+    105          //! \param ucPins is the bit-packed representation of the pin(s).
+    106          //!
+    107          //! The GPIO pins must be properly configured in order to function correctly as
+    108          //! GPIO inputs; this is especially true of Fury-class devices where the
+    109          //! digital input enable is turned off by default.  This function provides the
+    110          //! proper configuration for those pin(s).
+    111          //!
+    112          //! The pin(s) are specified using a bit-packed byte, where each bit that is
+    113          //! set identifies the pin to be accessed, and where bit 0 of the byte
+    114          //! represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+    115          //!
+    116          //! \return None.
+    117          //
+    118          //*****************************************************************************
+    119          
+    120          static void SkPlatformGPIOPinTypeGPIOInput( unsigned long ulPort, unsigned char ucPins, unsigned long ulPinType )
+    121          {
+    122          #if defined ( SII_DEV_953x_PORTING_PLATFORM_LM3S5956 )
+    123          
+    124              //
+    125              // Make the pin(s) be inputs.
+    126              //
+    127              ROM_GPIODirModeSet(ulPort, ucPins, GPIO_DIR_MODE_IN);
+    128            
+    129              
+    130              //
+    131              // Set the pad(s) for standard push-pull operation.
+    132              //
+    133              ROM_GPIOPadConfigSet(ulPort, ucPins, GPIO_STRENGTH_2MA, ulPinType );
+    134          #endif     
+    135          }
+    136          
+    137          //------------------------------------------------------------------------------
+    138          // Function:    Pca9557Read
+    139          // Description: Read the PCA9557PW device at the passed I2C device ID.
+    140          //              Mask the result with bitMask and return the result.
+    141          // Parameters:  devId - I2C address of port extender to read.
+    142          //              bitMask - Value to AND with port extender data before returning.
+    143          // Returns:     Value of selected PCA9557PW, masked with bitMask
+    144          //------------------------------------------------------------------------------
+    145          
+    146          static uint8_t  Pca9557Read ( uint8_t devId, uint8_t bitMask )
+    147          {
+    148          #if defined ( SII_DEV_953x_PORTING_PLATFORM_LM3S5956 )
+    149          
+    150              uint8_t value;
+    151          
+    152              value = SiiPlatformI2cReadByte(0, devId, PCA_INPUT );
+    153          
+    154              return( value & bitMask );
+    155          #else
+    156          	return 0;
+    157          #endif 
+    158          }
+    159          
+    160          #if (FPGA_BUILD == DISABLE)
+    161          //------------------------------------------------------------------------------
+    162          // Function:    Pca9557ReadModifyWrite
+    163          // Description: Read/Modify/Write the PCA9557PW device at the passed I2C device
+    164          //              ID.
+    165          // Parameters:  devId - I2C address of port extender to read.
+    166          //              bitMask - Value to NAND with port extender data before writeback.
+    167          //              bitValue- Value to OR with port extender data before writeback.
+    168          // Returns:     none
+    169          //------------------------------------------------------------------------------
+    170          
+    171          static void Pca9557ReadModifyWrite ( uint8_t devId, uint8_t bitMask, uint8_t bitValue  )
+    172          {
+    173              uint8_t value;
+    174          
+    175          
+    176              value = SiiPlatformI2cReadByte(0, devId, PCA_INPUT );
+    177              value &= ~bitMask;
+    178              value |= (bitValue & bitMask);
+    179          
+    180              SiiPlatformI2cWriteByte(0, devId, PCA_OUTPUT, value );
+    181          }
+    182          #endif
+    183          
+    184          //------------------------------------------------------------------------------
+    185          // Function:    SiiPlatformGpioCecSelect
+    186          // Description: 
+    187          // Parameters:  portBits
+    188          // Returns:     none
+    189          //------------------------------------------------------------------------------
+    190          
+    191          void SiiPlatformGpioCecSelect (uint8_t cecSel, uint8_t ctrl )
+    192          {
+    193          #if (FPGA_BUILD == DISABLE)
+    194              cecSel = 1 << cecSel;
+    195              Pca9557ReadModifyWrite( I2C_SADDR_34, cecSel, ctrl ? SET_BITS : CLEAR_BITS);
+    196          #endif
+    197          }
+    198          
+    199          //------------------------------------------------------------------------------
+    200          // Function:    SiiPlatformGpioAudioInOut
+    201          // Description: Enable Audio Input (Inerstion) or Extratcion
+    202          // Parameters:  audType: false: Insertion, true:extraction
+    203          // Returns:     none
+    204          //------------------------------------------------------------------------------
+    205          
+    206          void SiiPlatformGpioAudioInOut ( uint8_t audType )
+    207          {
+    208          #if (FPGA_BUILD == DISABLE)
+    209              Pca9557ReadModifyWrite( I2C_SADDR_38, BIT7, audType ? SET_BITS : CLEAR_BITS);
+    210          #endif
+    211          }
+    212          
+    213          //------------------------------------------------------------------------------
+    214          // Function:    SiiPlatformGpioLedPorts
+    215          // Description: Turn port LEDs on or off
+    216          // Parameters:  portBits
+    217          // Returns:     none
+    218          //------------------------------------------------------------------------------
+    219          
+    220          void SiiPlatformGpioLedPorts ( uint8_t portBits )
+    221          {
+    222          #if defined ( SII_DEV_953x_PORTING_PLATFORM_LM3S5956 )
+    223          #if (FPGA_BUILD == DISABLE)
+    224          
+    225              // Bit permutations due to board design
+    226              portBits = ((portBits & BIT0) ? BIT1 : 0) |
+    227                         ((portBits & BIT1) ? BIT0 : 0) |
+    228                         ((portBits & BIT2) ? BIT5 : 0) |
+    229                         ((portBits & BIT3) ? BIT4 : 0);
+    230          
+    231              Pca9557ReadModifyWrite( I2C_SADDR_38, BIT3|BIT2|BIT1|BIT0, ~portBits & LED_STATUS_MASK );
+    232          #endif
+    233          #endif 
+    234          }
+    235          
+    236          //------------------------------------------------------------------------------
+    237          // Function:    SiiPlatformGpioLedStatus1
+    238          // Description: Turn Status LED 1 on or off
+    239          // Parameters:  ledOn   - true: turn LED on
+    240          // Returns:     none
+    241          //------------------------------------------------------------------------------
+    242          
+    243          void SiiPlatformGpioLedStatus1 ( bool_t ledOn )
+    244          {
+    245          #if defined ( SII_DEV_953x_PORTING_PLATFORM_LM3S5956 )
+    246          
+    247          #if (FPGA_BUILD == DISABLE)
+    248              Pca9557ReadModifyWrite( I2C_SADDR_3A, BIT0, (ledOn) ? LED_ON : LED_OFF );
+    249          #else
+    250              ROM_GPIOPinWrite( GPIO_PORTD_BASE, GPIO_PIN_0, (ledOn ) ? 0 : GPIO_PIN_0 );
+    251          #endif
+    252          
+    253          #endif 
+    254          
+    255          }
+    256          
+    257          //------------------------------------------------------------------------------
+    258          // Function:    SiiPlatformGpioLedStatus2
+    259          // Description: Turn Status LED 2 on or off
+    260          // Parameters:  ledOn   - true: turn LED on
+    261          // Returns:     none
+    262          //------------------------------------------------------------------------------
+    263          void SiiPlatformGpioLedStatus2 ( bool_t ledOn )
+    264          {
+    265          #if defined ( SII_DEV_953x_PORTING_PLATFORM_LM3S5956 )
+    266          
+    267          #if (FPGA_BUILD == DISABLE)
+    268              Pca9557ReadModifyWrite( I2C_SADDR_3A, BIT1, ledOn ? LED_ON : LED_OFF );
+    269          #else
+    270              ROM_GPIOPinWrite( GPIO_PORTD_BASE, GPIO_PIN_1, (ledOn ) ? 0 : GPIO_PIN_1 );
+    271          #endif
+    272          #endif
+    273          
+    274          }
+    275          
+    276          //------------------------------------------------------------------------------
+    277          // Function:    SiiPlatformGpioLedArc
+    278          // Description: Turn ARC LED on or off
+    279          // Parameters:  ledOn   - true: turn LED on
+    280          // Returns:     none
+    281          //------------------------------------------------------------------------------
+    282          
+    283          void SiiPlatformGpioLedArc ( bool_t ledOn )
+    284          {
+    285          #if defined ( SII_DEV_953x_PORTING_PLATFORM_LM3S5956 )
+    286          
+    287          #if (FPGA_BUILD == DISABLE)
+    288              Pca9557ReadModifyWrite( I2C_SADDR_38, BIT5, ledOn ? LED_ON : LED_OFF );
+    289          #endif
+    290          #endif
+    291          
+    292          }
+    293          
+    294          //------------------------------------------------------------------------------
+    295          // Function:    SiiPlatformGpioLedHec
+    296          // Description: Turn HEC LED on or off
+    297          // Parameters:  ledOn   - true: turn LED on
+    298          // Returns:     none
+    299          //------------------------------------------------------------------------------
+    300          void SiiPlatformGpioLedHec ( bool_t ledOn )
+    301          {
+    302          #if defined ( SII_DEV_953x_PORTING_PLATFORM_LM3S5956 )
+    303          #if (FPGA_BUILD == DISABLE)
+    304              Pca9557ReadModifyWrite( I2C_SADDR_38, BIT6, ledOn ? LED_ON : LED_OFF );
+    305          #endif
+    306          #endif 
+    307          }
+    308          
+    309          //------------------------------------------------------------------------------
+    310          // Function:    SiiPlatformGpioReadSwitch
+    311          // Description: Read the state of a switch on the Starter kit board
+    312          // Parameters:  gpioSw: Upper nibble is the read function switch case, which
+    313          //                      chooses the GPIO bank
+    314          //                      Lower nibble is the bit position in the selected GPIO bank
+    315          // Returns:     true if Switch position closed, false if open
+    316          //------------------------------------------------------------------------------
+    317          
+    318          bool_t SiiPlatformGpioReadSwitch ( GpioSw_t gpioSw )
+    319          {
+    320              bool_t result = false;
+    321          
+    322          #if defined ( SII_DEV_953x_PORTING_PLATFORM_LM3S5956 )
+    323          
+    324              switch ( (gpioSw >> 8) & 0xFF )
+    325              {
+    326                  case 0:     // PORT A Bank
+    327                      result = (ROM_GPIOPinRead( GPIO_PORTA_BASE, gpioSw & 0xFF ) == 0);
+    328                      break;
+    329                  case 1:     // PORT B Bank
+    330                      result = (ROM_GPIOPinRead( GPIO_PORTB_BASE, gpioSw & 0xFF ) == 0);
+    331                      break;
+    332                  case 2:     // PORT C Bank
+    333                      result = (ROM_GPIOPinRead( GPIO_PORTC_BASE, gpioSw & 0xFF ) == 0);
+    334                      break;
+    335                  case 3:     // PORT D Bank
+    336                      result = (ROM_GPIOPinRead( GPIO_PORTD_BASE, gpioSw & 0xFF ) == 0);
+    337                      break;
+    338          
+    339                  case 0x10:  // These switch positions are on an I/O extender
+    340          #if (FPGA_BUILD == DISABLE)
+    341                      result = (Pca9557Read( I2C_SADDR_3F, gpioSw & 0x7F ) != 0 );
+    342          #else
+    343                      result = (Pca9557Read( I2C_SADDR_3A, gpioSw & 0xFF ) != 0 );
+    344          #endif
+    345                      break;
+    346          
+    347                  default:
+    348                      break;
+    349              }
+    350          #endif
+    351          
+    352              return( result );
+    353          }
+    354          
+    355          //------------------------------------------------------------------------------
+    356          // Function:    SiiPlatformEthernetSwitchEnable
+    357          // Description: Put Ethernet switch in reset (disable) or release from
+    358          //              reset (enable)
+    359          // Parameters:  enableEthernet    true or false
+    360          // Returns:     none
+    361          //------------------------------------------------------------------------------
+    362          
+    363          void SiiPlatformEthernetSwitchEnable ( bool_t enableEthernet )
+    364          {
+    365          #if (FPGA_BUILD == DISABLE)
+    366              Pca9557ReadModifyWrite( I2C_SADDR_38, BIT7, enableEthernet ? BIT7 : 0x00 );
+    367          #endif
+    368          }
+    369          
+    370          //------------------------------------------------------------------------------
+    371          // Function:    SkPlatformGpioRpwrOff
+    372          // Description: Turn off RPWR for port specified
+    373          // Parameters:  rpwrPort    - Port to turn off
+    374          // Returns:     true if success, false if invalid port number
+    375          //------------------------------------------------------------------------------
+    376          
+    377          bool_t SiiPlatformGpioVbusCtrl ( uint8_t vbusPort, uint8_t ctrl )
+    378          {
+    379              bool_t success = true;
+    380          
+    381          #if (FPGA_BUILD == DISABLE)
+    382              if (vbusPort == MHL_RPWR_EN0)
+    383              {
+    384                  Pca9557ReadModifyWrite( I2C_SADDR_3A, BIT5, ctrl ? BIT5 : 0x00 );  // '1' disable
+    385              }
+    386              else if (vbusPort == MHL_RPWR_EN1)
+    387              {
+    388                  Pca9557ReadModifyWrite( I2C_SADDR_3A, BIT7 , ctrl ? BIT7 : 0x00  );  // '1' disable
+    389              }
+    390          #endif
+    391          
+    392              return( success );
+    393          }
+    394          
+    395          //------------------------------------------------------------------------------
+    396          // Function:    SkPlatformGpioRpwrOff
+    397          // Description: Turn off RPWR for port specified
+    398          // Parameters:  rpwrPort    - Port to turn off
+    399          // Returns:     true if success, false if invalid port number
+    400          //------------------------------------------------------------------------------
+    401          
+    402          bool_t SiiPlatformGpioRpwr ( uint8_t rpwrPort, uint8_t ctrl )
+    403          {
+    404              bool_t success = true;
+    405          
+    406          #if (FPGA_BUILD == DISABLE)
+    407              if (rpwrPort == MHL_RPWR_EN0)
+    408              {
+    409                  Pca9557ReadModifyWrite( I2C_SADDR_3A, BIT4, ctrl ? 0x00 : BIT4);  // '1' disable
+    410              }
+    411              else if (rpwrPort == MHL_RPWR_EN1)
+    412              {
+    413                  Pca9557ReadModifyWrite( I2C_SADDR_3A, BIT6 , ctrl ? 0x00 : BIT6 );  // '1' disable
+    414              }
+    415          #endif
+    416          
+    417              return( success );
+    418          }
+    419          
+    420          //------------------------------------------------------------------------------
+    421          // Function:    SiiPlatformGpioSetPower
+    422          // Description: Power on or off the chip
+    423          // Parameters: ON - power up the chip. Off - power down the chip
+    424          // Returns:
+    425          //------------------------------------------------------------------------------
+    426          
+    427          void SiiPlatformGpioSetPower (uint8_t pwrType, uint8_t pwrCtrl )
+    428          {
+    429          #if defined ( SII_DEV_953x_PORTING_PLATFORM_LM3S5956 )
+    430          
+    431          #if (FPGA_BUILD == DISABLE)
+    432              if (pwrType == SII_GPIO_PDN_POWER)
+    433              {
+    434                  pwrCtrl ? ROM_GPIOPinWrite( GPIO_PORTD_BASE, GPIO_PIN_3,  GPIO_PIN_3) : ROM_GPIOPinWrite( GPIO_PORTD_BASE, GPIO_PIN_3,  0);
+    435              }
+    436              else if (pwrType == SII_GPIO_AON_POWER)
+    437              {
+    438                  pwrCtrl ? ROM_GPIOPinWrite( GPIO_PORTB_BASE, GPIO_PIN_0,  0) : ROM_GPIOPinWrite( GPIO_PORTB_BASE, GPIO_PIN_0,  GPIO_PIN_0);
+    439              }
+    440              else if (pwrType == SII_GPIO_POWER_ALL)
+    441              {
+    442                  pwrCtrl ? ROM_GPIOPinWrite( GPIO_PORTB_BASE, GPIO_PIN_0,  0) : ROM_GPIOPinWrite( GPIO_PORTB_BASE, GPIO_PIN_0,  GPIO_PIN_0);
+    443                  pwrCtrl ? ROM_GPIOPinWrite( GPIO_PORTD_BASE, GPIO_PIN_3,  GPIO_PIN_3) : ROM_GPIOPinWrite( GPIO_PORTD_BASE, GPIO_PIN_3,  0);
+    444              }
+    445          #endif
+    446          #endif
+    447          }
+    448          
+    449          #if INC_CBUS_WAKEUP
+    450          //------------------------------------------------------------------------------
+    451          // Function:    SiiPlatformCbusWakeupPinGet
+    452          // Description: returns state of GPIO pin connected to CBUS line where wake up
+    453          //              sequence is expected to arrive
+    454          //------------------------------------------------------------------------------
+    455          bool_t SiiPlatformCbusWakeupPinGet( uint8_t mhlChnl )
+    456          {
+    457              uint8_t val = false;
+    458          
+    459          #if defined ( SII_DEV_953x_PORTING_PLATFORM_LM3S5956 )
+    460          #if (FPGA_BUILD == DISABLE)
+    461              if ( mhlChnl == MHL_CHNL_0 )
+    462              {
+    463                  val = ROM_GPIOPinRead( GPIO_PORTC_BASE, GPIO_PIN_6 );
+    464              }
+    465          
+    466              if ( mhlChnl == MHL_CHNL_1 )
+    467              {
+    468                  val = ROM_GPIOPinRead( GPIO_PORTC_BASE, GPIO_PIN_7 );
+    469              }
+    470          #endif
+    471          #endif 
+    472              return (val ? true : false);
+    473          }
+    474          #endif
+    475          
+    476          //------------------------------------------------------------------------------
+    477          // Function:    SiiPlatformMHLCDSensePinGet
+    478          // Description: returns state of GPIO pin connected to CBUS line where wake up
+    479          //              sequence is expected to arrive
+    480          //------------------------------------------------------------------------------
+    481          bool_t SiiPlatformMHLCDSensePinGet( uint8_t mhlChnl )
+    482          {
+    483              uint8_t val = true;
+    484              
+    485          #if defined ( SII_DEV_953x_PORTING_PLATFORM_LM3S5956 )
+    486          
+    487          #if (FPGA_BUILD == DISABLE)
+    488              if ( mhlChnl == MHL_CHNL_0 )
+    489              {
+    490                  val = ROM_GPIOPinRead( GPIO_PORTE_BASE, GPIO_PIN_2 );
+    491              }
+    492          
+    493              if ( mhlChnl == MHL_CHNL_1 )
+    494              {
+    495                  val = ROM_GPIOPinRead( GPIO_PORTE_BASE, GPIO_PIN_3 );
+    496              }
+    497          #endif
+    498          
+    499          #endif
+    500          
+    501              return (val ? true : false);
+    502          }
+    503          //------------------------------------------------------------------------------
+    504          // Function:    SiiBoardGpioControlMainVCC5
+    505          // Description: Detecting the switch s1 and power on or off the chip.
+    506          // Parameters:
+    507          // Returns: true if pin has been changed. false pin has not been changed.
+    508          //------------------------------------------------------------------------------
+    509          
+    510          uint8_t SiiPlatformGpioPowerVCC5 (void )
+    511          {
+    512              bool_t          changePin = false;
+    513          
+    514          #if defined ( SII_DEV_953x_PORTING_PLATFORM_LM3S5956 )    
+    515              static bool_t   debouncing = false;
+    516              static bool_t   oldPin = false;
+    517              bool_t          newPin;
+    518              static uint32_t    firstTime;
+    519              uint32_t         thisTime;
+    520          
+    521              // Detecting the s1 switch debouncing
+    522              newPin = (ROM_GPIOPinRead( GPIO_PORTB_BASE, GPIO_PIN_1) & GPIO_PIN_1) == 0;
+    523              if (oldPin != newPin)
+    524              {
+    525                  while (1)
+    526                  {
+    527                      newPin = (ROM_GPIOPinRead( GPIO_PORTB_BASE, GPIO_PIN_1) & GPIO_PIN_1) == 0;
+    528                      //Button just has been pressed.
+    529                      if (newPin && !debouncing)
+    530                      {
+    531                          firstTime = SiiPlatformTimerSysTicksGet();
+    532                          debouncing = true;
+    533                      }
+    534                      else if (debouncing)
+    535                      {
+    536                          thisTime = SiiPlatformTimerSysTicksGet();
+    537                          if (( thisTime - firstTime ) >= 10 )
+    538                          {
+    539                              if (newPin)
+    540                              {
+    541                                  debouncing = true;
+    542                                  firstTime = SiiPlatformTimerSysTicksGet();
+    543                              }
+    544                              else
+    545                              {
+    546                                  debouncing = false;
+    547                                  changePin = true;       //!changePin;
+    548                                  break;
+    549                              }
+    550                          }
+    551                      }
+    552                  }
+    553              }
+    554              oldPin = newPin;
+    555          #endif     
+    556              return changePin;
+    557          }
+    558          
+    559          //------------------------------------------------------------------------------
+    560          // Function:    SiiPlatformGpioInit
+    561          // Description:
+    562          // Parameters:
+    563          // Returns:
+    564          //------------------------------------------------------------------------------
+    565          
+    566          void SiiPlatformGpioInit (void)
+    567          {
+    568          #if defined ( SII_DEV_953x_PORTING_PLATFORM_LM3S5956 )
+    569          
+    570          	int i,j;
+    571              // Enable the GPIO ports used for the board UI
+    572          
+    573              ROM_SysCtlPeripheralEnable( SYSCTL_PERIPH_GPIOA );
+    574              ROM_SysCtlPeripheralEnable( SYSCTL_PERIPH_GPIOB );
+    575              ROM_SysCtlPeripheralEnable( SYSCTL_PERIPH_GPIOC );
+    576              ROM_SysCtlPeripheralEnable( SYSCTL_PERIPH_GPIOD );
+    577              ROM_SysCtlPeripheralEnable( SYSCTL_PERIPH_GPIOE );
+    578          
+    579              // Port B, bit 7 is special, because it CAN be an NMI pin, and TI didn't
+    580              // want it to be programmed accidently.  So they 'locked' it and it takes a
+    581              // special sequence to unlock so that we can actually change any of its features.
+    582              HWREG( GPIO_PORTB_BASE + GPIO_O_LOCK) = GPIO_LOCK_KEY_DD; // LOCK code
+    583              HWREG( GPIO_PORTB_BASE + GPIO_O_CR)   = 0x000000FF;       // Enable all 8 bits
+    584              HWREG( GPIO_PORTB_BASE + GPIO_O_LOCK) = 0x00000000;       // re-lock
+    585          
+    586              // Configure the GPIO pins used for the Rotary Switch.
+    587              SkPlatformGPIOPinTypeGPIOInput( GPIO_PORTB_BASE, GPIO_PIN_7 | GPIO_PIN_6 | GPIO_PIN_5, GPIO_PIN_TYPE_STD_WPU );
+    588          
+    589          #if INC_CBUS_WAKEUP
+    590              //Configure this GPIO to detect the MHL wake pulse.
+    591              SkPlatformGPIOPinTypeGPIOInput( GPIO_PORTC_BASE, GPIO_PIN_6 | GPIO_PIN_7, GPIO_PIN_TYPE_STD_WPU );
+    592              ROM_GPIOIntTypeSet( GPIO_PORTC_BASE, GPIO_PIN_6 | GPIO_PIN_7, GPIO_FALLING_EDGE | GPIO_RISING_EDGE);
+    593              ROM_IntEnable(INT_GPIOC);
+    594          #else
+    595              // Configure the GPIO pins used for the Siimon BUS Grant and Request.
+    596              SkPlatformGPIOPinTypeGPIOInput( GPIO_PORTC_BASE, GPIO_PIN_7, GPIO_PIN_TYPE_STD_WPU );
+    597              ROM_GPIOPinTypeGPIOOutput( GPIO_PORTC_BASE, GPIO_PIN_6 | GPIO_PIN_7 );
+    598          #endif
+    599          
+    600              // Configure the GPIO pin used external Interrupt from the chip
+    601              SkPlatformGPIOPinTypeGPIOInput( GPIO_INT_PORT_BASE, GPIO_INT_PIN_IDX, GPIO_PIN_TYPE_STD_WPU );
+    602              ROM_GPIOIntTypeSet( GPIO_INT_PORT_BASE, GPIO_INT_PIN_IDX, GPIO_FALLING_EDGE );
+    603              ROM_IntEnable(GPIO_INT_PORT);
+    604          
+    605          #if (FPGA_BUILD == DISABLE)
+    606              // Configure the GPIO pins used for the Main power switch.
+    607              // VCC5_MAIN_EN#_PB reads the push button state, so it is an input
+    608              // VCC5_MAIN_EN is used to turn the power on, so it is an output. Immediately set it to 1
+    609              SkPlatformGPIOPinTypeGPIOInput( GPIO_PORTB_BASE, GPIO_PIN_1, GPIO_PIN_TYPE_STD_WPU );
+    610              ROM_GPIOPinTypeGPIOOutput( GPIO_PORTB_BASE, GPIO_PIN_0 );
+    611              ROM_GPIOPinWrite( GPIO_PORTB_BASE, GPIO_PIN_0, GPIO_PIN_0 );
+    612          
+    613              // Configure the GPIO to control the LPSTBY (Low Power Standby)
+    614              ROM_GPIOPinTypeGPIOOutput( GPIO_PORTD_BASE, GPIO_PIN_3 );
+    615              ROM_GPIOPadConfigSet( GPIO_PORTD_BASE, GPIO_PIN_4, GPIO_STRENGTH_4MA, GPIO_PIN_TYPE_STD_WPU );
+    616              ROM_GPIOPinWrite( GPIO_PORTD_BASE, GPIO_PIN_3, GPIO_PIN_3 ); 
+    617          
+    618              // Configure the GPIO pin used to reset the I/O extenders
+    619              ROM_GPIOPinTypeGPIOOutput( GPIO_PORTD_BASE, GPIO_PIN_1 );
+    620              ROM_GPIOPadConfigSet( GPIO_PORTD_BASE, GPIO_PIN_1, GPIO_STRENGTH_4MA, GPIO_PIN_TYPE_STD_WPU );
+    621              // Enable CP9535 Chip Hard Reset
+    622              ROM_GPIOPinWrite( GPIO_PORTD_BASE, GPIO_PIN_1, 0 );
+    623              j=0;
+    624              for(i=0;i<0x7fff;i++)
+    625              {
+    626              	j++;
+    627              }
+    628              ROM_GPIOPinWrite( GPIO_PORTD_BASE, GPIO_PIN_1, GPIO_PIN_1 );
+    629          
+    630              //Configure GPIO for Reset Audio Dac
+    631              ROM_GPIOPinTypeGPIOOutput( GPIO_PORTE_BASE, GPIO_PIN_0 | GPIO_PIN_1 );
+    632              ROM_GPIOPadConfigSet( GPIO_PORTE_BASE, GPIO_PIN_0 | GPIO_PIN_1, GPIO_STRENGTH_4MA, GPIO_PIN_TYPE_STD_WPU );
+    633          
+    634              //Configure GPIO for Port 0 and Port 1 Cable Detect
+    635              ROM_GPIOPinTypeGPIOInput( GPIO_PORTE_BASE, GPIO_PIN_2 | GPIO_PIN_3 );
+    636              ROM_GPIOPadConfigSet( GPIO_PORTE_BASE, GPIO_PIN_2 | GPIO_PIN_3, GPIO_STRENGTH_4MA, GPIO_PIN_TYPE_STD_WPU );
+    637          
+    638              // Configure the GPIO pins used external Interrupt from the chip
+    639              SkPlatformGPIOPinTypeGPIOInput( GPIO_PORTD_BASE, GPIO_PIN_0, GPIO_PIN_TYPE_STD_WPU );
+    640              ROM_GPIOIntTypeSet( GPIO_PORTD_BASE, GPIO_PIN_0, GPIO_FALLING_EDGE );
+    641          
+    642              // Extended GPIO chip initialization
+    643          
+    644              SiiPlatformI2cWriteByte(0, I2C_SADDR_38, PCA_POLARITY, PCA_DEFAULT_POLARITY );
+    645              SiiPlatformI2cWriteByte(0, I2C_SADDR_38, PCA_CONFIG, 0x00 );                      // 7:0 output
+    646              SiiPlatformI2cWriteByte(0, I2C_SADDR_38, PCA_OUTPUT, PCA_DEFAULT_OUTPUT );
+    647          
+    648              SiiPlatformI2cWriteByte(0, I2C_SADDR_3A, PCA_POLARITY, BIT2 );   // Upper nibble inverted inputs
+    649              SiiPlatformI2cWriteByte(0, I2C_SADDR_3A, PCA_CONFIG, BIT2 );     // 7:3 output, 2-input, 1:0 output
+    650              SiiPlatformI2cWriteByte(0, I2C_SADDR_3A, PCA_OUTPUT, PCA_DEFAULT_OUTPUT );
+    651          
+    652              SiiPlatformI2cWriteByte(0, I2C_SADDR_3F, PCA_POLARITY, (BIT6|BIT5|BIT4|BIT3|BIT2|BIT1|BIT0) );
+    653              SiiPlatformI2cWriteByte(0, I2C_SADDR_3F, PCA_CONFIG, (BIT6|BIT5|BIT4|BIT3|BIT2|BIT1|BIT0) );    // 7 output, 6:0 input
+    654              SiiPlatformI2cWriteByte(0, I2C_SADDR_3F, PCA_OUTPUT, PCA_DEFAULT_OUTPUT|BIT7 );
+    655          
+    656              SiiPlatformI2cWriteByte(0, I2C_SADDR_34, PCA_POLARITY, PCA_DEFAULT_POLARITY );
+    657              SiiPlatformI2cWriteByte(0, I2C_SADDR_34, PCA_CONFIG, 0x00 );                      // 7:0 output
+    658              SiiPlatformI2cWriteByte(0, I2C_SADDR_34, PCA_OUTPUT, PCA_DEFAULT_OUTPUT );
+    659          
+    660              Pca9557ReadModifyWrite( I2C_SADDR_3A, BIT4 | BIT5 | BIT6 | BIT7, 0x00 );  // '1' disable
+    661          #else
+    662          
+    663              // Configure GPIO PE4 to control the audio DAC reset 
+    664              ROM_GPIOPinTypeGPIOOutput( GPIO_PORTE_BASE, GPIO_PIN_4 );
+    665              ROM_GPIOPadConfigSet( GPIO_PORTE_BASE, GPIO_PIN_4, GPIO_STRENGTH_4MA, GPIO_PIN_TYPE_STD_WPU );
+    666          
+    667              // SW-2 GPIOs
+    668              SkPlatformGPIOPinTypeGPIOInput(    // Switches 1-6
+    669                  GPIO_PORTA_BASE,
+    670                  GPIO_PIN_2 | GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7,
+    671                  GPIO_PIN_TYPE_STD_WPU );   // SW2-7
+    672              SkPlatformGPIOPinTypeGPIOInput( GPIO_PORTC_BASE, GPIO_PIN_4 | GPIO_PIN_5, GPIO_PIN_TYPE_STD_WPU );   // Switches 7-8
+    673          
+    674              // Status LED 3
+    675              ROM_GPIOPinTypeGPIOOutput( GPIO_PORTD_BASE, GPIO_PIN_0 );
+    676              ROM_GPIOPadConfigSet( GPIO_PORTD_BASE, GPIO_PIN_0, GPIO_STRENGTH_4MA, GPIO_PIN_TYPE_STD_WPU );
+    677          
+    678              // Status LED 4
+    679              ROM_GPIOPinTypeGPIOOutput( GPIO_PORTD_BASE, GPIO_PIN_1 );
+    680              ROM_GPIOPadConfigSet( GPIO_PORTD_BASE, GPIO_PIN_1, GPIO_STRENGTH_4MA, GPIO_PIN_TYPE_STD_WPU );
+    681          
+    682              ROM_GPIOPinWrite(GPIO_PORTD_BASE, GPIO_PIN_0 | GPIO_PIN_1, 0xFF); // Turn the LEDs off
+    683          
+    684          #endif
+    685          #endif 
+    686          
+    687          }
+    688          
+    689          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       16  Pca9557ReadModifyWrite
+             16 -> SiiPlatformI2cReadByte
+              0 -> SiiPlatformI2cWriteByte
+        0  SiiPlatformCbusWakeupPinGet
+        0  SiiPlatformEthernetSwitchEnable
+              0 -> Pca9557ReadModifyWrite
+        0  SiiPlatformGPIOPinConfigure
+        0  SiiPlatformGpioAudioInOut
+              0 -> Pca9557ReadModifyWrite
+        0  SiiPlatformGpioCecSelect
+              0 -> Pca9557ReadModifyWrite
+        0  SiiPlatformGpioInit
+        0  SiiPlatformGpioLedArc
+        0  SiiPlatformGpioLedHec
+        0  SiiPlatformGpioLedPorts
+        0  SiiPlatformGpioLedStatus1
+        0  SiiPlatformGpioLedStatus2
+        0  SiiPlatformGpioPowerVCC5
+        0  SiiPlatformGpioReadSwitch
+        8  SiiPlatformGpioRpwr
+              8 -> Pca9557ReadModifyWrite
+        0  SiiPlatformGpioSetPower
+        8  SiiPlatformGpioVbusCtrl
+              8 -> Pca9557ReadModifyWrite
+        0  SiiPlatformMHLCDSensePinGet
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       6  ?Subroutine0
+      42  Pca9557ReadModifyWrite
+       4  SiiPlatformCbusWakeupPinGet
+       8  SiiPlatformEthernetSwitchEnable
+       2  SiiPlatformGPIOPinConfigure
+      10  SiiPlatformGpioAudioInOut
+      20  SiiPlatformGpioCecSelect
+       2  SiiPlatformGpioInit
+       2  SiiPlatformGpioLedArc
+       2  SiiPlatformGpioLedHec
+       2  SiiPlatformGpioLedPorts
+       2  SiiPlatformGpioLedStatus1
+       2  SiiPlatformGpioLedStatus2
+       4  SiiPlatformGpioPowerVCC5
+       4  SiiPlatformGpioReadSwitch
+      40  SiiPlatformGpioRpwr
+       2  SiiPlatformGpioSetPower
+      40  SiiPlatformGpioVbusCtrl
+       4  SiiPlatformMHLCDSensePinGet
+
+ 
+ 198 bytes in section .text
+ 
+ 198 bytes of CODE memory
+
+Errors: none
+Warnings: 3

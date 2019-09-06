@@ -1,0 +1,999 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:51 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\cra_drv\si_cra.c #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\cra_drv\si_cra.c #
+#                     -D S4051A -D DEBUG -D FREE_RTOS -D STM32F40_41xxx -D    #
+#                    USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D             #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_cra.lst                                            #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_cra.o                                               #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\driver\cra_drv\si_cra.c
+      1          //***************************************************************************
+      2          //!file     si_cra.c
+      3          //!brief    Silicon Image Device register I/O support.
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2008-2011, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include "string.h"
+     14          #include "si_common.h"
+     15          
+     16          #if ( configSII_DEV_953x_PORTING == 1 )
+     17          #include "Debug.h"
+     18          #include "I2C1LowLevel.h"
+     19          #endif 
+     20          
+     21          #if ( configSII_DEV_953x_PORTING == 0 )
+     22          #include "si_memsegsupport.h"
+     23          #endif 
+     24          #include "si_platform.h"
+     25          #include "si_cra.h"
+     26          #include "si_cra_internal.h"
+     27          #include "si_cra_cfg.h"
+     28          #include "si_i2c.h"
+     29          
+     30          #if ( configSII_DEV_953x_PORTING == 1 )
+     31          #define I2C_RETRY_TIME 3
+     32          #endif 
+     33          
+     34          static prefuint_t   l_pageInstance[SII_CRA_DEVICE_PAGE_COUNT] = {0};
+     35          extern pageConfig_t g_addrDescriptor[SII_CRA_MAX_DEVICE_INSTANCES][SII_CRA_DEVICE_PAGE_COUNT];
+     36          extern SiiReg_t     g_siiRegPageBaseReassign [];
+     37          extern SiiReg_t     g_siiRegPageBaseRegs[SII_CRA_DEVICE_PAGE_COUNT];
+     38          
+     39          CraInstanceData_t craInstance =
+     40          {
+     41              0,                          // structVersion
+     42              0,                          // instanceIndex
+     43              SII_SUCCESS,                // lastResultCode
+     44              0,                          // statusFlags
+     45          };
+     46          
+     47          //-------------------------------------------------------------------------------------------------
+     48          //! @brief      Read a byte or bytes from the specified bus and i2c device.
+     49          //! @param[in]  busIndex
+     50          //! @param[in]  deviceId    - I2C device address, eight-bit format (addr + r/w bit)
+     51          //! @param[in]  regAddr     - Eight or sixteen bit starting register address
+     52          //! @param[in]  pBuffer     - destination buffer.
+     53          //! @param[in]  count       - number of registers (bytes) to read.
+     54          //! @return     SiiResultCodes_t status of operation (0 == success).
+     55          //-------------------------------------------------------------------------------------------------
+     56          static SiiResultCodes_t CraReadBlockI2c ( prefuint_t busIndex, uint8_t deviceId, uint16_t regAddr, uint8_t *pBuffer, uint16_t count )
+     57          {
+     58              SiiResultCodes_t    status = SII_SUCCESS;
+     59              SiiI2cMsg_t         msgs[2];
+     60              uint8_t             addrData[2];
+     61              int                 addrLen;
+     62          
+     63              uint8_t retry_cnt = 0;
+     64          
+     65          	if ( pBuffer == NULL )
+     66          	{
+     67          		status = SII_ERR_FAIL;
+     68          
+     69          		TRACE_ERROR((0, "CraReadBlockI2c pBuffer is null !! "));
+     70          		return( (SiiResultCodes_t)status ); 
+     71          	}
+     72          
+     73              if ( busIndex != DEV_I2C_ADDR16 )
+     74              {
+     75                  // Only one byte register address
+     76                  addrData[0] = (uint8_t)regAddr;
+     77                  addrLen = 1;
+     78              }
+     79              else
+     80              {
+     81          		TRACE_DEBUG((0, "CraReadBlockI2c  DEV_I2C_ADDR16 "));
+     82                  // Two byte, big endian register address
+     83                  addrData[0] = (uint8_t)(regAddr >> 8);
+     84                  addrData[1] = (uint8_t)(regAddr);
+     85                  addrLen = 2;
+     86              }
+     87          
+     88              // Split into register address write and register data read messages.
+     89              msgs[0].addr        = deviceId;
+     90              msgs[0].cmdFlags    = SII_MI2C_WR;
+     91              msgs[0].len         = addrLen;
+     92              msgs[0].pBuf        = &addrData[0];
+     93              msgs[1].addr        = deviceId;
+     94              msgs[1].cmdFlags    = SII_MI2C_RD;
+     95              msgs[1].len         = count;
+     96              msgs[1].pBuf        = pBuffer;
+     97          
+     98              // Send the messages
+     99          #if ( configSII_DEV_953x_PORTING == 1 )
+    100          	for( retry_cnt = 0; retry_cnt < I2C_RETRY_TIME; retry_cnt ++ )
+    101          	{
+    102          		if (I2C_readSlave( deviceId, regAddr, (byte*)pBuffer, count, FALSE ) == TRUE )
+    103          		{
+    104          			status = SII_SUCCESS;
+    105          			break;
+    106          		}
+    107          		else
+    108          		{
+    109          			status = SII_ERR_FAIL;
+    110          			TRACE_ERROR((0, "sil9533 reading retry %d times; Error device id 0x%X, regAddr 0x%X", retry_cnt, deviceId, regAddr ));
+    111          		}
+    112          	}
+    113          #else
+    114              status = (SiiResultCodes_t)SiiPlatformI2cTransfer( busIndex, &msgs[0], sizeof( msgs ) / sizeof( SiiI2cMsg_t ));
+    115          #endif 
+    116          
+    117              return( (SiiResultCodes_t)status );
+    118          }
+    119          
+    120          //-------------------------------------------------------------------------------------------------
+    121          //! @brief      Write a byte or bytes to the specified bus and i2c device.
+    122          //! @param[in]  busIndex
+    123          //! @param[in]  deviceId    - I2C device address, eight-bit format (addr + r/w bit)
+    124          //! @param[in]  regAddr     - Eight or sixteen bit starting register address
+    125          //! @param[in]  pBuffer     - source data buffer.
+    126          //! @param[in]  count       - number of registers (bytes) to write (maximum 256).
+    127          //! @return     SiiResultCodes_t status of operation (0 == success).
+    128          //-------------------------------------------------------------------------------------------------
+    129          static SiiResultCodes_t CraWriteBlockI2c ( prefuint_t busIndex, uint8_t deviceId, uint16_t regAddr, const uint8_t *pBuffer, uint16_t count )
+    130          {
+    131              SiiResultCodes_t    status = SII_SUCCESS;
+    132              SiiI2cMsg_t         msg;
+    133              uint8_t             srcData [ 2 + 256]; // Room for 256 register data bytes and one or two register address bytes
+    134              uint16_t            msgLen;
+    135          
+    136              uint8_t retry_cnt = 0;
+    137              
+    138          
+    139          	if ( pBuffer == NULL )
+    140          	{
+    141          		TRACE_ERROR((0, "i2c pBuffer is null "));
+    142          		
+    143          		status = SII_ERR_FAIL;
+    144          		return ( (SiiResultCodes_t)status );
+    145          	}
+    146          
+    147              if ( busIndex != DEV_I2C_ADDR16 )
+    148              {
+    149                  // Only one byte register address
+    150                  srcData[0] = (uint8_t)regAddr;
+    151                  msgLen = 1;
+    152              }
+    153              else
+    154              {
+    155          		TRACE_DEBUG((0, "dev i2c addr16 = 0x%X", regAddr));
+    156          		
+    157                  // Two byte, big endian register address
+    158                  srcData[0] = (uint8_t)(regAddr >> 8);
+    159                  srcData[1] = (uint8_t)(regAddr);
+    160                  msgLen = 2;
+    161              }
+    162          
+    163              // Copy payload data to src buffer following the register address.
+    164              memcpy( &srcData[msgLen], pBuffer, count );
+    165              msgLen += count;
+    166          
+    167              // Create message
+    168              msg.addr            = deviceId;
+    169              msg.cmdFlags        = SII_MI2C_WR;
+    170              msg.len             = msgLen;
+    171              msg.pBuf            = &srcData[0];
+    172          
+    173              // Send the messages
+    174          #if ( configSII_DEV_953x_PORTING == 1 )
+    175          	for ( retry_cnt = 0; retry_cnt < I2C_RETRY_TIME; retry_cnt ++ )
+    176          	{
+    177          		if (I2C_writeSlave(deviceId, regAddr, (byte*)pBuffer, count, FALSE, FALSE ) == TRUE )
+    178          		{
+    179          			status = SII_SUCCESS;
+    180          			break;
+    181          		}
+    182          		else
+    183          		{
+    184          			status = SII_ERR_FAIL;
+    185          			TRACE_ERROR((0, "sil9533 writing retry %d times; Error device id 0x%X, regAddr 0x%X", retry_cnt, deviceId, regAddr ));
+    186          		}
+    187          	}
+    188          #else
+    189              status = (SiiResultCodes_t)SiiPlatformI2cTransfer( busIndex, &msg, 1 );
+    190          #endif 
+    191              
+    192              return( (SiiResultCodes_t)status );
+    193          }
+    194          
+    195          #if ( configSII_DEV_953x_PORTING == 1 )
+    196          static void _AmtranRegReadBlock ( SiiReg_t virtualAddr, uint8_t *pBuffer, uint16_t count )
+    197          {
+    198              uint8_t             regOffset = (uint8_t)virtualAddr;
+    199              pageConfig_t        *pPage;
+    200          
+    201              virtualAddr >>= 8;
+    202              pPage = &g_addrDescriptor[ l_pageInstance[ virtualAddr]][ virtualAddr];
+    203          
+    204              switch ( pPage->busType )
+    205              {
+    206                  case DEV_I2C_0:
+    207                      craInstance.lastResultCode = (SiiDrvCraError_t)CraReadBlockI2c( DEV_I2C_0, (uint8_t)pPage->address, regOffset, pBuffer, count );
+    208                      break;
+    209                  case DEV_I2C_OFFSET:
+    210                      craInstance.lastResultCode = (SiiDrvCraError_t)CraReadBlockI2c( DEV_I2C_0, (uint8_t)pPage->address, regOffset + (uint8_t)(pPage->address >> 8), pBuffer, count );
+    211                      break;
+    212                  default:
+    213                      craInstance.lastResultCode = RESULT_CRA_INVALID_PARAMETER;
+    214                      break;
+    215              }
+    216          }
+    217          
+    218          uint8_t _AmtranRegRead ( SiiReg_t virtualAddr )
+    219          {
+    220              uint8_t             value = 0;
+    221              uint8_t             regOffset = (uint8_t)virtualAddr;
+    222              pageConfig_t        *pPage;
+    223          
+    224              virtualAddr >>= 8;
+    225              pPage = &g_addrDescriptor[ l_pageInstance[ virtualAddr]][ virtualAddr];
+    226          
+    227              switch ( pPage->busType )
+    228              {
+    229                  case DEV_I2C_0:
+    230                      craInstance.lastResultCode = (SiiDrvCraError_t)CraReadBlockI2c( DEV_I2C_0, (uint8_t)pPage->address, regOffset, &value, 1 );
+    231                      break;
+    232                  case DEV_I2C_OFFSET:
+    233                      craInstance.lastResultCode = (SiiDrvCraError_t)CraReadBlockI2c( DEV_I2C_0, (uint8_t)pPage->address, regOffset + (uint8_t)(pPage->address >> 8), &value, 1 );
+    234                      break;
+    235                  default:
+    236                      craInstance.lastResultCode = RESULT_CRA_INVALID_PARAMETER;
+    237                      break;
+    238              }
+    239          
+    240              return( value );
+    241          }
+    242          
+    243          static void _AmtranRegWriteBlock ( SiiReg_t virtualAddr, const uint8_t *pBuffer, uint16_t count )
+    244          {
+    245              uint8_t             regOffset = (uint8_t)virtualAddr;
+    246              pageConfig_t        *pPage;
+    247          
+    248              virtualAddr >>= 8;
+    249              pPage = &g_addrDescriptor[l_pageInstance[virtualAddr]][virtualAddr];
+    250          
+    251              switch ( pPage->busType )
+    252              {
+    253                  case DEV_I2C_0:
+    254                      craInstance.lastResultCode = (SiiDrvCraError_t)CraWriteBlockI2c( DEV_I2C_0, (uint8_t)pPage->address, regOffset, pBuffer, count );
+    255                      break;
+    256                  case DEV_I2C_OFFSET:
+    257                      craInstance.lastResultCode = (SiiDrvCraError_t)CraWriteBlockI2c( DEV_I2C_0, (uint8_t)pPage->address, regOffset + (uint8_t)(pPage->address >> 8), pBuffer, count );
+    258                      break;
+    259                  default:
+    260                      craInstance.lastResultCode = RESULT_CRA_INVALID_PARAMETER;
+    261                      break;
+    262              }
+    263          }
+    264          
+    265          static void _AmtranRegWrite ( SiiReg_t virtualAddr, uint8_t value )
+    266          {
+    267              uint8_t             regOffset = (uint8_t)virtualAddr;
+    268              pageConfig_t        *pPage;
+    269          	uint8_t buffer = value;
+    270          
+    271              virtualAddr >>= 8;
+    272              pPage = &g_addrDescriptor[l_pageInstance[virtualAddr]][virtualAddr];
+    273          
+    274              switch ( pPage->busType )
+    275              {
+    276                  case DEV_I2C_0:
+    277                  case DEV_I2C_1:
+    278                  case DEV_I2C_2:
+    279                  case DEV_I2C_3:
+    280                      craInstance.lastResultCode = (SiiDrvCraError_t)CraWriteBlockI2c( pPage->busType, (uint8_t)pPage->address, regOffset, &buffer, 1 );
+    281                      break;
+    282                  case DEV_I2C_OFFSET:
+    283                  case DEV_I2C_1_OFFSET:
+    284                  case DEV_I2C_2_OFFSET:
+    285                  case DEV_I2C_3_OFFSET:
+    286                      craInstance.lastResultCode = (SiiDrvCraError_t)CraWriteBlockI2c( pPage->busType - DEV_I2C_OFFSET , (uint8_t)pPage->address, regOffset + (uint8_t)(pPage->address >> 8), &buffer, 1 );
+    287                      break;
+    288                  default:
+    289                      craInstance.lastResultCode = RESULT_CRA_INVALID_PARAMETER;
+    290                      break;
+    291              }
+    292          
+    293          }
+    294          #endif 
+    295          
+    296          //------------------------------------------------------------------------------
+    297          // Function:    SiiCraInitialize
+    298          // Description: Initialize the CRA page instance array and perform any register
+    299          //              page base address reassignments required.
+    300          // Parameters:  none
+    301          // Returns:     None
+    302          //------------------------------------------------------------------------------
+    303          bool_t SiiCraInitialize ( void )
+    304          {
+    305              prefuint_t i, index;
+    306              craInstance.lastResultCode = RESULT_CRA_SUCCESS;
+    307          
+    308              for (i = 0; i < SII_CRA_DEVICE_PAGE_COUNT; i++)
+    309              {
+    310                  l_pageInstance[i] = 0;
+    311              }
+    312          
+    313              // Perform any register page base address reassignments
+    314              i = 0;
+    315              while ( g_siiRegPageBaseReassign[ i] != 0xFFFF )
+    316              {
+    317                  index = g_siiRegPageBaseReassign[ i] >> 8;
+    318                  if (( index < SII_CRA_DEVICE_PAGE_COUNT ) && ( g_siiRegPageBaseRegs[ index] != 0xFF))
+    319                  {
+    320                      // The page base registers allow reassignment of the
+    321                      // I2C device ID for almost all device register pages.
+    322                      SiiRegWrite( g_siiRegPageBaseRegs[ index], g_siiRegPageBaseReassign[ index] & 0x00FF );
+    323                  }
+    324                  else
+    325                  {
+    326                      craInstance.lastResultCode = SII_ERR_INVALID_PARAMETER;
+    327                      break;
+    328                  }
+    329                  i++;
+    330              }
+    331          
+    332              return( craInstance.lastResultCode == RESULT_CRA_SUCCESS );
+    333          }
+    334          
+    335          //------------------------------------------------------------------------------
+    336          // Function:    SiiCraGetLastResult
+    337          // Description: Returns the result of the last call to a CRA driver function.
+    338          // Parameters:  none.
+    339          // Returns:     Returns the result of the last call to a CRA driver function
+    340          //------------------------------------------------------------------------------
+    341          SiiResultCodes_t SiiCraGetLastResult ( void )
+    342          {
+    343              return( craInstance.lastResultCode );
+    344          }
+    345          
+    346          //------------------------------------------------------------------------------
+    347          // Function:    SiiRegInstanceSet
+    348          // Description: Sets the instance for subsequent register accesses.  The register
+    349          //              access functions use this value as an instance index of the multi-
+    350          //              dimensional virtual address lookup table.
+    351          // Parameters:  newInstance - new value for instance axis of virtual address table.
+    352          // Returns:     None
+    353          //------------------------------------------------------------------------------
+    354          bool_t SiiRegInstanceSet ( SiiReg_t virtualAddress, prefuint_t newInstance )
+    355          {
+    356              prefuint_t va = virtualAddress >> 8;
+    357          
+    358              craInstance.lastResultCode = RESULT_CRA_SUCCESS;
+    359              if (( va < SII_CRA_DEVICE_PAGE_COUNT) && ( newInstance < SII_CRA_MAX_DEVICE_INSTANCES ))
+    360              {
+    361                  l_pageInstance[ va ] = newInstance;
+    362                  return( true );
+    363              }
+    364          
+    365              craInstance.lastResultCode = SII_ERR_INVALID_PARAMETER;
+    366              return( false );
+    367          }
+    368          
+    369          //-------------------------------------------------------------------------------------------------
+    370          //! @brief      Reads a block of data from sequential registers.
+    371          //! @param[in]  virtualAddress  - Sixteen bit virtual register address, including device page.
+    372          //! @param[in]  pBuffer     - destination buffer.
+    373          //! @param[in]  count       - number of registers (bytes) to read.
+    374          //! @return     none
+    375          //! @note       This function relies on the auto-increment model used by
+    376          //! @note       Silicon Image devices.  Because of this, if a FIFO register
+    377          //! @note       is encountered before the end of the requested count, the
+    378          //! @note       data remaining from the count is read from the FIFO, NOT
+    379          //! @note       from subsequent registers.
+    380          //-------------------------------------------------------------------------------------------------
+    381          void SiiRegReadBlock ( SiiReg_t virtualAddr, uint8_t *pBuffer, uint16_t count )
+    382          {
+    383          #if ( configSII_DEV_953x_PORTING == 1 )
+    384              if (App_I2C1_sema_mutex_take() != TRUE)
+    385              {
+    386                  return;
+    387              }
+    388              _AmtranRegReadBlock(virtualAddr, pBuffer, count );
+    389          
+    390              App_I2C1_sema_mutex_give();
+    391          #else
+    392              uint8_t             regOffset = (uint8_t)virtualAddr;
+    393              pageConfig_t        *pPage;
+    394          
+    395              virtualAddr >>= 8;
+    396              pPage = &g_addrDescriptor[ l_pageInstance[ virtualAddr]][ virtualAddr];
+    397          
+    398              switch ( pPage->busType )
+    399              {
+    400                  case DEV_I2C_0:
+    401                      craInstance.lastResultCode = (SiiDrvCraError_t)CraReadBlockI2c( DEV_I2C_0, (uint8_t)pPage->address, regOffset, pBuffer, count );
+    402                      break;
+    403                  case DEV_I2C_OFFSET:
+    404                      craInstance.lastResultCode = (SiiDrvCraError_t)CraReadBlockI2c( DEV_I2C_0, (uint8_t)pPage->address, regOffset + (uint8_t)(pPage->address >> 8), pBuffer, count );
+    405                      break;
+    406                  default:
+    407                      craInstance.lastResultCode = RESULT_CRA_INVALID_PARAMETER;
+    408                      break;
+    409              }
+    410          #endif    
+    411          }
+    412          
+    413          //-------------------------------------------------------------------------------------------------
+    414          //! @brief      Read a one byte register.
+    415          //! @param[in]  virtualAddress  - Sixteen bit virtual register address, including device page.
+    416          //! @return     eight bit register data.
+    417          //-------------------------------------------------------------------------------------------------
+    418          uint8_t SiiRegRead ( SiiReg_t virtualAddr )
+    419          {
+    420          #if ( configSII_DEV_953x_PORTING == 1 )
+    421                  int ret;
+    422                  
+    423                  if (App_I2C1_sema_mutex_take() != TRUE)
+    424                  {
+    425                      return 0;
+    426                  }
+    427                  
+    428                  ret = _AmtranRegRead(virtualAddr);
+    429              
+    430                  App_I2C1_sema_mutex_give();
+    431                  
+    432                  return ret;
+    433          #else
+    434          
+    435              uint8_t             value = 0;
+    436              uint8_t             regOffset = (uint8_t)virtualAddr;
+    437              pageConfig_t        *pPage;
+    438          
+    439              virtualAddr >>= 8;
+    440              pPage = &g_addrDescriptor[ l_pageInstance[ virtualAddr]][ virtualAddr];
+    441          
+    442              switch ( pPage->busType )
+    443              {
+    444                  case DEV_I2C_0:
+    445                      craInstance.lastResultCode = (SiiDrvCraError_t)CraReadBlockI2c( DEV_I2C_0, (uint8_t)pPage->address, regOffset, &value, 1 );
+    446                      break;
+    447                  case DEV_I2C_OFFSET:
+    448                      craInstance.lastResultCode = (SiiDrvCraError_t)CraReadBlockI2c( DEV_I2C_0, (uint8_t)pPage->address, regOffset + (uint8_t)(pPage->address >> 8), &value, 1 );
+    449                      break;
+    450                  default:
+    451                      craInstance.lastResultCode = RESULT_CRA_INVALID_PARAMETER;
+    452                      break;
+    453              }
+    454          
+    455              return( value );
+    456          #endif    
+    457          }
+    458          
+    459          //-------------------------------------------------------------------------------------------------
+    460          //! @brief      Writes a block of data to sequential registers.
+    461          //! @param[in]  virtualAddress  - Sixteen bit virtual register address, including device page.
+    462          //! @param[in]  pBuffer     - source data buffer.
+    463          //! @param[in]  count       - number of registers (bytes) to write.
+    464          //! @return     none
+    465          //! @note       This function relies on the auto-increment model used by
+    466          //! @note       Silicon Image devices.  Because of this, if a FIFO register
+    467          //! @note       is encountered before the end of the requested count, the
+    468          //! @note       data remaining from the count is written to the FIFO, NOT
+    469          //! @note       to subsequent registers.
+    470          //-------------------------------------------------------------------------------------------------
+    471          void SiiRegWriteBlock ( SiiReg_t virtualAddr, const uint8_t *pBuffer, uint16_t count )
+    472          {
+    473          #if ( configSII_DEV_953x_PORTING == 1 )
+    474                      if (App_I2C1_sema_mutex_take() != TRUE)
+    475                      {
+    476                          return;
+    477                      }
+    478                      
+    479                      _AmtranRegWriteBlock( virtualAddr, pBuffer, count );
+    480                  
+    481                      App_I2C1_sema_mutex_give();
+    482          #else
+    483              uint8_t             regOffset = (uint8_t)virtualAddr;
+    484              pageConfig_t        *pPage;
+    485          
+    486              virtualAddr >>= 8;
+    487              pPage = &g_addrDescriptor[l_pageInstance[virtualAddr]][virtualAddr];
+    488          
+    489              switch ( pPage->busType )
+    490              {
+    491                  case DEV_I2C_0:
+    492                      craInstance.lastResultCode = (SiiDrvCraError_t)CraWriteBlockI2c( DEV_I2C_0, (uint8_t)pPage->address, regOffset, pBuffer, count );
+    493                      break;
+    494                  case DEV_I2C_OFFSET:
+    495                      craInstance.lastResultCode = (SiiDrvCraError_t)CraWriteBlockI2c( DEV_I2C_0, (uint8_t)pPage->address, regOffset + (uint8_t)(pPage->address >> 8), pBuffer, count );
+    496                      break;
+    497                  default:
+    498                      craInstance.lastResultCode = RESULT_CRA_INVALID_PARAMETER;
+    499                      break;
+    500              }
+    501          #endif    
+    502          }
+    503          
+    504          //-------------------------------------------------------------------------------------------------
+    505          //! @brief      Write a one byte register.
+    506          //! @param[in]  virtualAddress  - Sixteen bit virtual register address, including device page.
+    507          //! @param[in]  value           - eight bit data to write to register.
+    508          //! @return     None
+    509          //-------------------------------------------------------------------------------------------------
+    510          void SiiRegWrite ( SiiReg_t virtualAddr, uint8_t value )
+    511          {
+    512          #if ( configSII_DEV_953x_PORTING == 1 )
+    513                          if (App_I2C1_sema_mutex_take() != TRUE)
+    514                          {
+    515                              return;
+    516                          }
+    517                          
+    518                          _AmtranRegWrite( virtualAddr, value );
+    519                      
+    520                          App_I2C1_sema_mutex_give();
+    521          #else
+    522              uint8_t             regOffset = (uint8_t)virtualAddr;
+    523              pageConfig_t        *pPage;
+    524          	uint8_t buffer = value;
+    525          
+    526              virtualAddr >>= 8;
+    527              pPage = &g_addrDescriptor[l_pageInstance[virtualAddr]][virtualAddr];
+    528          
+    529              switch ( pPage->busType )
+    530              {
+    531                  case DEV_I2C_0:
+    532                  case DEV_I2C_1:
+    533                  case DEV_I2C_2:
+    534                  case DEV_I2C_3:
+    535                      craInstance.lastResultCode = (SiiDrvCraError_t)CraWriteBlockI2c( pPage->busType, (uint8_t)pPage->address, regOffset, &buffer, 1 );
+    536                      break;
+    537                  case DEV_I2C_OFFSET:
+    538                  case DEV_I2C_1_OFFSET:
+    539                  case DEV_I2C_2_OFFSET:
+    540                  case DEV_I2C_3_OFFSET:
+    541                      craInstance.lastResultCode = (SiiDrvCraError_t)CraWriteBlockI2c( pPage->busType - DEV_I2C_OFFSET , (uint8_t)pPage->address, regOffset + (uint8_t)(pPage->address >> 8), &buffer, 1 );
+    542                      break;
+    543                  default:
+    544                      craInstance.lastResultCode = RESULT_CRA_INVALID_PARAMETER;
+    545                      break;
+    546              }
+    547          #endif    
+    548          }
+    549          
+    550          //------------------------------------------------------------------------------
+    551          // Function:    SiiRegModify
+    552          // Description: Reads the register, performs an AND function on the data using
+    553          //              the mask parameter, and an OR function on the data using the
+    554          //              value ANDed with the mask. The result is then written to the
+    555          //              device register specified in the regAddr parameter.
+    556          // Parameters:  regAddr - Sixteen bit register address, including device page.
+    557          //              mask    - Eight bit mask
+    558          //              value   - Eight bit data to be written, combined with mask.
+    559          // Returns:     None
+    560          //------------------------------------------------------------------------------
+    561          void SiiRegModify ( SiiReg_t virtualAddr, uint8_t mask, uint8_t value)
+    562          {
+    563              uint8_t aByte;
+    564          
+    565              aByte = SiiRegRead( virtualAddr );
+    566              aByte &= (~mask);                       // first clear all bits in mask
+    567              aByte |= (mask & value);                // then set bits from value
+    568              SiiRegWrite( virtualAddr, aByte );
+    569          }
+    570          
+    571          //------------------------------------------------------------------------------
+    572          // Function:    SiiRegBitsSet
+    573          // Description: Reads the register, sets the passed bits, and writes the
+    574          //              result back to the register.  All other bits are left untouched
+    575          // Parameters:  regAddr - Sixteen bit register address, including device page.
+    576          //              bits   - bit data to be written
+    577          // Returns:     None
+    578          //------------------------------------------------------------------------------
+    579          void SiiRegBitsSet ( SiiReg_t virtualAddr, uint8_t bitMask, bool_t setBits )
+    580          {
+    581              uint8_t aByte;
+    582          
+    583              aByte = SiiRegRead( virtualAddr );
+    584              aByte = (setBits) ? (aByte | bitMask) : (aByte & ~bitMask);
+    585              SiiRegWrite( virtualAddr, aByte );
+    586          }
+    587          
+    588          //------------------------------------------------------------------------------
+    589          // Function:    SiiRegBitsSetNew
+    590          // Description: Reads the register, sets or clears the specified bits, and
+    591          //              writes the result back to the register ONLY if it would change
+    592          //              the current register contents.
+    593          // Parameters:  regAddr - Sixteen bit register address, including device page.
+    594          //              bits   - bit data to be written
+    595          //              setBits- true == set, false == clear
+    596          // Returns:     None
+    597          //------------------------------------------------------------------------------
+    598          void SiiRegBitsSetNew ( SiiReg_t virtualAddr, uint8_t bitMask, bool_t setBits )
+    599          {
+    600              uint8_t newByte, oldByte;
+    601          
+    602              oldByte = SiiRegRead( virtualAddr );
+    603              newByte = (setBits) ? (oldByte | bitMask) : (oldByte & ~bitMask);
+    604              if ( oldByte != newByte )
+    605              {
+    606                  SiiRegWrite( virtualAddr, newByte );
+    607              }
+    608          }
+    609          
+    610          //-------------------------------------------------------------------------------------------------
+    611          //! @brief      Reads a block of data from EDID record over DDC link.
+    612          //! @param[in]  segmentAddress  - Sixteen bit virtual EDID segment address, including device page.
+    613          //! @param[in]  virtualAddress  - Sixteen bit virtual EDID address, including device page.
+    614          //! @param[in]  pBuffer         - source data buffer.
+    615          //! @param[in]  count           - number of registers (bytes) to read.
+    616          //! @return     none
+    617          //-------------------------------------------------------------------------------------------------
+    618          void SiiRegEdidReadBlock ( SiiReg_t segmentAddr, SiiReg_t virtualAddr, uint8_t *pBuffer, uint16_t count )
+    619          {
+    620              uint8_t             regOffset = (uint8_t)virtualAddr;
+    621              pageConfig_t        *pPage;
+    622              SiiI2cMsg_t         msgs[3];
+    623              int                 msgIndex = 0;
+    624          
+    625              // Split into register address write and register data read messages.
+    626              if ((segmentAddr & 0xFF) != 0)  // Default segment #0 index should not be sent explicitly
+    627              {
+    628                  regOffset = (uint8_t)segmentAddr;
+    629                  segmentAddr >>= 8;
+    630                  pPage = &g_addrDescriptor[l_pageInstance[segmentAddr]][segmentAddr];
+    631          
+    632                  // Write non-zero EDID segment address
+    633                  msgs[0].addr        = pPage->address;
+    634                  msgs[0].cmdFlags    = SII_MI2C_WR;
+    635                  msgs[0].len         = 1;
+    636                  msgs[0].pBuf        = &regOffset;
+    637                  msgIndex = 1;
+    638              }
+    639          
+    640              // Read the actual EDID data
+    641              regOffset = (uint8_t)virtualAddr;
+    642              virtualAddr >>= 8;
+    643              pPage = &g_addrDescriptor[l_pageInstance[virtualAddr]][virtualAddr];
+    644              msgs[msgIndex].addr        = pPage->address;
+    645              msgs[msgIndex].cmdFlags    = SII_MI2C_WR;
+    646              msgs[msgIndex].len         = 1;
+    647              msgs[msgIndex].pBuf        = &regOffset;
+    648              msgIndex++;
+    649              msgs[msgIndex].addr        = pPage->address;
+    650              msgs[msgIndex].cmdFlags    = SII_MI2C_RD;
+    651              msgs[msgIndex].len         = count;
+    652              msgs[msgIndex].pBuf        = pBuffer;
+    653          
+    654              // Send the messages
+    655              craInstance.lastResultCode = (SiiDrvCraError_t)SiiPlatformI2cTransfer( pPage->busType, &msgs[0], sizeof( msgs ) / sizeof( SiiI2cMsg_t ));
+    656          }
+    657          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       32  CraReadBlockI2c
+              32 -> Debug_printDebug
+              32 -> Debug_printError
+              32 -> I2C_readSlave
+      304  CraWriteBlockI2c
+             304 -> Debug_printDebug
+             304 -> Debug_printError
+             304 -> I2C_writeSlave
+             304 -> __aeabi_memcpy
+        0  SiiCraGetLastResult
+       24  SiiCraInitialize
+              24 -> SiiRegWrite
+              24 -> __aeabi_memclr4
+       16  SiiRegBitsSet
+              16 -> SiiRegRead
+               0 -> SiiRegWrite
+       16  SiiRegBitsSetNew
+              16 -> SiiRegRead
+               0 -> SiiRegWrite
+       64  SiiRegEdidReadBlock
+              64 -> SiiPlatformI2cTransfer
+        0  SiiRegInstanceSet
+       16  SiiRegModify
+              16 -> SiiRegRead
+               0 -> SiiRegWrite
+        8  SiiRegRead
+               8 -> App_I2C1_sema_mutex_give
+               8 -> App_I2C1_sema_mutex_take
+               8 -> _AmtranRegRead
+       24  SiiRegReadBlock
+               0 -> App_I2C1_sema_mutex_give
+              24 -> App_I2C1_sema_mutex_take
+              24 -> CraReadBlockI2c
+       24  SiiRegWrite
+              24 -> App_I2C1_sema_mutex_give
+              24 -> App_I2C1_sema_mutex_take
+              24 -> CraWriteBlockI2c
+       24  SiiRegWriteBlock
+               0 -> App_I2C1_sema_mutex_give
+              24 -> App_I2C1_sema_mutex_take
+              24 -> CraWriteBlockI2c
+       24  _AmtranRegRead
+              24 -> CraReadBlockI2c
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      36  ?<Constant "CraReadBlockI2c  DEV_...">
+      36  ?<Constant "CraReadBlockI2c pBuff...">
+      24  ?<Constant "dev i2c addr16 = 0x%X">
+      24  ?<Constant "i2c pBuffer is null ">
+      68  ?<Constant "sil9533 reading retry...">
+      68  ?<Constant "sil9533 writing retry...">
+       4  ??DataTable12
+       4  ??DataTable12_1
+       4  ??DataTable12_2
+       4  ??DataTable12_3
+      10  ?Subroutine0
+       8  ?Subroutine1
+      28  ?Subroutine2
+      16  ?Subroutine3
+       8  ?Subroutine4
+      10  ?Subroutine5
+     104  CraReadBlockI2c
+     146  CraWriteBlockI2c
+       6  SiiCraGetLastResult
+      82  SiiCraInitialize
+      18  SiiRegBitsSet
+      26  SiiRegBitsSetNew
+     158  SiiRegEdidReadBlock
+      34  SiiRegInstanceSet
+      16  SiiRegModify
+      32  SiiRegRead
+      48  SiiRegReadBlock
+     104  SiiRegWrite
+      48  SiiRegWriteBlock
+      90  _AmtranRegRead
+     112  craInstance
+          l_pageInstance
+
+ 
+   112 bytes in section .bss
+ 1 264 bytes in section .text
+ 
+ 1 264 bytes of CODE memory
+   112 bytes of DATA memory
+
+Errors: none
+Warnings: 7

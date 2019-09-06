@@ -1,0 +1,830 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:15 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\si_drv_i #
+#                    pv.c                                                     #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\si_drv_i #
+#                    pv.c -D S4051A -D DEBUG -D FREE_RTOS -D STM32F40_41xxx   #
+#                    -D USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D          #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_drv_ipv.lst                                        #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_drv_ipv.o                                           #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\si_drv_ipv.c
+      1          //**************************************************************************
+      2          //!file     si_drv_ipv.c
+      3          //!brief    SiI9535 InstaPrevue driver functions.
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1060 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2008-2010, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include "string.h"
+     14          #include "si_ipv_component.h"
+     15          #include "si_drv_ipv_internal.h"
+     16          #include "si_drv_device.h"
+     17          #include "si_regs_pp953x.h"
+     18          #include "si_regs_ipv953x.h"
+     19          #include "si_cra.h"
+     20          
+     21          //------------------------------------------------------------------------------
+     22          //  Driver Data
+     23          //------------------------------------------------------------------------------
+     24          
+     25          IpvDrvInstanceData_t drvIpvInstance[SII_NUM_IPV];
+     26          IpvDrvInstanceData_t *pDrvIpv = &drvIpvInstance[0];
+     27          
+     28          //-------------------------------------------------------------------------------------------------
+     29          //! @brief      Initialize the IPV driver.
+     30          //!
+     31          //! @return     true - success  false - some failure occurred
+     32          //------------------------------------------------------------------------------
+     33          bool_t SiiDrvIpvInitialize ( void )
+     34          {
+     35              memset( pDrvIpv, 0, sizeof( IpvDrvInstanceData_t ));    // Clear instance data
+     36          
+     37              SiiRegInstanceSet( PP_PAGE, 0 );        // Always use instance 0 for CRA
+     38              SiiDrvIpvEnable( false );               // Start disabled
+     39          
+     40              // Disable SF animation feature by default
+     41              SiiDrvIpvAnimationEnable(false);
+     42              // Set speed and acceleration for moves
+     43              SiiDrvIpvAnimationConfig(5, 16, 5, 16);
+     44          
+     45              // Enable the interrupts for this driver
+     46              SiiRegBitsSet( REG_INT_ENABLE_IP4, BIT_MP_RES_STABLE_CHG, true );
+     47              return( true );
+     48          }
+     49          
+     50          //------------------------------------------------------------------------------
+     51          // @brief   Place IPV driver in standby
+     52          //------------------------------------------------------------------------------
+     53          bool_t SiiDrvIpvStandby ( void )
+     54          {
+     55          
+     56              //Disable interrupts used by the IPV driver
+     57              SiiRegBitsSet( REG_INT_ENABLE_IP4, BIT_MP_RES_STABLE_CHG, false );
+     58          
+     59              // Clear outstanding interrupts
+     60              SiiRegWrite( REG_INT_STATUS_IP4, BIT_MP_RES_STABLE_CHG );
+     61          
+     62              return( true );
+     63          }
+     64          
+     65          //-------------------------------------------------------------------------------------------------
+     66          //! @brief      Returns the result of the last call to a IPV driver function.
+     67          //!
+     68          //! @return     SiiDrvIpvResultCodes_t
+     69          //-------------------------------------------------------------------------------------------------
+     70          SiiDrvIpvResultCodes_t SiiDrvIpvGetLastResult( void )
+     71          {
+     72              return( pDrvIpv->lastResultCode );
+     73          }
+     74          
+     75          //-------------------------------------------------------------------------------------------------
+     76          //! @brief      Select the basic operating mode for InstaPrevue.
+     77          //!
+     78          //! @param[in]  mode -  SiiIpvModeALL:      Always display all 5 ports
+     79          //!                     SiiIpvModeACTIVE:   Display only active ports
+     80          //!                     SiiIpvModeSELECT:   Display only RP selected port (PIP mode)
+     81          //
+     82          //! @comment    IPV must be disabled when this function is called.
+     83          //-------------------------------------------------------------------------------------------------
+     84          void SiiDrvIpvModeSet ( SiiIpvMode_t mode )
+     85          {
+     86              pDrvIpv->lastResultCode = SII_DRV_IPV_SUCCESS;
+     87              switch ( mode )
+     88              {
+     89                  case SiiIpvModeALL:
+     90                  case SiiIpvModeACTIVE:
+     91                      pDrvIpv->ipvMode = mode;
+     92                      SiiRegWrite( REG_IPV_MODE, mode );
+     93                      SiiRegWrite( REG_IP_CONFIG_47, CLEAR_BITS );
+     94                      SiiRegModify( REG_IP_CONFIG_43, BGND_DISABLE, CLEAR_BITS );
+     95                      // Disable RP AVI InfoFrame interrupts when roving mode
+     96                      // to avoid them coming as a result of pipe moving from port to port
+     97                      SiiRegBitsSet( REG_INT_ENABLE_P4, BIT_RP_NEW_AVI, false );
+     98                      //SiiRegWrite( REG_PAUTH_RPOVR, CLEAR_BITS );
+     99                  	//SiiRegWrite( REG_PAUTH_RP_AOVR, CLEAR_BITS );
+    100                  	//SiiRegModify(REG_RX_PORT_SEL, MSK_RP_PORT_SEL, CLEAR_BITS);
+    101          
+    102                      break;
+    103                  case SiiIpvModeSELECT:
+    104                      pDrvIpv->ipvMode = SiiIpvModeSELECT;
+    105                      SiiRegWrite( REG_IPV_MODE, SiiIpvModeSELECT );
+    106                      //SiiRegWrite( REG_IP_CONFIG_43, CLEAR_BITS );
+    107                      //SiiRegWrite( REG_IP_CONFIG_47, pDrvIpv->pipSpSource );
+    108                      SiiRegModify(REG_IP_CONFIG_47, MSK_ALL_PORTS, 0x01 << pDrvIpv->pipSpSource);
+    109                      SiiRegModify( REG_IP_CONFIG_43, BGND_DISABLE, SET_BITS );
+    110          
+    111                      // Enable RP AVI InfoFrame interrupts when in PIP (non-roving)
+    112                      SiiRegBitsSet( REG_INT_ENABLE_P4, BIT_RP_NEW_AVI, true );
+    113                  	//SiiRegWrite( REG_PAUTH_RPOVR, (BIT_FORCE_RP_SELECTION | (BIT_FORCE_RP_PORT << pDrvIpv->pipSpSource)) );
+    114                  	// Enable Audio Mixing
+    115                  	//SiiRegWrite( REG_PAUTH_RP_AOVR, (BIT_FORCE_RP_PORT << pDrvIpv->pipSpSource) );
+    116          
+    117                  	//SiiRegModify(REG_RX_PORT_SEL, MSK_RP_PORT_SEL, (pDrvIpv->pipSpSource << VAL_RP_SHIFT));
+    118          
+    119                      break;
+    120                  default:
+    121                      pDrvIpv->lastResultCode = SII_DRV_IPV_ERR_INVALID_PARAMETER;
+    122                      break;
+    123              }
+    124          }
+    125          
+    126          
+    127          //-------------------------------------------------------------------------------------------------
+    128          //! @brief      Select the PIP source.
+    129          //!
+    130          //! @param[in]  port -  SP source for PIP
+    131          //
+    132          //-------------------------------------------------------------------------------------------------
+    133          void SiiDrvIpvPIPSourceSet ( uint8_t spPort )
+    134          {
+    135          	pDrvIpv->pipSpSource = spPort;
+    136          }
+    137          
+    138          
+    139          //-------------------------------------------------------------------------------------------------
+    140          //! @brief      Start or stop the IPV engine and display.
+    141          //!             When started, IPV display mixing is enabled. When stopped, the IPV
+    142          //!             display is removed from the main pipe display.  If an alpha blend
+    143          //!             step is specified in the _SiiIpvThemeData_t structure, each display
+    144          //!             window will fade in and out at the specified step rate.
+    145          //!
+    146          //! @param[in]  isEnable -  true:   display
+    147          //!                         false:  hide
+    148          //! @remark     Only windows in the enableMask are affected by this function.
+    149          //-------------------------------------------------------------------------------------------------
+    150          void SiiDrvIpvEnable ( bool_t isEnable )
+    151          {
+    152              pDrvIpv->lastResultCode = SII_DRV_IPV_SUCCESS;
+    153          
+    154              pDrvIpv->isEnabled = isEnable;
+    155              if ( isEnable )
+    156              {
+    157                  SiiRegModify( REG_IPV_CTRL, IPV_RESTART_CTRL1 | IPV_RESTART_CTRL0, SET_BITS );  // (Re)Start down scaler
+    158                  SiiRegModify( REG_IPV_WIN_STATUS, BIT_FORCE_BLANK, CLEAR_BITS );                // Enable video to preview windows
+    159          
+    160          
+    161                  SiiRegWrite( REG_IPV_WIN_ENABLE, pDrvIpv->enableMask);  // enable window display
+    162          
+    163                  SiiRegWrite( REG_IP_AUTH_PORT_TIME_23_16, 10 );
+    164          
+    165          
+    166                  if(pDrvIpv->ipvMode == SiiIpvModeSELECT)
+    167                  {
+    168                  	// Enable Audioi Mux. Mix Audio from Roving port to main pipe
+    169                  	//SiiRegWrite(REG_PACKET_MUX0_CTRL, (BIT_PIPE_SUB_SELECT | BIT_PIPE_SELECTION_ENABLE));//select subpipe audio..
+    170                  	SiiRegWrite(REG_PACKET_MUX0_CTRL, (BIT_PIPE_SUB_SELECT));
+    171                  }
+    172                  else
+    173                  {
+    174                  	// Disable Audioi Mux. Allow Audio from main pipe
+    175                  	SiiRegModify( REG_PACKET_MUX0_CTRL, (BIT_PIPE_SUB_SELECT | BIT_PIPE_SELECTION_ENABLE), CLEAR_BITS );
+    176                  }
+    177          
+    178              }
+    179              else
+    180              {
+    181                  SiiRegWrite( REG_IPV_WIN_ENABLE, 0 );
+    182                  SiiRegModify( REG_IPV_WIN_STATUS, BIT_FORCE_BLANK, BIT_FORCE_BLANK );           // Disable video to preview windows - force to blank
+    183          
+    184                  SiiRegWrite( REG_IP_AUTH_PORT_TIME_23_16, 3 );
+    185          
+    186          		// Disable Audioi Mux. Allow Audio from main pipe
+    187          		SiiRegModify( REG_PACKET_MUX0_CTRL, (BIT_PIPE_SUB_SELECT | BIT_PIPE_SELECTION_ENABLE), CLEAR_BITS );
+    188              }
+    189          }
+    190          
+    191          //-------------------------------------------------------------------------------------------------
+    192          //! @brief      Resets IPV downsampler logic.
+    193          //!
+    194          //!             This function helps IPV logic to recognize and apply changes in AVI InfoFrame
+    195          //!             when video resolution or video clock don't change.
+    196          //-------------------------------------------------------------------------------------------------
+    197          
+    198          void SiiDrvIpvDownsamplerReset()
+    199          {
+    200              SiiRegModify(REG_IPV_CTRL, IPV_RESTART_CTRL1, SET_BITS);
+    201          }
+    202          
+    203          //-------------------------------------------------------------------------------------------------
+    204          //! @brief
+    205          //!
+    206          //! @param[in]
+    207          //-------------------------------------------------------------------------------------------------
+    208          void SiiDrvIpvEnableMaskSet ( uint_t enableMask )
+    209          {
+    210              if ( enableMask & ~MSK_ENABLE_MASK )
+    211              {
+    212                  pDrvIpv->lastResultCode = SII_DRV_IPV_ERR_INVALID_PARAMETER;
+    213              }
+    214              else
+    215              {
+    216                  pDrvIpv->enableMask = enableMask;
+    217                  pDrvIpv->lastResultCode = SII_DRV_IPV_SUCCESS;
+    218              }
+    219          }
+    220          
+    221          //-------------------------------------------------------------------------------------------------
+    222          //! @brief
+    223          //!
+    224          //! @param[in]
+    225          //-------------------------------------------------------------------------------------------------
+    226          void SiiDrvIpvBorderEnablesSet ( uint8_t borderEnableMask )
+    227          {
+    228              if ( borderEnableMask & ~MSK_DB )
+    229              {
+    230                  pDrvIpv->lastResultCode = SII_DRV_IPV_ERR_INVALID_PARAMETER;
+    231              }
+    232              else
+    233              {
+    234                  pDrvIpv->lastResultCode = SII_DRV_IPV_SUCCESS;
+    235                  SiiRegWrite( REG_IPV_BORDER_CTRL, borderEnableMask & MSK_DB );
+    236              }
+    237          }
+    238          
+    239          //-------------------------------------------------------------------------------------------------
+    240          //! @brief      Enable/Disable InstaPrevue Animation feature.
+    241          //!
+    242          //! @param[in]  isEnabled
+    243          //-------------------------------------------------------------------------------------------------
+    244          
+    245          void SiiDrvIpvAnimationEnable(bool_t isEnabled)
+    246          {
+    247              pDrvIpv->isAnimationEnabled = isEnabled;
+    248              SiiRegModify( REG_PV_LOC_CTRL, BIT_PV_SF_ANIM_ENABLE, isEnabled ? SET_BITS : CLEAR_BITS);
+    249          }
+    250          
+    251          //-------------------------------------------------------------------------------------------------
+    252          //! @brief      Check if InstaPrevue Animation has fully completed, so that all sub-frames
+    253          //!             are in their target places.
+    254          //-------------------------------------------------------------------------------------------------
+    255          
+    256          bool_t SiiDrvIpvAnimationIsComplete(void)
+    257          {
+    258              if (pDrvIpv->isAnimationEnabled)
+    259              {
+    260                  return SiiRegRead( REG_PV_LOC_CTRL) & BIT_PV_SF_MOVE_START;
+    261              }
+    262              else
+    263              {
+    264                  return true;
+    265              }
+    266          }
+    267          
+    268          //-------------------------------------------------------------------------------------------------
+    269          //! @brief      Set speed and acceleration factors for IPV animation feature.
+    270          //!
+    271          //! @param[in]  xSpeed - initial speed in horizontal direction
+    272          //! @param[in]  xAccel - acceleration in horizontal direction
+    273          //! @param[in]  ySpeed - initial speed in vertical direction
+    274          //! @param[in]  yAccel - acceleration in vertical direction
+    275          //-------------------------------------------------------------------------------------------------
+    276          
+    277          void SiiDrvIpvAnimationConfig(int_t xSpeed, int_t xAccel, int_t ySpeed, int_t yAccel)
+    278          {
+    279              // Horizontal
+    280              SiiRegWrite(REG_PV_LOC_CTRL_X_SP, xSpeed);
+    281              SiiRegWrite(REG_PV_LOC_CTRL_X_AC, xAccel);
+    282              // Vertical
+    283              SiiRegWrite(REG_PV_LOC_CTRL_Y_SP, ySpeed);
+    284              SiiRegWrite(REG_PV_LOC_CTRL_Y_AC, yAccel);
+    285          }
+    286          
+    287          //-------------------------------------------------------------------------------------------------
+    288          //! @brief
+    289          //!
+    290          //! @param[in]
+    291          //! @warning    Intended to be called from IPV component.  No parameter checking performed.
+    292          //-------------------------------------------------------------------------------------------------
+    293          void SiiDrvIpvWindowCoordSet ( int_t winIndex, uint16_t x, uint16_t y )
+    294          {
+    295              winIndex *= 2;
+    296              SiiRegWrite( REG_IPV_WIN_X0_L + winIndex, (uint8_t)(x >> 0) );
+    297              SiiRegWrite( REG_IPV_WIN_X0_H + winIndex, (uint8_t)(x >> 8) );
+    298              SiiRegWrite( REG_IPV_WIN_Y0_L + winIndex, (uint8_t)(y >> 0) );
+    299              SiiRegWrite( REG_IPV_WIN_Y0_H + winIndex, (uint8_t)(y >> 8) );
+    300          
+    301              if (pDrvIpv->isAnimationEnabled)
+    302              {
+    303                  // Start moving the subframe
+    304                  SiiRegModify( REG_PV_LOC_CTRL, BIT_PV_SF_MOVE_START, SET_BITS);
+    305              }
+    306          
+    307              pDrvIpv->lastResultCode = SII_DRV_IPV_SUCCESS;
+    308          }
+    309          
+    310          //-------------------------------------------------------------------------------------------------
+    311          //! @brief      Set alpha blending level
+    312          //!
+    313          //! @param[in]  winIndex  -  window id
+    314          //! @param[in]  newAlpha  -  alpha level
+    315          //!
+    316          //! @warning    Intended to be called from IPV component.  No parameter checking performed.
+    317          //-------------------------------------------------------------------------------------------------
+    318          void SiiDrvIpvWindowAlphaSet ( int_t winIndex, uint8_t newAlpha )
+    319          {
+    320              int i;
+    321          
+    322              if ( winIndex == -1 )
+    323              {
+    324                  for ( i = 0; i < IPV_WINDOW_COUNT; i++ )
+    325                  {
+    326                      SiiRegWrite( REG_IPV_ALPHA_0 + i, newAlpha );
+    327                  }
+    328              }
+    329              else
+    330              {
+    331                  SiiRegWrite( REG_IPV_ALPHA_0 + winIndex, newAlpha );
+    332              }
+    333          
+    334              pDrvIpv->lastResultCode = SII_DRV_IPV_SUCCESS;
+    335          }
+    336          
+    337          //-------------------------------------------------------------------------------------------------
+    338          //! @brief
+    339          //!
+    340          //! @param[in]
+    341          //! @warning    Intended to be called from IPV component.  No parameter checking is performed.
+    342          //-------------------------------------------------------------------------------------------------
+    343          void SiiDrvIpvBoundaryColorTableSet( SiiIpvBorderColors_t tableIndex, uint8_t *pCrCbY )
+    344          {
+    345              pDrvIpv->lastResultCode = SII_DRV_IPV_SUCCESS;
+    346              switch ( tableIndex )
+    347              {
+    348                  case SiiIpvBorderColorALL:
+    349                  case SiiIpvBorderColorACTIVE:
+    350                  case SiiIpvBorderColorNONAuth:
+    351                  case SiiIpvBorderColorUNSUPPORTED:
+    352                      SiiRegWriteBlock( REG_IPV_ALL_BORDER_CR + (tableIndex * YCBCR_LEN), pCrCbY, YCBCR_LEN );
+    353                      break;
+    354          
+    355                  case SiiIpvBorderColorUNSUPPORTEDBackground:
+    356                      SiiRegWriteBlock( REG_IPV_USF_BGD_CR, pCrCbY, YCBCR_LEN );
+    357                      break;
+    358          
+    359                  default:
+    360                      pDrvIpv->lastResultCode = SII_DRV_IPV_ERR_INVALID_PARAMETER;
+    361                      break;
+    362              }
+    363          }
+    364          
+    365          //-------------------------------------------------------------------------------------------------
+    366          //! @brief
+    367          //!
+    368          //! @param[in]
+    369          //! @warning    Intended to be called from IPV component.  No parameter checking is performed.
+    370          //-------------------------------------------------------------------------------------------------
+    371          void SiiDrvIpvWindowAlphaTableSet( int_t firstWinIndex, uint8_t *pAlphaMax, uint8_t *pAlphaStep, int_t winCount )
+    372          {
+    373              if (winCount <= (IPV_WINDOW_COUNT - firstWinIndex))
+    374              {
+    375                  SiiRegWriteBlock( REG_IPV_ALPHA_0 + firstWinIndex, pAlphaMax, winCount );
+    376                  memcpy( &pDrvIpv->alphaStep[ firstWinIndex], pAlphaStep, winCount );
+    377                  pDrvIpv->lastResultCode = SII_DRV_IPV_SUCCESS;
+    378              }
+    379              else
+    380              {
+    381                  pDrvIpv->lastResultCode = SII_DRV_IPV_ERR_INVALID_PARAMETER;
+    382              }
+    383          }
+    384          
+    385          //-------------------------------------------------------------------------------------------------
+    386          //! @brief
+    387          //!
+    388          //! @param[in]
+    389          //-------------------------------------------------------------------------------------------------
+    390          void SiiDrvIpvWindowAlphaFade( bool_t isEnable )
+    391          {
+    392          
+    393          }
+    394          
+    395          //-------------------------------------------------------------------------------------------------
+    396          //! @brief      Select a preview window size set from one of the built-in sizes.
+    397          //!
+    398          //! @param[in]  newWinSize
+    399          //! @warning    Intended to be called from IPV component.  No parameter checking is performed.
+    400          //-------------------------------------------------------------------------------------------------
+    401          void SiiDrvIpvSizeSet( uint16_t *p16x9, uint16_t *p4x3, uint8_t *pHeight )
+    402          {
+    403              int_t   i;
+    404          
+    405              for ( i = 0; i < IPV_WINDOW_COUNT; i++ )
+    406              {
+    407                  SiiRegWrite( REG_IPV_1WIN_16x9_WIDTH + i, (uint8_t)(p16x9[i] >> 3 ));
+    408                  SiiRegWrite( REG_IPV_1WIN_4x3_WIDTH + i, (uint8_t)(p4x3[i] >> 3 ));
+    409          
+    410                  SiiRegWrite( REG_IPV_1WIN_HEIGHT + i, (uint8_t )(pHeight[i] >> 2 ));
+    411              }
+    412              pDrvIpv->lastResultCode = SII_IPV_SUCCESS;
+    413          }
+    414          
+    415          //-------------------------------------------------------------------------------------------------
+    416          //! @brief      Test for pending interrupts and handle as necessary.
+    417          //!
+    418          //! @param[in]
+    419          //-------------------------------------------------------------------------------------------------
+    420          bool_t SiiDrvIpvHandleInterrupts( void )
+    421          {
+    422              bool_t  resStableAndWasEnabled = false;
+    423              uint8_t u8Data;
+    424          
+    425              if ( pDrvIpv->interruptPending )
+    426              {
+    427                  // Determine new main port resolution stability state.
+    428                  u8Data = SiiRegRead( REG_MP_GCP_STATUS ) & BIT_MP_RES_STABLE;
+    429          
+    430                  DEBUG_PRINT( MSG_DBG, "Resolution Stable Change interrupt: %s   pDrvIpv->wasEnabled : %x\n", (u8Data ? "STABLE" : "UNSTABLE"),pDrvIpv->wasEnabled );
+    431                  if (( u8Data == 0 ) && pDrvIpv->isEnabled )
+    432                  {
+    433                      // Main port resolution is unstable, disable InstaPrevue windows and
+    434                      // clear the sub-frame valid flag.
+    435          
+    436                      pDrvIpv->wasEnabled = true;
+    437                      SiiDrvIpvEnable( false );
+    438                  }
+    439                  else if (( pDrvIpv->wasEnabled )||(pDrvIpv->isEnabled ))
+    440                  {
+    441                      pDrvIpv->wasEnabled = false;
+    442                      resStableAndWasEnabled = true;
+    443                  }
+    444          
+    445                  pDrvIpv->interruptPending = false;
+    446              }
+    447          
+    448              return( resStableAndWasEnabled );
+    449          }
+    450          
+    451          //-------------------------------------------------------------------------------------------------
+    452          //! @brief  Set the local interrupt flag to indicate a resolution stable interrupt was received.
+    453          //-------------------------------------------------------------------------------------------------
+    454          void SiiDrvIpvProcessInterrupts ( void )
+    455          {
+    456              pDrvIpv->interruptPending = true;
+    457          }
+    458          
+    459          //-------------------------------------------------------------------------------------------------
+    460          //! @brief
+    461          //!
+    462          //! @param[in]
+    463          //-------------------------------------------------------------------------------------------------
+    464          int_t SiiDrvIpvActiveWindowsGet ( void )
+    465          {
+    466              return( SiiRegRead( REG_IPV_WIN_STATUS ) & MSK_IPV_WIN_VALID );
+    467          }
+    468          //-------------------------------------------------------------------------------------------------
+    469          //! @brief  Return the HDMI/MHL port selected to the main pipe, even though
+    470          //!         it may not be the source connected to the TX0 output.
+    471          //!
+    472          //-------------------------------------------------------------------------------------------------
+    473          int_t SiiDrvMainPipePortGet ( void )
+    474          {
+    475              // Return the HDMI/MHL port selected to the main pipe, even though
+    476              // it may not be the source connected to the TX0 output.
+    477              return( SiiRegRead( REG_RX_PORT_SEL) & MSK_MP_PORT_SEL );
+    478          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        8  SiiDrvIpvActiveWindowsGet
+              8 -> SiiRegRead
+       16  SiiDrvIpvAnimationConfig
+              0 -> SiiRegWrite
+             16 -> SiiRegWrite
+        0  SiiDrvIpvAnimationEnable
+              0 -> SiiRegModify
+        8  SiiDrvIpvAnimationIsComplete
+              8 -> SiiRegRead
+        0  SiiDrvIpvBorderEnablesSet
+              0 -> SiiRegWrite
+        0  SiiDrvIpvBoundaryColorTableSet
+              0 -> SiiRegWriteBlock
+        0  SiiDrvIpvDownsamplerReset
+              0 -> SiiRegModify
+       24  SiiDrvIpvEnable
+              0 -> SiiRegModify
+             24 -> SiiRegModify
+              0 -> SiiRegWrite
+             24 -> SiiRegWrite
+        0  SiiDrvIpvEnableMaskSet
+        0  SiiDrvIpvGetLastResult
+       16  SiiDrvIpvHandleInterrupts
+             16 -> SiiDrvIpvEnable
+             16 -> SiiRegRead
+        8  SiiDrvIpvInitialize
+              8 -> SiiDrvIpvAnimationConfig
+              8 -> SiiDrvIpvAnimationEnable
+              8 -> SiiDrvIpvEnable
+              8 -> SiiRegBitsSet
+              8 -> SiiRegInstanceSet
+              8 -> __aeabi_memclr4
+       24  SiiDrvIpvModeSet
+              0 -> SiiRegBitsSet
+             24 -> SiiRegModify
+             24 -> SiiRegWrite
+        0  SiiDrvIpvPIPSourceSet
+        0  SiiDrvIpvProcessInterrupts
+       24  SiiDrvIpvSizeSet
+             24 -> SiiRegWrite
+        8  SiiDrvIpvStandby
+              8 -> SiiRegBitsSet
+              8 -> SiiRegWrite
+        0  SiiDrvIpvWindowAlphaFade
+       16  SiiDrvIpvWindowAlphaSet
+             16 -> SiiRegWrite
+       24  SiiDrvIpvWindowAlphaTableSet
+             24 -> SiiRegWriteBlock
+             24 -> __aeabi_memcpy
+       16  SiiDrvIpvWindowCoordSet
+             16 -> SiiRegModify
+             16 -> SiiRegWrite
+        8  SiiDrvMainPipePortGet
+              8 -> SiiRegRead
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable15
+      10  ?Subroutine0
+       8  ?Subroutine1
+      10  ?Subroutine2
+       6  ?Subroutine3
+       8  SiiDrvIpvActiveWindowsGet
+      52  SiiDrvIpvAnimationConfig
+      24  SiiDrvIpvAnimationEnable
+      28  SiiDrvIpvAnimationIsComplete
+      32  SiiDrvIpvBorderEnablesSet
+      48  SiiDrvIpvBoundaryColorTableSet
+      12  SiiDrvIpvDownsamplerReset
+     128  SiiDrvIpvEnable
+      20  SiiDrvIpvEnableMaskSet
+       8  SiiDrvIpvGetLastResult
+      68  SiiDrvIpvHandleInterrupts
+      56  SiiDrvIpvInitialize
+     132  SiiDrvIpvModeSet
+       8  SiiDrvIpvPIPSourceSet
+      10  SiiDrvIpvProcessInterrupts
+      66  SiiDrvIpvSizeSet
+      22  SiiDrvIpvStandby
+       2  SiiDrvIpvWindowAlphaFade
+      48  SiiDrvIpvWindowAlphaSet
+      58  SiiDrvIpvWindowAlphaTableSet
+      74  SiiDrvIpvWindowCoordSet
+       4  SiiDrvMainPipePortGet
+      28  drvIpvInstance
+       4  pDrvIpv
+
+ 
+  28 bytes in section .bss
+   4 bytes in section .data
+ 946 bytes in section .text
+ 
+ 946 bytes of CODE memory
+  32 bytes of DATA memory
+
+Errors: none
+Warnings: 2

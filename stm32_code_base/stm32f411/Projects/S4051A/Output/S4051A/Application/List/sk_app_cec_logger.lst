@@ -1,0 +1,549 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:25:22 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\application\app_cec\sk_ #
+#                    app_cec_logger.c                                         #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\application\app_cec\sk_ #
+#                    app_cec_logger.c -D S4051A -D DEBUG -D FREE_RTOS -D      #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\sk_app_cec_logger.lst                                 #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\sk_app_cec_logger.o                                    #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\application\app_cec\sk_app_cec_logger.c
+      1          //***************************************************************************
+      2          //!file     sk_app_cec_logger.c
+      3          //!brief
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2009-2012, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include "sk_application.h"
+     14          #include "si_cec_component.h"
+     15          #include "si_cec_enums.h"
+     16          #include "string.h"
+     17          
+     18          #if INC_CEC_LOGGER
+     19          
+     20          static char *deckControlMsgs [] =
+     21              {
+     22              "SKIP_FWD",
+     23              "SKIP_BACK",
+     24              "STOP",
+     25              "EJECT"
+     26              };
+     27          
+     28          static char *l_deviceTypeNames [] =
+     29          {
+     30              "TV",
+     31              "RecDev",
+     32              "Reserved",
+     33              "Tuner",
+     34              "Playback",
+     35              "Audio System",
+     36              "Pure CEC Switch",
+     37              "Video Processor"
+     38          };
+     39          
+     40          static char l_descBuffer [40];
+     41          
+     42          //------------------------------------------------------------------------------
+     43          // Function:    CpCecTranslateDeviceType
+     44          // Description: Returns device type string from passed device type index
+     45          //------------------------------------------------------------------------------
+     46          
+     47          char *CpCecTranslateDeviceType ( uint8_t deviceType )
+     48          {
+     49              char *pStr = "Invalid";
+     50          
+     51              if ( deviceType < CEC_DT_COUNT )
+     52              {
+     53                  pStr = l_deviceTypeNames[ deviceType];
+     54              }
+     55              return( pStr );
+     56          }
+     57          
+     58          //------------------------------------------------------------------------------
+     59          // Function:    CpCecTranslateLA
+     60          // Description:
+     61          //
+     62          // Returns a string of up to 19 bytes (including null terminator)
+     63          //------------------------------------------------------------------------------
+     64          
+     65          char *CpCecTranslateLA ( uint8_t bLogAddr )
+     66          {
+     67              char *pStr;
+     68          
+     69              switch ( bLogAddr & CEC_LOGADDR_UNREGORBC )
+     70              {
+     71                  case CEC_LOGADDR_TV:        pStr = "TV";                   break;
+     72                  case CEC_LOGADDR_RECDEV1:   pStr = "RecDev 1";             break;
+     73                  case CEC_LOGADDR_RECDEV2:   pStr = "RecDev 2";             break;
+     74                  case CEC_LOGADDR_TUNER1:    pStr = "Tuner 1";              break;
+     75                  case CEC_LOGADDR_PLAYBACK1: pStr = "Playback 1";           break;
+     76                  case CEC_LOGADDR_AUDSYS:    pStr = "Audio System";         break;
+     77                  case CEC_LOGADDR_PURE_SWITCH:    pStr = "Pure Switch";              break;
+     78                  case CEC_LOGADDR_VIDEO_PROCESSOR:    pStr = "Video Processor";              break;
+     79                  case CEC_LOGADDR_PLAYBACK2: pStr = "Playback 2";           break;
+     80                  case CEC_LOGADDR_RECDEV3:   pStr = "RecDev 3";             break;
+     81                  case CEC_LOGADDR_TUNER4:    pStr = "Tuner 4";              break;
+     82                  case CEC_LOGADDR_PLAYBACK3: pStr = "Playback 3";           break;
+     83                  case CEC_LOGADDR_RES3:      pStr = "Res3";                 break;
+     84                  case CEC_LOGADDR_RES4:      pStr = "Res4";                 break;
+     85                  case CEC_LOGADDR_FREEUSE:   pStr = "FreeUse";              break;
+     86                  case CEC_LOGADDR_UNREGORBC: pStr = "Unreg or Broadcast";   break;
+     87                  default:
+     88                                              pStr = "UNKNOWN LA!";
+     89              }
+     90          
+     91              return( pStr );
+     92          }
+     93          
+     94          //------------------------------------------------------------------------------
+     95          // Function:    CpCecTranslateOpcodeName
+     96          // Description:
+     97          //------------------------------------------------------------------------------
+     98          
+     99          char *CpCecTranslateOpcodeName ( SiiCpiData_t *pMsg )
+    100              {
+    101              char *pName, *pOperand;
+    102              int         i, outIndex;
+    103          
+    104              switch ( pMsg->opcode )
+    105                  {
+    106                  case CECOP_SII_SENDPING:                pName = "PING";                         break;
+    107                  case CECOP_FEATURE_ABORT:               pName = "FEATURE_ABORT";                break;
+    108                  case CECOP_IMAGE_VIEW_ON:               pName = "IMAGE_VIEW_ON";                break;
+    109                  case CECOP_TUNER_STEP_INCREMENT:        pName = "TUNER_STEP_INCREMENT";         break;
+    110                  case CECOP_TUNER_STEP_DECREMENT:        pName = "TUNER_STEP_DECREMENT";         break;
+    111                  case CECOP_TUNER_DEVICE_STATUS:         pName = "TUNER_DEVICE_STATUS";          break;
+    112                  case CECOP_GIVE_TUNER_DEVICE_STATUS:    pName = "GIVE_TUNER_DEVICE_STATUS";     break;
+    113                  case CECOP_RECORD_ON:                   pName = "RECORD_ON";                    break;
+    114                  case CECOP_RECORD_STATUS:               pName = "RECORD_STATUS";                break;
+    115                  case CECOP_RECORD_OFF:                  pName = "RECORD_OFF";                   break;
+    116                  case CECOP_TEXT_VIEW_ON:                pName = "TEXT_VIEW_ON";                 break;
+    117                  case CECOP_RECORD_TV_SCREEN:            pName = "RECORD_TV_SCREEN";             break;
+    118                  case CECOP_GIVE_DECK_STATUS:            pName = "GIVE_DECK_STATUS";             break;
+    119                  case CECOP_DECK_STATUS:                 pName = "DECK_STATUS";                  break;
+    120                  case CECOP_SET_MENU_LANGUAGE:           pName = "SET_MENU_LANGUAGE";            break;
+    121                  case CECOP_CLEAR_ANALOGUE_TIMER:        pName = "CLEAR_ANALOGUE_TIMER";         break;
+    122                  case CECOP_SET_ANALOGUE_TIMER:          pName = "SET_ANALOGUE_TIMER";           break;
+    123                  case CECOP_TIMER_STATUS:                pName = "TIMER_STATUS";                 break;
+    124                  case CECOP_STANDBY:                     pName = "STANDBY";                      break;
+    125                  case CECOP_PLAY:
+    126                      pName = "PLAY";
+    127                      switch ( pMsg->args[0] )
+    128                          {
+    129                          case CEC_PLAY_SCAN_FWD_MIN: pOperand = "SCAN_FWD_MIN";  break;
+    130                          case CEC_PLAY_SCAN_FWD_MED: pOperand = "SCAN_FWD_MED";  break;
+    131                          case CEC_PLAY_SCAN_FWD_MAX: pOperand = "SCAN_FWD_MAX";  break;
+    132                          case CEC_PLAY_SCAN_REV_MIN: pOperand = "SCAN_REV_MIN";  break;
+    133                          case CEC_PLAY_SCAN_REV_MED: pOperand = "SCAN_REV_MED";  break;
+    134                          case CEC_PLAY_SCAN_REV_MAX: pOperand = "SCAN_REV_MAX";  break;
+    135                          case CEC_PLAY_SLOW_FWD_MIN: pOperand = "SLOW_FWD_MIN";  break;
+    136                          case CEC_PLAY_SLOW_FWD_MED: pOperand = "SLOW_FWD_MED";  break;
+    137                          case CEC_PLAY_SLOW_FWD_MAX: pOperand = "SLOW_FWD_MAX";  break;
+    138                          case CEC_PLAY_SLOW_REV_MIN: pOperand = "SLOW_REV_MIN";  break;
+    139                          case CEC_PLAY_SLOW_REV_MED: pOperand = "SLOW_REV_MED";  break;
+    140                          case CEC_PLAY_SLOW_REV_MAX: pOperand = "SLOW_REV_MAX";  break;
+    141                          case CEC_PLAY_REVERSE:      pOperand = "REVERSE";       break;
+    142                          case CEC_PLAY_FORWARD:      pOperand = "FORWARD";       break;
+    143                          case CEC_PLAY_STILL:        pOperand = "STILL";         break;
+    144                          default:                    pOperand = "UNKNOWN";       break;
+    145                          };
+    146                      SiiSprintf( l_descBuffer, "%s (%s)", pName, pOperand );
+    147                      pName = l_descBuffer;
+    148                      break;
+    149                  case CECOP_DECK_CONTROL:
+    150                      pName = "DECK_CONTROL";
+    151                      SiiSprintf( l_descBuffer, "%s (%s)", pName, deckControlMsgs[ pMsg->args[0] - 1] );
+    152                      pName = l_descBuffer;
+    153                      break;
+    154                  case CECOP_TIMER_CLEARED_STATUS:        pName = "TIMER_CLEARED_STATUS";         break;
+    155                  case CECOP_USER_CONTROL_PRESSED:        pName = "USER_CONTROL_PRESSED";         break;
+    156                  case CECOP_USER_CONTROL_RELEASED:       pName = "USER_CONTROL_RELEASED";        break;
+    157                  case CECOP_GIVE_OSD_NAME:               pName = "GIVE_OSD_NAME";                break;
+    158                  case CECOP_SET_OSD_NAME:
+    159                  {
+    160                      pName = "SET_OSD_NAME";
+    161                      outIndex = SiiSprintf( l_descBuffer, "%s (", pName );
+    162                      for ( i = 0; i < pMsg->argCount; i++ )
+    163                      {
+    164                          l_descBuffer[ outIndex++] = pMsg->args[i];
+    165                      }
+    166                      l_descBuffer[ outIndex] = 0;
+    167          
+    168                      strcat( l_descBuffer, ")" );
+    169                      pName = l_descBuffer;
+    170                      break;
+    171                  }
+    172                  case CECOP_SET_OSD_STRING:
+    173                  {
+    174                      pName = "SET_OSD_STRING";
+    175                      outIndex = SiiSprintf( l_descBuffer, "%s (", pName );
+    176                      for ( i = 1; i < pMsg->argCount; i++ )
+    177                          l_descBuffer[ outIndex++] = pMsg->args[i];
+    178                      l_descBuffer[ outIndex] = 0;
+    179          
+    180                      strcat( l_descBuffer, ")" );
+    181                      pName = l_descBuffer;
+    182                      break;
+    183                  }
+    184                  case CECOP_SET_TIMER_PROGRAM_TITLE:     pName = "SET_TIMER_PROGRAM_TITLE";      break;
+    185                  case CECOP_SYSTEM_AUDIO_MODE_REQUEST:   pName = "SYSTEM_AUDIO_MODE_REQUEST";    break;
+    186                  case CECOP_GIVE_AUDIO_STATUS:           pName = "GIVE_AUDIO_STATUS";            break;
+    187                  case CECOP_SET_SYSTEM_AUDIO_MODE:       pName = "SET_SYSTEM_AUDIO_MODE";        break;
+    188                  case CECOP_REPORT_AUDIO_STATUS:         pName = "REPORT_AUDIO_STATUS";          break;
+    189                  case CECOP_GIVE_SYSTEM_AUDIO_MODE_STATUS: pName = "GIVE_SYSTEM_AUDIO_MODE_STATUS";  break;
+    190                  case CECOP_SYSTEM_AUDIO_MODE_STATUS:    pName = "SYSTEM_AUDIO_MODE_STATUS";     break;
+    191                  case CECOP_ROUTING_CHANGE:              pName = "ROUTING_CHANGE";               break;
+    192                  case CECOP_ROUTING_INFORMATION:         pName = "ROUTING_INFORMATION";          break;
+    193                  case CECOP_ACTIVE_SOURCE:               pName = "ACTIVE_SOURCE";                break;
+    194                  case CECOP_GIVE_PHYSICAL_ADDRESS:       pName = "GIVE_PHYSICAL_ADDRESS";        break;
+    195                  case CECOP_REPORT_PHYSICAL_ADDRESS:     pName = "REPORT_PHYSICAL_ADDRESS";      break;
+    196                  case CECOP_REQUEST_ACTIVE_SOURCE:       pName = "REQUEST_ACTIVE_SOURCE";        break;
+    197                  case CECOP_SET_STREAM_PATH:             pName = "SET_STREAM_PATH";              break;
+    198                  case CECOP_DEVICE_VENDOR_ID:            pName = "DEVICE_VENDOR_ID";             break;
+    199                  case CECOP_VENDOR_COMMAND:              pName = "VENDOR_COMMAND";               break;
+    200                  case CECOP_VENDOR_REMOTE_BUTTON_DOWN:   pName = "VENDOR_REMOTE_BUTTON_DOWN";    break;
+    201                  case CECOP_VENDOR_REMOTE_BUTTON_UP:     pName = "VENDOR_REMOTE_BUTTON_UP";      break;
+    202                  case CECOP_GIVE_DEVICE_VENDOR_ID:       pName = "GIVE_DEVICE_VENDOR_ID";        break;
+    203                  case CECOP_MENU_REQUEST:                pName = "MENU_REQUEST";                 break;
+    204                  case CECOP_MENU_STATUS:                 pName = "MENU_STATUS";                  break;
+    205                  case CECOP_GIVE_DEVICE_POWER_STATUS:    pName = "GIVE_DEVICE_POWER_STATUS";     break;
+    206                  case CECOP_REPORT_POWER_STATUS:         pName = "REPORT_POWER_STATUS";          break;
+    207                  case CECOP_GET_MENU_LANGUAGE:           pName = "GET_MENU_LANGUAGE";            break;
+    208                  case CECOP_SELECT_ANALOGUE_SERVICE:     pName = "SELECT_ANALOGUE_SERVICE";      break;
+    209                  case CECOP_SELECT_DIGITAL_SERVICE:      pName = "SELECT_DIGITAL_SERVICE";       break;
+    210                  case CECOP_SET_DIGITAL_TIMER:           pName = "SET_DIGITAL_TIMER";            break;
+    211                  case CECOP_CLEAR_DIGITAL_TIMER:         pName = "CLEAR_DIGITAL_TIMER";          break;
+    212                  case CECOP_SET_AUDIO_RATE:              pName = "SET_AUDIO_RATE";               break;
+    213                  case CECOP_INACTIVE_SOURCE:             pName = "INACTIVE_SOURCE";              break;
+    214                  case CECOP_CEC_VERSION:                 pName = "CEC_VERSION";                  break;
+    215                  case CECOP_GET_CEC_VERSION:             pName = "GET_CEC_VERSION";              break;
+    216                  case CECOP_VENDOR_COMMAND_WITH_ID:      pName = "VENDOR_COMMAND_WITH_ID";       break;
+    217                  case CECOP_CLEAR_EXTERNAL_TIMER:        pName = "CLEAR_EXTERNAL_TIMER";         break;
+    218                  case CECOP_SET_EXTERNAL_TIMER:          pName = "SET_EXTERNAL_TIMER";           break;
+    219                  case CECOP_REPORT_SHORT_AUDIO:          pName = "REPORT_SHORT_AUDIO";           break;
+    220                  case CECOP_REQUEST_SHORT_AUDIO:         pName = "REQUEST_SHORT_AUDIO";          break;
+    221          
+    222                  case CECOP_INITIATE_ARC:                pName = "INITIATE_ARC";                 break;
+    223                  case CECOP_REPORT_ARC_INITIATED:        pName = "REPORT_ARC_INITIATED";         break;
+    224                  case CECOP_REPORT_ARC_TERMINATED:       pName = "REPORT_ARC_TERMINATED";        break;
+    225                  case CECOP_REQUEST_ARC_INITIATION:      pName = "REQUEST_ARC_INITIATION";       break;
+    226                  case CECOP_REQUEST_ARC_TERMINATION:     pName = "REQUEST_ARC_TERMINATION";      break;
+    227                  case CECOP_TERMINATE_ARC:               pName = "TERMINATE_ARC";                break;
+    228          
+    229                  case CDCOP_HEADER:
+    230                  {
+    231                      pName = "CDC Header opcode";
+    232          #if IS_CDC == 1
+    233                      switch ( pMsg->args[2] )    // CDC opcode is parameter byte 2
+    234                      {
+    235                          case CDCOP_HEC_INQUIRE_STATE:       pName = "CDC::HEC_INQUIRE_STATE";       break;
+    236                          case CDCOP_HEC_REPORT_STATE:        pName = "CDC::HEC_REPORT_STATE";        break;
+    237                          case CDCOP_HEC_SET_STATE_ADJACENT:  pName = "CDC::HEC_SET_STATE_ADJACENT";  break;
+    238                          case CDCOP_HEC_SET_STATE:           pName = "CDC::HEC_SET_STATE";           break;
+    239                          case CDCOP_HEC_NOTIFY_ALIVE:        pName = "CDC::HEC_NOTIFY_ALIVE";        break;
+    240                          case CDCOP_HEC_DISCOVER:            pName = "CDC::HEC_DISCOVER";            break;
+    241                          case CDCOP_HPD_SET_STATE:           pName = "CDC::HPD_SET_STATE";           break;
+    242                          case CDCOP_HPD_REPORT_STATE:        pName = "CDC::HPD_REPORT_STATE";        break;
+    243                      };
+    244          #endif
+    245                      break;
+    246                  }
+    247                  case CECOP_ABORT:                       pName = "ABORT";                        break;
+    248                  default:                                pName = "UNKNOWN";                      break;
+    249              }
+    250          
+    251              return( pName );
+    252          }
+    253          
+    254          //------------------------------------------------------------------------------
+    255          // Function:    CpCecPrintCommand
+    256          // Description: Translate CEC transaction into human-readable form.
+    257          //------------------------------------------------------------------------------
+    258          
+    259          void SkAppCecMessageLogger ( SiiCpiData_t *pMsg, int systemType, bool_t isTx )
+    260          {
+    261              char        logStr [120];
+    262              uint16_t    writeCnt;
+    263              int         i;
+    264          
+    265              writeCnt = SiiSprintf(
+    266                  logStr, "CEC%s[%c%02X][%02X]: ",
+    267                  (systemType == 0) ? "RX" : "TX",
+    268                  isTx ? 'W' : 'R', pMsg->srcDestAddr, pMsg->opcode
+    269                  );
+    270              if ( pMsg->argCount > 14 )
+    271              {
+    272                  pMsg->argCount = 14;
+    273              }
+    274              for ( i = 0; i < pMsg->argCount; i++ )
+    275              {
+    276                  writeCnt = SiiSprintf( logStr, "%s%02X ", logStr, pMsg->args[ i] );
+    277              }
+    278          
+    279              /* Add human readable command name  */
+    280          
+    281              SiiSprintf(
+    282                  logStr, "%s%*s%s",
+    283                  logStr,
+    284                  52 - writeCnt, "; ",
+    285                  CpCecTranslateOpcodeName( pMsg )
+    286                  );
+    287              SiiSprintf( logStr, "%s\n", logStr );
+    288          
+    289              DEBUG_PRINT( MSG_STAT, logStr );
+    290              }
+    291          
+    292          #endif  //#if INC_CEC_LOGGER
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: 1

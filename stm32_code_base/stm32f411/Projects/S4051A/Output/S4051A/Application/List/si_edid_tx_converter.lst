@@ -1,0 +1,679 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:50 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\edid_tx\si_ed #
+#                    id_tx_converter.c                                        #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\edid_tx\si_ed #
+#                    id_tx_converter.c -D S4051A -D DEBUG -D FREE_RTOS -D     #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_edid_tx_converter.lst                              #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_edid_tx_converter.o                                 #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\component\edid_tx\si_edid_tx_converter.c
+      1          //************************************************************************************************
+      2          //! @file   si_edid_tx_converter.c
+      3          //! @brief  Modify DS EDID parsed data for the Repeater mode
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1060 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2002-2010, Silicon Image, Inc.  All rights reserved.
+     11          //***********************************************************************************************/
+     12          
+     13          
+     14          #include <string.h>
+     15          #include "si_edid_tx_component.h"
+     16          #include "si_edid_tx_internal.h"
+     17          
+     18          ROM const uint32_t RepeaterSADs[REPEATER_AUDIO__SADS_LENGTH] = REPEATER_AUDIO__SADS;
+     19          
+     20          //-------------------------------------------------------------------------------------------------
+     21          //! @brief      CEC discovery algorithm
+     22          //!             longer
+     23          //!
+     24          //! @param[in]  pCecPhysAddr       - pointer to CEC physical address structure
+     25          //! @param[in]  inputPortIndex     - zero based input port number
+     26          //-------------------------------------------------------------------------------------------------
+     27          
+     28          void EdidTxUsCecPhysAddrDiscovery(cecPhysAddr_t *pCecPhysAddr, uint8_t inputPortIndex)
+     29          {
+     30              uint8_t a = pCecPhysAddr->a;
+     31              uint8_t b = pCecPhysAddr->b;
+     32              uint8_t c = pCecPhysAddr->c;
+     33              uint8_t d = pCecPhysAddr->d;
+     34          
+     35              uint8_t *pAddrPos = NULL;
+     36          
+     37              if (0 == a)
+     38              {
+     39                  // A valid HDMI sink must not have 'a' address equal to 0,
+     40                  // but in case of DVI sink it is possible.
+     41                  // Make "root" address in DVI case.
+     42                  pAddrPos = &a;
+     43                  b = c = d = 0;
+     44              }
+     45              else if (0 == b)
+     46              {
+     47                  pAddrPos = &b;
+     48                  c = d = 0;
+     49              }
+     50              else if (0 == c)
+     51              {
+     52                  pAddrPos = &c;
+     53                  d = 0;
+     54              }
+     55              else if (0 == d)
+     56              {
+     57                  pAddrPos = &d;
+     58              }
+     59              else
+     60              {
+     61                  // nesting limitation
+     62                  a = b = c = d = 0xF;
+     63              }
+     64          
+     65              if (pAddrPos)
+     66                  *pAddrPos = inputPortIndex + 1;
+     67          
+     68              pCecPhysAddr->a = a;
+     69              pCecPhysAddr->b = b;
+     70              pCecPhysAddr->c = c;
+     71              pCecPhysAddr->d = d;
+     72          }
+     73          
+     74          
+     75          //-------------------------------------------------------------------------------------------------
+     76          //! @brief      Set short audio descriptors and speaker configuration
+     77          //-------------------------------------------------------------------------------------------------
+     78          void EdidTxOwnSadAndSpkSet( void )
+     79          {
+     80              // replace SADs
+     81              const uint32_t *p_ref_sads = RepeaterSADs;
+     82              pEdidTx->edidInfo.SadCount = 0;
+     83              while(*p_ref_sads)
+     84              {
+     85                  uint32_t sad = *(p_ref_sads++);
+     86                  pEdidTx->edidInfo.SAD[pEdidTx->edidInfo.SadCount].ByteData.Byte1 = (uint8_t) sad;
+     87                  pEdidTx->edidInfo.SAD[pEdidTx->edidInfo.SadCount].ByteData.Byte2 = (uint8_t) (sad >> 8);
+     88                  pEdidTx->edidInfo.SAD[pEdidTx->edidInfo.SadCount].ByteData.Byte3 = (uint8_t) (sad >> 16);
+     89                  pEdidTx->edidInfo.SadCount++;
+     90                  if (pEdidTx->edidInfo.SadCount > MAX_NMB_OF_SADS) // just a protection
+     91                  {
+     92                      break;
+     93                  }
+     94              }
+     95              pEdidTx->edidInfo.SupportAudio = true;
+     96          
+     97              pEdidTx->edidInfo.SPK.Data = REPEATER_AUDIO__SPEAKERS;
+     98          }
+     99          
+    100          //-------------------------------------------------------------------------------------------------
+    101          //! @brief      Check if the input audio is to be played back by this device (repeater)
+    102          //-------------------------------------------------------------------------------------------------
+    103          
+    104          static bool_t IsAudioToBePlayedLocally(void)
+    105          {
+    106              bool_t play_locally = true; // means replace the audio block, i.e. "Play Locally"
+    107          
+    108          #ifdef ALWAYS_PLAY_AUDIO_LOCALLY_WHEN_DS_DOES_NOT_SUPPORT_AUDIO
+    109              if (SiiEdidTxDoesDsSupport(SI_EDID_TX_SUPPORT_AUDIO)) // But if DS device supports audio
+    110          #endif // ALWAYS_PLAY_AUDIO_LOCALLY_WHEN_DS_DOES_NOT_SUPPORT_AUDIO
+    111              {
+    112                  if (pEdidTx->parseOptions.AudioBypass)  // and a user preferred to play it on the DS device,
+    113                  {
+    114                      play_locally = false;               // then do not replace the audio block with our own one
+    115                  }
+    116              }
+    117              return play_locally;
+    118          }
+    119          
+    120          
+    121          //-------------------------------------------------------------------------------------------------
+    122          //! @brief      Convert audio modes
+    123          //-------------------------------------------------------------------------------------------------
+    124          
+    125          static void ConvertAudioModes ( void )
+    126          {
+    127              if (IsAudioToBePlayedLocally())
+    128              {
+    129                  EdidTxOwnSadAndSpkSet();
+    130          
+    131          #if REPEATER_AUDIO__AI_SUPPORT
+    132                  pEdidTx->edidInfo.HDMI_VSDB.Extras[0] |= 0x80;
+    133                  //pEdidTx->edidInfo.HDMI_VSDB.SupportsAi = REPEATER_AUDIO__AI_SUPPORT;
+    134          #endif // REPEATER_AUDIO__AI_SUPPORT
+    135          
+    136          #ifdef COLLECT_EXTENDED_DATA_BLOCKS
+    137                  pEdidTx->edidInfo.UnknownAudioExt_Idx = 0;
+    138          #endif // COLLECT_EXTENDED_DATA_BLOCKS
+    139              }
+    140              else
+    141              {
+    142                  // use DS audio block
+    143                  if ( pEdidTx->edidInfo.SupportAudio )
+    144                  {
+    145                      // the DS audio block exists
+    146                      if ( pEdidTx->edidInfo.SadCount && !pEdidTx->edidInfo.SPK.Data )
+    147                      {
+    148                          // if SAD exists, but no SPK block
+    149                          pEdidTx->edidInfo.SPK.Fields.FL_FR = true; // use stereo speakers
+    150                      }
+    151                  //  else if ((!pEdidTx->edidInfo.SadCount) && pEdidTx->edidInfo.SPK.Data)
+    152                  //  {
+    153                  //      // if SPK block exists without SADs
+    154                  //      pEdidTx->edidInfo.SPK.Data = 0; // use only "Basic Audio"
+    155                  //  }
+    156                      {
+    157                          // Filter out unsupported audio modes.
+    158                          uint8_t nmb_of_sads = pEdidTx->edidInfo.SadCount;
+    159                          int i;
+    160                          bool_t at_least_one_sad_remain = false;
+    161                          for (i=0; i<nmb_of_sads; i++)
+    162                          {
+    163                              uint8_t coding = pEdidTx->edidInfo.SAD[i].Common.Coding;
+    164                              switch(coding)
+    165                              {
+    166                              case AUDIO_CODING__LPCM: // Linear PCM (e.g., IEC60958)
+    167                                  // Limit PCM audio with stereo up to 96 kHz.
+    168                                  if (pEdidTx->isSpdifOnly)
+    169                                  {
+    170                                      pEdidTx->edidInfo.SAD[i].Common.MaxChannel = 1;
+    171                                      pEdidTx->edidInfo.SAD[i].Common.Fs192k = 0;
+    172                                      pEdidTx->edidInfo.SAD[i].Common.Fs176k = 0;
+    173                                  }
+    174                                  at_least_one_sad_remain = true;
+    175                                  break;
+    176                              case AUDIO_CODING__AC3: // AC-3
+    177                              case AUDIO_CODING__DTS: // DTS
+    178                                  at_least_one_sad_remain = true;
+    179                                  break;
+    180                              case AUDIO_CODING__1BIT:    // One Bit Audio
+    181                              case AUDIO_CODING__DDP: // Dolby Digital +
+    182                              case AUDIO_CODING__DTSHD:   // DTS-HD
+    183                              case AUDIO_CODING__MLP: // MLP
+    184                                  if (pEdidTx->isSpdifOnly)
+    185                                  {
+    186                                      // SPDIF cannot carry the audio stream.
+    187                                      pEdidTx->edidInfo.SAD[i].Common.Coding = 0;
+    188                                  }
+    189                                  else
+    190                                  {
+    191                                      // I2S/DSD interface does support it.
+    192                                      at_least_one_sad_remain = true;
+    193                                  }
+    194                                  break;
+    195                              default:
+    196                                  // Other audio formats are not supported.
+    197                                  pEdidTx->edidInfo.SAD[i].Common.Coding = 0;
+    198                                  break;
+    199                              }
+    200                          }
+    201                          if ( !at_least_one_sad_remain )
+    202                          {
+    203                              // All SAD were filtered out.
+    204                              // Mark as for Basic Audio only:
+    205                              // remove all SAD (clear the index). SPK block will be deleted also on the Composing stage.
+    206                              pEdidTx->edidInfo.SadCount = 0; // notify EDID composer to not create SAD blocks.
+    207                      //      pEdidTx->edidInfo.SPK.Data = 0; // delete SPK block
+    208                          }
+    209                      }
+    210                  }
+    211              }
+    212          }
+    213          
+    214          
+    215          //-------------------------------------------------------------------------------------------------
+    216          //! @brief      Convert EDID configuration from Tx to Rx.
+    217          //!
+    218          //-------------------------------------------------------------------------------------------------
+    219          
+    220          void EdidTxConvert ( void )
+    221          {
+    222              uint8_t latency[4];
+    223          
+    224              // clear the error mask to start count composing (not decoding) errors
+    225              pEdidTx->edidInfo.ErrorCode = EDID_ERROR__OK;
+    226          
+    227              // Convert video modes.
+    228          
+    229              // If user selected an output resolution,
+    230              // check whether that resolution exists
+    231              // and if it does, delete all other modes in pEdidTx->edidInfo.SDTD[]
+    232              if ( !pEdidTx->parseOptions.BypassScaler )
+    233              {
+    234                  int i;
+    235                  uint8_t outIdx = pEdidTx->parseOptions.OutIdx;
+    236                  if ( ((uint8_t) (-1)) != outIdx ) // -1 means "any supported output mode"
+    237                  {
+    238                      // if user selected an output video resolution
+    239          
+    240                      // check if chosen mode is allowed by DS device
+    241                      if ( SiiEdidTxOutVideoModeRankGet( outIdx, SI_EDID_TX_ASPECT_RATIO_UNKNOWN ))
+    242                      {
+    243                          // if the given mode is presented in the DS EDID,
+    244                          // delete all the others
+    245                          for ( i=0; i < MAX_NMB_OF_KNOWN_DTDS; i++)
+    246                          {
+    247                              if ( pEdidTx->edidInfo.SDTD[i].Valid )
+    248                              {
+    249                                  // a valid DS SDTD
+    250                                  if ( outIdx != pEdidTx->edidInfo.SDTD[i].VideoIdx )
+    251                                  {
+    252                                      pEdidTx->edidInfo.SDTD[i].Valid = false;
+    253                                  }
+    254                              } // if (DS SDTD valid)
+    255                          } // for (i)
+    256                      }
+    257                  }
+    258              }
+    259          
+    260              // Find allowed input video modes.
+    261          
+    262              EdidTxScalerConvert();
+    263              if ( !pEdidTx->parseOptions.BypassScaler )
+    264              {
+    265                  if ( ((uint8_t) (-1)) != pEdidTx->parseOptions.OutIdx ) // -1 means "any supported output mode"
+    266                  {
+    267                      // If a user specified an output resolution (not Auto Select mode).
+    268                      if ( !pEdidTx->edidInfo.SDTD[0].Valid ) // after Edid_ScalerConvert() all SDTDs are placed at the beginning
+    269                      {
+    270                          // If no input modes were discovered,
+    271                          // try to repeat the procedure for any output format.
+    272                          EdidTxDsSdtdsGet( pEdidTx->edidInfo.SDTD ); // Recover all DS video modes.
+    273                          EdidTxScalerConvert(); // The second attempt.
+    274                      }
+    275                  }
+    276              }
+    277          
+    278              // Convert Audio modes
+    279              ConvertAudioModes();
+    280              if ( !pEdidTx->pEdidDecodData->edidAnalysis.HdmiMode )       // No audio for DVI
+    281              {
+    282                  pEdidTx->edidInfo.HDMI_VSDB.HdmiMode = false;
+    283                  DEBUG_PRINT( EDID_TX_MSG_DBG, "EDID_CONVERT: DVI Mode selected\n" );
+    284              }
+    285              else
+    286              {
+    287                  // RX with HDMI support
+    288          
+    289                  pEdidTx->edidInfo.HDMI_VSDB.HdmiMode = true;
+    290          
+    291                  if (pEdidTx->isDeepColorOvrd)
+    292                  {
+    293                      pEdidTx->edidInfo.HDMI_VSDB.Extras[0] &= 0x80; // clear all fields except Support_AI
+    294                      if ( pEdidTx->isDeepColor3036 )
+    295                      {
+    296                          pEdidTx->edidInfo.HDMI_VSDB.Extras[0] |= 0x38; // DC_Y444 | DC_36bit | DC_30bit
+    297                          pEdidTx->edidInfo.HDMI_VSDB.Extras[1] = pEdidTx->edidConfig.maxTmdsClock5Mhz; // MAX TMDS Clock
+    298          
+    299                          // Note. Sometimes it may be reasonable to copy DS Max TMDS clock value to US.
+    300                          // Modify this part if it is required.
+    301                      }
+    302                  }
+    303                  else
+    304                  {
+    305                      // Leave DC settings as they are from DS
+    306                      // and limit max TMDS clock frequency according to repeater capabilities
+    307                      if (pEdidTx->edidInfo.HDMI_VSDB.Extras[1] > pEdidTx->edidConfig.maxTmdsClock5Mhz)
+    308                      {
+    309                          pEdidTx->edidInfo.HDMI_VSDB.Extras[1] = pEdidTx->edidConfig.maxTmdsClock5Mhz; // MAX TMDS Clock
+    310                      }
+    311                  }
+    312          
+    313                  // HDMI 1.3a's latency fields support
+    314          
+    315                  if (IsAudioToBePlayedLocally())
+    316                  {
+    317                      latency[0] = EDID_LATENCY_VIDEO_LOCAL;  // Video latency
+    318                      latency[1] = EDID_LATENCY_AUDIO_LOCAL;  // Audio latency
+    319                      latency[2] = EDID_LATENCY_I_VIDEO_LOCAL;// Interlaced Video latency
+    320                      latency[3] = EDID_LATENCY_I_AUDIO_LOCAL;// Interlaced Audio latency
+    321                  }
+    322                  else
+    323                  {
+    324                      latency[0] = 0;// Video latency
+    325                      latency[1] = 0;// Audio latency
+    326                      latency[2] = 0;// Interlaced Video latency
+    327                      latency[3] = 0;// Interlaced Audio latency
+    328                  }
+    329          
+    330                  if ( (0xFF == latency[0]) && (0xFF == latency[1]) && (0xFF == latency[2]) && (0xFF == latency[3]) )
+    331                  {
+    332                      // no latency to be shown to an US device
+    333                      pEdidTx->edidInfo.HDMI_VSDB.Extras[2] = 0;
+    334                  }
+    335                  else
+    336                  {
+    337                      // Calculate latencies to be shown to an US device.
+    338          
+    339                      if ( pEdidTx->edidInfo.HDMI_VSDB.Extras[2] & 0x80)
+    340                      {
+    341                          // if DS latency field are found
+    342          
+    343                          latency[0] += pEdidTx->edidInfo.HDMI_VSDB.Extras[3];
+    344                          latency[1] += pEdidTx->edidInfo.HDMI_VSDB.Extras[4];
+    345          
+    346                          if ( pEdidTx->edidInfo.HDMI_VSDB.Extras[2] & 0x40)
+    347                          {
+    348                              // if DS interlaced latency fields are found
+    349                              latency[2] += pEdidTx->edidInfo.HDMI_VSDB.Extras[5];
+    350                              latency[3] += pEdidTx->edidInfo.HDMI_VSDB.Extras[6];
+    351                          }
+    352                          else
+    353                          {
+    354                              // if DS interlaced latency fields are NOT found
+    355                              latency[2] += pEdidTx->edidInfo.HDMI_VSDB.Extras[3];
+    356                              latency[3] += pEdidTx->edidInfo.HDMI_VSDB.Extras[4];
+    357                          }
+    358                      }
+    359          
+    360                      // clear all latency fields
+    361                      memset( &pEdidTx->edidInfo.HDMI_VSDB.Extras[2], 0, EDID_VSB_LEN__MAX_EXTRAS - 2);
+    362          
+    363                      if (latency[0] || latency[1] || latency[2] || latency[3])
+    364                      {
+    365                          // if any latency field differs from 0
+    366                          pEdidTx->edidInfo.HDMI_VSDB.Extras[3] = latency[0];
+    367                          pEdidTx->edidInfo.HDMI_VSDB.Extras[4] = latency[1];
+    368                          pEdidTx->edidInfo.HDMI_VSDB.Extras[2] |= 0x80;
+    369          
+    370                          if ((latency[0] != latency[2]) ||(latency[1] != latency[3]))
+    371                          {
+    372                              // if interlaced formats have different latency
+    373                              pEdidTx->edidInfo.HDMI_VSDB.Extras[5] = latency[2];
+    374                              pEdidTx->edidInfo.HDMI_VSDB.Extras[6] = latency[3];
+    375                              pEdidTx->edidInfo.HDMI_VSDB.Extras[2] |= 0x40;
+    376                          }
+    377                      }
+    378          
+    379                  }
+    380          
+    381                  // xvYCC support
+    382                  if ( !pEdidTx->isXvYccProfile0 )
+    383                  {
+    384                      // Disable xvYCC if xvYCC is blocked by the component xvYCC option
+    385                      // or if any color space conversion is allowed.
+    386                      pEdidTx->edidInfo.xv601 = false;
+    387                      pEdidTx->edidInfo.xv709 = false;
+    388                  }
+    389          
+    390              }
+    391          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       24  ConvertAudioModes
+             24 -> EdidTxOwnSadAndSpkSet
+             24 -> IsAudioToBePlayedLocally
+       16  EdidTxConvert
+             16 -> ConvertAudioModes
+             16 -> EdidTxDsSdtdsGet
+             16 -> EdidTxScalerConvert
+             16 -> IsAudioToBePlayedLocally
+             16 -> SiiEdidTxOutVideoModeRankGet
+             16 -> __aeabi_memclr
+        8  EdidTxOwnSadAndSpkSet
+        4  EdidTxUsCecPhysAddrDiscovery
+        8  IsAudioToBePlayedLocally
+              8 -> SiiEdidTxDoesDsSupport
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable4
+     204  ConvertAudioModes
+     412  EdidTxConvert
+     122  EdidTxOwnSadAndSpkSet
+     146  EdidTxUsCecPhysAddrDiscovery
+      28  IsAudioToBePlayedLocally
+      24  RepeaterSADs
+
+ 
+ 940 bytes in section .text
+ 
+ 940 bytes of CODE memory
+
+Errors: none
+Warnings: 1

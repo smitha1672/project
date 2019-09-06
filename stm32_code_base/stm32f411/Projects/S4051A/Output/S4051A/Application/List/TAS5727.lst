@@ -1,0 +1,536 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:25:44 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\TAS5727\TAS5727.c               #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\TAS5727\TAS5727.c -D S4051A -D  #
+#                    DEBUG -D FREE_RTOS -D STM32F40_41xxx -D                  #
+#                    USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D             #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\TAS5727.lst                                           #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\TAS5727.o                                              #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\TAS5727\TAS5727.c
+      1          #include "freertos_conf.h"
+      2          #include "freertos_task.h"
+      3          
+      4          #include "TAS5727.h"
+      5          
+      6          #if ( configDAP_TAS5727 == 1 )
+      7          
+      8          #define TAS5727_ENTER_SHUTDOWN    TRUE
+      9          #define TAS5727_EXIT_SHUTDOWN    FALSE
+     10          
+     11          
+     12          /*-------------------------- Register defintion ------------------------------*/
+     13          //      Register Name                             No of Bytes
+     14          #define CLOCK_CTRL_REG                       0x00 // 1
+     15          #define DEVICE_ID_REG                        0x01 // 1
+     16          #define ERROR_STATUS_REG                     0x02 // 1
+     17          #define SYS_CONTROL_1_REG                    0x03 // 1
+     18          #define SERIAL_DATA_REG                      0x04 // 1
+     19          #define SYS_CONTROL_2_REG                    0x05 // 1
+     20          #define SOFT_MUTE_REG                        0x06 // 1
+     21          
+     22          #define MUTE_CH1                             (1<<0) 
+     23          #define MUTE_CH2                             (1<<1)
+     24          #define MUTE_CH3                             (1<<2)
+     25          
+     26          #define MASTER_VOL_REG                       0x07 // 2
+     27          #define CHANNEL_1_VOL_REG                    0x08 // 2
+     28          #define CHANNEL_2_VOL_REG                    0x09 // 2
+     29          #define CHANNEL_3_VOL_REG                    0x0A // 2
+     30          #define VOL_CONFIG_REG                       0x0E // 1
+     31          #define MODULATION_LIMIT_REG                 0x10 // 1
+     32          
+     33          #define IC_DEALY_CH_1_REG                    0x11 // 1
+     34          #define IC_DEALY_CH_2_REG                    0x12 // 1
+     35          #define IC_DEALY_CH_3_REG                    0x13 // 1
+     36          #define IC_DEALY_CH_4_REG                    0x14 // 1
+     37          
+     38          #define START_STOP_PERIOD_REG                0x1A // 1
+     39          #define OSC_TRIM_REG                         0x1B // 1
+     40          #define BKND_ERR_REG                         0x1C // 1
+     41          
+     42          #define INPUT_MUX_REG                        0x20 // 4
+     43          #define CH_4_SOURCE_SELECT_REG               0x20 // 4
+     44          #define PWM_MUX_REG                          0x25 // 4
+     45          
+     46          #define CH_1_BQ_0                            0x26 // 20
+     47          #define CH_1_BQ_1                            0x27 // 20
+     48          #define CH_1_BQ_2                            0x28 // 20
+     49          #define CH_1_BQ_3                            0x29 // 20
+     50          #define CH_1_BQ_4                            0x2A // 20
+     51          #define CH_1_BQ_5                            0x2B // 20
+     52          #define CH_1_BQ_6                            0x2C // 20
+     53          #define CH_1_BQ_7                            0x2D // 20
+     54          #define CH_1_BQ_8                            0x2E // 20
+     55          #define CH_1_BQ_9                            0x2F // 20
+     56          
+     57          #define CH_2_BQ_0                            0x30 // 20
+     58          #define CH_2_BQ_1                            0x31 // 20
+     59          #define CH_2_BQ_2                            0x32 // 20
+     60          #define CH_2_BQ_3                            0x33 // 20
+     61          #define CH_2_BQ_4                            0x34 // 20
+     62          #define CH_2_BQ_5                            0x35 // 20
+     63          #define CH_2_BQ_6                            0x36 // 20
+     64          #define CH_2_BQ_7                            0x37 // 20
+     65          #define CH_2_BQ_8                            0x38 // 20
+     66          #define CH_2_BQ_9                            0x39 // 20
+     67          
+     68          #define DRC_1_SOFTENING_FILTER_AL_OM_REG     0x3B // 8
+     69          #define DRC_1_ATT_REL_RATE_REG               0x3C // 8
+     70          
+     71          #define DRC_2_SOFTENING_FILTER_AL_OM_REG     0x3E // 8
+     72          #define DRC_2_ATT_REL_RATE_REG               0x3F // 8
+     73          
+     74          #define DRC_1_ATT_REL_THRESHOLD_REG          0x40 // 4
+     75          #define DRC_2_ATT_DEC_THRESHOLD_REG          0x43 // 4
+     76          
+     77          #define DRC_CTRL_REG                         0x46 // 4
+     78          #define PWM_SWITCH_RATE_REG                  0x4F // 4
+     79          #define BANK_SWITCH_CTRL_REG                 0x50 // 4
+     80          #define CH_1_OUTPUT_MIXER_REG                0x51 // 8
+     81          #define CH_2_OUTPUT_MIXER_REG                0x52 // 8
+     82          
+     83          #define OUTPUT_POST_SCALE                    0x56 // 4
+     84          #define OUTPUT_PRE_SCALE                     0x57 // 4
+     85          
+     86          #define CH_1_BQ_10_REG                       0x58 // 20
+     87          #define CH_1_BQ_11_REG                       0x59 // 20
+     88          #define CH_4_BQ_0_REG                        0x5A // 20
+     89          #define CH_4_BQ_1_REG                        0x5B // 20
+     90          #define CH_2_BQ_10_REG                       0x5C // 20
+     91          #define CH_2_BQ_11_REG                       0x5D // 20
+     92          #define CH_3_BQ_0_REG                        0x5E // 20
+     93          #define CH_3_BQ_1_REG                        0x5F // 20
+     94          
+     95          #define IDF_POST_SCALE_REG                   0x62 // 4
+     96          #define LEFT_CHANNEL_PWM_LEVEL_REG           0x6B // 4
+     97          #define RIGHT_CHANNEL_PWM_LEVEL_REG          0x6C // 4
+     98          
+     99          #define CH_1_INLINE_MIXER_REG                0x70 // 4
+    100          #define INLINE_DRC_EN_MIXER_CH_1_REG         0x71 // 4
+    101          #define CH_1_RIGHT_CHANNEL_MIXER_REG         0x72 // 4
+    102          #define CH_1_LEFT_CHANNEL_MIXER_REG          0x73 // 4
+    103          
+    104          #define CH_2_INLINE_MIXER_REG                0x74 // 4
+    105          #define INLINE_DRC_EN_MIXER_CH_2_REG         0x75 // 4
+    106          #define CH_2_LEFT_CHANNEL_MIXER_REG          0x76 // 4
+    107          #define CH_2_RIGHT_CHANNEL_MIXER_REG         0x77 // 4
+    108          
+    109          #define UPDATE_DEV_ADD_KEY                   0xF8 // 4
+    110          #define UPDATE_DEV_ADD_REG                   0xF9 // 4
+    111          
+    112          #define MASTER_VOLUME_MUTE 0xFF
+    113          /*----------------------------------------------------------------------------*/
+    114          static byte m_CHANNEL_1_VOL_REG[]={0x00, 0xC0}; 
+    115          static byte m_CHANNEL_2_VOL_REG[]={0x00, 0xC0};
+    116          static byte m_CHANNEL_3_VOL_REG[]={0x00, 0xC0};
+    117          
+    118          
+    119          static byte m_inputMux_Data[]={0x00, 0x89, 0x77, 0x72}; 
+    120          static byte m_PwmMux_Data[]={0x01, 0x02, 0x13, 0x45}; 
+    121          
+    122          static byte m_Master_Vol[]={0x00 ,0x90};
+    123          static byte m_Master_Vol_mute[]={0x03 ,0xff};
+    124          
+    125          /*BD mode or Ternary modulation*/
+    126          #ifdef TAS5727_TERNARY
+    127          #define TAS5727_ICD1 0x80
+    128          #define TAS5727_ICD2 0x7C
+    129          #define TAS5727_ICD3 0x80
+    130          #define TAS5727_ICD4 0x7C
+    131          #define TAS5727_ENTERSHUTDOWN 0x48
+    132          #define TAS5727_EXITSHUTDOWN 0x08
+    133          
+    134          #else /*BD mode*/
+    135          #define TAS5727_ICD1 0xB8
+    136          #define TAS5727_ICD2 0x60
+    137          #define TAS5727_ICD3 0xA0
+    138          #define TAS5727_ICD4 0x48
+    139          #define TAS5727_ENTERSHUTDOWN 0x40
+    140          #define TAS5727_EXITSHUTDOWN 0x00
+    141          
+    142          
+    143          #endif
+    144          
+    145          //____________________________________________________________________________
+    146          static void TAS5727_initialization_LR( bool Address );
+    147          
+    148          static void TAS5727_Master_Vol_Mute_LR(bool Address,bool enable );
+    149          
+    150          //____________________________________________________________________________
+    151          DAP_LR_CTRL_OBJECT DAP_LR_ObjCtrl = 
+    152          {
+    153              TAS5727_initialization_LR,
+    154              TAS5727_Master_Vol_Mute_LR
+    155          };
+    156          const DAP_LR_CTRL_OBJECT *pDAP_LR_ObjCtrl = &DAP_LR_ObjCtrl;
+    157          
+    158          void TAS5727_LR_DRC_enable(bool Address,bool bEnable )
+    159          {
+    160              byte Drc_ctrl[4] = {0x00, 0x00, 0x00, 0x01};
+    161          
+    162              if ( bEnable == TRUE )
+    163              {
+    164                  Drc_ctrl[3] = 0x01;
+    165              }
+    166              else
+    167              {
+    168                  Drc_ctrl[3] = 0x00;
+    169              }
+    170          
+    171              //DRC
+    172              TAS5727_I2C_write_n_byte(Address,DRC_CTRL_REG, Drc_ctrl, 4);
+    173          }
+    174          
+    175          static void TAS5727_Master_Vol_Mute_LR(bool Address,bool enable )
+    176          {
+    177              if ( enable == TRUE )
+    178              {
+    179                  TAS5727_I2C_write(Address,SOFT_MUTE_REG, 0x07);
+    180                  TAS5727_I2C_write_n_byte(Address,MASTER_VOL_REG,m_Master_Vol_mute, 2); /*smith fixes*/
+    181              }
+    182              else
+    183              {
+    184                  TAS5727_I2C_write_n_byte(Address,MASTER_VOL_REG,m_Master_Vol,2);
+    185                  TAS5727_I2C_write(Address,SOFT_MUTE_REG, 0x00);
+    186              }
+    187          }
+    188          
+    189          void TAS5727_shutdown(bool Address,bool value )
+    190          {
+    191              if ( value == TAS5727_ENTER_SHUTDOWN)
+    192              {
+    193                  TAS5727_I2C_write(Address,SYS_CONTROL_2_REG, TAS5727_ENTERSHUTDOWN); /*Enter all-channel shutdown (hard mute)*/
+    194                  vTaskDelay(TASK_MSEC2TICKS(165));
+    195              }
+    196              else
+    197              {
+    198                  TAS5727_I2C_write(Address,SYS_CONTROL_2_REG, TAS5727_EXITSHUTDOWN); /*Exit all-channel shutdown (hard mute)*/
+    199                  vTaskDelay(TASK_MSEC2TICKS(165));
+    200              }
+    201          }
+    202          
+    203          static void TAS5727_initialization_LR( bool Address )
+    204          {
+    205              /*3. Trim oscillator (write 0x00 to register 0x1B) and wait at least 50 ms.*/
+    206              TAS5727_I2C_write(Address,OSC_TRIM_REG, 0x00);
+    207              vTaskDelay(TASK_MSEC2TICKS(50));
+    208          
+    209              //Input Mux Register(BD mode,opt.)
+    210              
+    211              TAS5727_I2C_write_n_byte(Address,PWM_MUX_REG,m_PwmMux_Data,4);    
+    212              
+    213              TAS5727_I2C_write_n_byte(Address,MASTER_VOL_REG,m_Master_Vol_mute,2);
+    214              TAS5727_I2C_write_n_byte(Address,CHANNEL_1_VOL_REG, m_CHANNEL_1_VOL_REG, 2); //0dB
+    215              TAS5727_I2C_write_n_byte(Address,CHANNEL_2_VOL_REG, m_CHANNEL_2_VOL_REG, 2); //0dB
+    216              TAS5727_I2C_write_n_byte(Address,CHANNEL_3_VOL_REG, m_CHANNEL_3_VOL_REG, 2); //0dB
+    217              
+    218              TAS5727_I2C_write(Address,SOFT_MUTE_REG, 0x07);
+    219              TAS5727_I2C_write(Address,SYS_CONTROL_1_REG, 0x80);
+    220              TAS5727_I2C_write(Address,SERIAL_DATA_REG, 0x05);
+    221              TAS5727_I2C_write(Address,SYS_CONTROL_2_REG, TAS5727_ENTERSHUTDOWN);
+    222          
+    223              TAS5727_I2C_write(Address,VOL_CONFIG_REG, 0x91);
+    224              TAS5727_I2C_write(Address,MODULATION_LIMIT_REG, 0x02);
+    225              TAS5727_I2C_write(Address,START_STOP_PERIOD_REG, 0x0a);
+    226              TAS5727_I2C_write(Address,BKND_ERR_REG, 0x02);
+    227              TAS5727_I2C_write(Address,IC_DEALY_CH_1_REG, TAS5727_ICD1);
+    228              TAS5727_I2C_write(Address,IC_DEALY_CH_2_REG, TAS5727_ICD2);
+    229              TAS5727_I2C_write(Address,IC_DEALY_CH_3_REG, TAS5727_ICD3);
+    230              TAS5727_I2C_write(Address,IC_DEALY_CH_4_REG, TAS5727_ICD4);
+    231              TAS5727_I2C_write_n_byte(Address,INPUT_MUX_REG,m_inputMux_Data,4); 
+    232              
+    233              TAS5727_shutdown(Address,TAS5727_EXIT_SHUTDOWN);
+    234          
+    235          }
+    236          
+    237          #endif 
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       16  TAS5727_LR_DRC_enable
+             16 -> TAS5727_I2C_write_n_byte
+       16  TAS5727_Master_Vol_Mute_LR
+              0 -> TAS5727_I2C_write
+             16 -> TAS5727_I2C_write
+              0 -> TAS5727_I2C_write_n_byte
+             16 -> TAS5727_I2C_write_n_byte
+       16  TAS5727_initialization_LR
+             16 -> TAS5727_I2C_write
+             16 -> TAS5727_I2C_write_n_byte
+              0 -> TAS5727_shutdown
+             16 -> vTaskDelay
+        8  TAS5727_shutdown
+              8 -> TAS5727_I2C_write
+              0 -> vTaskDelay
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ?<Constant {0, 0, 0, 1}>
+       4  ??DataTable2
+       6  ?Subroutine0
+       6  ?Subroutine1
+       8  DAP_LR_ObjCtrl
+      32  TAS5727_LR_DRC_enable
+      62  TAS5727_Master_Vol_Mute_LR
+     192  TAS5727_initialization_LR
+      26  TAS5727_shutdown
+      20  m_CHANNEL_1_VOL_REG
+          m_CHANNEL_2_VOL_REG
+          m_CHANNEL_3_VOL_REG
+          m_Master_Vol
+          m_Master_Vol_mute
+          m_inputMux_Data
+          m_PwmMux_Data
+       4  pDAP_LR_ObjCtrl
+
+ 
+  32 bytes in section .data
+ 332 bytes in section .text
+ 
+ 332 bytes of CODE memory
+  32 bytes of DATA memory
+
+Errors: none
+Warnings: 1

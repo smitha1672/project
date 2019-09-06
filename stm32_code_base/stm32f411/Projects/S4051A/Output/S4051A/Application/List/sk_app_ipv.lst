@@ -1,0 +1,543 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:26:04 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\application\app_ipv\sk_ #
+#                    app_ipv.c                                                #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\application\app_ipv\sk_ #
+#                    app_ipv.c -D S4051A -D DEBUG -D FREE_RTOS -D             #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\sk_app_ipv.lst                                        #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\sk_app_ipv.o                                           #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\application\app_ipv\sk_app_ipv.c
+      1          //***************************************************************************
+      2          //!file     sk_app_ipv.c
+      3          //!brief    Application InstaPrevue control
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1060 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2009-2012, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include "sk_application.h"
+     14          #include "sk_app_ipv.h"
+     15          #include "si_drv_ipv.h"
+     16          
+     17          //-------------------------------------------------------------------------------------------------
+     18          //! @brief      Move selection to the next or previous IPV window.
+     19          //!
+     20          //! @param[in]  isForward - select next input (true) or previous input (false)
+     21          //-------------------------------------------------------------------------------------------------
+     22          
+     23          void SkAppIpvCycleInstaPrevueWindows ( bool_t isForward )
+     24          {
+     25              if ((app.currentSource[0] >= SiiSwitchSourceInternalVideo) && (app.currentSource[1] >= SiiSwitchSourceInternalVideo))
+     26              {
+     27                  // Only TMDS source can have IPV overlay
+     28                  return;
+     29              }
+     30          
+     31              // If not enabled, enable InstaPrevue
+     32              if ( !app.ipvEnabled )
+     33              {
+     34                  app.ipvHighlightWindow = 0;
+     35                  if ( SkAppIpvEnable( false ))  // In case PIP was enabled
+     36                  {
+     37                      app.ipvPipEnabled = false;   // Bug 33246 - Melbourne SiI9535 PIP | selected video is NOT displayed
+     38                      SiiIpvModeSet( app.ipvMode );
+     39                      SiiIpvThemeSet( app.ipvTheme );
+     40                      (void)SkAppIpvEnable( true );   // Don't need to check return value here
+     41                      app.ipvEnabled = true;
+     42                      app.ipvHighlightWindow = SiiIpvHighlightWindow( app.ipvHighlightWindow, isForward );
+     43                  }
+     44              }
+     45              // Otherwise, cycle through the highlight window selection
+     46              else
+     47              {
+     48                  if (isForward)
+     49                  {
+     50                      app.ipvHighlightWindow++;
+     51                      if ( app.ipvHighlightWindow >= IPV_WINDOW_COUNT )
+     52                      {
+     53                          app.ipvHighlightWindow = 0;
+     54                      }
+     55                  }
+     56                  else
+     57                  {
+     58                      if ( app.ipvHighlightWindow == 0 )
+     59                      {
+     60                          app.ipvHighlightWindow = IPV_WINDOW_COUNT;
+     61                      }
+     62                      else
+     63                      {
+     64                          app.ipvHighlightWindow--;
+     65                      }
+     66                  }
+     67                  app.ipvHighlightWindow = SiiIpvHighlightWindow( app.ipvHighlightWindow, isForward );
+     68              }
+     69          }
+     70          
+     71          
+     72          //-------------------------------------------------------------------------------------------------
+     73          //! @brief      Enable IPV wrapper.
+     74          //-------------------------------------------------------------------------------------------------
+     75          bool_t SkAppIpvEnable ( bool_t isEnable )
+     76          {
+     77              bool_t success;
+     78          
+     79              if (!isEnable)
+     80              {
+     81          #if (SII_NUM_SWITCH > 1)
+     82                  if ( app.ipvPipEnabled )
+     83                  {
+     84                      // Restore original zone 1 video source
+     85                      SiiDrvSwitchInstanceSet( 1 );
+     86                      SiiDrvSwitchSourceSelect( app.pipSaveOrigSource );
+     87                  }
+     88          #endif
+     89                  SiiIpvModeSet( app.ipvMode );   // Go back to a roving mode (if we were in PIP mode)
+     90              }
+     91              success = SiiIpvEnable(isEnable);
+     92              if ( isEnable )
+     93              {
+     94                  // Need time for at least one preview window to activate, otherwise we will
+     95                  // start out with no windows highlighted.
+     96                  SiiOsTimerWait(500);
+     97              }
+     98              return success;
+     99          }
+    100          
+    101          //-------------------------------------------------------------------------------------------------
+    102          //! @brief      Enable PIP wrapper.
+    103          //-------------------------------------------------------------------------------------------------
+    104          
+    105          bool_t SkAppIpvPipModeEnable ( SiiSwitchSource_t pipSource )
+    106          {
+    107              bool_t originalZoneTrackingState;
+    108          
+    109              SiiDrvSwitchInstanceSet( 0 );
+    110              if ( pipSource == SiiDrvSwitchSourceGet())
+    111              {
+    112                  DEBUG_PRINT( MSG_ERR, " Cannot use the main pipe source!\n" );
+    113                  return( false );
+    114              }
+    115             // DEBUG_PRINT(MSG_ALWAYS,"\nSTAGE 2\n");
+    116          
+    117              originalZoneTrackingState = SiiDrvSwitchZoneTrackingGet();
+    118              SiiDrvSwitchZoneTrackingSet( false );   // Allow zones to use different sources
+    119              SiiDrvSwitchZoneEnableSet( true );      // Make sure zone 1 is enabled
+    120          
+    121          #if (SII_NUM_SWITCH > 1)
+    122              SiiDrvSwitchInstanceSet( 1 );
+    123              if ( !app.ipvPipEnabled )
+    124              {
+    125                  app.pipSaveOrigSource = SiiDrvSwitchSourceGet();
+    126              }
+    127          
+    128              // Select the source configuration for the secondary pipe
+    129              SiiDrvSwitchZoneEnableSet( true );      // Make sure zone 2 is enabled
+    130              SiiDrvSwitchSourceSelect( pipSource );
+    131          #endif
+    132              SiiDrvSwitchConfigureMatrixSwitch( true, false );
+    133          
+    134              SiiDrvIpvPIPSourceSet((uint8_t)pipSource);
+    135          
+    136              SiiIpvPipModeEnable();
+    137          
+    138              // Apply new port selection settings
+    139              SiiDrvSwitchZoneConfigSet();
+    140              SiiDrvSwitchZoneTrackingSet( originalZoneTrackingState );
+    141          
+    142              return true;
+    143          }
+    144          
+    145          //-------------------------------------------------------------------------------------------------
+    146          //! @brief      Close all IPV windows including the PIP window.
+    147          //-------------------------------------------------------------------------------------------------
+    148          
+    149          void SkAppIpvDisableInstaPrevue ( void )
+    150          {
+    151              if (app.ipvEnabled)
+    152              {
+    153                  app.ipvEnabled = false;
+    154                  if ( SkAppIpvEnable( false ))
+    155                  {
+    156                      // If PIP previously enabled, restore it
+    157                      if ( app.ipvPipEnabled )
+    158                      {
+    159                          // PIP source cannot be the same as main pipe.
+    160                          if ( app.pipSource == app.currentSource[0] )
+    161                          {
+    162                              app.pipSource = SkAppSwitchGetNextPort( app.currentSource[0], true );
+    163                          }
+    164                          SkAppIpvPipModeEnable( app.pipSource );
+    165                          SkAppIpvEnable( true );
+    166                      }
+    167                  }
+    168              }
+    169              else
+    170              {
+    171                  // If PIP previously enabled, close it
+    172                  if ( app.ipvPipEnabled )
+    173                  {
+    174                      SkAppIpvEnable( false );
+    175                      app.ipvPipEnabled = false;
+    176                  }
+    177              }
+    178          }
+    179          
+    180          
+    181          //-------------------------------------------------------------------------------------------------
+    182          //! @brief      Initialize IPV Task
+    183          //-------------------------------------------------------------------------------------------------
+    184          bool_t SkAppTaskIpvInitialize ( void )
+    185          {
+    186              SiiIpvInitialize();
+    187          
+    188              app.ipvTheme = SiiIpvLEFT_MIDDLE;
+    189          
+    190              // Initialize the component window data
+    191              SiiIpvBorderColorsLoad( siiIpvBorderColorsCrCbY );
+    192              SiiIpvAlphaLoad( siiIpvAlphaMax, siiIpvAlphaStep, SII_IPV_ALPHA_STEP_MS );
+    193          
+    194          #if ( configSII_DEV_9535 == 0 )
+    195              SiiDrvIpvEnableMaskSet( 0x03 );
+    196          #else
+    197              SiiDrvIpvEnableMaskSet( 0x07 );
+    198          #endif
+    199              // Set the default theme (window locations and size) into the hardware.
+    200              app.ipvMode = SiiIpvModeALL;
+    201              SiiIpvModeSet( SiiIpvModeALL );
+    202              SiiIpvHighlightEnable( true );  // Default to enabled preview window highlighting.
+    203              app.ipvHighlight = true;
+    204              return( true );
+    205          }
+    206          
+    207          
+    208          //-------------------------------------------------------------------------------------------------
+    209          //! @brief      IPV Task function. Services IPV component state machine.
+    210          //-------------------------------------------------------------------------------------------------
+    211          void SkAppTaskIpv ( void )
+    212          {
+    213              clock_time_t timeDiff = SkTimeDiffMs( app.ipvTimeLastMs, SiiOsTimerTotalElapsed());
+    214              if (timeDiff > 20)
+    215              {
+    216                  // Call IPV handler with the number of milliseconds since the last call
+    217                  SiiIpvHandler(timeDiff);
+    218                  app.ipvTimeLastMs = SiiOsTimerTotalElapsed();
+    219              }
+    220          }
+    221          
+    222          //-------------------------------------------------------------------------------------------------
+    223          //! @brief      IPV Callback function. Retrieves current video resolution data.
+    224          //-------------------------------------------------------------------------------------------------
+    225          
+    226          bool_t SiiIpvCbVideoInfoGet(int_t *pHoriz, int_t *pVert, bool_t *pIsInterlaced)
+    227          {
+    228              return SiiDrvSwitchSelectedPortInfo( true, pHoriz, pVert, pIsInterlaced, NULL );
+    229          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        8  SiiIpvCbVideoInfoGet
+              8 -> SiiDrvSwitchSelectedPortInfo
+       16  SkAppIpvCycleInstaPrevueWindows
+             16 -> SiiIpvHighlightWindow
+             16 -> SiiIpvModeSet
+             16 -> SiiIpvThemeSet
+             16 -> SkAppIpvEnable
+        8  SkAppIpvDisableInstaPrevue
+              0 -> SkAppIpvEnable
+              8 -> SkAppIpvEnable
+              8 -> SkAppIpvPipModeEnable
+              8 -> SkAppSwitchGetNextPort
+       16  SkAppIpvEnable
+             16 -> SiiIpvEnable
+             16 -> SiiIpvModeSet
+             16 -> SiiOsTimerWait
+       16  SkAppIpvPipModeEnable
+             16 -> SiiDrvIpvPIPSourceSet
+             16 -> SiiDrvSwitchConfigureMatrixSwitch
+             16 -> SiiDrvSwitchInstanceSet
+             16 -> SiiDrvSwitchSourceGet
+             16 -> SiiDrvSwitchZoneConfigSet
+             16 -> SiiDrvSwitchZoneEnableSet
+             16 -> SiiDrvSwitchZoneTrackingGet
+             16 -> SiiDrvSwitchZoneTrackingSet
+             16 -> SiiIpvPipModeEnable
+        8  SkAppTaskIpv
+              8 -> SiiIpvHandler
+              8 -> SiiOsTimerTotalElapsed
+       16  SkAppTaskIpvInitialize
+             16 -> SiiDrvIpvEnableMaskSet
+             16 -> SiiIpvAlphaLoad
+             16 -> SiiIpvBorderColorsLoad
+             16 -> SiiIpvHighlightEnable
+             16 -> SiiIpvInitialize
+             16 -> SiiIpvModeSet
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable4
+       4  ??DataTable4_1
+       4  ??DataTable4_2
+       4  ??DataTable4_3
+      20  SiiIpvCbVideoInfoGet
+     108  SkAppIpvCycleInstaPrevueWindows
+      82  SkAppIpvDisableInstaPrevue
+      38  SkAppIpvEnable
+      72  SkAppIpvPipModeEnable
+      34  SkAppTaskIpv
+      60  SkAppTaskIpvInitialize
+
+ 
+ 430 bytes in section .text
+ 
+ 430 bytes of CODE memory
+
+Errors: none
+Warnings: 2

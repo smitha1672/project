@@ -1,0 +1,1033 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:07 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\si_drv_ #
+#                    cbus.c                                                   #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\si_drv_ #
+#                    cbus.c -D S4051A -D DEBUG -D FREE_RTOS -D                #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_drv_cbus.lst                                       #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_drv_cbus.o                                          #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\si_drv_cbus.c
+      1          /******************************************************************************/
+      2          //!file     si_drv_cbus.c
+      3          //!brief    SiI9687 CBUS Driver.
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1060 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2007-2010, Silicon Image, Inc.  All rights reserved.
+     11          /******************************************************************************/
+     12          
+     13          #include "string.h"
+     14          #include "si_osal_timer.h"
+     15          //#include "si_scheduler.h"
+     16          #include "si_drv_cbus_internal.h"
+     17          #include "si_cbus_enums.h"
+     18          #include "si_drv_internal.h"
+     19          
+     20          //------------------------------------------------------------------------------
+     21          // Function:    SiiDrvCbusRegisterGet
+     22          // Description: Returns the CBus register value
+     23          // Parameters:  regAddr - register address, channel
+     24          // Returns:     register value
+     25          //------------------------------------------------------------------------------
+     26          
+     27          uint8_t  SiiDrvCbusRegisterGet ( uint16_t regAddr )
+     28          {
+     29          	uint8_t value;
+     30          
+     31          	value = SiiRegRead( regAddr );
+     32          	return ( value );
+     33          }
+     34          
+     35          //------------------------------------------------------------------------------
+     36          // Function:    SiiDrvCbusRegisterSet
+     37          // Description: Sets the CBus register value
+     38          // Parameters:  regAddr - register address
+     39          //------------------------------------------------------------------------------
+     40          void  SiiDrvCbusRegisterSet ( uint8_t regAddr , uint8_t value )
+     41          {
+     42          	SiiRegWrite( regAddr, value );
+     43          }
+     44          
+     45          
+     46          //------------------------------------------------------------------------------
+     47          // Function:    SiiDrvCbusInterruptStatusGet
+     48          // Description: Returns the last Interrupt Status data retrieved by the CBUS ISR.
+     49          // Parameters:  pData - pointer to return data buffer1 (2 byte).
+     50          // Returns:     void
+     51          //------------------------------------------------------------------------------
+     52          void  SiiDrvCbusInterruptStatusGet ( uint8_t *pData )
+     53          {
+     54              *pData++ = pDrvCbus->interruptStatus0;
+     55              *pData = pDrvCbus->interruptStatus1;
+     56          }
+     57          
+     58          //------------------------------------------------------------------------------
+     59          // Function:    SiiDrvCbusInterruptStatusSet
+     60          // Description: Clears the interrupt variable
+     61          //------------------------------------------------------------------------------
+     62          void  SiiDrvCbusInterruptStatusSet ()
+     63          {
+     64              pDrvCbus->interruptStatus0 = 0;
+     65              pDrvCbus->interruptStatus1 = 0;
+     66          }
+     67          
+     68          //------------------------------------------------------------------------------
+     69          // Function:    SiiDrvCbusIntrFlagGet
+     70          // Description: Returns interrupt flag
+     71          //------------------------------------------------------------------------------
+     72          bool_t  SiiDrvCbusIntrFlagGet()
+     73          {
+     74          	if ( pDrvCbus->statusFlags & SiiCBUS_INT )
+     75          	{
+     76          		pDrvCbus->statusFlags &= ~SiiCBUS_INT;
+     77          		return( true );
+     78          	}
+     79          	return( false );
+     80          }
+     81          
+     82          //------------------------------------------------------------------------------
+     83          // Function:    SiiDrvCbusIntrFlagSet
+     84          // Description: reset interrupt flags
+     85          //------------------------------------------------------------------------------
+     86          void  SiiDrvCbusIntrFlagSet()
+     87          {
+     88          	if ( pDrvCbus->statusFlags )
+     89          	{
+     90          		pDrvCbus->statusFlags = 0;
+     91          	}
+     92          }
+     93          
+     94          //------------------------------------------------------------------------------
+     95          // Function:    SiiDrvCbusNackFromPeerGet
+     96          // Description: Returns the last MSC Abort reason received by the CBUS ISR.
+     97          // Parameters:  pData - pointer to return data buffer (1 byte).
+     98          // Returns:     true if a new MSC Abort reason data was available, false if not.
+     99          //              pData - Destination for MSC Abort reason data.
+    100          //------------------------------------------------------------------------------
+    101          bool_t  SiiDrvCbusNackFromPeerGet ()
+    102          {
+    103              if ( pDrvCbus->statusFlags & SiiCBUS_NACK_RECEIVED_FM_PEER )
+    104              {
+    105                  pDrvCbus->statusFlags &= ~SiiCBUS_NACK_RECEIVED_FM_PEER;
+    106                  return( true );
+    107              }
+    108              return( false );
+    109          }
+    110          
+    111          //------------------------------------------------------------------------------
+    112          // Function:    SiiDrvCbusDevCapChangedGet
+    113          // Description: Returns if the peer's device capability values are changed
+    114          // Returns:     true/false
+    115          //------------------------------------------------------------------------------
+    116          bool_t  SiiDrvCbusDevCapChangedGet ()
+    117          {
+    118              if ( pDrvCbus->statusFlags & SiiCBUS_DCAP_CHG_RECEIVED_FM_PEER )
+    119              {
+    120                  pDrvCbus->statusFlags &= ~SiiCBUS_DCAP_CHG_RECEIVED_FM_PEER;
+    121                  return( true );
+    122              }
+    123              return( false );
+    124          }
+    125          
+    126          //------------------------------------------------------------------------------
+    127          // Function:    SiiDrvCbusScratchpadWrtnGet
+    128          // Description: Returns if the peer has written the scratchpad
+    129          // Returns:     true/false
+    130          //------------------------------------------------------------------------------
+    131          bool_t  SiiDrvCbusScratchpadWrtnGet ()
+    132          {
+    133              if (pDrvCbus->statusFlags & SiiCBUS_SCRATCHPAD_WRITTEN_BY_PEER)
+    134              {
+    135                  pDrvCbus->statusFlags &= ~SiiCBUS_SCRATCHPAD_WRITTEN_BY_PEER;
+    136                  return (true);
+    137              }
+    138              return (false);
+    139          }
+    140          
+    141          //------------------------------------------------------------------------------
+    142          // Function:    SiiDrvCbusReqWrtGet
+    143          // Description: Returns if the peer is requesting for scratchpad write permission
+    144          // Returns:     true/false
+    145          //------------------------------------------------------------------------------
+    146          bool_t  SiiDrvCbusReqWrtGet ()
+    147          {
+    148              if ( pDrvCbus->statusFlags & SiiCBUS_REQ_WRT_RECEIVED_FM_PEER )
+    149              {
+    150                  pDrvCbus->statusFlags &= ~SiiCBUS_REQ_WRT_RECEIVED_FM_PEER;
+    151                  return( true );
+    152              }
+    153              return( false );
+    154          }
+    155          
+    156          //------------------------------------------------------------------------------
+    157          // Function:    SiiDrvCbusGrtWrtGet
+    158          // Description: Returns if the peer is requesting for scratchpad write permission
+    159          // Returns:     true/false
+    160          //------------------------------------------------------------------------------
+    161          bool_t  SiiDrvCbusGrtWrtGet ()
+    162          {
+    163              if ( pDrvCbus->statusFlags & SiiCBUS_GRT_WRT_RECEIVED_FM_PEER )
+    164              {
+    165                  pDrvCbus->statusFlags &= ~SiiCBUS_GRT_WRT_RECEIVED_FM_PEER;
+    166                  return( true );
+    167              }
+    168              return( false );
+    169          }
+    170          
+    171          //------------------------------------------------------------------------------
+    172          // Function:    SiiDrvCbus3DReqGet
+    173          // Description: Returns if the peer is requesting for 3D information
+    174          // Returns:     true/false
+    175          //------------------------------------------------------------------------------
+    176          bool_t  SiiDrvCbus3DReqGet ()
+    177          {
+    178              if ( pDrvCbus->statusFlags & SiiCBUS_3D_REQ_RECEIVED_FM_PEER )
+    179              {
+    180                  pDrvCbus->statusFlags &= ~SiiCBUS_3D_REQ_RECEIVED_FM_PEER;
+    181                  return( true );
+    182              }
+    183              return( false );
+    184          }
+    185          
+    186          //------------------------------------------------------------------------------
+    187          // Function:    SiiDrvCbusVsDataGet
+    188          // Description: Returns the last VS cmd and data bytes retrieved by the CBUS ISR.
+    189          // Parameters:  pData - pointer to return data buffer (2 bytes).
+    190          // Returns:     pData[0] - VS_CMD value
+    191          //              pData[1] - VS_DATA value
+    192          //------------------------------------------------------------------------------
+    193          bool_t SiiDrvCbusVsDataGet ( uint8_t *pData )
+    194          {
+    195              if ( pDrvCbus->statusFlags & SiiCBUS_MSC_MSG_RCVD )
+    196          	{
+    197                  *pData++ = pDrvCbus->vsCmd;
+    198                  *pData = pDrvCbus->vsData;
+    199          		pDrvCbus->statusFlags &= ~SiiCBUS_MSC_MSG_RCVD;
+    200          		return( true );
+    201          	}
+    202              return ( false );
+    203          }
+    204          
+    205          //------------------------------------------------------------------------------
+    206          // Function:    SiiDrvCbusDevCapReadyGet
+    207          // Description: Returns if the peer's device capability values are ready
+    208          // Returns:     true/false
+    209          //------------------------------------------------------------------------------
+    210          bool_t  SiiDrvCbusDevCapReadyGet ()
+    211          {
+    212              if ( pDrvCbus->statusFlags & SiiCBUS_DCAP_RDY_RECEIVED_FM_PEER )
+    213          	{
+    214          		pDrvCbus->statusFlags &= ~SiiCBUS_DCAP_RDY_RECEIVED_FM_PEER;
+    215          		return( true );
+    216          	}
+    217              return( false );
+    218          }
+    219          
+    220          //------------------------------------------------------------------------------
+    221          // Function:    SiiDrvPathEnableGet
+    222          // Description: Returns if the peer has sent PATH_EN
+    223          // Returns:     true/false
+    224          //------------------------------------------------------------------------------
+    225          bool_t  SiiDrvPathEnableGet ()
+    226          {
+    227              if ( pDrvCbus->statusFlags & SiiCBUS_PATH_EN_RECEIVED_FM_PEER )
+    228          	{
+    229          		pDrvCbus->statusFlags &= ~SiiCBUS_PATH_EN_RECEIVED_FM_PEER;
+    230          		return( true );
+    231          	}
+    232              return( false );
+    233          }
+    234          
+    235          //------------------------------------------------------------------------------
+    236          // Function:    SiiDrvCbusCmdRetDataGet
+    237          // Description: return response from peer
+    238          // Parameters:  pData - pointer to return data buffer (2 bytes).
+    239          //------------------------------------------------------------------------------
+    240          bool_t  SiiDrvCbusCmdRetDataGet ( uint8_t *pData )
+    241          {
+    242              if ( pDrvCbus->statusFlags & SiiCBUS_MSC_CMD_DONE )
+    243          	{
+    244          		*pData++ = pDrvCbus->msgData0;
+    245          		*pData = pDrvCbus->msgData1;
+    246          		pDrvCbus->statusFlags &= ~SiiCBUS_MSC_CMD_DONE;
+    247          		return( true );
+    248          	}
+    249               return ( false );
+    250          }
+    251          
+    252          //------------------------------------------------------------------------------
+    253          // Function:    SiiDrvCbusBusStatusGet
+    254          // Description: Returns the last Bus Status data retrieved by the CBUS ISR.
+    255          // Parameters:  pData - pointer to return data buffer (1 byte).
+    256          // Returns:     pData - Destination for bus status data.
+    257          //------------------------------------------------------------------------------
+    258          bool_t  SiiDrvCbusBusStatusGet ( uint8_t *pData )
+    259          {
+    260          	DEBUG_PRINT(MSG_ALWAYS,"CBUS STATUS FLAG :%d, CBUS DRV CONNECTION :%d\n",pDrvCbus->statusFlags,pDrvCbus->busConnected);
+    261              if ( pDrvCbus->statusFlags & SiiCBUS_CBUS_CONNECTION_CHG )
+    262          	{
+    263              	*pData = pDrvCbus->busConnected;
+    264          		pDrvCbus->statusFlags &= ~SiiCBUS_CBUS_CONNECTION_CHG;
+    265          		return( true );
+    266          	}
+    267              return ( false );
+    268          }
+    269          
+    270          
+    271          //------------------------------------------------------------------------------
+    272          // Function:    SiiDrvCbusCecAbortReasonGet
+    273          // Description: Returns the last DDC Abort reason received by the CBUS ISR.
+    274          // Parameters:  pData - pointer to return data buffer (1 byte).
+    275          // Returns:     pData - Destination for DDC Abort reason data.
+    276          //------------------------------------------------------------------------------
+    277          bool_t  SiiDrvCbusCecAbortReasonGet ( uint8_t *pData )
+    278          {
+    279              if ( pDrvCbus->statusFlags & SiiCBUS_CEC_ABORT )
+    280          	{
+    281              	*pData = pDrvCbus->cecAbortReason;
+    282          		pDrvCbus->statusFlags &= ~SiiCBUS_CEC_ABORT;
+    283          		return( true );
+    284          	}
+    285              return ( false );
+    286          }
+    287          
+    288          //------------------------------------------------------------------------------
+    289          // Function:    SiiDrvCbusDdcAbortReasonGet
+    290          // Description: Returns the last DDC Abort reason received by the CBUS ISR.
+    291          // Parameters:  pData - pointer to return data buffer (1 byte).
+    292          // Returns:     pData - Destination for DDC Abort reason data.
+    293          //------------------------------------------------------------------------------
+    294          bool_t  SiiDrvCbusDdcAbortReasonGet ( uint8_t *pData )
+    295          {
+    296              if ( pDrvCbus->statusFlags & SiiCBUS_DDC_ABORT )
+    297          	{
+    298              	*pData = pDrvCbus->ddcAbortReason;
+    299          		pDrvCbus->statusFlags &= ~SiiCBUS_DDC_ABORT;
+    300          		return( true );
+    301          	}
+    302              return ( false );
+    303          }
+    304          
+    305          //------------------------------------------------------------------------------
+    306          // Function:    SiiDrvCbusMscAbortTransReasonGet
+    307          // Description: Returns the last MSC Abort reason received by the CBUS ISR.
+    308          // Parameters:  pData - pointer to return data buffer (1 byte).
+    309          // Returns:     pData - Destination for MSC Abort reason data.
+    310          //------------------------------------------------------------------------------
+    311          bool_t  SiiDrvCbusMscAbortTransReasonGet ( uint8_t *pData )
+    312          {
+    313              if ( pDrvCbus->statusFlags & SiiCBUS_XFR_ABORT_T )
+    314          	{
+    315              	*pData = pDrvCbus->mscAbortReason;
+    316          		pDrvCbus->statusFlags &= ~SiiCBUS_XFR_ABORT_T;
+    317          		return( true );
+    318          	}
+    319              return ( false );
+    320          }
+    321          
+    322          //------------------------------------------------------------------------------
+    323          // Function:    SiiDrvCbusMscAbortRcvrReasonGet
+    324          // Description: Returns the last MSC Abort reason received by the CBUS ISR.
+    325          // Parameters:  pData - pointer to return data buffer (1 byte).
+    326          // Returns:     pData - Destination for MSC Abort reason data.
+    327          //------------------------------------------------------------------------------
+    328          bool_t  SiiDrvCbusMscAbortRcvrReasonGet ( uint8_t *pData )
+    329          {
+    330              if ( pDrvCbus->statusFlags & SiiCBUS_XFR_ABORT_R )
+    331          	{
+    332              	*pData = pDrvCbus->mscAbortFmPeerReason;
+    333          		//pDrvCbus->statusFlags &= ~SiiCBUS_XFR_ABORT_R;
+    334          		return( true );
+    335          	}
+    336              return ( false );
+    337          }
+    338          
+    339          //------------------------------------------------------------------------------
+    340          // Function:    SiiDrvCbusWriteLocalScratchpad
+    341          // Description: Returns if the peer is requesting for scratchpad write permission
+    342          // Returns:     true/false
+    343          //------------------------------------------------------------------------------
+    344          void  SiiDrvCbusWriteLocalScratchpad ( uint8_t startOffset, uint8_t length, uint8_t* pData )
+    345          {
+    346          	uint8_t i;
+    347          	uint16_t regAddr;
+    348          
+    349          	for ( i = startOffset; i < (startOffset+length); i++ )
+    350          	{
+    351          		regAddr = REG_CBUS_SCRATCHPAD_0 + i;
+    352          		SiiRegWrite( regAddr, *(pData + i) );
+    353          	}
+    354          }
+    355          
+    356          //------------------------------------------------------------------------------
+    357          // Function:    SiiDrvCbusPortSelectBitsGet
+    358          // Description: Reads the MHL selected port(s) bit-field.  This is the value
+    359          //              downloaded from NVRAM at boot-up time.
+    360          // Parameters:  None
+    361          // Returns:     MHL selected port(s) bit-field.
+    362          //
+    363          //------------------------------------------------------------------------------
+    364          uint8_t SiiDrvCbusPortSelectBitsGet ( void )
+    365          {
+    366              return( SiiRegRead( REG_CBUS_PORT_SEL_AUTO ));
+    367          }
+    368          
+    369          //------------------------------------------------------------------------------
+    370          // Function:    SiiDrvCbusHpdControl
+    371          // Description: Wrapper to call SiiDrvSwitchDeviceHpdControl()
+    372          //------------------------------------------------------------------------------
+    373          void SiiDrvCbusHpdControl ( bool_t enableHPD, uint8_t mode )
+    374          {
+    375          	// Modified for Melbourne
+    376          	//SiiDrvSwitchDeviceHpdControl(pDrvCbus->port, enableHPD, mode);
+    377          }
+    378          
+    379          //------------------------------------------------------------------------------
+    380          // Function:    SiiDrvCbusChnEn
+    381          // Description: Enable or disable the specified CBUS channel.
+    382          // param		isEnable - true to enable, false to disable
+    383          //------------------------------------------------------------------------------
+    384          void SiiDrvCbusChnEn ( bool_t isEnable, uint8_t port )
+    385          {
+    386          
+    387          	//Bug 31744 - With samsung S3 and S4 as MHL source, video out is not consistent when plug/unplug cable at source side
+    388          
+    389          //	if(port == 1)
+    390          //	{
+    391          //		SiiDrvCbusInstanceSet(1);
+    392          //		//pDrvCbus->busConnected = isEnable;
+    393          //		if(isEnable)
+    394          //		{
+    395          //			pDrvCbus->statusFlags |= SiiCBUS_INT ;
+    396          //			pDrvCbus->statusFlags |= SiiCBUS_CBUS_CONNECTION_CHG;
+    397          //		}
+    398          //		//DEBUG_PRINT(MSG_DBG, "CBus Driver:: SiiDrvCbusChnEn() called on port: %02X, with enable: %02X\n", port, isEnable);
+    399          //	}
+    400          
+    401              if ( isEnable )
+    402              {
+    403              	SiiDrvRxAutoHpeConfigure( port, SiiPortType_MHL );
+    404              	SiiDrvRxHpdControl( port, true );
+    405              }
+    406              else
+    407              {
+    408              // Bug 33552 - Video not appearing on TV when MHL cable is exchanged with HDMI on Port 0 or Port 1
+    409              	SiiDrvRxAutoHpeConfigure( port, SiiPortType_HDMI );
+    410              	SiiDrvRxHpdControl( port, true );
+    411              }
+    412          
+    413          }
+    414          
+    415          //------------------------------------------------------------------------------
+    416          // Function:    SiiDrvCbusTermCtrl
+    417          // Description: Wrapper to call SiiDrvSwitchDeviceRXTermControl()
+    418          //------------------------------------------------------------------------------
+    419          void  SiiDrvCbusTermCtrl ( bool_t terminate )
+    420          {
+    421          	// MOdified for Melbourne
+    422              //SiiDrvSwitchDeviceRXTermControl(pDrvCbus->port, terminate ? SI_TERM_MHL : SI_TERM_HDMI );
+    423          	;
+    424          }
+    425          
+    426          //------------------------------------------------------------------------------
+    427          // Function:    SiiDrvCbusAutoHpeCbusEnable
+    428          // Description: Wrapper to call SiiDrvSwitchAutoHpeCbusEnable()
+    429          //------------------------------------------------------------------------------
+    430          void SiiDrvCbusAutoHpeCbusEnable ( bool_t enable )
+    431          {
+    432          //	SiiDrvSwitchAutoHpeCbusEnable(enable);
+    433          }
+    434          
+    435          //------------------------------------------------------------------------------
+    436          // Function:    SiiInternalCBusWriteCommand
+    437          // Description: Write the specified Sideband Channel command to the CBUS.
+    438          //              Command can be a MSC_MSG command (RCP/MCW/RAP), or another command 
+    439          //              such as READ_DEVCAP, GET_VENDOR_ID, SET_HPD, CLR_HPD, etc.
+    440          //
+    441          // Parameters:  pReq    - Pointer to a cbus_req_t structure containing the
+    442          //                        command to write
+    443          // Returns:     TRUE    - successful write
+    444          //              FALSE   - write failed
+    445          //------------------------------------------------------------------------------
+    446          bool_t SiiDrvInternalCBusWriteCommand ( cbus_req_t *pReq  )
+    447          {
+    448              uint8_t startbit;
+    449              bool_t  success = true;
+    450          
+    451              DEBUG_PRINT(
+    452                  MSG_DBG, "CBUS:: Sending MSC command: %02X, offsetData: %02X, msgData[0]: %02X, PortIndex: %02x\n",
+    453                  (int)pReq->command, (int)pReq->offsetData, (int)pReq->msgData[0], pDrvCbus->port
+    454                  );
+    455          
+    456              /****************************************************************************************/
+    457              /* Setup for the command - write appropriate registers and determine the correct        */
+    458              /*                         start bit.                                                   */
+    459              /****************************************************************************************/
+    460          
+    461              if(pDrvCbus->statusFlags & SiiCBUS_XFR_ABORT_R)
+    462              {
+    463              	SiiPlatformTimerWait( 2000 ); // 2 sec delay
+    464              	pDrvCbus->statusFlags &= ~SiiCBUS_XFR_ABORT_R;
+    465              }
+    466          
+    467              // Set the offset and outgoing data byte right away
+    468              SiiRegWrite( REG_CBUS_PRI_ADDR_CMD, pReq->offsetData);   // set offset
+    469              SiiRegWrite( REG_CBUS_PRI_WR_DATA_1ST, pReq->msgData[0] );
+    470          
+    471              startbit = 0x00;
+    472              switch ( pReq->command )
+    473              {
+    474                  case MHL_SET_INT:   // Set one interrupt register = 0x60
+    475                      SiiRegWrite( REG_CBUS_PRI_ADDR_CMD, pReq->offsetData + 0x20 );   // set offset
+    476                      startbit = MSC_START_BIT_SET_INT_WRITE_STAT;
+    477                      break;
+    478          
+    479                  case MHL_WRITE_STAT:    // Write one status register = 0x60 | 0x80
+    480                      SiiRegWrite( REG_CBUS_PRI_ADDR_CMD, pReq->offsetData + 0x30 );   // set offset
+    481                      startbit = MSC_START_BIT_SET_INT_WRITE_STAT;
+    482                      break;
+    483          
+    484                  case MHL_READ_DEVCAP:
+    485                      startbit = MSC_START_BIT_READ_DEV_CAP_REG;
+    486                      break;
+    487          
+    488                  case MHL_GET_STATE:
+    489                  case MHL_GET_VENDOR_ID:
+    490                  case MHL_SET_HPD:
+    491                  case MHL_CLR_HPD:
+    492                  case MHL_GET_SC1_ERRORCODE:      // 0x69 - Get channel 1 command error code
+    493                  case MHL_GET_DDC_ERRORCODE:      // 0x6A - Get DDC channel command error code.
+    494                  case MHL_GET_MSC_ERRORCODE:      // 0x6B - Get MSC command error code.
+    495                  case MHL_GET_SC3_ERRORCODE:      // 0x6D - Get channel 3 command error code.
+    496                      SiiRegWrite( REG_CBUS_PRI_ADDR_CMD, pReq->command );
+    497                      startbit = MSC_START_BIT_MSC_CMD;
+    498                      break;
+    499          
+    500                  case MHL_MSC_MSG:
+    501                      SiiRegWrite( REG_CBUS_PRI_WR_DATA_2ND, pReq->msgData[1] );
+    502                      SiiRegWrite( REG_CBUS_PRI_ADDR_CMD, pReq->command );
+    503                      DEBUG_PRINT( MSG_DBG, "CBUS:: MSG_MSC CMD:    0x%02X\n", (int)pReq->command );
+    504                      DEBUG_PRINT( MSG_DBG, "CBUS:: MSG_MSC Data 0: 0x%02X\n", (int)pReq->msgData[0] );
+    505                      DEBUG_PRINT( MSG_DBG, "CBUS:: MSG_MSC Data 1: 0x%02X\n", (int)pReq->msgData[1] );
+    506                      startbit = MSC_START_BIT_MSC_MSG_CMD;
+    507                      break;
+    508          
+    509                  case MHL_WRITE_BURST:
+    510                      SiiRegWrite( REG_CBUS_PRI_ADDR_CMD, pReq->offsetData + 0x40);
+    511                      SiiRegWrite( REG_MSC_WRITE_BURST_LEN, pReq->length - 1);
+    512                      startbit = MSC_START_BIT_WRITE_BURST;
+    513                      break;
+    514          
+    515                  default:
+    516                      success = false;
+    517                      break;
+    518              }
+    519          
+    520              /****************************************************************************************/
+    521              /* Trigger the CBUS command transfer using the determined start bit.                    */
+    522              /****************************************************************************************/
+    523          
+    524              if ( success )
+    525              {
+    526                  SiiRegWrite( REG_CBUS_PRI_START, startbit );
+    527              }
+    528          
+    529              return( success );
+    530          }
+    531          
+    532          //------------------------------------------------------------------------------
+    533          // Function:    CbusDrvChannelProcessInterrupts
+    534          // Description: Check CBUS registers for a CBUS event on the specified channel
+    535          //------------------------------------------------------------------------------
+    536          void CbusDrvChannelProcessInterrupts ( void )
+    537          {
+    538              uint8_t intStatus0, intStatus1, intStatusTemp;
+    539          
+    540              // Read CBUS interrupt status. Return if nothing happening on the interrupt front
+    541              intStatus0 = SiiRegRead( REG_CBUS_INTR_0 );
+    542              intStatus1 = SiiRegRead( REG_CBUS_INTR_1 );
+    543          
+    544              // clear the interrupts
+    545              SiiRegWrite( REG_CBUS_INTR_0, intStatus0 );
+    546              SiiRegWrite( REG_CBUS_INTR_1, intStatus1 );
+    547          
+    548              // mask out the interrupts that we don't care about
+    549              intStatus1 &= ~(BIT_HEARTBEAT_TIMEOUT | BIT_SET_CAP_ID_RSVD | BIT_CBUS_PKT_RCVD);
+    550          
+    551              // Return if nothing happening on the interrupt front
+    552              if ( !intStatus0 && !intStatus1 )
+    553              {
+    554                  return;
+    555              }
+    556          
+    557           //   DEBUG_PRINT( MSG_DBG, "*********** CBUS:: REG_CBUS_INTR_0:: %02X REG_CBUS_INTR_1:: %02X ***********\n", intStatus0, intStatus1);
+    558          
+    559              // An interrupt occurred, save the status.
+    560              pDrvCbus->interruptStatus0 = intStatus0;
+    561              pDrvCbus->interruptStatus1 = intStatus1;
+    562              pDrvCbus->statusFlags |= SiiCBUS_INT ;
+    563          
+    564              if( intStatus0 )
+    565              {
+    566              	if ( intStatus0 & BIT_MSC_CMD_DONE_WITH_NACK )
+    567          		{
+    568          			pDrvCbus->statusFlags |= SiiCBUS_NACK_RECEIVED_FM_PEER;
+    569          		}
+    570          
+    571              	if ( intStatus0 & BIT_MSC_SET_INT_RCVD )
+    572          		{
+    573          			intStatusTemp = SiiRegRead( REG_CBUS_SET_INT_0 );
+    574          			if( intStatusTemp & BIT0 )
+    575          			{
+    576          				pDrvCbus->statusFlags |= SiiCBUS_DCAP_CHG_RECEIVED_FM_PEER;
+    577          			}
+    578          			if ( intStatusTemp & BIT1 )
+    579          			{
+    580          				pDrvCbus->statusFlags |= SiiCBUS_SCRATCHPAD_WRITTEN_BY_PEER;
+    581          			}
+    582          			if( intStatusTemp & BIT2 )
+    583          			{
+    584          				pDrvCbus->statusFlags |= SiiCBUS_REQ_WRT_RECEIVED_FM_PEER;
+    585          			}
+    586          			if( intStatusTemp & BIT3 )
+    587          			{
+    588          				pDrvCbus->statusFlags |= SiiCBUS_GRT_WRT_RECEIVED_FM_PEER;
+    589          			}
+    590          			if( intStatusTemp & BIT4 )
+    591          			{
+    592          				pDrvCbus->statusFlags |= SiiCBUS_3D_REQ_RECEIVED_FM_PEER;
+    593          			}
+    594          
+    595          			SiiRegWrite( REG_CBUS_SET_INT_0, intStatusTemp );   // Clear received interrupts
+    596          		}
+    597          
+    598              	// This step is redundant as we do get DSCR_CHG interrupt up there
+    599              	if ( intStatus0 & BIT_MSC_WRITE_BURST_RCVD )
+    600          		{
+    601              		pDrvCbus->statusFlags |= SiiCBUS_SCRATCHPAD_WRITTEN_BY_PEER;
+    602          		}
+    603          
+    604          		// Get any VS or MSC data received
+    605          		if ( intStatus0 & BIT_MSC_MSG_RCVD )
+    606          		{
+    607          			pDrvCbus->statusFlags |= SiiCBUS_MSC_MSG_RCVD;
+    608          			pDrvCbus->vsCmd  = SiiRegRead( REG_CBUS_PRI_VS_CMD );
+    609          			pDrvCbus->vsData = SiiRegRead( REG_CBUS_PRI_VS_DATA );
+    610          		}
+    611          
+    612          		if ( intStatus0 & BIT_MSC_WRITE_STAT_RCVD )
+    613          		{
+    614          			// see if device capability values are changed
+    615          			intStatusTemp = SiiRegRead( REG_CBUS_WRITE_STAT_0 );
+    616          			if( intStatusTemp & BIT0 )
+    617          			{
+    618          				pDrvCbus->statusFlags |= SiiCBUS_DCAP_RDY_RECEIVED_FM_PEER;
+    619          				SiiRegWrite( REG_CBUS_WRITE_STAT_0, intStatusTemp );
+    620          			}
+    621          
+    622          			intStatusTemp = SiiRegRead( REG_CBUS_WRITE_STAT_1 );
+    623          			if( intStatusTemp & BIT3 )
+    624          			{
+    625          				pDrvCbus->statusFlags |= SiiCBUS_PATH_EN_RECEIVED_FM_PEER;
+    626          				SiiRegWrite( REG_CBUS_WRITE_STAT_1, intStatusTemp );
+    627          			}
+    628          		}
+    629          
+    630          		if ( intStatus0 & BIT_MSC_CMD_DONE )
+    631          		{
+    632          			pDrvCbus->statusFlags |= SiiCBUS_MSC_CMD_DONE;
+    633          			pDrvCbus->msgData0  = SiiRegRead( REG_CBUS_PRI_RD_DATA_1ST );
+    634          			pDrvCbus->msgData1  = SiiRegRead( REG_CBUS_PRI_RD_DATA_2ND );
+    635          		}
+    636          
+    637          	    // Bus status changed?
+    638          	    if ( intStatus0 & BIT_CONNECT_CHG )
+    639          	    {
+    640          	    	pDrvCbus->statusFlags |= SiiCBUS_CBUS_CONNECTION_CHG;
+    641          	        pDrvCbus->busConnected = SiiRegRead( REG_CBUS_BUS_STATUS ) & BIT_BUS_CONNECTED;
+    642          	        //DEBUG_PRINT( MSG_DBG, "*********** CBUS:: BIT_CONNECT_CHG Interrupt came pDrvCbus->busConnected  :: %d ***********\n", pDrvCbus->busConnected );
+    643          	        //SiiRegWrite( REG_CBUS_BUS_STATUS, pDrvCbus->busConnected );  // Bus Status is read/clear
+    644          	    }
+    645              }
+    646          
+    647              if(intStatus1)
+    648              {
+    649                  if ( intStatus1 & BIT_CEC_ABORT )
+    650                  {
+    651                      pDrvCbus->cecAbortReason = SiiRegRead( REG_CEC_ABORT_REASON );
+    652                      pDrvCbus->statusFlags |= SiiCBUS_CEC_ABORT;
+    653                      SiiRegWrite( REG_CEC_ABORT_REASON, pDrvCbus->cecAbortReason );
+    654                  }
+    655          
+    656                  if ( intStatus1 & BIT_DDC_ABORT )
+    657                  {
+    658                      pDrvCbus->ddcAbortReason = SiiRegRead( REG_DDC_ABORT_REASON );
+    659                      pDrvCbus->statusFlags |= SiiCBUS_DDC_ABORT;
+    660                      SiiRegWrite( REG_DDC_ABORT_REASON, pDrvCbus->ddcAbortReason );
+    661                  }
+    662          
+    663                  // MSC_ABORT received from peer
+    664                  if ( intStatus1 & BIT_MSC_XFR_ABORT_R )
+    665                  {
+    666                      pDrvCbus->mscAbortFmPeerReason = SiiRegRead( REG_MSC_XFR_ABORT_REASON_R );
+    667                      pDrvCbus->statusFlags |= SiiCBUS_XFR_ABORT_R;
+    668                      SiiRegWrite( REG_MSC_XFR_ABORT_REASON_R, pDrvCbus->mscAbortFmPeerReason );
+    669                  }
+    670          
+    671                  // MSC_ABORT happened at this device itself
+    672                  if ( intStatus1 & BIT_MSC_XFR_ABORT_T )
+    673                  {
+    674                      pDrvCbus->mscAbortReason = SiiRegRead( REG_MSC_XFR_ABORT_REASON_T );
+    675                      pDrvCbus->statusFlags |= SiiCBUS_XFR_ABORT_T;
+    676                      SiiRegWrite( REG_MSC_XFR_ABORT_REASON_T, pDrvCbus->mscAbortReason );
+    677                  }
+    678              }
+    679          }
+    680          
+    681          //------------------------------------------------------------------------------
+    682          // Function:    SiiDrvCbusProcessInterrupts
+    683          // Description: Check CBUS registers for a CBUS event
+    684          //------------------------------------------------------------------------------
+    685          
+    686          void SiiDrvCbusProcessInterrupts ( void )
+    687          {
+    688              CbusDrvChannelProcessInterrupts();
+    689              //SiiSchedSendSignal(SI_EVENT_ID_CBUS_INT, 0);
+    690          }
+    691          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       24  CbusDrvChannelProcessInterrupts
+             24 -> SiiRegRead
+              0 -> SiiRegWrite
+             24 -> SiiRegWrite
+        0  SiiDrvCbus3DReqGet
+        0  SiiDrvCbusAutoHpeCbusEnable
+        0  SiiDrvCbusBusStatusGet
+        0  SiiDrvCbusCecAbortReasonGet
+        8  SiiDrvCbusChnEn
+              8 -> SiiDrvRxAutoHpeConfigure
+              0 -> SiiDrvRxHpdControl
+        0  SiiDrvCbusCmdRetDataGet
+        0  SiiDrvCbusDdcAbortReasonGet
+        0  SiiDrvCbusDevCapChangedGet
+        0  SiiDrvCbusDevCapReadyGet
+        0  SiiDrvCbusGrtWrtGet
+        0  SiiDrvCbusHpdControl
+        0  SiiDrvCbusInterruptStatusGet
+        0  SiiDrvCbusInterruptStatusSet
+        0  SiiDrvCbusIntrFlagGet
+        0  SiiDrvCbusIntrFlagSet
+        0  SiiDrvCbusMscAbortRcvrReasonGet
+        0  SiiDrvCbusMscAbortTransReasonGet
+        0  SiiDrvCbusNackFromPeerGet
+        0  SiiDrvCbusPortSelectBitsGet
+              0 -> SiiRegRead
+        0  SiiDrvCbusProcessInterrupts
+              0 -> CbusDrvChannelProcessInterrupts
+        0  SiiDrvCbusRegisterGet
+              0 -> SiiRegRead
+        0  SiiDrvCbusRegisterSet
+              0 -> SiiRegWrite
+        0  SiiDrvCbusReqWrtGet
+        0  SiiDrvCbusScratchpadWrtnGet
+        0  SiiDrvCbusTermCtrl
+        0  SiiDrvCbusVsDataGet
+       24  SiiDrvCbusWriteLocalScratchpad
+             24 -> SiiRegWrite
+       16  SiiDrvInternalCBusWriteCommand
+             16 -> SiiPlatformTimerWait
+             16 -> SiiRegWrite
+        0  SiiDrvPathEnableGet
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable20
+      10  ?Subroutine0
+       8  ?Subroutine1
+     496  CbusDrvChannelProcessInterrupts
+      24  SiiDrvCbus3DReqGet
+       2  SiiDrvCbusAutoHpeCbusEnable
+      30  SiiDrvCbusBusStatusGet
+      26  SiiDrvCbusCecAbortReasonGet
+      30  SiiDrvCbusChnEn
+      36  SiiDrvCbusCmdRetDataGet
+      26  SiiDrvCbusDdcAbortReasonGet
+      24  SiiDrvCbusDevCapChangedGet
+      24  SiiDrvCbusDevCapReadyGet
+      24  SiiDrvCbusGrtWrtGet
+       2  SiiDrvCbusHpdControl
+      20  SiiDrvCbusInterruptStatusGet
+      16  SiiDrvCbusInterruptStatusSet
+      24  SiiDrvCbusIntrFlagGet
+      16  SiiDrvCbusIntrFlagSet
+      22  SiiDrvCbusMscAbortRcvrReasonGet
+      26  SiiDrvCbusMscAbortTransReasonGet
+      24  SiiDrvCbusNackFromPeerGet
+       8  SiiDrvCbusPortSelectBitsGet
+       2  SiiDrvCbusProcessInterrupts
+       4  SiiDrvCbusRegisterGet
+       4  SiiDrvCbusRegisterSet
+      24  SiiDrvCbusReqWrtGet
+      24  SiiDrvCbusScratchpadWrtnGet
+       2  SiiDrvCbusTermCtrl
+      36  SiiDrvCbusVsDataGet
+      38  SiiDrvCbusWriteLocalScratchpad
+     194  SiiDrvInternalCBusWriteCommand
+      24  SiiDrvPathEnableGet
+
+ 
+ 1 274 bytes in section .text
+ 
+ 1 274 bytes of CODE memory
+
+Errors: none
+Warnings: 1

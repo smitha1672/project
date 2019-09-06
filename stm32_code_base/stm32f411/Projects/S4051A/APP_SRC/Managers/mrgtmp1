@@ -1,0 +1,16 @@
+#ifndef __HDMI_DEVICE_MANAGER_H__
+#define __HDMI_DEVICE_MANAGER_H__
+
+
+#include "Defs.h"
+#include "api_typedef.h"
+
+
+typedef struct _HDMI_DEVICE_CTRL
+{
+	void (*CreateTask)( void );
+	bool ( *SendEvent ) ( void *params );
+}HDMI_DEVICE_MANAGER_OBJECT;
+
+
+#endif 

@@ -1,0 +1,524 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:23:29 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\cec_manager\s #
+#                    i_cec_tx.c                                               #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\cec_manager\s #
+#                    i_cec_tx.c -D S4051A -D DEBUG -D FREE_RTOS -D            #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_cec_tx.lst                                         #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_cec_tx.o                                            #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\component\cec_manager\si_cec_tx.c
+      1          //***************************************************************************
+      2          //!file     si_api cec_tx_handler.c
+      3          //!brief    Built-in tasks and handlers for CEC PLAYBACKx devices
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1060 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2009-2010, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include <string.h>
+     14          #include "si_cec_component.h"
+     15          #include "si_cec_internal.h"
+     16          #include "si_timer.h"
+     17          
+     18          #if ( configSII_DEV_953x_PORTING == 1 )
+     19          #include "Debug.h"
+     20          #endif 
+     21          
+     22          /* One Touch Play Task internal states    */
+     23          enum
+     24          {
+     25              SiiCecTaskOtpIdle           = 0,
+     26              SiiCecTaskOtpStart,
+     27              SiiCecTaskOtpSendImageViewOn,
+     28              SiiCecTaskOtpSentActiveSource,
+     29          };
+     30          
+     31          //------------------------------------------------------------------------------
+     32          //! @brief  Send an ACTIVE SOURCE message.  Does not wait for a reply.
+     33          //! @param[in]  - logicalAddr   Logical device going active
+     34          //! @param[in]  - physicalAddr  Physical address of device
+     35          //------------------------------------------------------------------------------
+     36          void SiiCecSendActiveSource ( uint8_t logicalAddr, uint16_t physicalAddr )
+     37          {
+     38              SiiCpiData_t cecFrame;
+     39          
+     40              cecFrame.opcode         = CECOP_ACTIVE_SOURCE;
+     41              cecFrame.srcDestAddr    = MAKE_SRCDEST( logicalAddr, CEC_LOGADDR_UNREGORBC );
+     42              cecFrame.args[0]        = physicalAddr >> 8;        // [Physical Address] High
+     43              cecFrame.args[1]        = physicalAddr & 0xFF;      // [Physical Address] Low
+     44              cecFrame.argCount       = 2;
+     45          
+     46              SiiDrvCpiWrite( &cecFrame );
+     47          }
+     48          
+     49          //------------------------------------------------------------------------------
+     50          //! @brief  Send an INACTIVE SOURCE message.  Does not wait for a reply.
+     51          //! @param[in]  - logicalAddr   Logical device going inactive
+     52          //! @param[in]  - physicalAddr  Physical address of device
+     53          //------------------------------------------------------------------------------
+     54          void SiiCecSendInactiveSource ( uint8_t logicalAddr, uint16_t physicalAddr )
+     55          {
+     56              SiiCpiData_t cecFrame;
+     57          
+     58              cecFrame.opcode         = CECOP_INACTIVE_SOURCE;
+     59              cecFrame.srcDestAddr    = MAKE_SRCDEST( logicalAddr, CEC_LOGADDR_UNREGORBC );
+     60              cecFrame.args[0]        = physicalAddr >> 8;        // [Physical Address] High
+     61              cecFrame.args[1]        = physicalAddr & 0xFF;      // [Physical Address] Low
+     62              cecFrame.argCount       = 2;
+     63          
+     64              SiiDrvCpiWrite( &cecFrame );
+     65          }
+     66          
+     67          //------------------------------------------------------------------------------
+     68          // Function:    CecTaskCpiWaitAck
+     69          // Description: Waits for an ACK from the last command sent.
+     70          //------------------------------------------------------------------------------
+     71          
+     72          static uint8_t CecTaskCpiWaitAck ( SiiCpiStatus_t *pCecStatus )
+     73          {
+     74              uint8_t         newTask = ACTIVE_TASK.task;
+     75          
+     76              if ( pCecStatus->txState == SiiTX_SENDFAILED )
+     77              {
+     78                  DEBUG_PRINT( CEC_MSG_DBG,( "Task:: NoAck received\n" ));
+     79          
+     80                      /* Abort task */
+     81          
+     82                  ACTIVE_TASK.cpiState    = CPI_IDLE;
+     83                  newTask                         = SiiCECTASK_IDLE;
+     84              }
+     85              else if ( pCecStatus->txState == SiiTX_SENDACKED )
+     86              {
+     87                  DEBUG_PRINT( CEC_MSG_DBG,( "Task:: ACK received\n" ));
+     88              }
+     89              return( newTask );
+     90          }
+     91          
+     92          //------------------------------------------------------------------------------
+     93          // Function:    CecTaskOneTouchPlay
+     94          // Description: Implement One Touch Play message sequence.
+     95          //
+     96          // cecTaskState.taskData1 ==
+     97          // cecTaskState.taskData1 ==
+     98          // cecTaskState.taskData2 ==
+     99          //------------------------------------------------------------------------------
+    100          
+    101          uint8_t CecTaskOneTouchPlay ( SiiCpiStatus_t *pCecStatus )
+    102          {
+    103              SiiCpiData_t    cecFrame;
+    104              uint8_t         newTask = ACTIVE_TASK.task;
+    105          
+    106              switch ( ACTIVE_TASK.cpiState )
+    107              {
+    108                  case CPI_IDLE:
+    109          
+    110                      switch ( ACTIVE_TASK.taskState )
+    111                      {
+    112                          case SiiCecTaskOtpStart:
+    113                              // Send an Image View On command to wake up the TV
+    114          
+    115                              cecFrame.opcode             = CECOP_IMAGE_VIEW_ON;
+    116                              cecFrame.srcDestAddr        = MAKE_SRCDEST( pCec->logicalAddr, CEC_LOGADDR_TV );
+    117                              cecFrame.argCount           = 0;
+    118          
+    119                              SiiDrvCpiWrite( &cecFrame );
+    120                              ACTIVE_TASK.taskState       = SiiCecTaskOtpSendImageViewOn;
+    121                              ACTIVE_TASK.cpiState        = CPI_WAIT_ACK;
+    122                              break;
+    123          
+    124                          case SiiCecTaskOtpSendImageViewOn:
+    125                              // Now send an ACTIVE SOURCE message to tell them who we are
+    126          
+    127                              SiiCecSendActiveSource( pCec->logicalAddr, pCec->physicalAddr );
+    128                              DEBUG_PRINT( CEC_MSG_DBG, ("TX: Sent Active Source\n" ));
+    129                              ACTIVE_TASK.taskState       = SiiCecTaskOtpSentActiveSource;
+    130                              break;
+    131          
+    132                          case SiiCecTaskOtpSentActiveSource:
+    133                              newTask = SiiCECTASK_IDLE;
+    134                              pCec->isActiveSource = true;
+    135                              break;
+    136                      }
+    137          
+    138                      break;
+    139          
+    140                  case CPI_WAIT_ACK:
+    141                      ACTIVE_TASK.cpiState = CPI_IDLE;
+    142                      newTask = CecTaskCpiWaitAck( pCecStatus );  // Will go to idle task if no ack received
+    143                      break;
+    144                  default:
+    145                      break;
+    146              }
+    147          
+    148              return( newTask );
+    149          }
+    150          
+    151          //------------------------------------------------------------------------------
+    152          // Function:    SI_CecOneTouchPlay
+    153          // Description: Send the appropriate CEC commands to the specified logical
+    154          //              device on the CEC Tx bus.
+    155          //------------------------------------------------------------------------------
+    156          
+    157          bool_t SiiCecOneTouchPlay ( void )
+    158          {
+    159              SiiCecTaskState_t  newTask;
+    160          
+    161              newTask.task        = SiiCECTASK_ONETOUCH;
+    162              newTask.taskState   = SiiCecTaskOtpStart;
+    163              newTask.destLA      = 0;
+    164              newTask.cpiState    = CPI_IDLE;
+    165              newTask.taskData1   = 0;
+    166              newTask.taskData2   = 0;
+    167              return( CecAddTask( &newTask ));
+    168          }
+    169          
+    170          //------------------------------------------------------------------------------
+    171          // Function:    si_CecTxMsgHandler
+    172          // Description: This is the first TX message handler called in the chain. It
+    173          //              parses messages that it needs to keep the internal component
+    174          //              status up to date.
+    175          //------------------------------------------------------------------------------
+    176          
+    177          bool_t CecTxMsgHandler ( SiiCpiData_t *pMsg )
+    178          {
+    179              bool_t  isDirectAddressed, usedMessage;
+    180          
+    181              isDirectAddressed   = !((pMsg->srcDestAddr & 0x0F ) == CEC_LOGADDR_UNREGORBC );
+    182              usedMessage         = false;
+    183          
+    184              switch ( pMsg->opcode )
+    185              {
+    186                  case CECOP_ACTIVE_SOURCE:
+    187                      if ( !isDirectAddressed )                   // Ignore as direct message
+    188                      {
+    189          	            switch ((pMsg->srcDestAddr & 0xF0) >> 4)
+    190          	            {
+    191          		            case CEC_LOGADDR_PLAYBACK1:
+    192          		            case CEC_LOGADDR_PLAYBACK2:
+    193          		            case CEC_LOGADDR_PLAYBACK3:
+    194          					//case CEC_LOGADDR_TV:
+    195          					pCec->isActiveSource = false;
+    196          					//DEBUG_PRINT(MSG_ALWAYS,"used Message in ACTIVE SOURCE\n");
+    197          		           	break;
+    198          		            default:break;
+    199          	            }
+    200                      }
+    201                      else
+    202          	            usedMessage = true;
+    203                      break;
+    204          
+    205                  case CECOP_REQUEST_ACTIVE_SOURCE:
+    206                      if ( !isDirectAddressed )                   // Ignore as direct message
+    207                      {
+    208                          if ( pCec->isActiveSource )
+    209                          {
+    210                              SiiCecSendActiveSource( pCec->logicalAddr, pCec->physicalAddr );
+    211                          }
+    212                      }
+    213                      usedMessage = true;
+    214                      break;        
+    215          
+    216          	case CECOP_USER_CONTROL_PRESSED:
+    217                      if ( isDirectAddressed )                   // Ignore as broadcast message
+    218                      {
+    219                          if ( pMsg->args[0] == CEC_RC_POWER )
+    220                          {
+    221          #if ( configSII_DEV_953x_PORTING == 0 )
+    222          	                pCec->powerState    = CEC_POWERSTATUS_STANDBY_TO_ON;
+    223          	                pCec->statusFlags   |= SiiCEC_POWERSTATE_CHANGE;            // Signal upper layer
+    224          #endif	                
+    225          			AmTCecEventPassToHMI(USER_EVENT_ARC_POWER_ON);	//Power On sound bar
+    226          
+    227          		        usedMessage = true;
+    228                          }
+    229                      }
+    230                      break;        
+    231          
+    232                  default:
+    233                      break;
+    234              }
+    235          
+    236              return( usedMessage );
+    237          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       48  CecTaskOneTouchPlay
+             48 -> SiiCecSendActiveSource
+             48 -> SiiDrvCpiWrite
+       16  CecTxMsgHandler
+             16 -> AmTCecEventPassToHMI
+             16 -> SiiCecSendActiveSource
+       32  SiiCecOneTouchPlay
+             32 -> CecAddTask
+       32  SiiCecSendActiveSource
+             32 -> SiiDrvCpiWrite
+       32  SiiCecSendInactiveSource
+             32 -> SiiDrvCpiWrite
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+      22  ?Subroutine0
+      18  ?Subroutine1
+     182  CecTaskOneTouchPlay
+      98  CecTxMsgHandler
+      34  SiiCecOneTouchPlay
+      14  SiiCecSendActiveSource
+      12  SiiCecSendInactiveSource
+
+ 
+ 384 bytes in section .text
+ 
+ 384 bytes of CODE memory
+
+Errors: none
+Warnings: 1

@@ -1,0 +1,719 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:26:14 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\APP_SRC\SERVICES\USB_HD\src\usbd_cdc_ #
+#                    vcp.c                                                    #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\APP_SRC\SERVICES\USB_HD\src\usbd_cdc_ #
+#                    vcp.c -D S4051A -D DEBUG -D FREE_RTOS -D STM32F40_41xxx  #
+#                    -D USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D          #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\usbd_cdc_vcp.lst                                      #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\usbd_cdc_vcp.o                                         #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Projects\S4051A\APP_SRC\SERVICES\USB_HD\src\usbd_cdc_vcp.c
+      1          /**
+      2            ******************************************************************************
+      3            * @file    usbd_cdc_vcp.c
+      4            * @author  MCD Application Team
+      5            * @version V1.1.0
+      6            * @date    19-March-2012
+      7            * @brief   Generic media access Layer.
+      8            ******************************************************************************
+      9            * @attention
+     10            *
+     11            * <h2><center>&copy; COPYRIGHT 2012 STMicroelectronics</center></h2>
+     12            *
+     13            * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
+     14            * You may not use this file except in compliance with the License.
+     15            * You may obtain a copy of the License at:
+     16            *
+     17            *        http://www.st.com/software_license_agreement_liberty_v2
+     18            *
+     19            * Unless required by applicable law or agreed to in writing, software 
+     20            * distributed under the License is distributed on an "AS IS" BASIS, 
+     21            * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     22            * See the License for the specific language governing permissions and
+     23            * limitations under the License.
+     24            *
+     25            ******************************************************************************
+     26            */ 
+     27          
+     28          #ifdef USB_OTG_HS_INTERNAL_DMA_ENABLED 
+     29          #pragma     data_alignment = 4 
+     30          #endif /* USB_OTG_HS_INTERNAL_DMA_ENABLED */
+     31          
+     32          /* Includes ------------------------------------------------------------------*/
+     33          #include "usbd_cdc_vcp.h"
+     34          #include "usb_conf.h"
+     35          
+     36          //! Amtran Implemented	@{
+     37          #include "UART_Lowlevel.h"
+     38          //!	@}
+     39          
+     40          /* Private typedef -----------------------------------------------------------*/
+     41          /* Private define ------------------------------------------------------------*/
+     42          /* Private macro -------------------------------------------------------------*/
+     43          /* Private variables ---------------------------------------------------------*/
+     44          LINE_CODING linecoding =
+     45            {
+     46              115200, /* baud rate*/
+     47              0x00,   /* stop bits-1*/
+     48              0x00,   /* parity - none*/
+     49              0x08    /* nb. of bits 8*/
+     50            };
+     51          
+     52          
+     53          //USART_InitTypeDef USART_InitStructure;
+     54          
+     55          /* These are external variables imported from CDC core to be used for IN 
+     56             transfer management. */
+     57          extern uint8_t  APP_Rx_Buffer []; /* Write CDC received data in this buffer.
+     58                                               These data will be sent over USB IN endpoint
+     59                                               in the CDC core functions. */
+     60          extern uint32_t APP_Rx_ptr_in;    /* Increment this pointer or roll it back to
+     61                                               start address when writing received data
+     62                                               in the buffer APP_Rx_Buffer. */
+     63          
+     64          									 
+     65          /* Extern function prototypes -----------------------------------------------*/
+     66          	 
+     67          extern void usart_lowlevel_handler(uint8_t port, uint8_t c);
+     68          
+     69          /* Private function prototypes -----------------------------------------------*/
+     70          static uint16_t VCP_Init     (void);
+     71          static uint16_t VCP_DeInit   (void);
+     72          static uint16_t VCP_Ctrl     (uint32_t Cmd, uint8_t* Buf, uint32_t Len);
+     73          static uint16_t VCP_DataTx   (uint8_t* Buf, uint32_t Len);
+     74          static uint16_t VCP_DataRx   (uint8_t* Buf, uint32_t Len);
+     75          
+     76          static uint16_t VCP_COMConfig(uint8_t Conf);
+     77          
+     78          CDC_IF_Prop_TypeDef VCP_fops = 
+     79          {
+     80            VCP_Init,
+     81            VCP_DeInit,
+     82            VCP_Ctrl,
+     83            VCP_DataTx,
+     84            VCP_DataRx
+     85          };
+     86          
+     87          /* Private functions ---------------------------------------------------------*/
+     88          /**
+     89            * @brief  VCP_Init
+     90            *         Initializes the Media on the STM32
+     91            * @param  None
+     92            * @retval Result of the opeartion (USBD_OK in all cases)
+     93            */
+     94          static uint16_t VCP_Init(void)
+     95          {
+     96          
+     97          #if 0
+     98            NVIC_InitTypeDef NVIC_InitStructure;
+     99            
+    100            /* EVAL_COM1 default configuration */
+    101            /* EVAL_COM1 configured as follow:
+    102                  - BaudRate = 115200 baud  
+    103                  - Word Length = 8 Bits
+    104                  - One Stop Bit
+    105                  - Parity Odd
+    106                  - Hardware flow control disabled
+    107                  - Receive and transmit enabled
+    108            */
+    109            USART_InitStructure.USART_BaudRate = 115200;
+    110            USART_InitStructure.USART_WordLength = USART_WordLength_8b;
+    111            USART_InitStructure.USART_StopBits = USART_StopBits_1;
+    112            USART_InitStructure.USART_Parity = USART_Parity_Odd;
+    113            USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
+    114            USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
+    115          
+    116            /* Configure and enable the USART */
+    117            //UARTLowLevel_initialize(&USART_InitStructure);
+    118          
+    119            /* Enable the USART Receive interrupt */
+    120            USART_ITConfig(EVAL_COM1, USART_IT_RXNE, ENABLE); //ENABLE
+    121          
+    122            /* Enable USART Interrupt */
+    123            NVIC_InitStructure.NVIC_IRQChannel = EVAL_COM1_IRQn;
+    124            NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
+    125            NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
+    126            NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+    127            NVIC_Init(&NVIC_InitStructure);
+    128          #endif   
+    129            
+    130            return USBD_OK;
+    131          }
+    132          
+    133          /**
+    134            * @brief  VCP_DeInit
+    135            *         DeInitializes the Media on the STM32
+    136            * @param  None
+    137            * @retval Result of the opeartion (USBD_OK in all cases)
+    138            */
+    139          static uint16_t VCP_DeInit(void)
+    140          {
+    141          
+    142            return USBD_OK;
+    143          }
+    144          
+    145          
+    146          /**
+    147            * @brief  VCP_Ctrl
+    148            *         Manage the CDC class requests
+    149            * @param  Cmd: Command code            
+    150            * @param  Buf: Buffer containing command data (request parameters)
+    151            * @param  Len: Number of data to be sent (in bytes)
+    152            * @retval Result of the opeartion (USBD_OK in all cases)
+    153            */
+    154          static uint16_t VCP_Ctrl (uint32_t Cmd, uint8_t* Buf, uint32_t Len)
+    155          { 
+    156            switch (Cmd)
+    157            {
+    158            case SEND_ENCAPSULATED_COMMAND:
+    159              /* Not  needed for this driver */
+    160              break;
+    161          
+    162            case GET_ENCAPSULATED_RESPONSE:
+    163              /* Not  needed for this driver */
+    164              break;
+    165          
+    166            case SET_COMM_FEATURE:
+    167              /* Not  needed for this driver */
+    168              break;
+    169          
+    170            case GET_COMM_FEATURE:
+    171              /* Not  needed for this driver */
+    172              break;
+    173          
+    174            case CLEAR_COMM_FEATURE:
+    175              /* Not  needed for this driver */
+    176              break;
+    177          
+    178            case SET_LINE_CODING:
+    179              linecoding.bitrate = (uint32_t)(Buf[0] | (Buf[1] << 8) | (Buf[2] << 16) | (Buf[3] << 24));
+    180              linecoding.format = Buf[4];
+    181              linecoding.paritytype = Buf[5];
+    182              linecoding.datatype = Buf[6];
+    183              /* Set the new configuration */
+    184              VCP_COMConfig(OTHER_CONFIG);
+    185              break;
+    186          
+    187            case GET_LINE_CODING:
+    188              Buf[0] = (uint8_t)(linecoding.bitrate);
+    189              Buf[1] = (uint8_t)(linecoding.bitrate >> 8);
+    190              Buf[2] = (uint8_t)(linecoding.bitrate >> 16);
+    191              Buf[3] = (uint8_t)(linecoding.bitrate >> 24);
+    192              Buf[4] = linecoding.format;
+    193              Buf[5] = linecoding.paritytype;
+    194              Buf[6] = linecoding.datatype; 
+    195              break;
+    196          
+    197            case SET_CONTROL_LINE_STATE:
+    198              /* Not  needed for this driver */
+    199              break;
+    200          
+    201            case SEND_BREAK:
+    202              /* Not  needed for this driver */
+    203              break;    
+    204              
+    205            default:
+    206              break;
+    207            }
+    208          
+    209            return USBD_OK;
+    210          }
+    211          
+    212          /**
+    213            * @brief  VCP_DataTx
+    214            *         CDC received data to be send over USB IN endpoint are managed in 
+    215            *         this function.
+    216            * @param  Buf: Buffer of data to be sent
+    217            * @param  Len: Number of data to be sent (in bytes)
+    218            * @retval Result of the opeartion: USBD_OK if all operations are OK else VCP_FAIL
+    219            */
+    220          static uint16_t VCP_DataTx (uint8_t* Buf, uint32_t Len)
+    221          {
+    222          
+    223          	if (Len > 0)
+    224          	{
+    225          		for (uint32_t i = 0; i < Len; i++)
+    226          		{
+    227          			APP_Rx_Buffer[APP_Rx_ptr_in] = *(Buf+i);
+    228          			APP_Rx_ptr_in++;		
+    229          
+    230          			if(APP_Rx_ptr_in >= APP_RX_DATA_SIZE)
+    231          			{
+    232          				APP_Rx_ptr_in = 0;
+    233          				return USBD_FAIL;
+    234          			}  		  
+    235          		}
+    236          	}
+    237          
+    238          //! Smith mark; Virtual com port doesn't need physical com port.	@{
+    239          #if 0	
+    240          	if (linecoding.datatype == 7)
+    241          	{
+    242          		APP_Rx_Buffer[APP_Rx_ptr_in] = USART_ReceiveData(EVAL_COM1) & 0x7F;
+    243          	}
+    244          	else if (linecoding.datatype == 8)
+    245          	{
+    246          		APP_Rx_Buffer[APP_Rx_ptr_in] = USART_ReceiveData(EVAL_COM1);
+    247          	}
+    248          
+    249          		APP_Rx_ptr_in++;
+    250          
+    251          	/* To avoid buffer overflow */
+    252          	if(APP_Rx_ptr_in == APP_RX_DATA_SIZE)
+    253          	{
+    254          		APP_Rx_ptr_in = 0;
+    255          	}  
+    256          #endif   
+    257          //!	@}
+    258            
+    259          	return USBD_OK;
+    260          }
+    261          
+    262          /**
+    263            * @brief  VCP_DataRx
+    264            *         Data received over USB OUT endpoint are sent over CDC interface 
+    265            *         through this function.
+    266            *           
+    267            *         @note
+    268            *         This function will block any OUT packet reception on USB endpoint 
+    269            *         untill exiting this function. If you exit this function before transfer
+    270            *         is complete on CDC interface (ie. using DMA controller) it will result 
+    271            *         in receiving more data while previous ones are still not sent.
+    272            *                 
+    273            * @param  Buf: Buffer of data to be received
+    274            * @param  Len: Number of data received (in bytes)
+    275            * @retval Result of the opeartion: USBD_OK if all operations are OK else VCP_FAIL
+    276            */
+    277          static uint16_t VCP_DataRx (uint8_t* Buf, uint32_t Len)
+    278          {
+    279          	uint32_t i;
+    280          
+    281          	for (i = 0; i < Len; i++)
+    282          	{
+    283          		usart_lowlevel_handler(VIRTUAL_PORT, *(Buf+i) );
+    284          	}
+    285          
+    286          //! Smith mark; Virtual com port doesn't need physical com port.	@{	
+    287          #if 0
+    288          	uint32_t i;
+    289          
+    290          	for (i = 0; i < Len; i++)
+    291          	{
+    292          		USART_SendData(EVAL_COM1, *(Buf + i) );
+    293          		while(USART_GetFlagStatus(EVAL_COM1, USART_FLAG_TXE) == RESET); 
+    294          	} 
+    295          #endif 
+    296          //! @}
+    297          
+    298            return USBD_OK;
+    299          }
+    300          
+    301          /**
+    302            * @brief  VCP_COMConfig
+    303            *         Configure the COM Port with default values or values received from host.
+    304            * @param  Conf: can be DEFAULT_CONFIG to set the default configuration or OTHER_CONFIG
+    305            *         to set a configuration received from the host.
+    306            * @retval None.
+    307            */
+    308          static uint16_t VCP_COMConfig(uint8_t Conf)
+    309          {
+    310          
+    311          //! Smith mark; Virtual com port doesn't need physical com port.	@{	
+    312          #if 0
+    313            if (Conf == DEFAULT_CONFIG)  
+    314            {
+    315              /* EVAL_COM1 default configuration */
+    316              /* EVAL_COM1 configured as follow:
+    317              - BaudRate = 115200 baud  
+    318              - Word Length = 8 Bits
+    319              - One Stop Bit
+    320              - Parity Odd
+    321              - Hardware flow control disabled
+    322              - Receive and transmit enabled
+    323              */
+    324              USART_InitStructure.USART_BaudRate = 115200;
+    325              USART_InitStructure.USART_WordLength = USART_WordLength_8b;
+    326              USART_InitStructure.USART_StopBits = USART_StopBits_1;
+    327              USART_InitStructure.USART_Parity = USART_Parity_Odd;
+    328              USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
+    329              USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
+    330              
+    331              /* Configure and enable the USART */
+    332              UARTLowLevel_initialize(&USART_InitStructure);
+    333              
+    334              /* Enable the USART Receive interrupt */
+    335              USART_ITConfig(EVAL_COM1, USART_IT_RXNE, ENABLE);
+    336            }
+    337            else
+    338            {
+    339              /* set the Stop bit*/
+    340              switch (linecoding.format)
+    341              {
+    342              case 0:
+    343                USART_InitStructure.USART_StopBits = USART_StopBits_1;
+    344                break;
+    345              case 1:
+    346                USART_InitStructure.USART_StopBits = USART_StopBits_1_5;
+    347                break;
+    348              case 2:
+    349                USART_InitStructure.USART_StopBits = USART_StopBits_2;
+    350                break;
+    351              default :
+    352                VCP_COMConfig(DEFAULT_CONFIG);
+    353                return (USBD_FAIL);
+    354              }
+    355              
+    356              /* set the parity bit*/
+    357              switch (linecoding.paritytype)
+    358              {
+    359              case 0:
+    360                USART_InitStructure.USART_Parity = USART_Parity_No;
+    361                break;
+    362              case 1:
+    363                USART_InitStructure.USART_Parity = USART_Parity_Even;
+    364                break;
+    365              case 2:
+    366                USART_InitStructure.USART_Parity = USART_Parity_Odd;
+    367                break;
+    368              default :
+    369                VCP_COMConfig(DEFAULT_CONFIG);
+    370                return (USBD_FAIL);
+    371              }
+    372              
+    373              /*set the data type : only 8bits and 9bits is supported */
+    374              switch (linecoding.datatype)
+    375              {
+    376              case 0x07:
+    377                /* With this configuration a parity (Even or Odd) should be set */
+    378                USART_InitStructure.USART_WordLength = USART_WordLength_8b;
+    379                break;
+    380              case 0x08:
+    381                if (USART_InitStructure.USART_Parity == USART_Parity_No)
+    382                {
+    383                  USART_InitStructure.USART_WordLength = USART_WordLength_8b;
+    384                }
+    385                else 
+    386                {
+    387                  USART_InitStructure.USART_WordLength = USART_WordLength_9b;
+    388                }
+    389                
+    390                break;
+    391              default :
+    392                VCP_COMConfig(DEFAULT_CONFIG);
+    393                return (USBD_FAIL);
+    394              }
+    395              
+    396              USART_InitStructure.USART_BaudRate = linecoding.bitrate;
+    397              USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
+    398              USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
+    399              
+    400              /* Configure and enable the USART */
+    401              UARTLowLevel_initialize(&USART_InitStructure);
+    402            }
+    403          #endif 
+    404            //! 	  @}  
+    405            
+    406            return USBD_OK;
+    407          }
+    408          
+    409          /**
+    410            * @brief  EVAL_COM_IRQHandler
+    411            *         
+    412            * @param  None.
+    413            * @retval None.
+    414            */
+    415          //!Smith mark; Virtual com port doesn't need physical com port.  @{ 
+    416          #if 0
+    417          void EVAL_COM_IRQHandler(void)
+    418          {
+    419            
+    420          	if (USART_GetITStatus(EVAL_COM1, USART_IT_RXNE) != RESET)
+    421          	{
+    422          		/* Send the received data to the PC Host*/
+    423          		VCP_DataTx (0, 0);
+    424          	}
+    425          
+    426          	/* If overrun condition occurs, clear the ORE flag and recover communication */
+    427          	if (USART_GetFlagStatus(EVAL_COM1, USART_FLAG_ORE) != RESET)
+    428          	{
+    429          		(void)USART_ReceiveData(EVAL_COM1);
+    430          	}
+    431            
+    432          }
+    433          #endif
+    434          //!	@}
+    435          /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        0  VCP_Ctrl
+       16  VCP_DataRx
+             16 -> usart_lowlevel_handler
+       16  VCP_DataTx
+        0  VCP_DeInit
+        0  VCP_Init
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+       4  ??DataTable1_1
+       4  ??DataTable1_2
+      86  VCP_Ctrl
+      28  VCP_DataRx
+      46  VCP_DataTx
+       4  VCP_DeInit
+       4  VCP_Init
+      20  VCP_fops
+       8  linecoding
+
+ 
+  28 bytes in section .data
+ 180 bytes in section .text
+ 
+ 180 bytes of CODE memory
+  28 bytes of DATA memory
+
+Errors: none
+Warnings: none

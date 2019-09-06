@@ -1,0 +1,1220 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:25:18 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\repeater_avr\ #
+#                    si_repeater_component.c                                  #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\repeater_avr\ #
+#                    si_repeater_component.c -D S4051A -D DEBUG -D FREE_RTOS  #
+#                    -D STM32F40_41xxx -D USE_STM324xG_EVAL -D                #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_repeater_component.lst                             #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_repeater_component.o                                #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\component\repeater_avr\si_repeater_component.c
+      1          //***************************************************************************
+      2          //!file     si_repeater_component.c
+      3          //!brief    Silicon Image Repeater component.
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1060 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2002-2010, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include <string.h>
+     14          #include <stdio.h>
+     15          #include "si_repeater_component_internal.h"
+     16          #include "si_tx_component.h"
+     17          #include "si_connection_monitor.h"
+     18          #include "si_drv_repeater.h"
+     19          #include "si_hdcp_ddc.h"
+     20          #include "si_drv_repeater_sha.h"
+     21          #include "si_repeater_sha.h"
+     22          
+     23          // Bug 33044 - Melbourne SiI9535/9533 MHL QD882 HDCP CTS 3AB fails at test item 3B-01a-RKSV-127 
+     24          // Bug 33042 - Melbourne SiI9535/9533 HDMI QD882 HDCP CTS 3AB fails at test item 3B-01a-RKSV-127 
+     25          #define SII_MAX_KSV_NMB	63
+     26          
+     27          //------------------------------------------------------------------------------
+     28          //  Repeater Component Instance Data
+     29          //------------------------------------------------------------------------------
+     30          
+     31          RepeaterInstanceData_t repeaterIns[SII_NUM_PIPE];
+     32          RepeaterInstanceData_t *pRpt = &repeaterIns[0];
+     33          uint8_t InputNoHdcp;
+     34          
+     35          
+     36          
+     37          //-------------------------------------------------------------------------------------------------
+     38          //! @brief      Update last result structure and print an error message.
+     39          //!
+     40          //!             This function shall be used to report any error or warning in the component.
+     41          //!
+     42          //! @param[in]  code  - error or warning message code
+     43          //-------------------------------------------------------------------------------------------------
+     44          static void ReportIssue(rptErrCode_t err_code)
+     45          {
+     46          	switch(err_code)
+     47          	{
+     48          		case SI_RPT_ERROR_CODE_INSTANCE_NOT_EXIST:
+     49          			DEBUG_PRINT( RPT_MSG_DBG, ("repeater instance more than 2!!\n "));
+     50          			break;
+     51          		default:
+     52          			break;
+     53          
+     54          	}
+     55          }
+     56          
+     57          //-------------------------------------------------------------------------------------------------
+     58          //! @brief	   clear the HDCP status releated to the Tx
+     59          //!
+     60          //! @param[in]  txN   - the index of the Tx
+     61          //-------------------------------------------------------------------------------------------------
+     62          void RepeaterResetTxHdcpStatusData(uint8_t txN)
+     63          {
+     64          	uint8_t i;
+     65          	uint8_t numberOfTx = txN + 1;
+     66          	uint8_t startingTx = txN;
+     67          
+     68          	if(txN == RPT_ALL_TX)
+     69          	{
+     70          		numberOfTx = SII_NUM_TX;
+     71          		startingTx = 0;
+     72          	}
+     73          
+     74          	for(i = startingTx; i<numberOfTx; i++)
+     75          	{
+     76          		pRpt->txOnThePipe[i].txStat.isRptTxHdcpDone = false;
+     77          		pRpt->txOnThePipe[i].txStat.isHdcpRequested = false;
+     78          		pRpt->txOnThePipe[i].txStat.isBstatRdy = false;
+     79          		pRpt->txOnThePipe[i].txStat.isRptTxKsvRdy = false;
+     80          		pRpt->txOnThePipe[i].txStat.isRptTxShaDone = false;
+     81          		pRpt->txOnThePipe[i].txStat.isRptDsNoHdcp = false;
+     82          	}
+     83          
+     84          }
+     85          
+     86          //-------------------------------------------------------------------------------------------------
+     87          //! @brief	  selects the active repeater instance
+     88          //!
+     89          //! @param[in]  instance   - the index of the instance
+     90          //!             this is a cross instance function
+     91          //-------------------------------------------------------------------------------------------------
+     92          void SiiRepeaterInstanceSet(uint8_t instance)
+     93          {
+     94          #if (SII_NUM_PIPE > 1)
+     95              if (instance < SII_NUM_PIPE)
+     96              {
+     97                  pRpt = &repeaterIns[instance];
+     98              	SiiDrvRepeaterInstanceSet(instance);
+     99              }
+    100              else
+    101              {
+    102                  ReportIssue(SI_RPT_ERROR_CODE_INSTANCE_NOT_EXIST);
+    103              }
+    104          #endif //(SII_NUM_PIPE > 1)
+    105          }
+    106          
+    107          
+    108          
+    109          //-------------------------------------------------------------------------------------------------
+    110          //! @brief	   Called to set up the SHA for tx from application, when in TPG mode without repeater
+    111          //!			
+    112          //! @param[in]  txNum   - enable SHA for which tx output DS
+    113          //! @param[in]  isStart - start or stop the SHA resource
+    114          //-------------------------------------------------------------------------------------------------
+    115          void SiiRepeaterForceShaSet ( uint8_t txNum, bool_t isStart  )  //add switchConf to
+    116          {
+    117          	repeaterShaRequest_t srq;
+    118          	srq.isTx = true;
+    119          	srq.portNum = txNum;
+    120          	srq.manualTxStart = false;
+    121          
+    122          	if (isStart)
+    123          	{
+    124          	    SiiDrvShaRequestStart(srq);
+    125          	}
+    126          	else
+    127          	{
+    128          	    SiiDrvShaRequestStop(srq.isTx, srq.portNum);
+    129          	}
+    130          }
+    131          
+    132          //-------------------------------------------------------------------------------------------------
+    133          //! @brief	   set up current sytem switch mode
+    134          //!
+    135          //! @param[in]  repeaterMode   - current switch mode
+    136          //-------------------------------------------------------------------------------------------------
+    137          void SiiRepeaterSwitchModeSet( RepeaterTopoMode_t repeaterMode )
+    138          {
+    139          	SiiDrvRepeaterSetMode(repeaterMode);
+    140          	RepeaterShaHandlerInitialize();
+    141          	SiiDrvShaSetSwitchMode(repeaterMode);
+    142          }
+    143          //-------------------------------------------------------------------------------------------------
+    144          //! @brief      Initialize repeater for operation in the requested mode.
+    145          //!             If Repeater option is enabled, init 2 repeater instances
+    146          //!
+    147          //! @param[in]  enable  - true enables repeater
+    148          //! @return     true: success
+    149          //!             this is a cross instance function
+    150          //-------------------------------------------------------------------------------------------------
+    151          bool_t SiiRepeaterInitialize (bool_t enable, bool_t isPowerUp)
+    152          {
+    153              uint8_t i;
+    154              if (enable)
+    155              {
+    156                  for (i = 0; i < SII_NUM_PIPE; i++)
+    157                  {
+    158                      memset(&repeaterIns[i], 0x0, sizeof(RepeaterInstanceData_t));
+    159                  }
+    160                  SiiRepeaterConnectionMonitorInit();
+    161                  SiiDrvRepeaterInit();
+    162                  SiiRepeaterSwitchModeSet(SI_RPT_MODE_INITIAL);
+    163                  InputNoHdcp = 0; //clear the input port non-HDCP status
+    164                  //no Rx HPD here. Will do when Tx connection is active
+    165                  //re-init every time when mode change.
+    166                  RepeaterShaHandlerInitialize();
+    167              }
+    168              else
+    169              {
+    170                  //when first power up as init, don't need to clear all status
+    171                  if(!isPowerUp)
+    172                  {
+    173                      SiiRepeaterSwitchModeSet (SI_RPT_MODE_SINGLE_REPEATER);//to clear all the inputs
+    174                      SiiDrvRepeaterRxHdcpReset(); //reset Rx
+    175                      SiiDrvRepeaterEnable(false);
+    176                      for (i = 0; i < SII_NUM_TX; i++)
+    177                      {
+    178                          SiiRepeaterConInstanceSet(i); //use any tx.
+    179                          RepeaterConOnTxHpdTurnOn(OFF, false);
+    180                      }
+    181                      for (i = 0; i < SII_NUM_PIPE; i++)
+    182                      {
+    183                          repeaterIns[i].repeaterActive = false;
+    184                      }
+    185                      //re-init every time when mode change.
+    186                      RepeaterShaHandlerInitialize();
+    187                  }
+    188          
+    189              }
+    190          
+    191          
+    192              return true;
+    193          }
+    194          
+    195          //-------------------------------------------------------------------------------------------------
+    196          //! @brief      configure the repeater instance
+    197          //! @param[in]  txId  - the tx index
+    198          //!             qOn   - true: the tx is add to this repeater pipe
+    199          //!                     false: the tx is removed from the repeater pipe
+    200          //! @return     
+    201          //-------------------------------------------------------------------------------------------------
+    202          void SiiRepeaterPipeTxConnectionSet(uint8_t txId, bool_t qOn)
+    203          {
+    204          	pRpt->txOnThePipe[txId].txStat.isRptTxOn = qOn;
+    205          	if( pRpt->txOnThePipe[txId].txStat.isRptTxHpdOn )//it was an active Tx
+    206          	{
+    207          		pRpt->txOnThePipe[txId].txStat.isRptTxHpdOn = false;
+    208          		pRpt->numberOfTx --;
+    209                  //if numberOfTx becomes 0, will change repeater mode later
+    210          	}
+    211          
+    212          }
+    213          
+    214          //-------------------------------------------------------------------------------------------------
+    215          //! @brief      configure the repeater instance
+    216          //! @param[in]  RepeaterInstanceData_t  - detailed instance configuration data
+    217          //! @return
+    218          //-------------------------------------------------------------------------------------------------
+    219          void SiiRepeaterPipeConfigureSet(RepeaterInstanceData_t  *reptr)
+    220          {
+    221              uint8_t i;
+    222              bool_t rptActive = false;
+    223          	*pRpt = *reptr;
+    224          
+    225          	RepeaterResetTxHdcpStatusData(RPT_ALL_TX); //reset all the Tx HDCP status of the pipe
+    226          
+    227          	pRpt->repeaterActive = false;
+    228          	pRpt->numberOfTx = 0;
+    229          	pRpt->numberOfTxAuthed = 0;
+    230          	pRpt->numberOfTxHasBstat = 0;
+    231          
+    232          	for(i = 0; i<SII_NUM_TX; i++)
+    233          	{
+    234          		if(pRpt->txOnThePipe[i].txStat.isRptTxOn)//the Tx on the pipe
+    235          		{
+    236          			pRpt->txOnThePipe[i].txStat.isRptTxHpdOn = false;
+    237          			rptActive = true;
+    238          		}
+    239          	}
+    240          	if( !rptActive )
+    241          	{
+    242          		SiiDrvHwAutoShaDisable();
+    243          		SiiDrvRepeaterEnable(OFF); //in case the Tx is connected but changed to TPG/Parl
+    244          	}
+    245          
+    246          }
+    247          
+    248          //-------------------------------------------------------------------------------------------------
+    249          //! @brief      Manages repeater instance operations
+    250          //!
+    251          //! @param[in]  msDiff -  the time between last call and this
+    252          //-------------------------------------------------------------------------------------------------
+    253          void SiiRepeaterHandler ( clock_time_t msDiff )
+    254          {
+    255          	uint8_t i;
+    256          
+    257          	if(pRpt->repeaterActive)
+    258          	{
+    259          	    RepeaterIsrHandler( msDiff, pRpt);
+    260          	    RepeaterShaHandler();
+    261          	}
+    262          	/*for each of the TX on the repeater instance*/
+    263          	/*need to full fill the Rx HPLUG pulse even when after repeater mode disabled*/
+    264          	for (i = 0; i<SII_NUM_TX; i++)
+    265          	{
+    266          		if (pRpt->txOnThePipe[i].txStat.isRptTxOn)
+    267          		{
+    268          			SiiRepeaterConInstanceSet(i);
+    269          			RepeaterConnectionMonitor( msDiff );
+    270          		}
+    271          	}
+    272          
+    273          }
+    274          
+    275          
+    276          
+    277          //-------------------------------------------------------------------------------------------------
+    278          //! @brief      Upstream authentication only, not change the downstream HDCP
+    279          //!
+    280          //! @param[in]  tx_number -  the tx that reported the message
+    281          //-------------------------------------------------------------------------------------------------
+    282          void SiiRepeaterHdcpUsOnlyAuthentication( uint8_t tx_number )
+    283          {
+    284          	repeaterShaRequest_t srq;
+    285          	srq.isTx = false;
+    286          	srq.portNum = pRpt->inputPort;
+    287          	srq.manualTxStart = false;
+    288          	uint8_t i;
+    289          	bool_t needReFreshHdcpData = false;
+    290          
+    291          	DEBUG_PRINT( RPT_MSG_DBG, ("US only auth\n "));
+    292          	SiiRepeaterConInstanceSet(tx_number);
+    293          	RepeaterConAvMuteSet(AV_MUTE_TX_IN_HDCP, OFF);
+    294          
+    295          	if((pRpt->rxBstatus[1]& MSK_HDCP_DDC__BSTATUS2__DEV_DEPTH) != 0)
+    296          	{
+    297          		RepeaterShaSetLength(pRpt->total_ksv_length); /*restore the SHA length*/
+    298          		SiiDrvRepeaterSetUsBstatus(pRpt->rxBstatus);
+    299          		SiiRepeaterShaRequest(false, srq);
+    300          		SiiDrvRepeaterSetBcapsFifoReady(ON); //DDC still shows not ready, if the HW is not done yet.
+    301          	}
+    302          	else
+    303          	{
+    304          		for (i = 0; i<SII_NUM_TX; i++)
+    305          		{
+    306          			if (pRpt->txOnThePipe[i].txStat.isRptTxOn
+    307          				&& pRpt->txOnThePipe[i].txStat.isHdcpRequested
+    308          				&& pRpt->txOnThePipe[i].txStat.isRptDsNoHdcp)
+    309          			{
+    310          				needReFreshHdcpData = true;
+    311          			}
+    312          		}
+    313          		if (needReFreshHdcpData)//DsNoHdcp status ready by now
+    314          		{
+    315          			for (i = 0; i<SII_NUM_TX; i++)
+    316          			{
+    317          				if (pRpt->txOnThePipe[i].txStat.isRptTxOn
+    318          					&& pRpt->txOnThePipe[i].txStat.isHdcpRequested
+    319          					&& !pRpt->txOnThePipe[i].txStat.isRptDsNoHdcp)
+    320          				{
+    321          					//do not change the instance
+    322          					SiiRepeaterHdcpProcessDsBstatus(pRpt->txOnThePipe[i].txBstatus, i);
+    323          					SiiRepeaterHdcpFinishUsPart2(pRpt->txOnThePipe[i].txsBksv, i);
+    324          				}
+    325          			}
+    326          		}
+    327          	}
+    328          }
+    329          
+    330          
+    331          
+    332          
+    333          //-------------------------------------------------------------------------------------------------
+    334          //! @brief      process the downstream Bstatus and update the upstream Bstatus accordingly. 
+    335          //!			if KSV number exceeded the limit, return false
+    336          //!
+    337          //! @param[in]  dsBstatus - downstream Bstatus
+    338          //! @param[in]  tx_number -  the tx that reported the message
+    339          //! @return     -true: KSV is over limit
+    340          //!			    -false: KSV within limit
+    341          //-------------------------------------------------------------------------------------------------
+    342          bool_t SiiRepeaterHdcpProcessDsBstatus( uint8_t dsBstatus[2],uint8_t tx_number )
+    343          {
+    344          	uint8_t ds_count = dsBstatus[0] & MSK_HDCP_DDC__BSTATUS1__DEV_COUNT;
+    345          	uint8_t ds_depth = dsBstatus[1] & MSK_HDCP_DDC__BSTATUS2__DEV_DEPTH;
+    346          	uint8_t our_bstatus[]={0,0}; /*compose repeater own BSTATUS and save it*/
+    347          
+    348          	uint8_t numberOfTxHasBstat =0;
+    349          	uint8_t numberOfHdcpTx=0;
+    350          	bool_t overLimit = false;
+    351          	uint8_t i;
+    352          
+    353          	DEBUG_PRINT( RPT_MSG_DBG, "$$$Tx bstatus =  %x  %x \n ",(int)dsBstatus[1], dsBstatus[0]);
+    354          	pRpt->txOnThePipe[tx_number].txStat.isBstatRdy= true;
+    355           
+    356          	/* check for HW limitation*/
+    357          	if ( ds_count >= SII_MAX_KSV_NMB )
+    358          	{
+    359          		ds_count = SII_MAX_KSV_NMB;
+    360          		overLimit = true;
+    361          		DEBUG_PRINT( RPT_MSG_DBG, ("max KSV number exceeded\n "));
+    362          		/* indicate that the limit is exceeded include only as much devices as could be placed into the FIFO*/
+    363          		pRpt->txOnThePipe[tx_number].txBstatus[0] = BIT_HDCP_DDC__BSTATUS1__DEV_EXC;
+    364          
+    365          	}
+    366          	else
+    367          	{
+    368          		pRpt->txOnThePipe[tx_number].txBstatus[0] = ds_count;
+    369          	}
+    370          
+    371          
+    372          	if ( dsBstatus[0] & BIT_HDCP_DDC__BSTATUS1__DEV_EXC )
+    373          	{
+    374          		pRpt->txOnThePipe[tx_number].txBstatus[0] |= BIT_HDCP_DDC__BSTATUS1__DEV_EXC;
+    375          	}
+    376          
+    377          
+    378          	if (ds_depth < 7 )
+    379          	{
+    380          		/*adding self level is done at last Tx*/
+    381          		pRpt->txOnThePipe[tx_number].txBstatus[1] = ds_depth;
+    382          	}
+    383          	else/* no more room to indicate bigger depth 0x07 is the maximum depth*/
+    384          	{
+    385          		pRpt->txOnThePipe[tx_number].txBstatus[1] = BIT_HDCP_DDC__BSTATUS2__CAS_EXC | 0x07;
+    386          	}
+    387          
+    388          	if ( dsBstatus[1] & BIT_HDCP_DDC__BSTATUS2__CAS_EXC )
+    389          	{
+    390          		pRpt->txOnThePipe[tx_number].txBstatus[1] |= BIT_HDCP_DDC__BSTATUS2__CAS_EXC;
+    391          	}
+    392          
+    393          	pRpt->txOnThePipe[tx_number].ksv_length = ds_count * LEN_HDCP_DDC__BKSV;
+    394          
+    395          	for ( i = 0; i < SII_NUM_TX; i++)/*start over from Tx HPD beginning*/
+    396          	{
+    397          		if (pRpt->txOnThePipe[i].txStat.isBstatRdy)
+    398          		{
+    399          			numberOfTxHasBstat++;
+    400          		}
+    401          		if ((pRpt->txOnThePipe[i].txStat.isHdcpRequested)
+    402          			&&(!pRpt->txOnThePipe[i].txStat.isRptDsNoHdcp))
+    403          		{
+    404          			numberOfHdcpTx++;
+    405          		}
+    406          	}
+    407          
+    408          	if (numberOfTxHasBstat == numberOfHdcpTx)//last tx in the pipe		lastTx = true;
+    409          	{
+    410          		for (i=0; i<SII_NUM_TX; i++)
+    411          		{
+    412          			if (pRpt->txOnThePipe[i].txStat.isBstatRdy)
+    413          			{
+    414          				our_bstatus[0] += pRpt->txOnThePipe[i].txBstatus[0];
+    415          				if (pRpt->txOnThePipe[i].txBstatus[1] > our_bstatus[1])
+    416          
+    417          					our_bstatus[1] = pRpt->txOnThePipe[i].txBstatus[1];
+    418          			}
+    419          		}
+    420          
+    421          		/*BIT_HDCP_DDC__BSTATUS2__CAS_EXC should have been carried over*/
+    422          		if ( our_bstatus[1] < 7 )
+    423          		{
+    424          			our_bstatus[1]++;		/*add our own*/
+    425          		}
+    426          		else
+    427          		{
+    428          			our_bstatus[1] = BIT_HDCP_DDC__BSTATUS2__CAS_EXC | 0x07;
+    429          		}
+    430          
+    431          		if ( our_bstatus[0]<=( SII_MAX_KSV_NMB - numberOfHdcpTx))
+    432          		{
+    433          			our_bstatus[0] += numberOfHdcpTx;  /* add our own device into the list*/
+    434          		}
+    435          		else
+    436          		{
+    437          			overLimit = true;
+    438          		}
+    439          
+    440          		if (overLimit)
+    441          		{
+    442          			/* indicate that the limit is exceeded*/
+    443          			/* include only as much devices as could be placed into the FIFO*/
+    444          			our_bstatus[0] = BIT_HDCP_DDC__BSTATUS1__DEV_EXC;
+    445          		}
+    446          	}
+    447          	DEBUG_PRINT( RPT_MSG_DBG, "$$$ our bstatus =  %x  %x \n ",(int)our_bstatus[1],
+    448          			our_bstatus[0]);
+    449          
+    450          	SiiDrvRepeaterSetUsBstatus( our_bstatus );
+    451          	pRpt->rxBstatus[0] = our_bstatus[0]; /*save for future use*/
+    452          	pRpt->rxBstatus[1] = our_bstatus[1];
+    453          	return overLimit;
+    454          
+    455          }
+    456          
+    457          //-------------------------------------------------------------------------------------------------
+    458          //! @brief      finish the upstream part 2 of HDCP authentication
+    459          //!
+    460          //! @param[in]  aDsBksv - downstream BKSV
+    461          //! @param[in]  tx_number -  the tx that reported the message
+    462          //-------------------------------------------------------------------------------------------------
+    463          void SiiRepeaterHdcpFinishUsPart2( uint8_t aDsBksv[LEN_HDCP_DDC__BKSV], uint8_t tx_number )
+    464          {
+    465          	uint8_t i,j,n;
+    466          	repeaterShaRequest_t srq;
+    467          	uint8_t numberOfTxReq;
+    468          
+    469          #if (CHECK_SAME_TX == 1)
+    470          	//if the DS is different, have to restart the HDCP from beginning
+    471          	if((pRpt->txOnThePipe[tx_number].wasAuthened == true)&& //skipped the HPD relay
+    472          	   (!SiiTxStatusGet().isSameDsConnected)) //status ready by now
+    473          	{
+    474          		pRpt->txOnThePipe[tx_number].wasAuthened = false;
+    475          		RepeaterResetTxHdcpStatusData(tx_number);
+    476          		RepeaterConOnTxHpdTurnOn( true, false);  //turn on, not the same Tx
+    477          		DEBUG_PRINT( RPT_MSG_DBG, "$$$Tx %d is not the same as before, re-authentication starts\n ",(int)tx_number);
+    478          	}
+    479          	else
+    480          #endif //#if (CHECK_SAME_TX == 1)
+    481          	{
+    482          		pRpt->numberOfTxAuthed = 0; //calculate authened number of tx
+    483          		pRpt->total_ksv_length = 0;
+    484          		numberOfTxReq = 0;
+    485          
+    486          		pRpt->txOnThePipe[tx_number].txStat.isRptTxShaDone = true;
+    487          		/*save the BKSV from the tx*/
+    488          		for (i=0; i<LEN_HDCP_DDC__BKSV; i++)
+    489          		{
+    490          			   pRpt->txOnThePipe[tx_number].txsBksv[i] = aDsBksv[i];
+    491          		}
+    492          		/*add the tx BKSV to the repeater BKSV*/
+    493          		n = 0;
+    494          		for (i=0;i<SII_NUM_TX;i++)
+    495          		{
+    496          			if (pRpt->txOnThePipe[i].txStat.isRptTxShaDone)
+    497          			{
+    498          				pRpt->numberOfTxAuthed++;
+    499          				pRpt->total_ksv_length += pRpt->txOnThePipe[i].ksv_length;
+    500          				for (j=0; j<LEN_HDCP_DDC__BKSV; j++)
+    501          				{
+    502          					pRpt->txsBksv[n++]=pRpt->txOnThePipe[i].txsBksv[j];
+    503          				}
+    504          			}
+    505          			if ((pRpt->txOnThePipe[i].txStat.isHdcpRequested)
+    506          				&&(!pRpt->txOnThePipe[i].txStat.isRptDsNoHdcp))
+    507          				numberOfTxReq++;
+    508          		}
+    509          		/*for the last tx
+    510          		1. adjust pointer and add BKSV for the txs
+    511          		2. calculate the sha length
+    512          		3. sha point to the US*/
+    513          		if (pRpt->numberOfTxAuthed == numberOfTxReq) /*last one*/
+    514          		{
+    515          			SiiDrvRepeaterFillUsKsvInfo(
+    516          					pRpt->total_ksv_length,
+    517          					pRpt->txsBksv,
+    518          					pRpt->numberOfTxAuthed,
+    519          					tx_number);
+    520          
+    521          			pRpt->total_ksv_length += LEN_HDCP_DDC__BKSV * pRpt->numberOfTxAuthed;  //add last one
+    522          			RepeaterShaSetLength(pRpt->total_ksv_length);
+    523          			srq.isTx = false;
+    524          			srq.portNum = pRpt->inputPort;
+    525          			srq.manualTxStart = false;
+    526          
+    527          			/*clear the rdy bit of the input*/
+    528          			SiiDrvRepeaterSetBcapsFifoReady(OFF);
+    529          			SiiRepeaterShaRequest(false, srq);
+    530          			SiiDrvRepeaterSetBcapsFifoReady(ON);
+    531          			DEBUG_PRINT( RPT_MSG_DBG, "$$$finish part2\n ");
+    532          		}
+    533          	}
+    534          }
+    535          
+    536          
+    537          //-------------------------------------------------------------------------------------------------
+    538          //! @brief      trun on / off the rx side Fifo ready bits
+    539          //-------------------------------------------------------------------------------------------------
+    540          void SiiRepeaterHdcpSetBcapsFifoRdyBits( bool_t switchOn )
+    541          {
+    542          	SiiDrvRepeaterSetBcapsFifoReady( switchOn );
+    543          }
+    544          
+    545          //-------------------------------------------------------------------------------------------------
+    546          //! @brief      Called when the Tx DDC availability is set to true or false
+    547          //! @param[in]  isAcknowledged - DDC available or not
+    548          //!             tx_number -  the tx that reported the message
+    549          
+    550          //-------------------------------------------------------------------------------------------------
+    551          void SiiRepeaterHdcpDsDdcAck(bool_t isAcknowledged, uint8_t tx_number)
+    552          {
+    553          	bool_t wasAcknowledged;
+    554          	//not update if the tx is not in any repeater instance. if added later, the Rx will be notified
+    555          	//and re-read EDID.
+    556          	//and this Tx will need to re-authenticated any way.
+    557          
+    558          	wasAcknowledged = !pRpt->txOnThePipe[tx_number].txStat.isRptDsNoHdcp;
+    559          	if(pRpt->txOnThePipe[tx_number].txStat.isRptTxOn && pRpt->txOnThePipe[tx_number].txStat.isRptTxHpdOn)
+    560          	{
+    561          		//update now for SiiRepeaterHdcpInformUsDeviceAboutFailure use
+    562          		pRpt->txOnThePipe[tx_number].txStat.isRptDsNoHdcp = !isAcknowledged;
+    563          		//if becomes available in the middle
+    564          		if(isAcknowledged && (!wasAcknowledged))
+    565          		{
+    566          			if (pRpt->txOnThePipe[tx_number].txStat.isHdcpRequested)
+    567          			{
+    568          				SiiTxHdcpDisable();
+    569          				pRpt->txOnThePipe[tx_number].txStat.isHdcpRequested = false;
+    570          			}
+    571          			SiiRepeaterHdcpInformUsDeviceAboutFailure(true, tx_number);
+    572          
+    573          		}
+    574          	}
+    575          }
+    576          
+    577          //-------------------------------------------------------------------------------------------------
+    578          //! @brief     called from TPI component when DS is a repeater, but KSV number is 0.
+    579          //!			   SHA is still needed in this case, compared to the DS is a none repeater case
+    580          //! @param[in]  tx_number -  the tx that reported the message
+    581          //! @return     -true: SHA is available for KSV processing
+    582          //!			    -false: SHA is NOT available for KSV processing
+    583          //-------------------------------------------------------------------------------------------------
+    584          bool_t SiiRepeaterHdcpPrepareFor0KsvListProcessing( uint8_t tx_number )
+    585          {
+    586          	repeaterShaRequest_t srq;
+    587          	pRpt->txOnThePipe[tx_number].txStat.isRptTxKsvRdy = false;/*clear first*/
+    588          	if (SiiDrvShaInUse())
+    589          	{
+    590          		srq = SiiDrvGetCurrentShaReq();
+    591          		if ( srq.isTx && srq.portNum != tx_number) //not this request
+    592          		{
+    593          			return false;
+    594          		}
+    595          	}
+    596          
+    597          	srq.isTx = true;
+    598          	srq.portNum = tx_number;
+    599          	srq.manualTxStart = true; /*manual is a must for KSV0 case*/
+    600          	pRpt->txOnThePipe[tx_number].txStat.isRptTxKsvRdy = true;
+    601          	/*SHA is check already. Force request, since this is manual SHA, additional bit enable is needed every time*/
+    602          	SiiRepeaterShaRequest(true, srq); /*force request, since this is manual SHA, additional enable is needed every time*/
+    603          
+    604          	DEBUG_PRINT( RPT_MSG_DBG, "$$$tx %d had 0 KSV \n ",(int)tx_number);
+    605          
+    606          	return true;
+    607          
+    608          }
+    609          //-------------------------------------------------------------------------------------------------
+    610          //! @brief     called from TPI component when KSV is ready.
+    611          //! @param[in]  tx_number -  the tx that reported the message
+    612          //@ Return
+    613          //				- true:  KSV list processing is ready, SHA is allocated
+    614          //				- false: KSV list processing is not ready, SHA is used at present
+    615          //-------------------------------------------------------------------------------------------------
+    616          bool_t SiiRepeaterHdcpPrepareForKsvListProcessing( uint8_t tx_number )
+    617          {
+    618          	uint8_t i;
+    619          	repeaterShaRequest_t srq;
+    620          	uint16_t	preKsvLength = 0;
+    621          
+    622          	/*clear the status first, to avoid add the Tx itself*/
+    623          	pRpt->txOnThePipe[tx_number].txStat.isRptTxKsvRdy = false;
+    624          
+    625          	/*check if Tx needs SHA or not*/
+    626          	if (!(pRpt->txOnThePipe[tx_number].txBstatus[0]& MSK_HDCP_DDC__BSTATUS1__DEV_COUNT))
+    627          	{
+    628          		return true;
+    629          	}
+    630          
+    631          	/*Tx needs SHA, prepare to request*/
+    632          	if (SiiDrvShaInUse())
+    633          	{
+    634          		srq = SiiDrvGetCurrentShaReq();
+    635          		if ( srq.isTx && srq.portNum == tx_number)
+    636          		{
+    637          			return true;
+    638          		}
+    639          		else/*not this request*/
+    640          		{
+    641          			return false;
+    642          		}
+    643          	}
+    644          	else/*SHA is not busy at present*/
+    645          	{
+    646          
+    647          		for (i=0;i<SII_NUM_TX;i++)
+    648          		{
+    649          			if (pRpt->txOnThePipe[i].txStat.isRptTxKsvRdy)
+    650          			{
+    651          				preKsvLength += pRpt->txOnThePipe[i].ksv_length;
+    652          			}
+    653          		}
+    654          		/*preKsvLength is 0 if it is the first Tx has KSV ready for process*/
+    655          		SiiDrvShaAdjustKsvStartAddr( preKsvLength );
+    656          		pRpt->txOnThePipe[tx_number].txStat.isRptTxKsvRdy = true;
+    657          
+    658          		srq.isTx = true;
+    659          		srq.portNum = tx_number;
+    660          		srq.manualTxStart = false;
+    661          
+    662          		SiiRepeaterShaRequest(false, srq);
+    663          		DEBUG_PRINT( RPT_MSG_DBG, "$$$set SHA to Tx %d, SHA start %04X\n ",(int)tx_number,preKsvLength);
+    664          
+    665          		return true;
+    666          	}
+    667          }
+    668          
+    669          //-------------------------------------------------------------------------------------------------
+    670          //! @brief       called from TPI component when downstream Hdcp failed.
+    671          //!			 Rx side will reset the ri to inform upstream about the failure
+    672          //! @param[in]  tx_number -  the tx that reported the message
+    673          //-------------------------------------------------------------------------------------------------
+    674          void SiiRepeaterHdcpInformUsDeviceAboutFailure( bool_t isFatal,uint8_t tx_number)
+    675          {
+    676          	uint8_t clearStatus[] = {0,0};
+    677              SiiRepeaterConInstanceSet(tx_number);
+    678              /* Mute DS until HDCP is succeeded*/
+    679          	RepeaterConAvMuteSet(AV_MUTE_TX_IN_HDCP, ON);
+    680          
+    681          	//do not reset the Rx side if it is DS HDCP not available.
+    682              if ((isFatal)&&(!pRpt->txOnThePipe[tx_number].txStat.isRptDsNoHdcp))
+    683              {
+    684              	//do not reset Tx HDCP status here, will do after SCDT interrupt
+    685                  /* inform US side about the failure*/
+    686              	SiiDrvRepeaterSetBcapsFifoReady( OFF );
+    687                 	SiiDrvRepeaterSetUsBstatus( clearStatus );
+    688          		DEBUG_PRINT( RPT_MSG_DBG, "$$$tx %d  inform us fatal failure\n ",(int)tx_number);
+    689          		/*disable HW auto SHA, will re-enable when 2 part of US auth*/
+    690          		SiiDrvHwAutoShaDisable();
+    691                  /* toggle HPD since the number of the downstream may changed*/
+    692          		RepeaterConOnTxHpdTurnOn( ON, false);
+    693              }
+    694          }
+    695          
+    696          //-------------------------------------------------------------------------------------------------
+    697          //! @brief       Called when application has detected valid Hpd change from downstream. repeater module then starts tmds/Hdcp process accordingly:
+    698          //!              if it is the first Tx has HPD active, repeater enables the repeater mode
+    699          //!              if it is the last active Tx has HPD inactive, repeater enables the receiver mode
+    700          //!              if it is a HPD toggle event, repeater relays the HPD toggle to the upstream
+    701          
+    702          //! @param[in]  tx_number -  the tx that reported the message
+    703          //!             newHpd - DS HPD event type
+    704          //-------------------------------------------------------------------------------------------------
+    705          void SiiRepeaterOnTxHpdChange( rptHpdTxEvent_t newHpd, uint8_t tx_number)
+    706          {
+    707          	bool_t sameDs = false;
+    708          
+    709          	SiiRepeaterConInstanceSet(tx_number);
+    710          	RepeaterResetTxHdcpStatusData(tx_number);
+    711          
+    712          	if (pRpt->txOnThePipe[tx_number].txStat.isRptTxOn)
+    713          	{
+    714          		if ((newHpd == SI_RPT_TX_HPD_ON) &&
+    715          			(pRpt->txOnThePipe[tx_number].txStat.isRptTxHpdOn == false))
+    716          		{
+    717          			pRpt->numberOfTx ++;
+    718          			pRpt->txOnThePipe[tx_number].txStat.isRptTxHpdOn = true;
+    719          			if (pRpt->numberOfTx == 1)/*first downstream*/
+    720          			{
+    721          				/* Since we have a downstream connection, we must operate in Repeater mode.*/
+    722          				SiiDrvRepeaterEnable(ON);
+    723          				pRpt->repeaterActive = true;
+    724          			}
+    725          		}
+    726          		 /*SI_RPT_TX_HPD_OFF */
+    727          		else if ((newHpd == SI_RPT_TX_HPD_OFF) &&
+    728          			(pRpt->txOnThePipe[tx_number].txStat.isRptTxHpdOn == true))
+    729          		{
+    730          			pRpt->numberOfTx--;
+    731          			pRpt->txOnThePipe[tx_number].txStat.isRptTxHpdOn = false;
+    732          			if(pRpt->numberOfTx == 0)
+    733          			{
+    734          				SiiDrvRepeaterEnable(OFF);
+    735          				pRpt->repeaterActive = false;
+    736          			}
+    737          		}
+    738          
+    739          #if (CHECK_SAME_TX == 1)
+    740          		if(pRpt->txOnThePipe[tx_number].wasAuthened == true)
+    741          		{
+    742          			//assume it is the same at this time. Check again after KSV
+    743          			sameDs =  true; //SiiTxStatusGet().isSameDsConnected;
+    744          		}
+    745          #endif  //#if (CHECK_SAME_TX == 1)
+    746          
+    747          		if (newHpd == SI_RPT_TX_HPD_ON)
+    748          		{
+    749          			RepeaterConOnTxHpdTurnOn( ON, sameDs);
+    750          			if ( sameDs && SiiDrvRepeaterMainPortAuthed())
+    751          			{
+    752          				RepeaterConAvMuteSet(AV_MUTE_TX_IN_HDCP, ON);
+    753          				SiiTxHdcpEnable();
+    754          				pRpt->txOnThePipe[tx_number].txStat.isHdcpRequested = true;
+    755          			}
+    756          		}
+    757          		else
+    758          		{   /*either TOGGLE or OFF, turn off the RX*/
+    759          			RepeaterConOnTxHpdTurnOn( OFF, false);
+    760          			SiiDrvShaRequestStop(true, tx_number); //stop the current Tx SHA request
+    761          		}
+    762          	}
+    763          }
+    764          
+    765          //-------------------------------------------------------------------------------------------------
+    766          //! @brief   called when Tpi has Hdcp authentication successfully done.
+    767          //!			 repeater module then unmutes tx
+    768          //! @param[in]  tx_number -  the tx that reported the message
+    769          //-------------------------------------------------------------------------------------------------
+    770          void SiiRepeaterOnTxHdcpDone( uint8_t tx_number )
+    771          {
+    772          	DEBUG_PRINT( RPT_MSG_DBG, "Tx %d auth done\n ",(int)tx_number);
+    773          
+    774          	pRpt->txOnThePipe[tx_number].txStat.isRptTxHdcpDone = true;
+    775          	pRpt->txOnThePipe[tx_number].wasAuthened = true;
+    776          
+    777          	SiiRepeaterConInstanceSet(tx_number);
+    778          	RepeaterConAvMuteSet(AV_MUTE_TX_IN_HDCP, OFF);
+    779          
+    780          }
+    781          
+    782          //-------------------------------------------------------------------------------------------------
+    783          //! @brief      change the active input source
+    784          //! @param[in]  portIndex - active input index
+    785          //-------------------------------------------------------------------------------------------------
+    786          void SiiRepeaterSetActiveSource( uint8_t portIndex)
+    787          {
+    788          	pRpt->inputPort = portIndex;
+    789          	SiiDrvRepeaterActiveInputSet( portIndex );
+    790          }
+    791          
+    792          
+    793          //-------------------------------------------------------------------------------------------------
+    794          //! @brief      retrieve the repeater interrupt status
+    795          //! @param[in]  none
+    796          //-------------------------------------------------------------------------------------------------
+    797          bool_t SiiRepeaterInterruptPending( void )
+    798          {
+    799          	return (SiiDrvRepeaterGetInterruptsOn()
+    800          	        ||SiiDrvRepeaterResChngStatusGet());
+    801          }
+    802          
+    803          //-------------------------------------------------------------------------------------------------
+    804          //! @brief      Mark the input as Non-HDCP input, and expect the repeater to start the HDCP
+    805          //!             at the Downstream when this input is active
+    806          //! @param[in]  portIndex- the input port index
+    807          //!             qOn-       true:  set to non-HDCP input
+    808          //!                        false: clear the non-HDCP input status
+    809          //-------------------------------------------------------------------------------------------------
+    810          void SiiRepeaterHdcpDsOnlyAuthentication( uint8_t portIndex, bool_t qOn )
+    811          {
+    812          	if( qOn )
+    813          	{
+    814          		InputNoHdcp |=  0x01 << portIndex;
+    815          	}
+    816          	else
+    817          	{
+    818          		InputNoHdcp &=~(0x01 << portIndex);
+    819          	}
+    820          }
+    821          
+    822          //-------------------------------------------------------------------------------------------------
+    823          //! @brief      return the query that the input port is set up as non-HDCP port or not
+    824          //! @param[in]  none
+    825          //@ Return
+    826          //				- true:  input port is set up as non-HDCP port
+    827          //				- false: input port is not set up as non-HDCP port
+    828          //-------------------------------------------------------------------------------------------------
+    829          
+    830          bool_t RepeaterCurrentInputPortIsSetToNoHdcp( void )
+    831          {
+    832          	return (( InputNoHdcp & (0x01 << pRpt->inputPort)) == (0x01 << pRpt->inputPort));
+    833          	//return (( (0x01 << pRpt->inputPort)) == (0x01 << pRpt->inputPort));//quickfix
+    834          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        0  RepeaterCurrentInputPortIsSetToNoHdcp
+       12  RepeaterResetTxHdcpStatusData
+        8  SiiRepeaterForceShaSet
+              0 -> SiiDrvShaRequestStart
+              0 -> SiiDrvShaRequestStop
+       16  SiiRepeaterHandler
+              0 -> RepeaterConnectionMonitor
+             16 -> RepeaterIsrHandler
+             16 -> RepeaterShaHandler
+             16 -> SiiRepeaterConInstanceSet
+       24  SiiRepeaterHdcpDsDdcAck
+              0 -> SiiRepeaterHdcpInformUsDeviceAboutFailure
+             24 -> SiiTxHdcpDisable
+        8  SiiRepeaterHdcpDsOnlyAuthentication
+       24  SiiRepeaterHdcpFinishUsPart2
+             24 -> RepeaterShaSetLength
+             24 -> SiiDrvRepeaterFillUsKsvInfo
+              0 -> SiiDrvRepeaterSetBcapsFifoReady
+             24 -> SiiDrvRepeaterSetBcapsFifoReady
+             24 -> SiiRepeaterShaRequest
+       16  SiiRepeaterHdcpInformUsDeviceAboutFailure
+             16 -> RepeaterConAvMuteSet
+             16 -> RepeaterConOnTxHpdTurnOn
+             16 -> SiiDrvHwAutoShaDisable
+             16 -> SiiDrvRepeaterSetBcapsFifoReady
+             16 -> SiiDrvRepeaterSetUsBstatus
+             16 -> SiiRepeaterConInstanceSet
+       24  SiiRepeaterHdcpPrepareFor0KsvListProcessing
+             24 -> SiiDrvGetCurrentShaReq
+             24 -> SiiDrvShaInUse
+             24 -> SiiRepeaterShaRequest
+       24  SiiRepeaterHdcpPrepareForKsvListProcessing
+             24 -> SiiDrvGetCurrentShaReq
+             24 -> SiiDrvShaAdjustKsvStartAddr
+             24 -> SiiDrvShaInUse
+             24 -> SiiRepeaterShaRequest
+       24  SiiRepeaterHdcpProcessDsBstatus
+             24 -> SiiDrvRepeaterSetUsBstatus
+        0  SiiRepeaterHdcpSetBcapsFifoRdyBits
+              0 -> SiiDrvRepeaterSetBcapsFifoReady
+       16  SiiRepeaterHdcpUsOnlyAuthentication
+             16 -> RepeaterConAvMuteSet
+             16 -> RepeaterShaSetLength
+              0 -> SiiDrvRepeaterSetBcapsFifoReady
+             16 -> SiiDrvRepeaterSetUsBstatus
+             16 -> SiiRepeaterConInstanceSet
+             16 -> SiiRepeaterShaRequest
+        8  SiiRepeaterInitialize
+              8 -> RepeaterConOnTxHpdTurnOn
+              8 -> RepeaterShaHandlerInitialize
+              8 -> SiiDrvRepeaterEnable
+              8 -> SiiDrvRepeaterInit
+              8 -> SiiDrvRepeaterRxHdcpReset
+              8 -> SiiRepeaterConInstanceSet
+              8 -> SiiRepeaterConnectionMonitorInit
+              8 -> SiiRepeaterSwitchModeSet
+              8 -> __aeabi_memclr4
+        0  SiiRepeaterInstanceSet
+              0 -> SiiDrvRepeaterInstanceSet
+        8  SiiRepeaterInterruptPending
+              8 -> SiiDrvRepeaterGetInterruptsOn
+              8 -> SiiDrvRepeaterResChngStatusGet
+        8  SiiRepeaterOnTxHdcpDone
+              0 -> RepeaterConAvMuteSet
+              8 -> SiiRepeaterConInstanceSet
+       16  SiiRepeaterOnTxHpdChange
+              0 -> RepeaterConOnTxHpdTurnOn
+             16 -> RepeaterConOnTxHpdTurnOn
+             16 -> RepeaterResetTxHdcpStatusData
+             16 -> SiiDrvRepeaterEnable
+              0 -> SiiDrvShaRequestStop
+             16 -> SiiRepeaterConInstanceSet
+        8  SiiRepeaterPipeConfigureSet
+              8 -> RepeaterResetTxHdcpStatusData
+              8 -> SiiDrvHwAutoShaDisable
+              0 -> SiiDrvRepeaterEnable
+              8 -> __aeabi_memcpy
+        8  SiiRepeaterPipeTxConnectionSet
+        0  SiiRepeaterSetActiveSource
+              0 -> SiiDrvRepeaterActiveInputSet
+        8  SiiRepeaterSwitchModeSet
+              8 -> RepeaterShaHandlerInitialize
+              8 -> SiiDrvRepeaterSetMode
+              0 -> SiiDrvShaSetSwitchMode
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       2  ?<Constant {0, 0}>
+       2  ?<Constant {0, 0}>_1
+       4  ??DataTable19
+       4  ??DataTable19_1
+       6  ?Subroutine0
+       8  InputNoHdcp
+          pRpt
+      28  RepeaterCurrentInputPortIsSetToNoHdcp
+     106  RepeaterResetTxHdcpStatusData
+      38  SiiRepeaterForceShaSet
+      50  SiiRepeaterHandler
+      92  SiiRepeaterHdcpDsDdcAck
+      26  SiiRepeaterHdcpDsOnlyAuthentication
+     190  SiiRepeaterHdcpFinishUsPart2
+      70  SiiRepeaterHdcpInformUsDeviceAboutFailure
+      96  SiiRepeaterHdcpPrepareFor0KsvListProcessing
+     124  SiiRepeaterHdcpPrepareForKsvListProcessing
+     266  SiiRepeaterHdcpProcessDsBstatus
+       4  SiiRepeaterHdcpSetBcapsFifoRdyBits
+      80  SiiRepeaterHdcpUsOnlyAuthentication
+      98  SiiRepeaterInitialize
+      26  SiiRepeaterInstanceSet
+      18  SiiRepeaterInterruptPending
+      46  SiiRepeaterOnTxHdcpDone
+     154  SiiRepeaterOnTxHpdChange
+      72  SiiRepeaterPipeConfigureSet
+      50  SiiRepeaterPipeTxConnectionSet
+      10  SiiRepeaterSetActiveSource
+      22  SiiRepeaterSwitchModeSet
+      56  repeaterIns
+
+ 
+    56 bytes in section .bss
+     8 bytes in section .data
+     4 bytes in section .rodata
+ 1 680 bytes in section .text
+ 
+ 1 680 bytes of CODE  memory
+     4 bytes of CONST memory
+    64 bytes of DATA  memory
+
+Errors: none
+Warnings: 1

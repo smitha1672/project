@@ -1,0 +1,1 @@
+COPY/b  FrontLeft.wav+FrontRight.wav+Center.wav+LeftSurround.wav+RightSurround.wav+PinkNoise.wav Noise123.bin 

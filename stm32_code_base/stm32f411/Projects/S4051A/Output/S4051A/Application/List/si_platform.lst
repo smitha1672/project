@@ -1,0 +1,955 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:23:46 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\platform\board\si_platf #
+#                    orm.c                                                    #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\platform\board\si_platf #
+#                    orm.c -D S4051A -D DEBUG -D FREE_RTOS -D STM32F40_41xxx  #
+#                    -D USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D          #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_platform.lst                                       #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_platform.o                                          #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\platform\board\si_platform.c
+      1          //***************************************************************************
+      2          //!file     si_platform.c
+      3          //!brief    Silicon Image SiI9535 Starter Kit board platform.
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2002-2012, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include "device_config.h"
+     14          #if ( configSII_DEV953x_PORTING_PLATFORM_STM32 == 1 )
+     15          #include "freertos_conf.h"
+     16          #endif 
+     17          
+     18          #include "si_common.h"
+     19          #include "si_platform.h"
+     20          #include "si_eeprom.h"
+     21          #include "si_gpio.h"
+     22          #include "si_timer.h"
+     23          
+     24          #if ( configSII_DEV_953x_PORTING_PLATFORM_LM3S5956 == 1 )
+     25          #include "si_uartstdio.h"
+     26          #include "si_usb_serial.h"
+     27          #include "si_flash_update.h"
+     28          #include "si_arm.h"
+     29          #endif 
+     30          
+     31          #include "si_i2c.h"
+     32          #include "si_infrared.h"
+     33          
+     34          #if ( configSII_DEV953x_PORTING_PLATFORM_STM32F105 == 1 ) && ( configSIL953x_ISR == 1)
+     35          #define SIL953x_INT_LINE EXTI_Line3
+     36          #define SIL953x_IRQ EXTI3_IRQn
+     37          #define SiiPlatformInterruptHandler EXTI3_IRQHandler
+     38          
+     39          #elif ( configSII_DEV953x_PORTING_PLATFORM_STM32F411 == 1 ) && ( configSIL953x_ISR == 1)
+     40          #include "stm32f4xx_syscfg.h"
+     41          #define SIL953x_INT_LINE EXTI_Line1
+     42          #define SIL953x_IRQ EXTI1_IRQn
+     43          #define SiiPlatformInterruptHandler EXTI1_IRQHandler
+     44          
+     45          #endif 
+     46          
+     47          //------------------------------------------------------------------------------
+     48          //  Board Component Instance Data
+     49          //------------------------------------------------------------------------------
+     50          
+     51          BoardInstanceData_t boardInstance =
+     52          {
+     53              0,                          // structVersion
+     54              SII_SUCCESS,                // lastResultCode
+     55              0,                          // statusFlags
+     56              false,                      // i2CError;
+     57              false,                      // i2cErrorCode
+     58              MSG_PRINT_ALL,              // dbgMsgLevel
+     59          
+     60              false,                      // i2c16bitAddr
+     61              false,                      // i2cNoInterimStops
+     62              false,                      // hardwareInt
+     63          };
+     64          
+     65          BoardInstanceData_t platform;
+     66          
+     67          #if ( configSII_DEV_953x_PORTING_PLATFORM_LM3S5956 == 1 )
+     68          static const uint32_t l_debounceTimes [ 16 ] =
+     69          {
+     70              DEBOUNCE_0, DEBOUNCE_1, DEBOUNCE_2, DEBOUNCE_3,
+     71              DEBOUNCE_4, DEBOUNCE_5, DEBOUNCE_6, DEBOUNCE_7,
+     72              DEBOUNCE_8, DEBOUNCE_9, DEBOUNCE_10, DEBOUNCE_11,
+     73              DEBOUNCE_12, DEBOUNCE_13, DEBOUNCE_14, DEBOUNCE_15
+     74          };
+     75          #endif 
+     76          
+     77          //------------------------------------------------------------------------------
+     78          // Function:    SiiPlatformPowerSwitchGet
+     79          // Description: Detect the state of the power pushbutton switch.
+     80          // Parameters:
+     81          // Returns:     true if state has changed. false if state has not been changed.
+     82          //------------------------------------------------------------------------------
+     83          
+     84          bool_t SiiPlatformPowerSwitchGet (void )
+     85          {
+     86          #if ( configSII_DEV_953x_PORTING_PLATFORM_LM3S5956 == 1 )
+     87              static bool_t   debouncing = false;
+     88              static bool_t   oldPin = false;
+     89              bool_t      newPin;
+     90              bool_t  changePin = false;
+     91              static uint32_t   firstTime;
+     92              uint32_t         thisTime;
+     93          
+     94              // Detecting the s1 switch debouncing
+     95              newPin = (ROM_GPIOPinRead( GPIO_PORTB_BASE, GPIO_PIN_1) & GPIO_PIN_1) == 0;
+     96              if (oldPin != newPin)
+     97              {
+     98                  while (1)
+     99                  {
+    100                      newPin = (ROM_GPIOPinRead( GPIO_PORTB_BASE, GPIO_PIN_1) & GPIO_PIN_1) == 0;
+    101                      //Button just has been pressed.
+    102                      if (newPin && !debouncing)
+    103                      {
+    104                          firstTime = SiiPlatformTimerSysTicksGet();
+    105                          debouncing = true;
+    106                      }
+    107                      else if (debouncing)
+    108                      {
+    109                          thisTime = SiiPlatformTimerSysTicksGet();
+    110                          if (( thisTime - firstTime ) >= 10 )
+    111                          {
+    112                              if (newPin)
+    113                              {
+    114                                  debouncing = true;
+    115                                  firstTime = SiiPlatformTimerSysTicksGet();
+    116                              }
+    117                              else
+    118                              {
+    119                                  debouncing = false;
+    120                                  changePin = true;       //!changePin;
+    121                                  break;
+    122                              }
+    123                          }
+    124                      }
+    125                  }
+    126              }
+    127              oldPin = newPin;
+    128              return changePin;
+    129          #else
+    130          	return false;
+    131          #endif 
+    132              
+    133          }
+    134          
+    135          //------------------------------------------------------------------------------
+    136          // Function:    SiiPlatformReadRotary
+    137          // Description: Read the current value of the rotary switch, with debounce
+    138          // Parameters:  iWantItNow  - true: return GPIO value without debounce
+    139          // Returns:     Debounced position or 0xFF if no change
+    140          //------------------------------------------------------------------------------
+    141          
+    142          uint8_t SiiPlatformReadRotary ( uint8_t iWantItNow )
+    143          {
+    144          #if ( configSII_DEV_953x_PORTING_PLATFORM_LM3S5956 == 1 )
+    145              static uint32_t firstTime = 0;
+    146              uint32_t        thisTime;
+    147              static bool_t   debouncing = false;
+    148              static uint8_t  oldPins = RSW_NO_CHANGE;
+    149              uint8_t         newPins;
+    150          
+    151                  // Get Rotary switch GPIO pins and determine value.
+    152          
+    153              newPins = ~ROM_GPIOPinRead( GPIO_ROTARY_SWITCH_BASE, GPIO_ROTARY_SWITCH_MASK ) & GPIO_ROTARY_SWITCH_MASK;
+    154              newPins >>= GPIO_ROTARY_SWITCH_SHIFT;
+    155              if ( iWantItNow )
+    156              {
+    157                  return( newPins );
+    158              }
+    159          
+    160              if ( newPins != oldPins ) // port change detected
+    161              {
+    162                  oldPins = newPins;
+    163                  firstTime = SiiPlatformTimerSysTicksGet();
+    164                  debouncing = true;
+    165              }
+    166              else if ( debouncing )
+    167              {
+    168                  thisTime = SiiPlatformTimerSysTicksGet();
+    169                  //if (( thisTime - firstTime ) >= l_debounceTimes[ newPins ] )
+    170                  {
+    171                      debouncing = false;
+    172                      return( newPins );
+    173                  }
+    174              }
+    175          	
+    176              return( RSW_NO_CHANGE );                // indicate no change
+    177          #else 
+    178          	return (RSW_POS_2);
+    179          
+    180          #endif
+    181          }
+    182          
+    183          //------------------------------------------------------------------------------
+    184          // Function:    SiiPlatformSwitchGet
+    185          // Description: This function virtualizes the platform DIP slide switches for
+    186          //              the application.  The application only know SW1, SW_2, etc.
+    187          // Parameters:  DIP slide switch to access.
+    188          // Returns:     State of the specified switch: true - closed, false - open.
+    189          //------------------------------------------------------------------------------
+    190          
+    191          bool_t SiiPlatformSwitchGet ( SkSwitchNumbers_t switchNum )
+    192          {
+    193          #if ( configSII_DEV_953x_PORTING_PLATFORM_LM3S5956 == 1 )
+    194              bool_t closed;
+    195          
+    196              switch ( switchNum )
+    197              {
+    198                  case SW_1:  closed = SiiPlatformGpioReadSwitch( SW2_1 ); break;
+    199                  case SW_2:  closed = SiiPlatformGpioReadSwitch( SW2_2 ); break;
+    200                  case SW_3:  closed = SiiPlatformGpioReadSwitch( SW2_3 ); break;
+    201                  case SW_4:  closed = SiiPlatformGpioReadSwitch( SW2_4 ); break;
+    202                  case SW_5:  closed = SiiPlatformGpioReadSwitch( SW2_5 ); break;
+    203                  case SW_6:  closed = SiiPlatformGpioReadSwitch( SW2_6 ); break;
+    204                  case SW_7:  closed = SiiPlatformGpioReadSwitch( SW2_7 ); break;
+    205                  default:
+    206                      closed = false;
+    207                      break;
+    208              }
+    209          #else
+    210          	bool_t closed;
+    211          /*
+    212          		UI_AUTO_SWITCH		= SW_1,
+    213          		UI_REPEATER_ENABLE	= SW_2,
+    214          		UI_RC_ENABLE		= SW_3,
+    215          		UI_CEC_ENABLE		= SW_4,
+    216          		UI_THX_ENABLE		= SW_5,
+    217          		UI_FLASH_UPDATE 	= SW_6,
+    218          		UI_MHL_ENABLE		= SW_7,
+    219          */
+    220          	
+    221          	switch ( switchNum )
+    222              {
+    223                  case SW_1:  closed = true /*SiiPlatformGpioReadSwitch( SW2_1 )*/; break;
+    224                  case SW_2:  closed = false  /*SiiPlatformGpioReadSwitch( SW2_2 )*/; break;
+    225                  case SW_3:  closed = false /*SiiPlatformGpioReadSwitch( SW2_3 )*/; break;
+    226                  case SW_4:  closed = false /*SiiPlatformGpioReadSwitch( SW2_4 )*/; break;
+    227                  case SW_5:  closed = false /*SiiPlatformGpioReadSwitch( SW2_5 )*/; break;
+    228                  case SW_6:  closed = false /*SiiPlatformGpioReadSwitch( SW2_6 )*/; break;
+    229                  case SW_7:  closed = false /*SiiPlatformGpioReadSwitch( SW2_7 )*/; break;
+    230                  default:
+    231                      closed = false;
+    232                      break;
+    233              }
+    234          #endif     
+    235          
+    236          	return( closed );
+    237          }
+    238          
+    239          //------------------------------------------------------------------------------
+    240          //! @brief  Return state of Siimon bus request pin
+    241          //! @return true - bus requested. false - bus NOT requested
+    242          //------------------------------------------------------------------------------
+    243          bool_t SiiPlatformSiimonBusRequest ( void )
+    244          {
+    245          #if INC_CBUS_WAKEUP
+    246              return( false );
+    247          #else
+    248          #if ( configSII_DEV_953x_PORTING_PLATFORM_LM3S5956 == 1 )
+    249              return( ROM_GPIOPinRead( GPIO_PORTC_BASE, GPIO_PIN_7 ) == 0 );
+    250          #else
+    251          	return ( false );
+    252          #endif
+    253          #endif
+    254          }
+    255          
+    256          //------------------------------------------------------------------------------
+    257          // Function:    SiiPlatformSiimonBusGrant
+    258          // Description: Grant the bus to SiMon
+    259          // Parameters:
+    260          // Returns:     none
+    261          //------------------------------------------------------------------------------
+    262          void SiiPlatformSiimonBusGrant ( bool_t grant )
+    263          {
+    264          #if ( configSII_DEV_953x_PORTING_PLATFORM_LM3S5956 == 1 )
+    265          
+    266          #if INC_CBUS_WAKEUP
+    267              grant = false;
+    268          #else
+    269              if ( !grant )
+    270              {
+    271                  ROM_GPIOPinWrite(GPIO_PORTC_BASE, GPIO_PIN_6,  GPIO_PIN_6);
+    272                  ROM_IntMasterEnable();            // Unfreeze IRQ handlers
+    273              }
+    274              else
+    275              {
+    276                  ROM_IntMasterDisable();           // Freeze IR & GPIO interrupt handlers
+    277                  ROM_GPIOPinWrite( GPIO_PORTC_BASE, GPIO_PIN_6, 0 );
+    278              }
+    279          #endif
+    280          #endif 
+    281          }
+    282          
+    283          
+    284          //------------------------------------------------------------------------------
+    285          // Function:    SiiPlatformInitialize
+    286          // Description: Initialize the platform hardware
+    287          // Parameters:  none
+    288          // Returns:     It returns true if the initialization is successful, or false
+    289          //              if some failure occurred.
+    290          //------------------------------------------------------------------------------
+    291          
+    292          bool_t SiiPlatformInitialize ( void )
+    293          {
+    294          #if ( configSII_DEV_953x_PORTING_PLATFORM_LM3S5956 == 1 )
+    295              // Set the clocking to run from the PLL at 50MHz
+    296              ROM_SysCtlClockSet( SYSCTL_SYSDIV_4 | SYSCTL_USE_PLL | SYSCTL_OSC_MAIN | SYSCTL_XTAL_16MHZ);
+    297          
+    298              SiiPlatformUartInit(0, 19200);
+    299              SiiPlatformI2cInit( I2C_INDEX0, I2C_MASTER, 0, 100 );
+    300              SiiPlatformI2cInit( I2C_INDEX1, I2C_SLAVE, 0x40, 0 );
+    301              SiiPlatformGpioInit();
+    302              SiiPlatformTimerInit();
+    303              SiiPlatformInfraRedInit();
+    304          
+    305              if (SiiPlatformGpioReadSwitch( SW2_6 ))
+    306              {
+    307                  // Update program flash if needed.
+    308                  SiiPlatformFirmwareUpdate(SI_FLASH_USB_DFU_BOOT_LOADER);
+    309                  // This is the dead end.
+    310              }
+    311              else
+    312              {
+    313                  SiiPlatformUsbInit(); // Initialize USB->UART module
+    314              }
+    315          
+    316              SiiPlatformInterruptEnable();
+    317              ROM_IntMasterEnable();
+    318          
+    319          
+    320          #if (FPGA_BUILD == ENABLE)
+    321              {
+    322              int_t   i;
+    323          
+    324              /* FPGA Initialization. */
+    325          
+    326              for ( i = 6; i >= 0; i-- )
+    327              {
+    328                  DEBUG_PRINT( MSG_ALWAYS, "%d...", i );
+    329                  SiiPlatformTimerWait( 1000 );
+    330              }
+    331              }
+    332          #endif /* (FPGA_BUILD == ENABLE) */
+    333          
+    334          #else
+    335               SiiPlatformTimerInit();        
+    336          #endif 
+    337          
+    338          
+    339              return( true );
+    340          }
+    341          
+    342          
+    343          //------------------------------------------------------------------------------
+    344          // Function:    SiiPlatformInterruptEnable
+    345          // Description: Interrupt enable for all sources
+    346          // Parameters:  none
+    347          //------------------------------------------------------------------------------
+    348          
+    349          void SiiPlatformAllInterruptsEnable ( void )
+    350          {
+    351          #if ( configSII_DEV_953x_PORTING_PLATFORM_LM3S5956 == 1 )
+    352              ROM_IntMasterEnable();
+    353          #endif     
+    354          }
+    355          
+    356          //------------------------------------------------------------------------------
+    357          // Function:    SiiPlatformInterruptDisable
+    358          // Description: Interrupt disable for all sources
+    359          // Parameters:  none
+    360          //------------------------------------------------------------------------------
+    361          
+    362          void SiiPlatformAllInterruptsDisable ( void )
+    363          {
+    364          #if ( configSII_DEV_953x_PORTING_PLATFORM_LM3S5956 == 1 )
+    365              ROM_IntMasterDisable();
+    366          #endif    
+    367          }
+    368          
+    369          
+    370          //------------------------------------------------------------------------------
+    371          // Function:    SiiPlatformInterruptEnable
+    372          // Description: Interrupt enable for Device H/W INT pin
+    373          // Parameters:  none
+    374          //------------------------------------------------------------------------------
+    375          
+    376          void SiiPlatformInterruptEnable ( void )
+    377          {
+    378          #if ( configSII_DEV_953x_PORTING_PLATFORM_LM3S5956 == 1 )
+    379              ROM_GPIOPinIntEnable( GPIO_INT_PORT_BASE, GPIO_INT_PIN_IDX );
+    380          #endif     
+    381          }
+    382          
+    383          //------------------------------------------------------------------------------
+    384          // Function:    SiiPlatformInterruptDisable
+    385          // Description: Interrupt disable for Device H/W INT pin
+    386          // Parameters:  none
+    387          //------------------------------------------------------------------------------
+    388          
+    389          void SiiPlatformInterruptDisable ( void )
+    390          {
+    391          #if ( configSII_DEV_953x_PORTING_PLATFORM_LM3S5956 == 1 )
+    392              ROM_GPIOPinIntDisable( GPIO_INT_PORT_BASE, GPIO_INT_PIN_IDX );
+    393          #endif     
+    394          }
+    395          
+    396          //------------------------------------------------------------------------------
+    397          // Function:    SiiPlatformInterruptHandler
+    398          // Description: Interrupt handler for device H/W INT pin
+    399          // Parameters:  none
+    400          //------------------------------------------------------------------------------
+    401          
+    402          void SiiPlatformInterruptHandler ( void )
+    403          {
+    404          #if ( configSII_DEV_953x_PORTING_PLATFORM_LM3S5956 == 1 )
+    405              ROM_IntDisable(GPIO_INT_PORT);
+    406              if (( ROM_GPIOPinIntStatus( GPIO_INT_PORT_BASE, true ) & GPIO_INT_PIN_IDX ))
+    407              {
+    408                  ROM_GPIOPinIntClear( GPIO_INT_PORT_BASE, GPIO_INT_PIN_IDX );
+    409                  platform.hardwareInt = true;
+    410              }
+    411              ROM_IntEnable(GPIO_INT_PORT);
+    412          #endif
+    413          
+    414          #if ( configSII_DEV953x_PORTING_PLATFORM_STM32F105 == 1 ) && ( configSIL953x_ISR == 1 )
+    415          	if ( EXTI_GetITStatus( SIL953x_INT_LINE ) != RESET )
+    416          	{
+    417          		platform.hardwareInt = true;
+    418          		EXTI_ClearITPendingBit(SIL953x_INT_LINE);
+    419          	}
+    420          #elif ( configSII_DEV953x_PORTING_PLATFORM_STM32F411 == 1 ) && ( configSIL953x_ISR == 1 )
+    421          	if ( EXTI_GetITStatus( SIL953x_INT_LINE ) != RESET )
+    422          	{
+    423          		platform.hardwareInt = true;
+    424          		EXTI_ClearITPendingBit(SIL953x_INT_LINE);
+    425          	}
+    426          #endif 
+    427          
+    428          }
+    429          
+    430          //------------------------------------------------------------------------------
+    431          // Function:    SiiPlatformInterruptPinStateGet
+    432          // Description: Return false if h/w interrupt line is low (active),
+    433          //              or true otherwise (no pending events)
+    434          // Parameters:  none
+    435          //------------------------------------------------------------------------------
+    436          
+    437          bool_t SiiPlatformInterruptPinStateGet ( void )
+    438          {
+    439          #if ( configSII_DEV_953x_PORTING_PLATFORM_LM3S5956 == 1 )
+    440              return( ROM_GPIOPinRead( GPIO_INT_PORT_BASE, GPIO_INT_PIN_IDX ) != 0 );
+    441          #endif
+    442          
+    443          #if ( configSII_DEV953x_PORTING_PLATFORM_STM32F105 == 1 ) && ( configSIL953x_ISR == 1 )
+    444          	bool_t ret;
+    445          
+    446          	if (GPIO_ReadInputDataBit( GPIOE, GPIO_Pin_3 ) == Bit_SET )
+    447          	{
+    448          		ret = true;
+    449          	}
+    450          	else
+    451          	{
+    452          		ret = false;
+    453          	}
+    454          	
+    455          	return ret;
+    456          #elif ( configSII_DEV953x_PORTING_PLATFORM_STM32F411 == 1 ) && ( configSIL953x_ISR == 1 )
+    457          	bool_t ret;
+    458          
+    459          	if (GPIO_ReadInputDataBit( GPIOE, GPIO_Pin_1 ) == Bit_SET )
+    460          	{
+    461          		ret = true;
+    462          	}
+    463          	else
+    464          	{
+    465          		ret = false;
+    466          	}
+    467          	
+    468          	return ret;
+    469          #endif
+    470          }
+    471          
+    472          
+    473          //------------------------------------------------------------------------------
+    474          // Function:    SiiPlatformInterruptStateGet
+    475          // Description: Return true if h/w interrupt has fired
+    476          // Parameters:  none
+    477          //------------------------------------------------------------------------------
+    478          
+    479          bool_t SiiPlatformInterruptStateGet ( void )
+    480          {
+    481              bool_t isIntPending = platform.hardwareInt;
+    482              return( isIntPending );
+    483          }
+    484          
+    485          
+    486          //------------------------------------------------------------------------------
+    487          // Function:    SiiPlatformInterruptClear
+    488          // Description: Clears interrupt flag. Call when all events got processed.
+    489          // Parameters:  none
+    490          //------------------------------------------------------------------------------
+    491          
+    492          void SiiPlatformInterruptClear ( void )
+    493          {
+    494              platform.hardwareInt = false;
+    495          }
+    496          
+    497          //-------------------------------------------------------------------------------------------------
+    498          //! @brief      Return result of last I2C operation
+    499          //  Parameters:
+    500          //!
+    501          //! @retval     - true: successful.
+    502          //! @retval     - false: failure
+    503          //-------------------------------------------------------------------------------------------------
+    504          
+    505          uint32_t SiiPlatformLastI2cStatus ( void )
+    506          {
+    507          
+    508              return( platform.i2cErrorCode );
+    509          }
+    510          
+    511          //-------------------------------------------------------------------------------------------------
+    512          //! @brief      Returns the result of the last platform function called
+    513          //!
+    514          //! @retval     - true: successful.
+    515          //! @retval     - false: failure
+    516          //-------------------------------------------------------------------------------------------------
+    517          
+    518          int_t SiiPlatformGetLastResult ( void )
+    519          {
+    520          
+    521              return( platform.lastResultCode );
+    522          }
+    523          
+    524          //____________________________________AMTRAN PORTING______________________________________________
+    525          #if ( configSII_DEV953x_PORTING_PLATFORM_STM32F105 == 1 ) && ( configSIL953x_ISR == 1) 
+    526          void SiiPlatform_InterruptConfig_STM32( void )
+    527          {
+    528          	GPIO_InitTypeDef   GPIO_InitStructure;
+    529          	EXTI_InitTypeDef   EXTI_InitStructure;
+    530          	NVIC_InitTypeDef   NVIC_InitStructure;
+    531          
+    532          	/* Configure PE.03 pin as input floating */
+    533          	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3;
+    534          	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
+    535          	GPIO_Init(GPIOE, &GPIO_InitStructure);
+    536          
+    537          
+    538          	/* Enable AFIO clock */
+    539          	RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO, ENABLE);
+    540          
+    541          	GPIO_EXTILineConfig(GPIO_PortSourceGPIOE, GPIO_PinSource3);
+    542          
+    543          	EXTI_InitStructure.EXTI_Line = SIL953x_INT_LINE;
+    544          	EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
+    545          	EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Falling;
+    546          	EXTI_InitStructure.EXTI_LineCmd = ENABLE;
+    547          	EXTI_Init(&EXTI_InitStructure);
+    548          
+    549          	NVIC_InitStructure.NVIC_IRQChannel = SIL953x_IRQ;
+    550          	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = configLIB_SIL9535_INTERRUPT_PRIORITY;
+    551          	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
+    552          	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+    553          
+    554          	NVIC_Init(&NVIC_InitStructure);
+    555          
+    556          #if 0 /*smith implemented*/
+    557          	mCS8422IsrParsms.QParams.xQueue = xQueueCreate( CS8422_ISR_QUEUE_LENGTH, FRTOS_SIZE(uint8) );
+    558          	mCS8422IsrParsms.QParams.xBlockTime = BLOCK_TIME(0);
+    559          	if( mCS8422IsrParsms.QParams.xQueue == NULL )
+    560          	{
+    561          	TRACE_ERROR((0, "mCS8422IsrParsms queue creates failure " ));
+    562          	}
+    563          
+    564          
+    565          	if ( xTaskCreate( 
+    566          	CS8422_ISR_Handler, 
+    567          	( portCHAR * ) "CS8422_ISR", 
+    568          	STACK_SIZE, 
+    569          	NULL, 
+    570          	tskCS8422_ISR_HANDLER_PRIORITY, 
+    571          	&mCS8422IsrParsms.Handle ) != pdPASS )
+    572          	{
+    573          	TRACE_ERROR((0, "CS8422_ISR task create failure " ));
+    574          	}
+    575          	else
+    576          	{
+    577          	vTaskSuspend( mCS8422IsrParsms.Handle );
+    578          	}
+    579          #endif 
+    580          }
+    581          #elif ( configSII_DEV953x_PORTING_PLATFORM_STM32F411 == 1 ) && ( configSIL953x_ISR == 1) 
+    582          void SiiPlatform_InterruptConfig_STM32( void )
+    583          {
+    584          	GPIO_InitTypeDef   GPIO_InitStructure;
+    585          	EXTI_InitTypeDef   EXTI_InitStructure;
+    586          	NVIC_InitTypeDef   NVIC_InitStructure;
+    587          
+    588          	/* Configure PE.01 pin as input floating */
+    589          	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1;
+    590          	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN;
+    591          	GPIO_Init(GPIOE, &GPIO_InitStructure);
+    592          
+    593          
+    594          	/* Enable AFIO clock */
+    595          	RCC_APB2PeriphClockCmd(RCC_APB2Periph_SYSCFG, ENABLE);
+    596          
+    597              SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOE, EXTI_PinSource1);
+    598          
+    599          	EXTI_InitStructure.EXTI_Line = SIL953x_INT_LINE;
+    600          	EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
+    601          	EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Falling;
+    602          	EXTI_InitStructure.EXTI_LineCmd = ENABLE;
+    603          	EXTI_Init(&EXTI_InitStructure);
+    604          
+    605          	NVIC_InitStructure.NVIC_IRQChannel = SIL953x_IRQ;
+    606          	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = configLIB_SIL9535_INTERRUPT_PRIORITY;
+    607          	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
+    608          	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+    609          
+    610          	NVIC_Init(&NVIC_InitStructure);
+    611          
+    612          #if 0 /*smith implemented*/
+    613          	mCS8422IsrParsms.QParams.xQueue = xQueueCreate( CS8422_ISR_QUEUE_LENGTH, FRTOS_SIZE(uint8) );
+    614          	mCS8422IsrParsms.QParams.xBlockTime = BLOCK_TIME(0);
+    615          	if( mCS8422IsrParsms.QParams.xQueue == NULL )
+    616          	{
+    617          	TRACE_ERROR((0, "mCS8422IsrParsms queue creates failure " ));
+    618          	}
+    619          
+    620          
+    621          	if ( xTaskCreate( 
+    622          	CS8422_ISR_Handler, 
+    623          	( portCHAR * ) "CS8422_ISR", 
+    624          	STACK_SIZE, 
+    625          	NULL, 
+    626          	tskCS8422_ISR_HANDLER_PRIORITY, 
+    627          	&mCS8422IsrParsms.Handle ) != pdPASS )
+    628          	{
+    629          	TRACE_ERROR((0, "CS8422_ISR task create failure " ));
+    630          	}
+    631          	else
+    632          	{
+    633          	vTaskSuspend( mCS8422IsrParsms.Handle );
+    634          	}
+    635          #endif 
+    636          	
+    637          }
+    638          #endif 
+    639          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        8  EXTI1_IRQHandler
+              0 -> EXTI_ClearITPendingBit
+              8 -> EXTI_GetITStatus
+        0  SiiPlatformAllInterruptsDisable
+        0  SiiPlatformAllInterruptsEnable
+        0  SiiPlatformGetLastResult
+        8  SiiPlatformInitialize
+              8 -> SiiPlatformTimerInit
+        0  SiiPlatformInterruptClear
+        0  SiiPlatformInterruptDisable
+        0  SiiPlatformInterruptEnable
+        8  SiiPlatformInterruptPinStateGet
+              8 -> GPIO_ReadInputDataBit
+        0  SiiPlatformInterruptStateGet
+        0  SiiPlatformLastI2cStatus
+        0  SiiPlatformPowerSwitchGet
+        0  SiiPlatformReadRotary
+        0  SiiPlatformSiimonBusGrant
+        0  SiiPlatformSiimonBusRequest
+        0  SiiPlatformSwitchGet
+       24  SiiPlatform_InterruptConfig_STM32
+             24 -> EXTI_Init
+             24 -> GPIO_Init
+             24 -> NVIC_Init
+             24 -> RCC_APB2PeriphClockCmd
+             24 -> SYSCFG_EXTILineConfig
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable6
+       4  ??DataTable6_1
+      28  EXTI1_IRQHandler
+       2  SiiPlatformAllInterruptsDisable
+       2  SiiPlatformAllInterruptsEnable
+       6  SiiPlatformGetLastResult
+      10  SiiPlatformInitialize
+       8  SiiPlatformInterruptClear
+       2  SiiPlatformInterruptDisable
+       2  SiiPlatformInterruptEnable
+      18  SiiPlatformInterruptPinStateGet
+       6  SiiPlatformInterruptStateGet
+       6  SiiPlatformLastI2cStatus
+       4  SiiPlatformPowerSwitchGet
+       4  SiiPlatformReadRotary
+       2  SiiPlatformSiimonBusGrant
+       4  SiiPlatformSiimonBusRequest
+       8  SiiPlatformSwitchGet
+     102  SiiPlatform_InterruptConfig_STM32
+      20  boardInstance
+      20  platform
+
+ 
+  20 bytes in section .bss
+  20 bytes in section .data
+ 222 bytes in section .text
+ 
+ 222 bytes of CODE memory
+  40 bytes of DATA memory
+
+Errors: none
+Warnings: 5

@@ -1,0 +1,933 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:25:51 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\FreeRTOS\Source\event_groups.c              #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\FreeRTOS\Source\event_groups.c -D S4051A    #
+#                    -D DEBUG -D FREE_RTOS -D STM32F40_41xxx -D               #
+#                    USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D             #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\event_groups.lst                                      #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\event_groups.o                                         #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\FreeRTOS\Source\event_groups.c
+      1          /*
+      2              FreeRTOS V8.0.0:rc2 - Copyright (C) 2014 Real Time Engineers Ltd.
+      3              All rights reserved
+      4          
+      5              VISIT http://www.FreeRTOS.org TO ENSURE YOU ARE USING THE LATEST VERSION.
+      6          
+      7              ***************************************************************************
+      8               *                                                                       *
+      9               *    FreeRTOS provides completely free yet professionally developed,    *
+     10               *    robust, strictly quality controlled, supported, and cross          *
+     11               *    platform software that has become a de facto standard.             *
+     12               *                                                                       *
+     13               *    Help yourself get started quickly and support the FreeRTOS         *
+     14               *    project by purchasing a FreeRTOS tutorial book, reference          *
+     15               *    manual, or both from: http://www.FreeRTOS.org/Documentation        *
+     16               *                                                                       *
+     17               *    Thank you!                                                         *
+     18               *                                                                       *
+     19              ***************************************************************************
+     20          
+     21              This file is part of the FreeRTOS distribution.
+     22          
+     23              FreeRTOS is free software; you can redistribute it and/or modify it under
+     24              the terms of the GNU General Public License (version 2) as published by the
+     25              Free Software Foundation >>!AND MODIFIED BY!<< the FreeRTOS exception.
+     26          
+     27              >>! NOTE: The modification to the GPL is included to allow you to distribute
+     28              >>! a combined work that includes FreeRTOS without being obliged to provide
+     29              >>! the source code for proprietary components outside of the FreeRTOS
+     30              >>! kernel.
+     31          
+     32              FreeRTOS is distributed in the hope that it will be useful, but WITHOUT ANY
+     33              WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+     34              FOR A PARTICULAR PURPOSE.  Full license text is available from the following
+     35              link: http://www.freertos.org/a00114.html
+     36          
+     37              1 tab == 4 spaces!
+     38          
+     39              ***************************************************************************
+     40               *                                                                       *
+     41               *    Having a problem?  Start by reading the FAQ "My application does   *
+     42               *    not run, what could be wrong?"                                     *
+     43               *                                                                       *
+     44               *    http://www.FreeRTOS.org/FAQHelp.html                               *
+     45               *                                                                       *
+     46              ***************************************************************************
+     47          
+     48              http://www.FreeRTOS.org - Documentation, books, training, latest versions,
+     49              license and Real Time Engineers Ltd. contact details.
+     50          
+     51              http://www.FreeRTOS.org/plus - A selection of FreeRTOS ecosystem products,
+     52              including FreeRTOS+Trace - an indispensable productivity tool, a DOS
+     53              compatible FAT file system, and our tiny thread aware UDP/IP stack.
+     54          
+     55              http://www.OpenRTOS.com - Real Time Engineers ltd license FreeRTOS to High
+     56              Integrity Systems to sell under the OpenRTOS brand.  Low cost OpenRTOS
+     57              licenses offer ticketed support, indemnification and middleware.
+     58          
+     59              http://www.SafeRTOS.com - High Integrity Systems also provide a safety
+     60              engineered and independently SIL3 certified version for use in safety and
+     61              mission critical applications that require provable dependability.
+     62          
+     63              1 tab == 4 spaces!
+     64          */
+     65          
+     66          /* Standard includes. */
+     67          #include <stdlib.h>
+     68          
+     69          /* Defining MPU_WRAPPERS_INCLUDED_FROM_API_FILE prevents task.h from redefining
+     70          all the API functions to use the MPU wrappers.  That should only be done when
+     71          task.h is included from an application file. */
+     72          #define MPU_WRAPPERS_INCLUDED_FROM_API_FILE
+     73          
+     74          /* FreeRTOS includes. */
+     75          #include "FreeRTOS.h"
+     76          #include "task.h"
+     77          #include "timers.h"
+     78          #include "event_groups.h"
+     79          
+     80          /* Lint e961 and e750 are suppressed as a MISRA exception justified because the
+     81          MPU ports require MPU_WRAPPERS_INCLUDED_FROM_API_FILE to be defined for the
+     82          header files above, but not in this file, in order to generate the correct
+     83          privileged Vs unprivileged linkage and placement. */
+     84          #undef MPU_WRAPPERS_INCLUDED_FROM_API_FILE /*lint !e961 !e750. */
+     85          
+     86          #if ( INCLUDE_xEventGroupSetBitFromISR == 1 ) && ( configUSE_TIMERS == 0 )
+     87          	#error configUSE_TIMERS must be set to 1 to make the xEventGroupSetBitFromISR() function available.
+     88          #endif
+     89          
+     90          #if ( INCLUDE_xEventGroupSetBitFromISR == 1 ) && ( INCLUDE_xTimerPendFunctionCallFromISR == 0 )
+     91          	#error INCLUDE_xTimerPendFunctionCallFromISR must also be set to one to make the xEventGroupSetBitFromISR() function available.
+     92          #endif
+     93          
+     94          /* The following bit fields convey control information in a task's event list
+     95          item value.  It is important they don't clash with the
+     96          taskEVENT_LIST_ITEM_VALUE_IN_USE definition. */
+     97          #if configUSE_16_BIT_TICKS == 1
+     98          	#define eventCLEAR_EVENTS_ON_EXIT_BIT	0x0100U
+     99          	#define eventUNBLOCKED_DUE_TO_BIT_SET	0x0200U
+    100          	#define eventWAIT_FOR_ALL_BITS			0x0400U
+    101          	#define eventEVENT_BITS_CONTROL_BYTES	0xff00U
+    102          #else
+    103          	#define eventCLEAR_EVENTS_ON_EXIT_BIT	0x01000000UL
+    104          	#define eventUNBLOCKED_DUE_TO_BIT_SET	0x02000000UL
+    105          	#define eventWAIT_FOR_ALL_BITS			0x04000000UL
+    106          	#define eventEVENT_BITS_CONTROL_BYTES	0xff000000UL
+    107          #endif
+    108          
+    109          typedef struct EVENT_GROUP_DEFINITION
+    110          {
+    111          	EventBits_t uxEventBits;
+    112          	List_t xTasksWaitingForBits;		/*< List of tasks waiting for a bit to be set. */
+    113          } EventGroup_t;
+    114          
+    115          /*-----------------------------------------------------------*/
+    116          
+    117          /*
+    118           * Test the bits set in uxCurrentEventBits to see if the wait condition is met.
+    119           * The wait condition is defined by xWaitForAllBits.  If xWaitForAllBits is
+    120           * pdTRUE then the wait condition is met if all the bits set in uxBitsToWaitFor
+    121           * are also set in uxCurrentEventBits.  If xWaitForAllBits is pdFALSE then the
+    122           * wait condition is met if any of the bits set in uxBitsToWait for are also set
+    123           * in uxCurrentEventBits.
+    124           */
+    125          static BaseType_t prvTestWaitCondition( const EventBits_t uxCurrentEventBits, const EventBits_t uxBitsToWaitFor, const BaseType_t xWaitForAllBits );
+    126          
+    127          /*-----------------------------------------------------------*/
+    128          
+    129          EventGroupHandle_t xEventGroupCreate( void )
+    130          {
+    131          EventGroup_t *pxEventBits;
+    132          
+    133          	pxEventBits = pvPortMalloc( sizeof( EventGroup_t ) );
+    134          	if( pxEventBits != NULL )
+    135          	{
+    136          		pxEventBits->uxEventBits = 0;
+    137          		vListInitialise( &( pxEventBits->xTasksWaitingForBits ) );
+    138          		traceEVENT_GROUP_CREATE( pxEventBits );
+    139          	}
+    140          	else
+    141          	{
+    142          		traceEVENT_GROUP_CREATE_FAILED();
+    143          	}
+    144          
+    145          	return ( EventGroupHandle_t ) pxEventBits;
+    146          }
+    147          /*-----------------------------------------------------------*/
+    148          
+    149          EventBits_t xEventGroupSync( EventGroupHandle_t xEventGroup, const EventBits_t uxBitsToSet, const EventBits_t uxBitsToWaitFor, TickType_t xTicksToWait )
+    150          {
+    151          EventBits_t uxOriginalBitValue, uxReturn;
+    152          EventGroup_t *pxEventBits = ( EventGroup_t * ) xEventGroup;
+    153          BaseType_t xAlreadyYielded;
+    154          
+    155          	configASSERT( ( uxBitsToWaitFor & eventEVENT_BITS_CONTROL_BYTES ) == 0 );
+    156          	configASSERT( uxBitsToWaitFor != 0 );
+    157          	#if ( ( INCLUDE_xTaskGetSchedulerState == 1 ) || ( configUSE_TIMERS == 1 ) )
+    158          	{
+    159          		configASSERT( !( ( xTaskGetSchedulerState() == taskSCHEDULER_SUSPENDED ) && ( xTicksToWait != 0 ) ) );
+    160          	}
+    161          	#endif
+    162          
+    163          	vTaskSuspendAll();
+    164          	{
+    165          		traceEVENT_GROUP_SYNC_START( xEventGroup, uxBitsToSet );
+    166          
+    167          		uxOriginalBitValue = pxEventBits->uxEventBits;
+    168          
+    169          		( void ) xEventGroupSetBits( xEventGroup, uxBitsToSet );
+    170          
+    171          		if( ( ( uxOriginalBitValue | uxBitsToSet ) & uxBitsToWaitFor ) == uxBitsToWaitFor )
+    172          		{
+    173          			/* All the rendezvous bits are now set - no need to block. */
+    174          			uxReturn = ( uxOriginalBitValue | uxBitsToSet );
+    175          
+    176          			/* Rendezvous always clear the bits.  They will have been cleared
+    177          			already unless this is the only task in the rendezvous. */
+    178          			pxEventBits->uxEventBits &= uxBitsToWaitFor;
+    179          
+    180          			xTicksToWait = 0;
+    181          		}
+    182          		else
+    183          		{
+    184          			if( xTicksToWait != ( TickType_t ) 0 )
+    185          			{
+    186          				/* Store the bits that the calling task is waiting for in the
+    187          				task's event list item so the kernel knows when a match is
+    188          				found.  Then enter the blocked state. */
+    189          				vTaskPlaceOnUnorderedEventList( &( pxEventBits->xTasksWaitingForBits ), ( uxBitsToWaitFor | eventCLEAR_EVENTS_ON_EXIT_BIT | eventWAIT_FOR_ALL_BITS ), xTicksToWait );
+    190          
+    191          				/* This assignment is obsolete as uxReturn will get set after
+    192          				the task unblocks, but some compilers mistakenly generate a
+    193          				warning about uxReturn being returned without being set if the
+    194          				assignment is omitted. */
+    195          				uxReturn = 0;
+    196          			}
+    197          			else
+    198          			{
+    199          				/* The rendezvous bits were not set, but no block time was
+    200          				specified - just return the current event bit value. */
+    201          				uxReturn = pxEventBits->uxEventBits;
+    202          			}
+    203          		}
+    204          	}
+    205          	xAlreadyYielded = xTaskResumeAll();
+    206          
+    207          	if( xTicksToWait != ( TickType_t ) 0 )
+    208          	{
+    209          		if( xAlreadyYielded == pdFALSE )
+    210          		{
+    211          			portYIELD_WITHIN_API();
+    212          		}
+    213          		else
+    214          		{
+    215          			mtCOVERAGE_TEST_MARKER();
+    216          		}
+    217          
+    218          		/* The task blocked to wait for its required bits to be set - at this
+    219          		point either the required bits were set or the block time expired.  If
+    220          		the required bits were set they will have been stored in the task's
+    221          		event list item, and they should now be retrieved then cleared. */
+    222          		uxReturn = uxTaskResetEventItemValue();
+    223          
+    224          		if( ( uxReturn & eventUNBLOCKED_DUE_TO_BIT_SET ) == ( EventBits_t ) 0 )
+    225          		{
+    226          			/* The task timed out, just return the current event bit value. */
+    227          			taskENTER_CRITICAL();
+    228          			{
+    229          				uxReturn = pxEventBits->uxEventBits;
+    230          
+    231          				/* Although the task got here because it timed out before the
+    232          				bits it was waiting for were set, it is possible that since it
+    233          				unblocked another task has set the bits.  If this is the case
+    234          				then it may be required to clear the bits before exiting. */
+    235          				if( ( uxReturn & uxBitsToWaitFor ) == uxBitsToWaitFor )
+    236          				{
+    237          					pxEventBits->uxEventBits &= ~uxBitsToWaitFor;
+    238          				}
+    239          				else
+    240          				{
+    241          					mtCOVERAGE_TEST_MARKER();
+    242          				}
+    243          			}
+    244          			taskEXIT_CRITICAL();
+    245          		}
+    246          		else
+    247          		{
+    248          			/* The task unblocked because the bits were set.  Clear the control
+    249          			bits before returning the value. */
+    250          			uxReturn &= ~eventEVENT_BITS_CONTROL_BYTES;
+    251          		}
+    252          	}
+    253          
+    254          	traceEVENT_GROUP_SYNC_END( xEventGroup, uxReturn );
+    255          	return uxReturn;
+    256          }
+    257          /*-----------------------------------------------------------*/
+    258          
+    259          EventBits_t xEventGroupWaitBits( EventGroupHandle_t xEventGroup, const EventBits_t uxBitsToWaitFor, const BaseType_t xClearOnExit, const BaseType_t xWaitForAllBits, TickType_t xTicksToWait )
+    260          {
+    261          EventGroup_t *pxEventBits = ( EventGroup_t * ) xEventGroup;
+    262          EventBits_t uxReturn, uxControlBits = 0;
+    263          BaseType_t xWaitConditionMet, xAlreadyYielded;
+    264          
+    265          	/* Check the user is not attempting to wait on the bits used by the kernel
+    266          	itself, and that at least one bit is being requested. */
+    267          	configASSERT( ( uxBitsToWaitFor & eventEVENT_BITS_CONTROL_BYTES ) == 0 );
+    268          	configASSERT( uxBitsToWaitFor != 0 );
+    269          	#if ( ( INCLUDE_xTaskGetSchedulerState == 1 ) || ( configUSE_TIMERS == 1 ) )
+    270          	{
+    271          		configASSERT( !( ( xTaskGetSchedulerState() == taskSCHEDULER_SUSPENDED ) && ( xTicksToWait != 0 ) ) );
+    272          	}
+    273          	#endif
+    274          
+    275          	vTaskSuspendAll();
+    276          	{
+    277          		const EventBits_t uxCurrentEventBits = pxEventBits->uxEventBits;
+    278          
+    279          		traceEVENT_GROUP_WAIT_BITS_START( xEventGroup, uxBitsToWaitFor );
+    280          
+    281          		/* Check to see if the wait condition is already met or not. */
+    282          		xWaitConditionMet = prvTestWaitCondition( uxCurrentEventBits, uxBitsToWaitFor, xWaitForAllBits );
+    283          
+    284          		if( xWaitConditionMet != pdFALSE )
+    285          		{
+    286          			/* The wait condition has already been met so there is no need to
+    287          			block. */
+    288          			uxReturn = uxCurrentEventBits;
+    289          			xTicksToWait = ( TickType_t ) 0;
+    290          
+    291          			/* Clear the wait bits if requested to do so. */
+    292          			if( xClearOnExit != pdFALSE )
+    293          			{
+    294          				pxEventBits->uxEventBits &= ~uxBitsToWaitFor;
+    295          			}
+    296          			else
+    297          			{
+    298          				mtCOVERAGE_TEST_MARKER();
+    299          			}
+    300          		}
+    301          		else if( xTicksToWait == ( TickType_t ) 0 )
+    302          		{
+    303          			/* The wait condition has not been met, but no block time was
+    304          			specified, so just return the current value. */
+    305          			uxReturn = uxCurrentEventBits;
+    306          		}
+    307          		else
+    308          		{
+    309          			/* The task is going to block to wait for its required bits to be
+    310          			set.  uxControlBits are used to remember the specified behaviour of
+    311          			this call to xEventGroupWaitBits() - for use when the event bits
+    312          			unblock the task. */
+    313          			if( xClearOnExit != pdFALSE )
+    314          			{
+    315          				uxControlBits |= eventCLEAR_EVENTS_ON_EXIT_BIT;
+    316          			}
+    317          			else
+    318          			{
+    319          				mtCOVERAGE_TEST_MARKER();
+    320          			}
+    321          
+    322          			if( xWaitForAllBits != pdFALSE )
+    323          			{
+    324          				uxControlBits |= eventWAIT_FOR_ALL_BITS;
+    325          			}
+    326          			else
+    327          			{
+    328          				mtCOVERAGE_TEST_MARKER();
+    329          			}
+    330          
+    331          			/* Store the bits that the calling task is waiting for in the
+    332          			task's event list item so the kernel knows when a match is
+    333          			found.  Then enter the blocked state. */
+    334          			vTaskPlaceOnUnorderedEventList( &( pxEventBits->xTasksWaitingForBits ), ( uxBitsToWaitFor | uxControlBits ), xTicksToWait );
+    335          
+    336          			/* This is obsolete as it will get set after the task unblocks, but
+    337          			some compilers mistakenly generate a warning about the variable
+    338          			being returned without being set if it is not done. */
+    339          			uxReturn = 0;
+    340          		}
+    341          	}
+    342          	xAlreadyYielded = xTaskResumeAll();
+    343          
+    344          	if( xTicksToWait != ( TickType_t ) 0 )
+    345          	{
+    346          		if( xAlreadyYielded == pdFALSE )
+    347          		{
+    348          			portYIELD_WITHIN_API();
+    349          		}
+    350          		else
+    351          		{
+    352          			mtCOVERAGE_TEST_MARKER();
+    353          		}
+    354          
+    355          		/* The task blocked to wait for its required bits to be set - at this
+    356          		point either the required bits were set or the block time expired.  If
+    357          		the required bits were set they will have been stored in the task's
+    358          		event list item, and they should now be retrieved then cleared. */
+    359          		uxReturn = uxTaskResetEventItemValue();
+    360          
+    361          		if( ( uxReturn & eventUNBLOCKED_DUE_TO_BIT_SET ) == ( EventBits_t ) 0 )
+    362          		{
+    363          			taskENTER_CRITICAL();
+    364          			{
+    365          				/* The task timed out, just return the current event bit value. */
+    366          				uxReturn = pxEventBits->uxEventBits;
+    367          
+    368          				/* It is possible that the event bits were updated between this
+    369          				task leaving the Blocked state and running again. */
+    370          				if( prvTestWaitCondition( uxReturn, uxBitsToWaitFor, xWaitForAllBits ) != pdFALSE )
+    371          				{
+    372          					if( xClearOnExit != pdFALSE )
+    373          					{
+    374          						pxEventBits->uxEventBits &= ~uxBitsToWaitFor;
+    375          					}
+    376          					else
+    377          					{
+    378          						mtCOVERAGE_TEST_MARKER();
+    379          					}
+    380          				}
+    381          				else
+    382          				{
+    383          					mtCOVERAGE_TEST_MARKER();
+    384          				}
+    385          			}
+    386          			taskEXIT_CRITICAL();
+    387          		}
+    388          		else
+    389          		{
+    390          			/* The task unblocked because the bits were set.  Clear the control
+    391          			bits before returning the value. */
+    392          			uxReturn &= ~eventEVENT_BITS_CONTROL_BYTES;
+    393          		}
+    394          	}
+    395          
+    396          	traceEVENT_GROUP_WAIT_BITS_END( xEventGroup, uxReturn );
+    397          	return uxReturn;
+    398          }
+    399          /*-----------------------------------------------------------*/
+    400          
+    401          EventBits_t xEventGroupClearBits( EventGroupHandle_t xEventGroup, const EventBits_t uxBitsToClear )
+    402          {
+    403          EventGroup_t *pxEventBits = ( EventGroup_t * ) xEventGroup;
+    404          EventBits_t uxReturn;
+    405          
+    406          	/* Check the user is not attempting to clear the bits used by the kernel
+    407          	itself. */
+    408          	configASSERT( ( uxBitsToClear & eventEVENT_BITS_CONTROL_BYTES ) == 0 );
+    409          
+    410          	taskENTER_CRITICAL();
+    411          	{
+    412          		traceEVENT_GROUP_CLEAR_BITS( xEventGroup, uxBitsToClear );
+    413          
+    414          		/* The value returned is the event group value prior to the bits being
+    415          		cleared. */
+    416          		uxReturn = pxEventBits->uxEventBits;
+    417          
+    418          		/* Clear the bits. */
+    419          		pxEventBits->uxEventBits &= ~uxBitsToClear;
+    420          	}
+    421          	taskEXIT_CRITICAL();
+    422          
+    423          	return uxReturn;
+    424          }
+    425          /*-----------------------------------------------------------*/
+    426          
+    427          EventBits_t xEventGroupClearBitsFromISR( EventGroupHandle_t xEventGroup, const EventBits_t uxBitsToClear )
+    428          {
+    429          UBaseType_t uxSavedInterruptStatus;
+    430          EventGroup_t *pxEventBits = ( EventGroup_t * ) xEventGroup;
+    431          EventBits_t uxReturn;
+    432          
+    433          	/* Check the user is not attempting to clear the bits used by the kernel
+    434          	itself. */
+    435          	configASSERT( ( uxBitsToClear & eventEVENT_BITS_CONTROL_BYTES ) == 0 );
+    436          
+    437          	uxSavedInterruptStatus = portSET_INTERRUPT_MASK_FROM_ISR();
+    438          	{
+    439          		traceEVENT_GROUP_CLEAR_BITS_FROM_ISR( xEventGroup, uxBitsToClear );
+    440          
+    441          		/* The value returned is the event group value prior to the bits being
+    442          		cleared. */
+    443          		uxReturn = pxEventBits->uxEventBits;
+    444          
+    445          		/* Clear the bits. */
+    446          		pxEventBits->uxEventBits &= ~uxBitsToClear;
+    447          	}
+    448          	portCLEAR_INTERRUPT_MASK_FROM_ISR( uxSavedInterruptStatus );
+    449          
+    450          	return uxReturn;
+    451          }
+    452          /*-----------------------------------------------------------*/
+    453          
+    454          EventBits_t xEventGroupSetBits( EventGroupHandle_t xEventGroup, const EventBits_t uxBitsToSet )
+    455          {
+    456          ListItem_t *pxListItem, *pxNext;
+    457          ListItem_t const *pxListEnd;
+    458          List_t *pxList;
+    459          EventBits_t uxBitsToClear = 0, uxBitsWaitedFor, uxControlBits;
+    460          EventGroup_t *pxEventBits = ( EventGroup_t * ) xEventGroup;
+    461          BaseType_t xMatchFound = pdFALSE;
+    462          
+    463          	/* Check the user is not attempting to set the bits used by the kernel
+    464          	itself. */
+    465          	configASSERT( ( uxBitsToSet & eventEVENT_BITS_CONTROL_BYTES ) == 0 );
+    466          
+    467          	pxList = &( pxEventBits->xTasksWaitingForBits );
+    468          	pxListEnd = listGET_END_MARKER( pxList ); /*lint !e826 !e740 The mini list structure is used as the list end to save RAM.  This is checked and valid. */
+    469          	vTaskSuspendAll();
+    470          	{
+    471          		traceEVENT_GROUP_SET_BITS( xEventGroup, uxBitsToSet );
+    472          
+    473          		pxListItem = listGET_HEAD_ENTRY( pxList );
+    474          
+    475          		/* Set the bits. */
+    476          		pxEventBits->uxEventBits |= uxBitsToSet;
+    477          
+    478          		/* See if the new bit value should unblock any tasks. */
+    479          		while( pxListItem != pxListEnd )
+    480          		{
+    481          			pxNext = listGET_NEXT( pxListItem );
+    482          			uxBitsWaitedFor = listGET_LIST_ITEM_VALUE( pxListItem );
+    483          			xMatchFound = pdFALSE;
+    484          
+    485          			/* Split the bits waited for from the control bits. */
+    486          			uxControlBits = uxBitsWaitedFor & eventEVENT_BITS_CONTROL_BYTES;
+    487          			uxBitsWaitedFor &= ~eventEVENT_BITS_CONTROL_BYTES;
+    488          
+    489          			if( ( uxControlBits & eventWAIT_FOR_ALL_BITS ) == ( EventBits_t ) 0 )
+    490          			{
+    491          				/* Just looking for single bit being set. */
+    492          				if( ( uxBitsWaitedFor & pxEventBits->uxEventBits ) != ( EventBits_t ) 0 )
+    493          				{
+    494          					xMatchFound = pdTRUE;
+    495          				}
+    496          				else
+    497          				{
+    498          					mtCOVERAGE_TEST_MARKER();
+    499          				}
+    500          			}
+    501          			else if( ( uxBitsWaitedFor & pxEventBits->uxEventBits ) == uxBitsWaitedFor )
+    502          			{
+    503          				/* All bits are set. */
+    504          				xMatchFound = pdTRUE;
+    505          			}
+    506          			else
+    507          			{
+    508          				/* Need all bits to be set, but not all the bits were set. */
+    509          			}
+    510          
+    511          			if( xMatchFound != pdFALSE )
+    512          			{
+    513          				/* The bits match.  Should the bits be cleared on exit? */
+    514          				if( ( uxControlBits & eventCLEAR_EVENTS_ON_EXIT_BIT ) != ( EventBits_t ) 0 )
+    515          				{
+    516          					uxBitsToClear |= uxBitsWaitedFor;
+    517          				}
+    518          				else
+    519          				{
+    520          					mtCOVERAGE_TEST_MARKER();
+    521          				}
+    522          
+    523          				/* Store the actual event flag value in the task's event list
+    524          				item before removing the task from the event list.  The
+    525          				eventUNBLOCKED_DUE_TO_BIT_SET bit is set so the task knows
+    526          				that is was unblocked due to its required bits matching, rather
+    527          				than because it timed out. */
+    528          				( void ) xTaskRemoveFromUnorderedEventList( pxListItem, pxEventBits->uxEventBits | eventUNBLOCKED_DUE_TO_BIT_SET );
+    529          			}
+    530          
+    531          			/* Move onto the next list item.  Note pxListItem->pxNext is not
+    532          			used here as the list item may have been removed from the event list
+    533          			and inserted into the ready/pending reading list. */
+    534          			pxListItem = pxNext;
+    535          		}
+    536          
+    537          		/* Clear any bits that matched when the eventCLEAR_EVENTS_ON_EXIT_BIT
+    538          		bit was set in the control word. */
+    539          		pxEventBits->uxEventBits &= ~uxBitsToClear;
+    540          	}
+    541          	( void ) xTaskResumeAll();
+    542          
+    543          	return pxEventBits->uxEventBits;
+    544          }
+    545          /*-----------------------------------------------------------*/
+    546          
+    547          void vEventGroupDelete( EventGroupHandle_t xEventGroup )
+    548          {
+    549          EventGroup_t *pxEventBits = ( EventGroup_t * ) xEventGroup;
+    550          const List_t *pxTasksWaitingForBits = &( pxEventBits->xTasksWaitingForBits );
+    551          
+    552          	vTaskSuspendAll();
+    553          	{
+    554          		traceEVENT_GROUP_DELETE( xEventGroup );
+    555          
+    556          		while( listCURRENT_LIST_LENGTH( pxTasksWaitingForBits ) > ( UBaseType_t ) 0 )
+    557          		{
+    558          			/* Unblock the task, returning 0 as the event list is being deleted
+    559          			and	cannot therefore have any bits set. */
+    560          			configASSERT( pxTasksWaitingForBits->xListEnd.pxNext != ( ListItem_t * ) &( pxTasksWaitingForBits->xListEnd ) );
+    561          			( void ) xTaskRemoveFromUnorderedEventList( pxTasksWaitingForBits->xListEnd.pxNext, ( TickType_t ) eventUNBLOCKED_DUE_TO_BIT_SET );
+    562          		}
+    563          
+    564          		vPortFree( pxEventBits );
+    565          	}
+    566          	( void ) xTaskResumeAll();
+    567          }
+    568          /*-----------------------------------------------------------*/
+    569          
+    570          /* For internal use only - execute a 'set bits' command that was pended from
+    571          an interrupt. */
+    572          void vEventGroupSetBitsCallback( void *pvEventGroup, const uint32_t ulBitsToSet )
+    573          {
+    574          	( void ) xEventGroupSetBits( pvEventGroup, ( EventBits_t ) ulBitsToSet );
+    575          }
+    576          /*-----------------------------------------------------------*/
+    577          
+    578          static BaseType_t prvTestWaitCondition( const EventBits_t uxCurrentEventBits, const EventBits_t uxBitsToWaitFor, const BaseType_t xWaitForAllBits )
+    579          {
+    580          BaseType_t xWaitConditionMet = pdFALSE;
+    581          
+    582          	if( xWaitForAllBits == pdFALSE )
+    583          	{
+    584          		/* Task only has to wait for one bit within uxBitsToWaitFor to be
+    585          		set.  Is one already set? */
+    586          		if( ( uxCurrentEventBits & uxBitsToWaitFor ) != ( EventBits_t ) 0 )
+    587          		{
+    588          			xWaitConditionMet = pdTRUE;
+    589          		}
+    590          		else
+    591          		{
+    592          			mtCOVERAGE_TEST_MARKER();
+    593          		}
+    594          	}
+    595          	else
+    596          	{
+    597          		/* Task has to wait for all the bits in uxBitsToWaitFor to be set.
+    598          		Are they set already? */
+    599          		if( ( uxCurrentEventBits & uxBitsToWaitFor ) == uxBitsToWaitFor )
+    600          		{
+    601          			xWaitConditionMet = pdTRUE;
+    602          		}
+    603          		else
+    604          		{
+    605          			mtCOVERAGE_TEST_MARKER();
+    606          		}
+    607          	}
+    608          
+    609          	return xWaitConditionMet;
+    610          }
+    611          
+    612          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        0  prvTestWaitCondition
+       16  vEventGroupDelete
+             16 -> ulPortSetInterruptMask
+             16 -> vPortFree
+             16 -> vTaskSuspendAll
+             16 -> xTaskRemoveFromUnorderedEventList
+              0 -> xTaskResumeAll
+        0  vEventGroupSetBitsCallback
+              0 -> xEventGroupSetBits
+       16  xEventGroupClearBits
+             16 -> ulPortSetInterruptMask
+             16 -> vPortEnterCritical
+             16 -> vPortExitCritical
+       16  xEventGroupClearBitsFromISR
+             16 -> ulPortSetInterruptMask
+             16 -> vPortClearInterruptMask
+        8  xEventGroupCreate
+              8 -> pvPortMalloc
+              8 -> vListInitialise
+       24  xEventGroupSetBits
+             24 -> ulPortSetInterruptMask
+             24 -> vTaskSuspendAll
+             24 -> xTaskRemoveFromUnorderedEventList
+             24 -> xTaskResumeAll
+       24  xEventGroupSync
+             24 -> ulPortSetInterruptMask
+             24 -> uxTaskResetEventItemValue
+             24 -> vPortEnterCritical
+             24 -> vPortExitCritical
+             24 -> vPortYield
+             24 -> vTaskPlaceOnUnorderedEventList
+             24 -> vTaskSuspendAll
+             24 -> xEventGroupSetBits
+             24 -> xTaskGetSchedulerState
+             24 -> xTaskResumeAll
+       40  xEventGroupWaitBits
+             40 -> prvTestWaitCondition
+             40 -> ulPortSetInterruptMask
+             40 -> uxTaskResetEventItemValue
+             40 -> vPortEnterCritical
+             40 -> vPortExitCritical
+             40 -> vPortYield
+             40 -> vTaskPlaceOnUnorderedEventList
+             40 -> vTaskSuspendAll
+             40 -> xTaskGetSchedulerState
+             40 -> xTaskResumeAll
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       8  ?Subroutine0
+      20  prvTestWaitCondition
+      54  vEventGroupDelete
+       2  vEventGroupSetBitsCallback
+      38  xEventGroupClearBits
+      38  xEventGroupClearBitsFromISR
+      26  xEventGroupCreate
+     114  xEventGroupSetBits
+     160  xEventGroupSync
+     182  xEventGroupWaitBits
+
+ 
+ 642 bytes in section .text
+ 
+ 642 bytes of CODE memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,938 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:46 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\STM32_USB_HOST_Library\Class\MSC\src\usbh_m #
+#                    sc_bot.c                                                 #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\STM32_USB_HOST_Library\Class\MSC\src\usbh_m #
+#                    sc_bot.c -D S4051A -D DEBUG -D FREE_RTOS -D              #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\usbh_msc_bot.lst                                      #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\usbh_msc_bot.o                                         #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\STM32_USB_HOST_Library\Class\MSC\src\usbh_msc_bot.c
+      1          /**
+      2            ******************************************************************************
+      3            * @file    usbh_msc_bot.c 
+      4            * @author  MCD Application Team
+      5            * @version V2.1.0
+      6            * @date    19-March-2012
+      7            * @brief   This file includes the mass storage related functions
+      8            ******************************************************************************
+      9            * @attention
+     10            *
+     11            * <h2><center>&copy; COPYRIGHT 2012 STMicroelectronics</center></h2>
+     12            *
+     13            * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
+     14            * You may not use this file except in compliance with the License.
+     15            * You may obtain a copy of the License at:
+     16            *
+     17            *        http://www.st.com/software_license_agreement_liberty_v2
+     18            *
+     19            * Unless required by applicable law or agreed to in writing, software 
+     20            * distributed under the License is distributed on an "AS IS" BASIS, 
+     21            * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     22            * See the License for the specific language governing permissions and
+     23            * limitations under the License.
+     24            *
+     25            ******************************************************************************
+     26            */ 
+     27          
+     28          /* Includes ------------------------------------------------------------------*/
+     29          #include "usbh_msc_core.h"
+     30          #include "usbh_msc_scsi.h"
+     31          #include "usbh_msc_bot.h"
+     32          #include "usbh_ioreq.h"
+     33          #include "usbh_def.h"
+     34          #include "usb_hcd_int.h"
+     35          
+     36          
+     37          /** @addtogroup USBH_LIB
+     38          * @{
+     39          */
+     40          
+     41          /** @addtogroup USBH_CLASS
+     42          * @{
+     43          */
+     44          
+     45          /** @addtogroup USBH_MSC_CLASS
+     46          * @{
+     47          */
+     48          
+     49          /** @defgroup USBH_MSC_BOT 
+     50          * @brief    This file includes the mass storage related functions
+     51          * @{
+     52          */ 
+     53          
+     54          
+     55          /** @defgroup USBH_MSC_BOT_Private_TypesDefinitions
+     56          * @{
+     57          */ 
+     58          /**
+     59          * @}
+     60          */ 
+     61          
+     62          /** @defgroup USBH_MSC_BOT_Private_Defines
+     63          * @{
+     64          */ 
+     65          /**
+     66          * @}
+     67          */ 
+     68          
+     69          /** @defgroup USBH_MSC_BOT_Private_Macros
+     70          * @{
+     71          */ 
+     72          /**
+     73          * @}
+     74          */ 
+     75          
+     76          
+     77          /** @defgroup USBH_MSC_BOT_Private_Variables
+     78          * @{
+     79          */ 
+     80          
+     81          #ifdef USB_OTG_HS_INTERNAL_DMA_ENABLED
+     82            #if defined ( __ICCARM__ ) /*!< IAR Compiler */
+     83              #pragma data_alignment=4   
+     84            #endif
+     85          #endif /* USB_OTG_HS_INTERNAL_DMA_ENABLED */ 
+     86          __ALIGN_BEGIN HostCBWPkt_TypeDef USBH_MSC_CBWData __ALIGN_END ;
+     87          
+     88          #ifdef USB_OTG_HS_INTERNAL_DMA_ENABLED
+     89            #if defined ( __ICCARM__ ) /*!< IAR Compiler */
+     90              #pragma data_alignment=4   
+     91            #endif
+     92          #endif /* USB_OTG_HS_INTERNAL_DMA_ENABLED */
+     93          __ALIGN_BEGIN HostCSWPkt_TypeDef USBH_MSC_CSWData __ALIGN_END ;
+     94          
+     95          
+     96          static uint32_t BOTStallErrorCount;   /* Keeps count of STALL Error Cases*/
+     97          
+     98          /**
+     99          * @}
+    100          */ 
+    101          
+    102          
+    103          /** @defgroup USBH_MSC_BOT_Private_FunctionPrototypes
+    104          * @{
+    105          */ 
+    106          /**
+    107          * @}
+    108          */ 
+    109          
+    110          
+    111          /** @defgroup USBH_MSC_BOT_Exported_Variables
+    112          * @{
+    113          */ 
+    114          USBH_BOTXfer_TypeDef USBH_MSC_BOTXferParam; 
+    115          /**
+    116          * @}
+    117          */ 
+    118          
+    119          
+    120          /** @defgroup USBH_MSC_BOT_Private_Functions
+    121          * @{
+    122          */ 
+    123          
+    124          
+    125          /**
+    126          * @brief  USBH_MSC_Init 
+    127          *         Initializes the mass storage parameters
+    128          * @param  None
+    129          * @retval None
+    130          */
+    131          void USBH_MSC_Init(USB_OTG_CORE_HANDLE *pdev )
+    132          {
+    133            if(HCD_IsDeviceConnected(pdev))
+    134            {      
+    135              USBH_MSC_CBWData.field.CBWSignature = USBH_MSC_BOT_CBW_SIGNATURE;
+    136              USBH_MSC_CBWData.field.CBWTag = USBH_MSC_BOT_CBW_TAG;
+    137              USBH_MSC_CBWData.field.CBWLUN = 0;  /*Only one LUN is supported*/
+    138              USBH_MSC_BOTXferParam.CmdStateMachine = CMD_SEND_STATE;  
+    139            }
+    140            
+    141            BOTStallErrorCount = 0;
+    142            MSCErrorCount = 0;
+    143          }
+    144          
+    145          /**
+    146          * @brief  USBH_MSC_HandleBOTXfer 
+    147          *         This function manages the different states of BOT transfer and 
+    148          *         updates the status to upper layer.
+    149          * @param  None
+    150          * @retval None
+    151          * 
+    152          */
+    153          void USBH_MSC_HandleBOTXfer (USB_OTG_CORE_HANDLE *pdev ,USBH_HOST *phost)
+    154          {
+    155            uint8_t xferDirection, index;
+    156            static uint32_t remainingDataLength;
+    157            static uint8_t *datapointer , *datapointer_prev;
+    158            static uint8_t error_direction;
+    159            USBH_Status status;
+    160            
+    161            URB_STATE URB_Status = URB_IDLE;
+    162            
+    163            if(HCD_IsDeviceConnected(pdev))
+    164            {  
+    165              
+    166              switch (USBH_MSC_BOTXferParam.BOTState)
+    167              {
+    168              case USBH_MSC_SEND_CBW:
+    169                /* send CBW */    
+    170                USBH_BulkSendData (pdev,
+    171                                   &USBH_MSC_CBWData.CBWArray[0], 
+    172                                   USBH_MSC_BOT_CBW_PACKET_LENGTH , 
+    173                                   MSC_Machine.hc_num_out);
+    174                
+    175                USBH_MSC_BOTXferParam.BOTStateBkp = USBH_MSC_SEND_CBW;
+    176                USBH_MSC_BOTXferParam.BOTState = USBH_MSC_SENT_CBW;
+    177                
+    178                break;
+    179                
+    180              case USBH_MSC_SENT_CBW:
+    181                URB_Status = HCD_GetURB_State(pdev , MSC_Machine.hc_num_out);
+    182                
+    183                if(URB_Status == URB_DONE)
+    184                { 
+    185                  BOTStallErrorCount = 0;
+    186                  USBH_MSC_BOTXferParam.BOTStateBkp = USBH_MSC_SENT_CBW; 
+    187                  
+    188                  /* If the CBW Pkt is sent successful, then change the state */
+    189                  xferDirection = (USBH_MSC_CBWData.field.CBWFlags & USB_REQ_DIR_MASK);
+    190                  
+    191                  if ( USBH_MSC_CBWData.field.CBWTransferLength != 0 )
+    192                  {
+    193                    remainingDataLength = USBH_MSC_CBWData.field.CBWTransferLength ;
+    194                    datapointer = USBH_MSC_BOTXferParam.pRxTxBuff;
+    195                    datapointer_prev = datapointer;
+    196                    
+    197                    /* If there is Data Transfer Stage */
+    198                    if (xferDirection == USB_D2H)
+    199                    {
+    200                      /* Data Direction is IN */
+    201                      USBH_MSC_BOTXferParam.BOTState = USBH_MSC_BOT_DATAIN_STATE;
+    202                    }
+    203                    else
+    204                    {
+    205                      /* Data Direction is OUT */
+    206                      USBH_MSC_BOTXferParam.BOTState = USBH_MSC_BOT_DATAOUT_STATE;
+    207                    } 
+    208                  }
+    209                  
+    210                  else
+    211                  {/* If there is NO Data Transfer Stage */
+    212                    USBH_MSC_BOTXferParam.BOTState = USBH_MSC_RECEIVE_CSW_STATE;
+    213                  }
+    214                  
+    215                }   
+    216                else if(URB_Status == URB_NOTREADY)
+    217                {
+    218                  USBH_MSC_BOTXferParam.BOTState  = USBH_MSC_BOTXferParam.BOTStateBkp;    
+    219                }     
+    220                else if(URB_Status == URB_STALL)
+    221                {
+    222                  error_direction = USBH_MSC_DIR_OUT;
+    223                  USBH_MSC_BOTXferParam.BOTState  = USBH_MSC_BOT_ERROR_OUT;
+    224                }
+    225                break;
+    226                
+    227              case USBH_MSC_BOT_DATAIN_STATE:
+    228                
+    229                URB_Status =   HCD_GetURB_State(pdev , MSC_Machine.hc_num_in);
+    230                /* BOT DATA IN stage */
+    231                if((URB_Status == URB_DONE) ||(USBH_MSC_BOTXferParam.BOTStateBkp != USBH_MSC_BOT_DATAIN_STATE))
+    232                {
+    233                  BOTStallErrorCount = 0;
+    234                  USBH_MSC_BOTXferParam.BOTStateBkp = USBH_MSC_BOT_DATAIN_STATE;    
+    235                  
+    236                  if(remainingDataLength > MSC_Machine.MSBulkInEpSize)
+    237                  {
+    238                    USBH_BulkReceiveData (pdev,
+    239          	                        datapointer, 
+    240          			        MSC_Machine.MSBulkInEpSize , 
+    241          			        MSC_Machine.hc_num_in);
+    242                    
+    243                    remainingDataLength -= MSC_Machine.MSBulkInEpSize;
+    244                    datapointer = datapointer + MSC_Machine.MSBulkInEpSize;
+    245                  }
+    246                  else if ( remainingDataLength == 0)
+    247                  {
+    248                    /* If value was 0, and successful transfer, then change the state */
+    249                    USBH_MSC_BOTXferParam.BOTState = USBH_MSC_RECEIVE_CSW_STATE;
+    250                  }
+    251                  else
+    252                  {       
+    253                    USBH_BulkReceiveData (pdev,
+    254          	                        datapointer, 
+    255          			        remainingDataLength , 
+    256          			        MSC_Machine.hc_num_in);
+    257                    
+    258                    remainingDataLength = 0; /* Reset this value and keep in same state */
+    259                  }
+    260                }
+    261                else if(URB_Status == URB_STALL)
+    262                {
+    263                  /* This is Data Stage STALL Condition */
+    264                  
+    265                  error_direction = USBH_MSC_DIR_IN;
+    266                  USBH_MSC_BOTXferParam.BOTState  = USBH_MSC_BOT_ERROR_IN;
+    267                  
+    268                  /* Refer to USB Mass-Storage Class : BOT (www.usb.org) 
+    269                  6.7.2 Host expects to receive data from the device
+    270                  3. On a STALL condition receiving data, then:
+    271                  The host shall accept the data received.
+    272                  The host shall clear the Bulk-In pipe.
+    273                  4. The host shall attempt to receive a CSW.
+    274                  
+    275                  USBH_MSC_BOTXferParam.BOTStateBkp is used to switch to the Original 
+    276                  state after the ClearFeature Command is issued.
+    277                  */
+    278                  USBH_MSC_BOTXferParam.BOTStateBkp = USBH_MSC_RECEIVE_CSW_STATE;
+    279                  
+    280                }     
+    281                break;   
+    282                
+    283                
+    284              case USBH_MSC_BOT_DATAOUT_STATE:
+    285                /* BOT DATA OUT stage */
+    286                URB_Status = HCD_GetURB_State(pdev , MSC_Machine.hc_num_out);       
+    287                if(URB_Status == URB_DONE)
+    288                {
+    289                  BOTStallErrorCount = 0;
+    290                  USBH_MSC_BOTXferParam.BOTStateBkp = USBH_MSC_BOT_DATAOUT_STATE;    
+    291                  if(remainingDataLength > MSC_Machine.MSBulkOutEpSize)
+    292                  {
+    293                    USBH_BulkSendData (pdev,
+    294                                       datapointer, 
+    295                                       MSC_Machine.MSBulkOutEpSize , 
+    296                                       MSC_Machine.hc_num_out);
+    297                    datapointer_prev = datapointer;
+    298                    datapointer = datapointer + MSC_Machine.MSBulkOutEpSize;
+    299                    
+    300                    remainingDataLength = remainingDataLength - MSC_Machine.MSBulkOutEpSize;
+    301                  }
+    302                  else if ( remainingDataLength == 0)
+    303                  {
+    304                    /* If value was 0, and successful transfer, then change the state */
+    305                    USBH_MSC_BOTXferParam.BOTState = USBH_MSC_RECEIVE_CSW_STATE;
+    306                  }
+    307                  else
+    308                  {
+    309                    USBH_BulkSendData (pdev,
+    310          	                     datapointer, 
+    311          			     remainingDataLength , 
+    312          			     MSC_Machine.hc_num_out);
+    313                    
+    314                    remainingDataLength = 0; /* Reset this value and keep in same state */   
+    315                  }      
+    316                }
+    317                
+    318                else if(URB_Status == URB_NOTREADY)
+    319                {
+    320                  if(datapointer != datapointer_prev)
+    321                  {
+    322                    USBH_BulkSendData (pdev,
+    323                                       (datapointer - MSC_Machine.MSBulkOutEpSize), 
+    324                                       MSC_Machine.MSBulkOutEpSize , 
+    325                                       MSC_Machine.hc_num_out);
+    326                  }
+    327                  else
+    328                  {
+    329                    USBH_BulkSendData (pdev,
+    330                                       datapointer,
+    331                                       MSC_Machine.MSBulkOutEpSize , 
+    332                                       MSC_Machine.hc_num_out);
+    333                  }
+    334                }
+    335                
+    336                else if(URB_Status == URB_STALL)
+    337                {
+    338                  error_direction = USBH_MSC_DIR_OUT;
+    339                  USBH_MSC_BOTXferParam.BOTState  = USBH_MSC_BOT_ERROR_OUT;
+    340                  
+    341                  /* Refer to USB Mass-Storage Class : BOT (www.usb.org) 
+    342                  6.7.3 Ho - Host expects to send data to the device
+    343                  3. On a STALL condition sending data, then:
+    344                  " The host shall clear the Bulk-Out pipe.
+    345                  4. The host shall attempt to receive a CSW.
+    346                  
+    347                  The Above statement will do the clear the Bulk-Out pipe.
+    348                  The Below statement will help in Getting the CSW.  
+    349                  
+    350                  USBH_MSC_BOTXferParam.BOTStateBkp is used to switch to the Original 
+    351                  state after the ClearFeature Command is issued.
+    352                  */
+    353                  
+    354                  USBH_MSC_BOTXferParam.BOTStateBkp = USBH_MSC_RECEIVE_CSW_STATE;
+    355                  
+    356                }
+    357                break;
+    358                
+    359              case USBH_MSC_RECEIVE_CSW_STATE:
+    360                /* BOT CSW stage */     
+    361                  /* NOTE: We cannot reset the BOTStallErrorCount here as it may come from 
+    362                  the clearFeature from previous command */
+    363                  
+    364                  USBH_MSC_BOTXferParam.BOTStateBkp = USBH_MSC_RECEIVE_CSW_STATE;
+    365                  
+    366                  USBH_MSC_BOTXferParam.pRxTxBuff = USBH_MSC_CSWData.CSWArray;
+    367                  USBH_MSC_BOTXferParam.DataLength = USBH_MSC_CSW_MAX_LENGTH;
+    368                  
+    369                  for(index = USBH_MSC_CSW_LENGTH; index != 0; index--)
+    370                  {
+    371                    USBH_MSC_CSWData.CSWArray[index] = 0;
+    372                  }
+    373                  
+    374                  USBH_MSC_CSWData.CSWArray[0] = 0;
+    375                  
+    376                  USBH_BulkReceiveData (pdev,
+    377                                        USBH_MSC_BOTXferParam.pRxTxBuff, 
+    378                                        USBH_MSC_CSW_MAX_LENGTH , 
+    379                                        MSC_Machine.hc_num_in);
+    380                  USBH_MSC_BOTXferParam.BOTState = USBH_MSC_DECODE_CSW;    
+    381          
+    382                break;
+    383                
+    384              case USBH_MSC_DECODE_CSW:
+    385                URB_Status = HCD_GetURB_State(pdev , MSC_Machine.hc_num_in);
+    386                /* Decode CSW */
+    387                if(URB_Status == URB_DONE)
+    388                {
+    389                  BOTStallErrorCount = 0;
+    390                  USBH_MSC_BOTXferParam.BOTStateBkp = USBH_MSC_RECEIVE_CSW_STATE;
+    391                  
+    392                  USBH_MSC_BOTXferParam.MSCState = USBH_MSC_BOTXferParam.MSCStateCurrent ;
+    393                  
+    394                  USBH_MSC_BOTXferParam.BOTXferStatus = USBH_MSC_DecodeCSW(pdev , phost);
+    395                }
+    396                else if(URB_Status == URB_STALL)     
+    397                {
+    398                  error_direction = USBH_MSC_DIR_IN;
+    399                  USBH_MSC_BOTXferParam.BOTState  = USBH_MSC_BOT_ERROR_IN;
+    400                }
+    401                break;
+    402                
+    403              case USBH_MSC_BOT_ERROR_IN: 
+    404                status = USBH_MSC_BOT_Abort(pdev, phost, USBH_MSC_DIR_IN);
+    405                if (status == USBH_OK)
+    406                {
+    407                  /* Check if the error was due in Both the directions */
+    408                  if (error_direction == USBH_MSC_BOTH_DIR)
+    409                  {/* If Both directions are Needed, Switch to OUT Direction */
+    410                    USBH_MSC_BOTXferParam.BOTState = USBH_MSC_BOT_ERROR_OUT;
+    411                  }
+    412                  else
+    413                  {
+    414                    /* Switch Back to the Original State, In many cases this will be 
+    415                    USBH_MSC_RECEIVE_CSW_STATE state */
+    416                    USBH_MSC_BOTXferParam.BOTState = USBH_MSC_BOTXferParam.BOTStateBkp;
+    417                  }
+    418                }
+    419                else if (status == USBH_UNRECOVERED_ERROR)
+    420                {
+    421                  /* This means that there is a STALL Error limit, Do Reset Recovery */
+    422                  USBH_MSC_BOTXferParam.BOTXferStatus = USBH_MSC_PHASE_ERROR;
+    423                }
+    424                break;
+    425                
+    426              case USBH_MSC_BOT_ERROR_OUT: 
+    427                status = USBH_MSC_BOT_Abort(pdev, phost, USBH_MSC_DIR_OUT);
+    428                if ( status == USBH_OK)
+    429                { /* Switch Back to the Original State */
+    430                  USBH_MSC_BOTXferParam.BOTState = USBH_MSC_BOTXferParam.BOTStateBkp;        
+    431                }
+    432                else if (status == USBH_UNRECOVERED_ERROR)
+    433                {
+    434                  /* This means that there is a STALL Error limit, Do Reset Recovery */
+    435                  USBH_MSC_BOTXferParam.BOTXferStatus = USBH_MSC_PHASE_ERROR;
+    436                }
+    437                break;
+    438                
+    439              default:      
+    440                break;
+    441              }
+    442            }
+    443          }
+    444          
+    445          /**
+    446          * @brief  USBH_MSC_BOT_Abort 
+    447          *         This function manages the different Error handling for STALL
+    448          * @param  direction : IN / OUT 
+    449          * @retval None
+    450          */
+    451          USBH_Status USBH_MSC_BOT_Abort(USB_OTG_CORE_HANDLE *pdev, 
+    452                                         USBH_HOST *phost,
+    453                                         uint8_t direction)
+    454          {
+    455            USBH_Status status;
+    456            
+    457            status = USBH_BUSY;
+    458            
+    459            switch (direction)
+    460            {
+    461            case USBH_MSC_DIR_IN :
+    462              /* send ClrFeture on Bulk IN endpoint */
+    463              status = USBH_ClrFeature(pdev,
+    464                                       phost,
+    465                                       MSC_Machine.MSBulkInEp,
+    466                                       MSC_Machine.hc_num_in);
+    467              
+    468              break;
+    469              
+    470            case USBH_MSC_DIR_OUT :
+    471              /*send ClrFeature on Bulk OUT endpoint */
+    472              status = USBH_ClrFeature(pdev, 
+    473                                       phost,
+    474                                       MSC_Machine.MSBulkOutEp,
+    475                                       MSC_Machine.hc_num_out);
+    476              break;
+    477              
+    478            default:
+    479              break;
+    480            }
+    481            
+    482            BOTStallErrorCount++; /* Check Continous Number of times, STALL has Occured */ 
+    483            if (BOTStallErrorCount > MAX_BULK_STALL_COUNT_LIMIT )
+    484            {
+    485              status = USBH_UNRECOVERED_ERROR;
+    486            }
+    487            
+    488            return status;
+    489          }
+    490          
+    491          /**
+    492          * @brief  USBH_MSC_DecodeCSW
+    493          *         This function decodes the CSW received by the device and updates the
+    494          *         same to upper layer.
+    495          * @param  None
+    496          * @retval On success USBH_MSC_OK, on failure USBH_MSC_FAIL
+    497          * @notes
+    498          *     Refer to USB Mass-Storage Class : BOT (www.usb.org)
+    499          *    6.3.1 Valid CSW Conditions :
+    500          *     The host shall consider the CSW valid when:
+    501          *     1. dCSWSignature is equal to 53425355h
+    502          *     2. the CSW is 13 (Dh) bytes in length,
+    503          *     3. dCSWTag matches the dCBWTag from the corresponding CBW.
+    504          */
+    505          
+    506          uint8_t USBH_MSC_DecodeCSW(USB_OTG_CORE_HANDLE *pdev , USBH_HOST *phost)
+    507          {
+    508            uint8_t status;
+    509            uint32_t dataXferCount = 0;
+    510            status = USBH_MSC_FAIL;
+    511            
+    512            if(HCD_IsDeviceConnected(pdev))
+    513            {
+    514              /*Checking if the transfer length is diffrent than 13*/
+    515              dataXferCount = HCD_GetXferCnt(pdev, MSC_Machine.hc_num_in); 
+    516              
+    517              if(dataXferCount != USBH_MSC_CSW_LENGTH)
+    518              {
+    519                /*(4) Hi > Dn (Host expects to receive data from the device,
+    520                Device intends to transfer no data)
+    521                (5) Hi > Di (Host expects to receive data from the device,
+    522                Device intends to send data to the host)
+    523                (9) Ho > Dn (Host expects to send data to the device,
+    524                Device intends to transfer no data)
+    525                (11) Ho > Do  (Host expects to send data to the device,
+    526                Device intends to receive data from the host)*/
+    527                
+    528                
+    529                status = USBH_MSC_PHASE_ERROR;
+    530              }
+    531              else
+    532              { /* CSW length is Correct */
+    533                
+    534                /* Check validity of the CSW Signature and CSWStatus */
+    535                if(USBH_MSC_CSWData.field.CSWSignature == USBH_MSC_BOT_CSW_SIGNATURE)
+    536                {/* Check Condition 1. dCSWSignature is equal to 53425355h */
+    537                  
+    538                  if(USBH_MSC_CSWData.field.CSWTag == USBH_MSC_CBWData.field.CBWTag)
+    539                  {
+    540                    /* Check Condition 3. dCSWTag matches the dCBWTag from the 
+    541                    corresponding CBW */
+    542                    
+    543                    if(USBH_MSC_CSWData.field.CSWStatus == USBH_MSC_OK) 
+    544                    {
+    545                      /* Refer to USB Mass-Storage Class : BOT (www.usb.org) 
+    546                      
+    547                      Hn Host expects no data transfers
+    548                      Hi Host expects to receive data from the device
+    549                      Ho Host expects to send data to the device
+    550                      
+    551                      Dn Device intends to transfer no data
+    552                      Di Device intends to send data to the host
+    553                      Do Device intends to receive data from the host
+    554                      
+    555                      Section 6.7 
+    556                      (1) Hn = Dn (Host expects no data transfers,
+    557                      Device intends to transfer no data)
+    558                      (6) Hi = Di (Host expects to receive data from the device,
+    559                      Device intends to send data to the host)
+    560                      (12) Ho = Do (Host expects to send data to the device, 
+    561                      Device intends to receive data from the host)
+    562                      
+    563                      */
+    564                      
+    565                      status = USBH_MSC_OK;
+    566                    }
+    567                    else if(USBH_MSC_CSWData.field.CSWStatus == USBH_MSC_FAIL)
+    568                    {
+    569                      status = USBH_MSC_FAIL;
+    570                    }
+    571                    
+    572                    else if(USBH_MSC_CSWData.field.CSWStatus == USBH_MSC_PHASE_ERROR)
+    573                    { 
+    574                      /* Refer to USB Mass-Storage Class : BOT (www.usb.org) 
+    575                      Section 6.7 
+    576                      (2) Hn < Di ( Host expects no data transfers, 
+    577                      Device intends to send data to the host)
+    578                      (3) Hn < Do ( Host expects no data transfers, 
+    579                      Device intends to receive data from the host)
+    580                      (7) Hi < Di ( Host expects to receive data from the device, 
+    581                      Device intends to send data to the host)
+    582                      (8) Hi <> Do ( Host expects to receive data from the device, 
+    583                      Device intends to receive data from the host)
+    584                      (10) Ho <> Di (Host expects to send data to the device,
+    585                      Di Device intends to send data to the host)
+    586                      (13) Ho < Do (Host expects to send data to the device, 
+    587                      Device intends to receive data from the host)
+    588                      */
+    589                      
+    590                      status = USBH_MSC_PHASE_ERROR;
+    591                    }
+    592                  } /* CSW Tag Matching is Checked  */
+    593                } /* CSW Signature Correct Checking */
+    594                else
+    595                {
+    596                  /* If the CSW Signature is not valid, We sall return the Phase Error to
+    597                  Upper Layers for Reset Recovery */
+    598                  
+    599                  status = USBH_MSC_PHASE_ERROR;
+    600                }
+    601              } /* CSW Length Check*/
+    602            }
+    603            
+    604            USBH_MSC_BOTXferParam.BOTXferStatus  = status;
+    605            return status;
+    606          }
+    607          
+    608          
+    609          /**
+    610          * @}
+    611          */ 
+    612          
+    613          /**
+    614          * @}
+    615          */ 
+    616          
+    617          /**
+    618          * @}
+    619          */
+    620          
+    621          /**
+    622          * @}
+    623          */ 
+    624          
+    625          /**
+    626          * @}
+    627          */
+    628          
+    629          /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+    630          
+    631          
+    632          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        8  USBH_MSC_BOT_Abort
+              8 -> USBH_ClrFeature
+       16  USBH_MSC_DecodeCSW
+             16 -> HCD_GetXferCnt
+             16 -> HCD_IsDeviceConnected
+       24  USBH_MSC_HandleBOTXfer
+             24 -> HCD_GetURB_State
+             24 -> HCD_IsDeviceConnected
+             24 -> USBH_BulkReceiveData
+              0 -> USBH_BulkSendData
+             24 -> USBH_BulkSendData
+             24 -> USBH_MSC_BOT_Abort
+             24 -> USBH_MSC_DecodeCSW
+        8  USBH_MSC_Init
+              8 -> HCD_IsDeviceConnected
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable3
+       4  ??DataTable3_1
+       4  ??DataTable3_2
+       4  ??DataTable3_3
+       4  ??DataTable3_4
+       4  ??DataTable3_5
+       4  ??DataTable3_6
+       8  ?Subroutine0
+       8  ?Subroutine1
+       8  ?Subroutine2
+      52  USBH_MSC_BOTXferParam
+          USBH_MSC_CSWData
+          error_direction
+          BOTStallErrorCount
+          remainingDataLength
+          datapointer
+          datapointer_prev
+      48  USBH_MSC_BOT_Abort
+      32  USBH_MSC_CBWData
+      70  USBH_MSC_DecodeCSW
+     460  USBH_MSC_HandleBOTXfer
+      40  USBH_MSC_Init
+
+ 
+  84 bytes in section .bss
+ 670 bytes in section .text
+ 
+ 670 bytes of CODE memory
+  84 bytes of DATA memory
+
+Errors: none
+Warnings: none

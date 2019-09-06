@@ -1,0 +1,815 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:25:41 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Utilities\mainstream_v1\stm32f411\SPILowLevel.c       #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Utilities\mainstream_v1\stm32f411\SPILowLevel.c -D    #
+#                    S4051A -D DEBUG -D FREE_RTOS -D STM32F40_41xxx -D        #
+#                    USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D             #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\SPILowLevel.lst                                       #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\SPILowLevel.o                                          #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Utilities\mainstream_v1\stm32f411\SPILowLevel.c
+      1          #include "Debug.h"
+      2          
+      3          #include "GPIOMiddleLevel.h"
+      4          #include "SPILowLevel.h"
+      5          
+      6          #if defined ( FREE_RTOS )
+      7          #include "FreeRTOS.h"
+      8          #include "semphr.h"
+      9          #endif 
+     10          
+     11          /*_____________________________________________________________________________________________*/
+     12          #define SPIx                           SPI4
+     13          #define SPIx_CLK                       RCC_APB2Periph_SPI4
+     14          #define SPIx_CLK_INIT                  RCC_APB2PeriphClockCmd
+     15          //#define SPIx_IRQn                      SPI4_IRQn
+     16          //#define SPIx_IRQHANDLER                SPI2_IRQHandler
+     17          
+     18          #define SPIx_SCK_PIN                   GPIO_Pin_2
+     19          #define SPIx_SCK_GPIO_PORT             GPIOE
+     20          #define SPIx_SCK_GPIO_CLK              RCC_AHB1Periph_GPIOE
+     21          #define SPIx_SCK_SOURCE                GPIO_PinSource2
+     22          #define SPIx_SCK_AF                    GPIO_AF_SPI4
+     23          
+     24          #define SPIx_MISO_PIN                  GPIO_Pin_5
+     25          #define SPIx_MISO_GPIO_PORT            GPIOE
+     26          #define SPIx_MISO_GPIO_CLK             RCC_AHB1Periph_GPIOE
+     27          #define SPIx_MISO_SOURCE               GPIO_PinSource5
+     28          #define SPIx_MISO_AF                   GPIO_AF_SPI4
+     29          
+     30          #define SPIx_MOSI_PIN                  GPIO_Pin_6
+     31          #define SPIx_MOSI_GPIO_PORT            GPIOE
+     32          #define SPIx_MOSI_GPIO_CLK             RCC_AHB1Periph_GPIOE
+     33          #define SPIx_MOSI_SOURCE               GPIO_PinSource6
+     34          #define SPIx_MOSI_AF                   GPIO_AF_SPI4
+     35          
+     36          #define spi_write_dummy()	SPI_I2S_SendData(_SPI, 0xFF)
+     37          #define _SPI_CS0_LOW()		GPIOMiddleLevel_Clr( __O_SPI1_NSS ) 
+     38          #define _SPI_CS0_HIGH()    	GPIOMiddleLevel_Set( __O_SPI1_NSS )
+     39          #define _SPI_CS1_LOW()      GPIOMiddleLevel_Clr( __O_EXT_FLASH_CS )
+     40          #define _SPI_CS1_HIGH()     GPIOMiddleLevel_Set( __O_EXT_FLASH_CS )
+     41          /*_________________________________________________________________________________________________________*/
+     42          // Private Variable
+     43          SPI_InitTypeDef  SPI_InitStructure;
+     44          static bool bIsSPI_enable = FALSE;
+     45          
+     46          #if defined ( FREE_RTOS )
+     47          static xSemaphoreHandle _SPI_SEMA = NULL;
+     48          #endif 
+     49          
+     50          //static int i_counter = 0;
+     51          /*_____________________________________________________________________________________________*/
+     52          extern void SPI_GPIOLowLevel_DeConfiguration( void );
+     53          /*STM32*/
+     54          static void __STM32_SPI_DeConfiguration(void)
+     55          {
+     56            GPIO_InitTypeDef GPIO_InitStructure;
+     57          
+     58            /*!< Disable the _SPI  */
+     59            SPI_Cmd(SPIx, DISABLE);
+     60            
+     61            /*!< Configure _SPI pins: SCK */
+     62            GPIO_InitStructure.GPIO_Pin = SPIx_SCK_PIN;
+     63            GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN;
+     64            GPIO_Init(SPIx_SCK_GPIO_PORT, &GPIO_InitStructure);
+     65          
+     66            /*!< Configure _SPI pins: MISO */
+     67            GPIO_InitStructure.GPIO_Pin =  SPIx_MISO_PIN;
+     68            GPIO_Init(SPIx_MISO_GPIO_PORT, &GPIO_InitStructure);
+     69          
+     70            /* SPI  MOSI pin configuration */
+     71            GPIO_InitStructure.GPIO_Pin =  SPIx_MOSI_PIN;
+     72            GPIO_Init(SPIx_MOSI_GPIO_PORT, &GPIO_InitStructure);
+     73          
+     74          }
+     75          
+     76          static void __STM32_SPI_Configuration( void )
+     77          {
+     78              GPIO_InitTypeDef GPIO_InitStructure;
+     79              //DMA_InitTypeDef DMA_InitStructure;
+     80          
+     81              /* Peripheral Clock Enable -------------------------------------------------*/
+     82              /* Enable the SPI clock */
+     83              SPIx_CLK_INIT(SPIx_CLK, ENABLE);
+     84          
+     85              /* Enable GPIO clocks */
+     86              RCC_AHB1PeriphClockCmd(SPIx_SCK_GPIO_CLK | SPIx_MISO_GPIO_CLK | SPIx_MOSI_GPIO_CLK, ENABLE);
+     87          
+     88              /* Enable DMA clock */
+     89              //RCC_AHB1PeriphClockCmd(SPIx_DMA_CLK, ENABLE);
+     90          
+     91              /* SPI GPIO Configuration --------------------------------------------------*/
+     92              /* GPIO Deinitialisation */
+     93              GPIO_DeInit(SPIx_SCK_GPIO_PORT);
+     94              GPIO_DeInit(SPIx_MISO_GPIO_PORT);
+     95              GPIO_DeInit(SPIx_MOSI_GPIO_PORT);
+     96          
+     97              /* Connect SPI pins to AF5 */  
+     98              GPIO_PinAFConfig(SPIx_SCK_GPIO_PORT, SPIx_SCK_SOURCE, SPIx_SCK_AF);
+     99              GPIO_PinAFConfig(SPIx_MISO_GPIO_PORT, SPIx_MISO_SOURCE, SPIx_MISO_AF);    
+    100              GPIO_PinAFConfig(SPIx_MOSI_GPIO_PORT, SPIx_MOSI_SOURCE, SPIx_MOSI_AF);
+    101          
+    102              GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
+    103              GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    104              GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
+    105              GPIO_InitStructure.GPIO_PuPd  = GPIO_PuPd_DOWN;
+    106          
+    107              /* SPI SCK pin configuration */
+    108              GPIO_InitStructure.GPIO_Pin = SPIx_SCK_PIN;
+    109              GPIO_Init(SPIx_SCK_GPIO_PORT, &GPIO_InitStructure);
+    110          
+    111              /* SPI  MISO pin configuration */
+    112              GPIO_InitStructure.GPIO_Pin =  SPIx_MISO_PIN;
+    113              GPIO_Init(SPIx_MISO_GPIO_PORT, &GPIO_InitStructure);  
+    114          
+    115              /* SPI  MOSI pin configuration */
+    116              GPIO_InitStructure.GPIO_Pin =  SPIx_MOSI_PIN;
+    117              GPIO_Init(SPIx_MOSI_GPIO_PORT, &GPIO_InitStructure);
+    118          
+    119              /*!< Deselect the SPI: Chip Select high */
+    120          	_SPI_CS0_HIGH();
+    121              _SPI_CS1_HIGH();
+    122          
+    123              /* SPI configuration -------------------------------------------------------*/
+    124              SPI_I2S_DeInit(SPIx);
+    125              SPI_InitStructure.SPI_Direction = SPI_Direction_2Lines_FullDuplex;
+    126              SPI_InitStructure.SPI_DataSize = SPI_DataSize_8b;
+    127              SPI_InitStructure.SPI_CPOL = SPI_CPOL_Low;
+    128              SPI_InitStructure.SPI_CPHA = SPI_CPHA_1Edge;
+    129              SPI_InitStructure.SPI_NSS = SPI_NSS_Soft;
+    130              SPI_InitStructure.SPI_BaudRatePrescaler = SPI_BaudRatePrescaler_4;
+    131              SPI_InitStructure.SPI_FirstBit = SPI_FirstBit_MSB;
+    132              //SPI_InitStructure.SPI_CRCPolynomial = 7;
+    133          
+    134              SPI_InitStructure.SPI_Mode = SPI_Mode_Master;
+    135          
+    136          #if 0
+    137              /* DMA configuration -------------------------------------------------------*/
+    138              /* Deinitialize DMA Streams */
+    139              DMA_DeInit(SPIx_TX_DMA_STREAM);
+    140              DMA_DeInit(SPIx_RX_DMA_STREAM);
+    141          
+    142              /* Configure DMA Initialization Structure */
+    143              DMA_InitStructure.DMA_BufferSize = BUFFERSIZE ;
+    144              DMA_InitStructure.DMA_FIFOMode = DMA_FIFOMode_Disable ;
+    145              DMA_InitStructure.DMA_FIFOThreshold = DMA_FIFOThreshold_1QuarterFull ;
+    146              DMA_InitStructure.DMA_MemoryBurst = DMA_MemoryBurst_Single ;
+    147              DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_Byte;
+    148              DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Enable;
+    149              DMA_InitStructure.DMA_Mode = DMA_Mode_Normal;
+    150              DMA_InitStructure.DMA_PeripheralBaseAddr =(uint32_t) (&(SPIx->DR)) ;
+    151              DMA_InitStructure.DMA_PeripheralBurst = DMA_PeripheralBurst_Single;
+    152              DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Byte;
+    153              DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;
+    154              DMA_InitStructure.DMA_Priority = DMA_Priority_High;
+    155              /* Configure TX DMA */
+    156              DMA_InitStructure.DMA_Channel = SPIx_TX_DMA_CHANNEL ;
+    157              DMA_InitStructure.DMA_DIR = DMA_DIR_MemoryToPeripheral ;
+    158              DMA_InitStructure.DMA_Memory0BaseAddr =(uint32_t)aTxBuffer ;
+    159              DMA_Init(SPIx_TX_DMA_STREAM, &DMA_InitStructure);
+    160              /* Configure RX DMA */
+    161              DMA_InitStructure.DMA_Channel = SPIx_RX_DMA_CHANNEL ;
+    162              DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralToMemory ;
+    163              DMA_InitStructure.DMA_Memory0BaseAddr =(uint32_t)aRxBuffer ; 
+    164              DMA_Init(SPIx_RX_DMA_STREAM, &DMA_InitStructure);
+    165          #endif    
+    166          
+    167              SPI_Init(SPIx, &SPI_InitStructure);
+    168          
+    169              /* Enable the SPI peripheral */
+    170              SPI_Cmd(SPIx, ENABLE);
+    171          
+    172          }
+    173          
+    174          #if defined ( FREE_RTOS )
+    175          static bool _SPI_MUTEX_TAKE( void )
+    176          {
+    177          #if 1
+    178          	if ( _SPI_SEMA == NULL )
+    179          		return FALSE;
+    180          
+    181          	if ( xSemaphoreTake( _SPI_SEMA, portMAX_DELAY) != pdTRUE )
+    182          	{
+    183          	    TRACE_DEBUG((0, "DDDDD_SPI TAKE BUSY !! "));
+    184          		return FALSE;
+    185          	}
+    186          
+    187                  //TRACE_DEBUG((0, "DDDDD_SPI TAKE OK !! "));
+    188                  //i_counter++;
+    189          	return TRUE;	
+    190          #else
+    191                  return TRUE;    
+    192          #endif
+    193          }
+    194          #endif 
+    195          
+    196          #if defined ( FREE_RTOS )
+    197          static bool _SPI_MUTEX_GIVE( void )
+    198          {
+    199          #if 1
+    200          	if ( _SPI_SEMA == NULL )
+    201          		return FALSE;
+    202          
+    203          	if ( xSemaphoreGive( _SPI_SEMA ) != pdTRUE )
+    204          	{
+    205          	    TRACE_DEBUG((0, "DDDDD_SPI GIVE BUSY !! "));
+    206          		return FALSE;	
+    207          	}
+    208          
+    209                  //TRACE_DEBUG((0, "DDDDD_SPI GIVE OK !! "));
+    210                  //i_counter--;
+    211          	return TRUE;
+    212          #endif    
+    213          }
+    214          #endif 
+    215          
+    216          #if defined ( FREE_RTOS )
+    217          static bool _SPI_MUTEX_CREATE( void )
+    218          {
+    219              if ( _SPI_SEMA == NULL )
+    220              {
+    221                  _SPI_SEMA = xSemaphoreCreateMutex();
+    222              }
+    223          
+    224              if (_SPI_SEMA == NULL)
+    225                  return FALSE;
+    226          
+    227              return TRUE;
+    228          }
+    229          #endif 
+    230          
+    231          
+    232          #if defined ( FREE_RTOS )
+    233          static void _SPI_MUTEX_RELEASE( void )
+    234          {
+    235              if ( _SPI_SEMA )
+    236              {
+    237                  vSemaphoreDelete(_SPI_SEMA);
+    238                  _SPI_SEMA = NULL;
+    239              }
+    240          }
+    241          #endif 
+    242          
+    243          
+    244          /*_____________________________________________________________________________________________*/
+    245          void SPILowLevel_initialize( void )
+    246          {
+    247          	__STM32_SPI_Configuration( );
+    248          
+    249          #if defined ( FREE_RTOS )	
+    250          	_SPI_MUTEX_CREATE();
+    251          #endif 
+    252                  
+    253          	bIsSPI_enable = TRUE;
+    254          }
+    255          
+    256          void SPILowLevel_Deinitialize( void )
+    257          {
+    258          	__STM32_SPI_DeConfiguration( );
+    259          
+    260          #if defined ( FREE_RTOS )	
+    261          	_SPI_MUTEX_RELEASE();
+    262          #endif 
+    263          
+    264          	bIsSPI_enable = FALSE;
+    265          }
+    266          
+    267          bool SPILowLevel_isEnable( void )
+    268          {
+    269          	return bIsSPI_enable;
+    270          }
+    271          
+    272          void SPILowLevel_release_SPI(void)
+    273          {
+    274          	SPILowLevel_Deinitialize();
+    275          	SPI_GPIOLowLevel_DeConfiguration();
+    276          	TRACE_DEBUG((0, "SPI release  !!"));
+    277          }
+    278          
+    279          bool SPI_write( byte data ) 
+    280          {
+    281          	bool ret = TRUE;
+    282          
+    283          	if ( bIsSPI_enable != TRUE )
+    284          	{
+    285          		return FALSE;
+    286          	}
+    287          
+    288          	//! Read data for slave address, this MISO byte is unavailable; Smith@{
+    289          	/*!< Loop while DR register in not emplty */
+    290          	while (SPI_I2S_GetFlagStatus(_SPI, SPI_I2S_FLAG_TXE) == RESET);
+    291          
+    292          	/*!< Send byte through the SPI1 peripheral */
+    293          	SPI_I2S_SendData(_SPI, data);
+    294          
+    295          	return ret;
+    296          	
+    297          }
+    298          
+    299          bool SPI_read( byte *data ) 
+    300          {
+    301          	bool ret = TRUE;
+    302          	byte *ptr;
+    303          	uint8_t rxBuff;
+    304          
+    305          	if ( bIsSPI_enable != TRUE )
+    306          	{
+    307          		return FALSE;
+    308          	}
+    309          	
+    310          	ptr = data;
+    311          
+    312          	/*!< Loop while DR register in not emplty */
+    313          	while (SPI_I2S_GetFlagStatus(_SPI, SPI_I2S_FLAG_TXE) == RESET);
+    314          
+    315          	/*!< Send byte through the SPI1 peripheral */
+    316          	SPI_I2S_SendData(_SPI, 0xFF);	/*Write SPI dummy byte*/
+    317          
+    318          	/*!< Wait to receive a byte */
+    319          	while (SPI_I2S_GetFlagStatus(_SPI, SPI_I2S_FLAG_RXNE) == RESET);
+    320          
+    321          	rxBuff = (uint8_t)(SPI_I2S_ReceiveData( _SPI )& 0x00FF );
+    322          	
+    323          
+    324          	*ptr = rxBuff;
+    325          
+    326          	return ret;
+    327          }
+    328          
+    329          bool SPI_selectChip( unsigned char chip )
+    330          {
+    331              bool ret_val = FALSE;
+    332          	if ( chip == 0)
+    333          	{
+    334          		_SPI_CS0_LOW();
+    335                  _SPI_CS1_HIGH();
+    336                      ret_val = TRUE;
+    337          	}
+    338              else if ( chip == 1 )
+    339              {
+    340                  _SPI_CS1_LOW();
+    341                  _SPI_CS0_HIGH();
+    342                      ret_val = TRUE;
+    343              }
+    344              else
+    345              {
+    346                      ret_val = FALSE;
+    347              }
+    348          	
+    349              return ret_val;
+    350          }
+    351          
+    352          bool SPI_unselectChip( unsigned char chip )
+    353          {
+    354              bool ret_val = FALSE;
+    355          
+    356          	if ( chip == 0)
+    357          	{
+    358          		_SPI_CS0_HIGH();
+    359                  ret_val = TRUE;
+    360          	}
+    361              else if ( chip == 1 )
+    362              {
+    363                  _SPI_CS1_HIGH();
+    364                  ret_val = TRUE;
+    365              }
+    366              else
+    367              {
+    368                  ret_val = FALSE;
+    369              }
+    370          
+    371              return ret_val;
+    372          }
+    373          
+    374          #if defined ( FREE_RTOS )
+    375          bool SPI_mutex_lock( )
+    376          {
+    377              bool ret_val = FALSE;
+    378              
+    379              //TRACE_ERROR((0, "SPI enter --------------- "));
+    380              if ( _SPI_MUTEX_TAKE() == TRUE)
+    381              {
+    382                  ret_val = TRUE;
+    383                  return ret_val;
+    384              }
+    385          
+    386              return ret_val;
+    387          }
+    388          #endif 
+    389          
+    390          #if defined ( FREE_RTOS )
+    391          bool SPI_mutex_unlock( )
+    392          {
+    393              bool ret_val = FALSE;
+    394          
+    395              //TRACE_ERROR((0, "SPI_unselectChip loop --------------- "));
+    396              if ( _SPI_MUTEX_GIVE() == TRUE)
+    397              {
+    398                  ret_val = TRUE;
+    399              }
+    400              else
+    401              {
+    402                  ret_val = FALSE;
+    403              }
+    404          
+    405              //TRACE_ERROR((0, "SPI outer --------------- %d",i_counter));
+    406              return ret_val;
+    407          }
+    408          #endif 
+    409          
+    410          int16 SPI_writeBuffer(const byte *data, uint16 length, bool LittelEndian)
+    411          {
+    412              int16 ret = SPI_RET_ERROR_LEN;
+    413              const byte *ptr;
+    414              
+    415          	if(LittelEndian)
+    416          		ptr = data + length - 1;
+    417          	else
+    418          		ptr = data;
+    419              
+    420          	ret = 0;
+    421          
+    422          	while(length > 0)
+    423          	{  
+    424          		if(SPI_write(*ptr) == TRUE)
+    425          		{
+    426          			ret++;
+    427          		}
+    428          		else
+    429          		{	
+    430          			return ret;
+    431          		}
+    432          
+    433          		if(LittelEndian)
+    434          			ptr--;
+    435          		else
+    436          			ptr++;
+    437                  
+    438          		length--;
+    439          	}	
+    440          	return ret; 
+    441          }
+    442          
+    443          int16 SPI_readBuffer(byte *data, uint16 length, bool LittelEndian)
+    444          {
+    445          	int16 ret = SPI_RET_ERROR_LEN;
+    446          	byte rxBuff;
+    447          	byte *ptr;
+    448              
+    449              
+    450          	if(LittelEndian)
+    451          		ptr = data + length - 1;
+    452          	else
+    453          		ptr = data;
+    454              
+    455          	ret = 0;
+    456          
+    457          	while(length > 0)
+    458          	{
+    459          		if(SPI_read(&rxBuff) == TRUE)
+    460          		{
+    461          			*ptr = rxBuff;
+    462          			ret++;
+    463          		}
+    464          		else
+    465          		{
+    466          			//ASSERT_BOOL(TRUE);
+    467          			return ret;
+    468          		}
+    469                  
+    470          		if(LittelEndian)
+    471          			ptr--;
+    472          		else
+    473          			ptr++;
+    474                  
+    475          		length--;
+    476          	}
+    477          
+    478          	return ret;
+    479          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       16  SPILowLevel_Deinitialize
+             16 -> GPIO_Init
+             16 -> SPI_Cmd
+             16 -> vQueueDelete
+        8  SPILowLevel_initialize
+              8 -> __STM32_SPI_Configuration
+              8 -> xQueueCreateMutex
+        0  SPILowLevel_isEnable
+        8  SPILowLevel_release_SPI
+              0 -> Debug_printDebug
+              8 -> SPILowLevel_Deinitialize
+              8 -> SPI_GPIOLowLevel_DeConfiguration
+        8  SPI_mutex_lock
+              8 -> Debug_printDebug
+              8 -> xQueueGenericReceive
+        8  SPI_mutex_unlock
+              8 -> Debug_printDebug
+              8 -> xQueueGenericSend
+       16  SPI_read
+             16 -> SPI_I2S_GetFlagStatus
+             16 -> SPI_I2S_ReceiveData
+             16 -> SPI_I2S_SendData
+       24  SPI_readBuffer
+             24 -> SPI_read
+        8  SPI_selectChip
+              8 -> GPIOMiddleLevel_Clr
+              8 -> GPIOMiddleLevel_Set
+        8  SPI_unselectChip
+              8 -> GPIOMiddleLevel_Set
+       16  SPI_write
+             16 -> SPI_I2S_GetFlagStatus
+             16 -> SPI_I2S_SendData
+       24  SPI_writeBuffer
+             24 -> SPI_write
+       16  __STM32_SPI_Configuration
+             16 -> GPIOMiddleLevel_Set
+             16 -> GPIO_DeInit
+             16 -> GPIO_Init
+             16 -> GPIO_PinAFConfig
+             16 -> RCC_AHB1PeriphClockCmd
+             16 -> RCC_APB2PeriphClockCmd
+             16 -> SPI_Cmd
+             16 -> SPI_I2S_DeInit
+             16 -> SPI_Init
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      24  ?<Constant "DDDDD_SPI GIVE BUSY !! ">
+      24  ?<Constant "DDDDD_SPI TAKE BUSY !! ">
+      16  ?<Constant "SPI release  !!">
+       4  ??DataTable11
+       4  ??DataTable11_1
+       4  ??DataTable11_2
+       4  ??DataTable11_3
+      12  ?Subroutine0
+      10  ?Subroutine1
+      60  SPILowLevel_Deinitialize
+      26  SPILowLevel_initialize
+       6  SPILowLevel_isEnable
+      24  SPILowLevel_release_SPI
+      20  SPI_InitStructure
+      38  SPI_mutex_lock
+      38  SPI_mutex_unlock
+      56  SPI_read
+      56  SPI_readBuffer
+      38  SPI_selectChip
+      26  SPI_unselectChip
+      36  SPI_write
+      50  SPI_writeBuffer
+     174  __STM32_SPI_Configuration
+       8  bIsSPI_enable
+          _SPI_SEMA
+
+ 
+  28 bytes in section .bss
+ 730 bytes in section .text
+ 
+ 730 bytes of CODE memory
+  28 bytes of DATA memory
+
+Errors: none
+Warnings: none

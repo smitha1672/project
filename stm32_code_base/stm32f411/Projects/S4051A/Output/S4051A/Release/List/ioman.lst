@@ -1,0 +1,847 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     10/Nov/2014  12:51:59 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Utilities\Third_Party\efsl\src\ioman.c                #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Utilities\Third_Party\efsl\src\ioman.c -D             #
+#                    __ARM_CORTEX_MX__ -D DEBUG -D FREE_RTOS -D               #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D HOST_MODE_ENABLED -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -D STM32_IAP -D S4051A    #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Release\L #
+#                    ist\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Releas #
+#                    e\Obj\ --debug --endian=little --cpu=Cortex-M4 -e        #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Projects\STM32_IAP\inc #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\I #
+#                    nclude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\C #
+#                    MSIS\Device\ST\STM32F4xx\Include\ -I                     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_HO #
+#                    ST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\HT68F30\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Utilities\Third_Party\efsl\inc\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    fat_fs\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Project #
+#                    s\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utiliti #
+#                    es\mainstream_v1\stm32f411\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\it\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\APP_SRC\I #
+#                    nclude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\APP_SRC\ -Ohz -I  #
+#                    "C:\Program Files (x86)\IAR Systems\Embedded Workbench   #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Release\List\i #
+#                    oman.lst                                                 #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Release\Obj\io #
+#                    man.o                                                    #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Utilities\Third_Party\efsl\src\ioman.c
+      1          /*****************************************************************************/
+      2          /*                     libfat - General purpose FAT library                    *
+      3          *                      ----------------------------------                     *
+      4          *                                                                             *
+      5          * Filename : ioman.c                                                          *
+      6          * Description : The IO Manager receives all requests for sectors in a central *
+      7          *               allowing it to make smart decision regarding caching.         *
+      8          *               The IOMAN_NUMBUFFER parameter determines how many sectors     *
+      9          *               ioman can cache. ioman also supports overallocating and       *
+     10          *               backtracking sectors.                                         *
+     11          *                                                                             *
+     12          * This program is free software; you can redistribute it and/or               *
+     13          * modify it under the terms of the GNU General Public License                 *
+     14          * as published by the Free Software Foundation; version 2                     *
+     15          * of the License.                                                             *
+     16                                                                                        *
+     17          * This program is distributed in the hope that it will be useful,             *
+     18          * but WITHOUT ANY WARRANTY; without even the implied warranty of              *
+     19          * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the               *
+     20          * GNU General Public License for more details.                                *
+     21          *                                                                             *
+     22          * As a special exception, if other files instantiate templates or             *
+     23          * use macros or inline functions from this file, or you compile this          *
+     24          * file and link it with other works to produce a work based on this file,     *
+     25          * this file does not by itself cause the resulting work to be covered         *
+     26          * by the GNU General Public License. However the source code for this         *
+     27          * file must still be made available in accordance with section (3) of         *
+     28          * the GNU General Public License.                                             *
+     29          *                                                                             *
+     30          * This exception does not invalidate any other reasons why a work based       *
+     31          * on this file might be covered by the GNU General Public License.            *
+     32          *                                                                             *
+     33          *                                                    (c)2006 Lennart Yseboodt *
+     34          *                                                    (c)2006 Michael De Nil   */
+     35          /*****************************************************************************/
+     36          
+     37          /*****************************************************************************/
+     38          
+     39          #include "ioman.h"
+     40          /*****************************************************************************/
+     41          
+     42          esint8 ioman_init(IOManager *ioman, hwInterface *iface, euint8* bufferarea)
+     43          {
+     44          	ioman->iface=iface;
+     45          	
+     46          	ioman->bufptr = ioman_getBuffer(ioman,bufferarea);
+     47          	ioman->numbuf = IOMAN_NUMBUFFER;
+     48          	ioman->numit  = IOMAN_NUMITERATIONS;
+     49          	
+     50          	ioman_reset(ioman);
+     51          	return(0);
+     52          }
+     53          /*****************************************************************************/
+     54          
+     55          void ioman_reset(IOManager *ioman)
+     56          {
+     57          	euint16 nb,ni;
+     58          	
+     59          	memClr(ioman->sector,sizeof(euint32)*ioman->numbuf);
+     60          	memClr(ioman->status,sizeof(euint8) *ioman->numbuf);
+     61          	memClr(ioman->usage ,sizeof(euint8) *ioman->numbuf);
+     62          	memClr(ioman->itptr ,sizeof(euint8) *ioman->numbuf);
+     63          	ioman_setError(ioman,IOMAN_NOERROR);
+     64          		
+     65          	for(nb=0;nb<ioman->numbuf;nb++){
+     66          		for(ni=0;ni<ioman->numit;ni++){
+     67          			ioman->stack[nb][ni].sector=0;
+     68          			ioman->stack[nb][ni].status=0;
+     69          			ioman->stack[nb][ni].usage =0;
+     70          		}
+     71          	}
+     72          }
+     73          /*****************************************************************************/
+     74          
+     75          euint8* ioman_getBuffer(IOManager *ioman,euint8* bufferarea)
+     76          {
+     77          #ifdef IOMAN_DO_MEMALLOC
+     78          	return(ioman->cache_mem);
+     79          #else
+     80          	return(bufferarea);
+     81          #endif
+     82          }
+     83          /*****************************************************************************/
+     84          
+     85          void ioman_setAttr(IOManager *ioman,euint16 bufplace,euint8 attribute,euint8 val)
+     86          {
+     87          	if(bufplace>=ioman->numbuf){
+     88          		ioman_setError(ioman,IOMAN_ERR_SETATTROUTOFBOUNDS);
+     89          		return; /* Out of bounds */
+     90          	}
+     91          	
+     92          	if(val){
+     93          		ioman->status[bufplace]|=1<<attribute;
+     94          	}else{
+     95          		ioman->status[bufplace]&=~(1<<attribute);
+     96          	}
+     97          }
+     98          /*****************************************************************************/
+     99          
+    100          euint8 ioman_getAttr(IOManager *ioman,euint16 bufplace,euint8 attribute)
+    101          {
+    102          	if(bufplace>=ioman->numbuf){
+    103          		ioman_setError(ioman,IOMAN_ERR_GETATTROUTOFBOUNDS);
+    104          		return(0xFF); /* Out of bounds */
+    105          	}
+    106          
+    107          	return(ioman->status[bufplace]&(1<<attribute));
+    108          }
+    109          /*****************************************************************************/
+    110          
+    111          euint8 ioman_getUseCnt(IOManager *ioman,euint16 bufplace)
+    112          {
+    113          	if(bufplace>=ioman->numbuf){
+    114          		ioman_setError(ioman,IOMAN_ERR_OPOUTOFBOUNDS);
+    115          		return(0x00);
+    116          	}
+    117          	return(ioman->usage[bufplace]);
+    118          }
+    119          /*****************************************************************************/
+    120          
+    121          
+    122          void ioman_incUseCnt(IOManager *ioman,euint16 bufplace)
+    123          {
+    124          	if(bufplace>=ioman->numbuf){
+    125          		ioman_setError(ioman,IOMAN_ERR_OPOUTOFBOUNDS);
+    126          		return;
+    127          	}
+    128          	if(ioman->usage[bufplace]==0xFF)return;
+    129          	else ioman->usage[bufplace]++;
+    130          }
+    131          /*****************************************************************************/
+    132          
+    133          void ioman_decUseCnt(IOManager *ioman,euint16 bufplace)
+    134          {
+    135          	if(bufplace>=ioman->numbuf){
+    136          		ioman_setError(ioman,IOMAN_ERR_OPOUTOFBOUNDS);
+    137          		return;
+    138          	}
+    139          	if(ioman->usage[bufplace]==0x0)return;
+    140          	else ioman->usage[bufplace]--;
+    141          }
+    142          /*****************************************************************************/
+    143          
+    144          void ioman_resetUseCnt(IOManager *ioman,euint16 bufplace)
+    145          {
+    146          	if(bufplace>=ioman->numbuf){
+    147          		ioman_setError(ioman,IOMAN_ERR_OPOUTOFBOUNDS);
+    148          		return;
+    149          	}
+    150          	ioman->usage[bufplace]=0x00;
+    151          }
+    152          /*****************************************************************************/
+    153          
+    154          euint8 ioman_getRefCnt(IOManager *ioman,euint16 bufplace)
+    155          {
+    156          	if(bufplace>=ioman->numbuf){
+    157          		ioman_setError(ioman,IOMAN_ERR_OPOUTOFBOUNDS);
+    158          		return(0x00);
+    159          	}
+    160          	return(ioman->reference[bufplace]);
+    161          }
+    162          /*****************************************************************************/
+    163          
+    164          void ioman_incRefCnt(IOManager *ioman,euint16 bufplace)
+    165          {
+    166          	if(bufplace>=ioman->numbuf){
+    167          		ioman_setError(ioman,IOMAN_ERR_OPOUTOFBOUNDS);
+    168          		return;
+    169          	}
+    170          	if(ioman->reference[bufplace]==0xFF)return;
+    171          	else ioman->reference[bufplace]++;
+    172          }
+    173          /*****************************************************************************/
+    174          
+    175          void ioman_decRefCnt(IOManager *ioman,euint16 bufplace)
+    176          {
+    177          	if(bufplace>=ioman->numbuf){
+    178          		ioman_setError(ioman,IOMAN_ERR_OPOUTOFBOUNDS);
+    179          		return;
+    180          	}
+    181          	if(ioman->reference[bufplace]==0x00)return;
+    182          	else ioman->reference[bufplace]--;
+    183          }
+    184          /*****************************************************************************/
+    185          
+    186          void ioman_resetRefCnt(IOManager *ioman,euint16 bufplace)
+    187          {
+    188          	if(bufplace>=ioman->numbuf){
+    189          		ioman_setError(ioman,IOMAN_ERR_OPOUTOFBOUNDS);
+    190          		return;
+    191          	}
+    192          	ioman->reference[bufplace]=0x00;
+    193          }
+    194          /*****************************************************************************/
+    195          
+    196          esint8 ioman_pop(IOManager *ioman,euint16 bufplace)
+    197          {
+    198          	if(bufplace>=ioman->numbuf){
+    199          		ioman_setError(ioman,IOMAN_ERR_POPEMPTYSTACK);
+    200          		return(-1);
+    201          	}
+    202          	if(ioman->itptr[bufplace]==0 || ioman->itptr[bufplace]>IOMAN_NUMITERATIONS)return(-1);
+    203          	ioman->sector[bufplace] = ioman->stack[bufplace][ioman->itptr[bufplace]].sector;
+    204          	ioman->status[bufplace] = ioman->stack[bufplace][ioman->itptr[bufplace]].status;
+    205          	ioman->usage[bufplace]  = ioman->stack[bufplace][ioman->itptr[bufplace]].usage; 
+    206          	ioman->itptr[bufplace]--;
+    207          	return(0);
+    208          }
+    209          /*****************************************************************************/
+    210          
+    211          esint8 ioman_push(IOManager *ioman,euint16 bufplace)
+    212          {
+    213          	if(bufplace>=ioman->numbuf){
+    214          		ioman_setError(ioman,IOMAN_ERR_OPOUTOFBOUNDS);
+    215          		return(-1);
+    216          	}
+    217          	if(ioman->itptr[bufplace]>=IOMAN_NUMITERATIONS){
+    218          		ioman_setError(ioman,IOMAN_ERR_PUSHBEYONDSTACK);	
+    219          		return(-1);
+    220          	}
+    221          	ioman->itptr[bufplace]++;
+    222          	ioman->stack[bufplace][ioman->itptr[bufplace]].sector = ioman->sector[bufplace];
+    223          	ioman->stack[bufplace][ioman->itptr[bufplace]].status = ioman->status[bufplace];
+    224          	ioman->stack[bufplace][ioman->itptr[bufplace]].usage  = ioman->usage[bufplace];
+    225          	return(0);
+    226          }
+    227          /*****************************************************************************/
+    228          
+    229          euint8* ioman_getPtr(IOManager *ioman,euint16 bufplace)
+    230          {
+    231          	if(bufplace>=ioman->numbuf){
+    232          		ioman_setError(ioman,IOMAN_ERR_OPOUTOFBOUNDS);
+    233          		return(0);
+    234          	}
+    235          	return(ioman->bufptr+bufplace*512);
+    236          }
+    237          /*****************************************************************************/
+    238          
+    239          esint16 ioman_getBp(IOManager *ioman,euint8* buf)
+    240          {
+    241          	if(buf<(ioman->bufptr) || buf>=( ioman->bufptr+(ioman->numbuf*512) )){
+    242          		ioman_setError(ioman,IOMAN_ERR_CACHEPTROUTOFRANGE);
+    243          		return(-1);
+    244          	}
+    245          	return((buf-(ioman->bufptr))/512);
+    246          }
+    247          /*****************************************************************************/
+    248          
+    249          esint8 ioman_readSector(IOManager *ioman,euint32 address,euint8* buf)
+    250          {
+    251          	esint8 r;
+    252          
+    253          	if(buf==0){
+    254          		return(-1);
+    255          	}
+    256          	
+    257          	r=if_readBuf(ioman->iface,address,buf);
+    258          	
+    259          	if(r!=0){
+    260          		ioman_setError(ioman,IOMAN_ERR_READFAIL);
+    261          		return(-1);
+    262          	}
+    263          	return(0);
+    264          }
+    265          /*****************************************************************************/
+    266          
+    267          esint8 ioman_writeSector(IOManager *ioman, euint32 address, euint8* buf)
+    268          {
+    269          	esint8 r;
+    270          
+    271          	if(buf==0)return(-1);
+    272          	
+    273          	r=if_writeBuf(ioman->iface,address,buf);
+    274          
+    275          	if(r<=0){
+    276          		ioman_setError(ioman,IOMAN_ERR_WRITEFAIL);
+    277          		return(-1);
+    278          	}
+    279          	return(0);
+    280          }
+    281          /*****************************************************************************/
+    282          
+    283          void ioman_resetCacheItem(IOManager *ioman,euint16 bufplace)
+    284          {
+    285          	if(bufplace>=ioman->numbuf){
+    286          		ioman_setError(ioman,IOMAN_ERR_OPOUTOFBOUNDS);
+    287          		return;
+    288          	}
+    289          	ioman->sector[bufplace]    = 0;
+    290          	ioman->status[bufplace]    = 0;
+    291          	ioman->usage[bufplace]     = 0;
+    292          	ioman->reference[bufplace] = 0;
+    293          }
+    294          /*****************************************************************************/
+    295          
+    296          esint32 ioman_findSectorInCache(IOManager *ioman, euint32 address)
+    297          {
+    298          	euint16 c;
+    299          	
+    300          	for(c=0;c<ioman->numbuf;c++){
+    301          		if(ioman_isValid(c) && ioman->sector[c] == address)return(c);
+    302          	}
+    303          	return(-1);
+    304          }
+    305          /*****************************************************************************/
+    306          
+    307          esint32 ioman_findFreeSpot(IOManager *ioman)
+    308          {
+    309          	euint16 c;
+    310          	
+    311          	for(c=0;c<ioman->numbuf;c++){
+    312          		if(!ioman_isValid(c))return(c);
+    313          	}
+    314          	return(-1);
+    315          }
+    316          /*****************************************************************************/
+    317          
+    318          esint32 ioman_findUnusedSpot(IOManager *ioman)
+    319          {
+    320          	esint32 r=-1;
+    321          	euint16 c;
+    322          	euint8 fr=0,lr=0xFF;
+    323          	
+    324          	for(c=0;c<ioman->numbuf;c++){
+    325          		if(ioman_getUseCnt(ioman,c)==0){
+    326          			if(!ioman_isWritable(c) && !fr){
+    327          				fr=1;
+    328          				lr=0xFF;
+    329          				r=-1;
+    330          			}
+    331          			if(ioman_isWritable(c) && !fr){
+    332          				if(ioman_getRefCnt(ioman,c)<=lr){
+    333          					r=c;
+    334          					lr=ioman_getRefCnt(ioman,c);
+    335          				}
+    336          			}
+    337          			if(fr && !ioman_isWritable(c)){
+    338          				if(ioman_getRefCnt(ioman,c)<=lr){
+    339          					r=c;
+    340          					lr=ioman_getRefCnt(ioman,c);
+    341          				}
+    342          			}
+    343          		}
+    344          	}
+    345          	return(r);
+    346          }
+    347          /*****************************************************************************/
+    348          
+    349          esint32 ioman_findOverallocableSpot(IOManager *ioman)
+    350          {
+    351          	euint8 points,lp=0xFF;
+    352          	euint16 c;
+    353          	esint32 r=-1;
+    354          	
+    355          	for(c=0;c<ioman->numbuf;c++){
+    356          		if(ioman->itptr[c]<ioman->numit){
+    357          			points = 0;
+    358          			if(ioman_isWritable(c))points+=0x7F;
+    359          			points += ((euint16)(ioman->itptr[c]*0x4D))/(ioman->numit);
+    360          			points += ((euint16)(ioman_getRefCnt(ioman,c)*0x33))/0xFF;
+    361          			if(points<lp){
+    362          				lp=points;
+    363          				r=c;
+    364          			}
+    365          		}
+    366          	}
+    367          	return(r);
+    368          }
+    369          /*****************************************************************************/
+    370          
+    371          esint8 ioman_putSectorInCache(IOManager *ioman, euint32 address, euint16 bufplace)
+    372          {
+    373          	euint8* buf;
+    374          	
+    375          	if((buf = ioman_getPtr(ioman,bufplace))==0){
+    376          		ioman_setError(ioman,IOMAN_ERR_CACHEPTROUTOFRANGE);
+    377          		return(-1);
+    378          	}
+    379          	if((ioman_readSector(ioman,address,buf))){
+    380          		ioman_setError(ioman,IOMAN_ERR_READFAIL);
+    381          		return(-1);
+    382          	}
+    383          	ioman_setValid(bufplace);
+    384          	ioman->sector[bufplace]=address;
+    385          	return(0);
+    386          }
+    387          /*****************	if(bufplace>=ioman->numbuf)return;
+    388          ************************************************************/
+    389          
+    390          esint8 ioman_flushSector(IOManager *ioman, euint16 bufplace)
+    391          {
+    392          	euint8* buf;
+    393          	
+    394          	if((buf = ioman_getPtr(ioman,bufplace))==0){
+    395          		ioman_setError(ioman,IOMAN_ERR_CACHEPTROUTOFRANGE);
+    396          		return(-1);
+    397          	}
+    398          	if(!ioman_isWritable(bufplace)){
+    399          		ioman_setError(ioman,IOMAN_ERR_WRITEREADONLYSECTOR);
+    400          		return(-1);
+    401          	}
+    402          	if(!(ioman_writeSector(ioman,ioman->sector[bufplace],buf))){
+    403          		ioman_setError(ioman,IOMAN_ERR_WRITEFAIL);	
+    404          		return(-1);
+    405          	}
+    406          	if(ioman->usage==0)ioman_setNotWritable(bufplace);
+    407          	return(0);
+    408          }
+    409          /*****************************************************************************/
+    410          
+    411          esint8 ioman_flushRange(IOManager *ioman,euint32 address_low, euint32 address_high)
+    412          {
+    413          	euint32 c;
+    414          	
+    415          	if(address_low>address_high){
+    416          		c=address_low; address_low=address_high;address_high=c;
+    417          	}
+    418          	
+    419          	for(c=0;c<ioman->numbuf;c++){
+    420          		if((ioman->sector[c]>=address_low) && (ioman->sector[c]<=address_high) && (ioman_isWritable(c))){
+    421          			if(ioman_flushSector(ioman,c)){
+    422          				return(-1);
+    423          			}
+    424          			if(ioman->usage[c]==0)ioman_setNotWritable(c);
+    425          		}
+    426          	}
+    427          	return(0);
+    428          }
+    429          /*****************************************************************************/
+    430          
+    431          esint8 ioman_flushAll(IOManager *ioman)
+    432          {
+    433          	euint16 c;
+    434          	
+    435          	for(c=0;c<ioman->numbuf;c++){
+    436          		if(ioman_isWritable(c)){
+    437          			if(ioman_flushSector(ioman,c)){
+    438          				return(-1);
+    439          			}
+    440          			if(ioman->usage[c]==0)ioman_setNotWritable(c);
+    441          		}
+    442          	}
+    443          	return(0);
+    444          }
+    445          /*****************************************************************************/
+    446          
+    447          euint8* ioman_getSector(IOManager *ioman,euint32 address, euint8 mode)
+    448          {
+    449          	esint32 bp;
+    450          	
+    451          	if((bp=ioman_findSectorInCache(ioman,address))!=-1){
+    452          		if(ioman_isReqRw(mode)){
+    453          			ioman_setWritable(bp);
+    454          		}
+    455          		ioman_incUseCnt(ioman,bp);
+    456          		if(!ioman_isReqExp(mode))ioman_incRefCnt(ioman,bp);
+    457          		return(ioman_getPtr(ioman,bp));
+    458          	}
+    459          	
+    460          	if((bp=ioman_findFreeSpot(ioman))==-1){
+    461          		if(((bp=ioman_findUnusedSpot(ioman))!=-1)&&(ioman_isWritable(bp))){
+    462          			ioman_flushSector(ioman,bp);
+    463          		}
+    464          	}
+    465          	
+    466          	if(bp!=-1){
+    467          		ioman_resetCacheItem(ioman,bp);
+    468          		if((ioman_putSectorInCache(ioman,address,bp))){
+    469          			return(0);
+    470          		}
+    471          		if(mode==IOM_MODE_READWRITE){
+    472          			ioman_setWritable(bp);
+    473          		}
+    474          		ioman_incUseCnt(ioman,bp);
+    475          		if(!ioman_isReqExp(mode))ioman_incRefCnt(ioman,bp);
+    476          		return(ioman_getPtr(ioman,bp));
+    477          	}
+    478          	
+    479          	if((bp=ioman_findOverallocableSpot(ioman))!=-1){
+    480          		if(ioman_isWritable(bp)){
+    481          			ioman_flushSector(ioman,bp);
+    482          		}
+    483          		if(ioman_push(ioman,bp)){
+    484          			return(0);
+    485          		}
+    486          		ioman_resetCacheItem(ioman,bp);
+    487          		if((ioman_putSectorInCache(ioman,address,bp))){
+    488          			return(0);
+    489          		}
+    490          		if(ioman_isReqRw(mode)){
+    491          			ioman_setWritable(bp);
+    492          		}
+    493          		ioman_incUseCnt(ioman,bp);
+    494          		if(!ioman_isReqExp(mode))ioman_incRefCnt(ioman,bp);
+    495          		return(ioman_getPtr(ioman,bp));
+    496          	}
+    497          	ioman_setError(ioman,IOMAN_ERR_NOMEMORY);
+    498          	return(0);
+    499          }
+    500          /*****************************************************************************/
+    501          esint8 ioman_releaseSector(IOManager *ioman,euint8* buf)
+    502          {
+    503          	euint16 bp;
+    504          	
+    505          	bp=ioman_getBp(ioman,buf);
+    506          
+    507                  /* Attention : Attention : Attention : Attention : Attention : */        
+    508                  if(bp == 0xffff)
+    509                  { /* Error Condition Check for the Disconnection event.
+    510                       Pls note that ioman_getBp function puts (-1) in the variable for 
+    511                       the Error case, this is not handled properly causing the HardFaut 
+    512                       in the micro-controller. 
+    513                    We shall return some other value as returning 0 is for GOOD !!!
+    514                    But the upper layers will handle the Disconnection Event
+    515                    */
+    516                    
+    517                    return 0;
+    518                  }
+    519               /* Error Case handling ends, Need to be updated by EFSL discussion forum */
+    520          
+    521          	ioman_decUseCnt(ioman,bp);
+    522          	
+    523                 
+    524          	if(ioman_getUseCnt(ioman,bp)==0 && ioman->itptr[bp]!=0){
+    525          		if(ioman_isWritable(bp)){
+    526          			ioman_flushSector(ioman,bp);
+    527          		}
+    528          		ioman_pop(ioman,bp);
+    529          		ioman_putSectorInCache(ioman,ioman->sector[bp],bp);
+    530          	}
+    531          	return(0);
+    532          }
+    533          /*****************************************************************************/
+    534          
+    535          esint8 ioman_directSectorRead(IOManager *ioman,euint32 address, euint8* buf)
+    536          {
+    537          	euint8* ibuf;
+    538          	esint16 bp;
+    539          	
+    540          	if((bp=ioman_findSectorInCache(ioman,address))!=-1){
+    541          		ibuf=ioman_getPtr(ioman,bp);
+    542          		memCpy(ibuf,buf,512);
+    543          		return(0);
+    544          	}
+    545          	
+    546          	if((bp=ioman_findFreeSpot(ioman))!=-1){
+    547          		if((ioman_putSectorInCache(ioman,address,bp))){
+    548          			return(-1);
+    549          		}
+    550          		ibuf=ioman_getPtr(ioman,bp);
+    551          		memCpy(ibuf,buf,512);
+    552          		return(0);
+    553          	}
+    554          
+    555          	if(ioman_readSector(ioman,address,buf)){
+    556          		return(-1);
+    557          	}
+    558          
+    559          	return(0);
+    560          }
+    561          /*****************************************************************************/
+    562          
+    563          esint8 ioman_directSectorWrite(IOManager *ioman,euint32 address, euint8* buf)
+    564          {
+    565          	euint8* ibuf;
+    566          	esint16 bp;
+    567          	
+    568          	if((bp=ioman_findSectorInCache(ioman,address))!=-1){
+    569          		ibuf=ioman_getPtr(ioman,bp);
+    570          		memCpy(buf,ibuf,512);
+    571          		ioman_setWritable(bp);
+    572          		return(0);
+    573          	}
+    574          	
+    575          	if((bp=ioman_findFreeSpot(ioman))!=-1){
+    576          		ibuf=ioman_getPtr(ioman,bp);
+    577          		memCpy(buf,ibuf,512);
+    578          		ioman_resetCacheItem(ioman,bp);
+    579          		ioman->sector[bp]=address;
+    580          		ioman_setWritable(bp);
+    581          		ioman_setValid(bp);
+    582          		return(0);
+    583          	}
+    584          
+    585          	if(ioman_writeSector(ioman,address,buf)){
+    586          		return(-1);
+    587          	}
+    588          
+    589          	return(0);
+    590          }
+    591          /*****************************************************************************/
+    592          
+    593          void ioman_printStatus(IOManager *ioman)
+    594          {
+    595          	euint16 c;
+    596          	
+    597          	//DBG((TXT("IO-Manager -- Report\n====================\n")));
+    598          	//DBG((TXT("Buffer is %i sectors, from %p to %p\n"),
+    599          	          //ioman->numbuf,ioman->bufptr,ioman->bufptr+(ioman->numbuf*512)));
+    600          	for(c=0;c<ioman->numbuf;c++){
+    601          		if(ioman_isValid(c)){
+    602          			//DBG((TXT("BP %3i\t SC %8li\t\t US %i\t RF %i\t %s %s\n"),
+    603          				//c,ioman->sector[c],ioman_getUseCnt(ioman,c),ioman_getRefCnt(ioman,c),
+    604          				//ioman_isUserBuf(c) ? "USRBUF" : "      ",
+    605          				//ioman_isWritable(c) ? "WRITABLE" : "READONLY"));
+    606          		}
+    607          	}
+    608          }
+    609          /*****************************************************************************/
+    610          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        0  ioman_decRefCnt
+        0  ioman_decUseCnt
+       24  ioman_directSectorRead
+             24 -> ioman_findFreeSpot
+             24 -> ioman_findSectorInCache
+             24 -> ioman_getPtr
+             24 -> ioman_putSectorInCache
+             24 -> ioman_readSector
+             24 -> memCpy
+       24  ioman_directSectorWrite
+             24 -> ioman_findFreeSpot
+             24 -> ioman_findSectorInCache
+             24 -> ioman_getPtr
+             24 -> ioman_resetCacheItem
+             24 -> ioman_setAttr
+             24 -> ioman_writeSector
+             24 -> memCpy
+       16  ioman_findFreeSpot
+             16 -> ioman_getAttr
+       32  ioman_findOverallocableSpot
+             32 -> ioman_getAttr
+             32 -> ioman_getRefCnt
+       16  ioman_findSectorInCache
+             16 -> ioman_getAttr
+       32  ioman_findUnusedSpot
+             32 -> ioman_getAttr
+             32 -> ioman_getRefCnt
+             32 -> ioman_getUseCnt
+       16  ioman_flushAll
+             16 -> ioman_flushSector
+             16 -> ioman_getAttr
+             16 -> ioman_setAttr
+       24  ioman_flushRange
+             24 -> ioman_flushSector
+             24 -> ioman_getAttr
+             24 -> ioman_setAttr
+       16  ioman_flushSector
+             16 -> ioman_getAttr
+             16 -> ioman_getPtr
+             16 -> ioman_setAttr
+             16 -> ioman_writeSector
+        0  ioman_getAttr
+        8  ioman_getBp
+        0  ioman_getBuffer
+        0  ioman_getPtr
+        0  ioman_getRefCnt
+       24  ioman_getSector
+             24 -> ioman_findFreeSpot
+             24 -> ioman_findOverallocableSpot
+             24 -> ioman_findSectorInCache
+             24 -> ioman_findUnusedSpot
+             24 -> ioman_flushSector
+             24 -> ioman_getAttr
+              0 -> ioman_getPtr
+             24 -> ioman_incRefCnt
+             24 -> ioman_incUseCnt
+             24 -> ioman_push
+             24 -> ioman_putSectorInCache
+             24 -> ioman_resetCacheItem
+             24 -> ioman_setAttr
+        0  ioman_getUseCnt
+        0  ioman_incRefCnt
+        0  ioman_incUseCnt
+        8  ioman_init
+              8 -> ioman_reset
+        8  ioman_pop
+       16  ioman_printStatus
+             16 -> ioman_getAttr
+        8  ioman_push
+       16  ioman_putSectorInCache
+             16 -> ioman_getPtr
+             16 -> ioman_readSector
+             16 -> ioman_setAttr
+        8  ioman_readSector
+              8 -> if_readBuf
+       16  ioman_releaseSector
+             16 -> ioman_decUseCnt
+             16 -> ioman_flushSector
+             16 -> ioman_getAttr
+             16 -> ioman_getBp
+             16 -> ioman_getUseCnt
+             16 -> ioman_pop
+             16 -> ioman_putSectorInCache
+        8  ioman_reset
+              8 -> memClr
+        0  ioman_resetCacheItem
+        0  ioman_resetRefCnt
+        0  ioman_resetUseCnt
+        8  ioman_setAttr
+        8  ioman_writeSector
+              8 -> if_writeBuf
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       8  ?Subroutine0
+       8  ?Subroutine1
+       6  ?Subroutine10
+      12  ?Subroutine11
+      12  ?Subroutine12
+       6  ?Subroutine13
+       6  ?Subroutine2
+       8  ?Subroutine3
+       6  ?Subroutine4
+       8  ?Subroutine5
+      10  ?Subroutine6
+       6  ?Subroutine7
+       6  ?Subroutine8
+       8  ?Subroutine9
+      20  ioman_decRefCnt
+      20  ioman_decUseCnt
+      78  ioman_directSectorRead
+     114  ioman_directSectorWrite
+      32  ioman_findFreeSpot
+     106  ioman_findOverallocableSpot
+      48  ioman_findSectorInCache
+     126  ioman_findUnusedSpot
+      50  ioman_flushAll
+      92  ioman_flushRange
+      62  ioman_flushSector
+      26  ioman_getAttr
+      38  ioman_getBp
+       4  ioman_getBuffer
+      16  ioman_getPtr
+      14  ioman_getRefCnt
+     194  ioman_getSector
+      14  ioman_getUseCnt
+      22  ioman_incRefCnt
+      22  ioman_incUseCnt
+      24  ioman_init
+      72  ioman_pop
+      26  ioman_printStatus
+      66  ioman_push
+      56  ioman_putSectorInCache
+      24  ioman_readSector
+      78  ioman_releaseSector
+      94  ioman_reset
+      26  ioman_resetCacheItem
+      16  ioman_resetRefCnt
+      16  ioman_resetUseCnt
+      36  ioman_setAttr
+      26  ioman_writeSector
+
+ 
+ 1 768 bytes in section .text
+ 
+ 1 768 bytes of CODE memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,1412 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:23:31 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\sii953x_drv\si_d #
+#                    rv_sii953x.c                                             #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\sii953x_drv\si_d #
+#                    rv_sii953x.c -D S4051A -D DEBUG -D FREE_RTOS -D          #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_drv_sii953x.lst                                    #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_drv_sii953x.o                                       #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\driver\sii953x_drv\si_drv_sii953x.c
+      1          //***************************************************************************
+      2          //!file     si_drv_sii9535.c
+      3          //!brief    Sii9535 driver.
+      4          //!brief    Driver layer internal file
+      5          //
+      6          //          The Sii9535 driver contains all functions data, and constants
+      7          //          common to all modules at the next higher, component driver level.
+      8          //          It can be thought of as a wrapper that ties all of the individual
+      9          //          Sii9535 functions together to create the Sii9535 device.
+     10          //
+     11          //          This module is also the interface from the Sii9535 to the
+     12          //          physical board environment that it is mounted on.
+     13          //
+     14          // No part of this work may be reproduced, modified, distributed,
+     15          // transmitted, transcribed, or translated into any language or computer
+     16          // format, in any form or by any means without written permission of
+     17          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+     18          //
+     19          // Copyright 2007-2012, Silicon Image, Inc.  All rights reserved.
+     20          //***************************************************************************/
+     21          
+     22          
+     23          #include "sk_application.h"
+     24          #include "si_drv_internal.h"
+     25          #include "si_osal_timer.h"
+     26          #include "si_drv_device.h"
+     27          #if INC_CBUS
+     28          #include "si_drv_cbus_internal.h"
+     29          #endif
+     30          #if INC_CEC
+     31          #include "si_drv_cec_config.h"
+     32          #include "si_drv_cpi_internal.h"
+     33          #endif
+     34          #include "si_tx_component.h"
+     35          #include "si_drv_tpi_system.h"
+     36          #include "si_regs_tpi953x.h"
+     37          
+     38          #include "si_drv_msw_internal.h"
+     39          #include "si_drv_audio.h"
+     40          #if INC_IPV
+     41          #include "si_drv_ipv_internal.h"
+     42          #endif
+     43          #if INC_OSD
+     44          #include "si_drv_osd_internal.h"
+     45          #endif
+     46          #include "si_regs_rxedid953x.h"
+     47          #include "si_drv_repeater.h"
+     48          
+     49          #include "si_gpio.h"
+     50          #include "si_drv_gpio_internal.h"
+     51          
+     52          #if ( configSII_DEV_953x_PORTING == 1 )
+     53          #include "Debug.h"
+     54          #endif 
+     55          
+     56          
+     57          //------------------------------------------------------------------------------
+     58          // Device Component Register initialization list
+     59          //------------------------------------------------------------------------------
+     60          
+     61          static uint16_t initRegsList [] =
+     62          {
+     63                  REG_MISC_CTRL0,             0xCE,
+     64                  REG_MISC_CTRL1,             0x0A,
+     65                  REG_PAUTH_INV_CTRL,         0x00,       // No clock inversion in pipes and Rx ports
+     66                  REG_PA_CONFIG_1,            0x59,       // Enable MHL 1x control
+     67                  REG_DPLL_MULTZONE_RDLY1,    0x60,       // Set Rx Zone Control Threshold
+     68                  REG_TMDST_TXDAT1,           0x60,       // Set Rx Zone Control Threshold
+     69          
+     70                  REG_PAUTH_MHL_IEEE_ID1,     0x1D,   // MHL 3D VSIF IEEE ID
+     71                  REG_PAUTH_MHL_IEEE_ID2,     0xA6,
+     72                  REG_PAUTH_MHL_IEEE_ID3,     0x7C,
+     73          
+     74                  REG_PAUTH_MHL3D_CFG1,       0x19,   // MHL to HDMI conversion configuration
+     75                  REG_PAUTH_MHL3D_CFG2,       0x81,   // MHL 3D VSIF Header
+     76          
+     77                  REG_3D_MARKER_CTRL,         0x49,
+     78          //        REG_A0_EQ_DATA0,            0x00,
+     79          //        REG_A0_EQ_DATA1,            0x20,
+     80          //        REG_A0_EQ_DATA2,            0x40,
+     81          //        REG_A0_EQ_DATA3,            0x70,
+     82          //        REG_A0_EQ_DATA4,            0x23,
+     83          //        REG_A0_EQ_DATA5,            0x43,
+     84          //        REG_A0_EQ_DATA6,            0x53,
+     85          //        REG_A0_EQ_DATA7,            0x20,
+     86          
+     87                  REG_A1_EQ_DATA4,            0x23,      // REG_A1_EQ_DATA0-3 are adjusted dynamically
+     88                  REG_A1_EQ_DATA5,            0x43,      // depending on the matrix switch mode enable status
+     89                  REG_A1_EQ_DATA6,            0x53,      // in Matrix Switch Driver
+     90                  REG_A1_EQ_DATA7,            0x20,
+     91          
+     92                  REG_CLR_PACKET_BUFFER,      ( BIT_VSI_CLR_EN       //Enable to clear the VSI contents
+     93                                              | BIT_VSI_ID_CHK_EN    //Enable VSI IEEE ID check
+     94                                              /*| BIT_USE_AIF_FOR_VSI*/),//Enable the 2nd ID VSI packet uses AIF buffer
+     95          
+     96                  REG_DDC_FILTER_SEL,         0x02,
+     97                  REG_SHA_CTRL,               (BIT_SHA_DS_MODE | BIT_SHA_EN), // Enable downstream SHA engine
+     98                  REG_TX_OTP_SEL_CTRL,        0x06,   // Assign different OTP AKSVs to Tx0 and Tx1
+     99          
+    100                  //REG_PLL0_CALREFSEL,         0x44,   // Set Rx Zone control reference  //kamal
+    101                  REG_PLL0_CALREFSEL,         0x08,   // Set Rx Zone control reference    //kamal
+    102                 // REG_PLL0_CALREFSEL,         0x04,
+    103                  //REG_PLL1_CALREFSEL,         0x04,//kamal
+    104                  REG_PLL1_CALREFSEL,         0x08,//kamal
+    105                  //REG_PLL2_CALREFSEL,         0x04,//kamal
+    106                  REG_PLL2_CALREFSEL,         0x08,//kamal
+    107                  //REG_PLL3_CALREFSEL,         0x04,//kamal
+    108                  REG_PLL3_CALREFSEL,         0x08,//kamal
+    109                  //REG_PLL4_CALREFSEL,         0x04,//kamal
+    110                  REG_PLL4_CALREFSEL,         0x37,//kamal
+    111                  REG_PLL5_CALREFSEL,         0x04,
+    112                  REG_PLL0_VCOCAL,            0x06,
+    113                  REG_PLL1_VCOCAL,			0x06,//kamal
+    114                  REG_PLL2_VCOCAL,			0x06,//kamal
+    115                  REG_PLL3_VCOCAL,			0x06,//kamal
+    116          
+    117                  REG_TMDS0_CNTL,             0x02,   // new way to set PLL bw at MP
+    118                  REG_TMDS0_CNTL2,            0x42,
+    119          
+    120                  REG_A0_EQ_DATA0,            0x04,
+    121                  REG_A0_EQ_DATA1,            0x65,
+    122                  REG_A0_EQ_DATA2,            0x46,
+    123                  REG_A0_EQ_DATA3,            0x36,
+    124                  REG_A0_EQ_DATA4,            0x74,
+    125                  REG_A0_EQ_DATA5,            0x37,
+    126                  REG_A0_EQ_DATA6,            0x75,
+    127                  REG_A0_EQ_DATA7,            0x47,
+    128          
+    129                  REG_TMDS0_BW_DATA0,         0x14,   // PLL bandwidth for HDMI at MP
+    130                  REG_TMDS0_BW_DATA1,         0x14,
+    131                  REG_TMDS0_BW_DATA2,         0x1B,   // PLL bandwidth for MHL at MP
+    132                  REG_TMDS0_BW_DATA3,         0x1B,
+    133                  REG_TMDS1_BW_DATA0,         0x08,   // PLL bandwidth for HDMI at RP
+    134                  REG_TMDS1_BW_DATA2,         0x08,   // PLL bandwidth for MHL at RP
+    135                  REG_TMDS1_CNTL,             0x00,   // new way to set PLL bw at RP
+    136          #if INC_CBUS
+    137                  REG_MHL1X_EQ_DATA0,         0x00,   // MHL 1x EQ table entry0
+    138                  REG_MHL1X_EQ_DATA1,         0x20,   // MHL 1x EQ table entry1
+    139                  REG_MHL1X_EQ_DATA2,         0x40,   // MHL 1x EQ table entry2
+    140                  REG_MHL1X_EQ_DATA3,         0x70,   // MHL 1x EQ table entry3
+    141                  REG_PAUTH_NUM_SMPS,         0x85,   // Enable MHL 1x EQ table
+    142          #endif
+    143          
+    144                  // RX termination for MHL (ports 0 & 1) and HDMI (ports 1-2) types of inputs
+    145                  // NOTE: these settings can depend on value of external termination resistors
+    146                  REG_TMDS_TERMCTRL1,         ((VAL_TMDS_TERM_MHL << SFT_TMDS_PORT_EVEN) | VAL_TMDS_TERM_MHL),
+    147                  REG_TMDS_TERMCTRL3,         ((VAL_TMDS_TERM_HDMI << SFT_TMDS_PORT_EVEN) | VAL_TMDS_TERM_HDMI),
+    148                  REG_XTAL_CAL_CONTRL,        0x37,
+    149          
+    150                  REG_RX_TMDS_TERM_0,         0x00,
+    151          
+    152                  REG_A0_EQ_I2C,              0x20,
+    153                  REG_PAUTH_MP_AOVR,          BIT_MP_OVR_P0,
+    154                  REG_PAUTH_MPOVR,            0x01,
+    155                  REG_SYS_CTRL_1,             0x48,
+    156            //      REG_TMDS2_CCTRL1,           0x37,
+    157                  REG_TPI__REG_SEL,           VAL_TPI__REG_SEL__PAGE_L0,
+    158                  REG_TPI__REG_OFFSET, 		0x81,
+    159                  REG_TPI__REG_DATA,          0xFD,
+    160                  REG_TPI__REG_SEL,           VAL_TPI__REG_SEL__PAGE_L0,
+    161                  REG_TPI__REG_OFFSET, 		0x80,
+    162                  REG_TPI__REG_DATA,          0xA3,
+    163                  REG_TPI__REG_SEL,           VAL_TPI__REG_SEL__PAGE_L0,
+    164                  REG_TPI__REG_OFFSET, 		0x84,
+    165                  REG_TPI__REG_DATA,          0x10,
+    166                  REG_TPI__REG_SEL,           VAL_TPI__REG_SEL__PAGE_L0,
+    167                  REG_TPI__REG_OFFSET, 		0x83,
+    168                  REG_TPI__REG_DATA,          0x88,
+    169                  REG_TPI__REG_SEL,           VAL_TPI__REG_SEL__PAGE_L0,
+    170                  REG_TPI__REG_OFFSET, 		0x86,
+    171                  REG_TPI__REG_DATA,          0x88,
+    172                  REG_TPI__REG_SEL,           VAL_TPI__REG_SEL__PAGE_L0,
+    173                  REG_TPI__REG_OFFSET, 		0x82,
+    174                  REG_TPI__REG_DATA,          0x22,
+    175                  REG_TX__TMDS_CTRL2,         0xFD,
+    176                  REG_TX__TMDS_CTRL3,         0x3A,//0x23
+    177          
+    178          	REG_TMDS0_CLKDETECT_CTL, 	0x0E,
+    179          	REG_TMDS1_CLKDETECT_CTL,	0x0E,//kamal
+    180          	REG_TMDS2_CLKDETECT_CTL,	0x0E,//kamal
+    181          	REG_TMDS3_CLKDETECT_CTL,	0x0E//kamal
+    182          };
+    183          
+    184          //------------------------------------------------------------------------------
+    185          //  Device Driver data
+    186          //------------------------------------------------------------------------------
+    187          
+    188          DeviceDrvInstanceData_t deviceDrvInstance[1] =
+    189          {
+    190          {
+    191              0,                          // structVersion
+    192              SiiDevice_SUCCESS,          // lastResultCode Contains the result of the last API function called
+    193              0,                          // statusFlags
+    194          
+    195              0,                          // devType;
+    196              0,                          // devRev;
+    197          
+    198              false                       // hardwareInt;
+    199          }
+    200          };
+    201          
+    202          DeviceDrvInstanceData_t *pDrvDevice = &deviceDrvInstance[0];
+    203          #if ( configSII_DEV_953x_PORTING == 0 )
+    204          extern uint8_t  dispData[ EDID_TABLE_LEN];
+    205          #else
+    206          static uint8_t  dispData[ EDID_TABLE_LEN];
+    207          #endif 
+    208          
+    209          //-------------------------------------------------------------------------------------------------
+    210          //! @brief      Check to see if the NVRAM has been initialized and do it if needed.
+    211          //!
+    212          //! @retval     - true: successful.
+    213          //! @retval     - false: failure
+    214          //-------------------------------------------------------------------------------------------------
+    215          
+    216          bool_t SiiDrvDeviceNonVolatileInitialize ( bool_t forceInit )
+    217          {
+    218              bool_t success = true;
+    219          
+    220              pDrvDevice->lastResultCode = SiiDevice_SUCCESS;     // Start out OK.
+    221          
+    222          #if (FPGA_BUILD == DISABLE)
+    223              if (( (SiiRegRead( REG_NVM_STAT ) & VAL_NVM_VALID) != VAL_NVM_VALID ) || forceInit )  // Bug 32696 - NVRAM programming issue when NVRAM is in "In progress" state 
+    224          #endif
+    225              {
+    226                  DEBUG_PRINT( MSG_ERR, "\nNVRAM NOT INITIALIZED, initializing..." );
+    227                  //Enable Replacing of BSM registers with alternate values
+    228          		if ( !(SiiRegRead( REG_BSM_STAT ) & BIT_BOOT_DONE) )
+    229          		{
+    230          			DEBUG_PRINT( MSG_ERR, "\nNVRAM Boot Failed..." );
+    231          
+    232          			SiiRegWrite( REG_NVM_BSM_REPLACE, 0x01 );
+    233          			SiiRegBitsSet( REG_SYS_RESET_2, BIT_NVM_SRST, true );      // NVM Soft Reset
+    234          			SiiRegBitsSet( REG_SYS_RESET_2, BIT_NVM_SRST, false );     // Release NVM soft reset
+    235          			//SiiRegWrite( REG_NVM_BSM_REPLACE, 0x00 );   // Bug 32696 - NVRAM programming issue when NVRAM is in "In progress" state 
+    236          		}
+    237          
+    238          
+    239                  success = SiiDrvNvramNonVolatileWrite( NVRAM_BOOTDATA, (uint8_t *)&gEdidFlashDevBootData, 0, EDID_DEVBOOT_LEN );
+    240          
+    241                 // DEBUG_PRINT( MSG_ERR, "\nNVRAM Status: %d  \n", success );
+    242          
+    243                  if ( success )
+    244                  {
+    245                      success = SiiDrvNvramNonVolatileWrite( NVRAM_HDMI_EDID, (uint8_t *)&gEdidFlashEdidTable, 0, EDID_TABLE_LEN );
+    246                      success = SiiDrvNvramNonVolatileWrite( NVRAM_HDMI_EDID, (uint8_t *)&gEdidFlashEdidTable, 256, EDID_TABLE_LEN );
+    247                      success = SiiDrvNvramNonVolatileWrite( NVRAM_HDMI_EDID, (uint8_t *)&gEdidFlashEdidTable, 512, EDID_TABLE_LEN );
+    248                      success = SiiDrvNvramNonVolatileWrite( NVRAM_HDMI_EDID, (uint8_t *)&gEdidFlashEdidTable, 768, EDID_TABLE_LEN );
+    249          
+    250                      if ( success )
+    251                      {
+    252                          // Force a boot load to get the new EDID data from the NVRAM to the chip.
+    253                          SiiRegWrite( REG_NVM_BSM_REPLACE, 0x00 );   // Bug 32696 - NVRAM programming issue when NVRAM is in "In progress" state 
+    254                          SiiRegWrite( REG_BSM_INIT, BIT_BSM_INIT );
+    255                          success = SiiDrvEdidRxIsBootComplete( true );
+    256                      }
+    257                  }
+    258          
+    259                  //DEBUG_PRINT( MSG_ERR, "\nNVRAM Status: %d  \n", success );
+    260          
+    261                  if ( success )
+    262                  {
+    263                      DEBUG_PRINT( MSG_ALWAYS, "successful.\n" );
+    264                  }
+    265                  else
+    266                  {
+    267                      DEBUG_PRINT( MSG_ERR, "FAILED!\n" );
+    268                      pDrvDevice->lastResultCode = SiiDevice_FAIL_NVRAM_INIT;
+    269                  }
+    270              }
+    271              else
+    272              {
+    273                 // Bug 33154 - Melbourne SiI9533 EDID ID Product Code is NOT correct
+    274              	bool_t bootDataMismatch = 0;
+    275              	bool_t EdidDataMismatch = 0;
+    276              	int16_t i;
+    277              	uint8_t *pBootData = (uint8_t *)&gEdidFlashDevBootData;
+    278              	uint8_t *pEdidData = (uint8_t *)&gEdidFlashEdidTable[0];     
+    279          
+    280              	DEBUG_PRINT( MSG_ALWAYS, "Verifying NVRAM Boot Data and EDID Data..\n" );
+    281          
+    282              	// Read Boot data
+    283              	success = SiiDrvNvramNonVolatileRead( NVRAM_BOOTDATA, dispData, 0, EDID_DEVBOOT_LEN );
+    284          
+    285              	if(success)
+    286              	{
+    287              		// compare boot data
+    288          			for(i=0;i<EDID_DEVBOOT_LEN;i++)
+    289          			{
+    290          				if(dispData[i] != pBootData[i])
+    291          				{
+    292          					bootDataMismatch = 1;
+    293          					break;
+    294          				}
+    295          			}
+    296          
+    297          			if(!bootDataMismatch)      // Bug 33154 - Melbourne SiI9533 EDID ID Product Code is NOT correct
+    298          			{
+    299          				DEBUG_PRINT( MSG_ALWAYS, "Boot Data Matched..\n" );
+    300          
+    301          				// Read EDID data
+    302          				success = SiiDrvNvramNonVolatileRead( NVRAM_HDMI_EDID, dispData, 0, EDID_TABLE_LEN );
+    303          				if(success)
+    304          				{
+    305          					// compare Edid Data
+    306          					if( (dispData[127] != pEdidData[127]) || (dispData[255] != pEdidData[255]) )
+    307          					{
+    308          							EdidDataMismatch = 1;
+    309          							DEBUG_PRINT( MSG_ALWAYS, "Edid Data Mismatched..\n");
+    310          					}
+    311          				}
+    312          				else
+    313          				{
+    314          					DEBUG_PRINT( MSG_ALWAYS, "EDID Data Read Failed..\n" );
+    315          					pDrvDevice->lastResultCode = SiiDevice_FAIL_NVRAM_INIT;
+    316          				}
+    317          			}
+    318          			else
+    319          			{
+    320          				DEBUG_PRINT( MSG_ALWAYS, "Boot Data Mismatched..\n" );
+    321          			}
+    322          
+    323          
+    324          			if(bootDataMismatch || EdidDataMismatch)
+    325          			{
+    326          				DEBUG_PRINT( MSG_ALWAYS, "Updating Boot Data and EDID Data to NVRAM..\n" );
+    327          
+    328          				success = SiiDrvNvramNonVolatileWrite( NVRAM_BOOTDATA, (uint8_t *)&gEdidFlashDevBootData, 0, EDID_DEVBOOT_LEN );
+    329          
+    330          		        if ( success )
+    331          		        {
+    332          		            success = SiiDrvNvramNonVolatileWrite( NVRAM_HDMI_EDID, (uint8_t *)&gEdidFlashEdidTable[0], 0, EDID_TABLE_LEN );
+    333          		            success = SiiDrvNvramNonVolatileWrite( NVRAM_HDMI_EDID, (uint8_t *)&gEdidFlashEdidTable[0], 256, EDID_TABLE_LEN );
+    334          		            success = SiiDrvNvramNonVolatileWrite( NVRAM_HDMI_EDID, (uint8_t *)&gEdidFlashEdidTable[0], 512, EDID_TABLE_LEN );
+    335          		            success = SiiDrvNvramNonVolatileWrite( NVRAM_HDMI_EDID, (uint8_t *)&gEdidFlashEdidTable[0], 768, EDID_TABLE_LEN );
+    336          
+    337          		            if ( success )
+    338          		            {
+    339          		                // Force a boot load to get the new EDID data from the NVRAM to the chip.
+    340          		                SiiRegWrite( REG_BSM_INIT, BIT_BSM_INIT );
+    341          		                success = SiiDrvEdidRxIsBootComplete( true );
+    342          		            }
+    343          		        }
+    344          
+    345          	            if(success)
+    346          	            {
+    347          	            	DEBUG_PRINT( MSG_ALWAYS, "Successful.\n" );
+    348          	            }
+    349          	            else
+    350          	            {
+    351          	            	DEBUG_PRINT( MSG_ALWAYS, "Failed.\n" );
+    352          	            	pDrvDevice->lastResultCode = SiiDevice_FAIL_NVRAM_INIT;
+    353          	            }
+    354          			}
+    355          			else
+    356          			{
+    357          				DEBUG_PRINT( MSG_ALWAYS, "Boot Data and Edid Data Matched..\n" );
+    358          				success = SiiDrvNvramNonVolatileRead( NVRAM_HDMI_EDID, dispData, 0, EDID_TABLE_LEN );
+    359          			}
+    360              	}
+    361          		else
+    362          		{
+    363          			DEBUG_PRINT( MSG_ALWAYS, "Boot Data Read Failed..\n" );
+    364          			pDrvDevice->lastResultCode = SiiDevice_FAIL_NVRAM_INIT;
+    365          		}
+    366              }
+    367          
+    368              return( success );
+    369          }
+    370          
+    371          //------------------------------------------------------------------------------
+    372          // Function:    DrvDeviceInitRegisters
+    373          // Description: Initialize registers that need to be set to non-default values
+    374          //              at startup.  In general, these registers are not changed
+    375          //              after startup.
+    376          // Parameters:  none
+    377          // Returns:     none
+    378          //-----------------------------------------------------------------------------c
+    379          
+    380          static void DrvDeviceInitRegisters ( void )
+    381          {
+    382              uint8_t index;
+    383          
+    384              // Turn off port change logic and hold device in
+    385              // software reset until finished update.
+    386              SiiRegModify( REG_MISC_CTRL1, BIT_PORT_CHG_ENABLE, CLEAR_BITS );
+    387              SiiRegModify( REG_SYS_RESET_1, BIT_SWRST, SET_BITS );
+    388          
+    389              SiiRegModify( REG_SYS_RESET_3, BIT_HDCP_RST, SET_BITS   ); // HDCP arbitration and OTP reset
+    390              SiiRegModify( REG_SYS_RESET_3, BIT_HDCP_RST, CLEAR_BITS ); // Release
+    391          
+    392              /* Perform the majority of the required register initialization.    */
+    393          
+    394              for ( index = 0; index < (sizeof( initRegsList) / 2); index += 2 )
+    395              {
+    396                  SiiRegWrite( initRegsList[ index], initRegsList[ index + 1] );
+    397              }
+    398          
+    399              SiiRegWrite( REG_HPE_HW_CTRL_OVR, MSK_INVALIDATE_HW_HPD_CTRL ); // Disable Auto-HPD control
+    400          
+    401              //NOTE: Caller must call SiiDrvDeviceRelease() function to bring out of reset
+    402              SiiRegModify( REG_PD_SYS_EXT2, 0xff, 0x0f );
+    403              SiiRegModify( REG_PD_SYS4, 0xff, 0x0f );// TMDS Clock Channel power mode
+    404              //  Bug 31921 - Melbourne on power up, Unconnected port to MHL connected port switch not working 
+    405              SiiRegModify( RX_EDID_DDC_EN, MSK_EN_DDC_ALL, CLEAR_BITS );
+    406              SiiRegModify( REG_RX_HDCP_DDC_EN, VAL_DDC_PORT_ALL_EN, CLEAR_BITS );
+    407          }
+    408          
+    409          
+    410          //------------------------------------------------------------------------------
+    411          // Function:    ProcessResolutionChangeInterrupts
+    412          // Description: Handles resolution change in MP and SP
+    413          //------------------------------------------------------------------------------
+    414          
+    415          static void ProcessResolutionChangeInterrupts(void)
+    416          {
+    417              uint8_t mpResStatus, spResStatus, mpResStatusEnabled, spResStatusEnabled;
+    418          
+    419              mpResStatus = SiiRegRead( REG_INT_STATUS_19 );
+    420              spResStatus = SiiRegRead( REG_INT_STATUS_20 );
+    421              mpResStatusEnabled = (SiiRegRead( REG_INT_MASK_19 ) & (BIT_MP_HRES_CHG | BIT_MP_VRES_CHG));
+    422              spResStatusEnabled = (SiiRegRead( REG_INT_MASK_20 ) & (BIT_SP_HRES_CHG | BIT_SP_VRES_CHG));
+    423          
+    424              if(mpResStatusEnabled)
+    425              {
+    426          
+    427          		if (mpResStatus & (BIT_MP_HRES_CHG | BIT_MP_VRES_CHG))
+    428          		{
+    429          			DEBUG_PRINT( MSG_DBG, "Resolution Change in MP interrupt : %s %s\n",(mpResStatus & BIT_MP_HRES_CHG)?"HRES CHANGED":"HRES STABLE",(mpResStatus & BIT_MP_VRES_CHG)?"VRES CHANGED":"VRES STABLE");
+    430          			pDrvDevice->statusFlags |= SiiDEV_STATUS_MP_RES_CHG;
+    431          		}
+    432              }
+    433              if(spResStatusEnabled)
+    434              {
+    435          
+    436          		if (spResStatus & (BIT_SP_HRES_CHG | BIT_SP_VRES_CHG))
+    437          		{
+    438          		  //  DEBUG_PRINT( MSG_DBG, "Resolution Change in SP interrupt\n");
+    439          			pDrvDevice->statusFlags |= SiiDEV_STATUS_SP_RES_CHG;
+    440          		}
+    441              }
+    442          
+    443              // Clear interrupts
+    444              if (mpResStatus)
+    445              {
+    446                  SiiRegWrite(REG_INT_STATUS_19, mpResStatus);
+    447              }
+    448              if (spResStatus)
+    449              {
+    450                  SiiRegWrite(REG_INT_STATUS_20, spResStatus);
+    451              }
+    452          }
+    453          
+    454          
+    455          //------------------------------------------------------------------------------
+    456          // Function:    SiiDrvDeviceConfigure
+    457          // Description: Before it is initialized for use, the device must be properly
+    458          //              configured for the target system requirements.  This function
+    459          //              is called to configure the parts of the device that may not
+    460          //              directly fall under the auspices of one of the other components.
+    461          // Parameters:  none
+    462          //------------------------------------------------------------------------------
+    463          
+    464          bool_t SiiDrvDeviceConfigure ( void )
+    465          {
+    466          
+    467          	return( true );
+    468          }
+    469          //---------------------------------------------------------------------------------
+    470          // Function:    SiiDrvVideoMute
+    471          // Description: Mute video only
+    472          // Parameters:  none
+    473          // Returns:     true if the configuration was successful, or false if some
+    474          //				failure occurred
+    475          //------------------------------------------------------------------------------
+    476          
+    477          bool_t SiiDrvVideoMute ( bool_t isEnable )
+    478          {
+    479          
+    480          //	  if (isEnable)
+    481          //	    {
+    482          //	        // Memorize current source selection and VPG settings
+    483          //	        app.tpgClockSrc = SI_TPG_CLK_XCLK;
+    484          //	        app.tpgVideoPattern = SI_ETPG_PATTERN_BLACK;
+    485          //	        app.tpgVideoFormat = SI_TPG_FMT_VID_480_60;
+    486          //	        app.isTxHdcpRequired[0] = true;//false;
+    487          //
+    488          //	        app.newSource[0]    = SiiSwitchSourceInternalVideo;
+    489          //	    }
+    490          //	    else
+    491          //	    {
+    492          //	        app.isTxHdcpRequired[0] = true;
+    493          //	        app.newSource[0] = SiiDrvSwitchStateGet(SiiSwitch_SELECTED_PORT);
+    494          //	    }
+    495          	// SiiRegBitsSet( REG_MISC_CTRL0, BIT_VIDEO_MUTE_SYNC | BIT_AUDIO_MUTE_SYNC, isEnable );
+    496          	 //SiiDrvTpgEnable(isEnable);
+    497          	 if (isEnable)
+    498          	 {
+    499          		app.newSource[app.currentZone] = SiiSwitchSourceInternalVideo;
+    500          		app.newAudioSource[app.currentZone] = SiiSwitchAudioSourceDefault;
+    501          		app.tpgVideoPattern = SI_ETPG_PATTERN_BLACK;
+    502          	 }
+    503          	 else
+    504          	 {
+    505          		 app.tpgVideoPattern = SI_ETPG_PATTERN_BLUE;
+    506          		 app.newSource[0] = SiiDrvSwitchStateGet(SiiSwitch_SELECTED_PORT);
+    507          	 }
+    508          	 return true;
+    509          }
+    510          
+    511          
+    512          //------------------------------------------------------------------------------
+    513          // Function:    SiiDrvDeviceIdGet
+    514          // Description: This function returns the chip ID.
+    515          // Parameters:  none
+    516          // Returns:     I16 bit chip id.
+    517          //------------------------------------------------------------------------------
+    518          uint16_t SiiDrvDeviceIdGet(void)
+    519          {
+    520          	uint16_t devType;
+    521              devType    = SiiRegRead( REG_DEV_IDH_RX );
+    522              devType    = ( devType << 8) | SiiRegRead( REG_DEV_IDL_RX );
+    523              return devType;
+    524          }
+    525          
+    526          //------------------------------------------------------------------------------
+    527          // Function:    SiiDrvDeviceRevGet
+    528          // Description: This function returns the chip ID.
+    529          // Parameters:  none
+    530          // Returns:     I16 bit chip id.
+    531          //------------------------------------------------------------------------------
+    532          uint8_t SiiDrvDeviceRevGet(void)
+    533          {
+    534              return  SiiRegRead( REG_DEV_REV );
+    535          }
+    536          
+    537          //------------------------------------------------------------------------------
+    538          // Function:    SiiDrvDeviceInitialize
+    539          // Description: This function disables the device or places the device in
+    540          //				software reset if it does not power up in a disabled state.
+    541          //				It may be used to initialize registers that require a value
+    542          //				different from the power-up state and are common to one or
+    543          //				more of the other component modules.
+    544          // Parameters:  none
+    545          // Returns:     It returns true if the initialization is successful, or false
+    546          //				if some failure occurred.
+    547          //
+    548          // Note:		This function leaves the device in a disabled state until the
+    549          //				SiiDrvDeviceRelease function is called.
+    550          //------------------------------------------------------------------------------
+    551          
+    552          bool_t SiiDrvDeviceInitialize ( bool_t allPowerOn )
+    553          {
+    554              bool_t  success = false;
+    555          
+    556              for ( ;; )
+    557              {
+    558                  if ( !SiiDrvDevicePowerUpBoot())   break;
+    559          
+    560                  pDrvDevice->devType    = SiiRegRead( REG_DEV_IDH_RX );
+    561                  pDrvDevice->devType    = ( pDrvDevice->devType << 8) | SiiRegRead( REG_DEV_IDL_RX );
+    562                  pDrvDevice->devRev     = SiiRegRead( REG_DEV_REV );
+    563          
+    564          #if ( configSII_DEV_9535 == 1 )
+    565                  if (( pDrvDevice->devType & 0xFFFF ) != 0x9535 )
+    566          #else
+    567                  if (( pDrvDevice->devType & 0xFFFF ) != 0x9533 )
+    568          #endif
+    569                  {
+    570                      pDrvDevice->lastResultCode = SiiDevice_FAIL_WRONGDEVICE;
+    571                      break;
+    572                  }
+    573          
+    574                  if ( allPowerOn )
+    575                  {
+    576                      DrvDeviceInitRegisters();   // Initialize registers to the Programmers Reference default list.
+    577          
+    578                      // Enable the resolution stable interrupt for use by multiple drivers
+    579                      SiiRegBitsSet( REG_INT_ENABLE_IP4, BIT_MP_RES_STABLE_CHG, true );
+    580          
+    581                      // Resolution change detection is disabled at initialization
+    582                      SiiDrvDeviceMpResDetectionEnable(false);
+    583                      SiiDrvDeviceSpResDetectionEnable(false);
+    584                  }
+    585          
+    586                  success = true;
+    587                  break;
+    588              }
+    589          	return( success );
+    590          }
+    591          
+    592          //------------------------------------------------------------------------------
+    593          // Function:    SiiDrvDeviceStatus
+    594          // Description: Returns a status flag word containing device-specific
+    595          //				information about the state of the device.
+    596          // Parameters:  none
+    597          // Returns:     Sixteen-bit Device status flags word for the Device Component
+    598          //------------------------------------------------------------------------------
+    599          
+    600          SiiDrvDeviceStatus_t SiiDrvDeviceStatus ( void )
+    601          {
+    602          	uint16_t x;
+    603          
+    604              x = pDrvDevice->statusFlags;
+    605              pDrvDevice->statusFlags = 0;
+    606          	return( x );
+    607          }
+    608          
+    609          
+    610          //------------------------------------------------------------------------------
+    611          // Function:    SiiDrvDeviceStandby
+    612          // Description: Places the device into standby mode if available
+    613          // Parameters:  none
+    614          // Returns:     true if the device entered standby mode successfully, or false
+    615          //				if some failure occurred.
+    616          //------------------------------------------------------------------------------
+    617          
+    618          bool_t SiiDrvDeviceStandby ( void )
+    619          {
+    620          
+    621              // Disable interrupts used by this driver
+    622              SiiRegBitsSet( REG_INT_ENABLE_IP4, BIT_MP_RES_STABLE_CHG, false );
+    623              SiiDrvDeviceMpResDetectionEnable(false);
+    624              SiiDrvDeviceSpResDetectionEnable(false);
+    625          
+    626              // Clear any pending interrupts
+    627              SiiRegWrite( REG_INT_STATUS_IP4, BIT_MP_RES_STABLE_CHG );
+    628              SiiRegWrite( REG_INT_STATUS_19, BIT_MP_HRES_CHG | BIT_MP_VRES_CHG );
+    629              SiiRegWrite( REG_INT_STATUS_20, BIT_SP_HRES_CHG | BIT_SP_VRES_CHG );
+    630          
+    631              // Turn Power down domain clocks off.  This will reduce power in the
+    632              // event that the system does not actually remove the main power from
+    633              // the SiI9535.  To come out of standby, the firmware resets the
+    634              // chip, so the opposite action is not necessary in SiiDrvDeviceResume()
+    635              SiiRegBitsSet( REG_SYS_CTRL_1, BIT_PWD_CLKS, true );
+    636              SiiRegWrite( REG_PD_TOT, 0x00 );
+    637          
+    638              // Power down all TMDS channels
+    639              SiiRegWrite( REG_PD_SYS3,       0x3F );     // Force firmware control of TMDS channel 0 power mode
+    640              SiiRegWrite( REG_PD_SYS2,       0x00 );     // TMDS Channel 0 power mode
+    641              SiiRegWrite( REG_PD_SYS4,       0x00 );     // TMDS Clock Channel power mode
+    642              SiiRegWrite( REG_PD_SYS_EXT3,   0x00 );     // TMDS Channel 1&2 power mode
+    643          
+    644          	return( true );
+    645          }
+    646          
+    647          //------------------------------------------------------------------------------
+    648          // Function:    SiiDrvDeviceResume
+    649          // Description: Causes operation of the device to return to the state it was
+    650          //				prior to the previous call to SiiDeviceStandby.
+    651          // Parameters:  none
+    652          // Returns:     true if the device successfully exited standby mode , or false
+    653          //				if some failure occurred.
+    654          //------------------------------------------------------------------------------
+    655          
+    656          bool_t SiiDrvDeviceResume ( void )
+    657          {
+    658          #if ( configSII_DEV_953x_PORTING == 1 ) /*Smith fixes: when first dc on, ARC should be disable.*/
+    659              SiiDrvArcConfigureArcPin( 0, 0, ARC_DISABLE_MODE);
+    660          #endif
+    661          	return( true );
+    662          }
+    663          
+    664          //------------------------------------------------------------------------------
+    665          // Function:    SiiDeviceRelease
+    666          // Description: Enables the device for normal operation and is called as the
+    667          //				last part of device initialization.
+    668          //				Since the SiiDeviceInitialize function leaves the device output
+    669          //				disabled, this function should enable the device output as a
+    670          //				minimum.  All other configuration and initialization functions
+    671          //				must be called in between SiiDeviceInitialize and SiiDeviceRelease.
+    672          // Parameters:  none
+    673          // Returns:     true if the release is successful and the device is ready for
+    674          //				operation or false if some failure occurred.
+    675          //------------------------------------------------------------------------------
+    676          
+    677          bool_t SiiDrvDeviceRelease ( void )
+    678          {
+    679              // Release software reset and finite state machine. Must delay between the two events.
+    680              SiiRegModify( REG_SYS_RESET_1, BIT_SWRST, CLEAR_BITS );
+    681              SiiOsTimerWait( 120 );
+    682              SiiRegModify( REG_MISC_CTRL1, BIT_PORT_CHG_ENABLE, SET_BITS );
+    683          
+    684          	return( true );
+    685          }
+    686          
+    687          //------------------------------------------------------------------------------
+    688          // Function:    SiiDrvDeviceStart
+    689          // Description: Enables the device for normal operation.  This function performs
+    690          //              the procedures necessary for correct operation of the device after
+    691          //              all other initialization has been performed.
+    692          // Parameters:  none
+    693          // Returns:     true if the release is successful and the device is ready for
+    694          //              operation or false if some failure occurred.
+    695          //------------------------------------------------------------------------------
+    696          
+    697          bool_t SiiDrvDeviceStart ( void )
+    698          {
+    699          
+    700              // Set RX controls to enabled for all ports. (Instaport mode)
+    701              SiiDrvRxHpeStateSet( SiiPORT_ALL, SiiHPD_ACTIVE );
+    702          
+    703              return( true );
+    704          }
+    705          
+    706          //------------------------------------------------------------------------------
+    707          // Function:    SiiDrvDeviceGetLastResult
+    708          // Description: Returns the result of the last SiiDevicexxx function called
+    709          // Parameters:  none
+    710          // Returns:     Result of last device driver function.
+    711          //------------------------------------------------------------------------------
+    712          
+    713          int_t SiiDrvDeviceGetLastResult ( void )
+    714          {
+    715          
+    716          	return( pDrvDevice->lastResultCode );
+    717          }
+    718          
+    719          //------------------------------------------------------------------------------
+    720          // Function:    SiiDrvDevicePowerUpBoot
+    721          // Description: Perform the device startup sequence.  Reset, wait for boot to
+    722          //				complete, optionally initialize EDID NVRAM, and initialize
+    723          //				device registers.
+    724          // Parameters:  none
+    725          // Returns:     true if device booted and initialized correctly
+    726          //------------------------------------------------------------------------------
+    727          bool_t SiiDrvDevicePowerUpBoot ( void )
+    728          {
+    729              pDrvDevice->lastResultCode = SiiDevice_SUCCESS;  // Start out OK.
+    730              bool_t recoverNVRAM=false;  // Bug 32696 - NVRAM programming issue when NVRAM is in "In progress" state 
+    731          
+    732              for ( ;; )
+    733              {
+    734                  // Wait for boot to complete if this is a cold power-up
+    735              	if ( !SiiDrvEdidRxIsBootComplete( true ) )
+    736                  {
+    737                      DEBUG_PRINT( MSG_ALWAYS, "\nNVRAM Boot Failed. Force NVRAM Recovery..." );   // Bug 32696 - NVRAM programming issue when NVRAM is in "In progress" state 
+    738                      TRACE_DEBUG((0, " NVRAM Boot Failed. Force NVRAM Recovery... "));
+    739                      recoverNVRAM = true;
+    740                  }
+    741          
+    742                  // Force a soft Hard Reset to ensure that the Always On Domain 
+    743          		// logic is reset.  This is needed in case this is NOT a cold 
+    744          		// power-up, but a resume from standby or a cold power-up when 
+    745          		// one or more powered sources are connected.
+    746                  SiiRegWrite( REG_SPECIAL_PURPOSE, BIT_HARDRESET );
+    747          
+    748          #if ( configSII_DEV_953x_PORTING == 1 )	
+    749                  SiiOsTimerWait( 10 ); // Smith fixes: hdmi 9533 boot up fail issue.
+    750          #endif
+    751          
+    752                  (void) SiiRegRead( REG_SPECIAL_PURPOSE );  // Dummy read to clear write interrupted by reset
+    753          
+    754                  {   //SWWA: FP1557
+    755                      // The audio PLLs may not have been properly powered up if the
+    756                      // 3.3v and 1.3v power supplies were improperly sequenced, so
+    757                      // turn them off and on to ensure proper operation.
+    758                      SiiRegWrite( REG_APLL_POWER, 0x00);
+    759                      SiiOsTimerWait( 1 );
+    760                      SiiRegWrite( REG_APLL_POWER, BIT_APLL0_PWR_ON | BIT_APLL1_PWR_ON);
+    761                  }
+    762          
+    763                  // Check NVRAM status to determine if it must be initialized (first time boot).
+    764                  // We do this here because NVRAM contains some register default information
+    765                  // as well as the correct EDID.  If the NVRAM is not initialized, we must
+    766                  // initialize it and then reload so that the appropriate registers are
+    767                  // loaded.
+    768          #if ( DO_EDID_INIT == 1 ) 
+    769                  if ( !SiiDrvDeviceNonVolatileInitialize( recoverNVRAM ))   // Bug 32696 - NVRAM programming issue when NVRAM is in "In progress" state 
+    770                  {
+    771                      break;
+    772                  }
+    773          #endif
+    774                  break;
+    775              }
+    776          
+    777              return( pDrvDevice->lastResultCode == SiiDevice_SUCCESS );
+    778          }
+    779          
+    780          
+    781          //------------------------------------------------------------------------------
+    782          // Function:    SiiDrvDeviceSpResDetectionEnable
+    783          // Description: Enable resolution change detection in Sub Pipe.
+    784          //------------------------------------------------------------------------------
+    785          
+    786          void SiiDrvDeviceSpResDetectionEnable(bool_t isEnabled)
+    787          {
+    788              SiiRegBitsSet(REG_INT_MASK_20, BIT_SP_HRES_CHG | BIT_SP_VRES_CHG, isEnabled);
+    789          }
+    790          
+    791          //------------------------------------------------------------------------------
+    792          // Function:    SiiDrvDeviceMpResDetectionEnable
+    793          // Description: Enable resolution change detection in Main Pipe.
+    794          //------------------------------------------------------------------------------
+    795          
+    796          void SiiDrvDeviceMpResDetectionEnable(bool_t isEnabled)
+    797          {
+    798              SiiRegBitsSet(REG_INT_MASK_19, BIT_MP_HRES_CHG | BIT_MP_VRES_CHG, isEnabled);
+    799          }
+    800          
+    801          
+    802          //------------------------------------------------------------------------------
+    803          // Function:    SiiDrvDeviceInfo
+    804          // Description: Return the requested information from the device.
+    805          //------------------------------------------------------------------------------
+    806          
+    807          uint_t SiiDrvDeviceInfo ( SiiDrvDeviceInfo_t infoIndex )
+    808          {
+    809              uint8_t uData;
+    810              uint_t  regValue = 0;
+    811              uint8_t portStat = 0;
+    812          
+    813              switch ( infoIndex )
+    814              {
+    815                  case SiiDEV_INPUT_CONNECTED:
+    816                      // Join P4 with P3:0 of PWR5V status
+    817                      uData = SiiRegRead( REG_PWR5V_STATUS );
+    818                      regValue = ((uData >> 2) & 0x0F) | (uData & 0x0F);
+    819          #if INC_CBUS
+    820                      // Add in CBUS ports connected
+    821                      regValue |= SiiRegRead( REG_CBUS_DEV_CONNECTED );
+    822          #endif
+    823                      break;
+    824                  case SiiDEV_BOOT_STATE_MACHINE:
+    825                      regValue = SiiRegRead( REG_BSM_STAT );
+    826                      break;
+    827                  case SiiDEV_NVRAM:
+    828                      regValue = (SiiRegRead( REG_NVM_STAT ) == VAL_NVM_VALID);
+    829                      break;
+    830                  case SiiDEV_ID:
+    831                      regValue = pDrvDevice->devType;
+    832                      break;
+    833                  case SiiDEV_REV:
+    834                      regValue = pDrvDevice->devRev;
+    835                      break;
+    836                  case SiiDEV_ACTIVE_PORT:
+    837                      regValue = SiiRegRead( REG_RX_PORT_SEL ) & MSK_MP_PORT_SEL;
+    838                      break;
+    839                  case SiiDEV_SELECTED_PORT_BITFIELD:
+    840                      portStat = SiiRegRead( REG_SELECTED_PORT_0 );
+    841                      regValue = ((portStat & ROVE_PIPE_MASK) >> 4) | ( portStat & MAIN_PIPE_MASK);
+    842                      break;
+    843              }
+    844          
+    845              return( regValue );
+    846          }
+    847          
+    848          //------------------------------------------------------------------------------
+    849          // Function:    SiiDrvDeviceManageInterrupts
+    850          // Description: Monitors Sii953x interrupts and calls an interrupt processor
+    851          //              function in the applicable driver if an interrupt is encountered.
+    852          // Parameters:  fullPowerMode - true if ALL interrupts should be processed,
+    853          //                              false if only standby mode interrupts.
+    854          // NOTE:    This function is not designed to be called directly from a physical
+    855          //          interrupt handler unless provisions have been made to avoid conflict
+    856          //          with normal level I2C accesses.
+    857          //          It is intended to be called from normal level by monitoring a flag
+    858          //          set by the physical handler.
+    859          //------------------------------------------------------------------------------
+    860          #define INTERRUPT_DEBUG 0
+    861          bool_t SiiDrvDeviceManageInterrupts ( bool_t fullPowerMode )
+    862          {
+    863              uint8_t intStatus = 0; 
+    864              uint8_t intStatus1 = 0;
+    865              uint8_t i;
+    866          
+    867          #if INTERRUPT_DEBUG
+    868              static uint8_t lastIntStatus = 0;
+    869              static uint8_t lastIntStatus1 = 0;
+    870              static bool lastInitGpioStatus = 0;
+    871          #endif
+    872              bool_t initGpioStatus = false;
+    873          
+    874              // Check the hardware interrupt
+    875              if ( SiiPlatformInterruptStateGet() == false )
+    876              {
+    877                 return( false );
+    878              }
+    879              
+    880              // Get the register interrupt info
+    881              intStatus = SiiRegRead( REG_INT_GROUP_STATE_0 );
+    882              intStatus1 = SiiRegRead( REG_INT_GROUP_STATE_1 );
+    883          
+    884          #if INTERRUPT_DEBUG
+    885              if( ( lastIntStatus != intStatus ) || ( lastIntStatus1 != intStatus1 ) )
+    886              {
+    887                  TRACE_DEBUG((0, "[ HDMI INT ] status - 0 = 0x%X", intStatus ));
+    888                  TRACE_DEBUG((0, "[ HDMI INT ] status - 1 = 0x%X", intStatus1 ));
+    889          
+    890                  lastIntStatus = intStatus;
+    891                  lastIntStatus1 = intStatus1;
+    892              }
+    893          #endif    
+    894          
+    895              // Determine the pending interrupts and service them with driver calls
+    896              // Each function will call its appropriate callback function if a status
+    897              // change is detected that needs upper level attention.
+    898          
+    899              if ( fullPowerMode ) 
+    900              {
+    901                  if ( intStatus & BIT_INTR_TX0 )     // Tx0 interrupts
+    902                  {
+    903                      SiiTxInstanceSet(0);
+    904                      SiiDrvTpiProcessInterrupts();
+    905                  }
+    906                  
+    907                  /*
+    908                      if ( intStatus & BIT_INTR_TX1 )     // Tx1 interrupts
+    909                      {
+    910                          SiiTxInstanceSet(1);
+    911                          SiiDrvTpiProcessInterrupts();
+    912                      }
+    913                      */
+    914                  if (( intStatus & BIT_INTR_GRP1 ) || ( intStatus & BIT_INTR_GRP_PA ))   // PA interrupts
+    915                  {
+    916                      uint8_t tempStatus;
+    917          
+    918                      tempStatus = SiiRegRead( REG_INT_STATUS_P3 );
+    919                      if( tempStatus & BIT_MP_NEW_AVI)
+    920                      {
+    921                      	pDrvDevice->statusFlags |= SiiDEV_STATUS_AVI_READY;
+    922                      }
+    923                      if( tempStatus & BIT_MP_NEW_AIF)
+    924                      {
+    925                      	pDrvDevice->statusFlags |= SiiDEV_STATUS_AIF_READY;
+    926                      }
+    927          
+    928                      SiiDrvSwitchProcessInterrupts( intStatus );
+    929                      DrvGpioProcessInterrupts();
+    930          
+    931                      // Resolution stable interrupt is used by a number of modules.
+    932                      tempStatus = SiiRegRead( REG_INT_STATUS_IP4 ) & BIT_MP_RES_STABLE_CHG;
+    933                      if ( tempStatus )
+    934                      {
+    935                          DEBUG_PRINT( MSG_DBG, "Resolution Stable interrupt: %02X\n", SiiRegRead( REG_MP_GCP_STATUS ) & BIT_MP_RES_STABLE );
+    936          
+    937                          SiiRegWrite( REG_INT_STATUS_IP4, tempStatus );
+    938          #if INC_IPV
+    939                          SiiDrvIpvProcessInterrupts();
+    940          #endif
+    941          #if INC_OSD
+    942                          SiiDrvOsdProcessInterrupts();
+    943          #endif  // INC_OSD
+    944                          pDrvDevice->statusFlags |= SiiDEV_STATUS_RES_STB_CHG;
+    945                      }
+    946                  }
+    947          
+    948                  if (( intStatus & BIT_INTR_GRP0 ) || ( intStatus & BIT_INTR_GRP_PA ))   // PA interrupts
+    949                  {
+    950                  	for(i = 0; i < SII_NUM_TX; i++)
+    951                  	{
+    952                  		SiiRepeaterInstanceSet(i);
+    953                  		SiiDrvRepeaterInterruptsSet(true);
+    954                  	}
+    955                  }
+    956          
+    957                  if ( intStatus1 & (BIT_INTR_GRP7 ))  //Audio Main Pipe Interrupts
+    958                  {
+    959                      SiiDrvRxAudioInstanceSet(0);
+    960                      SiiDrvRxAudioProcessInterrupts();
+    961                  }
+    962                  /*
+    963                  if ( intStatus1 & (BIT_INTR_GRP8 ))  //Audio Sub Pipe Interrupts
+    964                  {
+    965                      SiiDrvRxAudioInstanceSet(1);
+    966                      SiiDrvRxAudioProcessInterrupts();
+    967                  }*/
+    968          
+    969                  if ( intStatus1 & (BIT_INTR_PWD ))  //Resolution change in MP/SP, etc.
+    970                  {
+    971                      ProcessResolutionChangeInterrupts();
+    972                      if (pDrvDevice->statusFlags & SiiDEV_STATUS_MP_RES_CHG)
+    973                      {
+    974                          SiiRepeaterInstanceSet(0);
+    975                          SiiDrvRepeaterResChngStatusSet(true);
+    976                      }
+    977                      /*
+    978                      if (pDrvDevice->statusFlags & SiiDEV_STATUS_SP_RES_CHG)
+    979                      {
+    980                          SiiRepeaterInstanceSet(1);
+    981                          SiiDrvRepeaterResChngStatusSet(true);
+    982                      }*/
+    983                  }
+    984          
+    985                  if( intStatus & BIT_INTR_GRP_PA ) //for ACP interrupt
+    986                  {
+    987                      SiiDrvRxAudioInstanceSet(0);
+    988                      SiiDrvRxAudioProcessInterrupts();
+    989                      SiiDrvRxAudioInstanceSet(1);
+    990                      SiiDrvRxAudioProcessInterrupts();
+    991                  }
+    992          
+    993          #if( configSII_DEV_953x_PORTING_CBUS == 1 )
+    994          #if INC_CBUS
+    995                  if ( intStatus & BIT_INTR_GRP5 )
+    996                  {
+    997                      SiiDrvCbusInstanceSet(0);
+    998                      SiiDrvCbusProcessInterrupts();
+    999                      SiiDrvCbusInstanceSet(1);
+   1000                      SiiDrvCbusProcessInterrupts();
+   1001                  }
+   1002          #endif
+   1003          #endif
+   1004          
+   1005              }
+   1006          
+   1007              // The following interrupts can be checked unless power is completely off
+   1008              // in which case this function will not be called.
+   1009          #if INC_CEC
+   1010              if ( intStatus & BIT_INTR_GRP6 )                    // CEC interrupts
+   1011              {
+   1012                  SiiDrvCpiInstanceSet( CPI_INSTANCE_AVR );
+   1013                  DrvCpiProcessInterrupts();
+   1014              }
+   1015          #endif
+   1016          
+   1017              // Check if all interrupts are cleared so that h/w interrupt line goes high.
+   1018              // If the interrupt line is still low, don't clear the interrupt status
+   1019              // to process and clear pending interrupts in the next round
+   1020              SiiPlatformInterruptDisable();
+   1021              initGpioStatus = SiiPlatformInterruptPinStateGet();
+   1022              if (initGpioStatus == true )
+   1023              {
+   1024                  SiiPlatformInterruptClear();
+   1025              }
+   1026              
+   1027          #if INTERRUPT_DEBUG
+   1028              if ( initGpioStatus != lastInitGpioStatus )
+   1029              {
+   1030                  TRACE_DEBUG((0, "[ HDMI INT ] Interrupt status = %d", initGpioStatus ));
+   1031              
+   1032                  lastInitGpioStatus = initGpioStatus;
+   1033              }
+   1034          #endif    
+   1035              
+   1036              SiiPlatformInterruptEnable();
+   1037              return( true );
+   1038          }
+   1039          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        0  SiiDrvDeviceConfigure
+        0  SiiDrvDeviceGetLastResult
+        8  SiiDrvDeviceIdGet
+              8 -> SiiRegRead
+        8  SiiDrvDeviceInfo
+              8 -> SiiRegRead
+       16  SiiDrvDeviceInitialize
+             16 -> SiiDrvDeviceMpResDetectionEnable
+             16 -> SiiDrvDevicePowerUpBoot
+             16 -> SiiDrvDeviceSpResDetectionEnable
+             16 -> SiiRegBitsSet
+             16 -> SiiRegModify
+             16 -> SiiRegRead
+             16 -> SiiRegWrite
+       24  SiiDrvDeviceManageInterrupts
+             24 -> DrvCpiProcessInterrupts
+             24 -> DrvGpioProcessInterrupts
+             24 -> SiiDrvCpiInstanceSet
+             24 -> SiiDrvIpvProcessInterrupts
+             24 -> SiiDrvRepeaterInterruptsSet
+             24 -> SiiDrvRepeaterResChngStatusSet
+             24 -> SiiDrvRxAudioInstanceSet
+             24 -> SiiDrvRxAudioProcessInterrupts
+             24 -> SiiDrvSwitchProcessInterrupts
+             24 -> SiiDrvTpiProcessInterrupts
+             24 -> SiiPlatformInterruptClear
+             24 -> SiiPlatformInterruptDisable
+             24 -> SiiPlatformInterruptEnable
+             24 -> SiiPlatformInterruptPinStateGet
+             24 -> SiiPlatformInterruptStateGet
+             24 -> SiiRegRead
+             24 -> SiiRegWrite
+             24 -> SiiRepeaterInstanceSet
+             24 -> SiiTxInstanceSet
+        0  SiiDrvDeviceMpResDetectionEnable
+              0 -> SiiRegBitsSet
+       32  SiiDrvDeviceNonVolatileInitialize
+             32 -> SiiDrvEdidRxIsBootComplete
+              0 -> SiiDrvNvramNonVolatileRead
+             32 -> SiiDrvNvramNonVolatileRead
+             32 -> SiiDrvNvramNonVolatileWrite
+             32 -> SiiRegBitsSet
+             32 -> SiiRegRead
+             32 -> SiiRegWrite
+       16  SiiDrvDevicePowerUpBoot
+             16 -> Debug_printDebug
+             16 -> SiiDrvDeviceNonVolatileInitialize
+             16 -> SiiDrvEdidRxIsBootComplete
+             16 -> SiiOsTimerWait
+             16 -> SiiRegRead
+             16 -> SiiRegWrite
+        8  SiiDrvDeviceRelease
+              8 -> SiiOsTimerWait
+              8 -> SiiRegModify
+        8  SiiDrvDeviceResume
+              8 -> SiiDrvArcConfigureArcPin
+        0  SiiDrvDeviceRevGet
+              0 -> SiiRegRead
+        0  SiiDrvDeviceSpResDetectionEnable
+              0 -> SiiRegBitsSet
+        8  SiiDrvDeviceStandby
+              8 -> SiiDrvDeviceMpResDetectionEnable
+              8 -> SiiDrvDeviceSpResDetectionEnable
+              8 -> SiiRegBitsSet
+              8 -> SiiRegWrite
+        8  SiiDrvDeviceStart
+              8 -> SiiDrvRxHpeStateSet
+        0  SiiDrvDeviceStatus
+        8  SiiDrvVideoMute
+              8 -> SiiDrvSwitchStateGet
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      48  ?<Constant " NVRAM Boot Failed. F...">
+       4  ??DataTable8
+       4  ??DataTable8_1
+       4  ??DataTable8_2
+       4  ??DataTable8_3
+       4  ??DataTable8_4
+       4  ??DataTable8_5
+       8  ??Subroutine4_0
+      10  ?Subroutine0
+      10  ?Subroutine1
+       8  ?Subroutine2
+      12  ?Subroutine3
+       4  SiiDrvDeviceConfigure
+       8  SiiDrvDeviceGetLastResult
+      22  SiiDrvDeviceIdGet
+     122  SiiDrvDeviceInfo
+     214  SiiDrvDeviceInitialize
+     340  SiiDrvDeviceManageInterrupts
+      10  SiiDrvDeviceMpResDetectionEnable
+     356  SiiDrvDeviceNonVolatileInitialize
+      98  SiiDrvDevicePowerUpBoot
+      28  SiiDrvDeviceRelease
+      16  SiiDrvDeviceResume
+       6  SiiDrvDeviceRevGet
+      10  SiiDrvDeviceSpResDetectionEnable
+     100  SiiDrvDeviceStandby
+      14  SiiDrvDeviceStart
+      14  SiiDrvDeviceStatus
+      56  SiiDrvVideoMute
+      16  deviceDrvInstance
+     256  dispData
+     336  initRegsList
+       4  pDrvDevice
+
+ 
+   272 bytes in section .bss
+   340 bytes in section .data
+ 1 538 bytes in section .text
+ 
+ 1 538 bytes of CODE memory
+   612 bytes of DATA memory
+
+Errors: none
+Warnings: 3

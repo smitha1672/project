@@ -1,0 +1,336 @@
+#include "Defs.h"
+#include "Debug.h"
+#include "freertos_conf.h"
+#include "freertos_task.h"
+#include "freertos_typedef.h"
+#include "UIDeviceManager.h"
+#include "HT68F30.h"
+//______________________________________________________________________________
+//______________________________________________________________________________
+
+/*  Sound Bar LED S3851
+level:0~                               23  24 ~27
+    _____________________________________________
+   |  *  *  *  *  *  *  *  *  *  *  *  *   *  *  |   
+      C  B  A  9  8  7  6  5  4  3  2  1 | D  E   
+               LED_VOL_NUMBER              LED_FORMAT_NUMBER
+*/
+#define UI_LED_START   0
+#define UI_LED_END     27
+#define UI_VOL_START   0
+#define UI_VOL_END     23
+#define UI_FOM_START   24
+#define UI_FOM_END     27
+#define UI_DD_START    24
+#define UI_DD_END      25
+#define UI_DTS_START   26
+#define UI_DTS_END     27
+#define UI_PRO_START   8  /*Process mode*/
+#define UI_PRO_END     15
+
+#define UI_CENTER_GAIN 6
+
+//______________________________________________________________________________
+extern LED_OBJECT *pLED_ObjCtrl;
+
+//______________________________________________________________________________
+/*static variable*/
+
+//______________________________________________________________________________
+//static API header
+
+static void UIDeviceManager_handleCommand( void *parms );
+void UIDeviceManager_CreateTask( void );
+static void UIDeviceManager_Exception_handleCommand( xUIExceptionEvents UIExcept );
+
+const UI_DEV_MANAGER_OBJECT UDM_ObjCtrl =
+{
+    UIDeviceManager_CreateTask,
+    UIDeviceManager_handleCommand,
+    UIDeviceManager_Exception_handleCommand
+};
+
+const UI_DEV_MANAGER_OBJECT *pUDM_ObjCtrl = &UDM_ObjCtrl;
+
+static void UIDeviceManager_handleCommand( void *parms )
+{
+    if ( parms == NULL )
+        return;        
+    
+    xHMISystemParams* pSystemParms = (xHMISystemParams*)parms;
+
+    switch( pSystemParms->sys_event )
+    {
+        case SYS_EVENT_SYSTEM_UP:
+        case SYS_EVENT_CEC_SYSTEM_UP:
+        {
+            pLED_ObjCtrl->LightConverter(UI_VOL_START, 1);
+        }
+            break;
+
+        case SYS_EVENT_SYSTEM_DOWN:
+        {
+            pLED_ObjCtrl->DarkConverter(UI_LED_START,UI_LED_END);
+        }
+            break;    
+
+        case SYS_EVENT_SEL_SRC:
+        {
+            pLED_ObjCtrl->DarkConverter(UI_FOM_START,UI_FOM_END);/* Clean formate led */
+            if (pSystemParms->input_src<=5)
+            {
+                /*Smith fixes bug: when AUX1 is enum 0, and (0-1) is negative value, it makes system crash*/
+                pLED_ObjCtrl->BlinkFadeToDarkConverter((pSystemParms->input_src-AUDIO_SOURCE_AUX1)*4,(pSystemParms->input_src-AUDIO_SOURCE_AUX1)*4+3,5,3,1);
+            }
+            else if (pSystemParms->input_src>5 && pSystemParms->input_src<=10)
+            {
+                pLED_ObjCtrl->BlinkFadeToDarkConverter(UI_LED_START,(pSystemParms->input_src-AUDIO_SOURCE_AUX1-5)*4+7,5,3,1);
+                pLED_ObjCtrl->CleanLED(4,(pSystemParms->input_src-5)*4+3,0,FALSE);
+            }    
+        }
+            break;
+        case SYS_EVENT_VOLUME_SET:
+        {
+            pLED_ObjCtrl->FadeToDarkConverter( UI_LED_START, pSystemParms->master_gain,15,TRUE,FALSE);
+        }
+            break;
+
+        case SYS_EVENT_VOLUME_MUTE_SET:
+        {
+            if (pSystemParms->mute == TRUE)
+            {
+                pLED_ObjCtrl->BreathConverter( UI_LED_START, pSystemParms->master_gain + (pSystemParms->master_gain+1)%2);
+            }
+            else
+            {
+                pLED_ObjCtrl->FadeToDarkConverter( UI_LED_START , pSystemParms->master_gain,15,TRUE,FALSE); 
+            }
+        }
+            break;
+
+        case SYS_EVENT_BASS_SET:
+        {
+            if(pSystemParms->bass_gain>UI_CENTER_GAIN)
+            {
+                pLED_ObjCtrl->FadeToDarkConverter( 12+ 2*(pSystemParms->bass_gain-7),13 + 2*(pSystemParms->bass_gain-7) ,15,TRUE,TRUE);
+            }
+            else if (pSystemParms->bass_gain<UI_CENTER_GAIN)
+            {
+                pLED_ObjCtrl->FadeToDarkConverter( 2*(pSystemParms->bass_gain) ,1+ 2*(pSystemParms->bass_gain),15,TRUE,TRUE);
+            }
+            else
+            {
+                pLED_ObjCtrl->FadeToDarkConverter( 10 , 13 ,15,TRUE,TRUE);
+            }
+            
+        }
+            break;
+
+        case SYS_EVENT_TREBLE_SET:
+        {
+            if(pSystemParms->treble_gain>UI_CENTER_GAIN)
+            {
+                pLED_ObjCtrl->FadeToDarkConverter( 12+ 2*(pSystemParms->treble_gain-7),13 + 2*(pSystemParms->treble_gain-7) ,15,TRUE,TRUE);
+            }
+            else if (pSystemParms->treble_gain<UI_CENTER_GAIN)
+            {
+                pLED_ObjCtrl->FadeToDarkConverter( 2*(pSystemParms->treble_gain) ,1+ 2*(pSystemParms->treble_gain),15,TRUE,TRUE);
+            }
+            else
+            {
+                pLED_ObjCtrl->FadeToDarkConverter( 10 , 13 ,15,TRUE,TRUE);
+            }
+            
+        }
+            break;
+            
+        case SYS_EVENT_SUB_SET:
+        {
+            if(pSystemParms->sub_gain>UI_CENTER_GAIN)
+            {
+                pLED_ObjCtrl->FadeToDarkConverter( 12+ 2*(pSystemParms->sub_gain-7),13 + 2*(pSystemParms->sub_gain-7) ,15,TRUE,TRUE);
+            }
+            else if (pSystemParms->sub_gain<UI_CENTER_GAIN)
+            {
+                pLED_ObjCtrl->FadeToDarkConverter( 2*(pSystemParms->sub_gain) ,1+ 2*(pSystemParms->sub_gain),15,TRUE,TRUE);
+            }
+            else
+            {
+                pLED_ObjCtrl->FadeToDarkConverter( 10 , 13 ,15,TRUE,TRUE);
+            }
+
+            }
+            break;
+            
+        case SYS_EVENT_CENTER_SET:
+        {
+            if(pSystemParms->center_gain>UI_CENTER_GAIN)
+            {
+                pLED_ObjCtrl->FadeToDarkConverter( 12+ 2*(pSystemParms->center_gain-7),13 + 2*(pSystemParms->center_gain-7) ,15,TRUE,TRUE);
+            }
+            else if (pSystemParms->center_gain<UI_CENTER_GAIN)
+            {
+                pLED_ObjCtrl->FadeToDarkConverter( 2*(pSystemParms->center_gain) ,1+ 2*(pSystemParms->center_gain),15,TRUE,TRUE);
+            }
+            else
+            {
+                pLED_ObjCtrl->FadeToDarkConverter( 10 , 13 ,15,TRUE,TRUE);
+            }
+            
+        }
+            break;
+            
+        case SYS_EVENT_LSRS_SET:
+        {
+            if(pSystemParms->LsRs_gain>UI_CENTER_GAIN)
+            {
+                pLED_ObjCtrl->FadeToDarkConverter( 12+ 2*(pSystemParms->LsRs_gain-7),13 + 2*(pSystemParms->LsRs_gain-7) ,15,TRUE,TRUE);
+            }
+            else if (pSystemParms->LsRs_gain<UI_CENTER_GAIN)
+            {
+                pLED_ObjCtrl->FadeToDarkConverter( 2*(pSystemParms->LsRs_gain) ,1+ 2*(pSystemParms->LsRs_gain),15,TRUE,TRUE);
+            }
+            else
+            {
+                pLED_ObjCtrl->FadeToDarkConverter( 10 , 13 ,15,TRUE,TRUE);
+            }
+            
+        }
+            break;
+                
+        case SYS_EVENT_BALANCE_SET:
+        {
+            if(pSystemParms->balance>UI_CENTER_GAIN)
+            {
+                pLED_ObjCtrl->FadeToDarkConverter( 12+ 2*(pSystemParms->balance-7),13 + 2*(pSystemParms->balance-7) ,15,TRUE,TRUE);
+            }
+            else if (pSystemParms->balance<UI_CENTER_GAIN)
+            {
+                pLED_ObjCtrl->FadeToDarkConverter( 2*(pSystemParms->balance) ,1+ 2*(pSystemParms->balance),15,TRUE,TRUE);
+            }
+            else
+            {
+                pLED_ObjCtrl->FadeToDarkConverter( 10 , 13 ,15,TRUE,TRUE);
+            }
+            
+        }
+            break;
+            
+        case SYS_EVENT_SRS_TRUVOL_SET:
+        {
+            pLED_ObjCtrl->FadeToDarkConverter( UI_PRO_START,UI_PRO_END,30,pSystemParms->srs_truvol,TRUE);
+        }
+            break;
+            
+        case SYS_EVENT_SRS_TSHD_SET:
+        {
+            pLED_ObjCtrl->FadeToDarkConverter( UI_PRO_START,UI_PRO_END,30,pSystemParms->srs_tshd,TRUE);
+        }
+            break;
+
+        case SYS_EVENT_NIGHT_MODE_SET:
+        {
+            pLED_ObjCtrl->FadeToDarkConverter( UI_PRO_START,UI_PRO_END,100,pSystemParms->night_mode,TRUE);
+        }
+            break;
+
+        case SYS_EVENT_AV_DELAY_SET:
+        {
+            pLED_ObjCtrl->FadeToDarkConverter( UI_VOL_START , pSystemParms->av_delay,15,TRUE,FALSE);
+        }
+            break;
+            
+        case SYS_EVENT_SYSTEM_RESET:
+        {
+            pLED_ObjCtrl->DarkConverter(UI_FOM_START,UI_FOM_END);
+            pLED_ObjCtrl->Flashing(UI_VOL_START, UI_VOL_END,8, 3,FALSE); 
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+/* TODO: change to Q */
+static void UIDeviceManager_Exception_handleCommand( xUIExceptionEvents UIExcept)
+{
+    switch( UIExcept )
+    {
+        case UI_EVENT_PCM:
+        {
+            pLED_ObjCtrl->DarkConverter(UI_FOM_START,UI_FOM_END);
+        }
+            break;
+    
+        case UI_EVENT_DOLBY:
+        {
+            pLED_ObjCtrl->DarkConverter(UI_DTS_START,UI_DTS_END);
+            pLED_ObjCtrl->FadeToDarkConverter( UI_DD_START,UI_DD_END,70,TRUE,FALSE);
+        }
+            break;
+            
+        case UI_EVENT_DTS:
+        {
+            pLED_ObjCtrl->DarkConverter(UI_DD_START,UI_DD_END);
+            pLED_ObjCtrl->FadeToDarkConverter( UI_DTS_START,UI_DTS_END,70,TRUE,FALSE);
+        }
+            break;
+
+        case UI_EVENT_BT_PAIRING:
+        case UI_EVENT_RF_PAIRING:
+        {
+            pLED_ObjCtrl->DarkConverter(UI_FOM_START,UI_FOM_END);
+            pLED_ObjCtrl->ScanningConverter(UI_VOL_START, UI_VOL_END);  //pUDM_ObjCtrl->ExceptionSendEvent(UI_EVENT_BT_PAIRED);
+        }
+            break;
+
+        case UI_EVENT_BT_PAIRED:
+        {
+            pLED_ObjCtrl->DarkConverter(UI_FOM_START,UI_FOM_END);
+            pLED_ObjCtrl->Flashing(UI_VOL_START, UI_VOL_END,5, 2,TRUE); //pUDM_ObjCtrl->ExceptionSendEvent(UI_EVENT_BT_PAIRED);
+        }
+            break;
+            
+        case UI_EVENT_RF_PAIRED:
+        {
+            pLED_ObjCtrl->DarkConverter(UI_FOM_START,UI_FOM_END);
+            pLED_ObjCtrl->Flashing(UI_VOL_START, UI_VOL_END,5, 3,TRUE); //pUDM_ObjCtrl->ExceptionSendEvent(UI_EVENT_RF_PAIRED);
+        }
+            break;
+    
+
+        case UI_EVENT_ENTER_DEMO1:
+        {
+            pLED_ObjCtrl->DarkConverter(UI_FOM_START,UI_FOM_END);
+            pLED_ObjCtrl->Flashing(UI_VOL_START, UI_VOL_END,5, 1,TRUE); 
+        }
+            break;    
+
+        case UI_EVENT_ENTER_DEMO2:
+        {
+            pLED_ObjCtrl->DarkConverter(UI_FOM_START,UI_FOM_END);
+            pLED_ObjCtrl->Flashing(UI_VOL_START, UI_VOL_END,5, 2,TRUE); 
+        }
+            break;
+
+        case UI_EVENT_ENTER_DEMO3:
+        {
+            pLED_ObjCtrl->DarkConverter(UI_FOM_START,UI_FOM_END);
+            pLED_ObjCtrl->Flashing(UI_VOL_START, UI_VOL_END,5, 3,TRUE); 
+        }
+            break;
+
+        case UI_EVENT_EXIT_DEMO:
+        {
+            pLED_ObjCtrl->DarkConverter(UI_FOM_START,UI_FOM_END);
+            pLED_ObjCtrl->Flashing(UI_VOL_START, UI_VOL_END,5, 4,FALSE); 
+        }
+            break;
+    }
+}
+
+void UIDeviceManager_CreateTask( void )
+{    
+    pLED_ObjCtrl->CreateTask();
+}
+

@@ -1,0 +1,1060 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:23:32 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\cpi_drv\si_drv_c #
+#                    pi.c                                                     #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\cpi_drv\si_drv_c #
+#                    pi.c -D S4051A -D DEBUG -D FREE_RTOS -D STM32F40_41xxx   #
+#                    -D USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D          #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_drv_cpi.lst                                        #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_drv_cpi.o                                           #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\driver\cpi_drv\si_drv_cpi.c
+      1          //***************************************************************************
+      2          //!file     si_drv_cpi.c
+      3          //!brief    Silicon Image CPI Driver.
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2002-2012, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include "string.h"
+     14          #include "si_drv_cpi_internal.h"
+     15          #include "si_regs_tpi953x.h"
+     16          #include "si_regs_cpi.h"
+     17          #include "si_cec_enums.h"
+     18          
+     19          //------------------------------------------------------------------------------
+     20          //  Driver Data
+     21          //------------------------------------------------------------------------------
+     22          
+     23          //------------------------------------------------------------------------------
+     24          //  CPI Driver Instance Data
+     25          //------------------------------------------------------------------------------
+     26          
+     27          CpiInstanceData_t cpiInstance[SII_NUM_CPI] =
+     28          {
+     29          {
+     30              0,                          // structVersion
+     31              0,                          // instanceIndex
+     32              SII_SUCCESS,                // lastResultCode
+     33              0,                          // statusFlags
+     34              {0,0,0,0},                  // cecStatus
+     35              CEC_LOGADDR_UNREGORBC,      // logicalAddr
+     36              {0, 0, 0, 0, {{0,0,{0},0,0,0}}},    // msgQueueOut
+     37              0,                          // *pLogger
+     38          },
+     39          /*{
+     40              0,                          // structVersion
+     41              1,                          // instanceIndex;
+     42              SII_SUCCESS,                // lastResultCode
+     43              0,                          // statusFlags
+     44              {0,0,0,0},                  // cecStatus
+     45              CEC_LOGADDR_UNREGORBC,      // logicalAddr
+     46              {0, 0, 0, 0, {{0,0,{0},0,0,0}}},    // msgQueueOut
+     47              0,                          // *pLogger
+     48          }*/
+     49          };
+     50          CpiInstanceData_t *pCpi = &cpiInstance[0];
+     51          
+     52          static uint8_t l_devTypes [16] =
+     53          {
+     54              CEC_LOGADDR_TV,
+     55              CEC_LOGADDR_RECDEV1,
+     56              CEC_LOGADDR_RECDEV1,
+     57              CEC_LOGADDR_TUNER1,
+     58              CEC_LOGADDR_PLAYBACK1,
+     59              CEC_LOGADDR_AUDSYS,
+     60              CEC_LOGADDR_PURE_SWITCH,
+     61              CEC_LOGADDR_VIDEO_PROCESSOR,
+     62              CEC_LOGADDR_PLAYBACK2,
+     63              CEC_LOGADDR_RECDEV1,
+     64              CEC_LOGADDR_TUNER1,
+     65              CEC_LOGADDR_PLAYBACK3,
+     66              CEC_LOGADDR_RECDEV2,
+     67              CEC_LOGADDR_RECDEV2,
+     68              CEC_LOGADDR_TV,
+     69              CEC_LOGADDR_TV
+     70          };
+     71          
+     72          //------------------------------------------------------------------------------
+     73          // Function:    SiiDrvCpiInitialize
+     74          //! @brief      Initialize the CPI hardware
+     75          //              Note that the CPI hardware is left disabled.  It must be enabled
+     76          //              by calling SiiDrvCpiResume()
+     77          // Parameters:  none
+     78          // Returns:     It returns true if the initialization is successful, or false
+     79          //              if some failure occurred.
+     80          //------------------------------------------------------------------------------
+     81          
+     82          bool_t SiiDrvCpiInitialize ( void )
+     83          {
+     84              bool_t success = true;
+     85          
+     86              // Initialize current CEC instance.
+     87          
+     88              if ( !SiiDrvCpiSetLogicalAddr( pCpi->logicalAddr ))
+     89              {
+     90                  success = false;
+     91                  DEBUG_PRINT( MSG_ERR, ("\n Cannot init CPI/CEC"));
+     92              }
+     93          
+     94              pCpi->statusFlags   = 0;
+     95          
+     96              return( success );
+     97          }
+     98          
+     99          //------------------------------------------------------------------------------
+    100          // Function:    SiiDrvCpiEnable
+    101          //! @brief      Enable the CPI hardware and interrupts for the current instance.
+    102          // Parameters:  none
+    103          // Returns:     none
+    104          //
+    105          // API NOTE:    The SiI9535 Tx1 module must be initialized prior to calling this
+    106          //              function.  It does not have to be enabled, just initialized.
+    107          //------------------------------------------------------------------------------
+    108          
+    109          void SiiDrvCpiEnable ( void )
+    110          {
+    111              // Two types of CEC in Sii9535, with slightly different enable controls
+    112              if ( pCpi->instanceIndex == 0 )
+    113              {
+    114                  SiiRegBitsSet( REG_SYS_RESET_2, BIT_CEC_M_SRST, false );       // Enable Main CEC
+    115              }
+    116              SiiRegWrite( REG_CEC_CONFIG_CPI, CLEAR_BITS );
+    117          
+    118              // Clear any pre-existing junk from the RX FIFO
+    119          
+    120              SiiRegBitsSet( REG_CEC_RX_CONTROL, BIT_CLR_RX_FIFO_ALL, true );
+    121          
+    122              // Clear any existing interrupts
+    123          
+    124              SiiRegBitsSet( REG_CEC_INT_STATUS_0, BIT_RX_MSG_RECEIVED | BIT_TX_FIFO_EMPTY | BIT_TX_MESSAGE_SENT, true );
+    125              SiiRegBitsSet( REG_CEC_INT_STATUS_1, BIT_FRAME_RETRANSM_OV | BIT_SHORT_PULSE_DET | BIT_START_IRREGULAR | BIT_RX_FIFO_OVERRUN, true );
+    126          
+    127              // Enable the interrupts within the CEC hardware block
+    128          
+    129              SiiRegBitsSet( REG_CEC_INT_ENABLE_0, BIT_RX_MSG_RECEIVED | BIT_TX_FIFO_EMPTY | BIT_TX_MESSAGE_SENT, true );
+    130              SiiRegBitsSet( REG_CEC_INT_ENABLE_1, BIT_FRAME_RETRANSM_OV | BIT_SHORT_PULSE_DET | BIT_START_IRREGULAR | BIT_RX_FIFO_OVERRUN, true );
+    131          
+    132              pCpi->statusFlags   &= ~SiiCPI_CEC_DISABLED;
+    133          }
+    134          
+    135          //------------------------------------------------------------------------------
+    136          // Function:    SiiDrvCpiDisable
+    137          //! @brief      Disable the CPI hardware and interrupts for the current instance.
+    138          // Parameters:  none
+    139          // Returns:     none
+    140          //------------------------------------------------------------------------------
+    141          
+    142          void SiiDrvCpiDisable ( void )
+    143          {
+    144              // Two types of CEC in Sii9535, with slightly different enable controls
+    145          
+    146              if ( pCpi->instanceIndex == 0 )
+    147              {
+    148                  SiiRegBitsSet( REG_SYS_RESET_2, BIT_CEC_M_SRST, true );     // Disable RX CEC
+    149              }
+    150          
+    151              pCpi->statusFlags   |= SiiCPI_CEC_DISABLED;
+    152          }
+    153          
+    154          //------------------------------------------------------------------------------
+    155          // Function:    SiiDrvCpiStatus
+    156          // Description: Returns a status flag word containing CPI-specific
+    157          //				information about the state of the device.
+    158          // Parameters:  none
+    159          // Returns:     Sixteen-bit status flags word for the CPI Component
+    160          //------------------------------------------------------------------------------
+    161          
+    162          uint16_t SiiDrvCpiStatus ( void )
+    163          {
+    164              uint16_t statusFlags = pCpi->statusFlags;
+    165          
+    166              pCpi->statusFlags &= ~SiiCPI_CEC_INT;   // INT flag only valid first time it is read.
+    167          	return( statusFlags );
+    168          }
+    169          
+    170          //------------------------------------------------------------------------------
+    171          //! @brief  Places the CPI component into standby mode if available
+    172          //! @return true if the CPI component entered standby mode successfully,
+    173          //!         or false if some failure occurred.
+    174          //------------------------------------------------------------------------------
+    175          bool_t SiiDrvCpiStandby ( void )
+    176          {
+    177              int i;
+    178          
+    179              // Setup the auto feature abort logic for this device by
+    180              // starting out with all opcodes set to feature abort mode.
+    181              for ( i = 0; i < 32; i++ )
+    182              {
+    183                  SiiRegWrite( CEC_OP_ABORT_0 + i, 0xFF );
+    184              }
+    185          
+    186              // Now enable those opcodes we want for the wakeup feature.
+    187              switch ( l_devTypes[pCpi->logicalAddr])
+    188              {
+    189                  case CEC_LOGADDR_TV:
+    190                      SiiRegWrite( CEC_OP_ABORT_0,    ~0x10 );    // CECOP_IMAGE_VIEW_ON
+    191                      SiiRegWrite( CEC_OP_ABORT_1,    ~0x20 );    // CECOP_TEXT_VIEW_ON
+    192                      break;
+    193                  case CEC_LOGADDR_AUDSYS:
+    194                      SiiRegWrite( CEC_OP_ABORT_14,   ~0x01 );    // CECOP_SYSTEM_AUDIO_MODE_REQUEST
+    195                      break;
+    196                  case CEC_LOGADDR_PLAYBACK1:
+    197                  case CEC_LOGADDR_PLAYBACK2:
+    198                      SiiRegWrite( CEC_OP_ABORT_8,    ~0x06 );    // CECOP_PLAY && CECOP_DECK_CONTROL
+    199                      break;
+    200              }
+    201          
+    202              // Everybody must respond to GIVE_DEVICE_POWER_STATUS
+    203              SiiRegWrite( CEC_OP_ABORT_17, (uint8_t)~0x80 );              // CECOP_GIVE_DEVICE_POWER_STATUS
+    204          
+    205          #if INC_CEC_SWITCH
+    206              SiiRegWrite( CEC_OP_ABORT_16,   ~0x41 );            // CECOP_ACTIVE_SOURCE && CECOP_SET_STREAM_PATH
+    207          #endif
+    208          
+    209          	return( true );
+    210          }
+    211          
+    212          //------------------------------------------------------------------------------
+    213          // Function:    SiiDrvCpiResume
+    214          // Description: Causes operation of the CPI component to return to the state
+    215          //				it was prior to the previous call to SiiCpiStandby.
+    216          // Parameters:  none
+    217          // Returns:     true if the CPI component successfully exited standby mode,
+    218          //				or false if some failure occurred.
+    219          //------------------------------------------------------------------------------
+    220          
+    221          bool_t SiiDrvCpiResume ( void )
+    222          {
+    223              int i;
+    224          
+    225              // Setup the auto feature abort logic for this device by
+    226              // starting out with all opcodes set to NOT feature abort mode.
+    227              for ( i = 0; i < 32; i++ )
+    228              {
+    229                  SiiRegWrite( CEC_OP_ABORT_0 + i, 0x00 );
+    230              }
+    231          
+    232              // Now set to feature abort the CECOP_ABORT opcode
+    233              SiiRegWrite( CEC_OP_ABORT_31,   0x80 );    // CECOP_ABORT
+    234          
+    235          	return( true );
+    236          }
+    237          
+    238          //------------------------------------------------------------------------------
+    239          // Function:    SiiDrvCpiInstanceGet
+    240          // Description: returns the index of the current CPI instance
+    241          // Parameters:  none
+    242          // Returns:     Index of the current CPI instance
+    243          //------------------------------------------------------------------------------
+    244          
+    245          uint_t SiiDrvCpiInstanceGet ( void )
+    246          {
+    247          
+    248              return( pCpi->instanceIndex );
+    249          }
+    250          
+    251          //------------------------------------------------------------------------------
+    252          // Function:    SiiDrvCpiInstanceSet
+    253          // Description: Set the component global data pointer to the requested instance.
+    254          // Parameters:  instanceIndex
+    255          // Returns:     true if legal index, false if index value is illegal.
+    256          //------------------------------------------------------------------------------
+    257          
+    258          bool_t SiiDrvCpiInstanceSet ( uint_t instanceIndex )
+    259          {
+    260              if ( instanceIndex < SII_NUM_CPI )
+    261              {
+    262                  pCpi = &cpiInstance[ instanceIndex];
+    263          
+    264                  // Set instance for CRA pages used.
+    265                  SiiRegInstanceSet( PP_PAGE_B,   instanceIndex );
+    266                  SiiRegInstanceSet( CPI_PAGE,    instanceIndex );
+    267                  SiiRegInstanceSet( TX_PAGE_TPI, instanceIndex );
+    268                  return( true );
+    269              }
+    270          
+    271              return( false );
+    272          }
+    273          
+    274          //------------------------------------------------------------------------------
+    275          // Function:    SiiDrvCpiGetLastResult
+    276          // Description: Returns the result of the last SiiCpixxx function called
+    277          // Parameters:  none
+    278          // Returns:     Result of last CPI component function.
+    279          //------------------------------------------------------------------------------
+    280          
+    281          uint_t SiiDrvCpiGetLastResult ( void )
+    282          {
+    283          
+    284          	return( pCpi->lastResultCode );
+    285          }
+    286          
+    287          //------------------------------------------------------------------------------
+    288          // Function:    SiiCpiRegisterLogger
+    289          // Description: Register a logger callback with the current CPI instance
+    290          // Parameters:  Callback function pointer
+    291          // Returns:     true if successful
+    292          //------------------------------------------------------------------------------
+    293          
+    294          bool_t SiiCpiRegisterLogger ( void (*pLogger)(SiiCpiData_t *, int, bool_t ) )
+    295          {
+    296          
+    297              pCpi->pLogger = pLogger;
+    298              return( true );
+    299          }
+    300          
+    301          //------------------------------------------------------------------------------
+    302          //! @brief  Clear the bit specifying that the cec device is virtaul.
+    303          //! @return     nothing
+    304          //------------------------------------------------------------------------------
+    305          void SiiDrvCpiClearVirtualDevBit(void)
+    306          {
+    307          	 SiiRegModify( REG_CEC_CAPTURE_ID1, BIT_VIRTUAL_DEVICE, BIT_VIRTUAL_DEVICE );
+    308          }
+    309          
+    310          //------------------------------------------------------------------------------
+    311          //! @brief  Add or remove the passed CEC logical address to the addresses
+    312          //!         responded to by the CPI subsystem.
+    313          //! @param[in]  addLa           - true - add, false - remove
+    314          //! @param[in]  logicalAddress  - CEC logical address (0-15)
+    315          //! @return     true if valid logical address parameter value
+    316          //------------------------------------------------------------------------------
+    317          bool_t SiiDrvCpiAddLogicalAddr ( bool_t addLa, uint8_t logicalAddress )
+    318          {
+    319              int     laOffset = 0;
+    320              bool_t  success = false;
+    321              uint8_t capture_address[2];
+    322          
+    323              if ( logicalAddress < 0x10 )
+    324              {
+    325                  SiiRegReadBlock( REG_CEC_CAPTURE_ID0, capture_address, 2 );
+    326          
+    327                  // Adjust for second byte of capture map
+    328                  if ( logicalAddress > 7 )
+    329                  {
+    330                      laOffset = 1;
+    331                      logicalAddress -= 8;
+    332                  }
+    333          
+    334                  if ( addLa )
+    335                  {
+    336                      capture_address[ laOffset] |= (1 << logicalAddress);
+    337                  }
+    338                  else
+    339                  {
+    340                      capture_address[ laOffset] &= ~(1 << logicalAddress);
+    341                  }
+    342          
+    343                  // Set new capture address map
+    344                  SiiRegWriteBlock( REG_CEC_CAPTURE_ID0, capture_address, 2 );
+    345                  success = true;
+    346              }
+    347          
+    348              return( success );
+    349          }
+    350          
+    351          //------------------------------------------------------------------------------
+    352          //! @brief  Configure the CPI subsystem to respond to and transmit as a
+    353          //!         specific CEC logical address.
+    354          //! @param[in]  logicalAddress - CEC logical address or 0xFF if unregistered
+    355          //! @return     always true
+    356          //------------------------------------------------------------------------------
+    357          bool_t SiiDrvCpiSetLogicalAddr ( uint8_t logicalAddress )
+    358          {
+    359              uint8_t capture_address[2];
+    360              uint8_t capture_addr_sel = 0x01;
+    361          
+    362              capture_address[0] = 0;
+    363              capture_address[1] = 0;
+    364          //    SiiRegReadBlock( REG_CEC_CAPTURE_ID0, capture_address, 2 );
+    365              if ( logicalAddress == 0xFF )
+    366              {
+    367                  logicalAddress = 0x0F;  // unregistered LA
+    368              }
+    369              else if ( logicalAddress < 8 )
+    370              {
+    371                  capture_addr_sel = capture_addr_sel << logicalAddress;
+    372                  capture_address[0] |= capture_addr_sel;
+    373              }
+    374              else
+    375              {
+    376                  capture_addr_sel   = capture_addr_sel << ( logicalAddress - 8 );
+    377                  capture_address[1] |= capture_addr_sel;
+    378              }
+    379          
+    380              // Set Capture Address
+    381              SiiRegWriteBlock( REG_CEC_CAPTURE_ID0, capture_address, 2 );
+    382          
+    383              // Set device logical address for transmit
+    384              SiiRegWrite( REG_CEC_TX_INIT, logicalAddress );
+    385          
+    386              pCpi->logicalAddr = logicalAddress;
+    387              return( true );
+    388          }
+    389          
+    390          //------------------------------------------------------------------------------
+    391          // Function:    SiiDrvCpiServiceWriteQueue
+    392          // Description: If there is a CEC message waiting in the write queue and the
+    393          //              hardware TX buffer is empty, send the message.
+    394          //------------------------------------------------------------------------------
+    395          
+    396          void SiiDrvCpiServiceWriteQueue ( void )
+    397          {
+    398              SiiCpiData_t *pOutMsg;
+    399              uint8_t cecStatus[2];
+    400          
+    401              do
+    402              {
+    403                  // No message in the queue?  Get out.
+    404                  if ( pCpi->msgQueueOut.queue[ pCpi->msgQueueOut.outIndex ].txState == SiiTX_IDLE )
+    405                  {
+    406                      break;
+    407                  }
+    408          
+    409                  // If last TX command is still being sent (waiting for ACK/NACK), check timeout
+    410                  if ( pCpi->msgQueueOut.queue[ pCpi->msgQueueOut.outIndex ].txState == SiiTX_SENDING)
+    411                  {
+    412                      // If a timeout has occurred, mark the current message as failed.
+    413                      // This will be picked up by the SiiDrvCpiHwStatusGet function and passed to the CEC controller
+    414                      if (( SiiOsTimerTotalElapsed() - pCpi->msgQueueOut.msStart ) >= pCpi->msgQueueOut.msTimeout )
+    415                      {
+    416                          pCpi->msgQueueOut.queue[ pCpi->msgQueueOut.outIndex ].txState = SiiTX_TIMEOUT;
+    417          
+    418                          if ( pCpi->msgQueueOut.queue[pCpi->msgQueueOut.outIndex].opcode != CECOP_SII_SENDPING )
+    419                          {
+    420                              DEBUG_PRINT( CPI_MSG_DBG, "%s:CEC Message [W%02X][%02X] send timeout!\n",
+    421                                  pCpi->instanceIndex ? "TX" : "RX",
+    422                                  pCpi->msgQueueOut.queue[pCpi->msgQueueOut.outIndex].srcDestAddr,
+    423                                  pCpi->msgQueueOut.queue[pCpi->msgQueueOut.outIndex].opcode
+    424                                  );
+    425                          }
+    426                          pCpi->statusFlags |= SiiCPI_CEC_STATUS_VALID;
+    427                          break;
+    428                      }
+    429                  }
+    430          
+    431                  // If NOT waiting to be sent, get out.
+    432                  if ( pCpi->msgQueueOut.queue[ pCpi->msgQueueOut.outIndex ].txState != SiiTX_WAITCMD)
+    433                  {
+    434                      break;
+    435                  }
+    436          
+    437                  // Current queue entry is waiting to be sent, so send it
+    438                  pCpi->msgQueueOut.queue[ pCpi->msgQueueOut.outIndex ].txState = SiiTX_SENDING;
+    439                  pOutMsg = &pCpi->msgQueueOut.queue[ pCpi->msgQueueOut.outIndex ];
+    440          
+    441                  // Clear Tx-related interrupts; write 1 to bits to be cleared.
+    442                  cecStatus[0] = BIT_TX_BUFFER_FULL | BIT_TX_MESSAGE_SENT | BIT_TX_FIFO_EMPTY;
+    443                  cecStatus[1] = BIT_FRAME_RETRANSM_OV;
+    444                  SiiRegWriteBlock( REG_CEC_INT_STATUS_0, cecStatus, 2 );
+    445          
+    446                  // Special handling for a special opcode.
+    447          
+    448                  if ( pOutMsg->opcode == CECOP_SII_SENDPING )
+    449                  {
+    450                      SiiRegWrite( REG_CEC_TX_DEST, BIT_SEND_POLL | pOutMsg->srcDestAddr);
+    451                  }
+    452                  else
+    453                  {
+    454                      // Set the initiator to the LA specified by the srcDestAddr
+    455                      SiiRegWrite( REG_CEC_TX_INIT, (( pOutMsg->srcDestAddr >> 4) & 0x0F));
+    456          
+    457                      // Send the command
+    458                      SiiRegWrite( REG_CEC_TX_DEST, pOutMsg->srcDestAddr & 0x0F );
+    459                      SiiRegWrite( REG_CEC_TX_COMMAND, pOutMsg->opcode );
+    460                      SiiRegWriteBlock( REG_CEC_TX_OPERAND_0, pOutMsg->args, pOutMsg->argCount );
+    461                      SiiRegWrite( REG_CEC_TRANSMIT_DATA, BIT_TRANSMIT_CMD | pOutMsg->argCount );
+    462                  }
+    463          
+    464                  pCpi->msgQueueOut.msStart = SiiOsTimerTotalElapsed();
+    465          
+    466                  // If there is a logging callback, do it now.
+    467                  if ( pCpi->pLogger != 0)
+    468                  {
+    469                      (*pCpi->pLogger)( pOutMsg, pCpi->instanceIndex, true );
+    470                  }
+    471          
+    472              } while (0);
+    473          
+    474          }
+    475          
+    476          //------------------------------------------------------------------------------
+    477          // Function:    SiiDrvCpiWrite
+    478          // Description: Send CEC command via CPI register set
+    479          //
+    480          // API NOTE:    The SiiDrvCpiServiceWriteQueue() function must be called
+    481          //              periodically to send any messages queued up by this function.
+    482          //              The SiiDrvCpiHwStatusGet() function must be called to release
+    483          //              the queue from waiting for the previously sent message to complete
+    484          //------------------------------------------------------------------------------
+    485          
+    486          uint16_t SiiDrvCpiWrite( SiiCpiData_t *pMsg )
+    487          {
+    488              uint16_t    msgId = 0;
+    489              bool_t      success = true;
+    490              int         i;
+    491          
+    492              // Store the message in the output queue
+    493              if ( pCpi->msgQueueOut.queue[ pCpi->msgQueueOut.inIndex ].txState == SiiTX_IDLE )
+    494              {
+    495                  memcpy( &pCpi->msgQueueOut.queue[ pCpi->msgQueueOut.inIndex ], pMsg, sizeof( SiiCpiData_t ) );
+    496                  pCpi->msgQueueOut.msTimeout = 2000;     // timeout after 2 seconds
+    497                  pCpi->msgQueueOut.queue[ pCpi->msgQueueOut.inIndex ].txState    = SiiTX_WAITCMD;
+    498                  msgId = (pCpi->msgQueueOut.inIndex << 8) | (pMsg->opcode - 1);
+    499                  pCpi->msgQueueOut.queue[ pCpi->msgQueueOut.inIndex ].msgId      = msgId;
+    500          
+    501                  pCpi->msgQueueOut.inIndex = (pCpi->msgQueueOut.inIndex + 1) % SII_CPI_OUTPUT_QUEUE_LEN;
+    502              }
+    503              else
+    504              {
+    505                  DEBUG_PRINT( MSG_DBG, "\nSiiCpiWrite:: CEC Write Queue full!\n" );
+    506                  for ( i = 0; i < SII_CPI_OUTPUT_QUEUE_LEN; i++ )
+    507                  {
+    508                      DEBUG_PRINT( MSG_DBG, "SRCDST: %02X - Opcode: %02X\n", pCpi->msgQueueOut.queue[i].srcDestAddr, pCpi->msgQueueOut.queue[i].opcode  );
+    509                  }
+    510                  success = false;
+    511              }
+    512          
+    513              SiiDrvCpiServiceWriteQueue();  // Send the message if possible
+    514          
+    515              pCpi->lastResultCode = (success) ? RESULT_CPI_SUCCESS : RESULT_CPI_WRITE_QUEUE_FULL;
+    516              return( msgId );
+    517          }
+    518          
+    519          
+    520          //------------------------------------------------------------------------------
+    521          // Function:    SiiDrvCpiSendPing
+    522          // Description: Initiate sending a ping, and used for checking available
+    523          //              CEC devices
+    524          //------------------------------------------------------------------------------
+    525          
+    526          uint16_t SiiDrvCpiSendPing ( uint8_t destLA )
+    527          {
+    528              SiiCpiData_t cecFrame;
+    529          
+    530              // Send the ping via the normal CPI message queue.
+    531          
+    532              cecFrame.opcode         = CECOP_SII_SENDPING;
+    533              cecFrame.srcDestAddr    = destLA;
+    534              cecFrame.argCount       = 0;
+    535              return( SiiDrvCpiWrite( &cecFrame ));
+    536          }
+    537          
+    538          //------------------------------------------------------------------------------
+    539          // Function:    SiiDrvCpiRead
+    540          // Description: Reads a CEC message from the CPI read FIFO, if present.
+    541          // Returns:     true if valid message, false if an error occurred
+    542          //------------------------------------------------------------------------------
+    543          
+    544          bool_t SiiDrvCpiRead( SiiCpiData_t *pMsg )
+    545          {
+    546              bool_t    success = true;
+    547              uint8_t argCount;
+    548          
+    549              argCount = SiiRegRead( REG_CEC_RX_COUNT );
+    550          
+    551              if ( argCount & BIT_MSG_ERROR )
+    552              {
+    553                  success = false;
+    554              }
+    555              else
+    556              {
+    557                  pMsg->argCount = argCount & 0x0F;
+    558                  pMsg->srcDestAddr = SiiRegRead( REG_CEC_RX_CMD_HEADER );
+    559                  pMsg->opcode = SiiRegRead( REG_CEC_RX_OPCODE );
+    560                  if ( pMsg->argCount )
+    561                  {
+    562                      SiiRegReadBlock( REG_CEC_RX_OPERAND_0, pMsg->args, pMsg->argCount );
+    563                  }
+    564              }
+    565          
+    566              // Clear CLR_RX_FIFO_CUR;
+    567              // Clear current frame from Rx FIFO
+    568          
+    569              SiiRegModify( REG_CEC_RX_CONTROL, BIT_CLR_RX_FIFO_CUR, BIT_CLR_RX_FIFO_CUR );
+    570          
+    571              if ( success )
+    572              {
+    573                  // If there is a logging callback, do it now.
+    574          
+    575                  if ( pCpi->pLogger != 0)
+    576                  {
+    577                      (*pCpi->pLogger)( pMsg, pCpi->instanceIndex, false );
+    578                  }
+    579              }
+    580          
+    581              return( success );
+    582          }
+    583          
+    584          //------------------------------------------------------------------------------
+    585          // Function:    SiiCpiFrameCount
+    586          // Description: Return the number of CEC frames currently available
+    587          //------------------------------------------------------------------------------
+    588          
+    589          uint_t SiiDrvCpiFrameCount( void )
+    590          {
+    591          
+    592              return(( SiiRegRead( REG_CEC_RX_COUNT) & 0xF0) >> 4);
+    593          }
+    594          
+    595          //------------------------------------------------------------------------------
+    596          // Function:    SiiCpiGetLogicalAddr
+    597          // Description: Get Logical Address
+    598          //------------------------------------------------------------------------------
+    599          
+    600          uint8_t SiiDrvCpiGetLogicalAddr( void )
+    601          {
+    602              return( SiiRegRead( REG_CEC_TX_INIT));
+    603          }
+    604          
+    605          //------------------------------------------------------------------------------
+    606          // Function:    SiiDrvCpiHwStatusGet
+    607          // Description: returns CPI CEC status register info if it has been updated
+    608          //              since the last call to this function.
+    609          // Parameters:  pCpiStat - pointer to CPI hardware status for return value.
+    610          // Returns:     true if a new status was available, false if not.
+    611          //------------------------------------------------------------------------------
+    612          
+    613          bool_t  SiiDrvCpiHwStatusGet( SiiCpiStatus_t *pCpiStat )
+    614          {
+    615              memset( pCpiStat, 0, sizeof( SiiCpiStatus_t ));     // Always clear status for return
+    616              if ( pCpi->statusFlags & SiiCPI_CEC_STATUS_VALID )
+    617              {
+    618                  memcpy( pCpiStat, &pCpi->cecStatus, sizeof( SiiCpiStatus_t ));
+    619                  if ( pCpi->msgQueueOut.queue[ pCpi->msgQueueOut.outIndex ].txState == SiiTX_TIMEOUT)
+    620                  {
+    621                      // A CPI write timed out; mark it as a NACK.  Since the CPI writes
+    622                      // are serialized, there is no other TX status currently valid.
+    623                      pCpiStat->txState = SiiTX_SENDFAILED;
+    624                  }
+    625          
+    626                  // Add the message ID to the returned status
+    627          
+    628                  pCpiStat->msgId = pCpi->msgQueueOut.queue[ pCpi->msgQueueOut.outIndex ].msgId;
+    629          
+    630                  // If the status indicates an ACKed or NACKed transmission,
+    631                  // update the sent message queue so that any pending message
+    632                  // may be sent.  Note that this is the only way that a message
+    633                  // waiting in the CPI output message queue can be sent.
+    634          
+    635                  if (( pCpiStat->txState == SiiTX_SENDACKED ) || ( pCpiStat->txState == SiiTX_SENDFAILED))
+    636                  {
+    637                      // Mark this queue entry as available and bump to next entry in queue
+    638          
+    639                      pCpi->msgQueueOut.queue[ pCpi->msgQueueOut.outIndex ].txState = SiiTX_IDLE;
+    640                      pCpi->msgQueueOut.outIndex = (pCpi->msgQueueOut.outIndex + 1) % SII_CPI_OUTPUT_QUEUE_LEN;
+    641                  }
+    642          
+    643                  pCpi->statusFlags &= ~SiiCPI_CEC_STATUS_VALID;
+    644                  return( true );
+    645              }
+    646              return( false );
+    647          }
+    648          
+    649          //------------------------------------------------------------------------------
+    650          // Function:    DrvCpiProcessInterrupts
+    651          // Description: Check CPI registers for a CEC event
+    652          //------------------------------------------------------------------------------
+    653          
+    654          void DrvCpiProcessInterrupts( void )
+    655          {
+    656              uint8_t cecStatus[2];
+    657          
+    658              SiiRegReadBlock( REG_CEC_INT_STATUS_0, cecStatus, 2);
+    659          
+    660              if ( (cecStatus[0] & 0x7F) || cecStatus[1] )
+    661              {
+    662                  pCpi->cecStatus.cecError    = 0;
+    663                  pCpi->cecStatus.rxState     = 0;
+    664                  pCpi->cecStatus.txState     = 0;
+    665          
+    666                  // Clear interrupts
+    667          
+    668                  if ( cecStatus[1] & BIT_FRAME_RETRANSM_OV )
+    669                  {
+    670                      /* Flush TX, otherwise after clearing the BIT_FRAME_RETRANSM_OV */
+    671                      /* interrupt, the TX command will be re-sent.                   */
+    672          
+    673                      SiiRegModify( REG_CEC_DEBUG_3,BIT_FLUSH_TX_FIFO, BIT_FLUSH_TX_FIFO );
+    674                  }
+    675          
+    676                  // Clear interrupt bits that are set
+    677                  SiiRegWriteBlock( REG_CEC_INT_STATUS_0, cecStatus, 2 );
+    678          
+    679                  // RX Processing
+    680                  if ( cecStatus[0] & BIT_RX_MSG_RECEIVED )
+    681                  {
+    682                      pCpi->cecStatus.rxState = 1;    // Flag caller that CEC frames are present in RX FIFO
+    683                  }
+    684          
+    685                  // RX Errors processing
+    686                  if ( cecStatus[1] & BIT_SHORT_PULSE_DET )
+    687                  {
+    688                      pCpi->cecStatus.cecError |= SiiCEC_SHORTPULSE;
+    689                  }
+    690          
+    691                  if ( cecStatus[1] & BIT_START_IRREGULAR )
+    692                  {
+    693                      pCpi->cecStatus.cecError |= SiiCEC_BADSTART;
+    694                  }
+    695          
+    696                  if ( cecStatus[1] & BIT_RX_FIFO_OVERRUN )
+    697                  {
+    698                      pCpi->cecStatus.cecError |= SiiCEC_RXOVERFLOW;
+    699                  }
+    700          
+    701                  // TX Processing
+    702                  if ( cecStatus[0] & BIT_TX_MESSAGE_SENT )
+    703                  {
+    704                      pCpi->cecStatus.txState = SiiTX_SENDACKED;
+    705                  }
+    706                  if ( cecStatus[1] & BIT_FRAME_RETRANSM_OV )
+    707                  {
+    708                      pCpi->cecStatus.txState = SiiTX_SENDFAILED;
+    709                  }
+    710          
+    711                  // Indicate that an interrupt occurred and status is valid.
+    712          
+    713                  pCpi->statusFlags |= (SiiCPI_CEC_INT | SiiCPI_CEC_STATUS_VALID);
+    714              }
+    715          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       24  DrvCpiProcessInterrupts
+             24 -> SiiRegModify
+             24 -> SiiRegReadBlock
+             24 -> SiiRegWriteBlock
+        0  SiiCpiRegisterLogger
+       24  SiiDrvCpiAddLogicalAddr
+             24 -> SiiRegReadBlock
+             24 -> SiiRegWriteBlock
+        0  SiiDrvCpiClearVirtualDevBit
+              0 -> SiiRegModify
+        8  SiiDrvCpiDisable
+              8 -> SiiRegBitsSet
+        8  SiiDrvCpiEnable
+              8 -> SiiRegBitsSet
+              8 -> SiiRegWrite
+        8  SiiDrvCpiFrameCount
+              8 -> SiiRegRead
+        0  SiiDrvCpiGetLastResult
+        0  SiiDrvCpiGetLogicalAddr
+              0 -> SiiRegRead
+       12  SiiDrvCpiHwStatusGet
+             12 -> __aeabi_memclr
+             12 -> __aeabi_memcpy
+       16  SiiDrvCpiInitialize
+             16 -> SiiDrvCpiSetLogicalAddr
+        0  SiiDrvCpiInstanceGet
+        8  SiiDrvCpiInstanceSet
+              8 -> SiiRegInstanceSet
+       16  SiiDrvCpiRead
+             16 -- Indirect call
+             16 -> SiiRegModify
+             16 -> SiiRegRead
+             16 -> SiiRegReadBlock
+        8  SiiDrvCpiResume
+              8 -> SiiRegWrite
+       32  SiiDrvCpiSendPing
+             32 -> SiiDrvCpiWrite
+       24  SiiDrvCpiServiceWriteQueue
+             24 -- Indirect call
+             24 -> SiiOsTimerTotalElapsed
+             24 -> SiiRegWrite
+             24 -> SiiRegWriteBlock
+       16  SiiDrvCpiSetLogicalAddr
+             16 -> SiiRegWrite
+             16 -> SiiRegWriteBlock
+        8  SiiDrvCpiStandby
+              8 -> SiiRegWrite
+        0  SiiDrvCpiStatus
+       24  SiiDrvCpiWrite
+             24 -> SiiDrvCpiServiceWriteQueue
+             24 -> __aeabi_memcpy
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable14
+       8  ?Subroutine0
+     176  DrvCpiProcessInterrupts
+      14  SiiCpiRegisterLogger
+      68  SiiDrvCpiAddLogicalAddr
+      12  SiiDrvCpiClearVirtualDevBit
+      34  SiiDrvCpiDisable
+     106  SiiDrvCpiEnable
+      14  SiiDrvCpiFrameCount
+      10  SiiDrvCpiGetLastResult
+       8  SiiDrvCpiGetLogicalAddr
+     122  SiiDrvCpiHwStatusGet
+      30  SiiDrvCpiInitialize
+      10  SiiDrvCpiInstanceGet
+      52  SiiDrvCpiInstanceSet
+     100  SiiDrvCpiRead
+      28  SiiDrvCpiResume
+      32  SiiDrvCpiSendPing
+     230  SiiDrvCpiServiceWriteQueue
+      78  SiiDrvCpiSetLogicalAddr
+     102  SiiDrvCpiStandby
+      20  SiiDrvCpiStatus
+     118  SiiDrvCpiWrite
+     156  l_devTypes
+          pCpi
+          cpiInstance
+
+ 
+   156 bytes in section .data
+ 1 376 bytes in section .text
+ 
+ 1 376 bytes of CODE memory
+   156 bytes of DATA memory
+
+Errors: none
+Warnings: 7

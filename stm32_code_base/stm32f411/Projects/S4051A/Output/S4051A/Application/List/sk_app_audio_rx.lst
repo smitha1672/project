@@ -1,0 +1,721 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:25 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\application\sk_app_audi #
+#                    o_rx.c                                                   #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\application\sk_app_audi #
+#                    o_rx.c -D S4051A -D DEBUG -D FREE_RTOS -D                #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\sk_app_audio_rx.lst                                   #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\sk_app_audio_rx.o                                      #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\application\sk_app_audio_rx.c
+      1          //***************************************************************************
+      2          //!file     sk_app_audio_rx.c
+      3          //!brief    Wraps platform and device functions for the AUDIO_RX component
+      4          //!         and the application
+      5          //
+      6          // No part of this work may be reproduced, modified, distributed,
+      7          // transmitted, transcribed, or translated into any language or computer
+      8          // format, in any form or by any means without written permission of
+      9          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+     10          //
+     11          // Copyright 2009-2011, Silicon Image, Inc.  All rights reserved.
+     12          //***************************************************************************/
+     13          
+     14          #include "string.h"
+     15          #include "sk_application.h"
+     16          
+     17          #include "si_audio_component.h"
+     18          
+     19          #if defined ( SII_DEV_953x_PORTING_PLATFORM_DAC )
+     20          #include "si_audio_dac.h"
+     21          #endif
+     22          
+     23          #include "si_drv_gpio.h"
+     24          
+     25          #if defined ( SII_DEV_953x_PORTING_PLATFORM_PLL )
+     26          #include "si_idt_5v9885t.h"
+     27          #endif 
+     28          
+     29          #if defined ( SII_DEV_953x_PORTING_PLATFORM_LM3S5956 )
+     30          #include "si_gpio.h"
+     31          #endif 
+     32          
+     33          #if INC_CEC_SAC
+     34          #include "si_sac_main.h"
+     35          #endif
+     36          #if INC_CEC_SWITCH
+     37          #include "si_cec_switch_api.h"
+     38          #endif
+     39          
+     40          #include "cea931_keys.h"
+     41          
+     42          #if INC_RTPI
+     43          #include "si_rtpi_component.h"
+     44          //#include "si_i2c.h"
+     45          #endif
+     46          
+     47          SiiRxAudioInstanceData_t RxAudStatus;
+     48          SiiRxAudioInstanceData_t RxAudState[2];
+     49          
+     50          
+     51          enum
+     52          {
+     53          	SII_MATRIX_MUX_DISABLE,
+     54          	SII_MATRIX_MUX_ENABLE,
+     55          };
+     56          
+     57          
+     58          //------------------------------------------------------------------------------
+     59          // Function:    SkAppRxAudioConfigLayout
+     60          // Description:
+     61          // Parameters:  none
+     62          // Returns:     none
+     63          //------------------------------------------------------------------------------
+     64          static void RxAudioConfigLayout(uint8_t audLayout)
+     65          {
+     66          	
+     67              if (audLayout == SII_AUD_MULTI_CHANNEL)
+     68              {
+     69          		SiiDrvGpioPinType(SII_GPIO_PIN_1, SII_GPIO_ALT_SD1);
+     70          		SiiDrvGpioPinType(SII_GPIO_PIN_2, SII_GPIO_ALT_SD2);
+     71          		SiiDrvGpioPinType(SII_GPIO_PIN_3, SII_GPIO_ALT_SD3);
+     72              }
+     73              else
+     74              {
+     75              	SiiDrvGpioPinType(SII_GPIO_PIN_1, SII_GPIO_STANDARD);
+     76              	SiiDrvGpioPinType(SII_GPIO_PIN_2, SII_GPIO_STANDARD);
+     77              	SiiDrvGpioPinType(SII_GPIO_PIN_3, SII_GPIO_STANDARD);
+     78              }
+     79          
+     80          }
+     81          
+     82          //------------------------------------------------------------------------------
+     83          // Function:    SkAppRxAudioMuteSet
+     84          // Description:
+     85          // Parameters:  none
+     86          // Returns:     none
+     87          //------------------------------------------------------------------------------
+     88          static void RxAudioMuteSet(uint8_t chn, bool_t mute )
+     89          {
+     90              if (mute) //mute
+     91              {
+     92          #if defined ( SII_DEV_953x_PORTING_PLATFORM_DAC )    
+     93                  SiiPlatformAudioDacControl(chn, SII_AUD_POWER_DOWN);
+     94          #endif         
+     95                  RxAudioConfigLayout(SII_AUD_TWO_CHANNEL);
+     96              }
+     97          
+     98              // If SAC system is unmuted and we're not just passing through the audio,
+     99              // then allow the unmute to occur
+    100              else if ( !app.isAudioByPass
+    101          #if INC_CEC_SAC
+    102              		&& !SiiCecSacIsMuted()
+    103          #endif
+    104              		)
+    105              {
+    106          		switch (RxAudState[chn].audMode)
+    107                 	{
+    108                 		case SII_AUD_HBRA_MODE:
+    109          #if defined ( SII_DEV_953x_PORTING_PLATFORM_DAC )    
+    110                 	     	//DEBUG_PRINT( MSG_DBG, "HBRA\n");
+    111               	     	SiiPlatformAudioDacControl(chn, SII_AUD_POWER_DOWN);
+    112          #endif      	     	
+    113               	     	RxAudioConfigLayout(SII_AUD_MULTI_CHANNEL);
+    114                	     	break;
+    115                	  	case SII_AUD_DSD_MODE:
+    116          #if defined ( SII_DEV_953x_PORTING_PLATFORM_DAC )    
+    117                 	     	//DEBUG_PRINT( MSG_DBG, "DSD\n");
+    118                	  		SiiPlatformAudioDacControl(chn, SII_AUD_DSD_MODE);
+    119          #endif       	  		
+    120                	  		RxAudioConfigLayout(SII_AUD_MULTI_CHANNEL);
+    121               	  		break;
+    122                	  	case SII_AUD_PCM_MODE:
+    123                 	     	//DEBUG_PRINT( MSG_DBG, "PCM\n");
+    124          
+    125                 	     	//Program the external PLL for generate the MCLK.
+    126                 	     	if (chn == SII_AUD_RX_SUB)
+    127                 	     	{
+    128          
+    129          #if defined ( SII_DEV_953x_PORTING_PLATFORM_PLL )       	     	
+    130                 	     		//DEBUG_PRINT( MSG_ALWAYS, "Generate the MCLK for subpipe: %d\n", RxAudState[chn].audFs);
+    131                 	     		SiiPlatformExtnalAudioPllSetting( RxAudState[chn].audMclk, RxAudState[chn].audFs);
+    132          #endif        	     		
+    133                 	     	}
+    134          
+    135          #if defined ( SII_DEV_953x_PORTING_PLATFORM_DAC )    
+    136          				SiiPlatformAudioDacControl(chn, SII_AUD_PCM_MODE);
+    137          #endif 				
+    138          				if (RxAudState[chn].audLayout)
+    139          				{
+    140          					//DEBUG_PRINT( MSG_DBG, "SII_AUD_MULTI_CHANNEL\n");
+    141          				    RxAudioConfigLayout(SII_AUD_MULTI_CHANNEL);
+    142          				}
+    143          				else
+    144          				{
+    145          					//DEBUG_PRINT( MSG_DBG, "SII_AUD_TWO_CHANNEL\n");
+    146          				    RxAudioConfigLayout(SII_AUD_TWO_CHANNEL);
+    147          				}
+    148                	  		break;
+    149                	  	default:
+    150                	  	    break;
+    151                  }
+    152          #if INC_RTPI
+    153          	{
+    154          		uint8_t val = 0;
+    155          
+    156              	val |= RxAudState[chn].audLayout & RP_M__RX_AUDIO_FORMAT__LAYOUT1;
+    157              	switch (RxAudState[chn].audMode)
+    158          		{
+    159          			case SII_AUD_HBRA_MODE:
+    160          				val |= RP_M__RX_AUDIO_FORMAT__HBR;
+    161          				break;
+    162          			case SII_AUD_DSD_MODE:
+    163          				val |= RP_M__RX_AUDIO_FORMAT__DSD;
+    164          				break;
+    165          			default:
+    166          				break;
+    167          		}
+    168              	/*these two must be there for audio to be ready to unmute*/
+    169              	val |= RP_M__RX_AUDIO_FORMAT__CHST_RDY | RP_M__RX_AUDIO_FORMAT__AUD_IF_RDY;
+    170          
+    171              	SiiRtpiOnAudioStatusChange(val);
+    172              	SiiRtpiOnAudioInfoFrameChange();
+    173          
+    174          	}
+    175          #endif
+    176              }
+    177          }
+    178          
+    179          //------------------------------------------------------------------------------
+    180          // Function:    SkAppDeviceInitAudio
+    181          // Description:  Init the audio extraction for main channel only
+    182          // Parameters:  none
+    183          // Returns:     none
+    184          //------------------------------------------------------------------------------
+    185          
+    186          bool_t SkAppDeviceInitAudio ( void )
+    187          {
+    188          	uint8_t chn;
+    189          
+    190          	//Enable audio extraction 
+    191          	SiiPlatformGpioAudioInOut(true);
+    192              SiiDrvGpioPinType(SII_GPIO_PIN_7, SII_GPIO_ALT_I2S_WS0_OUT);
+    193          
+    194          	RxAudioConfigLayout(SII_AUD_TWO_CHANNEL);
+    195              for ( chn = 0; chn < SII_NUM_RX_AUDIO; chn++ )
+    196              {    	  
+    197                  SiiRxAudioInstanceSet(chn);
+    198          		SiiRxAudioInit();
+    199          		// Enable SPDIF in MP and disable it in SP (in favor of I2S stereo output)
+    200          		SiiDrvRxSpdifOutEnable(chn == 0);
+    201              }
+    202          
+    203              //Only enable main pipe int mask
+    204             	SiiDrvRxAudioInstanceSet(SII_AUD_RX_MAIN);
+    205              SiiDrvRxAudioIntMaskEnable(ENABLE);
+    206          	return true;
+    207          }
+    208          
+    209          //------------------------------------------------------------------------------
+    210          #if (INC_CEC_SAC == ENABLE)
+    211          //-------------------------------------------------------------------------------------------------
+    212          //! @brief      CEC Callback processing messages from CEC/SAC sub-system.
+    213          //!
+    214          //! @param[in]  fbMsg - message code
+    215          //!
+    216          //! @retval     true  - if the message was recognized and processed
+    217          //! @retval     false - if the message is irrelevant and wasn't processed
+    218          //-------------------------------------------------------------------------------------------------
+    219          bool_t SiiCbCecSacMessageHandler(uint8_t fbMsg)
+    220          {
+    221              bool_t   usedMessage = true;
+    222          
+    223              /* Process feedback messages.       */
+    224          
+    225              switch (fbMsg)
+    226              {
+    227                  default:
+    228                  case CEC_SAC_FB_MSG_NONE:
+    229                      // nothing to do
+    230                      usedMessage = false;
+    231                      break;
+    232          
+    233                  case CEC_SAC_FB_MSG_SAC_INITIATE_DONE:
+    234                      DEBUG_PRINT(MSG_STAT, "SAC Initiation task finished\n");
+    235                      break;
+    236          
+    237                  case CEC_SAC_FB_MSG_SAC_FMT_DISC_DONE:
+    238                      DEBUG_PRINT(MSG_STAT, "SAC Audio Format Discovery task finished\n");
+    239                      break;
+    240          
+    241                  case CEC_SAC_FB_MSG_MUTE:
+    242                  case CEC_SAC_FB_MSG_UNMUTE:
+    243                  case CEC_SAC_FB_MSG_SAC_STATUS_CHANGED:
+    244                      // For us, this means that audio is either muted or unmuted
+    245                      RxAudioMuteSet( 0, SiiCecSacIsMuted());         // Unmute speakers
+    246                      break;
+    247          
+    248                  case CEC_SAC_FB_MSG_SAC_VOLUME_CHANGED:
+    249                      DEBUG_PRINT(MSG_STAT, "SAC volume has changed\n");
+    250          #if INC_OSD
+    251                      SkAppOsdVolumeUpdate( SiiCecSacVolumeGet() );
+    252          #endif
+    253                      break;
+    254          
+    255                  case CEC_SAC_FB_MSG_ERR_LA_NOT_ASSIGNED:
+    256                      DEBUG_PRINT(MSG_STAT, "Audio System Logical Address not assigned\n");
+    257                      SiiCecSacSrvStop(); // Stop SAC operation
+    258                      break;
+    259          
+    260                  case CEC_SAC_FB_MSG_WAKEUP_UNMUTE:
+    261                      // Come out of standby mode
+    262                      DEBUG_PRINT(MSG_STAT, "Standby mode Off Request\n");
+    263          			
+    264          #if ( configSII_DEV_953x_PORTING == 0 )
+    265                      SiiCbCecStandby(false);
+    266          #endif
+    267          
+    268                      RxAudioMuteSet( 0, false );      // Unmute speakers
+    269                      break;
+    270          
+    271                  case CEC_SAC_FB_MSG_ERR_NONSAC_CMD:
+    272                      usedMessage = false;
+    273                      break;
+    274          
+    275              }
+    276          
+    277              return( usedMessage );
+    278          }
+    279          #endif
+    280          
+    281          #if INC_CEC_SAC
+    282          //------------------------------------------------------------------------------
+    283          //! @brief      System Audio Control command processing
+    284          //! @param[in]  cmdData - CEC SAC key code
+    285          //! @retval     true  - if the cmd was recognized and processed
+    286          //! @retval     false - if the cmd wasn't processed
+    287          //------------------------------------------------------------------------------
+    288          bool_t  SkAppAudioProcessSacCommand ( uint8_t cmdData )
+    289          {
+    290              uint8_t sacMsg      = CEC_SAC_FB_MSG_NONE;
+    291          
+    292              // If System Audio Mode is enabled, process volume controls locally
+    293              if ( SiiCecSacIsSysAudioModeEnabled())
+    294              {
+    295                  switch ( cmdData )
+    296                  {
+    297                      case CEA931_KEY_MUTE:
+    298                      case CEA931_KEY_MUTE_FUNC:
+    299                          PrintAlways( "CBUS MUTE received\n" );
+    300                          SiiCecSacMute( CEC_SAC_MUTE_ON );
+    301                          sacMsg = CEC_SAC_FB_MSG_MUTE;
+    302                          break;
+    303                      case CEA931_KEY_UN_MUTE_FUNC:
+    304                          PrintAlways( "CBUS UN-MUTE received\n" );
+    305                          SiiCecSacMute( CEC_SAC_MUTE_OFF );
+    306                          sacMsg = CEC_SAC_FB_MSG_UNMUTE;
+    307                          break;
+    308                      case CEA931_KEY_VOL_UP:
+    309                          PrintAlways( "CBUS VOL UP received\n" );
+    310                          SiiCecSacVolumeStep( true );
+    311                          sacMsg = CEC_SAC_FB_MSG_SAC_VOLUME_CHANGED;
+    312                          break;
+    313                      case CEA931_KEY_VOL_DOWN:
+    314                          PrintAlways( "CBUS VOL DOWN received\n" );
+    315                          SiiCecSacVolumeStep( false );
+    316                          sacMsg = CEC_SAC_FB_MSG_SAC_VOLUME_CHANGED;
+    317                          break;
+    318                      default:
+    319                          break;
+    320                  }
+    321              }
+    322          
+    323              // If message was consumed, tell our local System Audio Controller about it
+    324              return( SiiCbCecSacMessageHandler( sacMsg ));
+    325          }
+    326          #endif
+    327          //------------------------------------------------------------------------------
+    328          // Function:    SkAppTaskAudio
+    329          // Description:
+    330          // Parameters:  none
+    331          // Returns:     none
+    332          //------------------------------------------------------------------------------
+    333          
+    334          void SkAppTaskAudio( void )
+    335          {
+    336          	uint8_t chn;
+    337          
+    338          	//CheckStreamMuxEnable();     // Determine if one or two instances are enabled.
+    339          
+    340          	for( chn = 0; chn < 1 ; chn++)
+    341          	{
+    342          	    SiiRxAudioInstanceSet(chn);
+    343          		if (SiiRxAudioHandler(&RxAudStatus))
+    344          		{
+    345          			if (memcmp(&RxAudState[chn], &RxAudStatus, sizeof(SiiRxAudioInstanceData_t)))
+    346          			{
+    347          				memcpy(&RxAudState[chn], &RxAudStatus, sizeof(SiiRxAudioInstanceData_t));
+    348          
+    349          				switch (RxAudStatus.audState)
+    350          				{
+    351          					case SII_AUD_STATE_OFF:
+    352          					    RxAudioMuteSet( chn, ON );  // Configure audio layout as 2ch and turn off audio hardware
+    353          						break;
+    354          					case SII_AUD_STATE_ON:
+    355          					    RxAudioMuteSet( chn, OFF ); // Configure audio layout and hardware as appropriate for mode.
+    356          						break;
+    357          					default:
+    358          					    break;
+    359          				}
+    360          
+    361          			    if (chn == 1) // sub pipe
+    362          			    {
+    363          			        SiiDrvRxSpdifOutEnable(app.isSubPipeAudioExtSpdif);
+    364                          }
+    365          			}
+    366          		}
+    367          		if ( RxAudState[chn].audState == SII_AUD_NO_ACP_CHECK )
+    368          		{
+    369          			SiiRxAudioNoAcpCheck();
+    370          		}
+    371          	}
+    372          }
+    373          
+    374          #if INC_RTPI
+    375          //------------------------------------------------------------------------------
+    376          // Function:    RtpiCbAudioByPassSet
+    377          // Description:
+    378          // Parameters:  isByPass
+    379          //              -true: audio by pass repeater,
+    380          //              -false:audio played by repeater
+    381          // Returns:     none
+    382          //------------------------------------------------------------------------------
+    383          void SiiRtpiCbAudioByPassSet(bool_t isByPass )
+    384          {
+    385          	app.isAudioByPass = isByPass;
+    386          }
+    387          #endif //#if INC_RTPI
+    388          
+    389          //_______________________________AMTRAN IMPLEMENTED_____________________________________________
+    390          #if ( configSII_DEV_953x_PORTING == 1 )
+    391          bool AmTAudiogetMultiChannel (void)
+    392          {
+    393              if (RxAudState[0].audLayout == SII_AUD_MULTI_CHANNEL)
+    394              {
+    395                  return TRUE;
+    396              }
+    397              return FALSE;
+    398          }
+    399          #endif
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        0  AmTAudiogetMultiChannel
+        8  RxAudioConfigLayout
+              0 -> SiiDrvGpioPinType
+              8 -> SiiDrvGpioPinType
+        8  RxAudioMuteSet
+              0 -> RxAudioConfigLayout
+              8 -> RxAudioConfigLayout
+              8 -> SiiCecSacIsMuted
+              0 -> SiiRtpiOnAudioInfoFrameChange
+              8 -> SiiRtpiOnAudioStatusChange
+        8  SiiCbCecSacMessageHandler
+              8 -> RxAudioMuteSet
+              8 -> SiiCecSacIsMuted
+              8 -> SiiCecSacSrvStop
+        0  SiiRtpiCbAudioByPassSet
+       16  SkAppAudioProcessSacCommand
+             16 -> PrintAlways
+              0 -> SiiCbCecSacMessageHandler
+             16 -> SiiCecSacIsSysAudioModeEnabled
+             16 -> SiiCecSacMute
+             16 -> SiiCecSacVolumeStep
+        8  SkAppDeviceInitAudio
+              8 -> RxAudioConfigLayout
+              8 -> SiiDrvGpioPinType
+              8 -> SiiDrvRxAudioInstanceSet
+              8 -> SiiDrvRxAudioIntMaskEnable
+              8 -> SiiDrvRxSpdifOutEnable
+              8 -> SiiPlatformGpioAudioInOut
+              8 -> SiiRxAudioInit
+              8 -> SiiRxAudioInstanceSet
+        8  SkAppTaskAudio
+              8 -> RxAudioMuteSet
+              8 -> SiiRxAudioHandler
+              8 -> SiiRxAudioInstanceSet
+              8 -> SiiRxAudioNoAcpCheck
+              8 -> __aeabi_memcpy4
+              8 -> memcmp
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      20  ?<Constant "CBUS MUTE received\n">
+      24  ?<Constant "CBUS UN-MUTE received\n">
+      24  ?<Constant "CBUS VOL DOWN received\n">
+      24  ?<Constant "CBUS VOL UP received\n">
+       4  ??DataTable7
+       4  ??DataTable7_1
+      12  AmTAudiogetMultiChannel
+      20  RxAudState
+          RxAudStatus
+      62  RxAudioConfigLayout
+     102  RxAudioMuteSet
+      66  SiiCbCecSacMessageHandler
+       8  SiiRtpiCbAudioByPassSet
+     106  SkAppAudioProcessSacCommand
+      54  SkAppDeviceInitAudio
+      86  SkAppTaskAudio
+
+ 
+  20 bytes in section .bss
+ 596 bytes in section .text
+ 
+ 596 bytes of CODE memory
+  20 bytes of DATA memory
+
+Errors: none
+Warnings: 2

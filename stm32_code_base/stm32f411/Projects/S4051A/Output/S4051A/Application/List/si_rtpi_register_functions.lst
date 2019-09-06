@@ -1,0 +1,901 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:24 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\rtpi\si_rtpi_ #
+#                    register_functions.c                                     #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\rtpi\si_rtpi_ #
+#                    register_functions.c -D S4051A -D DEBUG -D FREE_RTOS -D  #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_rtpi_register_functions.lst                        #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_rtpi_register_functions.o                           #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\component\rtpi\si_rtpi_register_functions.c
+      1          //***************************************************************************
+      2          //!file     si_rtpi_register_functions.c
+      3          //!brief    Silicon Image RTPI Component register processing.
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2011-2012, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************
+     12          
+     13          #include "string.h"
+     14          #include "si_rtpi_internal.h"
+     15          #include "si_drv_switch.h"
+     16          #include "si_drv_audio.h"
+     17          #include "si_eeprom.h"
+     18          #include "si_tx_component.h"
+     19          #include "si_drv_tpi_ddc_access.h"
+     20          #include "si_drv_nvram_sram.h"
+     21          #include "si_i2c.h"
+     22          #if INC_CBUS
+     23          #include "si_cbus_internal.h"
+     24          #include "si_cbus_component.h"
+     25          #endif
+     26          
+     27          //-------------------------------------------------------------------------------------------------
+     28          //! @brief      Register 0x18 processor
+     29          //! @param[in]  val     - new register value from external device
+     30          //! @return     uint8_t - updated register value to be written into register file.
+     31          //-------------------------------------------------------------------------------------------------
+     32          uint8_t RtpiRegs0x18( uint8_t val )
+     33          {
+     34          
+     35          	if ((val & RP_M__RX_CFG__AUDIO_SOFT_MUTE) == RP_M__RX_CFG__AUDIO_SOFT_MUTE)
+     36          	{
+     37          		SiiDrvRxAudioSoftMute(true);
+     38          	}
+     39          	else
+     40          	{
+     41          		SiiDrvRxAudioSoftMute(false);
+     42          	}
+     43          	val &= ~RP_M__RX_CFG__AUD_MCLK;
+     44          	val |= SiiDrvRxAudioGetMclk();
+     45          
+     46          	return val;
+     47          }
+     48          
+     49          
+     50          //-------------------------------------------------------------------------------------------------
+     51          //! @brief      Register 0x1C processor
+     52          //! @param[in]  val     - new register value from external device
+     53          //! @return     uint8_t - updated register value to be written into register file.
+     54          //-------------------------------------------------------------------------------------------------
+     55          uint8_t RtpiRegs0x1C( uint8_t val )
+     56          {
+     57              uint8_t org;
+     58          
+     59              org = SiiPlatformI2cCbSlaveReadByte(1, RP_A__TX_CFG);
+     60              val = val & RP_M__TX_CFG__INVERT_INP_VIDEO_CLOCK;
+     61              if( val )
+     62              {
+     63                  siiTpiInputBusSetupVal.risingEdge = VAL_Input_Rising;
+     64              }
+     65              else
+     66              {
+     67                  siiTpiInputBusSetupVal.risingEdge = VAL_Input_Falling;
+     68              }
+     69              val |= SiiPlatformI2cCbSlaveReadByte(1, RP_A__RX_CFG) & RP_M__RX_CFG__AUD_MCLK; // just copy Rx config.
+     70              return val;
+     71          }
+     72          
+     73          //-------------------------------------------------------------------------------------------------
+     74          //! @brief      Register 0x20 processor
+     75          //! @param[in]  val     - new register value from external device
+     76          //! @return     uint8_t - updated register value to be written into register file.
+     77          //-------------------------------------------------------------------------------------------------
+     78          uint8_t RtpiRegs0x20( uint8_t val )
+     79          {
+     80          
+     81              return val;
+     82          }
+     83          
+     84          //-------------------------------------------------------------------------------------------------
+     85          //! @brief      Register 0x21 processor
+     86          //! @param[in]  val     - new register value from external device
+     87          //! @return     uint8_t - updated register value to be written into register file.
+     88          //-------------------------------------------------------------------------------------------------
+     89          uint8_t RtpiRegs0x21( uint8_t val )
+     90          {
+     91          
+     92              if (val & RP_M__BOARD_OPTIONS2__USE_ONBOARD_INPUT_SELECTOR)
+     93              {
+     94                  val |=  RP_M__BOARD_OPTIONS2__USE_ONBOARD_INPUT_SELECTOR;
+     95                  SiiRtpiCbUpdateControl( EEFLAG_ROTARY_ENABLE, EEFLAG_ROTARY_ENABLE );
+     96              }
+     97              else
+     98              {
+     99                  val &= ~RP_M__BOARD_OPTIONS2__USE_ONBOARD_INPUT_SELECTOR;
+    100                  SiiRtpiCbUpdateControl( EEFLAG_ROTARY_ENABLE, 0 );
+    101              }
+    102          
+    103              if( val & RP_M__BOARD_OPTIONS2__COMM_ONLY_MODE )
+    104              {
+    105          
+    106                  SiiPlatformInterruptDisable();
+    107              }
+    108              else    // Normal Mode
+    109              {
+    110                  SiiPlatformInterruptEnable();
+    111          
+    112              }
+    113          
+    114          //#if DEBUG_PRINT == 1
+    115              if( val & RP_M__BOARD_OPTIONS2__ENABLE_LOG_PRINT )
+    116              {
+    117                  pRtpi->debugPrintMode = 0;
+    118              }
+    119              else
+    120              {
+    121                  pRtpi->debugPrintMode = 3;
+    122              }
+    123          //#endif
+    124              return val;
+    125          }
+    126          
+    127          //-------------------------------------------------------------------------------------------------
+    128          //! @brief      Register 0x23 processor
+    129          //! @param[in]  val     - new register value from external device
+    130          //! @return     uint8_t - updated register value to be written into register file.
+    131          //-------------------------------------------------------------------------------------------------
+    132          uint8_t RtpiRegs0x23 ( uint8_t val )
+    133          {
+    134          	bool_t matrixMode = SiiDrvSwitchMatrixModeEnableGet();
+    135          	if ( val & RP_M__AUDIO_OPTIONS__BYPASS )
+    136          	{
+    137          		SiiRtpiCbAudioByPassSet( true );
+    138          		SiiRtpiCbDeviceInitTx( matrixMode, true );
+    139          	}
+    140          	else
+    141          	{
+    142          		SiiRtpiCbAudioByPassSet( false );
+    143          		SiiRtpiCbDeviceInitTx( matrixMode, false );
+    144          	}
+    145          
+    146          	return val;
+    147          }
+    148          
+    149          //-------------------------------------------------------------------------------------------------
+    150          //! @brief      Register 0x24 processor
+    151          //! @param[in]  val     - new register value from external device
+    152          //! @return     uint8_t - updated register value to be written into register file.
+    153          //-------------------------------------------------------------------------------------------------
+    154          uint8_t RtpiRegs0x24( uint8_t val )
+    155          {
+    156          	return( SiiRtpiCbUpdateSource( 1, val ));
+    157          }
+    158          
+    159          //-------------------------------------------------------------------------------------------------
+    160          //! @brief      Register 0x28 processor
+    161          //! @param[in]  val     - new register value from external device
+    162          //! @return     uint8_t - updated register value to be written into register file.
+    163          //-------------------------------------------------------------------------------------------------
+    164          uint8_t RtpiRegs0x28( uint8_t val )
+    165          {
+    166              #define TXMUTE 0x01
+    167              #define RSVD1  0x02
+    168              #define RST    0x04
+    169              #define SAVE   0x08
+    170              #define RSVD2  0x70
+    171              #define PD     0x80
+    172          
+    173              if( (val & TXMUTE) != siiTpiSystemControlVal.avMuteEn )
+    174              {
+    175                  siiTpiSystemControlVal.avMuteEn = (val & TXMUTE);
+    176                  if( siiTpiSystemControlVal.avMuteEn )
+    177                  {
+    178                      SiiTxAvMute();
+    179                  }
+    180                  else
+    181                  {
+    182                      SiiTxAvUnmute();
+    183                  }
+    184              }
+    185          
+    186              if( (val & PD) != siiTpiSystemControlVal.powerDown )
+    187              {
+    188                  siiTpiSystemControlVal.powerDown = (val & PD);
+    189                  if( (val & PD) )
+    190                  {
+    191                       //SiI_TPI_SetState_Unstable();
+    192                       //SiI_Rx_SetState_PowerOff();
+    193                  	SiiRtpiCbPowerControl(RP_ON_TO_STANDBY);
+    194                   }
+    195                  else
+    196                  {
+    197                      //SiI_TPI_SetState_Unknown();
+    198                      //SiI_Rx_SetState_CheckPCLK();
+    199                  	SiiRtpiCbPowerControl(RP_STANDBY_TO_ON);
+    200                  }
+    201              }
+    202              if( (val & SAVE) )
+    203              {
+    204          
+    205                  val = (val & ~SAVE);
+    206              }
+    207              if( (val & RST) )
+    208              {
+    209                  val = val & ~RST;
+    210                  pRtpi->needReset = 1;
+    211                  // Toggle power.
+    212                  SiiRtpiCbPowerControl(RP_RESTART);
+    213          
+    214              }
+    215              return val;
+    216          }
+    217          
+    218          //-------------------------------------------------------------------------------------------------
+    219          //! @brief      RP_A__CEC_STAT Register 0x2B processor
+    220          //! @param[in]  val     - new register value from external device
+    221          //! @return     uint8_t - updated register value to be written into register file.
+    222          //-------------------------------------------------------------------------------------------------
+    223          uint8_t RtpiRegs0x2B( uint8_t val )
+    224          {
+    225              // Just clear the interrupt bit
+    226              return( SiiPlatformI2cCbSlaveReadByte( 1, RP_A__CEC_STAT ) & ~val );
+    227          }
+    228          
+    229          //-------------------------------------------------------------------------------------------------
+    230          //! @brief      RP_A__INTERRUPT Register 0x2C processor
+    231          //! @param[in]  val     - new register value from external device
+    232          //! @return     uint8_t - updated register value to be written into register file.
+    233          //-------------------------------------------------------------------------------------------------
+    234          uint8_t RtpiRegs0x2C( uint8_t val )
+    235          {
+    236              // Just clear the interrupt bit
+    237              return( SiiPlatformI2cCbSlaveReadByte( 1, RP_A__INTERRUPT ) & ~val );
+    238          }
+    239          
+    240          //-------------------------------------------------------------------------------------------------
+    241          //! @brief      RP_A__INTERRUPT2 Register 0x2D processor
+    242          //! @param[in]  val     - new register value from external device
+    243          //! @return     uint8_t - updated register value to be written into register file.
+    244          //-------------------------------------------------------------------------------------------------
+    245          uint8_t RtpiRegs0x2D( uint8_t val )
+    246          {
+    247              // Just clear the interrupt bit
+    248              return( SiiPlatformI2cCbSlaveReadByte( 1, RP_A__INTERRUPT2 ) & ~val );
+    249          }
+    250          
+    251          //-------------------------------------------------------------------------------------------------
+    252          //! @brief      RP_A__RX_OUTPUT Register 0x30 processor
+    253          //! @param[in]  val     - new register value from external device
+    254          //! @return     uint8_t - updated register value to be written into register file.
+    255          //-------------------------------------------------------------------------------------------------
+    256          uint8_t RtpiRegs0x30( uint8_t val )
+    257          {
+    258          	return(SiiRtpiCbPowerState());
+    259          }
+    260          
+    261          //-------------------------------------------------------------------------------------------------
+    262          //! @brief      RP_A__RX_AVI1 Register 0x33 processor
+    263          //! @param[in]  val     - new register value from external device
+    264          //! @return     uint8_t - updated register value to be written into register file.
+    265          //-------------------------------------------------------------------------------------------------
+    266          uint8_t RtpiRegs0x33( uint8_t val )
+    267          {
+    268          	uint8_t pInfoFrame[20];
+    269          	uint8_t pLen = 0;
+    270          
+    271              SiiDrvSwitchInfoFrameGet( true, IF_AVI, &pInfoFrame[0], &pLen);
+    272              return( pInfoFrame[4] );
+    273          }
+    274          
+    275          //-------------------------------------------------------------------------------------------------
+    276          //! @brief      RP_A__RX_AVI2 Register 0x34 processor
+    277          //! @param[in]  val     - new register value from external device
+    278          //! @return     uint8_t - updated register value to be written into register file.
+    279          //-------------------------------------------------------------------------------------------------
+    280          uint8_t RtpiRegs0x34( uint8_t val )
+    281          {
+    282          	uint8_t pInfoFrame[20];
+    283          	uint8_t pLen = 0;
+    284          
+    285          	SiiDrvSwitchInfoFrameGet( true, IF_AVI, &pInfoFrame[0], &pLen);
+    286          	return( pInfoFrame[5] );
+    287          }
+    288          
+    289          //-------------------------------------------------------------------------------------------------
+    290          //! @brief      RP_A__RX_AVI3 Register 0x35 processor
+    291          //! @param[in]  val     - new register value from external device
+    292          //! @return     uint8_t - updated register value to be written into register file.
+    293          //-------------------------------------------------------------------------------------------------
+    294          uint8_t RtpiRegs0x35( uint8_t val )
+    295          {
+    296          	uint8_t pInfoFrame[20];
+    297          	uint8_t pLen = 0;
+    298          
+    299              SiiDrvSwitchInfoFrameGet( true, IF_AVI, &pInfoFrame[0], &pLen);
+    300              return( pInfoFrame[6] );
+    301          }
+    302          
+    303          //-------------------------------------------------------------------------------------------------
+    304          //! @brief      RP_A__RX_AVI4 Register 0x36 processor
+    305          //! @param[in]  val     - new register value from external device
+    306          //! @return     uint8_t - updated register value to be written into register file.
+    307          //-------------------------------------------------------------------------------------------------
+    308          uint8_t RtpiRegs0x36( uint8_t val )
+    309          {
+    310              uint8_t pInfoFrame[20];
+    311              uint8_t pLen = 0;
+    312          
+    313              SiiDrvSwitchInfoFrameGet( true, IF_AVI, &pInfoFrame[0], &pLen);
+    314              return( pInfoFrame[7] );
+    315          }
+    316          
+    317          //-------------------------------------------------------------------------------------------------
+    318          //! @brief      RP_A__RX_AVI5 Register 0x37 processor
+    319          //! @param[in]  val     - new register value from external device
+    320          //! @return     uint8_t - updated register value to be written into register file.
+    321          //-------------------------------------------------------------------------------------------------
+    322          uint8_t RtpiRegs0x37( uint8_t val )
+    323          {
+    324              uint8_t pInfoFrame[20];
+    325              uint8_t pLen = 0;
+    326          
+    327              SiiDrvSwitchInfoFrameGet( true, IF_AVI, &pInfoFrame[0], &pLen);
+    328              return( pInfoFrame[8] );
+    329          }
+    330          
+    331          //-------------------------------------------------------------------------------------------------
+    332          //! @brief      RP_A__RX_AVI_VALID Register 0x38 processor
+    333          //! @param[in]  val     - new register value from external device
+    334          //! @return     uint8_t - updated register value to be written into register file.
+    335          //-------------------------------------------------------------------------------------------------
+    336          uint8_t RtpiRegs0x38( uint8_t val )
+    337          {
+    338              return( SiiDrvSwitchInfoFrameValidGet(true) );
+    339          }
+    340          
+    341          //-------------------------------------------------------------------------------------------------
+    342          //! @brief      Unused register processor - returns what was written
+    343          //! @param[in]  val     - new register value from external device
+    344          //! @return     uint8_t - updated register value to be written into register file.
+    345          //-------------------------------------------------------------------------------------------------
+    346          uint8_t RtpiRegsDummy( uint8_t val )
+    347          {
+    348              return val;
+    349          }
+    350          
+    351          //-------------------------------------------------------------------------------------------------
+    352          //! @brief      Register 0x6A processor
+    353          //! @param[in]  val     - new register value from external device
+    354          //! @return     uint8_t - updated register value to be written into register file.
+    355          //-------------------------------------------------------------------------------------------------
+    356          uint8_t RtpiRegs0x6A( uint8_t val ) { return val; }
+    357          uint8_t RtpiRegs0x6B( uint8_t val ) { return val; }
+    358          uint8_t RtpiRegs0x6C( uint8_t val ) { return val; }
+    359          uint8_t RtpiRegs0x6D( uint8_t val ) { return val; }
+    360          uint8_t RtpiRegs0x6E( uint8_t val ) { return val; }
+    361          
+    362          //-------------------------------------------------------------------------------------------------
+    363          //! @brief      Register 0x6F processor
+    364          //! @param[in]  val     - new register value from external device
+    365          //! @return     uint8_t - updated register value to be written into register file.
+    366          //-------------------------------------------------------------------------------------------------
+    367          uint8_t RtpiRegs0x6F( uint8_t val )
+    368          {
+    369              uint8_t buf[16];
+    370              uint8_t slave;
+    371              uint8_t cmdType = 0;
+    372              unsigned short offset;
+    373              int length;
+    374              int i, err = 0;
+    375          
+    376              if ( val == 0 )
+    377              {
+    378                  return( val );
+    379              }
+    380          
+    381              SiiRpForceWriteByte(RP_A__CMD_STATUS, 0);  // Clear ready bit.
+    382          
+    383              SiiRpForceWriteByte( RP_A__CMD_CMD, val);
+    384              SiiRpReadBlock(RP_A__CMD_BUF, buf, 16); // prepare for the write operation
+    385              slave = SiiPlatformI2cCbSlaveReadByte(1, RP_A__CMD_DEVICE_ID);
+    386              offset = SiiPlatformI2cCbSlaveReadByte(1, RP_A__CMD_ADDR_L );
+    387              length = SiiPlatformI2cCbSlaveReadByte(1, RP_A__CMD_LENGTH );
+    388              cmdType = SiiPlatformI2cCbSlaveReadByte(1, RP_A__CMD_ACCESS_TYPE);
+    389          
+    390              if ( length > 16 )
+    391              {
+    392                  length = 16;
+    393              }
+    394          
+    395          //#if DEBUG_PRINT == 1
+    396                  if (pRtpi->debugPrintMode == 0)
+    397                  {
+    398                  	switch (val)
+    399                  	{
+    400                  	case RP_CMD__READ:
+    401                  	    DEBUG_PRINT( MSG_DBG, "RtpiRegs0x6f: RD: cmd type %x address %x Length %d \n", cmdType, offset, length);
+    402                  	    break;
+    403                  	case RP_CMD__WRITE:
+    404                  		DEBUG_PRINT( MSG_DBG, "RtpiRegs0x6f: WR: cmd type %x address %x Length %d \n", cmdType, offset, length);
+    405                  		break;
+    406                  	case RP_CMD__EXECUTE:
+    407                  		DEBUG_PRINT( MSG_DBG, "RtpiRegs0x6f: EX: cmd type %x address %x Length %d \n", cmdType, offset, length);
+    408                  		break;
+    409                  	default:
+    410                  		DEBUG_PRINT( MSG_DBG, "RtpiRegs0x6f: IDLE\n");
+    411                  		break;
+    412                  	}
+    413                  }
+    414          //#endif // DEBUG_PRINT
+    415          
+    416              if (val == RP_CMD__EXECUTE)
+    417              {
+    418                  do {
+    419          #if INC_CBUS
+    420                      if ( RtpiExecuteCbusCmd( cmdType ))  break;
+    421          #endif
+    422          #if INC_CEC
+    423                      if ( RtpiExecuteCecCmd( cmdType ))   break;
+    424          #endif
+    425                  } while (0);
+    426              }
+    427              else switch( (val << 8) | cmdType )
+    428              {
+    429                  case (RP_CMD__READ<<8)|RP_C__CAT_LOCAL_I2C:
+    430                  case (RP_CMD__READ<<8)|RP_C__CAT_RX_CHIP_REG:
+    431                  case (RP_CMD__READ<<8)|RP_C__CAT_TX_CHIP_REG:
+    432                      if( SiiPlatformI2cCbSlaveReadByte(1, RP_A__CMD_OPTIONS) == RP_M__CMD_OPTIONS__NO_AUTOINCREMENT )
+    433              	    {
+    434                          for( i=0; i<length; i++ )
+    435                          {
+    436                              err = SiiPlatformI2cReadBlock( 0, slave, offset, buf+i, 1);
+    437                          }
+    438                      }
+    439                      else
+    440                      {
+    441                          err = SiiPlatformI2cReadBlock( 0, slave, offset, buf, length);
+    442                      }
+    443                      for (i = 0; i < 16; i++)
+    444                      {
+    445                          SiiRpForceWriteByte(RP_A__CMD_BUF+i, buf[i]);
+    446                      }
+    447                      break;
+    448          
+    449                  case (RP_CMD__WRITE<<8)|RP_C__CAT_LOCAL_I2C:
+    450                  case (RP_CMD__WRITE<<8)|RP_C__CAT_RX_CHIP_REG:
+    451                  case (RP_CMD__WRITE<<8)|RP_C__CAT_TX_CHIP_REG:
+    452                      if( SiiPlatformI2cCbSlaveReadByte(1, RP_A__CMD_OPTIONS) == RP_M__CMD_OPTIONS__NO_AUTOINCREMENT )
+    453              	    {
+    454                          for( i=0; i<length; i++ )
+    455                          {
+    456                              err = SiiPlatformI2cWriteBlock( 0, slave, offset, buf+i, 1);
+    457                          }
+    458                      }
+    459                      else
+    460                      {
+    461                          err = SiiPlatformI2cWriteBlock( 0, slave, offset, buf, length);
+    462                      }
+    463                      break;
+    464          
+    465                  case (RP_CMD__READ<<8)|RP_C__CAT_DS_DDC:
+    466                      if( SiiPlatformI2cCbSlaveReadByte(1, RP_A__CMD_OPTIONS) == RP_M__CMD_OPTIONS__NO_AUTOINCREMENT )
+    467              	    {
+    468                          for( i=0; i<length; i++ )
+    469                          {
+    470                              err = SiiDrvTpiDdcReadBlock( offset, SiiPlatformI2cCbSlaveReadByte(1, RP_A__CMD_ADDR_H ), buf+i, 1);
+    471                          }
+    472                      }
+    473                      else
+    474                      {
+    475                          err = SiiDrvTpiDdcReadBlock( offset, SiiPlatformI2cCbSlaveReadByte(1, RP_A__CMD_ADDR_H ), buf, length);
+    476                      }
+    477                      for (i = 0; i < 16; i++)
+    478                      {
+    479                          SiiRpForceWriteByte(RP_A__CMD_BUF+i, buf[i]);
+    480                      }
+    481          
+    482                      break;
+    483          
+    484                  case (RP_CMD__WRITE<<8)|RP_C__CAT_DS_DDC:
+    485                      if( SiiPlatformI2cCbSlaveReadByte(1, RP_A__CMD_OPTIONS) == RP_M__CMD_OPTIONS__NO_AUTOINCREMENT )
+    486              	    {
+    487                          for( i=0; i<length; i++ )
+    488                          {
+    489                              err = SiiDrvTpiDdcWriteBlock( offset, buf+i, 1);
+    490                          }
+    491                      }
+    492                      else
+    493                      {
+    494                          err = SiiDrvTpiDdcWriteBlock( offset, buf, length);
+    495                      }
+    496                      break;
+    497          
+    498                  case (RP_CMD__READ<<8)|RP_C__CAT_US_EDID:
+    499                      SiiDrvNvramSramRead( SiiPlatformI2cCbSlaveReadByte(1, RP_A__CMD_ADDR_H ), buf, offset, length );
+    500          
+    501                      for (i = 0; i < 16; i++)
+    502                      {
+    503                          SiiRpForceWriteByte(RP_A__CMD_BUF+i, buf[i]);
+    504                      }
+    505          
+    506                      break;
+    507          
+    508                  case (RP_CMD__WRITE<<8)|RP_C__CAT_US_EDID:
+    509                  	for (i = 0; i < 16; i++)
+    510                      {
+    511                            buf[i] = SiiPlatformI2cCbSlaveReadByte(1, RP_A__CMD_BUF+i);
+    512                      }
+    513                      SiiDrvNvramSramWrite( SiiPlatformI2cCbSlaveReadByte(1, RP_A__CMD_ADDR_H ), buf, offset, length );
+    514                      break;
+    515          
+    516                  case (RP_CMD__READ<<8)|RP_C__CAT_CFG_EEPROM:
+    517                      offset = offset | (SiiPlatformI2cCbSlaveReadByte(1, RP_A__CMD_ADDR_H ) << 8);
+    518                      SiiPlatformEepromReadBlock (offset, buf, length);
+    519          
+    520                      for (i = 0; i < 16; i++)
+    521                      {
+    522                          SiiRpForceWriteByte(RP_A__CMD_BUF+i, buf[i]);
+    523                      }
+    524                      break;
+    525          
+    526                  case (RP_CMD__WRITE<<8)|RP_C__CAT_CFG_EEPROM:
+    527                  	for (i = 0; i < 16; i++)
+    528                      {
+    529                           buf[i] = SiiPlatformI2cCbSlaveReadByte(1, RP_A__CMD_BUF+i);
+    530                      }
+    531                      offset = offset | (SiiPlatformI2cCbSlaveReadByte(1, RP_A__CMD_ADDR_H ) << 8);
+    532                      SiiPlatformEepromWriteBlock(offset, buf, length);
+    533                      break;
+    534          
+    535                  default: break;
+    536              }
+    537          
+    538              SiiRpForceWriteByte( RP_A__CMD_CMD, RP_CMD__IDLE);
+    539              SiiRpForceWriteByte( RP_A__CMD_STATUS, SiiPlatformI2cCbSlaveReadByte( 1, RP_A__CMD_STATUS ) | RP_STS__READY );  // Set ready bit.
+    540          
+    541              return 0; // set to idle status
+    542          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        8  RtpiRegs0x18
+              8 -> SiiDrvRxAudioGetMclk
+              8 -> SiiDrvRxAudioSoftMute
+        8  RtpiRegs0x1C
+              8 -> SiiPlatformI2cCbSlaveReadByte
+        0  RtpiRegs0x20
+        8  RtpiRegs0x21
+              8 -> SiiPlatformInterruptDisable
+              8 -> SiiPlatformInterruptEnable
+              8 -> SiiRtpiCbUpdateControl
+       16  RtpiRegs0x23
+             16 -> SiiDrvSwitchMatrixModeEnableGet
+             16 -> SiiRtpiCbAudioByPassSet
+             16 -> SiiRtpiCbDeviceInitTx
+        0  RtpiRegs0x24
+              0 -> SiiRtpiCbUpdateSource
+       16  RtpiRegs0x28
+             16 -> SiiRtpiCbPowerControl
+             16 -> SiiTxAvMute
+             16 -> SiiTxAvUnmute
+        8  RtpiRegs0x2B
+              8 -> SiiPlatformI2cCbSlaveReadByte
+        8  RtpiRegs0x2C
+              8 -> SiiPlatformI2cCbSlaveReadByte
+        8  RtpiRegs0x2D
+              8 -> SiiPlatformI2cCbSlaveReadByte
+        0  RtpiRegs0x30
+              0 -> SiiRtpiCbPowerState
+       32  RtpiRegs0x33
+             32 -> SiiDrvSwitchInfoFrameGet
+       32  RtpiRegs0x34
+             32 -> SiiDrvSwitchInfoFrameGet
+       32  RtpiRegs0x35
+             32 -> SiiDrvSwitchInfoFrameGet
+       32  RtpiRegs0x36
+             32 -> SiiDrvSwitchInfoFrameGet
+       32  RtpiRegs0x37
+             32 -> SiiDrvSwitchInfoFrameGet
+        0  RtpiRegs0x38
+              0 -> SiiDrvSwitchInfoFrameValidGet
+        0  RtpiRegs0x6A
+        0  RtpiRegs0x6B
+        0  RtpiRegs0x6C
+        0  RtpiRegs0x6D
+        0  RtpiRegs0x6E
+       48  RtpiRegs0x6F
+             48 -> RtpiExecuteCbusCmd
+             48 -> RtpiExecuteCecCmd
+             48 -> SiiDrvNvramSramRead
+             48 -> SiiDrvNvramSramWrite
+             48 -> SiiDrvTpiDdcReadBlock
+             48 -> SiiDrvTpiDdcWriteBlock
+             48 -> SiiPlatformEepromReadBlock
+             48 -> SiiPlatformEepromWriteBlock
+             48 -> SiiPlatformI2cCbSlaveReadByte
+             48 -> SiiPlatformI2cReadBlock
+             48 -> SiiPlatformI2cWriteBlock
+             48 -> SiiRpForceWriteByte
+             48 -> SiiRpReadBlock
+        0  RtpiRegsDummy
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable2
+       4  ??DataTable2_1
+       4  ??DataTable2_2
+      10  ?Subroutine0
+      18  ?Subroutine1
+       8  ?Subroutine2
+      16  ?Subroutine3
+      12  ?Subroutine4
+      28  RtpiRegs0x18
+      38  RtpiRegs0x1C
+       2  RtpiRegs0x20
+      60  RtpiRegs0x21
+      42  RtpiRegs0x23
+       8  RtpiRegs0x24
+      92  RtpiRegs0x28
+       8  RtpiRegs0x2B
+       6  RtpiRegs0x2C
+       8  RtpiRegs0x2D
+       4  RtpiRegs0x30
+      16  RtpiRegs0x33
+      16  RtpiRegs0x34
+      16  RtpiRegs0x35
+      16  RtpiRegs0x36
+      16  RtpiRegs0x37
+       6  RtpiRegs0x38
+       2  RtpiRegs0x6A
+       2  RtpiRegs0x6B
+       2  RtpiRegs0x6C
+       2  RtpiRegs0x6D
+       2  RtpiRegs0x6E
+     492  RtpiRegs0x6F
+       2  RtpiRegsDummy
+
+ 
+ 962 bytes in section .text
+ 
+ 962 bytes of CODE memory
+
+Errors: none
+Warnings: 5

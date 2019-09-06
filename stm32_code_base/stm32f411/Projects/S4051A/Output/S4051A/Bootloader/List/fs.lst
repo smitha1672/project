@@ -1,0 +1,716 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     10/Nov/2014  15:19:30 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Utilities\Third_Party\efsl\src\fs.c                   #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Utilities\Third_Party\efsl\src\fs.c -D                #
+#                    __ARM_CORTEX_MX__ -D DEBUG -D FREE_RTOS -D               #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D HOST_MODE_ENABLED -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -D STM32_IAP -D S4051A    #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Bootloade #
+#                    r\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Boo #
+#                    tloader\Obj\ --debug --endian=little --cpu=Cortex-M4 -e  #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Projects\STM32_IAP\inc #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\I #
+#                    nclude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\C #
+#                    MSIS\Device\ST\STM32F4xx\Include\ -I                     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_HO #
+#                    ST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\HT68F30\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Utilities\Third_Party\efsl\inc\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    fat_fs\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Project #
+#                    s\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utiliti #
+#                    es\mainstream_v1\stm32f411\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\it\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\APP_SRC\I #
+#                    nclude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\APP_SRC\ -Ohz -I  #
+#                    "C:\Program Files (x86)\IAR Systems\Embedded Workbench   #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Bootloader\Lis #
+#                    t\fs.lst                                                 #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Bootloader\Obj #
+#                    \fs.o                                                    #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Utilities\Third_Party\efsl\src\fs.c
+      1          /*****************************************************************************\
+      2          *              efs - General purpose Embedded Filesystem library              *
+      3          *          --------------------- -----------------------------------          *
+      4          *                                                                             *
+      5          * Filename : fs.c                                                             *
+      6          * Description : These are general filesystem functions, supported by the      *
+      7          *               functions of dir.c and fat.c  file.c uses these functions     *
+      8          *               heavily, but is not used by fs.c (not true anymore)           *
+      9          *                                                                             *
+     10          * This program is free software; you can redistribute it and/or               *
+     11          * modify it under the terms of the GNU General Public License                 *
+     12          * as published by the Free Software Foundation; version 2                     *
+     13          * of the License.                                                             *
+     14                                                                                        *
+     15          * This program is distributed in the hope that it will be useful,             *
+     16          * but WITHOUT ANY WARRANTY; without even the implied warranty of              *
+     17          * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the               *
+     18          * GNU General Public License for more details.                                *
+     19          *                                                                             *
+     20          * As a special exception, if other files instantiate templates or             *
+     21          * use macros or inline functions from this file, or you compile this          *
+     22          * file and link it with other works to produce a work based on this file,     *
+     23          * this file does not by itself cause the resulting work to be covered         *
+     24          * by the GNU General Public License. However the source code for this         *
+     25          * file must still be made available in accordance with section (3) of         *
+     26          * the GNU General Public License.                                             *
+     27          *                                                                             *
+     28          * This exception does not invalidate any other reasons why a work based       *
+     29          * on this file might be covered by the GNU General Public License.            *
+     30          *                                                                             *
+     31          *                                                    (c)2006 Lennart Yseboodt *
+     32          *                                                    (c)2006 Michael De Nil   *
+     33          \*****************************************************************************/
+     34          
+     35          /*****************************************************************************/
+     36          
+     37          #include "fs.h"
+     38          #include "fat.h"
+     39          #include "dir.h"
+     40          /*****************************************************************************/
+     41          
+     42          /* ****************************************************************************  
+     43           * eint16 fs_initFs(FileSystem *fs,Partition *part)
+     44           * Description: This functions glues the initialisation of the filesystem together.
+     45           * It loads the volumeID, computes the FS type and searches for the rootsector.
+     46           * Return value: Returns 0 on succes and -1 on error (if magic code is wrong)
+     47          */
+     48          eint16 fs_initFs(FileSystem *fs,Partition *part)
+     49          {
+     50          	if(!fs_isValidFat(part)){
+     51          		return(-1);
+     52          	}
+     53          	fs->part=part;
+     54          	fs_loadVolumeId(fs,part);
+     55          	if(!fs_verifySanity(fs))return(-2);
+     56            	fs_countDataSectors(fs);
+     57          	fs_determineFatType(fs);
+     58          	fs_findFirstSectorRootDir(fs);
+     59          	fs_initCurrentDir(fs); 
+     60          	return(0);
+     61          }
+     62          /*****************************************************************************/ 
+     63          
+     64          /* ****************************************************************************  
+     65           * eint16 fs_isValidFat(Partition *part)
+     66           * Description: This functions loads the volumeID and checks if the magic
+     67           * value is present.
+     68           * Return value: returns 0 when magic code is missing, 1 if it is there.
+     69          */
+     70          eint16 fs_isValidFat(Partition *part)
+     71          {
+     72          	euint8 *buf;
+     73          	
+     74          	buf=part_getSect(part,0,IOM_MODE_READONLY|IOM_MODE_EXP_REQ); /* Load Volume label */
+     75          	if( ex_getb16(buf,0x1FE) != 0xAA55 ){
+     76          		return (0);
+     77          	}
+     78          	part_relSect(part,buf);
+     79          	return(1);
+     80          }
+     81          /*****************************************************************************/ 
+     82          
+     83          /* ****************************************************************************  
+     84           * void fs_loadVolumeId(FileSystem *fs, Partition *part)
+     85           * Description: This function loads all relevant fields from the volumeid.
+     86          */
+     87          void fs_loadVolumeId(FileSystem *fs, Partition *part)
+     88          {
+     89          	euint8 *buf;
+     90          	
+     91          	buf=part_getSect(part,0,IOM_MODE_READONLY|IOM_MODE_EXP_REQ);
+     92          	
+     93          	fs->volumeId.BytesPerSector=ex_getb16(buf,0x0B);
+     94          	fs->volumeId.SectorsPerCluster=*((eint8*)(buf+0x0D));
+     95          	fs->volumeId.ReservedSectorCount=ex_getb16(buf,0x0E);
+     96          	fs->volumeId.NumberOfFats=*((eint8*)(buf+0x10));
+     97          	fs->volumeId.RootEntryCount=ex_getb16(buf,0x11);
+     98          	fs->volumeId.SectorCount16=ex_getb16(buf,0x13);
+     99          	fs->volumeId.FatSectorCount16=ex_getb16(buf,0x16);
+    100          	fs->volumeId.SectorCount32=ex_getb32(buf,0x20);
+    101          	fs->volumeId.FatSectorCount32=ex_getb32(buf,0x24);
+    102          	fs->volumeId.RootCluster=ex_getb32(buf,0x2C);
+    103          	
+    104          	part_relSect(part,buf);
+    105          	
+    106          }
+    107          /*****************************************************************************/ 
+    108          
+    109          /* ****************************************************************************  
+    110           * esint16 fs_verifySanity(FileSystem *fs)
+    111           * Description: Does some sanity calculations.
+    112           * Return value: 1 on success, 0 when discrepancies were found.
+    113          */
+    114          esint16 fs_verifySanity(FileSystem *fs)
+    115          {
+    116          	esint16 sane=1; /* Sane until proven otherwise */
+    117          	/* First check, BPS, we only support 512 */
+    118          	if(fs->volumeId.BytesPerSector!=512)sane=0;
+    119          	/* Check is SPC is valid (multiple of 2, and clustersize >=32KB */
+    120          	if(!((fs->volumeId.SectorsPerCluster == 1 ) |
+    121          	     (fs->volumeId.SectorsPerCluster == 2 ) |
+    122          	     (fs->volumeId.SectorsPerCluster == 4 ) |
+    123          	     (fs->volumeId.SectorsPerCluster == 8 ) |
+    124          	     (fs->volumeId.SectorsPerCluster == 16) |
+    125          	     (fs->volumeId.SectorsPerCluster == 32) |
+    126          	     (fs->volumeId.SectorsPerCluster == 64) ))sane=0;
+    127          	/* Any number of FAT's should be supported... (untested) */
+    128          	/* There should be at least 1 reserved sector */
+    129          	if(fs->volumeId.ReservedSectorCount==0)sane=0;
+    130          	if(fs->volumeId.FatSectorCount16 != 0){
+    131          		if(fs->volumeId.FatSectorCount16 > fs->part->disc->partitions[fs->part->activePartition].numSectors)sane=0;
+    132          	}else{
+    133          		if(fs->volumeId.FatSectorCount32 > fs->part->disc->partitions[fs->part->activePartition].numSectors)sane=0;
+    134          	} 
+    135          	return(sane);
+    136          }
+    137          /*****************************************************************************/
+    138          
+    139          /* ****************************************************************************  
+    140           * void fs_countDataSectors(FileSystem *fs)
+    141           * Description: This functions calculates the sectorcounts, fatsectorcounts and
+    142           * dataclustercounts. It fills in the general fields.
+    143          */
+    144          void fs_countDataSectors(FileSystem *fs)
+    145          {
+    146            euint32 rootDirSectors,dataSectorCount;
+    147          
+    148            rootDirSectors=((fs->volumeId.RootEntryCount*32) +
+    149                           (fs->volumeId.BytesPerSector - 1)) /
+    150                           fs->volumeId.BytesPerSector;
+    151          
+    152            if(fs->volumeId.FatSectorCount16 != 0)
+    153            {
+    154              fs->FatSectorCount=fs->volumeId.FatSectorCount16;
+    155              fs->volumeId.FatSectorCount32=0;
+    156            }
+    157            else
+    158            {
+    159              fs->FatSectorCount=fs->volumeId.FatSectorCount32;
+    160              fs->volumeId.FatSectorCount16=0;
+    161            }
+    162          
+    163            if(fs->volumeId.SectorCount16!=0)
+    164            {
+    165              fs->SectorCount=fs->volumeId.SectorCount16;
+    166              fs->volumeId.SectorCount32=0;
+    167            }
+    168            else
+    169            {
+    170              fs->SectorCount=fs->volumeId.SectorCount32;
+    171              fs->volumeId.SectorCount16=0;
+    172            }
+    173          
+    174            dataSectorCount=fs->SectorCount - (
+    175                            fs->volumeId.ReservedSectorCount +
+    176                            (fs->volumeId.NumberOfFats * fs->FatSectorCount) +
+    177                            rootDirSectors);
+    178          
+    179            fs->DataClusterCount=dataSectorCount/fs->volumeId.SectorsPerCluster;
+    180          }
+    181          /*****************************************************************************/ 
+    182          
+    183          /* ****************************************************************************  
+    184           * void fs_determineFatType(FileSystem *fs)
+    185           * Description: This function looks af the Dataclustercount and determines the
+    186           * FAT type. It fills in fs->type.
+    187          */
+    188          void fs_determineFatType(FileSystem *fs)
+    189          {
+    190          	if(fs->DataClusterCount < 4085)
+    191          	{
+    192          		fs->type=FAT12;
+    193          		fs->volumeId.RootCluster=0;
+    194          	}
+    195          	else if(fs->DataClusterCount < 65525)
+    196          	{
+    197          		fs->type=FAT16;
+    198          		fs->volumeId.RootCluster=0;
+    199          	}
+    200          	else
+    201          	{
+    202          		fs->type=FAT32;
+    203          	}
+    204          }
+    205          /*****************************************************************************/ 
+    206          
+    207          /* ****************************************************************************  
+    208           * void fs_findFirstSectorRootDir(FileSystem *fs)
+    209           * Description: This functions fills in the fs->FirstSectorRootDir field, even
+    210           * for FAT32, although that is not necessary (because you have FirstClusterRootDir).
+    211          */
+    212          void fs_findFirstSectorRootDir(FileSystem *fs)
+    213          {
+    214          	if(fs->type==FAT32)
+    215          		fs->FirstSectorRootDir = fs->volumeId.ReservedSectorCount + 
+    216          		                         (fs->volumeId.NumberOfFats*fs->volumeId.FatSectorCount32) +
+    217          								 (fs->volumeId.RootCluster-2)*fs->volumeId.SectorsPerCluster;
+    218          	else
+    219          		fs->FirstSectorRootDir = fs->volumeId.ReservedSectorCount + 
+    220          		                         (fs->volumeId.NumberOfFats*fs->volumeId.FatSectorCount16);
+    221          }
+    222          /*****************************************************************************/ 
+    223          
+    224          void fs_initCurrentDir(FileSystem *fs)
+    225          {
+    226          	fs->FirstClusterCurrentDir = fs_getFirstClusterRootDir(fs);
+    227          }
+    228          /*****************************************************************************/
+    229          
+    230          /* ****************************************************************************  
+    231           * long fs_clusterToSector(FileSystem *fs,euint32 cluster)
+    232           * Description: This function converts a clusternumber in the effective sector
+    233           * number where this cluster starts. Boundary check is not implemented
+    234           * Return value: A long is returned representing the sectornumber.
+    235          */
+    236          euint32 fs_clusterToSector(FileSystem *fs,euint32 cluster)
+    237          {
+    238          	eint32 base;
+    239          	
+    240          	if(fs->type==FAT32)
+    241          	{
+    242          		base=
+    243          			fs->volumeId.ReservedSectorCount+
+    244          			fs->FatSectorCount*fs->volumeId.NumberOfFats;
+    245          	}
+    246          	else
+    247          	{
+    248          		base=
+    249          			fs->volumeId.ReservedSectorCount+
+    250          			fs->FatSectorCount*fs->volumeId.NumberOfFats+
+    251          			fs->volumeId.RootEntryCount/16;
+    252          	}
+    253          	return( base + (cluster-2)*fs->volumeId.SectorsPerCluster );
+    254          }
+    255          /*****************************************************************************/ 
+    256          
+    257          /* Function is unused, but may be usefull */
+    258          euint32 fs_sectorToCluster(FileSystem *fs,euint32 sector)
+    259          {
+    260          	eint32 base;
+    261          	
+    262          	if(fs->type==FAT32)
+    263          	{
+    264          		base=
+    265          			fs->volumeId.ReservedSectorCount+
+    266          			fs->FatSectorCount*fs->volumeId.NumberOfFats;
+    267          	}
+    268          	else
+    269          	{
+    270          		base=
+    271          			fs->volumeId.ReservedSectorCount+
+    272          			fs->FatSectorCount*fs->volumeId.NumberOfFats+
+    273          			fs->volumeId.RootEntryCount/16;
+    274          	}
+    275          	return(((sector-base)-((sector-base)%fs->volumeId.SectorsPerCluster))/fs->volumeId.SectorsPerCluster+2 );
+    276          }
+    277          /*****************************************************************************/
+    278          
+    279          /* ****************************************************************************  
+    280           * euint32 fs_getNextFreeCluster(FileSystem *fs,euint32 startingcluster)
+    281           * Description: This functions searches for a free cluster, starting it's search at
+    282           * cluster startingcluster. This allow to speed up searches and try to avoid 
+    283           * fragmentation. Implementing rollover search is still to be done.
+    284           * Return value: If a free cluster is found it's number is returned. If none is 
+    285           * found 0 is returned.
+    286          */
+    287          euint32 fs_getNextFreeCluster(FileSystem *fs,euint32 startingcluster)
+    288          {
+    289          	euint32 r;
+    290          	
+    291          	while(startingcluster<fs->DataClusterCount){
+    292          		r=fat_getNextClusterAddress(fs,startingcluster,0);
+    293          		if(r==0){
+    294          			return(startingcluster);
+    295          		}
+    296          		startingcluster++;
+    297          	}
+    298          	return(0);
+    299          }
+    300          /*****************************************************************************/ 
+    301          
+    302          /* ****************************************************************************  
+    303           * euint32 fs_giveFreeClusterHint(FileSystem *fs)
+    304           * 
+    305           * Description: This function should return a clusternumber that is free or
+    306           * lies close before free clusters. The result MUST be checked to see if 
+    307           * it is free! Implementationhint: search the largest clusternumber in the
+    308           * files in the rootdirectory.
+    309           * 
+    310           * Return value: Returns it's best guess.
+    311          */
+    312          euint32 fs_giveFreeClusterHint(FileSystem *fs)
+    313          {
+    314          	return(2); /* Now THIS is a hint ;) */
+    315          }
+    316          /*****************************************************************************/ 
+    317          
+    318          /* ****************************************************************************
+    319           * esint8 fs_findFile(FileSystem *fs,eint8* filename,FileLocation *loc,euint32 *lastDir)
+    320           *
+    321           * Description: This function looks if the given filename is on the given fs
+    322           * and, if found, fills in its location in loc.
+    323           * The function will first check if the pathname starts with a slash. If so it will
+    324           * set the starting directory to the rootdirectory. Else, it will take the firstcluster-
+    325           * currentdir (That you can change with chdir()) as startingpoint.
+    326           * The lastdir pointer will be the first cluster of the last directory fs_findfile
+    327           * enters. It starts out at the root/current dir and then traverses the path along with
+    328           * fs_findFile. 
+    329           * It is set to 0 in case of errors (like dir/dir/dir/file/dir/dir...)
+    330           * Return value: Returns 0 when nothing was found, 1 when the thing found
+    331           * was a file and 2 if the thing found was a directory.
+    332          */
+    333          
+    334          esint8 fs_findFile(FileSystem *fs,eint8* filename,FileLocation *loc,euint32 *lastDir)
+    335          {
+    336          	euint32 fccd,tmpclus;
+    337          	eint8 ffname[11],*next,it=0,filefound=0;
+    338          	
+    339          	if(*filename=='/'){
+    340          		fccd = fs_getFirstClusterRootDir(fs);
+    341          		filename++;
+    342          		if(lastDir)*lastDir=fccd;
+    343          		if(!*filename){
+    344          			return(2);
+    345          		}
+    346          	}else{
+    347          		fccd = fs->FirstClusterCurrentDir;
+    348          		if(lastDir)*lastDir=fccd;
+    349          	}
+    350          	
+    351          	
+    352          	while((next=file_normalToFatName(filename,ffname))!=0){
+    353          		if((tmpclus=dir_findinDir(fs,ffname,fccd,loc,DIRFIND_FILE))==0){
+    354          			/* We didn't find what we wanted */
+    355          			/* We should check, to see if there is more after it, so that
+    356          			 * we can invalidate lastDir
+    357          			 */
+    358          			if((file_normalToFatName(next,ffname))!=0){
+    359          				if(lastDir)*lastDir=0;
+    360          			}			 
+    361          			return(0);
+    362          		}
+    363          		it++;
+    364          		if(loc->attrib&ATTR_DIRECTORY){
+    365          			fccd = tmpclus;
+    366          			filename = next;
+    367          			if(lastDir)*lastDir=fccd;
+    368          			if(filefound)*lastDir=0;
+    369          		}else{
+    370          			filefound=1;
+    371          			if((file_normalToFatName(next,ffname))!=0){
+    372          				if(lastDir)*lastDir=0;
+    373          				return(0);
+    374          			}else{
+    375          				filename=next;	
+    376          			}
+    377          		}
+    378          	}
+    379          	
+    380          	if(it==0)return(0);
+    381          	if(loc->attrib&ATTR_DIRECTORY || !filefound)return(2);
+    382          	return(1);
+    383          }
+    384          /*****************************************************************************/
+    385          
+    386          esint16 fs_findFreeFile(FileSystem *fs,eint8* filename,FileLocation *loc,euint8 mode)
+    387          {
+    388          	euint32 targetdir=0;
+    389          	eint8 ffname[11];
+    390          	
+    391          	if(fs_findFile(fs,filename,loc,&targetdir))return(0);
+    392          	if(!dir_getFatFileName(filename,ffname))return(0);
+    393          	if(dir_findinDir(fs,ffname,targetdir,loc,DIRFIND_FREE)){
+    394          		return(1);
+    395          	}else{
+    396          		if(dir_addCluster(fs,targetdir)){
+    397          			return(0);
+    398          		}else{
+    399          			if(dir_findinDir(fs,ffname,targetdir,loc,DIRFIND_FREE)){
+    400          				return(1);
+    401          			}
+    402          		}
+    403          	}
+    404          		
+    405          	return(0);
+    406          }
+    407          /*****************************************************************************/
+    408          
+    409          /* ****************************************************************************  
+    410           * euint32 fs_getLastCluster(FileSystem *fs,ClusterChain *Cache)
+    411           * Description: This function searches the last cluster of a chain.
+    412           * Return value: The LastCluster (also stored in cache);
+    413          */
+    414          euint32 fs_getLastCluster(FileSystem *fs,ClusterChain *Cache)
+    415          {
+    416          	if(Cache->DiscCluster==0){
+    417          		Cache->DiscCluster=Cache->FirstCluster;
+    418          		Cache->LogicCluster=0;
+    419          	}
+    420          	
+    421          	if(Cache->LastCluster==0)
+    422          	{
+    423          		while(fat_getNextClusterChain(fs, Cache)==0)
+    424          		{
+    425          			Cache->LogicCluster+=Cache->Linear;
+    426          			Cache->DiscCluster+=Cache->Linear;
+    427          			Cache->Linear=0;
+    428          		}
+    429          	}
+    430          	return(Cache->LastCluster);
+    431          }
+    432          /*****************************************************************************/
+    433          
+    434          euint32 fs_getFirstClusterRootDir(FileSystem *fs)
+    435          {
+    436          	switch(fs->type){
+    437          		case FAT32:
+    438          			return(fs->volumeId.RootCluster);
+    439          			//break;
+    440          		default:
+    441          				return(1);
+    442          				//break;
+    443          	}
+    444          }
+    445          /*****************************************************************************/
+    446          
+    447          void fs_initClusterChain(FileSystem *fs,ClusterChain *cache,euint32 cluster_addr)
+    448          {
+    449          	cache->FirstCluster=cluster_addr;
+    450          	cache->DiscCluster=cluster_addr;
+    451          	cache->LogicCluster=0;
+    452          	cache->LastCluster=0; /* Warning flag here */
+    453          	cache->Linear=0;
+    454          	cache->ClusterCount=0; /* 0 means NOT known */
+    455          }
+    456          /*****************************************************************************/
+    457          
+    458          void fs_setFirstClusterInDirEntry(FileRecord *rec,euint32 cluster_addr)
+    459          {
+    460          	rec->FirstClusterHigh=cluster_addr>>16;
+    461          	rec->FirstClusterLow=cluster_addr&0xFFFF;
+    462          }
+    463          /*****************************************************************************/
+    464          
+    465          esint8 fs_flushFs(FileSystem *fs)
+    466          {
+    467          	return(part_flushPart(fs->part,0,fs->SectorCount));
+    468          }
+    469          /*****************************************************************************/
+    470          
+    471          esint8 fs_umount(FileSystem *fs)
+    472          {
+    473          	return(fs_flushFs(fs));
+    474          }
+    475          /*****************************************************************************/
+    476          
+    477          esint8 fs_clearCluster(FileSystem *fs,euint32 cluster)
+    478          {
+    479          	euint16 c;
+    480          	euint8* buf;
+    481          	
+    482          	for(c=0;c<(fs->volumeId.SectorsPerCluster);c++){
+    483          		buf = part_getSect(fs->part,fs_clusterToSector(fs,cluster)+c,IOM_MODE_READWRITE);
+    484          		memClr(buf,512);
+    485          		part_relSect(fs->part,buf);
+    486          	}
+    487          	return(0);
+    488          }
+    489          
+    490          esint8 fs_getFsInfo(FileSystem *fs,euint8 force_update)
+    491          {
+    492          	euint8 *buf;
+    493          		
+    494           	if(!fs->type==FAT32)return(0);
+    495          	buf = part_getSect(fs->part,FS_INFO_SECTOR,IOM_MODE_READONLY);
+    496          	if(ex_getb32(buf,0)!=FSINFO_MAGIC_BEGIN || ex_getb32(buf,508)!=FSINFO_MAGIC_END){
+    497          		part_relSect(fs->part,buf);
+    498          		return(-1);
+    499          	}
+    500          	fs->FreeClusterCount = ex_getb32(buf,488);
+    501          	fs->NextFreeCluster  = ex_getb32(buf,492);
+    502          	part_relSect(fs->part,buf);
+    503          	if(force_update){
+    504          		fs->FreeClusterCount=fat_countFreeClusters(fs);
+    505          	}
+    506          	return(0);
+    507          }
+    508          
+    509          esint8 fs_setFsInfo(FileSystem *fs)
+    510          {
+    511          	euint8* buf;
+    512          
+    513          	if(!fs->type==FAT32)return(0);
+    514          	buf = part_getSect(fs->part,FS_INFO_SECTOR,IOM_MODE_READWRITE);
+    515          	if(ex_getb32(buf,0)!=FSINFO_MAGIC_BEGIN || ex_getb32(buf,508)!=FSINFO_MAGIC_END){
+    516          		part_relSect(fs->part,buf);
+    517          		return(-1);
+    518          	}
+    519          	ex_setb32(buf,488,fs->FreeClusterCount);
+    520          	ex_setb32(buf,492,fs->NextFreeCluster);
+    521          	part_relSect(fs->part,buf);
+    522          	return(0);
+    523          }
+    524          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       24  fs_clearCluster
+             24 -> fs_clusterToSector
+             24 -> memClr
+             24 -> part_getSect
+             24 -> part_relSect
+       12  fs_clusterToSector
+        8  fs_countDataSectors
+        0  fs_determineFatType
+       48  fs_findFile
+             48 -> dir_findinDir
+             48 -> file_normalToFatName
+             48 -> fs_getFirstClusterRootDir
+       12  fs_findFirstSectorRootDir
+       40  fs_findFreeFile
+             40 -> dir_addCluster
+             40 -> dir_findinDir
+             40 -> dir_getFatFileName
+             40 -> fs_findFile
+        0  fs_flushFs
+              0 -> part_flushPart
+        0  fs_getFirstClusterRootDir
+       16  fs_getFsInfo
+             16 -> ex_getb32
+             16 -> fat_countFreeClusters
+             16 -> part_getSect
+             16 -> part_relSect
+       16  fs_getLastCluster
+             16 -> fat_getNextClusterChain
+       16  fs_getNextFreeCluster
+             16 -> fat_getNextClusterAddress
+        0  fs_giveFreeClusterHint
+        0  fs_initClusterChain
+        8  fs_initCurrentDir
+              8 -> fs_getFirstClusterRootDir
+       16  fs_initFs
+             16 -> fs_countDataSectors
+             16 -> fs_determineFatType
+             16 -> fs_findFirstSectorRootDir
+             16 -> fs_initCurrentDir
+             16 -> fs_isValidFat
+             16 -> fs_loadVolumeId
+             16 -> fs_verifySanity
+       16  fs_isValidFat
+             16 -> ex_getb16
+             16 -> part_getSect
+             16 -> part_relSect
+       16  fs_loadVolumeId
+             16 -> ex_getb16
+             16 -> ex_getb32
+             16 -> part_getSect
+              0 -> part_relSect
+       12  fs_sectorToCluster
+        0  fs_setFirstClusterInDirEntry
+       16  fs_setFsInfo
+             16 -> ex_getb32
+             16 -> ex_setb32
+             16 -> part_getSect
+             16 -> part_relSect
+        0  fs_umount
+              0 -> fs_flushFs
+        0  fs_verifySanity
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+       4  ??DataTable1_1
+       6  ?Subroutine0
+       6  ?Subroutine1
+       6  ?Subroutine2
+       8  ?Subroutine3
+       8  ?Subroutine4
+      16  ?Subroutine5
+       8  ?Subroutine6
+      58  fs_clearCluster
+      44  fs_clusterToSector
+      68  fs_countDataSectors
+      42  fs_determineFatType
+     164  fs_findFile
+      54  fs_findFirstSectorRootDir
+      72  fs_findFreeFile
+      10  fs_flushFs
+      16  fs_getFirstClusterRootDir
+      88  fs_getFsInfo
+      62  fs_getLastCluster
+      38  fs_getNextFreeCluster
+       4  fs_giveFreeClusterHint
+      16  fs_initClusterChain
+      12  fs_initCurrentDir
+      68  fs_initFs
+      46  fs_isValidFat
+     102  fs_loadVolumeId
+      52  fs_sectorToCluster
+       8  fs_setFirstClusterInDirEntry
+      82  fs_setFsInfo
+       2  fs_umount
+      98  fs_verifySanity
+
+ 
+ 1 272 bytes in section .text
+ 
+ 1 272 bytes of CODE memory
+
+Errors: none
+Warnings: none

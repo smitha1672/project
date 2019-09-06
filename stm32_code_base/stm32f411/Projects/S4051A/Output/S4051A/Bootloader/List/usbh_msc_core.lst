@@ -1,0 +1,708 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     10/Nov/2014  15:19:43 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\STM32_USB_HOST_Library\Class\MSC\src\usbh_m #
+#                    sc_core.c                                                #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\STM32_USB_HOST_Library\Class\MSC\src\usbh_m #
+#                    sc_core.c -D __ARM_CORTEX_MX__ -D DEBUG -D FREE_RTOS -D  #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D HOST_MODE_ENABLED -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -D STM32_IAP -D S4051A    #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Bootloade #
+#                    r\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Boo #
+#                    tloader\Obj\ --debug --endian=little --cpu=Cortex-M4 -e  #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Projects\STM32_IAP\inc #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\I #
+#                    nclude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\C #
+#                    MSIS\Device\ST\STM32F4xx\Include\ -I                     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_HO #
+#                    ST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\HT68F30\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Utilities\Third_Party\efsl\inc\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    fat_fs\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Project #
+#                    s\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utiliti #
+#                    es\mainstream_v1\stm32f411\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\it\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\APP_SRC\I #
+#                    nclude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\APP_SRC\ -Ohz -I  #
+#                    "C:\Program Files (x86)\IAR Systems\Embedded Workbench   #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Bootloader\Lis #
+#                    t\usbh_msc_core.lst                                      #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Bootloader\Obj #
+#                    \usbh_msc_core.o                                         #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\STM32_USB_HOST_Library\Class\MSC\src\usbh_msc_core.c
+      1          /**
+      2            ******************************************************************************
+      3            * @file    usbh_msc_core.c
+      4            * @author  MCD Application Team
+      5            * @version V2.1.0
+      6            * @date    19-March-2012
+      7            * @brief   This file implements the MSC class driver functions
+      8            *          ===================================================================      
+      9            *                                MSC Class  Description
+     10            *          =================================================================== 
+     11            *           This module manages the MSC class V1.0 following the "Universal 
+     12            *           Serial Bus Mass Storage Class (MSC) Bulk-Only Transport (BOT) Version 1.0
+     13            *           Sep. 31, 1999".
+     14            *           This driver implements the following aspects of the specification:
+     15            *             - Bulk-Only Transport protocol
+     16            *             - Subclass : SCSI transparent command set (ref. SCSI Primary Commands - 3 (SPC-3))
+     17            *      
+     18            *  @endverbatim
+     19            *
+     20            ******************************************************************************
+     21            * @attention
+     22            *
+     23            * <h2><center>&copy; COPYRIGHT 2012 STMicroelectronics</center></h2>
+     24            *
+     25            * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
+     26            * You may not use this file except in compliance with the License.
+     27            * You may obtain a copy of the License at:
+     28            *
+     29            *        http://www.st.com/software_license_agreement_liberty_v2
+     30            *
+     31            * Unless required by applicable law or agreed to in writing, software 
+     32            * distributed under the License is distributed on an "AS IS" BASIS, 
+     33            * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     34            * See the License for the specific language governing permissions and
+     35            * limitations under the License.
+     36            *
+     37            ******************************************************************************
+     38            */
+     39          
+     40          /* Includes ------------------------------------------------------------------*/
+     41          
+     42          #include "usbh_msc_core.h"
+     43          #include "usbh_msc_scsi.h"
+     44          #include "usbh_msc_bot.h"
+     45          #include "usbh_core.h"
+     46          #include "usbh_usr.h"
+     47          
+     48          /** @addtogroup USBH_LIB
+     49            * @{
+     50            */
+     51          
+     52          /** @addtogroup USBH_CLASS
+     53            * @{
+     54            */
+     55          
+     56          /** @addtogroup USBH_MSC_CLASS
+     57            * @{
+     58            */
+     59            
+     60          /** @defgroup USBH_MSC_CORE 
+     61            * @brief    This file includes the mass storage related functions
+     62            * @{
+     63            */ 
+     64          
+     65          
+     66          /** @defgroup USBH_MSC_CORE_Private_TypesDefinitions
+     67            * @{
+     68            */ 
+     69          /**
+     70            * @}
+     71            */ 
+     72          
+     73          /** @defgroup USBH_MSC_CORE_Private_Defines
+     74            * @{
+     75            */ 
+     76          #define USBH_MSC_ERROR_RETRY_LIMIT 10
+     77          /**
+     78            * @}
+     79            */ 
+     80          
+     81          /** @defgroup USBH_MSC_CORE_Private_Macros
+     82            * @{
+     83            */ 
+     84          /**
+     85            * @}
+     86            */ 
+     87          
+     88          
+     89          /** @defgroup USBH_MSC_CORE_Private_Variables
+     90            * @{
+     91            */ 
+     92          #ifdef USB_OTG_HS_INTERNAL_DMA_ENABLED
+     93            #if defined ( __ICCARM__ ) /*!< IAR Compiler */
+     94              #pragma data_alignment=4   
+     95            #endif
+     96          #endif /* USB_OTG_HS_INTERNAL_DMA_ENABLED */
+     97          __ALIGN_BEGIN MSC_Machine_TypeDef         MSC_Machine __ALIGN_END ;
+     98          
+     99          #ifdef USB_OTG_HS_INTERNAL_DMA_ENABLED
+    100            #if defined ( __ICCARM__ ) /*!< IAR Compiler */
+    101              #pragma data_alignment=4   
+    102            #endif
+    103          #endif /* USB_OTG_HS_INTERNAL_DMA_ENABLED */
+    104          __ALIGN_BEGIN USB_Setup_TypeDef           MSC_Setup __ALIGN_END ;
+    105          uint8_t MSCErrorCount = 0;
+    106          
+    107          
+    108          /**
+    109            * @}
+    110            */ 
+    111          
+    112          
+    113          /** @defgroup USBH_MSC_CORE_Private_FunctionPrototypes
+    114            * @{
+    115            */ 
+    116          
+    117          static USBH_Status USBH_MSC_InterfaceInit  (USB_OTG_CORE_HANDLE *pdev , 
+    118                                                      void *phost);
+    119          
+    120          static void USBH_MSC_InterfaceDeInit  (USB_OTG_CORE_HANDLE *pdev , 
+    121                                                 void *phost);
+    122          
+    123          static USBH_Status USBH_MSC_Handle(USB_OTG_CORE_HANDLE *pdev , 
+    124                                      void *phost);
+    125          
+    126          static USBH_Status USBH_MSC_ClassRequest(USB_OTG_CORE_HANDLE *pdev , 
+    127                                                   void *phost);
+    128          
+    129          static USBH_Status USBH_MSC_BOTReset(USB_OTG_CORE_HANDLE *pdev,
+    130                                        USBH_HOST *phost);
+    131          static USBH_Status USBH_MSC_GETMaxLUN(USB_OTG_CORE_HANDLE *pdev,
+    132                                         USBH_HOST *phost);
+    133          
+    134          
+    135          USBH_Class_cb_TypeDef  USBH_MSC_cb = 
+    136          {
+    137            USBH_MSC_InterfaceInit,
+    138            USBH_MSC_InterfaceDeInit,
+    139            USBH_MSC_ClassRequest,
+    140            USBH_MSC_Handle,
+    141          };
+    142          
+    143          void USBH_MSC_ErrorHandle(uint8_t status);
+    144          
+    145          /**
+    146            * @}
+    147            */ 
+    148          
+    149          
+    150          /** @defgroup USBH_MSC_CORE_Exported_Variables
+    151            * @{
+    152            */ 
+    153          
+    154          /**
+    155            * @}
+    156            */ 
+    157          
+    158          
+    159          /** @defgroup USBH_MSC_CORE_Private_Functions
+    160            * @{
+    161            */ 
+    162          
+    163          
+    164          /**
+    165            * @brief  USBH_MSC_InterfaceInit 
+    166            *         Interface initialization for MSC class.
+    167            * @param  pdev: Selected device
+    168            * @param  hdev: Selected device property
+    169            * @retval USBH_Status : Status of class request handled.
+    170            */
+    171          static USBH_Status USBH_MSC_InterfaceInit ( USB_OTG_CORE_HANDLE *pdev, 
+    172                                                  void *phost)
+    173          {	 
+    174            USBH_HOST *pphost = phost;
+    175            
+    176            if((pphost->device_prop.Itf_Desc[0].bInterfaceClass == MSC_CLASS) && \
+    177               (pphost->device_prop.Itf_Desc[0].bInterfaceProtocol == MSC_PROTOCOL))
+    178            {
+    179              if(pphost->device_prop.Ep_Desc[0][0].bEndpointAddress & 0x80)
+    180              {
+    181                MSC_Machine.MSBulkInEp = (pphost->device_prop.Ep_Desc[0][0].bEndpointAddress);
+    182                MSC_Machine.MSBulkInEpSize  = pphost->device_prop.Ep_Desc[0][0].wMaxPacketSize;
+    183              }
+    184              else
+    185              {
+    186                MSC_Machine.MSBulkOutEp = (pphost->device_prop.Ep_Desc[0][0].bEndpointAddress);
+    187                MSC_Machine.MSBulkOutEpSize  = pphost->device_prop.Ep_Desc[0] [0].wMaxPacketSize;      
+    188              }
+    189              
+    190              if(pphost->device_prop.Ep_Desc[0][1].bEndpointAddress & 0x80)
+    191              {
+    192                MSC_Machine.MSBulkInEp = (pphost->device_prop.Ep_Desc[0][1].bEndpointAddress);
+    193                MSC_Machine.MSBulkInEpSize  = pphost->device_prop.Ep_Desc[0][1].wMaxPacketSize;      
+    194              }
+    195              else
+    196              {
+    197                MSC_Machine.MSBulkOutEp = (pphost->device_prop.Ep_Desc[0][1].bEndpointAddress);
+    198                MSC_Machine.MSBulkOutEpSize  = pphost->device_prop.Ep_Desc[0][1].wMaxPacketSize;      
+    199              }
+    200              
+    201              MSC_Machine.hc_num_out = USBH_Alloc_Channel(pdev, 
+    202                                                          MSC_Machine.MSBulkOutEp);
+    203              MSC_Machine.hc_num_in = USBH_Alloc_Channel(pdev,
+    204                                                          MSC_Machine.MSBulkInEp);  
+    205              
+    206              /* Open the new channels */
+    207              USBH_Open_Channel  (pdev,
+    208                                  MSC_Machine.hc_num_out,
+    209                                  pphost->device_prop.address,
+    210                                  pphost->device_prop.speed,
+    211                                  EP_TYPE_BULK,
+    212                                  MSC_Machine.MSBulkOutEpSize);  
+    213              
+    214              USBH_Open_Channel  (pdev,
+    215                                  MSC_Machine.hc_num_in,
+    216                                  pphost->device_prop.address,
+    217                                  pphost->device_prop.speed,
+    218                                  EP_TYPE_BULK,
+    219                                  MSC_Machine.MSBulkInEpSize);    
+    220              
+    221            }
+    222            
+    223            else
+    224            {
+    225              pphost->usr_cb->DeviceNotSupported(); 
+    226            }
+    227            
+    228            return USBH_OK ;
+    229           
+    230          }
+    231          
+    232          
+    233          /**
+    234            * @brief  USBH_MSC_InterfaceDeInit 
+    235            *         De-Initialize interface by freeing host channels allocated to interface
+    236            * @param  pdev: Selected device
+    237            * @param  hdev: Selected device property
+    238            * @retval None
+    239            */
+    240          void USBH_MSC_InterfaceDeInit ( USB_OTG_CORE_HANDLE *pdev,
+    241                                          void *phost)
+    242          {	
+    243            if ( MSC_Machine.hc_num_out)
+    244            {
+    245              USB_OTG_HC_Halt(pdev, MSC_Machine.hc_num_out);
+    246              USBH_Free_Channel  (pdev, MSC_Machine.hc_num_out);
+    247              MSC_Machine.hc_num_out = 0;     /* Reset the Channel as Free */
+    248            }
+    249             
+    250            if ( MSC_Machine.hc_num_in)
+    251            {
+    252              USB_OTG_HC_Halt(pdev, MSC_Machine.hc_num_in);
+    253              USBH_Free_Channel  (pdev, MSC_Machine.hc_num_in);
+    254              MSC_Machine.hc_num_in = 0;     /* Reset the Channel as Free */
+    255            } 
+    256          }
+    257          
+    258          /**
+    259            * @brief  USBH_MSC_ClassRequest 
+    260            *         This function will only initialize the MSC state machine
+    261            * @param  pdev: Selected device
+    262            * @param  hdev: Selected device property
+    263            * @retval USBH_Status : Status of class request handled.
+    264            */
+    265          
+    266          static USBH_Status USBH_MSC_ClassRequest(USB_OTG_CORE_HANDLE *pdev , 
+    267                                                  void *phost)
+    268          {   
+    269            
+    270            USBH_Status status = USBH_OK ;
+    271            USBH_MSC_BOTXferParam.MSCState = USBH_MSC_BOT_INIT_STATE;
+    272            
+    273            return status; 
+    274          }
+    275          
+    276          
+    277          /**
+    278            * @brief  USBH_MSC_Handle 
+    279            *         MSC state machine handler 
+    280            * @param  pdev: Selected device
+    281            * @param  hdev: Selected device property
+    282            * @retval USBH_Status
+    283            */
+    284          
+    285          static USBH_Status USBH_MSC_Handle(USB_OTG_CORE_HANDLE *pdev , 
+    286                                             void   *phost)
+    287          {
+    288            USBH_HOST *pphost = phost;
+    289              
+    290            USBH_Status status = USBH_BUSY;
+    291            uint8_t mscStatus = USBH_MSC_BUSY;
+    292            int appliStatus = 0;
+    293            
+    294            static uint8_t maxLunExceed = FALSE;
+    295            
+    296              
+    297            if(HCD_IsDeviceConnected(pdev))
+    298            {   
+    299              switch(USBH_MSC_BOTXferParam.MSCState)
+    300              {
+    301              case USBH_MSC_BOT_INIT_STATE:
+    302                USBH_MSC_Init(pdev);
+    303                USBH_MSC_BOTXferParam.MSCState = USBH_MSC_BOT_RESET;  
+    304                break;
+    305                
+    306              case USBH_MSC_BOT_RESET:   
+    307                /* Issue BOT RESET request */
+    308                status = USBH_MSC_BOTReset(pdev, phost);
+    309                if(status == USBH_OK )
+    310                {
+    311                  USBH_MSC_BOTXferParam.MSCState = USBH_MSC_GET_MAX_LUN;
+    312                }
+    313                
+    314                if(status == USBH_NOT_SUPPORTED )
+    315                {
+    316                 /* If the Command has failed, then we need to move to Next State, after
+    317                  STALL condition is cleared by Control-Transfer */
+    318                  USBH_MSC_BOTXferParam.MSCStateBkp = USBH_MSC_GET_MAX_LUN; 
+    319          
+    320                  /* a Clear Feature should be issued here */
+    321                  USBH_MSC_BOTXferParam.MSCState = USBH_MSC_CTRL_ERROR_STATE;
+    322                }  
+    323                break;
+    324                
+    325              case USBH_MSC_GET_MAX_LUN:
+    326                /* Issue GetMaxLUN request */
+    327                status = USBH_MSC_GETMaxLUN(pdev, phost);
+    328                
+    329                if(status == USBH_OK )
+    330                {
+    331                  MSC_Machine.maxLun = *(MSC_Machine.buff) ;
+    332                  
+    333                  /* If device has more that one logical unit then it is not supported */
+    334                  if((MSC_Machine.maxLun > 0) && (maxLunExceed == FALSE))
+    335                  {
+    336                    maxLunExceed = TRUE;
+    337                    pphost->usr_cb->DeviceNotSupported();
+    338                    
+    339                    break;
+    340                  }
+    341                  USBH_MSC_BOTXferParam.MSCState = USBH_MSC_TEST_UNIT_READY;
+    342                }
+    343                
+    344                if(status == USBH_NOT_SUPPORTED )
+    345                {
+    346                         /* If the Command has failed, then we need to move to Next State, after
+    347                  STALL condition is cleared by Control-Transfer */
+    348                  USBH_MSC_BOTXferParam.MSCStateBkp = USBH_MSC_TEST_UNIT_READY; 
+    349                  
+    350                  /* a Clear Feature should be issued here */
+    351                  USBH_MSC_BOTXferParam.MSCState = USBH_MSC_CTRL_ERROR_STATE;
+    352                }    
+    353                break;
+    354                
+    355              case USBH_MSC_CTRL_ERROR_STATE:
+    356                /* Issue Clearfeature request */
+    357                status = USBH_ClrFeature(pdev,
+    358                                         phost,
+    359                                         0x00,
+    360                                         pphost->Control.hc_num_out);
+    361                if(status == USBH_OK )
+    362                {
+    363                  /* If GetMaxLun Request not support, assume Single LUN configuration */
+    364                  MSC_Machine.maxLun = 0;  
+    365                  
+    366                  USBH_MSC_BOTXferParam.MSCState = USBH_MSC_BOTXferParam.MSCStateBkp;     
+    367                }
+    368                break;  
+    369                
+    370              case USBH_MSC_TEST_UNIT_READY:
+    371                /* Issue SCSI command TestUnitReady */ 
+    372                mscStatus = USBH_MSC_TestUnitReady(pdev);
+    373                
+    374                if(mscStatus == USBH_MSC_OK )
+    375                {
+    376                  USBH_MSC_BOTXferParam.MSCState = USBH_MSC_READ_CAPACITY10;
+    377                  MSCErrorCount = 0;
+    378                  status = USBH_OK;
+    379                }
+    380                else
+    381                {
+    382                  USBH_MSC_ErrorHandle(mscStatus);
+    383                } 
+    384                break;
+    385                
+    386              case USBH_MSC_READ_CAPACITY10:
+    387                /* Issue READ_CAPACITY10 SCSI command */
+    388                mscStatus = USBH_MSC_ReadCapacity10(pdev);
+    389                if(mscStatus == USBH_MSC_OK )
+    390                {
+    391                  USBH_MSC_BOTXferParam.MSCState = USBH_MSC_MODE_SENSE6;
+    392                  MSCErrorCount = 0;
+    393                  status = USBH_OK;
+    394                }
+    395                else
+    396                {
+    397                  USBH_MSC_ErrorHandle(mscStatus);
+    398                }
+    399                break;
+    400          
+    401              case USBH_MSC_MODE_SENSE6:
+    402                /* Issue ModeSense6 SCSI command for detecting if device is write-protected */
+    403                mscStatus = USBH_MSC_ModeSense6(pdev);
+    404                if(mscStatus == USBH_MSC_OK )
+    405                {
+    406                  USBH_MSC_BOTXferParam.MSCState = USBH_MSC_DEFAULT_APPLI_STATE;
+    407                  MSCErrorCount = 0;
+    408                  status = USBH_OK;
+    409                }
+    410                else
+    411                {
+    412                  USBH_MSC_ErrorHandle(mscStatus);
+    413                }
+    414                break;
+    415                
+    416              case USBH_MSC_REQUEST_SENSE:
+    417                /* Issue RequestSense SCSI command for retreiving error code */
+    418                mscStatus = USBH_MSC_RequestSense(pdev);
+    419                if(mscStatus == USBH_MSC_OK )
+    420                {
+    421                  USBH_MSC_BOTXferParam.MSCState = USBH_MSC_BOTXferParam.MSCStateBkp;
+    422                  status = USBH_OK;
+    423                }
+    424                else
+    425                {
+    426                  USBH_MSC_ErrorHandle(mscStatus);
+    427                }  
+    428                break;
+    429                
+    430              case USBH_MSC_BOT_USB_TRANSFERS:
+    431                /* Process the BOT state machine */
+    432                USBH_MSC_HandleBOTXfer(pdev , phost);
+    433                break;
+    434              
+    435              case USBH_MSC_DEFAULT_APPLI_STATE:
+    436          	{
+    437          		/* Process Application callback for MSC */
+    438          		appliStatus = USBH_USR_MSC_Application(); 
+    439          		if(appliStatus == 0)
+    440          		{
+    441          			USBH_MSC_BOTXferParam.MSCState = USBH_MSC_DEFAULT_APPLI_STATE;
+    442          		}
+    443          		else if (appliStatus == -1) 
+    444          		{
+    445          			/* De-init requested from application layer */
+    446          			status =  USBH_APPLY_DEINIT;
+    447          		}
+    448          	}
+    449          	
+    450                break;
+    451                
+    452              case USBH_MSC_UNRECOVERED_STATE:
+    453                
+    454                status = USBH_UNRECOVERED_ERROR;
+    455                
+    456                break;
+    457                
+    458              default:
+    459                break; 
+    460                
+    461              }
+    462            }
+    463             return status;
+    464          }
+    465          
+    466          
+    467          
+    468          /**
+    469            * @brief  USBH_MSC_BOTReset
+    470            *         This request is used to reset the mass storage device and its 
+    471            *         associated interface. This class-specific request shall ready the 
+    472            *         device for the next CBW from the host.
+    473            * @param  pdev: Selected device
+    474            * @retval USBH_Status : Status of class request handled.
+    475            */
+    476          static USBH_Status USBH_MSC_BOTReset(USB_OTG_CORE_HANDLE *pdev,
+    477                                        USBH_HOST *phost)
+    478          {
+    479            
+    480            phost->Control.setup.b.bmRequestType = USB_H2D | USB_REQ_TYPE_CLASS | \
+    481                                        USB_REQ_RECIPIENT_INTERFACE;
+    482            
+    483            phost->Control.setup.b.bRequest = USB_REQ_BOT_RESET;
+    484            phost->Control.setup.b.wValue.w = 0;
+    485            phost->Control.setup.b.wIndex.w = 0;
+    486            phost->Control.setup.b.wLength.w = 0;           
+    487            
+    488            return USBH_CtlReq(pdev, phost, 0 , 0 ); 
+    489          }
+    490          
+    491          
+    492          /**
+    493            * @brief  USBH_MSC_GETMaxLUN
+    494            *         This request is used to reset the mass storage device and its 
+    495            *         associated interface. This class-specific request shall ready the 
+    496            *         device for the next CBW from the host.
+    497            * @param  pdev: Selected device
+    498            * @retval USBH_Status : USB ctl xfer status
+    499            */
+    500          static USBH_Status USBH_MSC_GETMaxLUN(USB_OTG_CORE_HANDLE *pdev , USBH_HOST *phost)
+    501          {
+    502            phost->Control.setup.b.bmRequestType = USB_D2H | USB_REQ_TYPE_CLASS | \
+    503                                        USB_REQ_RECIPIENT_INTERFACE;
+    504            
+    505            phost->Control.setup.b.bRequest = USB_REQ_GET_MAX_LUN;
+    506            phost->Control.setup.b.wValue.w = 0;
+    507            phost->Control.setup.b.wIndex.w = 0;
+    508            phost->Control.setup.b.wLength.w = 1;           
+    509            
+    510            return USBH_CtlReq(pdev, phost, MSC_Machine.buff , 1 ); 
+    511          }
+    512          
+    513          /**
+    514            * @brief  USBH_MSC_ErrorHandle 
+    515            *         The function is for handling errors occuring during the MSC
+    516            *         state machine   
+    517            * @param  status
+    518            * @retval None
+    519            */
+    520          
+    521          void USBH_MSC_ErrorHandle(uint8_t status)
+    522          {  
+    523              if(status == USBH_MSC_FAIL)
+    524              { 
+    525                MSCErrorCount++;
+    526                if(MSCErrorCount < USBH_MSC_ERROR_RETRY_LIMIT)
+    527                { /* Try MSC level error recovery, Issue the request Sense to get 
+    528                  Drive error reason  */
+    529                  USBH_MSC_BOTXferParam.MSCState = USBH_MSC_REQUEST_SENSE;
+    530                  USBH_MSC_BOTXferParam.CmdStateMachine = CMD_SEND_STATE;
+    531                }
+    532                else
+    533                {
+    534                  /* Error trials exceeded the limit, go to unrecovered state */
+    535                  USBH_MSC_BOTXferParam.MSCState = USBH_MSC_UNRECOVERED_STATE;
+    536                }
+    537              } 
+    538              else if(status == USBH_MSC_PHASE_ERROR)
+    539              {
+    540                /* Phase error, Go to Unrecoovered state */
+    541                USBH_MSC_BOTXferParam.MSCState = USBH_MSC_UNRECOVERED_STATE;
+    542              }
+    543              else if(status == USBH_MSC_BUSY)
+    544              {
+    545                /*No change in state*/
+    546              }
+    547          }
+    548          
+    549          /**
+    550            * @}
+    551            */ 
+    552          
+    553          /**
+    554            * @}
+    555            */ 
+    556          
+    557          /**
+    558            * @}
+    559            */
+    560          
+    561          /**
+    562            * @}
+    563            */ 
+    564          
+    565          /**
+    566            * @}
+    567            */
+    568          
+    569          /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        0  USBH_MSC_ClassRequest
+        0  USBH_MSC_ErrorHandle
+       32  USBH_MSC_Handle
+             32 -- Indirect call
+             32 -> HCD_IsDeviceConnected
+             32 -> USBH_ClrFeature
+             32 -> USBH_CtlReq
+             32 -> USBH_MSC_ErrorHandle
+             32 -> USBH_MSC_HandleBOTXfer
+             32 -> USBH_MSC_Init
+             32 -> USBH_MSC_ModeSense6
+             32 -> USBH_MSC_ReadCapacity10
+             32 -> USBH_MSC_RequestSense
+             32 -> USBH_MSC_TestUnitReady
+             32 -> USBH_USR_MSC_Application
+       16  USBH_MSC_InterfaceDeInit
+             16 -> USBH_Free_Channel
+             16 -> USB_OTG_HC_Halt
+       32  USBH_MSC_InterfaceInit
+             32 -- Indirect call
+             32 -> USBH_Alloc_Channel
+             32 -> USBH_Open_Channel
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable4
+       4  ??DataTable4_1
+       4  ??DataTable4_2
+      18  ?Subroutine0
+       2  MSCErrorCount
+          maxLunExceed
+      76  MSC_Machine
+       8  MSC_Setup
+      10  USBH_MSC_ClassRequest
+      40  USBH_MSC_ErrorHandle
+     310  USBH_MSC_Handle
+      50  USBH_MSC_InterfaceDeInit
+     128  USBH_MSC_InterfaceInit
+      16  USBH_MSC_cb
+
+ 
+  86 bytes in section .bss
+  16 bytes in section .data
+ 568 bytes in section .text
+ 
+ 568 bytes of CODE memory
+ 102 bytes of DATA memory
+
+Errors: none
+Warnings: none

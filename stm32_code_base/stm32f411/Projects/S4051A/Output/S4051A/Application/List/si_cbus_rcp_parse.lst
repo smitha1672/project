@@ -1,0 +1,516 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:23:55 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\cbus\si_cbus_ #
+#                    rcp_parse.c                                              #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\cbus\si_cbus_ #
+#                    rcp_parse.c -D S4051A -D DEBUG -D FREE_RTOS -D           #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_cbus_rcp_parse.lst                                 #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_cbus_rcp_parse.o                                    #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\component\cbus\si_cbus_rcp_parse.c
+      1          //***************************************************************************
+      2          //!file     si_cbus_rcp_parse.c
+      3          //!brief    CBUS RCP parse interface
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2012, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          #include "string.h"
+     13          #include "si_common.h"
+     14          #include "si_cbus_internal.h"
+     15          #include "si_edid_tx_component.h"
+     16          
+     17          //------------------------------------------------------------------------------
+     18          // Module constants
+     19          //------------------------------------------------------------------------------
+     20          
+     21          #define MHL_LD_INVALID  (0)
+     22          
+     23          //------------------------------------------------------------------------------
+     24          // Module data
+     25          //------------------------------------------------------------------------------
+     26          
+     27          static uint8_t rcpValidate [128] =
+     28          {
+     29              LD_MHL_RCP_CMD_SELECT,
+     30              LD_MHL_RCP_CMD_UP,
+     31              LD_MHL_RCP_CMD_DOWN,
+     32              LD_MHL_RCP_CMD_LEFT,
+     33              LD_MHL_RCP_CMD_RIGHT,
+     34              LD_MHL_RCP_CMD_RIGHT_UP,
+     35              LD_MHL_RCP_CMD_RIGHT_DOWN,
+     36              LD_MHL_RCP_CMD_LEFT_UP,
+     37              LD_MHL_RCP_CMD_LEFT_DOWN,
+     38              LD_MHL_RCP_CMD_ROOT_MENU,
+     39              LD_MHL_RCP_CMD_SETUP_MENU,
+     40              LD_MHL_RCP_CMD_CONTENTS_MENU,
+     41              LD_MHL_RCP_CMD_FAVORITE_MENU,
+     42              LD_MHL_RCP_CMD_EXIT,
+     43          
+     44              //0x0E - 0x1F Reserved
+     45              MHL_LD_INVALID, MHL_LD_INVALID,
+     46              MHL_LD_INVALID, MHL_LD_INVALID, MHL_LD_INVALID, MHL_LD_INVALID,
+     47              MHL_LD_INVALID, MHL_LD_INVALID, MHL_LD_INVALID, MHL_LD_INVALID,
+     48              MHL_LD_INVALID, MHL_LD_INVALID, MHL_LD_INVALID, MHL_LD_INVALID,
+     49              MHL_LD_INVALID, MHL_LD_INVALID, MHL_LD_INVALID, MHL_LD_INVALID,
+     50          
+     51              LD_MHL_RCP_CMD_NUM_0,
+     52              LD_MHL_RCP_CMD_NUM_1,
+     53              LD_MHL_RCP_CMD_NUM_2,
+     54              LD_MHL_RCP_CMD_NUM_3,
+     55              LD_MHL_RCP_CMD_NUM_4,
+     56              LD_MHL_RCP_CMD_NUM_5,
+     57              LD_MHL_RCP_CMD_NUM_6,
+     58              LD_MHL_RCP_CMD_NUM_7,
+     59              LD_MHL_RCP_CMD_NUM_8,
+     60              LD_MHL_RCP_CMD_NUM_9,
+     61              LD_MHL_RCP_CMD_DOT,
+     62              LD_MHL_RCP_CMD_ENTER,
+     63              LD_MHL_RCP_CMD_CLEAR,
+     64          
+     65              //0x2D - 0x2F Reserved
+     66              MHL_LD_INVALID, MHL_LD_INVALID, MHL_LD_INVALID,
+     67          
+     68              LD_MHL_RCP_CMD_CH_UP,
+     69              LD_MHL_RCP_CMD_CH_DOWN,
+     70              LD_MHL_RCP_CMD_PRE_CH,
+     71              LD_MHL_RCP_CMD_SOUND_SELECT,
+     72              LD_MHL_RCP_CMD_INPUT_SELECT,
+     73              LD_MHL_RCP_CMD_SHOW_INFO,
+     74              LD_MHL_RCP_CMD_HELP,
+     75              LD_MHL_RCP_CMD_PAGE_UP,
+     76              LD_MHL_RCP_CMD_PAGE_DOWN,
+     77          
+     78              //0x39 - 0x3F Reserved
+     79              MHL_LD_INVALID, MHL_LD_INVALID, MHL_LD_INVALID,
+     80              MHL_LD_INVALID, MHL_LD_INVALID, MHL_LD_INVALID, MHL_LD_INVALID,
+     81          
+     82              LD_MHL_RAP_CONTENT_ON,
+     83              LD_MHL_RCP_CMD_VOL_UP,
+     84              LD_MHL_RCP_CMD_VOL_DOWN,
+     85              LD_MHL_RCP_CMD_MUTE,
+     86              LD_MHL_RCP_CMD_PLAY,
+     87              LD_MHL_RCP_CMD_STOP,
+     88              LD_MHL_RCP_CMD_PAUSE,
+     89              LD_MHL_RCP_CMD_RECORD,
+     90              LD_MHL_RCP_CMD_REWIND,
+     91              LD_MHL_RCP_CMD_FAST_FWD,
+     92              LD_MHL_RCP_CMD_EJECT,
+     93              LD_MHL_RCP_CMD_FWD,
+     94              LD_MHL_RCP_CMD_BKWD,
+     95          
+     96              //0x4D - 0x4F Reserved
+     97              MHL_LD_INVALID, MHL_LD_INVALID, MHL_LD_INVALID,
+     98          
+     99              LD_MHL_RCP_CMD_ANGLE,
+    100              LD_MHL_RCP_CMD_SUBPICTURE,
+    101          
+    102              //0x52 - 0x5F Reserved
+    103              MHL_LD_INVALID, MHL_LD_INVALID,
+    104              MHL_LD_INVALID, MHL_LD_INVALID, MHL_LD_INVALID, MHL_LD_INVALID,
+    105              MHL_LD_INVALID, MHL_LD_INVALID, MHL_LD_INVALID, MHL_LD_INVALID,
+    106              MHL_LD_INVALID, MHL_LD_INVALID, MHL_LD_INVALID, MHL_LD_INVALID,
+    107          
+    108              LD_MHL_RCP_CMD_PLAY_FUNC,
+    109              LD_MHL_RCP_CMD_PAUSE_PLAY_FUNC,
+    110              LD_MHL_RCP_CMD_RECORD_FUNC,
+    111              LD_MHL_RCP_CMD_PAUSE_REC_FUNC,
+    112              LD_MHL_RCP_CMD_STOP_FUNC,
+    113              LD_MHL_RCP_CMD_MUTE_FUNC,
+    114              LD_MHL_RCP_CMD_UN_MUTE_FUNC,
+    115              LD_MHL_RCP_CMD_TUNE_FUNC,
+    116              LD_MHL_RCP_CMD_MEDIA_FUNC,
+    117          
+    118              //0x69 - 0x70 Reserved
+    119              MHL_LD_INVALID, MHL_LD_INVALID, MHL_LD_INVALID,
+    120              MHL_LD_INVALID, MHL_LD_INVALID, MHL_LD_INVALID, MHL_LD_INVALID,
+    121              MHL_LD_INVALID,
+    122          
+    123              LD_MHL_RCP_CMD_F1,
+    124              LD_MHL_RCP_CMD_F2,
+    125              LD_MHL_RCP_CMD_F3,
+    126              LD_MHL_RCP_CMD_F4,
+    127              LD_MHL_RCP_CMD_F5,
+    128          
+    129              // 0x76 - 0x7F Reserved
+    130              MHL_LD_INVALID, MHL_LD_INVALID,
+    131              MHL_LD_INVALID, MHL_LD_INVALID, MHL_LD_INVALID, MHL_LD_INVALID,
+    132              MHL_LD_INVALID, MHL_LD_INVALID, MHL_LD_INVALID, MHL_LD_INVALID,
+    133          };
+    134          
+    135          
+    136          //------------------------------------------------------------------------------
+    137          //! @brief  Check for valid CBUS RCP key code.  Although there is a one-to-one
+    138          //!         correspondence for most of the key codes, some codes supported by
+    139          //!         CEC are not supported by RCP and should be ignored.
+    140          //! @param[in]  CEC RC key
+    141          //------------------------------------------------------------------------------
+    142          bool_t SiiMhlValidateRcpKeyCode ( uint8_t keyData, uint8_t supportMask )
+    143           {
+    144              bool_t  validKey = true;
+    145          
+    146              // Is it valid for the specified logical device types
+    147              if (( rcpValidate[ keyData & ~BIT7] & supportMask ) == 0 )
+    148              {
+    149                  validKey = false;
+    150              }
+    151          
+    152              return( validKey );
+    153           }
+    154          
+    155          //------------------------------------------------------------------------------
+    156          //! @brief  Send MSC_MSG (RCP) message to the CBUS channel.  Does not validate
+    157          //!         key code because we don't want to assume anything about the
+    158          //!         attached device support capabilities
+    159          //! @param[in]  keyId   RCP key ID value
+    160          //! @retval     true        - successful queue/write
+    161          //! @retval     false       - write and/or queue failed
+    162          //------------------------------------------------------------------------------
+    163          bool_t SiiMhlRxSendRCPCmd ( uint8_t keyCode )
+    164          {
+    165              return( CBusSendMscMsgCmd( MHL_MSC_MSG_RCP, keyCode ));
+    166          }
+    167          
+    168          //------------------------------------------------------------------------------
+    169          //! @brief  Transfer a CBUS message to CEC
+    170          //! @param[in]
+    171          //------------------------------------------------------------------------------
+    172          void CbusProcessRcpRap ( uint8_t cmd, uint8_t msgData )
+    173          {
+    174              uint8_t     status;
+    175              switch ( cmd )
+    176              {
+    177                  case MHL_MSC_MSG_RCP:
+    178                      DEBUG_PRINT( MSG_DBG, "RCP received. Key Code: %02X\n", msgData );
+    179          
+    180                      // Don't bother application with basic key code validation, do it here.
+    181                      if ( !SiiMhlValidateRcpKeyCode( msgData, MHL_LD_ALL ))
+    182                      {
+    183                          SiiMhlRxSendRcpe( MHL_MSC_MSG_RCP_INEFFECTIVE_KEY_CODE );
+    184                      }
+    185                      else
+    186                      {
+    187                          // Allow application to process key.
+    188                          status = SiiMhlCbRxRcpRapReceived( cmd, msgData );
+    189                          if ( status != MHL_MSC_MSG_RCP_NO_ERROR )
+    190                          {
+    191                              SiiMhlRxSendRcpe( status );
+    192                          }
+    193                      }
+    194          
+    195                      // Acknowledge command whether there was an error or not.
+    196                      SiiMhlRxSendRcpk( msgData );
+    197                      break;
+    198                  case MHL_MSC_MSG_RAP:
+    199                  	DEBUG_PRINT( MSG_DBG, "RAP received. Action Code: %02X\n", msgData );
+    200                      status = SiiMhlCbRxRcpRapReceived( cmd, msgData );
+    201                      SiiMhlRxSendRapk( status );
+    202                     break;
+    203          #if ((MHL_20 == ENABLE) || (MHL_EXTRA == ENABLE))
+    204                  case MHL_MSC_MSG_UCP:
+    205                      DEBUG_PRINT( MSG_DBG, "UCP received. Key Code: %02X\n", msgData );
+    206                      // Allow application to process key.
+    207                      status = SiiMhlCbRxRcpRapReceived( cmd, msgData );
+    208                      if ( status != MHL_MSC_MSG_UCP_NO_ERROR )
+    209                      {
+    210                          SiiMhlRxSendUcpe( status );
+    211                      }
+    212                      SiiMhlRxSendUcpk( msgData );
+    213                      break;
+    214          #endif
+    215          
+    216                  case MHL_MSC_MSG_RCPK:
+    217                  case MHL_MSC_MSG_RCPE:
+    218                  case MHL_MSC_MSG_RAPK:
+    219                  case MHL_MSC_MSG_UCPK:
+    220                  case MHL_MSC_MSG_UCPE:
+    221                      status = SiiMhlCbRxRcpRapReceived( cmd, msgData );
+    222                      break;
+    223          
+    224                  default:
+    225                      DEBUG_PRINT( MSG_DBG, "MSC_MSG sub-command not recognized!! Sending back MSGE code !!\n" );
+    226                      SiiMhlRxSendMsge();
+    227                      break;
+    228              }
+    229          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        8  CbusProcessRcpRap
+             0 -> SiiMhlCbRxRcpRapReceived
+             8 -> SiiMhlCbRxRcpRapReceived
+             0 -> SiiMhlRxSendMsge
+             0 -> SiiMhlRxSendRapk
+             8 -> SiiMhlRxSendRcpe
+             0 -> SiiMhlRxSendRcpk
+             8 -> SiiMhlRxSendUcpe
+             0 -> SiiMhlRxSendUcpk
+             8 -> SiiMhlValidateRcpKeyCode
+        0  SiiMhlRxSendRCPCmd
+             0 -> CBusSendMscMsgCmd
+        0  SiiMhlValidateRcpKeyCode
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable0
+     124  CbusProcessRcpRap
+       8  SiiMhlRxSendRCPCmd
+      20  SiiMhlValidateRcpKeyCode
+     128  rcpValidate
+
+ 
+ 128 bytes in section .data
+ 156 bytes in section .text
+ 
+ 156 bytes of CODE memory
+ 128 bytes of DATA memory
+
+Errors: none
+Warnings: 1

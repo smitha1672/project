@@ -1,0 +1,637 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:25:39 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\APP_SRC\Managers\PowerHandler.c       #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\APP_SRC\Managers\PowerHandler.c -D    #
+#                    S4051A -D DEBUG -D FREE_RTOS -D STM32F40_41xxx -D        #
+#                    USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D             #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\PowerHandler.lst                                      #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\PowerHandler.o                                         #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Projects\S4051A\APP_SRC\Managers\PowerHandler.c
+      1          #include "Defs.h"
+      2          #include "Debug.h"
+      3          #include "freertos_conf.h"
+      4          #include "freertos_task.h"
+      5          #include "freertos_typedef.h"
+      6          
+      7          #include "PowerHandler.h"
+      8          #include "GPIOMiddleLevel.h"
+      9          
+     10          #include "BTHandler.h"
+     11          #if ( configSTM32F411_PORTING == 1 )
+     12          #include "BackupAccessLowLevel.h"
+     13          #endif
+     14          //____________________________________________________________________________________________________________
+     15          #define POWER_HANDLER_TICK TASK_MSEC2TICKS(100)
+     16          #define POWER_QUEUE_LENGTH 5
+     17          #define POWER_STATE_SUBSYS_MAX 3
+     18          #define POWER_HANDLER_TIMEOUT 160
+     19          
+     20          //____________________________________________________________________________________________________________
+     21          /*typedef enum{
+     22              POWER_HANDLE_IDLE,
+     23              POWER_HANDLE_UP,
+     24              POWER_HANDLE_DOWN
+     25          }xPowerHandleState;
+     26          */
+     27          typedef struct POWER_HANDLE_PARAMETERS
+     28          {
+     29              xTaskHandle TaskHandle;
+     30           } xPowerHandleParams;
+     31          
+     32          typedef struct POWER_HANDLE_SUBSYSTEM
+     33          {
+     34          	uint8 handle;
+     35          	xPowerStateSubSystem pwr_state;
+     36          } xPowerStateSubsystem;
+     37          
+     38          //____________________________________________________________________________________________________________
+     39          //static api header
+     40          static void PowerHandler_Task( void *pvParameters );
+     41          
+     42          static void PowerHandler_PowerToggle(void);
+     43          
+     44          static POWER_STATE PowerHandler_getPowerState(void);
+     45          
+     46          static xPowerHandleState PowerHandler_getPowerHandleState(void);
+     47          
+     48          static uint8 PowerHandler_RegisterHandle( void );
+     49          
+     50          static void PowerHandler_TurnOffDone( uint8 handle );
+     51          
+     52          static void PowerHandler_TurnOnDone( uint8 handle );
+     53          
+     54          static void PowerHandler_ResetPowerHandle( void );
+     55          
+     56          static void PowerHandler_Initialize( void );
+     57          
+     58          static void PowerHandler_PowerCtrl( uint8 val );
+     59          
+     60          static uint8 PowerHandler_getSystemResetType( void );
+     61          
+     62          static void PowerManager_clrSystemResetType( void );
+     63          //____________________________________________________________________________________________________________
+     64          const POWER_HANDLE_OBJECT PowerHandle =
+     65          {
+     66              PowerHandler_Initialize,
+     67              PowerHandler_RegisterHandle,
+     68              PowerHandler_PowerToggle,
+     69              PowerHandler_PowerCtrl,
+     70              PowerHandler_getPowerState,
+     71              PowerHandler_getPowerHandleState,
+     72              PowerHandler_TurnOffDone,
+     73              PowerHandler_TurnOnDone,
+     74              PowerHandler_getSystemResetType,
+     75              PowerManager_clrSystemResetType,
+     76          };
+     77          const POWER_HANDLE_OBJECT *pPowerHandle_ObjCtrl = &PowerHandle;
+     78          
+     79          //____________________________________________________________________________________________________________
+     80          /*static variable*/
+     81          static xPowerHandleState mPowerHandleState = POWER_HANDLE_IDLE;
+     82          static xPowerHandleParams mPowerHandleParams;
+     83          static uint8 mSubsysHandle = 0;
+     84          static POWER_STATE mPowerState = POWER_OFF;
+     85          static xPowerStateSubsystem pwr_state_subsys[POWER_STATE_SUBSYS_MAX];
+     86          
+     87          //____________________________________________________________________________________________________________
+     88          static void PowerHandler_Initialize( void )
+     89          {
+     90          	if ( xTaskCreate( 
+     91          			PowerHandler_Task, 
+     92          			( portCHAR * ) "Power_Task", 
+     93          			(STACK_SIZE), 
+     94          			NULL, 
+     95          			tskPOWER_HANDLER_PRIORITY, 
+     96          			&mPowerHandleParams.TaskHandle ) != pdPASS )
+     97          	{
+     98          		vTaskDelete( mPowerHandleParams.TaskHandle );
+     99          	}
+    100          	else
+    101          	{
+    102          		memset( pwr_state_subsys, 0, (sizeof(pwr_state_subsys)/sizeof(uint8)) );
+    103          	}	
+    104          }
+    105          
+    106          static uint8 PowerHandler_RegisterHandle( void )
+    107          {
+    108          	uint8 i = 0;
+    109          
+    110          	for( i = 0; i < POWER_STATE_SUBSYS_MAX; i++ )
+    111          	{
+    112          		if ( pwr_state_subsys[i].handle == 0 )
+    113          		{
+    114          			mSubsysHandle ++;
+    115          			pwr_state_subsys[i].handle = mSubsysHandle;
+    116          			return pwr_state_subsys[i].handle;
+    117          		}
+    118          	}
+    119          
+    120          	return 0;
+    121          }
+    122          
+    123          static void PowerHandler_TurnOffDone( uint8 handle )
+    124          {
+    125          	uint8 i = 0;
+    126          
+    127          	if ( handle == 0 )
+    128          		return;
+    129          
+    130          	for ( i = 0; i < POWER_STATE_SUBSYS_MAX; i++ )
+    131          	{
+    132          		if ( pwr_state_subsys[i].handle == handle )
+    133          		{
+    134          			pwr_state_subsys[i].pwr_state = PWR_STATE_SUBSYS_TURN_OFF_DONE;
+    135          		}
+    136          	}
+    137          		
+    138          }
+    139          
+    140          static void PowerHandler_TurnOnDone( uint8 handle )
+    141          {
+    142          	uint8 i = 0;
+    143          
+    144          	if ( handle == 0 )
+    145          		return;
+    146          
+    147          	for ( i = 0; i < POWER_STATE_SUBSYS_MAX; i++ )
+    148          	{
+    149          		if ( pwr_state_subsys[i].handle == handle )
+    150          		{
+    151          			pwr_state_subsys[i].pwr_state = PWR_STATE_SUBSYS_TURN_ON_DONE;
+    152          		}
+    153          	}
+    154          }
+    155          
+    156          static void PowerHandler_ResetPowerHandle( void )
+    157          {
+    158          	uint8 i = 0;
+    159          
+    160          	for ( i = 0; i < POWER_STATE_SUBSYS_MAX; i++ )
+    161          	{
+    162          		pwr_state_subsys[i].pwr_state = PWR_STATE_SUBSYS_NULL;
+    163          	}
+    164          }
+    165          
+    166          static bool PowerHandler_IsTurnOffReady( void )
+    167          {
+    168          	uint8 i = 0;
+    169          
+    170          	for( i = 0; i <POWER_STATE_SUBSYS_MAX; i++ )
+    171          	{
+    172          		if( pwr_state_subsys[i].handle != 0 )
+    173          		{
+    174          			 if ( pwr_state_subsys[i].pwr_state != PWR_STATE_SUBSYS_TURN_OFF_DONE )
+    175          			 {
+    176          			 	return FALSE;
+    177          			 }
+    178          
+    179          #if 0
+    180          			 if ( pwr_state_subsys[i].pwr_state == PWR_STATE_SUBSYS_TURN_OFF_DONE )
+    181          			 {
+    182          				TRACE_DEBUG((0, " power handle %d is ready off", pwr_state_subsys[i].handle ));
+    183          			 }
+    184          #endif 			 
+    185          		}
+    186          	}
+    187          	PowerHandler_ResetPowerHandle();
+    188          
+    189          	return TRUE;
+    190          }
+    191          
+    192          static void PowerHandler_WhichHandleIsNotReadyOff( void )
+    193          {
+    194          	uint8 i = 0;
+    195          
+    196          	for( i = 0; i <POWER_STATE_SUBSYS_MAX; i++ )
+    197          	{
+    198          		if( pwr_state_subsys[i].handle != 0 )
+    199          		{
+    200          			 if ( pwr_state_subsys[i].pwr_state != PWR_STATE_SUBSYS_TURN_OFF_DONE )
+    201          			 {
+    202          				TRACE_ERROR((0, "TIMEOUT:power handle %d is not ready off", pwr_state_subsys[i].handle ));
+    203          			 }
+    204          		}
+    205          	}
+    206          }
+    207          
+    208          static POWER_STATE PowerHandler_getPowerState(void)
+    209          {
+    210              return mPowerState;
+    211          }
+    212          
+    213          static xPowerHandleState PowerHandler_getPowerHandleState(void)
+    214          {
+    215              return mPowerHandleState;
+    216          }
+    217          
+    218          static void PowerHandler_PowerToggle(void)
+    219          {
+    220          	if ( mPowerState == POWER_OFF )
+    221          	{
+    222          		mPowerHandleState = POWER_HANDLE_UP; 
+    223          	}
+    224          	else if( mPowerState == POWER_ON )
+    225          	{
+    226          		mPowerHandleState = POWER_HANDLE_DOWN;  
+    227          	}
+    228          }
+    229          
+    230          static void PowerHandler_PowerCtrl( uint8 val )
+    231          {
+    232          	if ( val == POWER_UP )
+    233          	{
+    234          		mPowerHandleState = POWER_HANDLE_UP;
+    235          	}
+    236          	else if ( val == POWER_DOWN )
+    237          	{
+    238          		mPowerHandleState = POWER_HANDLE_DOWN;
+    239          	}
+    240          }
+    241          
+    242          static void PowerHandler_Task( void *pvParameters )
+    243          {
+    244          	static uint8 timeout = 0;
+    245          
+    246              for(;;)
+    247              {
+    248          		switch( mPowerHandleState )
+    249          		{
+    250          			case POWER_HANDLE_IDLE:
+    251          			{
+    252          				timeout = 0;
+    253          			}
+    254          				break;
+    255          			case POWER_HANDLE_UP:
+    256          			{
+    257          				mPowerState = POWER_UP;
+    258          				
+    259          				GPIOMiddleLevel_Set(__O_EN_24V);
+    260          				GPIOMiddleLevel_Set(__O_DE_5V);
+    261          				GPIOMiddleLevel_Set(__O_EN_1V);
+    262          				mPowerState = POWER_ON;
+    263          				mPowerHandleState = POWER_HANDLE_IDLE;
+    264          			}
+    265          				break;
+    266          
+    267          			case POWER_HANDLE_DOWN:
+    268          			{
+    269          				if ( PowerHandler_IsTurnOffReady() == TRUE )
+    270                          {
+    271          					GPIOMiddleLevel_Clr(__O_EN_24V);
+    272          					GPIOMiddleLevel_Clr(__O_DE_5V);
+    273          					GPIOMiddleLevel_Clr(__O_EN_1V);
+    274          					vTaskDelay(TASK_MSEC2TICKS(100));
+    275                              TRACE_DEBUG((0, "system shut down"));
+    276          					mPowerState = POWER_OFF;
+    277          					mPowerHandleState = POWER_HANDLE_IDLE;
+    278                          }
+    279                          else
+    280                          {
+    281          					timeout ++;
+    282          
+    283          					if ( timeout > POWER_HANDLER_TIMEOUT )
+    284          					{
+    285          						PowerHandler_WhichHandleIsNotReadyOff();
+    286          					
+    287          						timeout = 0;
+    288          						GPIOMiddleLevel_Clr(__O_EN_24V);
+    289          						GPIOMiddleLevel_Clr(__O_DE_5V);
+    290          						GPIOMiddleLevel_Clr(__O_EN_1V);
+    291          						vTaskDelay(TASK_MSEC2TICKS(100));
+    292          						mPowerHandleState = POWER_HANDLE_IDLE;
+    293          						mPowerState = POWER_OFF;
+    294          						break;
+    295          						
+    296          					}
+    297          					else
+    298          					{
+    299                          		mPowerState = POWER_DOWN;
+    300                          	}
+    301          					break;
+    302                          }
+    303          			}
+    304          				break;
+    305          		
+    306          		}
+    307          
+    308                  vTaskDelay( POWER_HANDLER_TICK );
+    309              }
+    310          }
+    311          
+    312          static uint8 PowerHandler_getSystemResetType( void )
+    313          {
+    314              uint16 ret = 0;
+    315          #if ( configSTM32F411_PORTING == 1 )
+    316              ret = BackupAccessLowLevel_ReadBackupRegister(PWR_SYSTEM_RESET_TYPE_INDICATOR);
+    317          #endif
+    318              return((uint8)(0x00FF&ret));
+    319          }
+    320          
+    321          static void PowerManager_clrSystemResetType( void )
+    322          {
+    323          #if ( configSTM32F411_PORTING == 1 )  
+    324              BackupAccessLowLevel_WriteBackupRegister(PWR_SYSTEM_RESET_TYPE_INDICATOR, 0xFFFF);
+    325          #endif
+    326          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       24  PowerHandler_Initialize
+              0 -> __aeabi_memclr4
+              0 -> vTaskDelete
+             24 -> xTaskGenericCreate
+        0  PowerHandler_PowerCtrl
+        0  PowerHandler_PowerToggle
+        0  PowerHandler_RegisterHandle
+       24  PowerHandler_Task
+             24 -> Debug_printDebug
+             24 -> Debug_printError
+             24 -> GPIOMiddleLevel_Clr
+             24 -> GPIOMiddleLevel_Set
+             24 -> vTaskDelay
+        8  PowerHandler_TurnOffDone
+        8  PowerHandler_TurnOnDone
+        0  PowerHandler_getPowerHandleState
+        0  PowerHandler_getPowerState
+        0  PowerHandler_getSystemResetType
+        0  PowerManager_clrSystemResetType
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      12  ?<Constant "Power_Task">
+      44  ?<Constant "TIMEOUT:power handle ...">
+      20  ?<Constant "system shut down">
+       4  ??DataTable12
+      40  PowerHandle
+      66  PowerHandler_Initialize
+      20  PowerHandler_PowerCtrl
+      16  PowerHandler_PowerToggle
+      34  PowerHandler_RegisterHandle
+     238  PowerHandler_Task
+      34  PowerHandler_TurnOffDone
+      34  PowerHandler_TurnOnDone
+       6  PowerHandler_getPowerHandleState
+       6  PowerHandler_getPowerState
+       4  PowerHandler_getSystemResetType
+       2  PowerManager_clrSystemResetType
+       4  pPowerHandle_ObjCtrl
+      16  pwr_state_subsys
+          mPowerHandleState
+          mSubsysHandle
+          mPowerState
+          timeout
+          mPowerHandleParams
+
+ 
+  20 bytes in section .data
+  40 bytes in section .rodata
+ 540 bytes in section .text
+ 
+ 540 bytes of CODE  memory
+  40 bytes of CONST memory
+  20 bytes of DATA  memory
+
+Errors: none
+Warnings: 1

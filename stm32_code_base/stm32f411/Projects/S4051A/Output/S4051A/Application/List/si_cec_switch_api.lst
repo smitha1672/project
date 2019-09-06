@@ -1,0 +1,977 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:23 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\cec_switch\si #
+#                    _cec_switch_api.c                                        #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\component\cec_switch\si #
+#                    _cec_switch_api.c -D S4051A -D DEBUG -D FREE_RTOS -D     #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_cec_switch_api.lst                                 #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_cec_switch_api.o                                    #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\component\cec_switch\si_cec_switch_api.c
+      1          //****************************************************************************
+      2          //! @file   si_cec_switch_api.c
+      3          //! @brief  Top & low level CEC / Switch API
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2002-2012, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include "si_common.h"
+     14          #include "si_cec_internal.h"
+     15          #include "si_cec_switch_api.h"
+     16          
+     17          
+     18          #ifndef CEC_PC_SIMULATION
+     19          #include <string.h>
+     20          #else
+     21          #include "stdio.h"
+     22          #include "memory.h"
+     23          #include "debug_print.h"
+     24          #endif
+     25          
+     26          //-------------------------------------------------------------------------------------------------
+     27          // Global Data
+     28          //-------------------------------------------------------------------------------------------------
+     29          CecSwitchInstanceRecord_t gSwitchInstRec[SII_NUM_CEC_SWITCH];       //!< global CEC/Switch instance record
+     30          CecSwitchInstanceRecord_t *pCecSwitch = &gSwitchInstRec[0];   //!< global pointer to CEC/Switch Instance Record
+     31          
+     32          
+     33          //-------------------------------------------------------------------------------------------------
+     34          // Local Functions
+     35          //-------------------------------------------------------------------------------------------------
+     36          
+     37          
+     38          
+     39          //-------------------------------------------------------------------------------------------------
+     40          //! @brief      Sends "CEC Report Physical Address" broadcast message to
+     41          //!             announce own physical address
+     42          //-------------------------------------------------------------------------------------------------
+     43          
+     44          static void CecPhysicalAddressReportSend(void)
+     45          {
+     46              SiiCpiData_t cecFrame;
+     47          
+     48              /* Respond by broadcasting Physical Address */
+     49              cecFrame.args[0]  = (pCec->physicalAddr >> 8) & 0xFF; // Physical Address, MSB
+     50              cecFrame.args[1]  = pCec->physicalAddr & 0xFF;        // Physical Address, LSB
+     51              cecFrame.args[2]  = pCec->deviceType;                 // Device Type
+     52          
+     53              SiiCecCpiWrite(CECOP_REPORT_PHYSICAL_ADDRESS, 3, CEC_LOGADDR_UNREGORBC, &cecFrame);
+     54          }
+     55          
+     56          
+     57          //-------------------------------------------------------------------------------------------------
+     58          // Top Level API Functions
+     59          //-------------------------------------------------------------------------------------------------
+     60          
+     61          //-------------------------------------------------------------------------------------------------
+     62          //! @brief      Brings device instance record into current context. This function
+     63          //!             is useful when multiple HDMI outputs are present
+     64          //! @param[in]  deviceIndex - index of the device in case of multiple instantiation
+     65          //-------------------------------------------------------------------------------------------------*/
+     66          
+     67          void SiiCecSwitchInstanceSet(uint16_t deviceIndex)
+     68          {
+     69              if( deviceIndex < SII_NUM_CEC_SWITCH)
+     70              {
+     71                  pCecSwitch = &gSwitchInstRec[deviceIndex];
+     72              }
+     73          }
+     74          
+     75          
+     76          //-------------------------------------------------------------------------------------------------
+     77          //! @brief      Returns pointer to current device CEC/Switch instance record
+     78          //-------------------------------------------------------------------------------------------------
+     79          
+     80          CecSwitchInstanceRecord_t *SiiCecSwitchDeviceInstanceGet(void)
+     81          {
+     82              return pCecSwitch;
+     83          }
+     84          
+     85          
+     86          //-------------------------------------------------------------------------------------------------
+     87          //! @brief      Initializes current CEC/Switch Instance Record
+     88          //-------------------------------------------------------------------------------------------------
+     89          
+     90          static void CecSwitchInstanceRecordReset(void)
+     91          {    
+     92              memset(pCecSwitch, 0, sizeof(CecSwitchInstanceRecord_t)); // erase all data
+     93          }
+     94          
+     95          //-------------------------------------------------------------------------------------------------
+     96          //! @brief      Initializes the CEC/Switch Instance Record and fills its fields related to
+     97          //!             device capabilities and non-volatile configuration.
+     98          //-------------------------------------------------------------------------------------------------
+     99          
+    100          void SiiCecSwitchConfig(void)
+    101          {
+    102              CecSwitchInstanceRecordReset();    // Initialize all Instance Record fields
+    103          
+    104              // Initialize current input port index
+    105              pCecSwitch->activeInputPortIndex = SiiCecPortSelectGet();
+    106          
+    107              SiiCecSwitchTaskInit();
+    108          }
+    109          
+    110          
+    111          //-------------------------------------------------------------------------------------------------
+    112          //! @brief      Resets all tasks
+    113          //-------------------------------------------------------------------------------------------------
+    114          
+    115          void SiiCecSwitchTaskInit(void)
+    116          {        
+    117              pCecSwitch->taskFlags = 0;
+    118              pCecSwitch->taskMask  = CEC_SWITCH_TASK_MASK_ALL_UNMASKED; // all tasks are unmasked by default
+    119          
+    120              // Reset time counters
+    121              CecTimeCounterReset(&pCecSwitch->taskTimeCount);
+    122          
+    123              // Reset task states
+    124              pCecSwitch->taskState = CEC_SWITCH_TASK_EMPTY_STATE_NONE;
+    125          
+    126              pCecSwitch->sysTimerCountCurMs = 0;
+    127              pCecSwitch->sysTimerCountPrvMs = 0;
+    128          }
+    129          
+    130          
+    131          //-------------------------------------------------------------------------------------------------
+    132          //! @brief      Stops given task
+    133          //!             For internal use in the last stage of a task
+    134          //-------------------------------------------------------------------------------------------------
+    135          
+    136          static void StopTask(uint16_t task)
+    137          {
+    138              pCecSwitch->taskFlags &= ~task; // clear the task activity flag
+    139              pCecSwitch->taskState = CEC_SWITCH_TASK_EMPTY_STATE_NONE;  // reset stage
+    140              pCecSwitch->taskMask  = CEC_SWITCH_TASK_MASK_ALL_UNMASKED;  // reset task mask as this task is done
+    141          }
+    142          
+    143          
+    144          //-------------------------------------------------------------------------------------------------
+    145          //! @brief      Standard check for the Task Timer event
+    146          //!             Including the Recall Timer update
+    147          //-------------------------------------------------------------------------------------------------
+    148          
+    149          static bool_t IsUpdatedTaskTimerExpired(void)
+    150          {
+    151              bool_t isExpired;
+    152              // Set recall timer to maximum in order to allow the task counters to set it to a new value
+    153              CecTimeCounterSet(CEC_TIME_MS2TCK(CEC_MAX_RECALL_TIME_MS), &pCecSwitch->recallTimeCount);
+    154              isExpired = CecTimeCounterUpdate(&pCecSwitch->taskTimeCount, &pCecSwitch->recallTimeCount);
+    155          
+    156              return isExpired;
+    157          }
+    158          
+    159          
+    160          //-------------------------------------------------------------------------------------------------
+    161          //! @brief      Sends Routing information (own physical address) after HPD stabilization
+    162          //!             on upstream side
+    163          //!
+    164          //!             The task starts with ensuring that upstream HPD is high (input connection is active).
+    165          //!             Then it will wait for CEC_SWITCH_ROUTE_INFO_DELAY_MS as many times as it takes for
+    166          //!             upstream HPD to become high again. Finally, the switch will broadcast it's
+    167          //!             physical address.
+    168          //!
+    169          //! @return     Feedback message to the caller (Task status or error reports)
+    170          //-------------------------------------------------------------------------------------------------
+    171          
+    172          static uint8_t CecSwitchTaskRouteInfo(void)
+    173          {
+    174              uint8_t switchFeedbackMsg = CEC_SWITCH_FB_MSG_NONE;
+    175          
+    176              switch(pCecSwitch->taskState)
+    177              {
+    178                  case CEC_SWITCH_TASK_EMPTY_STATE_NONE: // all tasks shall start from empty state
+    179                          pCecSwitch->taskMask = CEC_SWITCH_TASK_SEND_ROUTE_INFO; // mask out other tasks until this one is done
+    180                          pCecSwitch->taskState = CEC_SWITCH_TASK_SEND_ROUTE_INFO_STATE_PAUSE;
+    181                          // don't break here to save time and go ahead to the fist step
+    182          
+    183                  case CEC_SWITCH_TASK_SEND_ROUTE_INFO_STATE_CHECK_HPD: // Stay here until upstream HPD is high
+    184                          // Check upstream HPD
+    185                          if (SiiCbCecSwitchRxHpdGet() == true) // HPD high
+    186                          {
+    187                              // Set the pause timer
+    188                              CecTimeCounterSet(CEC_TIME_MS2TCK(CEC_SWITCH_ROUTE_INFO_DELAY_MS), &pCecSwitch->taskTimeCount);
+    189                              // Jump to the next state
+    190                              pCecSwitch->taskState = CEC_SWITCH_TASK_SEND_ROUTE_INFO_STATE_PAUSE;
+    191                          }
+    192                          // If HPD is low, will come back to this state again
+    193                          break;
+    194          
+    195                  case CEC_SWITCH_TASK_SEND_ROUTE_INFO_STATE_PAUSE: // Take a pause before sending new route
+    196                          if (IsUpdatedTaskTimerExpired())
+    197                          {   // if timer expired
+    198                              if (SiiCbCecSwitchRxHpdGet()) // HPD high
+    199                              {
+    200                                  // Report own physical address
+    201                                  CecPhysicalAddressReportSend();
+    202                                  DEBUG_PRINT(CEC_MSG_DBG, ("[CEC_SWITCH_TASK_SEND_ROUTE_INFO]: Broadcasted physical address after delay\n"));
+    203                                  // and finalize the task
+    204                                  pCecSwitch->taskState = CEC_SWITCH_TASK_SEND_ROUTE_INFO_STATE_REPORT_RESULTS;
+    205                              }
+    206                              else // HPD still low
+    207                              {
+    208                                  // Set the timer again and repeat the pause
+    209                                  CecTimeCounterSet(CEC_TIME_MS2TCK(CEC_SWITCH_ROUTE_INFO_DELAY_MS), &pCecSwitch->taskTimeCount);
+    210                              }
+    211                          }
+    212                          break;
+    213              
+    214                  case CEC_SWITCH_TASK_SEND_ROUTE_INFO_STATE_REPORT_RESULTS: // Last stage
+    215                          // event message to the caller
+    216                          switchFeedbackMsg = CEC_SWITCH_FB_MSG_SEND_ROUTE_DONE;
+    217                          StopTask(CEC_SWITCH_TASK_SEND_ROUTE_INFO);
+    218                          break;
+    219              }
+    220          
+    221              return  switchFeedbackMsg;
+    222          }
+    223          
+    224          
+    225          //-------------------------------------------------------------------------------------------------
+    226          //! @brief      Internal error reporting service for CecSwitchTaskBase()
+    227          //-------------------------------------------------------------------------------------------------
+    228          
+    229          static void CecSwitchBadCmdReport(char *str)
+    230          {
+    231              DEBUG_PRINT(CEC_MSG_DBG, "[CEC_SW]: ERROR in <%s> message: wrong length!\n", str);
+    232          }
+    233          
+    234          //-------------------------------------------------------------------------------------------------
+    235          //! @brief      Calculates input port index by given physical address
+    236          //!
+    237          //! @return     zero based input port index
+    238          //! @retval     0xFF - if physical address doesn't correspond to any of the switch inputs
+    239          //-------------------------------------------------------------------------------------------------
+    240          static uint8_t CecSwitchInputPortGet( uint16_t physAddr )
+    241          {
+    242              uint8_t     nmb = 0; // input number (0 means "not applicable")
+    243              uint16_t    pa = SiiCecGetDevicePA();
+    244          
+    245          /*    if ( pa == 0x0000 )
+    246              {
+    247                  nmb = (uint8_t)(physAddr >> 15);
+    248              }
+    249              else if ( pa & 0xF000 )
+    250              {
+    251                  nmb = (uint8_t)(physAddr >> 12);
+    252              }
+    253              else */if ( pa & 0xF000 )
+    254              {
+    255                  nmb = (uint8_t)((physAddr & 0x0F00) >> 8)/* + 1*/;
+    256              }
+    257              /*else if ( pa & 0x00F0 )
+    258              {
+    259                  nmb = (uint8_t)(physAddr >> 4);
+    260              }
+    261              else if ( pa & 0x000F )
+    262              {
+    263                  nmb = (uint8_t)physAddr ;
+    264              }*/
+    265          
+    266              if (nmb > 0)
+    267              {
+    268                  return((nmb & 0x0F) - 1);   // return zero-based port index
+    269              }
+    270              else
+    271              {
+    272                  return( 0xFF );             // invalid PA
+    273              }
+    274          }
+    275          
+    276          //-------------------------------------------------------------------------------------------------
+    277          //! @brief      Performs CEC/Switch message parsing and support basic Switch functionality
+    278          //!             This task can't be masked and will run in background of the
+    279          //!             other active tasks, if an incoming CEC message is pending.
+    280          //
+    281          //! @param[in]  pCecMessage - pointer to a pending CEC message or 0, if there is no message awaiting
+    282          //
+    283          //! @return     Feedback message to the caller (Task status or error reports)
+    284          //-------------------------------------------------------------------------------------------------
+    285          
+    286          static uint8_t CecSwitchTaskBase(SiiCpiData_t *pCecMessage)
+    287          {
+    288              uint8_t     feedbackMsg = CEC_SWITCH_FB_MSG_NONE;
+    289              uint8_t     senderLogAddr;
+    290              uint8_t     destLogAddr;
+    291              uint16_t    newPhysAddr=0;
+    292              uint8_t     inputPortIndex;
+    293              SiiCpiData_t cecFrame;
+    294              bool_t  isDirectAddressed;
+    295              isDirectAddressed   = !((pCecMessage->srcDestAddr & 0x0F ) == CEC_LOGADDR_UNREGORBC );
+    296          
+    297              if (pCecMessage != 0) //decode a message, update status
+    298              {
+    299                  senderLogAddr = (pCecMessage->srcDestAddr & 0xF0) >> 4; // sender's logical address
+    300                  destLogAddr   =  pCecMessage->srcDestAddr & 0x0F; // destination logical address
+    301          
+    302                  if (destLogAddr == 0xF) // ignore non-broadcast messages
+    303                  {
+    304                      switch (pCecMessage->opcode) // CEC operation code
+    305                      {
+    306          
+    307                          case CECOP_STANDBY:
+    308                              if (pCecMessage->argCount == 0)
+    309                              {
+    310                                  DEBUG_PRINT(MSG_STAT, ("[CEC_SW]: Standby mode On Request\n"));
+    311                                  SiiCbCecStandby(true);
+    312                              }
+    313                              else
+    314                              {
+    315                                  CecSwitchBadCmdReport("Standby");
+    316                              }
+    317                              break;
+    318          
+    319                          case CECOP_ROUTING_CHANGE:
+    320                              if (pCecMessage->argCount == 4)
+    321                              {
+    322                                  newPhysAddr = (pCecMessage->args[2] << 8) + pCecMessage->args[3];
+    323                                  if (SiiCecGetDevicePA() == newPhysAddr)
+    324                                  {
+    325                                      DEBUG_PRINT(MSG_STAT, ("[CEC_SW]: Broadcast Route Info in response to Routing Change\n"));
+    326                                      SiiCecRoutingInformationSend();
+    327                                  }
+    328                              }
+    329                              else
+    330                              {
+    331                                  CecSwitchBadCmdReport("Routing Change");
+    332                              }
+    333                              break;
+    334          
+    335                          case CECOP_ROUTING_INFORMATION:
+    336                              if (pCecMessage->argCount == 2)
+    337                              {
+    338                                  newPhysAddr = (pCecMessage->args[0] << 8) + pCecMessage->args[1];
+    339                                  if (SiiCecGetDevicePA() == newPhysAddr)
+    340                                  {
+    341                                      DEBUG_PRINT(MSG_STAT, ("[CEC_SW]: Broadcast Route Info in response to Routing Information\n"));
+    342                                      SiiCecRoutingInformationSend();
+    343                                  }
+    344                              }
+    345                              else
+    346                              {
+    347                                  CecSwitchBadCmdReport("Routing Information");
+    348                              }
+    349          
+    350                              break;
+    351          
+    352                           case CECOP_ACTIVE_SOURCE:
+    353                              if (pCecMessage->argCount != 2)
+    354                              {
+    355                                  CecSwitchBadCmdReport("Active Source");
+    356                              }
+    357                              if ( !isDirectAddressed && (pCecMessage->srcDestAddr & 0xF0))                   // Ignore as direct message
+    358                              {
+    359                              	/*                    	DEBUG_PRINT(MSG_ALWAYS,"ACTIVE SOURCE BEING ADDRESSED\n");
+    360                                  pCec->activeSrcLogical  = (pCecMessage->srcDestAddr >> 4) & 0x0F;
+    361                                  pCec->activeSrcPhysical = ((uint16_t)pCecMessage->args[0] << 8 ) | pCecMessage->args[1];
+    362                                  SiiCecUpdateLogicalDeviceInfo( pCec->activeSrcLogical, pCec->activeSrcPhysical, true );
+    363          
+    364                                  // Determine the index of the HDMI port that is handling this physical address.
+    365          
+    366                                  pCec->portSelect = ((pCec->activeSrcPhysical >> 8) & 0x000F);
+    367                                  pCec->statusFlags |= SiiCEC_PORT_CHANGE;
+    368                              }
+    369                              break;*/
+    370          
+    371                              	// Update CEC records (LA & PA) about the active source
+    372                              	SiiCecSetActiveSource((pCecMessage->srcDestAddr >> 4) & 0x0F,
+    373                              			((uint16_t) pCecMessage->args[0] << 8) | pCecMessage->args[1]);
+    374                              	newPhysAddr = (pCecMessage->args[0] << 8) | pCecMessage->args[1];
+    375                              	DEBUG_PRINT(MSG_STAT, ("Physical Address : 0x%x.\n"),newPhysAddr);
+    376                              	inputPortIndex = CecSwitchInputPortGet(newPhysAddr);
+    377                              	if(inputPortIndex != 0xFF)
+    378                              	{
+    379                              		pCec->portSelect = inputPortIndex;
+    380                              		pCec->statusFlags |= SiiCEC_PORT_CHANGE;
+    381                              	}
+    382                              }
+    383                              break;
+    384          
+    385                              // Process this message further the same way as the next one, so no break here
+    386          
+    387                           case CECOP_SET_STREAM_PATH:
+    388                                if(pCecMessage->argCount == 2)
+    389                               {
+    390                                   newPhysAddr = (pCecMessage->args[0] << 8) | pCecMessage->args[1];
+    391                               	 DEBUG_PRINT(MSG_STAT, ("Physical Address : 0x%x.\n"),newPhysAddr);
+    392                                   inputPortIndex = CecSwitchInputPortGet(newPhysAddr);
+    393          
+    394                                   if(inputPortIndex != 0xFF)
+    395                                   {
+    396                                  	 DEBUG_PRINT(MSG_STAT, ("[CEC_SW]: received Active Source or Set Stream Path msg.\n"));
+    397                                  	 DEBUG_PRINT(MSG_STAT, ("[CEC_SW]: Standby mode Off Request\n"));
+    398                                  	 SiiCbCecStandby(false);
+    399          
+    400          //                        	 if (((pCecMessage->srcDestAddr & 0xF0) >> 4) != CEC_LOGADDR_TV)
+    401                                  	 {
+    402                                  		 SiiCecCbInputPortSet(inputPortIndex);
+    403                                  		 /*pCec->activeSrcLogical  = (pCecMessage->srcDestAddr >> 4) & 0x0F;
+    404                                      	    pCec->activeSrcPhysical = newPhysAddr;
+    405          
+    406                                      	    SiiCecUpdateLogicalDeviceInfo( pCec->activeSrcLogical, pCec->activeSrcPhysical, true );*/
+    407          
+    408                                  		 DEBUG_PRINT(MSG_STAT, "[CEC_SW]: Switched to input port %d\n", (int) inputPortIndex);
+    409                                           feedbackMsg = CEC_SWITCH_FB_MSG_STATUS_CHANGED;
+    410                                  	 }
+    411                                  	/* else
+    412                                  	 {
+    413                                  		 DEBUG_PRINT(MSG_STAT, "[CEC_SW]: Don't need to switch to port %d\n", (int) inputPortIndex);
+    414                                  	 }*/
+    415                              		 pCec->statusFlags |= SiiCEC_PORT_CHANGE;
+    416          
+    417                                   }
+    418                                   if(pCec->isActiveSource)
+    419                                   {
+    420                                  	 cecFrame.opcode         = CECOP_ACTIVE_SOURCE;
+    421                                  	 cecFrame.srcDestAddr    = MAKE_SRCDEST( pCec->logicalAddr, CEC_LOGADDR_UNREGORBC );
+    422                                  	 cecFrame.args[0]        = (newPhysAddr >> 8);        // [Physical Address] High
+    423                                  	 cecFrame.args[1]        = newPhysAddr & 0xFF;      // [Physical Address] Low
+    424                                  	 cecFrame.argCount       = 2;
+    425          
+    426                                  	 SiiDrvCpiWrite( &cecFrame );
+    427                                   }
+    428                               }
+    429                               else
+    430                               {
+    431                                   CecSwitchBadCmdReport("Set Stream Path");
+    432                               }
+    433                               break;
+    434          
+    435                          default:  // the message doesn't belong to CEC/Switch group
+    436                              feedbackMsg = CEC_SWITCH_FB_MSG_ERR_NONSWITCH_CMD;
+    437                              break;
+    438                      }
+    439                  }
+    440                  else
+    441                  {
+    442                      feedbackMsg = CEC_SWITCH_FB_MSG_ERR_NONSWITCH_CMD;
+    443                  }
+    444          /*
+    445                  if (feedbackMsg == CEC_SWITCH_FB_MSG_ERR_NONSWITCH_CMD)
+    446                  {
+    447                      DEBUG_PRINT(CEC_MSG_DBG, "[CEC_SW]: Non CEC Switch message\n");
+    448                  }
+    449          */
+    450              }
+    451          
+    452              return feedbackMsg;
+    453          }
+    454          
+    455          //-------------------------------------------------------------------------------------------------
+    456          //! @brief      Task dispatching function.
+    457          //
+    458          //!             Shall be called periodically.
+    459          //!             Using of SiiCecSwitchNextInvocationTimeGet() helps to figure out
+    460          //!             exact recall time that can vary depending on current task status.
+    461          //!             Alternatively, simple periodic polling would work as well;
+    462          //!             in the case of polling, CEC_MIN_RECALL_TIME_MS is a suggested
+    463          //!             recall time.
+    464          //  
+    465          //! @param[in]  pCecMessage   - pointer to a pending CEC message or 0, if there is no message awaiting
+    466          //
+    467          //! @return     Feedback message to the caller (Task status or error reports)
+    468          //-------------------------------------------------------------------------------------------------
+    469          
+    470          bool_t SiiCecSwitchTaskProcess(SiiCpiData_t *pCecMessage)
+    471          {
+    472              uint8_t  feedbackMsg = CEC_SWITCH_FB_MSG_NONE;
+    473              uint16_t taskFlagsMasked;   
+    474              uint16_t sysTimerCountMs = SiiOsTimerTotalElapsed();
+    475          
+    476              // Keep all tasks frozen if the Base task is off
+    477              if (pCecSwitch->taskFlags & CEC_SWITCH_TASK_BASE_SERVICE)
+    478              {
+    479          
+    480                  // Update time reading variables
+    481                  CecSysTimeMsSet(sysTimerCountMs, &pCecSwitch->sysTimerCountCurMs, &pCecSwitch->sysTimerCountPrvMs);
+    482                  
+    483                  if (((pCecSwitch->taskFlags & CEC_SWITCH_TASK_MASK_ALL_BUT_BASE) == 0) && (pCecMessage == 0))
+    484                  {
+    485                      // Initialize the recall time counter by maximum possible value
+    486                      // in order to ensure rare recalls of the task handler when tasks are inactive
+    487                      CecTimeCounterSet(CEC_TIME_MS2TCK(CEC_MAX_RECALL_TIME_MS), &pCecSwitch->recallTimeCount);
+    488                  }
+    489                  else
+    490                  {   // Ensure fast recall if there are active tasks or pending messages as they could 
+    491                      // require immediate subsequent action (e.g., launching of active tasks) 
+    492                      // Actual recall time will be corrected by task internal timer updates, if any
+    493                      CecTimeCounterSet(CEC_TIME_MS2TCK(CEC_MIN_RECALL_TIME_MS), &pCecSwitch->recallTimeCount);
+    494                  }
+    495                  
+    496                  // Do one task at a time. Tasks shall never be running concurrently except the Base Service that
+    497                  // can run in background of another task, not corrupting its context.
+    498                  // Base Service has highest priority if a CEC message is pending and lowest priority otherwise
+    499                  
+    500                  taskFlagsMasked = (pCecSwitch->taskFlags & pCecSwitch->taskMask);
+    501          
+    502                  if (pCecMessage != 0) // CEC message is pending
+    503                  {   
+    504                      feedbackMsg = CecSwitchTaskBase(pCecMessage);
+    505                  }
+    506                  else
+    507                  {
+    508                      if (taskFlagsMasked & CEC_SWITCH_TASK_SEND_ROUTE_INFO)
+    509                      {
+    510                          feedbackMsg = CecSwitchTaskRouteInfo();
+    511                      }
+    512                      // Base Task can't be masked and can run in background of the other active task if incoming CEC message is pending
+    513                      else
+    514                      {
+    515                          feedbackMsg = CecSwitchTaskBase(0);
+    516                      }
+    517                  }
+    518                  
+    519              }
+    520              
+    521              return SiiCbCecSwitchMessageHandler(feedbackMsg);
+    522          }
+    523          
+    524          
+    525          //-------------------------------------------------------------------------------------------------
+    526          //! @brief      Returns longest possible time delay before the next invocation
+    527          //!             of the SiiCecSwitchTaskProcess() function.
+    528          //
+    529          //!             This function can be used to set a countdown timer and call
+    530          //!             the SiiCecSwitchTaskProcess() on the timer's expiration event unless
+    531          //!             new CEC message is pending
+    532          //  
+    533          //! @param[in]  sysTimerCountMs - current value of the system time counter (in milliseconds)
+    534          //
+    535          //! @return     time in milliseconds
+    536          //-------------------------------------------------------------------------------------------------
+    537          
+    538          uint16_t SiiCecSwitchNextInvocationTimeGet(uint16_t sysTimerCountMs)
+    539          {
+    540              return SiiCecNextInvocationTimeGet(sysTimerCountMs, pCecSwitch->recallTimeCount);
+    541          }
+    542          
+    543          
+    544          //-------------------------------------------------------------------------------------------------
+    545          //! @brief      Launches CEC/Switch Active and Base Services.
+    546          //
+    547          //! @return     true, if the task can't be scheduled, false - otherwise
+    548          //-------------------------------------------------------------------------------------------------
+    549          
+    550          bool_t SiiCecSwitchSrvStart(void)
+    551          {
+    552              bool_t errStatus = false;
+    553              
+    554              pCecSwitch->taskFlags |= CEC_SWITCH_TASK_BASE_SERVICE;
+    555              return errStatus;
+    556          }
+    557          
+    558          
+    559          //-------------------------------------------------------------------------------------------------
+    560          //! @brief      Stops Active and Base Services
+    561          //-------------------------------------------------------------------------------------------------
+    562          
+    563          void SiiCecSwitchSrvStop(void)
+    564          {
+    565              pCecSwitch->taskFlags &= ~CEC_SWITCH_TASK_BASE_SERVICE;
+    566          }
+    567          
+    568          
+    569          //-------------------------------------------------------------------------------------------------
+    570          //! @brief      Initiate task sending routing information after HPD event
+    571          //              
+    572          //! @retval     true     - if the task is scheduled successfully,
+    573          //! @retval     false    - error
+    574          //-------------------------------------------------------------------------------------------------
+    575          
+    576          bool_t SiiCecSwitchSendRouteInfo(void)
+    577          {
+    578              // schedule immediate start of the task
+    579              pCecSwitch->taskFlags |= CEC_SWITCH_TASK_SEND_ROUTE_INFO;
+    580          
+    581              return true;
+    582          }
+    583          
+    584          
+    585          //-------------------------------------------------------------------------------------------------
+    586          // Low level API functions
+    587          //-------------------------------------------------------------------------------------------------
+    588          
+    589          //-------------------------------------------------------------------------------------------------
+    590          //! @brief      Sends "CEC Routing Information" broadcast message to
+    591          //!             announce current active path
+    592          //-------------------------------------------------------------------------------------------------
+    593          
+    594          void SiiCecRoutingInformationSend(void)
+    595          {
+    596              SiiCpiData_t cecFrame;
+    597              uint16_t upstreamPhysAddr;
+    598              uint8_t inputPortIndex;
+    599          
+    600              inputPortIndex = SiiCecPortSelectGet(); // Get currently selected input port index
+    601          
+    602              // Calculate physical address of the device at the active input port
+    603              upstreamPhysAddr = SiiCecAdjacentPhysAddrGet(SiiCecGetDevicePA(), false, inputPortIndex);
+    604          
+    605              cecFrame.args[0]  = (upstreamPhysAddr >> 8) & 0xFF; // Upstream Physical Address, MSB
+    606              cecFrame.args[1]  = upstreamPhysAddr & 0xFF;        // Upstream Physical Address, LSB
+    607          
+    608              SiiCecCpiWrite(CECOP_ROUTING_INFORMATION, 2, CEC_LOGADDR_UNREGORBC, &cecFrame);
+    609          }
+    610          
+    611          
+    612          //-------------------------------------------------------------------------------------------------
+    613          //! @brief      Sends "CEC Routing Change" broadcast message to
+    614          //!             announce that active route below the CEC switch has changed
+    615          //-------------------------------------------------------------------------------------------------
+    616          
+    617          void SiiCecRoutingChangeSend(uint8_t newInputPortIndex)
+    618          {
+    619              SiiCpiData_t cecFrame;
+    620              uint16_t upstreamPhysAddr;
+    621              uint8_t oldInputPortIndex;
+    622          
+    623              // Will only send routing change message, if new input port selection
+    624              // is different as compared to the previous setting
+    625              if (pCecSwitch->activeInputPortIndex != newInputPortIndex)
+    626              {
+    627                  oldInputPortIndex = pCecSwitch->activeInputPortIndex;   // get previously selected port index
+    628                  pCecSwitch->activeInputPortIndex = newInputPortIndex;   // update current input port index
+    629          
+    630                  // Calculate physical address of the device at the old input port
+    631                  upstreamPhysAddr = SiiCecAdjacentPhysAddrGet(SiiCecGetDevicePA(), false, oldInputPortIndex);
+    632          
+    633                  cecFrame.args[0]  = (upstreamPhysAddr >> 8) & 0xFF; // Old Upstream Physical Address, MSB
+    634                  cecFrame.args[1]  = upstreamPhysAddr & 0xFF;        // Old Upstream Physical Address, LSB
+    635          
+    636                  // Calculate physical address of the device at the new input port
+    637                  upstreamPhysAddr = SiiCecAdjacentPhysAddrGet(SiiCecGetDevicePA(), false, newInputPortIndex);
+    638          
+    639                  cecFrame.args[2]  = (upstreamPhysAddr >> 8) & 0xFF; // New Upstream Physical Address, MSB
+    640                  cecFrame.args[3]  = upstreamPhysAddr & 0xFF;        // New Upstream Physical Address, LSB
+    641          
+    642                  SiiCecCpiWrite(CECOP_ROUTING_CHANGE, 4, CEC_LOGADDR_UNREGORBC, &cecFrame);
+    643              }
+    644          }
+    645          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       32  CecPhysicalAddressReportSend
+             32 -> SiiCecCpiWrite
+        8  CecSwitchInputPortGet
+              8 -> SiiCecGetDevicePA
+       48  CecSwitchTaskBase
+             48 -> CecSwitchInputPortGet
+             48 -> SiiCbCecStandby
+             48 -> SiiCecCbInputPortSet
+             48 -> SiiCecGetDevicePA
+             48 -> SiiCecRoutingInformationSend
+             48 -> SiiCecSetActiveSource
+             48 -> SiiDrvCpiWrite
+       40  SiiCecRoutingChangeSend
+             40 -> SiiCecAdjacentPhysAddrGet
+             40 -> SiiCecCpiWrite
+             40 -> SiiCecGetDevicePA
+       32  SiiCecRoutingInformationSend
+             32 -> SiiCecAdjacentPhysAddrGet
+             32 -> SiiCecCpiWrite
+             32 -> SiiCecGetDevicePA
+             32 -> SiiCecPortSelectGet
+        8  SiiCecSwitchConfig
+              8 -> SiiCecPortSelectGet
+              0 -> SiiCecSwitchTaskInit
+              8 -> __aeabi_memclr
+        0  SiiCecSwitchDeviceInstanceGet
+        0  SiiCecSwitchInstanceSet
+        8  SiiCecSwitchNextInvocationTimeGet
+              8 -> SiiCecNextInvocationTimeGet
+        0  SiiCecSwitchSendRouteInfo
+        0  SiiCecSwitchSrvStart
+        0  SiiCecSwitchSrvStop
+        8  SiiCecSwitchTaskInit
+              8 -> CecTimeCounterReset
+       24  SiiCecSwitchTaskProcess
+             24 -> CecPhysicalAddressReportSend
+             24 -> CecSwitchTaskBase
+             24 -> CecSysTimeMsSet
+             24 -> CecTimeCounterSet
+             24 -> CecTimeCounterUpdate
+              0 -> SiiCbCecSwitchMessageHandler
+             24 -> SiiCbCecSwitchRxHpdGet
+             24 -> SiiOsTimerTotalElapsed
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable10
+       4  ??DataTable10_1
+      12  ?Subroutine0
+      12  ?Subroutine1
+      44  CecPhysicalAddressReportSend
+      34  CecSwitchInputPortGet
+     284  CecSwitchTaskBase
+      72  SiiCecRoutingChangeSend
+      42  SiiCecRoutingInformationSend
+      24  SiiCecSwitchConfig
+       6  SiiCecSwitchDeviceInstanceGet
+      10  SiiCecSwitchInstanceSet
+      16  SiiCecSwitchNextInvocationTimeGet
+      16  SiiCecSwitchSendRouteInfo
+      16  SiiCecSwitchSrvStart
+      16  SiiCecSwitchSrvStop
+      34  SiiCecSwitchTaskInit
+     204  SiiCecSwitchTaskProcess
+      20  pCecSwitch
+          gSwitchInstRec
+
+ 
+  20 bytes in section .data
+ 850 bytes in section .text
+ 
+ 850 bytes of CODE memory
+  20 bytes of DATA memory
+
+Errors: none
+Warnings: 3

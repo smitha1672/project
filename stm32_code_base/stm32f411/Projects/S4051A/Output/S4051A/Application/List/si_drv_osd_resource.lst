@@ -1,0 +1,714 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:25:19 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\osd_drv\si_drv_o #
+#                    sd_resource.c                                            #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\osd_drv\si_drv_o #
+#                    sd_resource.c -D S4051A -D DEBUG -D FREE_RTOS -D         #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_drv_osd_resource.lst                               #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_drv_osd_resource.o                                  #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\driver\osd_drv\si_drv_osd_resource.c
+      1          //***************************************************************************
+      2          //!file     si_drv_osd_resource.c
+      3          //!brief    Silicon Image OSD Driver resource functions.
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1140 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2011, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include "string.h"
+     14          #include "si_drv_osd_internal.h"
+     15          #include "si_drv_internal.h"
+     16          #include "si_regs_osd.h"
+     17          #if INC_SPI
+     18          #include "si_drv_spi.h"
+     19          #endif
+     20          #include "si_osal_timer.h"
+     21          
+     22          //------------------------------------------------------------------------------
+     23          //  OSD Driver module Data
+     24          //------------------------------------------------------------------------------
+     25          
+     26          static char resourceString [256];
+     27          
+     28          static int fontTypeCharWordCount [] =
+     29          {
+     30              OSDRAM_WORDS_PER_12X16,
+     31              OSDRAM_WORDS_PER_16X24,
+     32              OSDRAM_WORDS_PER_24X32,
+     33          };
+     34          
+     35          // Font Info for three basic font types supported by SiI9535
+     36          int l_fontWidths[]  = { OSD_PIXELS_CHAR_12X16, OSD_PIXELS_CHAR_16X24, OSD_PIXELS_CHAR_24X32 };
+     37          int l_fontHeights[] = { OSD_LINES_CHAR_12X16, OSD_LINES_CHAR_16X24, OSD_LINES_CHAR_24X32 };
+     38          int l_fontVres[]    = { 480, 720, 1080 };
+     39          int l_fontHres[]    = { 720, 1280, 1920 };
+     40          
+     41          //-------------------------------------------------------------------------------------------------
+     42          //! @brief      Copies the specified resource header into the passed buffer.
+     43          //! @param[in]      resourceId  - Index of resource within resource data
+     44          //! @param[in]      pHeader     - Pointer to destination buffer
+     45          //! @retval         true if valid resource of specified type.
+     46          //! @retval         false if valid resource is not in range or not of specified type.
+     47          //-------------------------------------------------------------------------------------------------
+     48          bool_t SiiDrvOsdGetResourceHeader ( uint16_t resourceId, SiiOsdResourceHeader_t *pHeader )
+     49          {
+     50              bool_t      success = false;
+     51          
+     52              pDrvOsd->lastResultCode = SII_OSDDRV_SUCCESS;
+     53          
+     54              if ( resourceId & OSD_RESOURCE_LOCAL_FLAG)
+     55              {
+     56                  resourceId -= OSD_RESOURCE_LOCAL_FLAG;      // Remove local resource flag
+     57                  if (( pDrvOsd->pLocalResourceData ) && ( resourceId < pDrvOsd->localResourceCount ))
+     58                  {
+     59                      memcpy( pHeader, &pDrvOsd->pLocalResourceData[ resourceId], sizeof( SiiOsdResourceHeader_t ));
+     60                      return( true );
+     61                  }
+     62                  return( false );
+     63              }
+     64          
+     65              do
+     66              {
+     67                  // Zero is illegal as a resource ID - we subtract 1 from every value
+     68                  if ( resourceId == 0 )
+     69                  {
+     70                      pDrvOsd->lastResultCode = SII_OSDDRV_ERR_INVALID_PARAMETER;
+     71                      break;
+     72                  }
+     73                  resourceId--;   // Get resourceMap index
+     74          
+     75                  // Are resources loaded?
+     76                  if ( pDrvOsd->externalResourceMap[0] == 0 ) // No resource map entry will ever be 0.
+     77                  {
+     78                      pDrvOsd->lastResultCode = SII_OSDDRV_ERR_RESOURCE_NOT_LOADED;
+     79                      break;
+     80                  }
+     81          
+     82                  // Verify resource ID
+     83                  if ( resourceId >= pDrvOsd->externalResourceCount)
+     84                  {
+     85                      pDrvOsd->lastResultCode = SII_OSDDRV_ERR_INVALID_PARAMETER;
+     86                      break;
+     87                  }
+     88          
+     89                  // Read just the resource header.
+     90                  if ( SiiDrvSpiRead( pDrvOsd->externalResourceMap[ resourceId], sizeof( SiiOsdResourceHeader_t ), (uint8_t *)pHeader ))
+     91                  {
+     92                      success = true;
+     93                  }
+     94              } while (0);
+     95          
+     96              return( success );
+     97          }
+     98          
+     99          //-------------------------------------------------------------------------------------------------
+    100          //! @brief      Determines if passed resourceId is valid and of the specified type.
+    101          //! @param[in]      resourceType    - Type of resource
+    102          //! @param[in]      resourceId      - Index of resource within resource data
+    103          //! @retval         true if valid resource of specified type.
+    104          //! @retval         false if valid resource is not in range or not of specified type.
+    105          //-------------------------------------------------------------------------------------------------
+    106          bool_t  SiiDrvOsdIsResource( SiiOsdResourceType_t resourceType, uint16_t resourceId )
+    107          {
+    108              SiiOsdResourceHeader_t lHeader;
+    109          
+    110              if ( SiiDrvOsdGetResourceHeader( resourceId, &lHeader ))
+    111              {
+    112                  if ( lHeader.type == resourceType )
+    113                  {
+    114                      return( true );
+    115                  }
+    116              }
+    117          
+    118              return( false );
+    119          }
+    120          
+    121          //-------------------------------------------------------------------------------------------------
+    122          //! @brief      Load a flash resource into local memory.
+    123          //! @param[in]      resourceType    Type of resource
+    124          //! @param[in]      resourceId      Index of resource within resource data
+    125          //! @param[in][out] pSize           Requested size in bytes of data read. If larger than the
+    126          //!                                 actual resource data size, the amount read is returned.
+    127          //! @param[in]      pDestData       Destination buffer for data read from flash.
+    128          //! @retval         true if successful.
+    129          //! @retval         false failure occurred.
+    130          //-------------------------------------------------------------------------------------------------
+    131          bool_t SiiDrvOsdGetResource ( SiiOsdResourceType_t resourceType, uint16_t resourceId, uint32_t *pSize, uint8_t *pDestData )
+    132          {
+    133          //    SiiTimer_t                  timerInfo;
+    134              SiiOsdResourceHeader_t      lHeader;
+    135              bool_t                      success = false;
+    136              uint32_t                    spiByteAddr, spiByteLength;
+    137          
+    138          //    SiiOsTimerSet( &timerInfo, 0 );
+    139              pDrvOsd->lastResultCode = SII_OSDDRV_SUCCESS;
+    140              do
+    141              {
+    142                  if (( resourceId & OSD_RESOURCE_LOCAL_FLAG ) == 0 )
+    143                  {
+    144                      if ( !SiiDrvOsdGetResourceHeader( resourceId, &lHeader ))
+    145                      {
+    146                          break;
+    147                      }
+    148                      if ( lHeader.type != resourceType )
+    149                      {
+    150                          break;  // LastError value supplied by SiiDrvOsdGetResourceHeader
+    151                      }
+    152          
+    153                      // Determine resource index
+    154                      resourceId--;   // Get resourceMap index
+    155                      spiByteAddr     = pDrvOsd->externalResourceMap[ resourceId];
+    156                      spiByteLength   = lHeader.sizeLo + ((uint32_t)lHeader.sizeHi << 8 );
+    157          
+    158                      // Text resource does not use the resource info part.
+    159                      if ( resourceType == OSD_RESOURCE_TEXT )
+    160                      {
+    161                          // Get past the window information part to the text buffer.
+    162                          spiByteAddr += sizeof(SiiDrvOsdWindowResource_t) - (OSD_CI_WINSIZE_SIZE * OSDRAM_BYTES_PER_WORD);
+    163                          spiByteLength = (OSD_CI_WINSIZE_SIZE * OSDRAM_BYTES_PER_WORD);
+    164                      }
+    165                      // For a local buffer window implementation, we would normally load the local window structure info AND
+    166                      // load the local window surface buffer from the SPI flash.  That way, updates to the OSDRAM are
+    167                      // write-only.  However, since most of the window surface contents are static, we load ONLY the
+    168                      // info part of the window resource.  The window contents are loaded directly into OSDRAM via SPI, which
+    169                      // is much faster.  This means that when we update a window, we may have to read bits of OSDRAM at the
+    170                      // start and end of a string, but we will accept that.
+    171                      else if ( resourceType == OSD_RESOURCE_WINDOW )
+    172                      {
+    173                          spiByteLength = sizeof(SiiDrvOsdWindowResource_t) - (OSD_CI_WINSIZE_SIZE * OSDRAM_BYTES_PER_WORD);
+    174                      }
+    175          
+    176                      // Read the actual resource data from flash
+    177                      success = SiiDrvSpiRead( spiByteAddr, spiByteLength, pDestData );
+    178                      *pSize = spiByteLength;
+    179                  }
+    180                  else
+    181                  {
+    182                      // If local resource data is present, use it.
+    183                      resourceId -= OSD_RESOURCE_LOCAL_FLAG;      // Remove local resource flag
+    184                      if (( pDrvOsd->pLocalResourceData ) && ( resourceId < pDrvOsd->localResourceCount ))
+    185                      {
+    186                          memcpy( pDestData, &pDrvOsd->pLocalResourceData[ resourceId ], sizeof( SiiDrvOsdWindowResource_t ));
+    187                          success = true;
+    188                      }
+    189                  }
+    190              } while (0);
+    191          
+    192          //    DEBUG_PRINT( MSG_DBG, "SiiDrvOsdGetResource: %d ms\n", SiiOsTimerElapsed( timerInfo ));
+    193              return( success );
+    194          }
+    195          
+    196          //-------------------------------------------------------------------------------------------------
+    197          //! @brief      Set a pointer to the application local resource data (not flash memory)
+    198          //! @param[in]  resourceCount   Number of window resources in local resource data array.
+    199          //! @param[in]  pResourceData   Pointer to application local resource data array.
+    200          //-------------------------------------------------------------------------------------------------
+    201          void SiiDrvOsdSetLocalResourceData ( int resourceCount, SiiDrvOsdWindowResource_t const *pResourceData )
+    202          {
+    203              pDrvOsd->pLocalResourceData     = pResourceData;
+    204              pDrvOsd->localResourceCount     = resourceCount;
+    205          }
+    206          
+    207          //-------------------------------------------------------------------------------------------------
+    208          //! @brief      Check the passed pointer to see if it is a valid text resource, and if so,
+    209          //!             load the text string from the resource store and return a pointer to it. Otherwise,
+    210          //!             return the passed pointer as a text string pointer.
+    211          //! @note       If a resource is loaded, it is only valid until the next call to this function.
+    212          //! @param[in]  pStr    Resource ID of type OSD_RESOURCE_TEXT, or pointer to a null-terminated
+    213          //!                     ASCII string.
+    214          //-------------------------------------------------------------------------------------------------
+    215          char *SiiDrvOsdGetTextResource ( char *pStr )
+    216          {
+    217              char        *pTextStr = 0;
+    218              uint32_t    loadSize;
+    219          
+    220              // Determine if passed value is a text string resource
+    221              if ( !SiiDrvOsdIsResource( OSD_RESOURCE_TEXT, (int)pStr ))
+    222              {
+    223                  // Not a string resource, must be a text string, so return the pointer.
+    224                  pTextStr = pStr;
+    225              }
+    226              else
+    227              {
+    228                  // Load window data from the specified resource ID.
+    229                  loadSize = 256; //TODO: temporary until we get separate resource type structures.
+    230                  if ( !SiiDrvOsdGetResource( OSD_RESOURCE_TEXT, (int)pStr, &loadSize, (uint8_t *)resourceString ))
+    231                  {
+    232                      pDrvOsd->lastResultCode = SII_OSDDRV_RESOURCE_READ_ERR;
+    233                  }
+    234                  else
+    235                  {
+    236                      pTextStr = resourceString;
+    237                  }
+    238              }
+    239          
+    240              return( pTextStr );
+    241          }
+    242          
+    243          //-------------------------------------------------------------------------------------------------
+    244          //! @brief      Font info providers
+    245          //-------------------------------------------------------------------------------------------------
+    246          int SiiDrvOsdGetFontWidth( void )
+    247          {
+    248              return( l_fontWidths[ pDrvOsd->fontSize] );
+    249          }
+    250          int SiiDrvOsdGetFontHeight( void )
+    251          {
+    252              return( l_fontHeights[ pDrvOsd->fontSize] );
+    253          }
+    254          
+    255          //-------------------------------------------------------------------------------------------------
+    256          //! @brief      Loads the specified window resource into the OSD RAM font location.
+    257          //! @param[in]  winRef  Return value from any SiiOsdCreate function.
+    258          //! @param[in]  pStr    Resource ID of type OSD_RESOURCE_FONT.
+    259          //-------------------------------------------------------------------------------------------------
+    260          bool_t SiiDrvOsdLoadWindowResource ( int winRef, int winResourceId, bool_t useCurrentWindowSize )
+    261          {
+    262          //    SiiTimer_t                  timerInfo;
+    263              SiiOsdResourceHeader_t      lHeader;
+    264              bool_t                      success = false;
+    265              uint32_t                    spiByteAddr, spiByteLength;
+    266          
+    267              // Determine if passed value is a Window resource
+    268          //    SiiOsTimerSet( &timerInfo, 0 );
+    269              if (( winResourceId < pDrvOsd->externalResourceCount ) && SiiDrvOsdIsResource( OSD_RESOURCE_WINDOW, winResourceId ))
+    270              {
+    271                  winResourceId--;    // Adjust for actual resourceMap index
+    272          
+    273                  // Load the window character indexes into OSD RAM
+    274                  // Read resource header from flash into local memory
+    275                  spiByteAddr = pDrvOsd->externalResourceMap[ winResourceId];
+    276                  if ( SiiDrvSpiRead( spiByteAddr, sizeof( lHeader ), (uint8_t *)&lHeader ))
+    277                  {
+    278                      // Read the window resource data into OSD RAM
+    279                      spiByteLength = (lHeader.sizeLo + ((uint32_t)lHeader.sizeHi << 8 )) - 54;       // TODO: Lee specify this as an expression, not a hardcoded constant
+    280                      if ( useCurrentWindowSize )
+    281                      {
+    282                          spiByteLength = ((pDrvOsd->winData[ winRef].rowCount * pDrvOsd->winData[ winRef].colCount) / OSDRAM_INDEXES_PER_WORD) * OSDRAM_BYTES_PER_WORD;
+    283                      }
+    284                      if (SiiDrvOsdSpiOsdRamLoad( spiByteAddr + 54, OSD_CONTENT_INDEX_1_OFFSET + pDrvOsd->winData[ winRef].contentIndexStartWord, spiByteLength ))
+    285                      {
+    286                          if (SiiDrvOsdSpiOsdRamLoad( spiByteAddr + 54, OSD_CONTENT_INDEX_2_OFFSET + pDrvOsd->winData[ winRef].contentIndexStartWord, spiByteLength ))
+    287                          {
+    288                              SiiOsdDrvClearDirtyList( &pDrvOsd->winData[ winRef] );
+    289                              success = true;
+    290                          }
+    291                      }
+    292                  }
+    293              }
+    294          //    DEBUG_PRINT( MSG_DBG, "SiiDrvOsdLoadWindowResource: %d ms\n", SiiOsTimerElapsed( timerInfo ));
+    295              return( success );
+    296          }
+    297          
+    298          //-------------------------------------------------------------------------------------------------
+    299          //! @brief      Loads the specified font resource into the OSD RAM font location.
+    300          //!             load the text string from the resource store and return a pointer to it. Otherwise,
+    301          //!             return the passed pointer as a text string pointer.
+    302          //! @param[in]  pStr    Resource ID of type OSD_RESOURCE_FONT.
+    303          //-------------------------------------------------------------------------------------------------
+    304          bool_t SiiDrvOsdLoadFontResource ( int fontResourceId )
+    305          {
+    306              SiiTimer_t                  timerInfo;
+    307              SiiOsdResourceHeader_t      lHeader;
+    308              bool_t                      success = false;
+    309              uint32_t                    spiByteAddr, spiByteLength;
+    310          
+    311              // Determine if passed value is a FONT resource
+    312              SiiOsTimerSet( &timerInfo, 0 );
+    313              // Read resource header from flash into local memory
+    314              if ( SiiDrvOsdGetResourceHeader( fontResourceId, &lHeader ))
+    315              {
+    316                  if ( lHeader.type == OSD_RESOURCE_FONT)
+    317                  {
+    318                      fontResourceId--;   // Adjust for actual resourceMap index
+    319          
+    320                      // Read the font bitmap data into OSD RAM
+    321                      spiByteLength = lHeader.sizeLo + ((uint32_t)lHeader.sizeHi << 8 );
+    322                      spiByteAddr = pDrvOsd->externalResourceMap[ fontResourceId];
+    323                      if (SiiDrvOsdSpiOsdRamLoad( spiByteAddr + sizeof(SiiOsdResourceHeader_t),  pDrvOsd->bitmapSegmentStart, spiByteLength - sizeof(SiiOsdResourceHeader_t )))
+    324                      {
+    325                          // Set font type and determine last character index in loaded font.
+    326                          pDrvOsd->lastFontCharacterIndex = (spiByteLength / ( fontTypeCharWordCount[lHeader.winType] * OSDRAM_BYTES_PER_WORD)) - 1;
+    327                          pDrvOsd->fontResourceId         = fontResourceId + 1;   // unadjust
+    328                          pDrvOsd->fontSize               = (SiiOsdFontSize_t)lHeader.winType;
+    329                          pDrvOsd->fontHeight             = l_fontHeights[ pDrvOsd->fontSize ];
+    330                          pDrvOsd->fontWidth              = l_fontWidths[ pDrvOsd->fontSize ];
+    331                          SiiRegModify( REG_OSD_WIN_CTRL, VAL_OSD_FONT_SIZE_MASK, lHeader.winType << VAL_OSD_FONT_SIZE_SHIFT);
+    332                          success = true;
+    333                      }
+    334          
+    335          //                if(fontResourceId==35)
+    336          //                {
+    337          //                SiiRegModify( REG_OSD_WIN_CTRL, VAL_OSD_FONT_SIZE_MASK, (2 << VAL_OSD_FONT_SIZE_SHIFT) );
+    338          //                success = true;
+    339          //                }
+    340          //                else
+    341          //                {
+    342          //                	SiiRegModify( REG_OSD_WIN_CTRL, VAL_OSD_FONT_SIZE_MASK, lHeader.winType << VAL_OSD_FONT_SIZE_SHIFT);
+    343          //                	                success = true;
+    344          //                }
+    345                     //  }
+    346                      //TODO: The first SPI to local memory read seems to fail the first 3 bytes when performed after
+    347                      //TODO: a SPI to OSDRAM transfer of more than 2412 bytes.
+    348                      SiiDrvSpiRead( spiByteAddr, 6, (uint8_t *)&lHeader );
+    349              //        DEBUG_PRINT( 0, "Header: %02X %02X %02X %02X\n", lHeader.type, lHeader.winType, lHeader.sizeLo, lHeader.sizeHi );
+    350              //        SiiDrvSpiRead( spiByteAddr, sizeof( lHeader ), (uint8_t *)&lHeader );
+    351              //        DEBUG_PRINT( 0, "Header: %02X %02X %02X %02X\n", lHeader.type, lHeader.winType, lHeader.sizeLo, lHeader.sizeHi );
+    352                  }
+    353              }
+    354            //  DEBUG_PRINT( MSG_DBG, "SiiDrvOsdLoadFontResource: %d ms\n", SiiOsTimerElapsed( timerInfo ));
+    355              return( success );
+    356          }
+    357          
+    358          //-------------------------------------------------------------------------------------------------
+    359          //! @brief      Read the resource map from the beginning of external flash memory.  This resource
+    360          //!             ALWAYS the first resource, and it is NOT in the resource map itself.
+    361          //! @param[in]  pStr    Resource ID of type OSD_RESOURCE_TEXT, or pointer to a null-terminated
+    362          //!                     ASCII string.
+    363          //-------------------------------------------------------------------------------------------------
+    364          bool_t SiiDrvOsdGetMapResource ( void )
+    365          {
+    366          //    SiiTimer_t                  timerInfo;
+    367              uint32_t                    spiByteLength;
+    368              bool_t                      success = false;
+    369              uint8_t                     buffer[ sizeof( SiiOsdResourceMapHeader_t)];
+    370              SiiOsdResourceMapHeader_t   *pHeader;
+    371              uint32_t                    firstFontOffset;
+    372          
+    373              // Unconditionally read the resource header at the beginning of the flash memory
+    374              // (skipping the OSD SPI header)
+    375          //    SiiOsTimerSet( &timerInfo, 0 );
+    376              if ( SiiDrvSpiRead( sizeof( SiiOsdSpiHeader_t), sizeof(SiiOsdResourceMapHeader_t), buffer ))
+    377              {
+    378                  pHeader = (SiiOsdResourceMapHeader_t *)buffer;
+    379                  if ( pHeader->type == OSD_RESOURCE_MAP )
+    380                  {
+    381                      // Read the resource map into our OSD driver data structure.
+    382                      spiByteLength   = pHeader->sizeLo + ((uint32_t)pHeader->sizeHi << 8 );
+    383                      spiByteLength   = (spiByteLength < (OSD_RESOURCE_LIMIT * sizeof(uint32_t))) ? spiByteLength : (OSD_RESOURCE_LIMIT * sizeof(uint32_t));
+    384                      success = SiiDrvSpiRead( sizeof( SiiOsdSpiHeader_t) + sizeof(SiiOsdResourceMapHeader_t), spiByteLength, (uint8_t *)&pDrvOsd->externalResourceMap );
+    385          
+    386                      // Store actual number of resource IDs read from flash.
+    387                      pDrvOsd->externalResourceCount = (spiByteLength - sizeof(SiiOsdResourceMapHeader_t)) / sizeof(uint32_t);
+    388          
+    389                      // Get resource ID of first FONT resource and bump it by 1 because the resource functions expect a non-zero based number.
+    390                      firstFontOffset = MAKEUINT32( pHeader->firstFontOffset0, pHeader->firstFontOffset1, pHeader->firstFontOffset2, pHeader->firstFontOffset3 );
+    391                      pDrvOsd->defaultFontId = 1 + ((firstFontOffset - (sizeof( SiiOsdSpiHeader_t) + sizeof(SiiOsdResourceMapHeader_t))) / sizeof( uint32_t));
+    392                  }
+    393              }
+    394          
+    395          //    DEBUG_PRINT( MSG_DBG, "SiiDrvOsdGetMapResource: %d ms\n", SiiOsTimerElapsed( timerInfo ));
+    396              return( success );
+    397          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        0  SiiDrvOsdGetFontHeight
+        0  SiiDrvOsdGetFontWidth
+       32  SiiDrvOsdGetMapResource
+             32 -> SiiDrvSpiRead
+       32  SiiDrvOsdGetResource
+             32 -> SiiDrvOsdGetResourceHeader
+             32 -> SiiDrvSpiRead
+             32 -> __aeabi_memcpy
+       16  SiiDrvOsdGetResourceHeader
+             16 -> SiiDrvSpiRead
+             16 -> __aeabi_memcpy
+       24  SiiDrvOsdGetTextResource
+             24 -> SiiDrvOsdGetResource
+             24 -> SiiDrvOsdIsResource
+       16  SiiDrvOsdIsResource
+             16 -> SiiDrvOsdGetResourceHeader
+       40  SiiDrvOsdLoadFontResource
+             40 -> SiiDrvOsdGetResourceHeader
+             40 -> SiiDrvOsdSpiOsdRamLoad
+             40 -> SiiDrvSpiRead
+             40 -> SiiOsTimerSet
+             40 -> SiiRegModify
+       32  SiiDrvOsdLoadWindowResource
+             32 -> SiiDrvOsdIsResource
+             32 -> SiiDrvOsdSpiOsdRamLoad
+             32 -> SiiDrvSpiRead
+             32 -> SiiOsdDrvClearDirtyList
+        0  SiiDrvOsdSetLocalResourceData
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable8
+       4  ??DataTable8_1
+       4  ??DataTable8_2
+      20  SiiDrvOsdGetFontHeight
+      20  SiiDrvOsdGetFontWidth
+     120  SiiDrvOsdGetMapResource
+     148  SiiDrvOsdGetResource
+     112  SiiDrvOsdGetResourceHeader
+      58  SiiDrvOsdGetTextResource
+      32  SiiDrvOsdIsResource
+     164  SiiDrvOsdLoadFontResource
+     176  SiiDrvOsdLoadWindowResource
+      14  SiiDrvOsdSetLocalResourceData
+      36  fontTypeCharWordCount
+          l_fontWidths
+          l_fontHeights
+      12  l_fontHres
+      12  l_fontVres
+     256  resourceString
+
+ 
+ 256 bytes in section .bss
+  60 bytes in section .data
+ 876 bytes in section .text
+ 
+ 876 bytes of CODE memory
+ 316 bytes of DATA memory
+
+Errors: none
+Warnings: 6

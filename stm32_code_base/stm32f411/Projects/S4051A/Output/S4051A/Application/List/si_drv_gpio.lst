@@ -1,0 +1,744 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:23:36 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\gpio_drv\si_drv_ #
+#                    gpio.c                                                   #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\gpio_drv\si_drv_ #
+#                    gpio.c -D S4051A -D DEBUG -D FREE_RTOS -D                #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_drv_gpio.lst                                       #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_drv_gpio.o                                          #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\driver\gpio_drv\si_drv_gpio.c
+      1          //***************************************************************************
+      2          //!file     si_drv_gpio.c
+      3          //!brief    Silicon Image CPI Driver.
+      4          //
+      5          // No part of this work may be reproduced, modified, distributed,
+      6          // transmitted, transcribed, or translated into any language or computer
+      7          // format, in any form or by any means without written permission of
+      8          // Silicon Image, Inc., 1060 East Arques Avenue, Sunnyvale, California 94085
+      9          //
+     10          // Copyright 2002-2011, Silicon Image, Inc.  All rights reserved.
+     11          //***************************************************************************/
+     12          
+     13          #include "string.h"
+     14          #include "si_drv_gpio_internal.h"
+     15          #include "si_drv_internal.h"
+     16          
+     17          //------------------------------------------------------------------------------
+     18          //  Driver Data
+     19          //------------------------------------------------------------------------------
+     20          
+     21          // Available GPIO alternate pin functions
+     22          
+     23          static uint16_t l_pinTypeMask =
+     24              {
+     25              SII_GPIO_ALT_MHL_CABLE_CONN0    |
+     26              SII_GPIO_ALT_EXT_CLK            |
+     27              SII_GPIO_ALT_SPI_SS             |
+     28          
+     29              SII_GPIO_ALT_SPI_SCLK           |
+     30              SII_GPIO_ALT_SPI_SDO            |
+     31              SII_GPIO_ALT_SPI_SDI            |
+     32              SII_GPIO_ALT_SD1                |
+     33              SII_GPIO_ALT_SD2                |
+     34              SII_GPIO_ALT_SD3                |
+     35              SII_GPIO_ALT_MUTEOUT            |
+     36              SII_GPIO_ALT_I2S_SCK0           |
+     37          
+     38              SII_GPIO_ALT_I2S_WS0            |
+     39          
+     40              SII_GPIO_ALT_3D_RP_RIGHT        |
+     41              SII_GPIO_ALT_3D_RP_ACTIVE       |
+     42              SII_GPIO_ALT_3D_RP_LEFT         |
+     43              SII_GPIO_ALT_3D_MP_RIGHT        |
+     44              SII_GPIO_ALT_3D_MP_ACTIVE       |
+     45              SII_GPIO_ALT_3D_MP_LEFT         |
+     46              SII_GPIO_ALT_MP_MUTE            |
+     47              SII_GPIO_ALT_RP_MUTE            |
+     48          
+     49              0
+     50              };
+     51          
+     52          //------------------------------------------------------------------------------
+     53          //  GPIO Driver Instance Data
+     54          //------------------------------------------------------------------------------
+     55          
+     56          uint16_t    l_statusFlags = 0;
+     57          
+     58          //------------------------------------------------------------------------------
+     59          // Function:    SiiDrvGpioInitialize
+     60          // Description:
+     61          //
+     62          // Returns:     TRUE if no problem
+     63          //------------------------------------------------------------------------------
+     64          
+     65          bool_t SiiDrvGpioInitialize ( void )
+     66          {
+     67          
+     68              l_statusFlags = 0;
+     69          
+     70              return( true );
+     71          }
+     72          
+     73          //------------------------------------------------------------------------------
+     74          // Function:    SiiDrvGpioStatus
+     75          // Description: Returns a status flag word containing GPIO driver-specific
+     76          //              information about the state of the device.
+     77          // Parameters:  none
+     78          // Returns:     Sixteen-bit status flags word for the GPIO Driver
+     79          //------------------------------------------------------------------------------
+     80          
+     81          uint16_t SiiDrvGpioStatus ( void )
+     82          {
+     83              uint16_t statusFlags = l_statusFlags;
+     84          
+     85              l_statusFlags = 0;          // INT flags only valid first time it is read.
+     86              return( statusFlags );
+     87          }
+     88          //------------------------------------------------------------------------------
+     89          // Function:    SiiDrvGpioPinType
+     90          // ! @brief     Enable/disable the passed pin alternative function
+     91          // Parameters:  pins -- GPIO pins to be configured, GPIO0 == 0x0001,
+     92          //                      GPIO1 == 0x0002, etc.
+     93          //              type -- one of SiiGpioTypes_t
+     94          // Returns:     true if success, false if requested type not available for
+     95          //              one or more of the specified pin(s).
+     96          //------------------------------------------------------------------------------
+     97          
+     98          bool_t SiiDrvGpioPinType ( uint16_t pins, SiiGpioPinTypes_t pinType )
+     99          {
+    100              bool_t  success = true;
+    101              uint8_t pinsPwdHi, pinsPwdLo, pinsAon, pinsPwdAud;
+    102          
+    103              pinsPwdHi   = (uint8_t)((pins >> 10) & MSK_ALTEN_12_10);
+    104              pinsPwdLo   = (uint8_t)(pins >> 2);
+    105              pinsAon     = (uint8_t)(pins) & MSK_ALTEN_0;
+    106              pinsPwdAud  = (uint8_t)(((pins >> 1) & MSK_ALTEN_0) << 6);
+    107          
+    108              // Set the requested pin(s) to GPIO mode.
+    109              if ( pinType == SII_GPIO_STANDARD )
+    110              {
+    111                  // Clear all specified pins to GPIO functionality
+    112                  SiiRegBitsSet( REG_GPIO_AON_CTRL0, pinsAon, false );
+    113                  SiiRegBitsSet( REG_GPIO_ALTEN, pinsPwdLo, false );
+    114                  SiiRegBitsSet( REG_GPIO_ALTEN_DIR, pinsPwdHi, false );
+    115                  SiiRegBitsSet( REG_GPIO_DIR, pinsPwdAud, false );
+    116          
+    117              }
+    118              else
+    119              {
+    120                  // Determine if pins requested are valid against the pin type requested
+    121                  if (( pinType & pins & l_pinTypeMask ) != pins )
+    122                  {
+    123                      success = false;
+    124                  }
+    125                  else
+    126                  {
+    127                      // Enable the alternate pin function for the requested pin(s)
+    128                      SiiRegBitsSet( REG_GPIO_AON_CTRL0, pinsAon, true );
+    129                      SiiRegBitsSet( REG_GPIO_ALTEN, pinsPwdLo, true );
+    130                      SiiRegBitsSet( REG_GPIO_ALTEN_DIR, pinsPwdHi, true );
+    131                      SiiRegBitsSet( REG_GPIO_DIR, pinsPwdAud, true );
+    132                      // Choose primary or secondary alternate function.
+    133                      if (( pinType & SII_GPIO_ALTFUNCTION ) == SII_GPIO_ALTFUNCTION )
+    134                      {
+    135                          pinsPwdHi =  (pins & (SII_GPIO_PIN_9| SII_GPIO_PIN_10 | SII_GPIO_PIN_11 )) ? BIT_GPIO_SEC_SEL0 : 0;
+    136                          pinsPwdHi |= (pins & (SII_GPIO_PIN_1 | SII_GPIO_PIN_2 | SII_GPIO_PIN_3)) ? BIT_GPIO_SEC_SEL1 : 0;
+    137                          pinsPwdHi |= (pins & (SII_GPIO_PIN_4 | SII_GPIO_PIN_5 )) ? BIT_GPIO_SEC_SEL2 : 0;
+    138                          SiiRegBitsSet( REG_GPIO_PRI_SEC_SEL, pinsPwdHi, true );
+    139                      }
+    140                  }
+    141              }
+    142          
+    143              return( success );
+    144          }
+    145          
+    146          //------------------------------------------------------------------------------
+    147          // Function:    SiiDrvGpioPinConfigure
+    148          // ! @brief     Configure the passed pins as specified by the mode.
+    149          // Parameters:  pins -- GPIO pins to be configured, GPIO0 == 0x0001,
+    150          //                      GPIO1 == 0x0002, etc.
+    151          //              mode -- logical 'OR' of SiiGpioModes_t values
+    152          //------------------------------------------------------------------------------
+    153          
+    154          void SiiDrvGpioPinConfigure ( uint16_t pins, SiiGpioModes_t pinMode )
+    155          {
+    156              uint8_t pinsAon, pinsEdge0, pinsEdge1, pinsEdge2;
+    157              uint8_t pins92, pins1210, pins62, pins127;
+    158          
+    159              // Some precalculated bit positioning
+    160              pins92      = (pins >> 2)   & MSK_GPIO_9_2;
+    161              pins1210    = (pins >> 10)  & MSK_GPIO_12_10;
+    162              pins62      = (pins << 1)   & MSK_GPIO_6_2;
+    163              pins127     = (pins >> 7)   & MSK_GPIO_12_7;
+    164          
+    165              // Set the pull up/down mode requested
+    166              if ( pinMode & ( SII_GPIO_PU | SII_GPIO_PD ))
+    167              {
+    168                  // PU = up/down
+    169                  SiiRegBitsSet( REG_GPIO_AON_CTRL1,  (pins << 4) & MSK_PAD_PU_1_0, ((pinMode & SII_GPIO_PU) != 0 ));
+    170                  SiiRegBitsSet( REG_GPIO_PU_SEL,     pins92,   ((pinMode & SII_GPIO_PU) != 0 ));
+    171                  SiiRegBitsSet( REG_GPIO_PU_SEL_EN,  pins1210, ((pinMode & SII_GPIO_PU) != 0 ));
+    172          
+    173                  // PE = true
+    174                  SiiRegBitsSet( REG_GPIO_AON_CTRL1,  (pins << 6) & MSK_PAD_PE_1_0, true );
+    175                  SiiRegBitsSet( REG_GPIO_PU_SEL_EN,  pins62, true );
+    176                  SiiRegBitsSet( REG_GPIO_PU_EN,      pins127, true );
+    177              }
+    178              else
+    179              {
+    180                  // PE = false
+    181                  SiiRegBitsSet( REG_GPIO_AON_CTRL1,  (pins << 6) & MSK_PAD_PE_1_0, false );
+    182                  SiiRegBitsSet( REG_GPIO_PU_SEL_EN,  pins62, false );
+    183                  SiiRegBitsSet( REG_GPIO_PU_EN,      pins127, false );
+    184              }
+    185          
+    186              // Pin direction INPUT
+    187              if ( pinMode & SII_GPIO_INPUT )
+    188              {
+    189                  // Set direction to INPUT
+    190                  SiiRegBitsSet( REG_GPIO_AON_CTRL0,  (pins << 2) & MSK_DIREN_1_0, true );
+    191                  SiiRegBitsSet( REG_GPIO_ALTEN_DIR,  pins62, true );
+    192                  SiiRegBitsSet( REG_GPIO_DIR,        pins127, true );
+    193          
+    194                  // Inputs can also be interrupts
+    195                  if ( pinMode & ( SII_GPIO_INT_RISING_EDGE | SII_GPIO_INT_FALLING_EDGE ))
+    196                  {
+    197                      pinsAon     = 0;
+    198                      pinsEdge0   = 0;
+    199                      pinsEdge1   = 0;
+    200                      pinsEdge2   = 0;
+    201          
+    202                      // Either edge, both, or none...
+    203                      if ( pinMode & SII_GPIO_INT_RISING_EDGE )
+    204                      {
+    205                          pinsAon     |=  (pins << 4)  & MSK_INT_EDGE_RISE_1_0;
+    206                          pinsEdge0   =   pins92;
+    207                          pinsEdge1   |=  pins1210;
+    208                      }
+    209                      if ( pinMode & SII_GPIO_INT_FALLING_EDGE )
+    210                      {
+    211                          pinsAon     |=  (pins << 6) & MSK_INT_EDGE_FALL_1_0;
+    212                          pinsEdge1   |=  pins62;
+    213                          pinsEdge2   =   pins127;
+    214                      }
+    215          
+    216                      // Now perform the actual interrupt mode modifications
+    217                      SiiRegModify( REG_GPIO_AON_CTRL0, ((pins << 4) & MSK_INT_EDGE_RISE_1_0) | ((pins << 6) & MSK_INT_EDGE_FALL_1_0), pinsAon );
+    218                      SiiRegModify( REG_GPIO_INT_RE_EN,       pins92, pinsEdge0 );
+    219                      SiiRegModify( REG_GPIO_INT_RE_FE_EN,    pins1210 | pins62, pinsEdge1 );
+    220                      SiiRegModify( REG_GPIO_INT_FE_EN,       pins127, pinsEdge2 );
+    221                  }
+    222              }
+    223          
+    224              // Pin direction OUTPUT
+    225              else
+    226              {
+    227                  // Set direction to INPUT
+    228                  SiiRegBitsSet( REG_GPIO_AON_CTRL0, (pins << 2) & MSK_DIREN_1_0, false );
+    229                  SiiRegBitsSet( REG_GPIO_ALTEN_DIR, pins62, false );
+    230                  SiiRegBitsSet( REG_GPIO_DIR, pins127, false );
+    231              }
+    232          }
+    233          
+    234          //-------------------------------------------------------------------------------------------------
+    235          //! @brief      Enable interrupts for the passed GPIO pins.  The pins must also be configured
+    236          //!             as interrupt pins using SiiDrvGpioPinConfigure()
+    237          //! @param[in]  pins    one or more GPIO pins to be interrupt enabled or disabled
+    238          //! @param[in]  enMask  bits corresponding to the pins parameter that are to be enabled.  To
+    239          //!                     disable interrupts for a pin, specify it in the pins parameter but
+    240          //!                     set the corresponding bit in this mask to 0.
+    241          //-------------------------------------------------------------------------------------------------
+    242          void SiiDrvGpioIntEnable ( uint16_t pins, uint16_t enMask )
+    243          {
+    244              uint8_t pins92, pins1210, mask92, mask1210;
+    245          
+    246              // Some precalculated bit positioning
+    247              pins92      = (pins >> 2)       & MSK_GPIO_9_2;
+    248              pins1210    = (pins >> 10)      & MSK_GPIO_12_10;
+    249          
+    250              mask92      = (enMask >> 2)     & MSK_GPIO_9_2;
+    251              mask1210    = (enMask >> 10)    & MSK_GPIO_12_10;
+    252          
+    253              // Set the appropriate interrupt mask state for these pins.
+    254              SiiRegModify( REG_INT_ENABLE_9,  pins & MSK_GPIO_INT_1_0, enMask & MSK_GPIO_INT_1_0 );
+    255              SiiRegModify( REG_INT_ENABLE_GPIO_1, pins92, mask92 );
+    256              SiiRegModify( REG_INT_ENABLE_GPIO_2, pins1210, mask1210 );
+    257          }
+    258          
+    259          //------------------------------------------------------------------------------
+    260          // Function:    SiiDrvGpioPinRead
+    261          //! @brief      Read the GPIO pins specified
+    262          // Parameters:  pins -- GPIO pins to be read, GPIO0 == 0x0001,
+    263          //                      GPIO1 == 0x0002, etc.
+    264          //------------------------------------------------------------------------------
+    265          
+    266          uint16_t    SiiDrvGpioPinRead ( SiiGpioPins_t pins )
+    267          {
+    268              uint8_t     pinsPwdHi, pinsPwdLo, pinsAon;
+    269              uint16_t    pinValue;
+    270          
+    271              pinsPwdHi   = (uint8_t)((pins >> 7) & 0x3F);
+    272              pinsPwdLo   = (uint8_t)((pins >> 2) & 0x1F);
+    273              pinsAon     = (uint8_t)(pins) & 0x01;
+    274          
+    275              pinValue = 0;
+    276              if ( pinsAon )
+    277              {
+    278                  pinValue = ((SiiRegRead( REG_GPIO_AON_CTRL1 ) & MSK_READ_0) >> 2) & pinsAon;
+    279              }
+    280              if ( pinsPwdLo )
+    281              {
+    282                  pinValue |= (((SiiRegRead( REG_GPIO_WR_RD ) & MSK_READ_6_2) >> 3) & pinsPwdLo );
+    283              }
+    284              if ( pinsPwdHi )
+    285              {
+    286                  pinValue |= ((SiiRegRead( REG_GPIO_RD ) & MSK_READ_12_7) & pinsPwdHi );
+    287              }
+    288          
+    289              return( pinValue );
+    290          }
+    291          
+    292          //------------------------------------------------------------------------------
+    293          // Function:    SiiDrvGpioPinWrite
+    294          //! @brief      Read the GPIO pins specified
+    295          // Parameters:  pins -- GPIO pins to be read, GPIO0 == 0x0001,
+    296          //                      GPIO1 == 0x0002, etc.
+    297          //------------------------------------------------------------------------------
+    298          
+    299          void SiiDrvGpioPinWrite ( SiiGpioPins_t pins, uint16_t pinValue )
+    300          {
+    301              uint8_t     pinsPwdHi, pinsPwdLo, pinsAon;
+    302          
+    303              pinsPwdHi   = (uint8_t)(pins >> 10);
+    304              pinsPwdLo   = (uint8_t)(pins >> 2);
+    305              pinsAon     = (uint8_t)(pins) & 0x03;
+    306          
+    307              if ( pinsAon )
+    308              {
+    309                  SiiRegModify( REG_GPIO_AON_CTRL1, pinsAon, (uint8_t)pinValue );
+    310              }
+    311              if ( pinsPwdLo )
+    312              {
+    313                  SiiRegModify( REG_GPIO_WR, pinsPwdLo, (uint8_t)(pinValue >> 2) );
+    314              }
+    315              if ( pinsPwdHi )
+    316              {
+    317                  SiiRegModify( REG_GPIO_WR_RD, pinsPwdHi, (uint8_t)(pinValue >> 10) );
+    318              }
+    319          }
+    320          
+    321          //------------------------------------------------------------------------------
+    322          // Function:    SiiDrvGpioPinIntStatus
+    323          //! @brief      Read the interrupt status of the specified GPIO pins
+    324          // Parameters:  pins -- GPIO pins to be read, GPIO0 == 0x0001,
+    325          //                      GPIO1 == 0x0002, etc.
+    326          //------------------------------------------------------------------------------
+    327          
+    328          uint16_t    SiiDrvGpioPinIntStatus ( SiiGpioPins_t pins )
+    329          {
+    330              uint8_t     pinsPwd456789, pinsPwd123, pinsAon, pinsPwd10_11;
+    331              uint16_t    pinValue;
+    332          
+    333          
+    334              pinsAon     = (uint8_t)(pins) & BIT_GPIO_INT_0;
+    335          
+    336              pinsPwd123   = (uint8_t)((pins >> 1) << 4) ;
+    337          
+    338              pinsPwd456789   = (uint8_t)((pins >> 4) << 2);  // GPIOs
+    339          
+    340              pinsPwd10_11   = (uint8_t)((pins >> 10) & 0x03); // GPIOs
+    341          
+    342              pinValue = 0;
+    343          
+    344              if ( pinsAon )
+    345              {
+    346                  pinValue = SiiRegRead( REG_INT_STATUS_9 ) & pinsAon;
+    347              }
+    348              if ( pinsPwd123 )
+    349              {
+    350              	pinValue |= (((uint16_t)(SiiRegRead( REG_INT_STATUS_GPIO_2 ) & pinsPwd123)) >> 3);
+    351              }
+    352              if ( pinsPwd456789 )
+    353              {
+    354                  pinValue |= (((uint16_t)(SiiRegRead( REG_INT_STATUS_GPIO_1 ) & pinsPwd456789)) << 2);
+    355              }
+    356              if ( pinsPwd10_11 )
+    357              {
+    358                  pinValue |= (((uint16_t)(SiiRegRead( REG_INT_STATUS_GPIO_2 ) & pinsPwd10_11)) << 10);
+    359              }
+    360          
+    361              return( pinValue );
+    362          }
+    363          
+    364          //------------------------------------------------------------------------------
+    365          // Function:    SiiDrvGpioPinIntClear
+    366          //! @brief      Clear the interrupt status of the specified GPIO pins
+    367          // Parameters:  pins -- GPIO pins to be read, GPIO0 == 0x0001,
+    368          //                      GPIO1 == 0x0002, etc.
+    369          //------------------------------------------------------------------------------
+    370          
+    371          void SiiDrvGpioPinIntClear ( SiiGpioPins_t pins )
+    372          {
+    373              uint8_t     pinsPwd456789, pinsPwd123, pinsAon, pinsPwd10_11;
+    374          
+    375              pinsAon     = (uint8_t)(pins) & BIT_GPIO_INT_0;
+    376              pinsPwd123   = (uint8_t)((pins >> 1) << 4) ;
+    377              pinsPwd456789   = (uint8_t)((pins >> 4) << 2);  // GPIOs
+    378              pinsPwd10_11   = (uint8_t)((pins >> 10) & 0x03); // GPIOs
+    379          
+    380              if ( pinsAon )
+    381              {
+    382                  SiiRegModify( REG_INT_STATUS_9, pinsAon, pinsAon );
+    383              }
+    384              if ( pinsPwd123 )
+    385              {
+    386              	SiiRegModify( REG_INT_STATUS_GPIO_2, pinsPwd123, pinsPwd123 );
+    387              }
+    388              if ( pinsPwd456789 )
+    389              {
+    390              	SiiRegModify( REG_INT_STATUS_GPIO_1, pinsPwd456789, pinsPwd456789 );
+    391              }
+    392              if ( pinsPwd10_11 )
+    393              {
+    394              	SiiRegModify( REG_INT_STATUS_GPIO_2, pinsPwd10_11, pinsPwd10_11 );
+    395              }
+    396          }
+    397          
+    398          //------------------------------------------------------------------------------
+    399          // Function:    DrvGpioProcessInterrupts
+    400          // Description:
+    401          // Parameters:  none
+    402          // Returns:     none
+    403          //------------------------------------------------------------------------------
+    404          
+    405          void DrvGpioProcessInterrupts ( void )
+    406          {
+    407              uint16_t    intStatus = 0;
+    408          
+    409              // Check GPIO interrupts.
+    410              intStatus = SiiDrvGpioPinIntStatus(
+    411              		            SII_GPIO_PIN_0  |   SII_GPIO_PIN_1  |
+    412              		            SII_GPIO_PIN_2  |   SII_GPIO_PIN_3  |
+    413              		            SII_GPIO_PIN_4  |   SII_GPIO_PIN_5  |
+    414              		            SII_GPIO_PIN_6  |   SII_GPIO_PIN_7  |
+    415              		            SII_GPIO_PIN_8  |   SII_GPIO_PIN_9  |
+    416              		            SII_GPIO_PIN_10 |   SII_GPIO_PIN_11
+    417                      );
+    418          
+    419              // Update a change in GPIO status.
+    420              if ( intStatus )
+    421              {
+    422                  SiiDrvGpioPinIntClear( intStatus );
+    423              }
+    424          
+    425              if ( intStatus )
+    426              {
+    427                  l_statusFlags |= intStatus;
+    428              }
+    429          
+    430          }
+    431          
+    432          
+    433          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+        8  DrvGpioProcessInterrupts
+              8 -> SiiDrvGpioPinIntClear
+              8 -> SiiDrvGpioPinIntStatus
+        0  SiiDrvGpioInitialize
+       16  SiiDrvGpioIntEnable
+              0 -> SiiRegModify
+             16 -> SiiRegModify
+       40  SiiDrvGpioPinConfigure
+              0 -> SiiRegBitsSet
+             40 -> SiiRegBitsSet
+              0 -> SiiRegModify
+             40 -> SiiRegModify
+       16  SiiDrvGpioPinIntClear
+              0 -> SiiRegModify
+             16 -> SiiRegModify
+       24  SiiDrvGpioPinIntStatus
+             24 -> SiiRegRead
+       24  SiiDrvGpioPinRead
+             24 -> SiiRegRead
+       40  SiiDrvGpioPinType
+             40 -> SiiRegBitsSet
+       16  SiiDrvGpioPinWrite
+              0 -> SiiRegModify
+             16 -> SiiRegModify
+        0  SiiDrvGpioStatus
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable2
+      10  ?Subroutine0
+       8  ?Subroutine1
+      10  ?Subroutine2
+      28  DrvGpioProcessInterrupts
+      12  SiiDrvGpioInitialize
+      56  SiiDrvGpioIntEnable
+     316  SiiDrvGpioPinConfigure
+      78  SiiDrvGpioPinIntClear
+     100  SiiDrvGpioPinIntStatus
+      70  SiiDrvGpioPinRead
+     192  SiiDrvGpioPinType
+      62  SiiDrvGpioPinWrite
+      12  SiiDrvGpioStatus
+       2  l_pinTypeMask
+       2  l_statusFlags
+
+ 
+   2 bytes in section .bss
+   2 bytes in section .data
+ 958 bytes in section .text
+ 
+ 958 bytes of CODE memory
+   4 bytes of DATA memory
+
+Errors: none
+Warnings: 3

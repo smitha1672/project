@@ -1,0 +1,994 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     10/Nov/2014  15:19:40 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\STM32_USB_OTG_Driver\src\usb_hcd_int.c      #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\STM32_USB_OTG_Driver\src\usb_hcd_int.c -D   #
+#                    __ARM_CORTEX_MX__ -D DEBUG -D FREE_RTOS -D               #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D HOST_MODE_ENABLED -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -D STM32_IAP -D S4051A    #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Bootloade #
+#                    r\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Boo #
+#                    tloader\Obj\ --debug --endian=little --cpu=Cortex-M4 -e  #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Projects\STM32_IAP\inc #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\I #
+#                    nclude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\C #
+#                    MSIS\Device\ST\STM32F4xx\Include\ -I                     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_HO #
+#                    ST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\HT68F30\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Utilities\Third_Party\efsl\inc\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    fat_fs\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Project #
+#                    s\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utiliti #
+#                    es\mainstream_v1\stm32f411\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\it\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\APP_SRC\I #
+#                    nclude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\APP_SRC\ -Ohz -I  #
+#                    "C:\Program Files (x86)\IAR Systems\Embedded Workbench   #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Bootloader\Lis #
+#                    t\usb_hcd_int.lst                                        #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Bootloader\Obj #
+#                    \usb_hcd_int.o                                           #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\STM32_USB_OTG_Driver\src\usb_hcd_int.c
+      1          /**
+      2            ******************************************************************************
+      3            * @file    usb_hcd_int.c
+      4            * @author  MCD Application Team
+      5            * @version V2.1.0
+      6            * @date    19-March-2012
+      7            * @brief   Host driver interrupt subroutines
+      8            ******************************************************************************
+      9            * @attention
+     10            *
+     11            * <h2><center>&copy; COPYRIGHT 2012 STMicroelectronics</center></h2>
+     12            *
+     13            * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
+     14            * You may not use this file except in compliance with the License.
+     15            * You may obtain a copy of the License at:
+     16            *
+     17            *        http://www.st.com/software_license_agreement_liberty_v2
+     18            *
+     19            * Unless required by applicable law or agreed to in writing, software 
+     20            * distributed under the License is distributed on an "AS IS" BASIS, 
+     21            * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     22            * See the License for the specific language governing permissions and
+     23            * limitations under the License.
+     24            *
+     25            ******************************************************************************
+     26            */
+     27          
+     28          /* Includes ------------------------------------------------------------------*/
+     29          #include "usb_core.h"
+     30          #include "usb_defines.h"
+     31          #include "usb_hcd_int.h"
+     32          
+     33          #if defined   (__CC_ARM) /*!< ARM Compiler */
+     34          #pragma O0
+     35          #elif defined (__GNUC__) /*!< GNU Compiler */
+     36          #pragma GCC optimize ("O0")
+     37          #elif defined  (__TASKING__) /*!< TASKING Compiler */ 
+     38          #pragma optimize=0                          
+     39          
+     40          #endif /* __CC_ARM */
+     41          
+     42          /** @addtogroup USB_OTG_DRIVER
+     43          * @{
+     44          */
+     45          
+     46          /** @defgroup USB_HCD_INT 
+     47          * @brief This file contains the interrupt subroutines for the Host mode.
+     48          * @{
+     49          */
+     50          
+     51          
+     52          /** @defgroup USB_HCD_INT_Private_Defines
+     53          * @{
+     54          */ 
+     55          /**
+     56          * @}
+     57          */ 
+     58          
+     59          
+     60          /** @defgroup USB_HCD_INT_Private_TypesDefinitions
+     61          * @{
+     62          */ 
+     63          /**
+     64          * @}
+     65          */ 
+     66          
+     67          
+     68          
+     69          /** @defgroup USB_HCD_INT_Private_Macros
+     70          * @{
+     71          */ 
+     72          /**
+     73          * @}
+     74          */ 
+     75          
+     76          
+     77          /** @defgroup USB_HCD_INT_Private_Variables
+     78          * @{
+     79          */ 
+     80          /**
+     81          * @}
+     82          */ 
+     83          
+     84          
+     85          /** @defgroup USB_HCD_INT_Private_FunctionPrototypes
+     86          * @{
+     87          */ 
+     88          
+     89          static uint32_t USB_OTG_USBH_handle_sof_ISR(USB_OTG_CORE_HANDLE *pdev);
+     90          static uint32_t USB_OTG_USBH_handle_port_ISR(USB_OTG_CORE_HANDLE *pdev);
+     91          static uint32_t USB_OTG_USBH_handle_hc_ISR (USB_OTG_CORE_HANDLE *pdev);
+     92          static uint32_t USB_OTG_USBH_handle_hc_n_In_ISR (USB_OTG_CORE_HANDLE *pdev ,
+     93                                                           uint32_t num);
+     94          static uint32_t USB_OTG_USBH_handle_hc_n_Out_ISR (USB_OTG_CORE_HANDLE *pdev , 
+     95                                                            uint32_t num);
+     96          static uint32_t USB_OTG_USBH_handle_rx_qlvl_ISR (USB_OTG_CORE_HANDLE *pdev);
+     97          static uint32_t USB_OTG_USBH_handle_nptxfempty_ISR (USB_OTG_CORE_HANDLE *pdev);
+     98          static uint32_t USB_OTG_USBH_handle_ptxfempty_ISR (USB_OTG_CORE_HANDLE *pdev);
+     99          static uint32_t USB_OTG_USBH_handle_Disconnect_ISR (USB_OTG_CORE_HANDLE *pdev);
+    100          static uint32_t USB_OTG_USBH_handle_IncompletePeriodicXfer_ISR (USB_OTG_CORE_HANDLE *pdev);
+    101          
+    102          /**
+    103          * @}
+    104          */ 
+    105          
+    106          
+    107          /** @defgroup USB_HCD_INT_Private_Functions
+    108          * @{
+    109          */ 
+    110          
+    111          /**
+    112          * @brief  HOST_Handle_ISR 
+    113          *         This function handles all USB Host Interrupts
+    114          * @param  pdev: Selected device
+    115          * @retval status 
+    116          */
+    117          
+    118          uint32_t USBH_OTG_ISR_Handler (USB_OTG_CORE_HANDLE *pdev)
+    119          {
+    120            USB_OTG_GINTSTS_TypeDef  gintsts;
+    121            uint32_t retval = 0;
+    122            
+    123            gintsts.d32 = 0;
+    124            
+    125            /* Check if HOST Mode */
+    126            if (USB_OTG_IsHostMode(pdev))
+    127            {
+    128              gintsts.d32 = USB_OTG_ReadCoreItr(pdev);
+    129              if (!gintsts.d32)
+    130              {
+    131                return 0;
+    132              }
+    133              
+    134              if (gintsts.b.sofintr)
+    135              {
+    136                retval |= USB_OTG_USBH_handle_sof_ISR (pdev);
+    137              }
+    138              
+    139              if (gintsts.b.rxstsqlvl)
+    140              {
+    141                retval |= USB_OTG_USBH_handle_rx_qlvl_ISR (pdev);
+    142              }
+    143              
+    144              if (gintsts.b.nptxfempty)
+    145              {
+    146                retval |= USB_OTG_USBH_handle_nptxfempty_ISR (pdev);
+    147              }
+    148              
+    149              if (gintsts.b.ptxfempty)
+    150              {
+    151                retval |= USB_OTG_USBH_handle_ptxfempty_ISR (pdev);
+    152              }    
+    153              
+    154              if (gintsts.b.hcintr)
+    155              {
+    156                retval |= USB_OTG_USBH_handle_hc_ISR (pdev);
+    157              }
+    158              
+    159              if (gintsts.b.portintr)
+    160              {
+    161                retval |= USB_OTG_USBH_handle_port_ISR (pdev);
+    162              }
+    163              
+    164              if (gintsts.b.disconnect)
+    165              {
+    166                retval |= USB_OTG_USBH_handle_Disconnect_ISR (pdev);  
+    167                
+    168              }
+    169              
+    170              if (gintsts.b.incomplisoout)
+    171              {
+    172                retval |= USB_OTG_USBH_handle_IncompletePeriodicXfer_ISR (pdev);
+    173              }
+    174              
+    175              
+    176            }
+    177            return retval;
+    178          }
+    179          
+    180          /**
+    181          * @brief  USB_OTG_USBH_handle_hc_ISR 
+    182          *         This function indicates that one or more host channels has a pending
+    183          * @param  pdev: Selected device
+    184          * @retval status 
+    185          */
+    186          static uint32_t USB_OTG_USBH_handle_hc_ISR (USB_OTG_CORE_HANDLE *pdev)
+    187          {
+    188            USB_OTG_HAINT_TypeDef        haint;
+    189            USB_OTG_HCCHAR_TypeDef       hcchar;
+    190            uint32_t i = 0;
+    191            uint32_t retval = 0;
+    192            
+    193            /* Clear appropriate bits in HCINTn to clear the interrupt bit in
+    194            * GINTSTS */
+    195            
+    196            haint.d32 = USB_OTG_ReadHostAllChannels_intr(pdev);
+    197            
+    198            for (i = 0; i < pdev->cfg.host_channels ; i++)
+    199            {
+    200              if (haint.b.chint & (1 << i))
+    201              {
+    202                hcchar.d32 = USB_OTG_READ_REG32(&pdev->regs.HC_REGS[i]->HCCHAR);
+    203                
+    204                if (hcchar.b.epdir)
+    205                {
+    206                  retval |= USB_OTG_USBH_handle_hc_n_In_ISR (pdev, i);
+    207                }
+    208                else
+    209                {
+    210                  retval |=  USB_OTG_USBH_handle_hc_n_Out_ISR (pdev, i);
+    211                }
+    212              }
+    213            }
+    214            
+    215            return retval;
+    216          }
+    217          
+    218          /**
+    219          * @brief  USB_OTG_otg_hcd_handle_sof_intr 
+    220          *         Handles the start-of-frame interrupt in host mode.
+    221          * @param  pdev: Selected device
+    222          * @retval status 
+    223          */
+    224          static uint32_t USB_OTG_USBH_handle_sof_ISR (USB_OTG_CORE_HANDLE *pdev)
+    225          {
+    226            USB_OTG_GINTSTS_TypeDef      gintsts;
+    227            gintsts.d32 = 0;
+    228            
+    229            USBH_HCD_INT_fops->SOF(pdev);
+    230            
+    231            /* Clear interrupt */
+    232            gintsts.b.sofintr = 1;
+    233            USB_OTG_WRITE_REG32(&pdev->regs.GREGS->GINTSTS, gintsts.d32);
+    234            
+    235            return 1;
+    236          }
+    237          
+    238          /**
+    239          * @brief  USB_OTG_USBH_handle_Disconnect_ISR 
+    240          *         Handles disconnect event.
+    241          * @param  pdev: Selected device
+    242          * @retval status 
+    243          */
+    244          static uint32_t USB_OTG_USBH_handle_Disconnect_ISR (USB_OTG_CORE_HANDLE *pdev)
+    245          {
+    246            USB_OTG_GINTSTS_TypeDef      gintsts;
+    247            
+    248            gintsts.d32 = 0;
+    249            
+    250            USBH_HCD_INT_fops->DevDisconnected(pdev);
+    251            
+    252            /* Clear interrupt */
+    253            gintsts.b.disconnect = 1;
+    254            USB_OTG_WRITE_REG32(&pdev->regs.GREGS->GINTSTS, gintsts.d32);
+    255            
+    256            return 1;
+    257          }
+    258          #if defined ( __ICCARM__ ) /*!< IAR Compiler */
+    259          #pragma optimize = none
+    260          #endif /* __CC_ARM */
+    261          /**
+    262          * @brief  USB_OTG_USBH_handle_nptxfempty_ISR 
+    263          *         Handles non periodic tx fifo empty.
+    264          * @param  pdev: Selected device
+    265          * @retval status 
+    266          */
+    267          static uint32_t USB_OTG_USBH_handle_nptxfempty_ISR (USB_OTG_CORE_HANDLE *pdev)
+    268          {
+    269            USB_OTG_GINTMSK_TypeDef      intmsk;
+    270            USB_OTG_HNPTXSTS_TypeDef     hnptxsts; 
+    271            uint16_t                     len_words , len; 
+    272            
+    273            hnptxsts.d32 = USB_OTG_READ_REG32(&pdev->regs.GREGS->HNPTXSTS);
+    274            
+    275            len_words = (pdev->host.hc[hnptxsts.b.nptxqtop.chnum].xfer_len + 3) / 4;
+    276            
+    277            while ((hnptxsts.b.nptxfspcavail > len_words)&&
+    278                   (pdev->host.hc[hnptxsts.b.nptxqtop.chnum].xfer_len != 0))
+    279            {
+    280              
+    281              len = hnptxsts.b.nptxfspcavail * 4;
+    282              
+    283              if (len > pdev->host.hc[hnptxsts.b.nptxqtop.chnum].xfer_len)
+    284              {
+    285                /* Last packet */
+    286                len = pdev->host.hc[hnptxsts.b.nptxqtop.chnum].xfer_len;
+    287                
+    288                intmsk.d32 = 0;
+    289                intmsk.b.nptxfempty = 1;
+    290                USB_OTG_MODIFY_REG32( &pdev->regs.GREGS->GINTMSK, intmsk.d32, 0);       
+    291              }
+    292              
+    293              len_words = (pdev->host.hc[hnptxsts.b.nptxqtop.chnum].xfer_len + 3) / 4;
+    294              
+    295              USB_OTG_WritePacket (pdev , pdev->host.hc[hnptxsts.b.nptxqtop.chnum].xfer_buff, hnptxsts.b.nptxqtop.chnum, len);
+    296              
+    297              pdev->host.hc[hnptxsts.b.nptxqtop.chnum].xfer_buff  += len;
+    298              pdev->host.hc[hnptxsts.b.nptxqtop.chnum].xfer_len   -= len;
+    299              pdev->host.hc[hnptxsts.b.nptxqtop.chnum].xfer_count  += len; 
+    300              
+    301              hnptxsts.d32 = USB_OTG_READ_REG32(&pdev->regs.GREGS->HNPTXSTS);
+    302            }  
+    303            
+    304            return 1;
+    305          }
+    306          #if defined ( __ICCARM__ ) /*!< IAR Compiler */
+    307          #pragma optimize = none
+    308          #endif /* __CC_ARM */
+    309          /**
+    310          * @brief  USB_OTG_USBH_handle_ptxfempty_ISR 
+    311          *         Handles periodic tx fifo empty
+    312          * @param  pdev: Selected device
+    313          * @retval status 
+    314          */
+    315          static uint32_t USB_OTG_USBH_handle_ptxfempty_ISR (USB_OTG_CORE_HANDLE *pdev)
+    316          {
+    317            USB_OTG_GINTMSK_TypeDef      intmsk;
+    318            USB_OTG_HPTXSTS_TypeDef      hptxsts; 
+    319            uint16_t                     len_words , len; 
+    320            
+    321            hptxsts.d32 = USB_OTG_READ_REG32(&pdev->regs.HREGS->HPTXSTS);
+    322            
+    323            len_words = (pdev->host.hc[hptxsts.b.ptxqtop.chnum].xfer_len + 3) / 4;
+    324            
+    325            while ((hptxsts.b.ptxfspcavail > len_words)&&
+    326                   (pdev->host.hc[hptxsts.b.ptxqtop.chnum].xfer_len != 0))    
+    327            {
+    328              
+    329              len = hptxsts.b.ptxfspcavail * 4;
+    330              
+    331              if (len > pdev->host.hc[hptxsts.b.ptxqtop.chnum].xfer_len)
+    332              {
+    333                len = pdev->host.hc[hptxsts.b.ptxqtop.chnum].xfer_len;
+    334                /* Last packet */
+    335                intmsk.d32 = 0;
+    336                intmsk.b.ptxfempty = 1;
+    337                USB_OTG_MODIFY_REG32( &pdev->regs.GREGS->GINTMSK, intmsk.d32, 0); 
+    338              }
+    339              
+    340              len_words = (pdev->host.hc[hptxsts.b.ptxqtop.chnum].xfer_len + 3) / 4;
+    341              
+    342              USB_OTG_WritePacket (pdev , pdev->host.hc[hptxsts.b.ptxqtop.chnum].xfer_buff, hptxsts.b.ptxqtop.chnum, len);
+    343              
+    344              pdev->host.hc[hptxsts.b.ptxqtop.chnum].xfer_buff  += len;
+    345              pdev->host.hc[hptxsts.b.ptxqtop.chnum].xfer_len   -= len;
+    346              pdev->host.hc[hptxsts.b.ptxqtop.chnum].xfer_count  += len; 
+    347              
+    348              hptxsts.d32 = USB_OTG_READ_REG32(&pdev->regs.HREGS->HPTXSTS);
+    349            }  
+    350            
+    351            return 1;
+    352          }
+    353          
+    354          /**
+    355          * @brief  USB_OTG_USBH_handle_port_ISR 
+    356          *         This function determines which interrupt conditions have occurred
+    357          * @param  pdev: Selected device
+    358          * @retval status 
+    359          */
+    360          #if defined ( __ICCARM__ ) /*!< IAR Compiler */
+    361          #pragma optimize = none
+    362          #endif /* __CC_ARM */
+    363          static uint32_t USB_OTG_USBH_handle_port_ISR (USB_OTG_CORE_HANDLE *pdev)
+    364          {
+    365            USB_OTG_HPRT0_TypeDef  hprt0;
+    366            USB_OTG_HPRT0_TypeDef  hprt0_dup;
+    367            USB_OTG_HCFG_TypeDef   hcfg;    
+    368            uint32_t do_reset = 0;
+    369            uint32_t retval = 0;
+    370            
+    371            hcfg.d32 = 0;
+    372            hprt0.d32 = 0;
+    373            hprt0_dup.d32 = 0;
+    374            
+    375            hprt0.d32 = USB_OTG_READ_REG32(pdev->regs.HPRT0);
+    376            hprt0_dup.d32 = USB_OTG_READ_REG32(pdev->regs.HPRT0);
+    377            
+    378            /* Clear the interrupt bits in GINTSTS */
+    379            
+    380            hprt0_dup.b.prtena = 0;
+    381            hprt0_dup.b.prtconndet = 0;
+    382            hprt0_dup.b.prtenchng = 0;
+    383            hprt0_dup.b.prtovrcurrchng = 0;
+    384            
+    385            /* Port Connect Detected */
+    386            if (hprt0.b.prtconndet)
+    387            {
+    388          
+    389              hprt0_dup.b.prtconndet = 1;
+    390              USBH_HCD_INT_fops->DevConnected(pdev);
+    391              retval |= 1;
+    392            }
+    393            
+    394            /* Port Enable Changed */
+    395            if (hprt0.b.prtenchng)
+    396            {
+    397              hprt0_dup.b.prtenchng = 1;
+    398              
+    399              if (hprt0.b.prtena == 1)
+    400              {
+    401                
+    402                USBH_HCD_INT_fops->DevConnected(pdev);
+    403                
+    404                if ((hprt0.b.prtspd == HPRT0_PRTSPD_LOW_SPEED) ||
+    405                    (hprt0.b.prtspd == HPRT0_PRTSPD_FULL_SPEED))
+    406                {
+    407                  
+    408                  hcfg.d32 = USB_OTG_READ_REG32(&pdev->regs.HREGS->HCFG);
+    409                  
+    410                  if (hprt0.b.prtspd == HPRT0_PRTSPD_LOW_SPEED)
+    411                  {
+    412                    USB_OTG_WRITE_REG32(&pdev->regs.HREGS->HFIR, 6000 );
+    413                    if (hcfg.b.fslspclksel != HCFG_6_MHZ)
+    414                    {
+    415                      if(pdev->cfg.phy_itface  == USB_OTG_EMBEDDED_PHY)
+    416                      {
+    417                        USB_OTG_InitFSLSPClkSel(pdev ,HCFG_6_MHZ );
+    418                      }
+    419                      do_reset = 1;
+    420                    }
+    421                  }
+    422                  else
+    423                  {
+    424                    
+    425                    USB_OTG_WRITE_REG32(&pdev->regs.HREGS->HFIR, 48000 );            
+    426                    if (hcfg.b.fslspclksel != HCFG_48_MHZ)
+    427                    {
+    428                      USB_OTG_InitFSLSPClkSel(pdev ,HCFG_48_MHZ );
+    429                      do_reset = 1;
+    430                    }
+    431                  }
+    432                }
+    433                else
+    434                {
+    435                  do_reset = 1;
+    436                }
+    437              }
+    438            }
+    439            /* Overcurrent Change Interrupt */
+    440            if (hprt0.b.prtovrcurrchng)
+    441            {
+    442              hprt0_dup.b.prtovrcurrchng = 1;
+    443              retval |= 1;
+    444            }
+    445            if (do_reset)
+    446            {
+    447              USB_OTG_ResetPort(pdev);
+    448            }
+    449            /* Clear Port Interrupts */
+    450            USB_OTG_WRITE_REG32(pdev->regs.HPRT0, hprt0_dup.d32);
+    451            
+    452            return retval;
+    453          }
+    454          #if defined ( __ICCARM__ ) /*!< IAR Compiler */
+    455          #pragma optimize = none
+    456          #endif /* __CC_ARM */
+    457          /**
+    458          * @brief  USB_OTG_USBH_handle_hc_n_Out_ISR 
+    459          *         Handles interrupt for a specific Host Channel
+    460          * @param  pdev: Selected device
+    461          * @param  hc_num: Channel number
+    462          * @retval status 
+    463          */
+    464          uint32_t USB_OTG_USBH_handle_hc_n_Out_ISR (USB_OTG_CORE_HANDLE *pdev , uint32_t num)
+    465          {
+    466            
+    467            USB_OTG_HCINTn_TypeDef     hcint;
+    468            USB_OTG_HCINTMSK_TypeDef  hcintmsk;
+    469            USB_OTG_HC_REGS *hcreg;
+    470            USB_OTG_HCCHAR_TypeDef     hcchar; 
+    471            
+    472            hcreg = pdev->regs.HC_REGS[num];
+    473            hcint.d32 = USB_OTG_READ_REG32(&hcreg->HCINT);
+    474            hcintmsk.d32 = USB_OTG_READ_REG32(&hcreg->HCINTMSK);
+    475            hcint.d32 = hcint.d32 & hcintmsk.d32;
+    476            
+    477            hcchar.d32 = USB_OTG_READ_REG32(&pdev->regs.HC_REGS[num]->HCCHAR);
+    478            
+    479            if (hcint.b.ahberr)
+    480            {
+    481              CLEAR_HC_INT(hcreg ,ahberr);
+    482              UNMASK_HOST_INT_CHH (num);
+    483            } 
+    484            else if (hcint.b.ack)
+    485            {
+    486              CLEAR_HC_INT(hcreg , ack);
+    487            }
+    488            else if (hcint.b.frmovrun)
+    489            {
+    490              UNMASK_HOST_INT_CHH (num);
+    491              USB_OTG_HC_Halt(pdev, num);
+    492              CLEAR_HC_INT(hcreg ,frmovrun);
+    493            }
+    494            else if (hcint.b.xfercompl)
+    495            {
+    496              pdev->host.ErrCnt[num] = 0;
+    497              UNMASK_HOST_INT_CHH (num);
+    498              USB_OTG_HC_Halt(pdev, num);
+    499              CLEAR_HC_INT(hcreg , xfercompl);
+    500              pdev->host.HC_Status[num] = HC_XFRC;            
+    501            }
+    502            
+    503            else if (hcint.b.stall)
+    504            {
+    505              CLEAR_HC_INT(hcreg , stall);
+    506              UNMASK_HOST_INT_CHH (num);
+    507              USB_OTG_HC_Halt(pdev, num);
+    508              pdev->host.HC_Status[num] = HC_STALL;      
+    509            }
+    510            
+    511            else if (hcint.b.nak)
+    512            {
+    513              pdev->host.ErrCnt[num] = 0;
+    514              UNMASK_HOST_INT_CHH (num);
+    515              USB_OTG_HC_Halt(pdev, num);
+    516              CLEAR_HC_INT(hcreg , nak);
+    517              pdev->host.HC_Status[num] = HC_NAK;      
+    518            }
+    519            
+    520            else if (hcint.b.xacterr)
+    521            {
+    522              UNMASK_HOST_INT_CHH (num);
+    523              USB_OTG_HC_Halt(pdev, num);
+    524              pdev->host.ErrCnt[num] ++;
+    525              pdev->host.HC_Status[num] = HC_XACTERR;
+    526              CLEAR_HC_INT(hcreg , xacterr);
+    527            }
+    528            else if (hcint.b.nyet)
+    529            {
+    530              pdev->host.ErrCnt[num] = 0;
+    531              UNMASK_HOST_INT_CHH (num);
+    532              USB_OTG_HC_Halt(pdev, num);
+    533              CLEAR_HC_INT(hcreg , nyet);
+    534              pdev->host.HC_Status[num] = HC_NYET;    
+    535            }
+    536            else if (hcint.b.datatglerr)
+    537            {
+    538              
+    539              UNMASK_HOST_INT_CHH (num);
+    540              USB_OTG_HC_Halt(pdev, num);
+    541              CLEAR_HC_INT(hcreg , nak);   
+    542              pdev->host.HC_Status[num] = HC_DATATGLERR;
+    543              
+    544              CLEAR_HC_INT(hcreg , datatglerr);
+    545            }  
+    546            else if (hcint.b.chhltd)
+    547            {
+    548              MASK_HOST_INT_CHH (num);
+    549              
+    550              if(pdev->host.HC_Status[num] == HC_XFRC)
+    551              {
+    552                pdev->host.URB_State[num] = URB_DONE;  
+    553                
+    554                if (hcchar.b.eptype == EP_TYPE_BULK)
+    555                {
+    556                  pdev->host.hc[num].toggle_out ^= 1; 
+    557                }
+    558              }
+    559              else if(pdev->host.HC_Status[num] == HC_NAK)
+    560              {
+    561                pdev->host.URB_State[num] = URB_NOTREADY;      
+    562              }    
+    563              else if(pdev->host.HC_Status[num] == HC_NYET)
+    564              {
+    565                if(pdev->host.hc[num].do_ping == 1)
+    566                {
+    567                  USB_OTG_HC_DoPing(pdev, num);
+    568                }
+    569                pdev->host.URB_State[num] = URB_NOTREADY;      
+    570              }      
+    571              else if(pdev->host.HC_Status[num] == HC_STALL)
+    572              {
+    573                pdev->host.URB_State[num] = URB_STALL;      
+    574              }  
+    575              else if(pdev->host.HC_Status[num] == HC_XACTERR)
+    576              {
+    577                if (pdev->host.ErrCnt[num] == 3)
+    578                {
+    579                  pdev->host.URB_State[num] = URB_ERROR;  
+    580                  pdev->host.ErrCnt[num] = 0;
+    581                }
+    582              }
+    583              CLEAR_HC_INT(hcreg , chhltd);    
+    584            }
+    585            
+    586            
+    587            return 1;
+    588          }
+    589          #if defined ( __ICCARM__ ) /*!< IAR Compiler */
+    590          #pragma optimize = none
+    591          #endif /* __CC_ARM */
+    592          /**
+    593          * @brief  USB_OTG_USBH_handle_hc_n_In_ISR 
+    594          *         Handles interrupt for a specific Host Channel
+    595          * @param  pdev: Selected device
+    596          * @param  hc_num: Channel number
+    597          * @retval status 
+    598          */
+    599          uint32_t USB_OTG_USBH_handle_hc_n_In_ISR (USB_OTG_CORE_HANDLE *pdev , uint32_t num)
+    600          {
+    601            USB_OTG_HCINTn_TypeDef     hcint;
+    602            USB_OTG_HCINTMSK_TypeDef  hcintmsk;
+    603            USB_OTG_HCCHAR_TypeDef     hcchar; 
+    604            USB_OTG_HCTSIZn_TypeDef  hctsiz;
+    605            USB_OTG_HC_REGS *hcreg;
+    606            
+    607            
+    608            hcreg = pdev->regs.HC_REGS[num];
+    609            hcint.d32 = USB_OTG_READ_REG32(&hcreg->HCINT);
+    610            hcintmsk.d32 = USB_OTG_READ_REG32(&hcreg->HCINTMSK);
+    611            hcint.d32 = hcint.d32 & hcintmsk.d32;
+    612            hcchar.d32 = USB_OTG_READ_REG32(&pdev->regs.HC_REGS[num]->HCCHAR);
+    613            hcintmsk.d32 = 0;
+    614            
+    615            
+    616            if (hcint.b.ahberr)
+    617            {
+    618              CLEAR_HC_INT(hcreg ,ahberr);
+    619              UNMASK_HOST_INT_CHH (num);
+    620            }  
+    621            else if (hcint.b.ack)
+    622            {
+    623              CLEAR_HC_INT(hcreg ,ack);
+    624            }
+    625            
+    626            else if (hcint.b.stall)  
+    627            {
+    628              UNMASK_HOST_INT_CHH (num);
+    629              pdev->host.HC_Status[num] = HC_STALL; 
+    630              CLEAR_HC_INT(hcreg , nak);   /* Clear the NAK Condition */
+    631              CLEAR_HC_INT(hcreg , stall); /* Clear the STALL Condition */
+    632              hcint.b.nak = 0;           /* NOTE: When there is a 'stall', reset also nak, 
+    633                                            else, the pdev->host.HC_Status = HC_STALL
+    634              will be overwritten by 'nak' in code below */
+    635              USB_OTG_HC_Halt(pdev, num);    
+    636            }
+    637            else if (hcint.b.datatglerr)
+    638            {
+    639              
+    640              UNMASK_HOST_INT_CHH (num);
+    641              USB_OTG_HC_Halt(pdev, num);
+    642              CLEAR_HC_INT(hcreg , nak);   
+    643              pdev->host.HC_Status[num] = HC_DATATGLERR; 
+    644              CLEAR_HC_INT(hcreg , datatglerr);
+    645            }    
+    646            
+    647            if (hcint.b.frmovrun)
+    648            {
+    649              UNMASK_HOST_INT_CHH (num);
+    650              USB_OTG_HC_Halt(pdev, num);
+    651              CLEAR_HC_INT(hcreg ,frmovrun);
+    652            }
+    653            
+    654            else if (hcint.b.xfercompl)
+    655            {
+    656              
+    657              if (pdev->cfg.dma_enable == 1)
+    658              {
+    659                hctsiz.d32 = USB_OTG_READ_REG32(&pdev->regs.HC_REGS[num]->HCTSIZ);
+    660                pdev->host.XferCnt[num] =  pdev->host.hc[num].xfer_len - hctsiz.b.xfersize;
+    661              }
+    662              
+    663              pdev->host.HC_Status[num] = HC_XFRC;     
+    664              pdev->host.ErrCnt [num]= 0;
+    665              CLEAR_HC_INT(hcreg , xfercompl);
+    666              
+    667              if ((hcchar.b.eptype == EP_TYPE_CTRL)||
+    668                  (hcchar.b.eptype == EP_TYPE_BULK))
+    669              {
+    670                UNMASK_HOST_INT_CHH (num);
+    671                USB_OTG_HC_Halt(pdev, num);
+    672                CLEAR_HC_INT(hcreg , nak); 
+    673                pdev->host.hc[num].toggle_in ^= 1;
+    674                
+    675              }
+    676              else if(hcchar.b.eptype == EP_TYPE_INTR)
+    677              {
+    678                hcchar.b.oddfrm  = 1;
+    679                USB_OTG_WRITE_REG32(&pdev->regs.HC_REGS[num]->HCCHAR, hcchar.d32); 
+    680                pdev->host.URB_State[num] = URB_DONE;  
+    681              }
+    682              
+    683            }
+    684            else if (hcint.b.chhltd)
+    685            {
+    686              MASK_HOST_INT_CHH (num);
+    687              
+    688              if(pdev->host.HC_Status[num] == HC_XFRC)
+    689              {
+    690                pdev->host.URB_State[num] = URB_DONE;      
+    691              }
+    692              
+    693              else if (pdev->host.HC_Status[num] == HC_STALL) 
+    694              {
+    695                pdev->host.URB_State[num] = URB_STALL;
+    696              }   
+    697              
+    698              else if((pdev->host.HC_Status[num] == HC_XACTERR) ||
+    699                      (pdev->host.HC_Status[num] == HC_DATATGLERR))
+    700              {
+    701                pdev->host.ErrCnt[num] = 0;
+    702                pdev->host.URB_State[num] = URB_ERROR;  
+    703                
+    704              }
+    705              else if(hcchar.b.eptype == EP_TYPE_INTR)
+    706              {
+    707                pdev->host.hc[num].toggle_in ^= 1;
+    708              }
+    709              
+    710              CLEAR_HC_INT(hcreg , chhltd);    
+    711              
+    712            }    
+    713            else if (hcint.b.xacterr)
+    714            {
+    715              UNMASK_HOST_INT_CHH (num);
+    716              pdev->host.ErrCnt[num] ++;
+    717              pdev->host.HC_Status[num] = HC_XACTERR;
+    718              USB_OTG_HC_Halt(pdev, num);
+    719              CLEAR_HC_INT(hcreg , xacterr);    
+    720              
+    721            }
+    722            else if (hcint.b.nak)  
+    723            {  
+    724              if(hcchar.b.eptype == EP_TYPE_INTR)
+    725              {
+    726                UNMASK_HOST_INT_CHH (num);
+    727                USB_OTG_HC_Halt(pdev, num);
+    728              }
+    729              else if  ((hcchar.b.eptype == EP_TYPE_CTRL)||
+    730                        (hcchar.b.eptype == EP_TYPE_BULK))
+    731              {
+    732                /* re-activate the channel  */
+    733                hcchar.b.chen = 1;
+    734                hcchar.b.chdis = 0;
+    735                USB_OTG_WRITE_REG32(&pdev->regs.HC_REGS[num]->HCCHAR, hcchar.d32); 
+    736              }
+    737              pdev->host.HC_Status[num] = HC_NAK;
+    738              CLEAR_HC_INT(hcreg , nak);   
+    739            }
+    740            
+    741            
+    742            return 1;
+    743            
+    744          }
+    745          
+    746          /**
+    747          * @brief  USB_OTG_USBH_handle_rx_qlvl_ISR 
+    748          *         Handles the Rx Status Queue Level Interrupt
+    749          * @param  pdev: Selected device
+    750          * @retval status 
+    751          */
+    752          #if defined ( __ICCARM__ ) /*!< IAR Compiler */
+    753          #pragma optimize = none
+    754          #endif /* __CC_ARM */
+    755          static uint32_t USB_OTG_USBH_handle_rx_qlvl_ISR (USB_OTG_CORE_HANDLE *pdev)
+    756          {
+    757            USB_OTG_GRXFSTS_TypeDef       grxsts;
+    758            USB_OTG_GINTMSK_TypeDef       intmsk;
+    759            USB_OTG_HCTSIZn_TypeDef       hctsiz; 
+    760            USB_OTG_HCCHAR_TypeDef        hcchar;
+    761            __IO uint8_t                  channelnum =0;  
+    762            uint32_t                      count;    
+    763            
+    764            /* Disable the Rx Status Queue Level interrupt */
+    765            intmsk.d32 = 0;
+    766            intmsk.b.rxstsqlvl = 1;
+    767            USB_OTG_MODIFY_REG32( &pdev->regs.GREGS->GINTMSK, intmsk.d32, 0);
+    768            
+    769            grxsts.d32 = USB_OTG_READ_REG32(&pdev->regs.GREGS->GRXSTSP);
+    770            channelnum = grxsts.b.chnum;  
+    771            hcchar.d32 = USB_OTG_READ_REG32(&pdev->regs.HC_REGS[channelnum]->HCCHAR);
+    772            
+    773            switch (grxsts.b.pktsts)
+    774            {
+    775            case GRXSTS_PKTSTS_IN:
+    776              /* Read the data into the host buffer. */
+    777              if ((grxsts.b.bcnt > 0) && (pdev->host.hc[channelnum].xfer_buff != (void  *)0))
+    778              {  
+    779                
+    780                USB_OTG_ReadPacket(pdev, pdev->host.hc[channelnum].xfer_buff, grxsts.b.bcnt);
+    781                /*manage multiple Xfer */
+    782                pdev->host.hc[grxsts.b.chnum].xfer_buff += grxsts.b.bcnt;           
+    783                pdev->host.hc[grxsts.b.chnum].xfer_count  += grxsts.b.bcnt;
+    784                
+    785                
+    786                count = pdev->host.hc[channelnum].xfer_count;
+    787                pdev->host.XferCnt[channelnum]  = count;
+    788                
+    789                hctsiz.d32 = USB_OTG_READ_REG32(&pdev->regs.HC_REGS[channelnum]->HCTSIZ);
+    790                if(hctsiz.b.pktcnt > 0)
+    791                {
+    792                  /* re-activate the channel when more packets are expected */
+    793                  hcchar.b.chen = 1;
+    794                  hcchar.b.chdis = 0;
+    795                  USB_OTG_WRITE_REG32(&pdev->regs.HC_REGS[channelnum]->HCCHAR, hcchar.d32);
+    796                }
+    797              }
+    798              break;
+    799              
+    800            case GRXSTS_PKTSTS_IN_XFER_COMP:
+    801              
+    802            case GRXSTS_PKTSTS_DATA_TOGGLE_ERR:
+    803            case GRXSTS_PKTSTS_CH_HALTED:
+    804            default:
+    805              break;
+    806            }
+    807            
+    808            /* Enable the Rx Status Queue Level interrupt */
+    809            intmsk.b.rxstsqlvl = 1;
+    810            USB_OTG_MODIFY_REG32(&pdev->regs.GREGS->GINTMSK, 0, intmsk.d32);
+    811            return 1;
+    812          }
+    813          
+    814          /**
+    815          * @brief  USB_OTG_USBH_handle_IncompletePeriodicXfer_ISR 
+    816          *         Handles the incomplete Periodic transfer Interrupt
+    817          * @param  pdev: Selected device
+    818          * @retval status 
+    819          */
+    820          #if defined ( __ICCARM__ ) /*!< IAR Compiler */
+    821          #pragma optimize = none
+    822          #endif /* __CC_ARM */
+    823          static uint32_t USB_OTG_USBH_handle_IncompletePeriodicXfer_ISR (USB_OTG_CORE_HANDLE *pdev)
+    824          {
+    825            
+    826            USB_OTG_GINTSTS_TypeDef       gintsts;
+    827            USB_OTG_HCCHAR_TypeDef        hcchar; 
+    828            
+    829            
+    830            
+    831            
+    832            hcchar.d32 = USB_OTG_READ_REG32(&pdev->regs.HC_REGS[0]->HCCHAR);
+    833            hcchar.b.chen = 1;
+    834            hcchar.b.chdis = 1;
+    835            USB_OTG_WRITE_REG32(&pdev->regs.HC_REGS[0]->HCCHAR, hcchar.d32);  
+    836            
+    837            gintsts.d32 = 0;
+    838            /* Clear interrupt */
+    839            gintsts.b.incomplisoout = 1;
+    840            USB_OTG_WRITE_REG32(&pdev->regs.GREGS->GINTSTS, gintsts.d32);
+    841            
+    842            return 1;
+    843          }
+    844          
+    845          /**
+    846          * @}
+    847          */ 
+    848          
+    849          /**
+    850          * @}
+    851          */ 
+    852          
+    853          /**
+    854          * @}
+    855          */
+    856          
+    857          /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+    858          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       32  USBH_OTG_ISR_Handler
+             32 -- Indirect call
+             32 -> USB_OTG_IsHostMode
+             32 -> USB_OTG_ReadCoreItr
+             32 -> USB_OTG_ReadHostAllChannels_intr
+             32 -> USB_OTG_USBH_handle_IncompletePeriodicXfer_ISR
+             32 -> USB_OTG_USBH_handle_hc_n_In_ISR
+             32 -> USB_OTG_USBH_handle_hc_n_Out_ISR
+             32 -> USB_OTG_USBH_handle_nptxfempty_ISR
+             32 -> USB_OTG_USBH_handle_port_ISR
+             32 -> USB_OTG_USBH_handle_ptxfempty_ISR
+             32 -> USB_OTG_USBH_handle_rx_qlvl_ISR
+        0  USB_OTG_USBH_handle_IncompletePeriodicXfer_ISR
+       32  USB_OTG_USBH_handle_hc_n_In_ISR
+             32 -> USB_OTG_HC_Halt
+       32  USB_OTG_USBH_handle_hc_n_Out_ISR
+             32 -> USB_OTG_HC_DoPing
+             32 -> USB_OTG_HC_Halt
+       32  USB_OTG_USBH_handle_nptxfempty_ISR
+             32 -> USB_OTG_WritePacket
+       32  USB_OTG_USBH_handle_port_ISR
+             32 -- Indirect call
+             32 -> USB_OTG_InitFSLSPClkSel
+             32 -> USB_OTG_ResetPort
+       32  USB_OTG_USBH_handle_ptxfempty_ISR
+             32 -> USB_OTG_WritePacket
+       32  USB_OTG_USBH_handle_rx_qlvl_ISR
+             32 -> USB_OTG_ReadPacket
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+     220  USBH_OTG_ISR_Handler
+      40  USB_OTG_USBH_handle_IncompletePeriodicXfer_ISR
+     908  USB_OTG_USBH_handle_hc_n_In_ISR
+     832  USB_OTG_USBH_handle_hc_n_Out_ISR
+     282  USB_OTG_USBH_handle_nptxfempty_ISR
+     264  USB_OTG_USBH_handle_port_ISR
+     284  USB_OTG_USBH_handle_ptxfempty_ISR
+     276  USB_OTG_USBH_handle_rx_qlvl_ISR
+
+ 
+ 3 110 bytes in section .text
+ 
+ 3 110 bytes of CODE memory
+
+Errors: none
+Warnings: none

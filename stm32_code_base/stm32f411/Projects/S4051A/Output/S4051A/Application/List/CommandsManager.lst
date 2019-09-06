@@ -1,0 +1,714 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:25:29 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\APP_SRC\Managers\CommandsManager.c    #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\APP_SRC\Managers\CommandsManager.c    #
+#                    -D S4051A -D DEBUG -D FREE_RTOS -D STM32F40_41xxx -D     #
+#                    USE_STM324xG_EVAL -D USE_STDPERIPH_DRIVER -D             #
+#                    __ARM_CORTEX_MX__ -D IAR_ARM_CM4F -D USE_USB_OTG_FS      #
+#                    -lcN C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applicati #
+#                    on\List\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Ap #
+#                    plication\Obj\ --debug --endian=little --cpu=Cortex-M4   #
+#                    -e --fpu=VFPv4_sp --dlib_config "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\CommandsManager.lst                                   #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\CommandsManager.o                                      #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Projects\S4051A\APP_SRC\Managers\CommandsManager.c
+      1          #include "Defs.h"
+      2          #include "Debug.h"
+      3          #include "freertos_conf.h"
+      4          #include "freertos_task.h"
+      5          #include "freertos_typedef.h"
+      6          #include "api_typedef.h"
+      7          
+      8          #include "SPILowLevel.h"
+      9          #include "I2C1LowLevel.h"
+     10          #include "I2C2LowLevel.h"
+     11          #include "StorageDeviceDriver.h"
+     12          #include "GPIOMiddleLevel.h"
+     13          #include "EepromDriver.h"
+     14          
+     15          
+     16          #include "CommandsManager.h"
+     17          
+     18          //________________________________________________________________________
+     19          #define configCTRL_CMD_STORAGE_MODIFY 0
+     20          #define configCTRL_CMD_STORAGE_PRINT 0
+     21          #define configCTRL_CMD_STORAGE_DEBUG_PRINT_MASK 0
+     22          
+     23          //________________________________________________________________________
+     24          /* Params for Toggle GPIO Command */
+     25          typedef struct Command_GpioSetParams { 
+     26          	VirtualPin gpio;
+     27          	uint8 value; /*0: clear; 1: set */
+     28          } Command_GpioSetParams;
+     29          
+     30          
+     31          /*----------------------- Private Member Definitions ------------------------ */
+     32          
+     33          /**
+     34           * @defgroup ControlCmdsMgr_Private Advance Control Commands Manager - Private
+     35           * @ingroup ControlCmdsMgr
+     36           *
+     37           * These are the private members of @ref ControlCmdsMgr.
+     38           *
+     39           */
+     40          /*@{*/
+     41          
+     42          /**
+     43           * Handles an I2C write command.
+     44           *
+     45           * @param params        The parameters received.
+     46           */
+     47          static void ControlCommandsManager_I2CWriteCommand(
+     48              Command_I2CWriteParams *params);
+     49          
+     50          /**
+     51           * Handles an I2C read command.
+     52           *
+     53           * @param params        The parameters received.
+     54           */
+     55          static void ControlCommandsManager_I2CReadCommand(
+     56              Command_I2CReadParams *params);
+     57          
+     58          /*
+     59           * Modify one cell in a selected STORAGE
+     60           */
+     61          #if ( configCTRL_CMD_STORAGE_MODIFY == 1 )
+     62          static void ControlCommandsManager_storageModify(
+     63              Command_StorageModifyParams *params);
+     64          #endif 
+     65          
+     66          /*
+     67           * Print the Storage data
+     68           */
+     69          #if ( configCTRL_CMD_STORAGE_PRINT == 1 )
+     70          static void ControlCommandsManager_storagePrint(
+     71              Command_StoragePrintParams *params);
+     72          #endif 
+     73          
+     74          
+     75          static void ControlCommandsManager_GpioOutputCtrl( Command_GpioSetParams *params );
+     76          
+     77          static void ControlCommandsManager_EEPROM_Write( Command_EepromModifyParams *params );
+     78          
+     79          
+     80          static void ControlCommandsManager_handleCommand(
+     81              uint8 command,
+     82              void *params
+     83          );
+     84          
+     85          const CTRL_CMD_HANDLE_OBJECT CtrlCommand_api =
+     86          {
+     87          	ControlCommandsManager_handleCommand,
+     88          };
+     89          const CTRL_CMD_HANDLE_OBJECT *pCtrlCmd_ObjCtrl = &CtrlCommand_api;
+     90          
+     91          
+     92          
+     93          /*____________________________________________________________________________________________________*/
+     94          
+     95          /** For the Mac Read command - maximal length of expected data */
+     96          #define MAX_MAC_READ_COMMAND_DATA 100
+     97          
+     98          /*@}*/
+     99          
+    100          /*----------------------------- Implementations ----------------------------- */
+    101          #if ( configCTRL_CMD_STORAGE_PRINT == 1 )
+    102          static void ControlCommandsManager_debugPrintMask(uint32 mask)
+    103          {
+    104          #ifdef PRINT_LEVEL_ENABLE /*{*/
+    105              uint32 oldMask, newMask, currMask;
+    106              uint8 buff[5];
+    107          
+    108              /* Call register func in order to get the current mask */
+    109              oldMask = Debug_register(0x0);
+    110          
+    111              /* Checks whether the current requested mask is already set or clear.
+    112                 - In case it is set, the current requested mask is cleared.
+    113                 - In case it is cleared, the current requested mask is set.
+    114              */
+    115              if (((oldMask & mask) != 0))
+    116              {
+    117                  /* In case of clear default setup, we would like to clear all mask, so
+    118                     no printout will be active.
+    119                  */
+    120                  if (mask == DEBUG_TRACE_DEFAULT)
+    121                  {
+    122                      mask = 0xFFFFFFFF;
+    123                  }
+    124          
+    125                  Debug_unregister(mask);
+    126              }
+    127              else
+    128              {
+    129                  Debug_register(mask);
+    130              }
+    131          
+    132              newMask = Debug_register(0x0);
+    133          
+    134              /* Set the buffer with the new MASK */
+    135              buff[0] = DEBUG_PRINTOUT_MASK_SIGNATURE;
+    136              buff[1] = (newMask & 0xFF000000) >> 24;
+    137              buff[2] = (newMask & 0x00FF0000) >> 16;
+    138              buff[3] = (newMask & 0x0000FF00) >> 8;
+    139              buff[4] = (newMask & 0x000000FF);
+    140          
+    141          #ifdef AMIMON
+    142              StorageDevice_write(STORAGE_DEVICE_CELL_PRINTOUT_MASK, &buff);
+    143          #endif
+    144          
+    145              /* Enable Debug printouts in order to see the below printout in any case */
+    146              currMask = Debug_register(DEBUG_DEBUG);
+    147          
+    148              TRACE_DEBUG((STR_ID_NULL,
+    149                           "Print mask OLD: 0x%X NEW: 0x%X",
+    150                           oldMask,
+    151                           newMask));
+    152          
+    153              /* Restore the original Debug mask ststate */
+    154              Debug_unregister(DEBUG_DEBUG);
+    155              Debug_register(currMask);
+    156          #endif /*PRINT_LEVEL_ENABLE @}*/
+    157          }
+    158          #endif 
+    159          
+    160          static void ControlCommandsManager_handleCommand(
+    161              uint8 command,
+    162              void *params
+    163          )
+    164          {
+    165            
+    166              switch (command)
+    167              {
+    168                  case CTRL_OPCODE_I2C_WRITE :
+    169          		{
+    170                      ControlCommandsManager_I2CWriteCommand(
+    171                          (Command_I2CWriteParams *)params
+    172                      );
+    173                  }	
+    174                      break;
+    175          
+    176                  case CTRL_OPCODE_I2C_READ:
+    177                      ControlCommandsManager_I2CReadCommand(
+    178                          (Command_I2CReadParams *)params
+    179                      );
+    180                      break;
+    181          
+    182          		case CTRL_OPCODE_DSP_SPI_RELEASE:
+    183          		{
+    184          #if ( configSTM32F411_PORTING == 1)
+    185          			SPILowLevel_release_SPI();
+    186          #endif			
+    187          		}
+    188          			break;
+    189          
+    190          		case CTRL_OPCODE_GPIO_OUTPUT_CTRL:
+    191          		{
+    192          			ControlCommandsManager_GpioOutputCtrl( (Command_GpioSetParams *)params );
+    193          		}
+    194          			break;
+    195          
+    196          		case CTRL_OPCODE_EEPROM_WRITE:
+    197          		{
+    198          			ControlCommandsManager_EEPROM_Write( (Command_EepromModifyParams *)params );
+    199          		}
+    200          			break;
+    201                 
+    202                  default:
+    203                      break;
+    204              }
+    205          }
+    206          
+    207          static void ControlCommandsManager_I2CWriteCommand(
+    208              Command_I2CWriteParams *params
+    209          )
+    210          {
+    211          
+    212          	if ( params == NULL )
+    213          		return;
+    214          
+    215          	if ( params->whichI2C > 1 )
+    216          	{
+    217          		TRACE_ERROR((0, "I2C BUS NUMBER is over 1"));
+    218          		return;
+    219          	}
+    220          
+    221          
+    222          	TRACE_DEBUG((0, "I2C BUS %d write ", params->whichI2C ));
+    223          	TRACE_DEBUG((0, "I2C BUS %d slave address = 0x%X", params->whichI2C, params->slaveAddress ));
+    224          	TRACE_DEBUG((0, "I2C BUS %d inner address = 0x%X", params->whichI2C, params->innerAddress ));
+    225          	TRACE_DEBUG((0, "I2C BUS %d write length = 0x%X", params->whichI2C, params->counter ));
+    226          	TRACE_DEBUG((0, "I2C BUS %d write data = 0x%X", params->whichI2C, params->value[0] ));
+    227          
+    228          	
+    229          	if( params->whichI2C == 0 )
+    230          	{
+    231                      if (App_I2C1_sema_mutex_take() == TRUE)
+    232                      {
+    233          		if( I2C_writeSlave(params->slaveAddress, params->innerAddress, params->value, params->counter, FALSE, FALSE ) == FALSE )
+    234          		{
+    235          			TRACE_ERROR((0, "I2C BUS %d slave address 0x%X write 0x%X failure !!", params->whichI2C, params->slaveAddress, params->innerAddress));
+    236                                  App_I2C1_sema_mutex_give();
+    237          			return;
+    238          		}
+    239          	
+    240                          App_I2C1_sema_mutex_give();
+    241                      }
+    242                      else
+    243                      {
+    244                          return;
+    245                      }
+    246          
+    247          	}
+    248          	else if ( params->whichI2C == 1 )
+    249          	{
+    250          		if( I2C2_writeSlave(params->slaveAddress, params->innerAddress, params->value, params->counter, FALSE ) == FALSE )
+    251          		{
+    252          			TRACE_ERROR((0, "I2C BUS %d slave address 0x%X write 0x%X failure !!", params->whichI2C, params->slaveAddress, params->innerAddress));
+    253          			return;
+    254          		}
+    255          	}
+    256          
+    257          }
+    258          
+    259          static void ControlCommandsManager_I2CReadCommand(
+    260              Command_I2CReadParams *params
+    261          )
+    262          {
+    263          	uint8 buffer[32] = {0}; //*value;
+    264          	uint8 i = 0;
+    265          
+    266          	if ( params == NULL )
+    267          		return;
+    268          
+    269          	
+    270          	if ( params->whichI2C > 1 )
+    271          	{
+    272          		TRACE_ERROR((0, "I2C BUS NUMBER is over 1"));
+    273          		return;
+    274          	}
+    275          
+    276          	if ( params->counter > 32 )
+    277          	{
+    278          		TRACE_ERROR((0, "I2C read length is over 32 bytes "));
+    279          		return;	
+    280          	}
+    281          
+    282          	TRACE_DEBUG((0, "I2C BUS %d read ", params->whichI2C ));
+    283          	TRACE_DEBUG((0, "I2C BUS %d slave address = 0x%X", params->whichI2C, params->slaveAddress ));
+    284          	TRACE_DEBUG((0, "I2C BUS %d inner address = 0x%X", params->whichI2C, params->innerAddress ));
+    285          	TRACE_DEBUG((0, "I2C BUS %d read length = 0x%X", params->whichI2C, params->counter ));
+    286          
+    287          
+    288          	if( params->whichI2C == 0 )
+    289          	{
+    290                      if (App_I2C1_sema_mutex_take() == TRUE)
+    291                      {
+    292                          if( I2C_readSlave(params->slaveAddress, params->innerAddress, buffer, params->counter, FALSE) == FALSE )
+    293                          {
+    294                              TRACE_ERROR((0, "I2C BUS %d slave address 0x%X read 0x%X failure !!", params->whichI2C, params->slaveAddress, params->innerAddress));
+    295                              App_I2C1_sema_mutex_give();
+    296                              return;
+    297                          }
+    298                          App_I2C1_sema_mutex_give();
+    299                      }
+    300                      else
+    301                      {
+    302                          return;
+    303                      }
+    304          
+    305          	}
+    306          	else if ( params->whichI2C == 1 )
+    307          	{
+    308          		if ( I2C2_readSlave(params->slaveAddress, params->innerAddress, buffer, params->counter, FALSE) == FALSE )
+    309          		{
+    310          			TRACE_ERROR((0, "I2C BUS %d slave address 0x%X read 0x%X failure !!", params->whichI2C, params->slaveAddress, params->innerAddress));
+    311          			return; 
+    312          		}
+    313          	}
+    314          
+    315          	for( i = 0; i < params->counter; i++ )
+    316          	{
+    317          		TRACE_DEBUG((0, "data[%d] = 0x%X", i, buffer[i]));
+    318          	}
+    319          
+    320          }
+    321          
+    322          
+    323          #if ( configCTRL_CMD_STORAGE_MODIFY == 1 )
+    324          static void ControlCommandsManager_storageModify(
+    325              Command_StorageModifyParams *params)
+    326          {
+    327              if (StorageDevice_write((STORAGE_DEVICE_CELL)params->CellID,
+    328                                      (void *)params->data))
+    329              {
+    330                  TRACE_INFO((STR_ID_NULL, "Cell %d, modifyed" , params->CellID));
+    331              }
+    332              else
+    333              {
+    334                  TRACE_INFO((STR_ID_NULL, "Cell modification failed "));
+    335              }
+    336          
+    337          }
+    338          #endif 
+    339          
+    340          #if ( configCTRL_CMD_STORAGE_PRINT == 1 )
+    341          static void ControlCommandsManager_storagePrint(
+    342              Command_StoragePrintParams *params)
+    343          {
+    344              params->DiskID = Swap16(params->DiskID);
+    345          
+    346              StorageDevice_print(params->DiskID);
+    347              if (params->DiskID == 0xFF)
+    348              {
+    349                  StorageDevice_eraseAll(params->DiskID);
+    350                  TRACE_DEBUG((0, "Reset storage as ..."));
+    351                  StorageDevice_print(params->DiskID);
+    352              }
+    353          
+    354              StorageDevice_print((STORAGE_DISK)params->DiskID);
+    355          }
+    356          #endif 
+    357          
+    358          static void ControlCommandsManager_GpioOutputCtrl( Command_GpioSetParams *params )
+    359          {
+    360          	if ( params->value )
+    361          	{
+    362          		GPIOMiddleLevel_Set( params->gpio );
+    363          
+    364          		TRACE_DEBUG((0, "set virtual pin %d as 1 ", params->gpio ));
+    365          	}
+    366          	else if ( !params->value )
+    367          	{
+    368          		GPIOMiddleLevel_Clr( params->gpio );
+    369          
+    370          		TRACE_DEBUG((0, "clr virtual pin %d as 0 ", params->gpio ));
+    371          	}
+    372          }
+    373          
+    374          static void ControlCommandsManager_EEPROM_Write( Command_EepromModifyParams *params )
+    375          {
+    376          	bool ret = TRUE;
+    377          	
+    378          	if ( params == NULL )
+    379          		return;
+    380          
+    381          	TRACE_DEBUG((0, "eeprom address = 0x%X", params->address ));
+    382          	TRACE_DEBUG((0, "eeprom write size = %d", params->size ));
+    383          
+    384          #if ( configSTM32F411_PORTING == 1)
+    385          	/*Smith modifies: Fix warning message*/
+    386          	ret = EepromDriver_write(LOGICAL_EEPROM_DEVICE_BLOCK0,
+    387          		params->address,
+    388          		params->value,
+    389          		params->size,
+    390          		FALSE);
+    391          #endif		
+    392          
+    393          	ASSERT(ret);
+    394          }
+    395          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       56  ControlCommandsManager_I2CReadCommand
+             56 -> App_I2C1_sema_mutex_give
+             56 -> App_I2C1_sema_mutex_take
+             56 -> Debug_printDebug
+             56 -> Debug_printError
+             56 -> I2C2_readSlave
+             56 -> I2C_readSlave
+             56 -> __aeabi_memclr4
+       24  ControlCommandsManager_I2CWriteCommand
+              0 -> App_I2C1_sema_mutex_give
+             24 -> App_I2C1_sema_mutex_take
+             24 -> Debug_printDebug
+              0 -> Debug_printError
+             24 -> Debug_printError
+             24 -> I2C2_writeSlave
+             24 -> I2C_writeSlave
+        8  ControlCommandsManager_handleCommand
+              0 -> ControlCommandsManager_I2CReadCommand
+              0 -> ControlCommandsManager_I2CWriteCommand
+              0 -> Debug_printDebug
+              8 -> Debug_printDebug
+              8 -> GPIOMiddleLevel_Clr
+              8 -> GPIOMiddleLevel_Set
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      32  ?<Constant "I2C BUS %d inner addr...">
+      20  ?<Constant "I2C BUS %d read ">
+      32  ?<Constant "I2C BUS %d read lengt...">
+      32  ?<Constant "I2C BUS %d slave addr...">
+      52  ?<Constant "I2C BUS %d slave addr...">_1
+      52  ?<Constant "I2C BUS %d slave addr...">_2
+      20  ?<Constant "I2C BUS %d write ">
+      32  ?<Constant "I2C BUS %d write data...">
+      32  ?<Constant "I2C BUS %d write leng...">
+      28  ?<Constant "I2C BUS NUMBER is over 1">
+      36  ?<Constant "I2C read length is ov...">
+      28  ?<Constant "clr virtual pin %d as 0 ">
+      16  ?<Constant "data[%d] = 0x%X">
+      24  ?<Constant "eeprom address = 0x%X">
+      24  ?<Constant "eeprom write size = %d">
+      28  ?<Constant "set virtual pin %d as 1 ">
+      32  ?<Constant {0}>
+       6  ??Subroutine4_0
+      16  ?Subroutine0
+       8  ?Subroutine1
+      14  ?Subroutine2
+      12  ?Subroutine3
+     182  ControlCommandsManager_I2CReadCommand
+     144  ControlCommandsManager_I2CWriteCommand
+     100  ControlCommandsManager_handleCommand
+       4  CtrlCommand_api
+       4  pCtrlCmd_ObjCtrl
+
+ 
+   4 bytes in section .data
+  36 bytes in section .rodata
+ 970 bytes in section .text
+ 
+ 970 bytes of CODE  memory
+  36 bytes of CONST memory
+   4 bytes of DATA  memory
+
+Errors: none
+Warnings: 1

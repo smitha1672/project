@@ -1,0 +1,636 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.30.1.53127/W32 for ARM     11/Nov/2014  19:24:49 #
+# Copyright 1999-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\nvram_sram_drv\s #
+#                    i_drv_edid_rx.c                                          #
+#    Command line =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Libraries\AMT_Drivers\sii953x\driver\nvram_sram_drv\s #
+#                    i_drv_edid_rx.c -D S4051A -D DEBUG -D FREE_RTOS -D       #
+#                    STM32F40_41xxx -D USE_STM324xG_EVAL -D                   #
+#                    USE_STDPERIPH_DRIVER -D __ARM_CORTEX_MX__ -D             #
+#                    IAR_ARM_CM4F -D USE_USB_OTG_FS -lcN                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\ -o C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\ #
+#                    DevCode\2\Projects\S4051A\EWARM\..\Output\S4051A\Applica #
+#                    tion\Obj\ --debug --endian=little --cpu=Cortex-M4 -e     #
+#                    --fpu=VFPv4_sp --dlib_config "C:\Program Files           #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\INC\c\DLib_Config_Normal.h" -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\inc\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\Include\ -I          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\ -I         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\inc\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\USB_HD\ #
+#                    src\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2 #
+#                    \DevCode\2\Projects\S4051A\EWARM\..\App_SRC\SERVICES\wav #
+#                    ePlayer\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\App_SRC\Managers #
+#                    \ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\De #
+#                    vCode\2\Projects\S4051A\EWARM\..\App_SRC\Dispatchers\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMSIS\Inc #
+#                    lude\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K #
+#                    2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\CMS #
+#                    IS\Device\ST\STM32F4xx\Include\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32F4xx_St #
+#                    dPeriph_Driver\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\FreeRTOS\Source\portable\IAR\ARM_CM4F\ -I     #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\FreeRTOS\Sou #
+#                    rce\include\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librar #
+#                    ies\FreeRTOS\Source\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\STM32_USB_OTG_Driver\inc\ -I                 #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB_De #
+#                    vice_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\STM32_USB_Device_Library\Class\cdc\inc\    #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\STM32_USB #
+#                    _HOST_Library\Core\inc\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\STM32_USB_HOST_Library\Class\MSC\inc\ -I  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\Third_Party\ #
+#                    efsl\inc\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\ #
+#                    15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilities #
+#                    \Third_Party\fat_fs\inc\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Utilities\mainstream_v #
+#                    1\stm32f411\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projec #
+#                    ts\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Utilit #
+#                    ies\mainstream_v1\stm32f411\it\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    EXT_FLASH\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects #
+#                    \15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Librarie #
+#                    s\AMT_Drivers\TAS5727\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\TAS5711\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    TAS5707\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\TAS5713\ -I C:\Users\tony.tsou\Desktop\AmTRA #
+#                    N\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\. #
+#                    .\Libraries\AMT_Drivers\CS49844\ -I                      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    CS8422\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15 #
+#                    _K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\A #
+#                    MT_Drivers\CS5346\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\OTI3368\ -I                        #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    HT68F30\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\1 #
+#                    5_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Libraries\ #
+#                    AMT_Drivers\BTM640\ -I C:\Users\tony.tsou\Desktop\AmTRAN #
+#                    \Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\.. #
+#                    \Libraries\AMT_Drivers\sii953x\application\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_ipv\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cbus\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cdc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_cec\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_arc\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_diag\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_msw\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\application\app_osd\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ -I C:\Users\tony.tsou\Desktop\AmTRAN\ #
+#                    Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\ #
+#                    Libraries\AMT_Drivers\sii953x\component\tx\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\repeater_avr\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\video_tables\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\audio_rx\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\edid_tx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\debugger_hdmigear\ -I                  #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cbus\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\component\rtpi\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cdc\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\cec_manager\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\component\thx\ -I                            #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\ipv\ -I C:\Users\tony.tsou\Desktop\AmT #
+#                    RAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\.. #
+#                    \..\Libraries\AMT_Drivers\sii953x\component\osd\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_switch\ -I                         #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\component\cec_system_audio_control\ -I           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\ -I C:\Users\tony.tsou\Desktop\AmTRAN\Pro #
+#                    jects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\..\..\Lib #
+#                    raries\AMT_Drivers\sii953x\driver\audio_mix_drv\ -I      #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\sii953x_drv\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cra_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\matrix_sw_drv\ #
+#                     -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\Dev #
+#                    Code\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Driv #
+#                    ers\sii953x\driver\nvram_sram_drv\ -I                    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\audio_rx_drv\  #
+#                    -I C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevC #
+#                    ode\2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drive #
+#                    rs\sii953x\driver\repeater_avr_drv\ -I                   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\gpio_drv\ -I                              #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\tpg_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\cbus_drv\ -I   #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\cpi_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\arc_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\driver\osd_drv\ -I C:\Users\tony.tsou\Desktop\Am #
+#                    TRAN\Projects\15_K2\DevCode\2\Projects\S4051A\EWARM\..\. #
+#                    .\..\Libraries\AMT_Drivers\sii953x\driver\ipv_drv\ -I    #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\ir_remote\ -I                       #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\eeprom\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\timer\ -I                           #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\hal\i2c\ -I                             #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\osal\timer\ -I                          #
+#                    C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\..\..\Libraries\AMT_Drivers\ #
+#                    sii953x\platform\board\ -Ohz -I "C:\Program Files        #
+#                    (x86)\IAR Systems\Embedded Workbench                     #
+#                    6.0\arm\CMSIS\Include\"                                  #
+#    List file    =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Li #
+#                    st\si_drv_edid_rx.lst                                    #
+#    Object file  =  C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode #
+#                    \2\Projects\S4051A\EWARM\..\Output\S4051A\Application\Ob #
+#                    j\si_drv_edid_rx.o                                       #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\tony.tsou\Desktop\AmTRAN\Projects\15_K2\DevCode\2\Libraries\AMT_Drivers\sii953x\driver\nvram_sram_drv\si_drv_edid_rx.c
+      1          //***************************************************************************
+      2          //!file     si_drv_edid_rx.c
+      3          //!brief    Silicon Image RX EDID driver.  Contains functions for controlling
+      4          //          the EDID CEC translation logic in Silicon Image devices.
+      5          //
+      6          // No part of this work may be reproduced, modified, distributed,
+      7          // transmitted, transcribed, or translated into any language or computer
+      8          // format, in any form or by any means without written permission of
+      9          // Silicon Image, Inc., 1060 East Arques Avenue, Sunnyvale, California 94085
+     10          //
+     11          // Copyright 2011, Silicon Image, Inc.  All rights reserved.
+     12          //***************************************************************************/
+     13          
+     14          #include "si_osal_timer.h"
+     15          #include "si_common.h"
+     16          #include "si_drv_nvram_sram.h"
+     17          #include "si_drv_edid_rx_internal.h"
+     18          #include "si_cra.h"
+     19          #include "si_device_config.h"
+     20          #include "si_regs_rxedid953x.h"
+     21          
+     22          extern NvramDrvInstanceData_t *pDrvNvram;
+     23          
+     24          //-------------------------------------------------------------------------------------------------
+     25          //! @brief      Returns the index of the first byte of the CEC physical address within the
+     26          //!             extension block.
+     27          //! @param[in]  pData
+     28          //! @param[out] pEdidOffset
+     29          //!
+     30          //! @retval     - true: Found CEC physical address.
+     31          //! @retval     - false: Did not find address
+     32          //!
+     33          //! @remarks    Expects a data array of 128 bytes (EDID_BLOCKLEN)
+     34          //-------------------------------------------------------------------------------------------------
+     35          static bool_t FindHdmiSignature( uint8_t *pData, uint8_t *pEdidOffset )
+     36          {
+     37              int_t   i;
+     38              uint8_t edidOffset = 0xFF;  // signal 'not found'
+     39          
+     40              if (( pData[0] != 2 ) || ( pData[1] < 3 ))  // Looking for CEA extension block rev 3 or higher.
+     41              {
+     42                  return( false );
+     43              }
+     44          
+     45              i = 4;  // Offset of start of CEA data block collection.
+     46              while ((i < EDID_BLOCK_LEN) && (edidOffset == 0xFF) && (i < pData[2]))
+     47              {
+     48                  if (( pData[i] & 0xE0 ) == 0x60 )       // Found Vendor-specific tag
+     49                  {
+     50                      if ( pData[i + 1] == 0x03 )         // 0x000C03 belongs to HDMI Licensing, LLC
+     51                      {
+     52                          if ( pData[i + 2] == 0x0C )
+     53                          {
+     54                              if ( pData[i + 3] == 0x00 )
+     55                              {
+     56                                  edidOffset = i + 4;     // Point to CEC Phys Address field.
+     57                              }
+     58                          }
+     59                      }
+     60                  }
+     61                  i += ((pData[i] & 0x1F) + 1);           // Point to next block.
+     62              }
+     63          
+     64              if ( edidOffset != 0xFF )
+     65              {
+     66                  *pEdidOffset = edidOffset;
+     67                  return( true );
+     68              }
+     69              return( false );
+     70          }
+     71          
+     72          //-------------------------------------------------------------------------------------------------
+     73          //! @brief      Accepts an EDID data block and updates the CEC physical address field and checksum
+     74          //! @brief      registers associated with the specified TX for all ports.
+     75          //!             If passed block is not the CEA extension block, no action is taken.
+     76          //! @param[in]  txSelect - 0(TX0)
+     77          //! @param[in]  pSrc - pointer to an EDID block data
+     78          //!
+     79          //! @retval     - true: successful.
+     80          //! @retval     - false: failure
+     81          //!
+     82          //! @remarks    Expects an EDID block data array of 128 bytes (EDID_BLOCK_LEN)
+     83          //! @remarks    If passed block is the CEA extension block, the physical address and checksum will
+     84          //!             be updated prior to writing.  The function replaces the left-most zero nibble in
+     85          //!             physical address already contained in the block with the correct value for each port.
+     86          //-------------------------------------------------------------------------------------------------
+     87          static bool_t UpdateHdmiCecTranslationRegisters ( int_t txSelect, uint8_t *pSrc )
+     88          {
+     89              int_t       i;
+     90              uint16_t    mask, increment, physicalAddress;
+     91              uint8_t     zeroPaChecksum, checksum, paOffset;
+     92          
+     93              pDrvNvram->lastResultCode = SII_DRV_NVRAM_SUCCESS;
+     94          
+     95              // Obtain offset of physical address if this is a CEA extension
+     96              if ( !FindHdmiSignature( pSrc, &paOffset ))
+     97              {
+     98                  // Did not find signature, don't do anything but return success
+     99                  return( true );
+    100              }
+    101          
+    102              // Obtain current physical address in CEA extension
+    103              physicalAddress = (pSrc[paOffset] << 8) | pSrc[paOffset + 1];
+    104          
+    105              // Remove the current physical address values from the checksum.
+    106              zeroPaChecksum = (0 - pSrc[EDID_BLOCK_LEN - 1]) - pSrc[paOffset] - pSrc[paOffset + 1];
+    107          
+    108              // Find port index mask of passed physical address. The port index
+    109              // is the value of the first non-zero nibble in the physical address
+    110              // starting from the LSB, plus 1.
+    111              mask = 0x000F;
+    112              increment = 0x0001;         // Used for incrementing the physical address port.
+    113              for ( i = 0; i < 4; i++ )
+    114              {
+    115                  if ( physicalAddress & mask )
+    116                  {
+    117                      if (i == 0)
+    118                      {
+    119                          // Too many levels. Fail
+    120                          pDrvNvram->lastResultCode = SII_DRV_NVRAM_ERR_FAIL;
+    121                          return false;
+    122                      }
+    123                      else
+    124                      {
+    125                          // move to left-most zero
+    126                          mask >>= 4;
+    127                          increment >>= 4;
+    128                          break;
+    129                      }
+    130                  }
+    131                  mask <<= 4;
+    132                  increment <<= 4;
+    133              }
+    134          
+    135              // Update the translation registers for ALL ports.
+    136              //physicalAddress = (physicalAddress & ~mask);
+    137              SiiRegWrite( REG_CEC_PA_ADDR, paOffset + EDID_BLOCK_LEN );
+    138              for ( i = 0; i < SII_INPUT_PORT_COUNT; i++ )
+    139              {
+    140                  // Update physical address for this port.
+    141                  physicalAddress += increment;
+    142          
+    143                  SiiRegWrite( REG_CEC_PA_L_CH0 + (i * 2), (uint8_t)(physicalAddress >> 8) );
+    144                  SiiRegWrite( REG_CEC_PA_H_CH0 + (i * 2), (uint8_t)physicalAddress);
+    145          
+    146                  // Update checksum for this port.
+    147                  checksum = 0x100 - (zeroPaChecksum + (physicalAddress & 0xFF) + ((physicalAddress >> 8) & 0x00FF));
+    148                  SiiRegWrite( REG_CEC_CHECKSUM_CH0 + i, checksum );
+    149              }
+    150          
+    151              // Transfer the new value to the appropriate internal translation registers.
+    152              SiiRegWrite( REG_CECPA_CTRL,
+    153                           BIT_CEC_PULSE | BIT_TX0_SRC_REG | (( txSelect ) ?  BIT_CEC_DEST_TX1 : 0) );
+    154          
+    155              return( pDrvNvram->lastResultCode == SII_DRV_NVRAM_SUCCESS );
+    156          }
+    157          
+    158          //-------------------------------------------------------------------------------------------------
+    159          //! @brief      Accepts an EDID data block and updates the CEC physical address field and checksum.
+    160          //! @brief      If passed block is not the CEA extension block, no action is taken.
+    161          //! @param[in]  portIndex - input port selection,
+    162          //! @param[in]  paOffcet  - Byte offset to location of the Physical Address first byte
+    163          //! @param[in]  physicalAddress - original Physical Address assigned by downstream
+    164          //! @param[in]  pSrc - pointer to an EDID block data
+    165          //!
+    166          //! @retval     - true: successful.
+    167          //! @retval     - false: failure
+    168          //!
+    169          //! @remarks    Expects a data array of 128 bytes (EDID_BLOCK_LEN)
+    170          //! @remarks    If passed block is the CEA extension block, the physical address and checksum will
+    171          //!             be updated prior to writing.  The function replaces the left-most zero nibble in
+    172          //!             physical address already contained in the block with the correct value for each port.
+    173          //!
+    174          //! @warning    The source data must be writable because CEC physical address and checksum values
+    175          //! @warning    are updated before writing to the SRAM destination
+    176          //-------------------------------------------------------------------------------------------------
+    177          static bool_t UpdateHdmiCecData ( int_t portIndex, uint8_t paOffset, uint16_t physicalAddress, uint8_t *pSrc )
+    178          {
+    179              int_t       i;
+    180              uint16_t    mask;
+    181              uint8_t     checksum;
+    182          
+    183              pDrvNvram->lastResultCode = SII_DRV_NVRAM_SUCCESS;
+    184          
+    185              // Remove the current physical address values from the checksum.
+    186              checksum = (0 - pSrc[EDID_BLOCK_LEN - 1]) - pSrc[paOffset] - pSrc[paOffset + 1];
+    187          
+    188              // Find port index segment of passed physical address. The port index
+    189              // is the value of the first non-zero nibble in the physical address
+    190              // starting from the LSB, plus 1.
+    191              mask = 0x000F;
+    192              for ( i = 0; i < 4; i++ )
+    193              {
+    194                  if ( physicalAddress & mask )
+    195                  {
+    196                      if (i == 0)
+    197                      {
+    198                          physicalAddress = 0xFFFF;       // Too many levels. Set to F.F.F.F
+    199                      }
+    200                      else
+    201                      {
+    202                          // Replace the port in the physical address with the passed port.
+    203                          physicalAddress = physicalAddress | ((portIndex + 1) << ((i-1)*4));
+    204                      }
+    205                      break;
+    206                  }
+    207                  mask <<= 4;
+    208              }
+    209          
+    210              // Update source data with new AP and checksum
+    211              pSrc[paOffset + 1]  = (uint8_t)physicalAddress;
+    212              pSrc[paOffset ]     = (uint8_t)(physicalAddress >> 8);
+    213              pSrc[EDID_BLOCK_LEN - 1] = 0x100 - (checksum + pSrc[paOffset] + pSrc[paOffset + 1]);
+    214          
+    215              return( pDrvNvram->lastResultCode == SII_DRV_NVRAM_SUCCESS );
+    216          }
+    217          
+    218          //-------------------------------------------------------------------------------------------------
+    219          //! @brief
+    220          //! @param[in]  pData
+    221          //!
+    222          //! @retval     - 128 byte checksum value
+    223          //!
+    224          //! @remarks    Expects a data array of 128 bytes (EDID_BLOCKLEN)
+    225          //-------------------------------------------------------------------------------------------------
+    226          
+    227          int_t SiiDrvNvramEdidBlockChecksumCalc( uint8_t *pData  )
+    228          {
+    229              int_t   i;
+    230              uint8_t accum = 0;
+    231          
+    232              for ( i = 0; i < EDID_BLOCK_LEN; i++ )
+    233              {
+    234                  accum += pData[i];
+    235              }
+    236          
+    237              return( accum );    // Return value should be 0 for valid checksum
+    238          }
+    239          
+    240          //-------------------------------------------------------------------------------------------------
+    241          //! @brief      Sets the EDID that the next call to SiiDrvNvramEdidBlockWrite() will write.
+    242          //! @param[in]  newMode - EDID mode (legacy or 2-edid)
+    243          //! @remarks    This is a SiI9535-specific function.
+    244          //-------------------------------------------------------------------------------------------------
+    245          void SiiDrvNvramEdidModeSet ( SiiNvramEdidMode_t newMode )
+    246          {
+    247              switch (newMode)
+    248              {
+    249                  default:
+    250                  case SII_NVRAM_LEGACY_EDID_MODE:
+    251                      SiiRegModify(REG_EDID_CTRL_XTRA, BIT_TWO_EDID_MODE, 0);
+    252                      break;
+    253          
+    254                  case SII_NVRAM_TWO_EDID_MODE:
+    255                      SiiRegModify(REG_EDID_CTRL_XTRA, BIT_TWO_EDID_MODE, BIT_TWO_EDID_MODE);
+    256                      break;
+    257              }
+    258          
+    259              pDrvNvram->edidMode = newMode;
+    260          }
+    261          
+    262          //-------------------------------------------------------------------------------------------------
+    263          //! @brief      Accepts EDID data and writes to the port SRAMs appropriate to the current EDID
+    264          //!             mode.  Typically used by a TX in repeater mode when updating the upstream EDID
+    265          //!             from the downstream EDID.  In legacy mode, all port SRAMS will be written with
+    266          //!             the passed data.  In TWO-EDID mode, either SRAM 0 or SRAM 1 is written, depending
+    267          //!             upon the ramIdx argument.
+    268          //! @param[in]  txSelect    SRAM selection (SRAM_P0 or SRAM_P1). Ignored in Legacy mode.
+    269          //! @param[in]  pSrc        Block of EDID data to be written (EDID_BLOCK_LEN bytes)
+    270          //! @param[in]  blockNum    0 - 1. Block number being written.
+    271          //!
+    272          //! @retval     - true: successful.
+    273          //! @retval     - false: failure
+    274          //!
+    275          //! @remarks    Expects a data array of 128 bytes (EDID_BLOCK_LEN)
+    276          //! @remarks    If passed block is the CEA extension block, the physical address and checksum will
+    277          //!             be updated prior to writing.  The function replaces the lowest non-zero nibble in
+    278          //!             physical address already contained in the block with the correct value for each port.
+    279          //!
+    280          //! @warning    The source data must be writable because CEC physical address and checksum values
+    281          //! @warning    are updated before writing to the SRAM destination
+    282          //-------------------------------------------------------------------------------------------------
+    283          bool_t SiiDrvNvramEdidBlockWrite ( SiiSramType_t txSelect, uint8_t *pSrc, int_t blockNum )
+    284          {
+    285              uint8_t  offset, ramSelect = 0;
+    286              uint8_t  paOffset = 0;
+    287              uint16_t dsPa = 0;
+    288              bool_t   isCeaExt = false;
+    289          
+    290              pDrvNvram->lastResultCode = SII_DRV_NVRAM_SUCCESS;
+    291          
+    292              offset = blockNum * EDID_BLOCK_LEN;   // 0x00 or 0x80
+    293              switch ( pDrvNvram->edidMode )
+    294              {
+    295                  case SII_NVRAM_LEGACY_EDID_MODE:
+    296          
+    297                      // Obtain offset of physical address if this is a CEA extension
+    298                      isCeaExt = FindHdmiSignature( pSrc, &paOffset );
+    299          
+    300                      if (isCeaExt)
+    301                      {    // Obtain current physical address in CEA extension
+    302                           dsPa = (pSrc[paOffset] << 8) | pSrc[paOffset + 1];
+    303                      }
+    304          
+    305                      // Legacy mode writes each SRAM with its own EDID
+    306                      for ( ramSelect = 0; ramSelect < SII_INPUT_PORT_COUNT; ramSelect++ )
+    307                      {
+    308                          // Update CEC physical address and checksum in source data if CEA extension block.
+    309                          if (isCeaExt)
+    310                          {
+    311                              UpdateHdmiCecData( ramSelect, paOffset, dsPa, pSrc );
+    312                          }
+    313          
+    314                          // Point to offset into selected port SRAM.
+    315                          SiiRegModify( REG_EDID_FIFO_SEL, MSK_SEL_EDID_FIFO, ramSelect );
+    316                          SiiRegWrite( REG_EDID_FIFO_ADDR, offset );
+    317          
+    318                          // Write data into the destination.
+    319                          SiiRegWriteBlock( REG_EDID_FIFO_DATA, pSrc, EDID_BLOCK_LEN );
+    320                      }
+    321                      break;
+    322          
+    323                  case SII_NVRAM_TWO_EDID_MODE:
+    324          
+    325                      // Tx0 goes into SRAM 0, Tx1 into SRAM 1
+    326                      ramSelect = (txSelect == SRAM_P0) ? SRAM_P0 : SRAM_P1;
+    327          
+    328                      // Point to offset into selected port SRAM.
+    329                      SiiRegModify( REG_EDID_FIFO_SEL, MSK_SEL_EDID_FIFO, ramSelect );
+    330                      SiiRegWrite( REG_EDID_FIFO_ADDR, offset );
+    331          
+    332                      // Write data into the destination (don't need to update CEC data).
+    333                      SiiRegWriteBlock( REG_EDID_FIFO_DATA, pSrc, EDID_BLOCK_LEN );
+    334          
+    335                      // Update translation registers
+    336                      UpdateHdmiCecTranslationRegisters( txSelect, pSrc );
+    337                      break;
+    338          
+    339                  default:
+    340                      pDrvNvram->lastResultCode = SII_DRV_NVRAM_ERR_INVALID_PARAMETER;
+    341                      break;
+    342              }
+    343          
+    344              return( pDrvNvram->lastResultCode == SII_DRV_NVRAM_SUCCESS );
+    345          }
+    346          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       12  FindHdmiSignature
+        0  SiiDrvNvramEdidBlockChecksumCalc
+       40  SiiDrvNvramEdidBlockWrite
+             40 -> FindHdmiSignature
+             40 -> SiiRegModify
+             40 -> SiiRegWrite
+             40 -> SiiRegWriteBlock
+             40 -> UpdateHdmiCecData
+             40 -> UpdateHdmiCecTranslationRegisters
+        8  SiiDrvNvramEdidModeSet
+              8 -> SiiRegModify
+       20  UpdateHdmiCecData
+       40  UpdateHdmiCecTranslationRegisters
+             40 -> FindHdmiSignature
+             40 -> SiiRegWrite
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable3
+      10  ?Subroutine0
+      92  FindHdmiSignature
+      20  SiiDrvNvramEdidBlockChecksumCalc
+     180  SiiDrvNvramEdidBlockWrite
+      32  SiiDrvNvramEdidModeSet
+     114  UpdateHdmiCecData
+     218  UpdateHdmiCecTranslationRegisters
+
+ 
+ 670 bytes in section .text
+ 
+ 670 bytes of CODE memory
+
+Errors: none
+Warnings: 1
